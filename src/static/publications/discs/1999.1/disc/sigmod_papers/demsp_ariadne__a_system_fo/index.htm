@@ -1,0 +1,143 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Factbook Demo
+</title>
+</head>
+<body bgcolor="#FFFF99">
+&nbsp;
+<center>
+<p><img SRC="ariadne4.gif" ALT="ARIADNE" ></center>
+
+<center>
+<h1>
+<b>Ariadne: A System for Constructing Mediators for Internet Sources</b></h1></center>
+
+<center><table BORDER=0 WIDTH="500" >
+<tr>
+<td ALIGN=CENTER>
+<h4>
+Jose-Luis Ambite, Naveen Ashish, Greg Barish, Craig A. Knoblock, Steve
+Minton, Pragnesh J. Modi, Ion Muslea, Andrew Philpot and Sheila Tejada&nbsp;</h4>
+</td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><b>Information Sciences Institute, Integrated Media systems
+Center and&nbsp;</b></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><b>Department of Computer Science</b></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><b>University of Southern California, Los Angeles, CA&nbsp;</b></td>
+</tr>
+</table></center>
+
+<h3>
+Introduction</h3>
+We present Ariadne, a system for constructing mediators for internet sources.
+Using such mediators we can extract, query and integrate data from multiple
+Web sources. Ariadne uses essentially the same high level architecture
+as database mediators where the mediator communicates through different
+information sources using
+<i>wrappers</i> around the sources and provides
+integrated access to the information in the different sources.
+<h4>
+<a href="poster/index.htm">Browse through the SIGMOD Demo poster slides</a></h4>
+The poster slides give an overview of the Ariadne system architecture and
+provide a brief description of the different research problems in building
+such a system.
+<h3>
+Technology Demonstration</h3>
+We present screenshots showing the various system components and applications
+of Ariadne in use that we demonstrated at SIGMOD 1998. We first present
+a demo of a semi-automatic wrapper generation toolkit that is part of the
+Ariadne system for building wrappers for semi-structured Web sources with
+minimal user effort. We then demonstrate three information mediators in
+different application domains that we constructed using Ariadne.
+<dl>
+<h4>
+Semi-automatic Wrapper Generation.</h4>
+We demonstrate the process of creating a wrapper for a semi-structured
+Web source using our wrapper generation toolkit. Through a graphical user
+interface (GUI) the user highlights fields of information that he wants
+to extract from a page. After providing examples on a few pages the system
+attempts to learn landmarks that enable it to extract the different fields
+from a page from the Web source. This demo shows the results of applying
+our tools to build an a wrapper for the <b><a href="http://www.pathfinder.com/@@Jnj@9AUA09JVZSmA/travel/zagat/Dine/cities/Los_Angeles/location_alpha_search.html">Zagat
+Restaurant Guide</a></b> information source. The original source consists
+of a set of HTML pages, each page containing the description of an individual
+restaurant; that is, for each reviewed restaurant, the Zagat Guide provides
+the following attributes: Name, Cuisine, Address, Phone Number, Rating,
+and Review.
+<p>In order to create a wrapper for the information source, one has first
+to generate the <b><i>extraction rules</i></b> that are used to extract
+the attributes of interest. Our <b>Semi-automatic Wrapper Induction Tool</b>
+allows the user to mark up a few instances of the data to be extracted
+(say, restaurant <i>Name</i> and <i>Cuisine</i>) and then to invoke the
+<b><a href="http://www.isi.edu/ariadne/papers/98-conald.ps">STALKER</a></b>
+learning algorithm, which will generate the appropriate extraction rules
+based on the examples labeled by the user.
+<p><b><a href="wrapper/page1.html">Browse Wrapper Generation Demo</a></b>
+<hr>
+<h4>
+Restaurant Locator mediator</h4>
+This demo applies technology we are developing for the Ariadne System.
+It shows the results of applying our tools to build an information mediator
+which one could use to find a restaurant in the greater Los Angeles region.
+This application uses the <a href="http://www.pathfinder.com/travel/zagat/Dine/cities/Los_Angeles/location_alpha_search.html">Zagat
+Survey/Los Angeles</a> to obtain information about restaurants. It uses
+the <a href="http://www.etak.com/index.html">ETAK geocoder</a> to convert
+street addresses into latitude/longitude pairs. Finally, it uses the US
+Census Bureau's <a href="http://tiger.census.gov/">Tiger Mapping Service</a>
+to place all selected restaurants onto a dynamically generated map of the
+Southern California area.
+<h4>
+<a href="restaurant/index.html">Browse a cached sample run of the Ariadne
+Restaurant mediator</a></h4>
+
+<hr>
+<h4>
+Countries Information Mediator</h4>
+This demo shows the results of applying our tools to building an information
+mediator for the CIA World Factbook. The original
+<a href="http://www.odci.gov/cia/publications/factbook/index.html">CIA
+World Factbook</a> consists of an HTML page for each country in the world.
+While this source provides a very rich source of data about individual
+countries, it is not provided in a form that makes it easy to compare information
+across countries.
+<p>To create a more usable source of data we applied our work on semi-automatic
+wrapper generation to create the software required to provide direct access
+to the original Factbook. We built a simple HTML interface that allows
+users to submit their queries from the Web. You can compare the same information
+from several different countries by selecting multiple countries and the
+attributes that you want to compare.
+<p><b><a href="factbook/index.html">Browse a cached sample run of the Ariadne
+Factbook Mediator</a></b>.&nbsp;
+<hr>
+<h4>
+Travel Weather Mediator</h4>
+This demo shows the results of applying our tools to building an information
+mediator for performing flight delay predictions based on real-time weather
+reports from the <a href="http://weather.yahoo.com">YAHOO! weather service</a>.
+<p>This application is able to query the YAHOO! weather service and get
+weather reports for various cities across the USA. This weather data is
+then used as input to another information source that is able to predict
+if a given flight will be delayed based on the weather forecast at the
+arriving and departing cities. The predictor is a preconstructed Naive
+Bayes classifier that was trained on historical weather from the US Weather
+Service and historical flight delay data from the FAA.
+<p>This demo highlights Ariadne's ability to provide integrated access
+to very disparate information sources. Users are able to pose queries that
+span the multiple sources and the system is able to answer them by automatically
+retrieving the relevant information.
+<p><b><a href="travel/index.html">Browse a cached sample run of the Ariadne
+Travel Weather Mediator</a></b>.</dl>
+
+</body>
+</html>

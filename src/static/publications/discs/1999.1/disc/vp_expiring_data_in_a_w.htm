@@ -1,0 +1,116 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_1.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Expiring Data in a Warehouse</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_g.htm#Hector Garcia-Molina">Hector Garcia-Molina</a>, <a href="m_authors_l.htm#Wilburt Labio">Wilburt Labio</a>, <a href="m_authors_y.htm#Jun Yang">Jun Yang</a></center></td></tr></table></center><a target="disc_pdf67a" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Data warehouses collect data into materialized views for analysis.
+After some time, some of the data may no longer be needed or may not be ofinterest.
+In this paper, we handle this by expiring or removing unneeded materialized view tuples.
+A framework supporting such expiration is presented.
+Within it, a user or administrator can declaratively request expirations and can specify what type of modifications are expected from external sources.
+The latter can significantly increase the amount of data that can be expired.
+We present efficient algorithms for determining what data can be expired (data not needed for maintenance of other views), taking into account the types of updates that may occur.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AHV95]<dd><a name="AbiteboulHV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">Richard Hull</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">Victor Vianu</a>:
+Foundations of Databases.
+ Addison-Wesley 1995, ISBN 0-201-53771-0<br>
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/abiteboul95.html">Contents</a><dt>[BCL89]<dd><a name="BlakeleyCL89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blakeley:Jos=eacute=_A=.html">Jos&eacute; A. Blakeley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Coburn:Neil.html">Neil Coburn</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>:
+Updating Derived Relations: Detecting Irrelevant and Autonomously Computable Updates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods14.html#BlakeleyCL89">TODS 14(3)</a>: 369-400(1989)<dt>[BLT86]<dd><a name="BlakeleyLT86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blakeley:Jos=eacute=_A=.html">Jos&eacute; A. Blakeley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tompa:Frank_Wm=.html">Frank Wm. Tompa</a>:
+Efficiently Updating Materialized Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod86.html#BlakeleyLT86">SIGMOD Conference 1986</a>: 61-71<dt>[BT88]<dd><a name="TompaB88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tompa:Frank_Wm=.html">Frank Wm. Tompa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blakeley:Jos=eacute=_A=.html">Jos&eacute; A. Blakeley</a>:
+Maintaining materialized views without accessing base data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is13.html#TompaB88">IS 13(4)</a>: 393-406(1988)<dt>[CGM88]<dd>...
+<dt>[Com]<dd>...
+<dt>[GJM96]<dd><a name="GuptaJM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>:
+Data Integration using Self-Maintainable Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#GuptaJM96">EDBT 1996</a>: 140-144<dt>[GL95]<dd><a name="GriffinL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Griffin:Timothy.html">Timothy Griffin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">Leonid Libkin</a>:
+Incremental Maintenance of Views with Duplicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#GriffinL95">SIGMOD Conference 1995</a>: 328-339<dt>[GMLY98]<dd>...
+<dt>[GMS93]<dd><a name="GuptaMS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">V. S. Subrahmanian</a>:
+Maintaining Views Incrementally.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#GuptaMS93">SIGMOD Conference 1993</a>: 157-166<dt>[HZ96]<dd><a name="HullZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">Richard Hull</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhou:Gang.html">Gang Zhou</a>:
+A Framework for Supporting Data Integration Using the Materialized and Virtual Approaches.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HullZ96">SIGMOD Conf. 1996</a>: 481-492<dt>[JMS95]<dd><a name="JagadishMS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">Abraham Silberschatz</a>:
+View Maintenance Issues for the Chronicle Data Model.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#JagadishMS95">PODS 1995</a>: 113-124<dt>[Lev96]<dd><a name="Levy96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">Alon Y. Levy</a>:
+Obtaining Complete Answers from Incomplete Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#Levy96">VLDB 1996</a>: 402-412<dt>[LGM97]<dd>...
+<dt>[PMW90]<dd>...
+<dt>[QGMW96]<dd><a name="QuassGMW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Making Views Self-Maintainable for Data Warehousing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#QuassGMW96">PDIS 1996</a>: 158-169<dt>[Qua96]<dd><a name="Quass96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>:
+Maintenance Expressions for Views with Aggregation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/views/views96.html#Quass96">VIEWS 1996</a>: 110-118<dt>[QW91]<dd><a name="QianW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Qian:Xiaolei.html">Xiaolei Qian</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">Gio Wiederhold</a>:
+Incremental Recomputation of Active Relational Expressions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde3.html#QianW91">TKDE 3(3)</a>: 337-341(1991)<dt>[Ull89]<dd><a name="Ullman89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Principles of Database  and Knowledge-Base Systems, Volume II.
+ Computer Science Press 1989, ISBN 0-7167-8162-X<br>
+<dt>[YL87]<dd><a name="YangL87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:H=_Z=.html">H. Z. Yang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>:
+Query Transformation for PSJ-Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#YangL87">VLDB 1987</a>: 245-254</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/Garcia-MolinaLY98,<br>  author    = {Hector Garcia-Molina and<br>               Wilburt Labio and<br>               Jun Yang},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Expiring Data in a Warehouse},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {500-511},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

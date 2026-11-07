@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<HTML>
+
+<HEAD>
+<TITLE>Self-Organizing Data Sharing Communities with Sagres</title></head.
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<h1><font color =
+"#000087">
+Self-Organizing Data Sharing Communities with Sagres
+</h1><h2>
+Zachary Ives, Alon Levy, Jayant Madahavan, Rachel Pottinger,
+Stefan Sariou, Igor Tatarinov, Eva Jaslikowska, Wai Tak Theodora Yeung</font></h2>
+
+
+<h2><font color = "#880088">Context</font></h2> Our context is that a
+multitude of devices are already connected via a wireless network; the
+devices communicate via different XML vocabularies.  Our goal is to
+create an environment into which devices can automatically integrate,
+interact, and exchange data with each other.
+
+<h2><font color = "#880088">Typical Scenario</font></h2>
+
+Alice, an on-site corporate consultant, lives in Seattle.  Most
+mornings, she must fly to a client's site and discuss strategies with
+them.  She has a daily schedule of meetings at the site, and a number
+of events she would like to schedule.
+	
+<p>
+
+<font color = "#000087"><b>Sagres</b></font> automatically and invisibly performs a number of tasks for her.
+First, it schedules a plane flight that will allow her to arrive on
+time, taking into account the time required to get to the client's
+site via taxi from the airport.  <font color = "#000087"><b>Sagres</b></font> also estimates Seattle morning
+traffic times to determine how long it will take her to get to SeaTac
+airport.
+
+<p>
+
+On most days, Alice drives to the airport.  However, if her car is in
+the repair shop, <font color = "#000087"><b>Sagres</b></font> will call a taxi for her.  On the way to work,
+Alice likes to download the morning's news for viewing on the plane
+flight.  She has two different portable devices, a laptop with
+Richochet wireless modem service, and a Palm VII PDA (also with
+wireless service).  Depending on which device she has, and how fast
+the current connection is, the portable device will automatically
+download CNN video clips, text articles, or web clippings.
+
+<p>
+
+When Alice is home, if any of her clients call on the telephone, the
+television is automatically shut off , the VCR is activated to record
+the current program, and Alice's desktop PC automatically looks up the
+information she has on the client.
+
+<h2><font color = "#880088">Demo Screenshot</font></h2>
+<img src = "screenshot.gif">
+<hr>
+<h2><font color = "#880088">Methodology</font></h2>
+
+<ul>
+<li><b>Provide a global model of the environment and all devices and
+objects within it.  </b>
+<br>
+We first must be able to define what the devices are; this includes
+modeling their attributes, query capabilities, and ability to be
+updated by the system.
+<li><b>
+Define interactions between combinations of devices using a
+declarative, event-based XML-oriented language.</b>
+<br>
+After the devices have been defined, we must be able to define what interactions occur between the devices.  We must be able to describe what events happen, what rules must be followed after their creation, views over the data, and what constraints we have over the world as a whole.
+<li><b>
+Provide a mean of specifying priorities and orderings of interactions and of controlling allocation of resources.
+</b>
+<br>
+In defining the rules, we must ensure that we have a set of priorities
+and orderings of interactions that allow us to define what should
+happen when conflicts arrive.  The priorities must be structured such
+that:
+<ul>
+<li>Priorities can be easily expressed so that users of the system can add new rules
+<li>Adding in new priorities will not require restructuring the entire priority system
+<li>The priorities make sense in the real world  
+</ul>
+<li><b>Automatically learn mappings to ease the addition of new devices into  <font color = "#000087"><b>Sagres</b></font>.</b><br>
+The devices are guaranteed to be able to communicate via XML, but there is no reason to assume that they have the same vocabulary as the <font color = "#000087"><b>Sagres</b></font> server (e.g., they may have different DTDs).  We must be able to add new devices in rapidly, and thus we must be able to map the vocabulary of devices to the vocabulary of <font color = "#000087"><b>Sagres</b></font> with minimum human intervention. 
+</ul>
+<h2><font color = "#880088">DevL</font></h2>
+DevL (Device Language), is the language we created to specify interactions between the devices.  DevL includes rules, constraints, views, devices, and events.  Example rules and constraints will help to elucidate the components:
+<pre>
+RULE UpdateScheduleEntry(Schedule $s) <font color = "#aa0055"><-- The <font color = "#000000">Rule</font> definition 
+                                      includes the rule name
+                                      and all parameters on which 
+                                      to instantiate</font>
+
+  ON UpdateScheduleEntryEvent $e} <font color = "#aa0055"><-- The <font color = "#000000">On</font> clause specifies 
+                                  which event triggers the rule</font>
+  WHERE $e.oldEntry $old, <font color = "#aa0055"><-- The <font color = "black">Where</font> clause binds names to nodes </font>
+        $e.newEntry $new,
+        $s.day $d, 
+        $d.entry $ent
+    IF $e.Schedule.id = $s.id,<font color = "#aa0055"><-- The <font color = "black">If</font> clause checks for 
+                                  conditions that are met after
+                                  the nodes have been assigned</font>
+       $ent = $old 
+    THEN <font color = "#aa0055"><-- The <font color = "black">Then</font> clause specifies which actions to take, 
+         including updates, setting events, etc.</font>
+      update $ent := $new; 
+  END RULE
+
+CONSTRAINT AlarmEarliestTime(Alarm $a, User $u )
+    WHERE $a.alarmTime $t, <font color = "#aa0055"><-- The <font color = "black">Where </font>clause binds names to nodes</font>
+          $a.User = $u,
+          $u.earliestWakeupTime $wt
+    ASSERT <font color = "#aa0055"><-- The <font color = "black">Assert</font> clause enforces conditions on system state</font>
+        $t >= $wt
+    RESOLUTION <font color = "#aa0055"><-- The <font color = "black">Resolution</font> tells how to resolve conflicts</font>
+       ROLLBACK;
+       ReportConflict("Alarm cannot be scheduled subject to constraints") 
+END CONSTRAINT  
+</pre>
+<hr>
+
+<h2><font color = "#880088">System Architecture</font></h2>
+<p>
+<img src = "sagresarch.gif">
+<p>
+<h3><font color = "#880088">Data Storage</font></h3>
+
+The Data Manager stores both the World State and the Ontology and is
+responsible for retrieving all needed data. All data (e.g., rules,
+events, world state) is stored in XML format, and actions are
+performed by querying over the XML data.  The data is integrated using
+a version of the Tukwila data integration system that has been
+modified to work with XML data.  We use a number of novel techniques
+including the X-scan operator for evaluating path expressions as data
+is streaming into <font color = "#000087"><b>Sagres</b></font>.  The Ontology is designed to hold the rule,
+view, and constraint definitions, device hierarchy and attributes, all
+of which are stored in XML.  The World State describes the current
+state of the world in XML.  The World State holds the data values for
+both the current events and the devices in the system.
+
+
+<h3><font color = "#880088">Event Processing</font></h3>
+
+When a new event occurs, it notifies the Dispatcher that a new event
+has occurred.  The Dispatcher queries the Rule Instancer for all rules
+relevant to that event.  The Rule Instancer returns the relevant rules
+back to the Dispatcher.  The Dispatcher then sends the rules that need
+to be executed to the Rule Executor.  The Rule Executor queries the
+Constraint Solver for answers to answers to constraints needed in the
+rule.  The Constraint Solver passes back answers to the Rule Executor.
+The Rule Executor passes the actions to be executed to the Data
+Manager, which queries and updates the Ontology and the World State.
+After the updates have occured, the Rule Executor checks with the
+Runtime Constraint Checker to make sure that no global constraints
+have been broken.  This cycle (with new constraints) may repeat.
+Finally, the Rule Executor passes back the information to the
+dispatcher, and the effects of the event are complete.
+
+<h3><font color = "#880088">Adding New Devices</font></h3>
+
+When an new device is added into the system, the Automatic Ontology
+Mapper maps the ontology used by the device into the <font color = "#000087"><b>Sagres</b></font> ontology.
+It uses machine learning to determine where its values match the best.
+The Rule Instancer then instantiates the rules for the new devices and
+passes these rules to the Static Constraint Analyzer.  The Static
+Constraint Analyzer analyzes all rules that occur due to a specific
+event or on a specific device to learn if there will be any conflicts
+that will occur when an event occurs (e.g., both turning the
+television on and turning the television off).  The Static Constraint
+Analyzer performs the same task whenever a new or updated rule is
+integrated into the system.
+
+
+<hr>
+<h2><font color = "#880088">Future directions</font></h2>
+
+<ul>
+<li> Greater investigation of rule priority and preemption relationships
+for chains of rules.  Should a high-priority rule be able to initiate
+a chain of rule invocations that preempts lower-priority rules, should
+all events be handled in order, or should this be user-specifiable?
+
+<li> Interactions between <font color = "#000087"><b>Sagres</b></font> environments.  How do we model and
+specify the interactions between different <font color = "#000087"><b>Sagres</b></font> systems?
+
+<li>Transactions and idempotency.  Many real-world actions cannot be
+&quot;undone&quot;, which violates the basic requirements of distributed
+transaction processing.  What formal guarantees can be given in this
+setting?  Can idempotency be used to help in any way?
+
+<li> Granularity of event responses.  Can we group rules into
+larger-scale interactions that might be easier to visualize?  In a
+system with &quot;plug and play&quot; rules, is there anything
+corresponding to an application or service, or are we always dealing
+with sets of rules?
+</ul>
+<hr>
+<a href = "poster.gif">Poster from SIGMOD</a>
+<br>
+<a href = "SagresPosterUsenix.gif">Version with demo description and
+future directions</a>
+</BODY>
+</HTML>
+

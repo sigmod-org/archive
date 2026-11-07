@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Constraint Calculus</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Constraint Calculus</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld011.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld013.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr>Constraint&nbsp;Calculus</nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<h1><font size="5">Constraint Calculus and Multi-typed Algebra (cont.)</font></h1>
+
+<p>In previous figure, thick arrows indicate class hierarchy. For example, C_LIN is a
+sub-class of DC_LIN, EC_LIN, and transitively, DEC_LIN, meaning that a CST object of class
+C_LIN may be used as an argument wherever its superclasses are allowed. Each thin arrow
+from a CST class T1 to a CST class T2 is labeled with one or more logical or projection
+operators. It explicitly states that if the input to the operators (in the label) is of
+the CST class T1, then the output will be of the CST class T2. For example, &amp;&amp;
+applied to inputs from C_LIN returns the result in the same class, while Pzero and Pone
+return the result in C_RNG. </p>
+
+<p>The four main classes are <tt>C_LIN</tt>, for Conjunctive Linear constraints of the
+form <font face="symbol">Ù</font><sub>i = 1</sub><sup>n</sup> C<sub>i</sub>, where C<sub>i</sub>
+is a linear inequality; <tt>EC_LIN</tt>, for Existential Conjunctive constraints of the
+form (<font face="symbol">$</font>[x\vec]) <font face="symbol">|</font> <font face="symbol">Ù</font><sub>i = 1</sub><sup>n</sup> C<sub>i</sub>, where [x\vec] is a
+vector of variable names; <tt>DC_LIN</tt>, for Disjunctions of <tt>C_LIN</tt>, and <tt>DEC_LIN</tt>,
+for Disjunctions of <tt>EC_LIN</tt>. The class <tt>C_RNG</tt> stands for conjunctions of
+range constraints of the form <font face="symbol">Ù</font><sub>i = 1</sub><sup>n</sup> C<sub>i</sub>,
+where C<sub>i</sub> is a range constraint, i.e., is of the form a &nbsp;&nbsp;<tt>op</tt>
+&nbsp;&nbsp;x &nbsp;&nbsp;<tt>op</tt> &nbsp;&nbsp;b, where <tt>op</tt> is either &lt; or <font face="symbol">£</font> and a and b are either real numbers of -<font face="symbol">¥</font>
+or <font face="symbol">¥</font>. The class <tt>DC_RNG</tt> stands for disjunctions of <tt>C_RNG</tt>
+constraints. Finally, the most general superclass (i.e., an upper bound in the class
+lattice) is <tt>CST</tt>, which stands for FO_CST (Linear), with no restrictions on
+representation; and the most specific subclass (i.e., the lower bound in the class
+lattice) is <tt>C_BOOL</tt>, just for two special constraints: <tt>TRUE</tt> and <tt>FALSE</tt>.
+</p>
+
+<p>In CCUBE, instead of existential quantification, we use the projection operator <tt>P</tt>,
+in which we indicate the remaining variables, rather than those to be eliminated. However,
+<tt>P</tt> can also add new variables, which are part of the CST object. We also use three
+specialized projection operators <tt>Pzero,Pall</tt> and <tt>Pone</tt>, which correspond,
+intuitively, to a cheaper variable elimination: of all variables, of no variables, and of
+all but one variable, respectively. Essentially, in addition to changing the free
+variables associated with the CST object, <tt>Pzero</tt> performs the satisfiability test,
+and <tt>Pone</tt> does nothing with the constraint. </p>
+
+<p>In addition to projection, operators corresponding to logical connectives <tt>&amp;&amp;</tt>,
+<tt>||</tt>, and <tt>not</tt> are defined in the CCUBE constraint algebra. Although the
+logical meaning of these operators is the same for all CST classes, operationally they
+work on representations on constraints, and thus are implemented differently for
+individual CST (sub)classes. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

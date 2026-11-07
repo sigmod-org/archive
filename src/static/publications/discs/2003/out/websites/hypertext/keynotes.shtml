@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Keynotes</title>
+<link rel     = STYLESHEET 
+      href    = "style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<center>
+<h1>Keynote Addresses</h1>
+</center>
+<a name=open>
+<h2><u>Opening Keynote:</u></h2>
+</a>
+<h3>Hypertext as Argument: An Experiment in Form and Function</h3>
+<table>
+<tr>
+<td align=center>
+<h3>Edward L. Ayers</h3>
+Executive Director, Virginia Center for Digital History<br>
+University of Virginia 
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align=center>
+<h3>William G. Thomas</h3>
+Director, Virginia Center for Digital History<br>
+University of Virginia 
+</td>
+</tr>
+<tr>
+<td align=center><img src=ela.jpg></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align=center><img src=wthomas3sm.jpg></td>
+</tr>
+</table>
+</h3>
+<br>
+<p>
+A leading scholarly journal has commissioned us to write a "native
+digital" article. 
+
+We attempt to make an argument of 
+greater complexity than is possible in a traditional paper 
+publication.
+
+We will also explore the professional
+ramifications of scholarship that makes an argument in a far more
+complex and comprehensive way than is possible on paper.
+</p>
+<p>
+Edward Ayers is the Dean of the College and Graduate School of Arts 
+and Sciences and the Hugh P. Kelly Professor of History at the 
+University of Virginia.  He was educated at the University of 
+Tennessee and Yale University, where he received his Ph.D. in 
+American Studies.  He has written and edited seven books.   The 
+Promise of the New South:  Life After Reconstruction  (1992), a 
+finalist for both the National Book Award and the Pulitzer Prize, was 
+named the best book on the history of American race relations and on 
+the history of the American South.  Ayers is the senior editor of the 
+The Oxford Book of the American South (1997) and co-author of All 
+Over the Map:  Rethinking American Regions (1996) and American 
+Passages:  A History of the United States (2000). 
+</p>
+<p>
+    Ayers's current work is a multidimensional effort called "The 
+Valley of the Shadow:  Two Communities in the American Civil War." 
+The World Wide Web version of the project has attracted over 4 
+million visitors.  The web and CD ROM version published by W. W. 
+Norton and Company in 2000 won the first annual eLincoln Prize for 
+best digital work on the era of the American Civil War.  A narrative 
+drawn from the digital archive will be published in 2003 by W. W. 
+Norton.
+</p>
+<p>
+    Ayers has been a fellow at the Center for Advanced Study in 
+the Behavorial Sciences, Palo Alto (1999-2000) and was elected to the 
+American Academy of Arts and Sciences in 2001.
+</p>
+<br><br><br>
+<h2><u>Closing Keynote:</u></h2>
+<h3>Using Technology to Support Narrative</h3>
+<center>
+<table>
+<tr>
+<td align=center>
+<h3>Polle Zellweger</h3>
+University of Aarhus
+</td>
+</tr>
+<tr>
+<td align=center><img src=zellweger.jpg width=131></td>
+</tr>
+</table>
+</center>
+
+<br>
+<p>
+Polle Zellweger earned a BA in mathematics from the
+University of Alaska, an MS in computer science from
+the University of New Mexico, and a PhD in computer
+science from the University of California at Berkeley.
+ She was a member of the research staff at the Xerox
+Palo Alto Research Center from 1984 to 2001, where she
+explored topics ranging from hypertext, multimedia,
+and electronic books to user interfaces and
+collaborative work.  In  2000-2001, she was a visiting
+professor at the University of Aarhus, Denmark.  She
+has been a long-term research contributor to the
+Hypertext Conference.  She served as program co-chair
+of the European Conference on Hypertext in 1992 and as
+program chair of the ACM Multimedia Conference in
+1995.  She has also been a member of the editorial
+of the ACM Transactions on Information Systems.
+She is known for her work on hypertext paths, active multimedia documents, 
+automatic temporal formatting, and Fluid Documents.
+</p>
+<a name=close></a>
+
+<br><br><br>
+</body>
+</html>

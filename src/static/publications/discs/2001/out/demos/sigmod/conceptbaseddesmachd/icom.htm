@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Source Integration and Conceptual Modelling</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table border="1" width="100%" cellpadding="2" bordercolor="#808080" bgcolor="#E0FFFF">
+  <tr>
+    <td width="16%"><font color="#FFFFFF"><a href="index.htm">Overview</a></font></td>
+    <td width="16%"><font color="#FFFFFF"><a href="metadata.htm">The Metadata Repository<br>
+      ConceptBase</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="icom.htm">Source Integration
+      and <br>
+      Conceptual Modelling</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="dare.htm">Data Reconciliation</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="references.htm">References</a></font></td>
+  </tr>
+</table>
+<h1>Source Integration and Conceptual Modelling</h1>
+<p>Our approach on source integration is based on extended conceptual modelling
+techniques. We will first introduce the conceptual modelling approach and then
+present the tool i.com for intelligent conceptual modelling.</p>
+<h2>Source Integration</h2>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US" style="layout-grid-mode:line">The
+DWQ approach to source integration is incremental: whenever a new portion of a
+source is taken into account, the new information is integrated with an
+“Enterprise Model”, and the necessary new relationships are added. Thus, the
+Enterprise Model provides a consolidated view of the concepts and the
+relationships that are important to the enterprise, and have been currently
+analyzed. Such a view is subject to changes and additions as the analysis of the
+information sources proceeds. The main concepts used in our approach are shown
+in the figure:</span></p>
+<p class="MsoNormal" style="text-align:justify"><span lang="EN-US" style="layout-grid-mode:line"><o:p>
+</o:p>
+<a href="images/si-architecture.gif"><img border="0" src="images/si-architecture.gif" width="716" height="485"></a></span></p>
+<ul>
+  <li>
+    <p class="MsoIndex2" style="line-height:normal"><span lang="EN-US" style="font-family:Symbol"><span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><span lang="EN-US">The
+    <i style="mso-bidi-font-style:
+normal">Enterprise Model</i> is a conceptual representation of the global
+    concepts and relationships that are of interest to the Data Warehouse
+    application. It provides a consolidated view of the concepts and
+    relationships that are important to the enterprise, and have been currently
+    analyzed. Such a view is subject to changes and additions as the analysis of
+    the information sources proceeds. The Description Logic formalism we use is
+    general and powerful enough to express the usual database models, such as
+    the Entity-Relationship Model, and the Relational Model. Moreover, there are
+    suitable inference techniques associated with the formalism, which allow for
+    carrying out several reasoning services on the representation. The formalism
+    is hidden from the user of the DWQ tools who only uses a graphical
+    interface.</span></li>
+  <li>
+    <p class="MsoIndex2" style="line-height:normal"><span lang="EN-US">For a
+    given information source S, the <i style="mso-bidi-font-style:normal">Source
+    Model</i> of S is a conceptual representation of the data residing in S.
+    Again, our approach does not require a source to be fully analyzed and
+    conceptualized. Source Models are expressed by means of the same formalism
+    used for the Enterprise Model.</span></li>
+  <li>
+    <p class="MsoIndex2" style="line-height:normal"><span lang="EN-US">The
+    notion of <i style="mso-bidi-font-style:
+normal">interdependency</i> is a central one in our approach. Since the sources
+    are of interest in the overall architecture, integration does not simply
+    mean producing the Enterprise Model, but rather to be able to establish the
+    correct relationships both between the Source Models and the Enterprise
+    Model, and between the various Source Models. We formalize the notion of
+    interdependency by means of intermodel assertions, introduced in [CL93]. An
+    intermodel assertion states that one object (i.e., class, entity, or
+    relation) belonging to a certain Model (either the Enterprise or a Source
+    Model) is always a subset of an object belonging to another Model. This
+    simple declarative mechanisms has been showed to be extremely effective in
+    establishing relationships among different database schemas (see also
+    [Hul97]). We use again a logic-based formalism to express intermodel
+    assertions, and the associated inference techniques provide a means to
+    reason about interdependencies among models.</span></li>
+  <li>
+    <p class="MsoIndex2" style="line-height:normal"><span lang="EN-US">The
+    logical content of each source S, called the <i style="mso-bidi-font-style:normal">Source
+    Schema</i>, is provided in terms of a set of definitions of relations, each
+    one expressed in terms of a query over the Source Model of S. The logical
+    content of a source represents the structure of data expressed in terms of a
+    logical data model, in the demo the Relational Model. In our framework, such
+    a structure is provided by specifying the connection with the conceptual
+    representation of the source. In other words, the logical content of a
+    source S, or of a portion thereof, is described in terms of a view over the
+    Source Model associated with S (and, therefore, of the Conceptual Data
+    Warehouse Model). Wrappers map physical structures to logical structures.</span></li>
+  <li>
+    <p style="line-height:normal"><span lang="EN-US">The logical content of the
+    materialized views constituting the Data Warehouse, called the <i style="mso-bidi-font-style:normal">Data
+    Warehouse Schema</i>, is provided in terms of a set of definitions of
+    relations, each one expressed in terms of a query over the <i style="mso-bidi-font-style:normal">Conceptual
+    Data Warehouse Model</i>. Similar to the sources, each portion of the Data
+    Warehouse Schema is described in terms of a view over the Conceptual Data
+    Warehouse Model. How a view is actually materialized starting from the data
+    in the sources is specified by means of suitable mechanisms, called
+    mediators.</span></li>
+</ul>
+<p style="line-height:normal"><span lang="EN-US" style="layout-grid-mode:line">The
+demo has shown the following tasks within steps 1 and 2 of the methodology (<a href="images/dwq-posters-may2000-2.gif">figure</a>)
+for a few Telecom Italia database sources related to contracts :<o:p>
+</o:p>
+</span></p>
+<ul>
+  <li>
+    <p style="line-height:normal"><i style="mso-bidi-font-style:normal"><span lang="EN-US">Enterprise
+    and Source Model construction. </span></i><span lang="EN-US">The Source
+    Model corresponding to the new source is produced, if not available.
+    Analogously, the conceptual model of the enterprise is produced, if not
+    available.</span></li>
+  <li>
+    <p style="line-height:normal"><i style="mso-bidi-font-style:normal"><span lang="EN-US">Source
+    Model integration. </span></i><span lang="EN-US">The Source Model is
+    integrated into the Conceptual Data Warehouse Model. This can lead to
+    changes both to the Source Models, and to the Enterprise Model. Moreover,
+    intermodel assertions between the Enterprise Model and the Source Models and
+    between the new source and the existing sources are added to the Conceptual
+    Data Warehouse Model. The designer can specify such intermodel assertions
+    graphically as illustrated in the <a href="images/icom1.gif">screenshot</a>,
+    and can invoke various automated analyses supported by the Description Logic
+    formalization.</span></li>
+  <li>
+    <p style="line-height:normal"><i style="mso-bidi-font-style:normal"><span lang="EN-US">Source
+    and Data Warehouse Schema specification. </span></i><span lang="EN-US">The
+    Source Schema corresponding to the new source (or, corresponding to a new
+    portion of the source) is produced. On the basis of the new analyzed source,
+    an analysis is carried out on whether the Data Warehouse Schema should be
+    restructured and/or modified.</span> <span lang="EN-US" style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: DE; mso-bidi-language: AR-SA; layout-grid-mode: line">In
+    all these tasks, the metadata repository stores the values of the quality
+    factors involved in source and data integration, and helps analyze the
+    quality of the design choices. The Quality Factors of the Conceptual Data
+    Warehouse Model and the various schemas are evaluated and a restructuring of
+    the Models and the schemas is accomplished to match the required criteria.</span></li>
+</ul>
+<p>&nbsp;</p>
+<h2>The i.com Tool for Intelligent Conceptual Modelling</h2>
+<p>i.com allows for the specification of multiple EER diagrams and inter- and
+intra-schema constraints.Complete logical reasoning is employed by the tool to
+verify the specification, infer implicit facts, and manifest any
+inconsistencies. </p>
+<p>The first screenshot shows the modeling of a conceptual source model and the
+conceptual enterprise model.</p>
+<p><img border="0" src="images/icom1.gif" width="722" height="656"></p>
+<p>If the user has defined the models, the inter-model assertions can be
+defined. These are constraints or relationships between different conceptual
+models, e.g. a source model and the enterprise model.</p>
+<p><img border="0" src="images/icom2.gif" width="722" height="656"></p>
+<p>Then, the user can use the tool to derive implicit relationships between the
+concepts. The tool uses a description logics reasoner for this task. The result
+is shown by a red error in the next picture.</p>
+<p><img border="0" src="images/icom3.gif" width="722" height="656"></p>
+<p>Finally, the tool can be used to define conceptual models for
+multidimensional aggregations, including the hierarchies of dimensions.</p>
+<p><img border="0" src="images/icom4.gif" width="713" height="668"></p>
+
+</body>
+
+</html>

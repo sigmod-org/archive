@@ -1,0 +1,522 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - VOODB: A Generic Discrete-Event Random Simulation Model To Evaluate the Performances of OODBs</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_4.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+VOODB: A Generic Discrete-Event Random Simulation Model To Evaluate the Performances of OODBs
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_jeacuterocircme_da.htm">J&eacute;r&ocirc;me Darmont</a> and 
+<a href = "a_michel_schneider.htm">Michel Schneider</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/voodbagenericdijmi.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbunderstandmance.htm">Return to Understanding Database Performance</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Performance of object-oriented database systems (OODBs) is still an issue to both designers and users nowadays. The aim of this papers is to propose a generic discrete-event random simulation model, called VOODB, in order to evaluate the performance of OODBs in general, and the performance of optimization methods like clustering in particular. Such optimization methods undoubtedly improve the performance of OODBs. Yet, they also always induce some kind of overhead for the system. Therefore, it is important to evaluate their exact impact on the overall performances. VOODB has been designed as a generic discrete-event random simulation model by putting to use a modelling approach, and has been validated by simulating the behavior of the O
+<sub>
+2
+</sub>
+ OODB and the Texas persistent object store. Since our final objective is to compare object clustering algorithms, some experiments have been conducted on the DSTC clustering technique, which is implemented in Texas. To validate VOODB, performance results obtained by simulation for a given experiment have been compared to the results obtained by benchmarking the real systems in the same conditions. Benchmarking and simulation performance evaluations have been observed to be consistent, so it appears that simulation can be a reliable approach to evaluate the performances of OODBs.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[And90]
+<dd>
+<a name="AndersonBMPS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Anderson:T=_Lougenia.html">
+T. Lougenia Anderson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berre:Arne_J=.html">
+Arne J. Berre
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mallison:Moira.html">
+Moira Mallison
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Porter:Harry_H=.html">
+Harry H. Porter
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Bruce.html">
+Bruce Schneider
+</a>
+: The HyperModel Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt90.html#AndersonBMPS90">
+EDBT 1990
+</a>
+: 317-331
+<dt>
+[And91]
+<dd>
+... 
+<dt>
+[Bal92]
+<dd>
+<a name="BalciN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Balci:Osman.html">
+Osman Balci
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nance:Richard_E=.html">
+Richard E. Nance
+</a>
+: The Simulation Model Development Environment: An Overview. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/wsc/wsc1992.html#BalciN92">
+Winter Simulation Conference 1992
+</a>
+: 726-736
+<dt>
+[Ban96]
+<dd>
+<a name="Banks96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Banks:Jerry.html">
+Jerry Banks
+</a>
+: Output Analysis Capabilities of Simulation Software. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/simulation/simulation66.html#Banks96">
+Simulation 66(1)
+</a>
+: 23-30(1996)
+<dt>
+[Bat95]
+<dd>
+... 
+<dt>
+[Bre98]
+<dd>
+<a name="BreuneseTBA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Breunese:Arno.html">
+Arno Breunese
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Top:Jan_L=.html">
+Jan L. Top
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Broenink:Jan_F=.html">
+Jan F. Broenink
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Akkermans:J=_M=.html">
+J. M. Akkermans
+</a>
+: Libraries of Reusable Models: Theory and Application. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/simulation/simulation71.html#BreuneseTBA98">
+Simulation 71(1)
+</a>
+: 7-22(1998)
+<dt>
+[Bul96]
+<dd>
+<a name="BullatS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bullat:Fr=eacute=d=eacute=rique.html">
+Fr&eacute;d&eacute;rique Bullat
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Michel.html">
+Michel Schneider
+</a>
+: Dynamic Clustering in Object Databases Exploiting Effective Use of Relationships Between Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ecoop/ecoop96.html#BullatS96">
+ECOOP 1996
+</a>
+: 344-365
+<dt>
+[Car93]
+<dd>
+<a name="CareyDN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: The 007 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CareyDN93">
+SIGMOD Conference 1993
+</a>
+: 12-21
+<dt>
+[Cat91]
+<dd>
+<a name="Cattell91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cattell:R=_G=_G=.html">
+R. G. G. Cattell
+</a>
+: An Engineering Database benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/gray91.html#Cattell91">
+The Benchmark Handbook 1991
+</a>
+: 247-281
+<dt>
+[Cha89]
+<dd>
+<a name="ChangK89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Ellis_E=.html">
+Ellis E. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">
+Randy H. Katz
+</a>
+: Exploiting Inheritance and Structure Semantics for Effective Clustering and Buffering in an Object-Oriented DBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#ChangK89">
+SIGMOD Conference 1989
+</a>
+: 348-357
+<dt>
+[Che91]
+<dd>
+<a name="ChengH91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Jia=bing_R=.html">
+Jia-bing R. Cheng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hurson:A=_R=.html">
+A. R. Hurson
+</a>
+: Effective Clustering of Complex Objects in Object-Oriented Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#ChengH91">
+SIGMOD Conference 1991
+</a>
+: 22-31
+<dt>
+[Dar96]
+<dd>
+<a name="DarmontG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Darmont:J=eacute=r=ocirc=me.html">
+J&eacute;r&ocirc;me Darmont
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruenwald:Le.html">
+Le Gruenwald
+</a>
+: A Comparison Study of Object-Oriented Database Clustering Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/isci/isci94.html#DarmontG96">
+Information Sciences 94(1-4)
+</a>
+: 55-86(1996)
+<dt>
+[Dar98]
+<dd>
+<a name="DarmontPS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Darmont:J=eacute=r=ocirc=me.html">
+J&eacute;r&ocirc;me Darmont
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petit:Bertrand.html">
+Bertrand Petit
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Michel.html">
+Michel Schneider
+</a>
+: OCB: A Generic Benchmark to Evaluate the Performances of Object-Oriented Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt98.html#DarmontPS98">
+EDBT 1998
+</a>
+: 326-340
+<dt>
+[Deu91]
+<dd>
+<a name="Deux91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deux:O=.html">
+O. Deux
+</a>
+: The O2 System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#Deux91">
+CACM 34(10)
+</a>
+: 34-48(1991)
+<dt>
+[Gay97]
+<dd>
+<a name="GayG97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gay:Jean=Yves.html">
+Jean-Yves Gay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruenwald:Le.html">
+Le Gruenwald
+</a>
+: A Clustering Technique for Object Oriented Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dexa/dexa97.html#GayG97">
+DEXA 1997
+</a>
+: 81-90
+<dt>
+[Gou92]
+<dd>
+... 
+<dt>
+[He93]
+<dd>
+... 
+<dt>
+[Iae95]
+<dd>
+... 
+<dt>
+[Kel97]
+<dd>
+... 
+<dt>
+[Kim88]
+<dd>
+<a name="KimBCGWB88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">
+Won Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Ballou:Nat.html">
+Nat Ballou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chou:Hong=Tai.html">
+Hong-Tai Chou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garza:Jorge_F=.html">
+Jorge F. Garza
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Woelk:Darrell.html">
+Darrell Woelk
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Banerjee:Jay.html">
+Jay Banerjee
+</a>
+: Integrating an Object-Oriented Programming System with a Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla88.html#KimBCGWB88">
+OOPSLA 1988
+</a>
+: 142-152
+<dt>
+[Lam91]
+<dd>
+<a name="LambLOW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lamb:Charles.html">
+Charles Lamb
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Landis:Gordon.html">
+Gordon Landis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinreb:Danel.html">
+Danel Weinreb
+</a>
+: The ObjectStore Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#LambLOW91">
+CACM 34(10)
+</a>
+: 50-63(1991)
+<dt>
+[Nan81]
+<dd>
+... 
+<dt>
+[Pri86]
+<dd>
+... 
+<dt>
+[Rat97]
+<dd>
+... 
+<dt>
+[Sar79]
+<dd>
+... 
+<dt>
+[Sar91]
+<dd>
+... 
+<dt>
+[Ser92]
+<dd>
+... 
+<dt>
+[Sim95]
+<dd>
+... 
+<dt>
+[Sin92]
+<dd>
+<a name="SinghalKW92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Singhal:Vivek.html">
+Vivek Singhal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kakkad:Sheetal_V=.html">
+Sheetal V. Kakkad
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilson:Paul_R=.html">
+Paul R. Wilson
+</a>
+: Texas: An Efficient, Portable Persistent Store. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos92.html#SinghalKW92">
+POS 1992
+</a>
+: 11-33
+<dt>
+[Tsa92]
+<dd>
+<a name="TsangarisN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsangaris:Manolis_M=.html">
+Manolis M. Tsangaris
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: On the Performance of Object Clustering Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#TsangarisN92">
+SIGMOD Conference 1992
+</a>
+: 144-153
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/DarmontS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{J{\'e}r{\^o}me&nbsp;Darmont&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michel&nbsp;Schneider},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{VOODB:&nbsp;A&nbsp;Generic&nbsp;Discrete-Event&nbsp;Random&nbsp;Simulation&nbsp;Model&nbsp;To&nbsp;Evaluate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;Performances&nbsp;of&nbsp;OODBs},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{254-265},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

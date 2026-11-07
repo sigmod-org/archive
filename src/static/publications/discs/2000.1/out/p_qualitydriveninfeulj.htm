@@ -1,0 +1,466 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Quality-driven Integration of Heterogenous Information Systems</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_9.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Quality-driven Integration of Heterogenous Information Systems
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_felix_naumann.htm">Felix Naumann</a>, 
+<a href = "a_ulf_leser.htm">Ulf Leser</a>, and 
+<a href = "a_johann_christoph_f.htm">Johann Christoph Freytag</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/qualitydriveninfeulj.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbintegratinbases.htm">Return to Integrating Heterogeneous Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Integrated access to information that is spread over multiple, distributed, and heterogeneous sources is an important problem in many scientific and commercial domains. While much work has been done on query processing and choosing plans under cost criteria, very little is known about the important problem of incorporating the information quality aspect into query planning. 
+<p>
+ In this paper we describe a framework for multidatabase query processing that fully includes the quality of information in many facets, such as completeness, timeliness, accuracy, etc. We seamlessly include information quality into a multidatabase query  rocessor based on a view-rewriting mechanism. We model information quality at different levels to ultimately find a set of high-quality query-answering plans.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[ASU79]
+<dd>
+<a name="AhoSU79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">
+Alfred V. Aho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Efficient Optimization of a Class of Relational Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods4.html#AhoSU79">
+TODS 4(4)
+</a>
+: 435-454(1979)
+<dt>
+[CCR78]
+<dd>
+... 
+<dt>
+[CKM+98]
+<dd>
+... 
+<dt>
+[CR97]
+<dd>
+<a name="ChekuriR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chekuri:Chandra.html">
+Chandra Chekuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+: Conjunctive Query Containment Revisited. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#ChekuriR97">
+ICDT 1997
+</a>
+: 56-70
+<dt>
+[Dan63]
+<dd>
+... 
+<dt>
+[DOTW97]
+<dd>
+<a name="DavidsonOTW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Overton:G=_Christian.html">
+G. Christian Overton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tannen:Val.html">
+Val Tannen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Limsoon.html">
+Limsoon Wong
+</a>
+: BioKleisli: A Digital Library for Biomedical Researchers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jodl/jodl1.html#DavidsonOTW97">
+Int. J. on Digital Libraries 1(1)
+</a>
+: 36-53(1997)
+<dt>
+[FKL97]
+<dd>
+<a name="FlorescuKLP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koller:Daphne.html">
+Daphne Koller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Using Probabilistic Information in Data Integration. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 216-225
+<dt>
+[GGMT94]
+<dd>
+<a name="GravanoGT94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gravano:Luis.html">
+Luis Gravano
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tomasic:Anthony.html">
+Anthony Tomasic
+</a>
+: The Effectiveness of GlOSS for the Text Database Discovery Problem. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#GravanoGT94">
+SIGMOD Conference 1994
+</a>
+: 126-137
+<dt>
+[Inf98]
+<dd>
+... 
+<dt>
+[JQJ98]
+<dd>
+<a name="JeusfeldQJ98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jeusfeld:Manfred_A=.html">
+Manfred A. Jeusfeld
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quix:Christoph.html">
+Christoph Quix
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jarke:Matthias.html">
+Matthias Jarke
+</a>
+: Design and Analysis of Quality Information for Data Warehouses. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/er/er98.html#JeusfeldQJ98">
+ER 1998
+</a>
+: 349-362
+<dt>
+[Les98]
+<dd>
+... 
+<dt>
+[Les99]
+<dd>
+<a name="Leser99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leser:Ulf.html">
+Ulf Leser
+</a>
+: Designing a Global Information Resource for Molecular Biology. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/btw/btw99.html#Leser99">
+BTW 1999
+</a>
+: 362-368
+<dt>
+[LLRC98]
+<dd>
+... 
+<dt>
+[LMSS95]
+<dd>
+<a name="LevyMSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Answering Queries Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#LevyMSS95">
+PODS 1995
+</a>
+: 95-104
+<dt>
+[LRO96]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Querying Heterogeneous Information Sources Using Source Descriptions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 251-262
+<dt>
+[Nau98]
+<dd>
+... 
+<dt>
+[NFS98]
+<dd>
+... 
+<dt>
+[NLF99]
+<dd>
+... 
+<dt>
+[Orr98]
+<dd>
+<a name="Orr98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orr:Ken.html">
+Ken Orr
+</a>
+: Data Quality and System Theory. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm41.html#Orr98">
+CACM 41(2)
+</a>
+: 66-71(1998)
+<dt>
+[Red98]
+<dd>
+<a name="Redman98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Redman:Thomas.html">
+Thomas Redman
+</a>
+: the Impact of Poor Data Quality on the Typical Enterprise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm41.html#Redman98">
+CACM 41(2)
+</a>
+: 79-82(1998)
+<dt>
+[Rob94]
+<dd>
+... 
+<dt>
+[SL90]
+<dd>
+<a name="ShethL90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sheth:Amit_P=.html">
+Amit P. Sheth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:James_A=.html">
+James A. Larson
+</a>
+: Federated Database Systems for Managing Distributed, Heterogeneous, and Autonomous Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur22.html#ShethL90">
+Computing Surveys 22(3)
+</a>
+: 183-236(1990)
+<dt>
+[TB98]
+<dd>
+<a name="TayiB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tayi:Giri_Kumar.html">
+Giri Kumar Tayi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Ballou:Donald_P=.html">
+Donald P. Ballou
+</a>
+: Examining Data Quality - Introduction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm41.html#TayiB98">
+CACM 41(2)
+</a>
+: 54-57(1998)
+<dt>
+[Ull97]
+<dd>
+<a name="Ullman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Information Integration Using Logical Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Ullman97">
+ICDT 1997
+</a>
+: 19-40
+<dt>
+[Wan98]
+<dd>
+<a name="Wang98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Richard_Y=.html">
+Richard Y. Wang
+</a>
+: A Product Perspective on Total Data Quality Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm41.html#Wang98">
+CACM 41(2)
+</a>
+: 58-65(1998)
+<dt>
+[Wie92]
+<dd>
+<a name="Wiederhold92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Mediators in the Architecture of Future Information Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer25.html#Wiederhold92">
+IEEE Computer 25(3)
+</a>
+: 38-49(1992)
+<dt>
+[WS96]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/NaumannLF99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Felix&nbsp;Naumann&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ulf&nbsp;Leser&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Johann&nbsp;Christoph&nbsp;Freytag},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Quality-driven&nbsp;Integration&nbsp;of&nbsp;Heterogenous&nbsp;Information&nbsp;Systems},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{447-458},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

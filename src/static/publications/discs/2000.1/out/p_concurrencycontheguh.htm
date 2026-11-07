@@ -1,0 +1,581 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Concurrency Control and Recovery in Transactional Process Management</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_11.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Concurrency Control and Recovery in Transactional Process Management
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_heiko_schuldt.htm">Heiko Schuldt</a>, 
+<a href = "a_gustavo_alonso.htm">Gustavo Alonso</a>, and 
+<a href = "a_hans-joumlrg_schek.htm">Hans-J&ouml;rg Schek</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/concurrencycontheguh.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podstransactiotions.htm">Return to Transactions</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ The unified theory of concurrency control and recovery integrates atomicity and isolation within a common framework, thereby avoiding many of the shortcomings resulting from treating them as orthogonal problems. This theory can be applied to the traditional read/write model as well as to semantically rich operations. In this paper, we extend the unified theory by applying it to generalized process structures, i.e., arbitrary partially ordered sequences of transaction invocations. Using the extended unified theory, our goal is to provide a more flexible handling of concurrent processes while allowing as much parallelism as possible. Unlike in the original unified theory, we take into account that not all activities of a process might be compensatable and the fact that these process structures require transactional properties more general than in traditional ACID transactions. We provide a correctness criterion for transactional processes and identity the key points in which the more flexible structure of transactional processes implies differences from traditional transactions.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AAHD97]
+<dd>
+<a name="ArpinarAHD97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpinar:I=.html">
+I. Arpinar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpinar:Sena_Nural.html">
+Sena Nural Arpinar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Halici:Ugur.html">
+Ugur Halici
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dogac:Asuman.html">
+Asuman Dogac
+</a>
+: Correctness of Workflow in the Presence of Concurrency. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ngits/ngits97.html#ArpinarAHD97">
+NGITS 1997
+</a>
+: 0-
+<dt>
+[ABFS97]
+<dd>
+<a name="AlonsoBFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blott:Stephen.html">
+Stephen Blott
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fessler:Armin.html">
+Armin Fessler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+: Correctness and Parallelism of Composite Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 197-208
+<dt>
+[AFH+99]
+<dd>
+<a name="AlonsoFHLSW99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fiedler:U=.html">
+U. Fiedler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hagen:Claus.html">
+Claus Hagen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lazcano:A=.html">
+A. Lazcano
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schuldt:Heiko.html">
+Heiko Schuldt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weiler:N=.html">
+N. Weiler
+</a>
+: WISE: Business to Business E-Commerce. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride99.html#AlonsoFHLSW99">
+RIDE 1999
+</a>
+: 132-139
+<dt>
+[AFPS99]
+<dd>
+<a name="AlonsoFPS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fessler:Armin.html">
+Armin Fessler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pardon:Guy.html">
+Guy Pardon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+: Transactions in Stack, Fork, and Join Composite Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#AlonsoFPS99">
+ICDT 1999
+</a>
+: 150-168
+<dt>
+[Alo97]
+<dd>
+... 
+<dt>
+[AVA+94]
+<dd>
+<a name="AlonsoVABASW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vingralek:Radek.html">
+Radek Vingralek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">
+Divyakant Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Breitbart:Yuri.html">
+Yuri Breitbart
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abbadi:Amr_El.html">
+Amr El Abbadi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+: Unifying concurrency control and recovery of transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is19.html#AlonsoVABASW94">
+IS 19(1)
+</a>
+: 101-115(1994)
+<dt>
+[BBG89]
+<dd>
+<a name="BeeriBG89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: A Model for Concurrency in Nested Transactions Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 36(2)
+</a>
+: 230-269(1989)
+<dt>
+[BHG87]
+<dd>
+<a name="BernsteinHG87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hadzilacos:Vassos.html">
+Vassos Hadzilacos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Concurrency Control and Recovery in Database Systems.  Addison-Wesley 1987, ISBN 0-201-10715-5
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/bernstein87.html">
+Contents
+</a>
+<dt>
+[ELLR90]
+<dd>
+<a name="ElmagarmidLLR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmagarmid:Ahmed_K=.html">
+Ahmed K. Elmagarmid
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leu:Yungho.html">
+Yungho Leu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">
+Witold Litwin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rusinkiewicz:Marek.html">
+Marek Rusinkiewicz
+</a>
+: A Multidatabase Transaction Model for InterBase. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#ElmagarmidLLR90">
+VLDB 1990
+</a>
+: 507-518
+<dt>
+[Elm92]
+<dd>
+<a name="Elmagarmid92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmagarmid:Ahmed_K=.html">
+Ahmed K. Elmagarmid
+</a>
+ (Ed.): Database Transaction Models for Advanced Applications.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1992, ISBN 1-55860-214-3
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/transaction92.html">
+Contents
+</a>
+<dt>
+[GHKM94]
+<dd>
+<a name="GeorgakopoulosHKM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Georgakopoulos:Dimitrios.html">
+Dimitrios Georgakopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hornick:Mark_F=.html">
+Mark F. Hornick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krychniak:Piotr.html">
+Piotr Krychniak
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manola:Frank.html">
+Frank Manola
+</a>
+: Specification and Management of Extended Transactions in a Programmable Transaction Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#GeorgakopoulosHKM94">
+ICDE 1994
+</a>
+: 462-473
+<dt>
+[GHS95]
+<dd>
+<a name="GeorgakopoulosHS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Georgakopoulos:Dimitrios.html">
+Dimitrios Georgakopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hornick:Mark_F=.html">
+Mark F. Hornick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sheth:Amit_P=.html">
+Amit P. Sheth
+</a>
+: An Overview of Workflow Management: From Process Modeling to Workflow Automation Infrastructure. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd3.html#GeorgakopoulosHS95">
+Distributed and Parallel Databases 3(2)
+</a>
+: 119-153(1995)
+<dt>
+[JK97]
+<dd>
+<a name="JajodiaK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jajodia:Sushil.html">
+Sushil Jajodia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kerschberg:Larry.html">
+Larry Kerschberg
+</a>
+ (Eds.): Advanced Transaction Models and Architectures.  Kluwer 1997, ISBN 0-7923-9880-7
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/JajodiaK97.html">
+Contents
+</a>
+<dt>
+[KR98]
+<dd>
+<a name="KamathR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamath:Mohan.html">
+Mohan Kamath
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamritham:Krithi.html">
+Krithi Ramamritham
+</a>
+: Failure Handling and Coordinated Execution of Concurrent Workflows. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#KamathR98">
+ICDE 1998
+</a>
+: 334-341
+<dt>
+[Ley95]
+<dd>
+<a name="Leymann95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leymann:Frank.html">
+Frank Leymann
+</a>
+: Supporting Business Transactions Via Partial Backward Recovery In Workflow Management Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/btw/btw95.html#Leymann95">
+BTW 1995
+</a>
+: 51-70
+<dt>
+[MRSK92]
+<dd>
+<a name="MehrotraRKS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehrotra:Sharad.html">
+Sharad Mehrotra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Korth:Henry_F=.html">
+Henry F. Korth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+: A Transaction Model for Multidatabase Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs92.html#MehrotraRKS92">
+ICDCS 1992
+</a>
+: 56-63
+<dt>
+[NSSW94]
+<dd>
+... 
+<dt>
+[RSS97]
+<dd>
+... 
+<dt>
+[SAS99]
+<dd>
+... 
+<dt>
+[SST98]
+<dd>
+... 
+<dt>
+[SWY93]
+<dd>
+<a name="SchekWY93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Ye:Haiyan.html">
+Haiyan Ye
+</a>
+: Towards a Unified Theory of Concurrency Control and Recovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1993
+</a>
+: 300-311
+<dt>
+[VHYBS98]
+<dd>
+<a name="VingralekHBS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vingralek:Radek.html">
+Radek Vingralek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasse=Ye:H=.html">
+H. Hasse-Ye
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Breitbart:Yuri.html">
+Yuri Breitbart
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+: Unifying Concurrency Control and Recovery of Transactions with Semantically Rich Operations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs190.html#VingralekHBS98">
+TCS 190(2)
+</a>
+: 363-396(1998)
+<dt>
+[WR92]
+<dd>
+<a name="WachterR92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/W=auml=chter:Helmut.html">
+Helmut W&auml;chter
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: The ConTract Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/transaction92.html#WachterR92">
+Database Transaction Models for Advanced Applications 1992
+</a>
+: 219-263
+<dt>
+[ZNBB94]
+<dd>
+<a name="ZhangNBB94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Aidong.html">
+Aidong Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nodine:Marian_H=.html">
+Marian H. Nodine
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bhargava:Bharat_K=.html">
+Bharat K. Bhargava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bukhres:Omran_A=.html">
+Omran A. Bukhres
+</a>
+: Ensuring Relaxed Atomicity for Flexible Transactions in Multidatabase Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ZhangNBB94">
+SIGMOD Conference 1994
+</a>
+: 67-78
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/SchuldtAS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Heiko&nbsp;Schuldt&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gustavo&nbsp;Alonso&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hans-J{\"o}rg&nbsp;Schek},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Concurrency&nbsp;Control&nbsp;and&nbsp;Recovery&nbsp;in&nbsp;Transactional&nbsp;Process&nbsp;Management},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{316-326},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,503 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Histogram-Based Approximation of Set-Valued Query-Answers</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_2.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Histogram-Based Approximation of Set-Valued Query-Answers
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_yannis_e_ioannidis.htm">Yannis E. Ioannidis</a> and 
+<a href = "a_viswanath_poosala.htm">Viswanath Poosala</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/histogrambasedayavi.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdataminingithms.htm">Return to Data Mining Algorithms</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Answering queries approximately has recently been proposed as a way to reduce query response times in on-line decision support systems, when the precise answer is not necessary or early feedback is helpful. Most of the work in this area uses sampling-based techniques and handles aggregate queries, ignoring queries that return relations as answers. In this paper, we extend the scope of approximate query answering to general queries. We propose a novel and intuitive error measure for quantifying the error in an approximate query answer, which can be a multiset in general. We also study the use of histograms in approximate query answering as an alternative to sampling. In that direction, we develop a histogram algebra and demonstrate how complex SQL queries on a database may be translated into algebraic operations on the corresponding histograms. Finally, we present the results of an initial set of experiments where various types of histograms and sampling are compared with respect to their effectiveness in approximate query answering as captured by the introduced error measure. The results indicate that the 
+<i>
+MaxDiff(V,A)
+</i>
+ histograms provide quality approximations for both set-valued and aggregate queries, while sampling is competitive mainly for aggregate queries with no join operators.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AcharyaGPR99a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramaswamy:Sridhar.html">
+Sridhar Ramaswamy
+</a>
+: Join Synopses for Approximate Query Answering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#AcharyaGPR99a">
+SIGMOD Conference 1999
+</a>
+: 275-286
+<dt>
+[2]
+<dd>
+<a name="BunemanDW88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Watters:Aaron.html">
+Aaron Watters
+</a>
+: A Semantics for Complex Objects and Approximate Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods88.html#BunemanDW88">
+PODS 1988
+</a>
+: 305-314
+<dt>
+[3]
+<dd>
+<a name="ChenR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Chung=Min.html">
+Chung-Min Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+: Adaptive Selectivity Estimation Using Query Feedback. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ChenR94">
+SIGMOD Conference 1994
+</a>
+: 161-172
+<dt>
+[4]
+<dd>
+<a name="GibbonsM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+: New Sampling-Based Summary Statistics for Improving Approximate Query Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#GibbonsM98">
+SIGMOD Conference 1998
+</a>
+: 331-342
+<dt>
+[5]
+<dd>
+<a name="GibbonsMP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Fast Incremental Maintenance of Approximate Histograms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 466-475
+<dt>
+[6]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HellersteinHW97">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+<a name="Kooi80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kooi:Robert.html">
+Robert Kooi
+</a>
+: The Optimization of Queries in Relational Databases. Ph.D. thesis,  Case Western Reserve University 1980
+<br>
+ 
+<dt>
+[10]
+<dd>
+<a name="LiptonNS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+: Practical Selectivity Estimation through Adaptive Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#LiptonNS90">
+SIGMOD Conference 1990
+</a>
+: 1-11
+<dt>
+[11]
+<dd>
+<a name="Motro84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motro:Amihai.html">
+Amihai Motro
+</a>
+: Query Generalization: A Method for Interpreting Null Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/eds/eds84.html#Motro84">
+Expert Database Workshop 1984
+</a>
+: 597-616
+<dt>
+[12]
+<dd>
+<a name="OzsoyogluDSH92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Kaizheng.html">
+Kaizheng Du
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swamy:Sujatha_Guru.html">
+Sujatha Guru Swamy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+: Processing Real-Time, Non-Aggregate Queries with Time-Constraints in CASE-DB. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde92.html#OzsoyogluDSH92">
+ICDE 1992
+</a>
+: 410-417
+<dt>
+[13]
+<dd>
+<a name="Piatetsky-ShapiroC84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">
+Gregory Piatetsky-Shapiro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connell:Charles.html">
+Charles Connell
+</a>
+: Accurate Estimation of the Number of Tuples Satisfying a Condition. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Piatetsky-ShapiroC84">
+SIGMOD Conference 1984
+</a>
+: 256-276
+<dt>
+[14]
+<dd>
+<a name="PoosalaG99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">
+Venkatesh Ganti
+</a>
+: Fast Approximate Answers to Aggregate Queries on a Data Cube. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm99.html#PoosalaG99">
+SSDBM 1999
+</a>
+: 24-33
+<dt>
+[15]
+<dd>
+<a name="PoosalaG99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">
+Venkatesh Ganti
+</a>
+: Fast Approximate Query Answering Using Precomputed Statistics. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#PoosalaG99">
+ICDE 1999
+</a>
+: 252
+<dt>
+[16]
+<dd>
+<a name="PoosalaI97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+: Selectivity Estimation Without the Attribute Value Independence Assumption. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 486-495
+<dt>
+[17]
+<dd>
+<a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Improved Histograms for Selectivity Estimation of Range Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">
+SIGMOD Conf. 1996
+</a>
+: 294-305
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="VitterWI98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Min.html">
+Min Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyer:Balakrishna_R=.html">
+Balakrishna R. Iyer
+</a>
+: Data Cube Approximation and Histograms via Wavelets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm98.html#VitterWI98">
+CIKM 1998
+</a>
+: 96-104
+<dt>
+[20]
+<dd>
+<a name="VrbskyL93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vrbsky:Susan_V=.html">
+Susan V. Vrbsky
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liu:Jane_W==S=.html">
+Jane W.-S. Liu
+</a>
+: APPROXIMATE - A Query Processor that Produces Monotonically Improving Approximate Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#VrbskyL93">
+TKDE 5(6)
+</a>
+: 1056-1068(1993)
+<dt>
+[21]
+<dd>
+George Kingsley Zipf: Human Behaviour and the Principle of Least Effort: an Introduction to Human Ecology.  Addison-Wesley 1949
+<br>
+ 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="AcharyaGP99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Aqua: A Fast Decision Support Systems Using Approximate Query Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1999
+</a>
+: 754-757
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/IoannidisP99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Yannis&nbsp;E.&nbsp;Ioannidis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viswanath&nbsp;Poosala},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Histogram-Based&nbsp;Approximation&nbsp;of&nbsp;Set-Valued&nbsp;Query-Answers},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{174-185},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

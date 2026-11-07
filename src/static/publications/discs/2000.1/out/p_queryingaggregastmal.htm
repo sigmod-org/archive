@@ -1,0 +1,562 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Querying Aggregate Data</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_3.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Querying Aggregate Data
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_steacutephane_grum.htm">St&eacute;phane Grumbach</a>, 
+<a href = "a_maurizio_rafanelli.htm">Maurizio Rafanelli</a>, and 
+<a href = "a_leonardo_tininini.htm">Leonardo Tininini</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/queryingaggregastmal.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsviewsquerieries.htm">Return to Views/Queries</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ We introduce a first-order language with real polynomial arithmetic and aggregation operators (count, iterated sum and multiply), which is well suited for the definition of aggregate queries involving complex statistical functions. It offers a good trade-off between expressive power and complexity, with a tractable data complexity. Interestingly, some fundamental properties of first-order with real arithmetic are preserved in the presence of aggregates. In particular, there is an effective quantifier elimination for formulae with aggregation. We consider the problem of querying data that has already been aggregated in aggregate views, and focus on queries with an aggregation over a conjunctive query. Our main conceptual contribution is the introduction of a new equivalence relation among conjunctive queries, the isomorphism modulo a product. We prove that the equivalence of aggregate queries such as for instance averages reduces to it. Deciding if two queries are isomorphic modulo a product is shown to be NP-complete. We then show that the problem of complete rewriting of count queries using count views is also NP-complete. Finally, we introduce new rewriting techniques based on the isomorphism modulo a product to recover the values of counts by complex arithmetical computation from the views. We conclude by showing how these techniques can be used to perform automatic aggregation.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[BL96]
+<dd>
+<a name="BenediktL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Benedikt:Michael.html">
+Michael Benedikt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+: On the Structure of Queries in Constraint Query Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/lics/lics96.html#BenediktL96">
+LICS 1996
+</a>
+: 25-34
+<dt>
+[CV93]
+<dd>
+<a name="ChaudhuriV93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Optimization of 
+<i>
+Real
+</i>
+ Conjunctive Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1993
+</a>
+: 59-70
+<dt>
+[DMM94]
+<dd>
+... 
+<dt>
+[Dri82]
+<dd>
+... 
+<dt>
+[GBLP96]
+<dd>
+<a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">
+Adam Bosworth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">
+Andrew Layman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+: Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">
+ICDE 1996
+</a>
+: 152-159
+<dt>
+[Gho86]
+<dd>
+<a name="Ghosh86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghosh:Sakti_P=.html">
+Sakti P. Ghosh
+</a>
+: Statistical Relational Tables for Statistical Database Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse12.html#Ghosh86">
+TSE 12(12)
+</a>
+: 1106-1116(1986)
+<dt>
+[GHQ95]
+<dd>
+<a name="GuptaHQ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+: Aggregate-Query Processing in Data Warehousing Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#GuptaHQ95">
+VLDB 1995
+</a>
+: 358-369
+<dt>
+[GLMW96]
+<dd>
+... 
+<dt>
+[HRU96]
+<dd>
+<a name="HarinarayanRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Implementing Data Cubes Efficiently. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HarinarayanRU96">
+SIGMOD Conf. 1996
+</a>
+: 205-216
+<dt>
+[IS96]
+<dd>
+<a name="IbarraS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ibarra:Oscar_H=.html">
+Oscar H. Ibarra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Su:Jianwen.html">
+Jianwen Su
+</a>
+: On the Containment and Equivalence of Database Queries with Linear Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 32-43
+<dt>
+[KKR90]
+<dd>
+<a name="KanellakisKR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanellakis:Paris_C=.html">
+Paris C. Kanellakis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuper:Gabriel_M=.html">
+Gabriel M. Kuper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Revesz:Peter_Z=.html">
+Peter Z. Revesz
+</a>
+: Constraint Query Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1990
+</a>
+: 299-313
+<dt>
+[LM96]
+<dd>
+<a name="LevyM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">
+Inderpal Singh Mumick
+</a>
+: Reasoning with Aggregation Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#LevyM96">
+EDBT 1996
+</a>
+: 514-534
+<dt>
+[LMSS95]
+<dd>
+<a name="LevyMSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Answering Queries Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1995
+</a>
+: 95-104
+<dt>
+[LS97]
+<dd>
+<a name="LenzS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lenz:Hans=J=.html">
+Hans-J. Lenz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shoshani:Arie.html">
+Arie Shoshani
+</a>
+: Summarizability in OLAP and Statistical Data Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm97.html#LenzS97">
+SSDBM 1997
+</a>
+: 132-143
+<dt>
+[LW97]
+<dd>
+<a name="LibkinW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Limsoon.html">
+Limsoon Wong
+</a>
+: On the Power of Aggregation in Relational Query Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl97.html#LibkinW97">
+DBPL 1997
+</a>
+: 260-280
+<dt>
+[NSS98]
+<dd>
+<a name="NuttSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nutt:Werner.html">
+Werner Nutt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shurin:Sara.html">
+Sara Shurin
+</a>
+: Deciding Equivalences Among Aggregate Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 214-223
+<dt>
+[OOM87]
+<dd>
+<a name="OzsoyogluOM87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Z=_Meral.html">
+Z. Meral &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matos:Victor.html">
+Victor Matos
+</a>
+: Extending Relational Algebra and Relational Calculus with Set-Valued Attributes and Aggregate Functions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#OzsoyogluOM87">
+TODS 12(4)
+</a>
+: 566-592(1987)
+<dt>
+[RBT96]
+<dd>
+<a name="RafanelliBT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafanelli:Maurizio.html">
+Maurizio Rafanelli
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bezenchek:Antonia.html">
+Antonia Bezenchek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tininini:Leonardo.html">
+Leonardo Tininini
+</a>
+: The Aggregate Data Problem: A System for their Definition and Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod25.html#RafanelliBT96">
+SIGMOD Record 25(4)
+</a>
+: 8-13(1996)
+<dt>
+[Ren92]
+<dd>
+<a name="Renegar92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Renegar:James.html">
+James Renegar
+</a>
+: On the Computational Complexity and Geometry of the First-Order Theory of the Reals, Part I: Introduction. Preliminaries. The Geometry of Semi-Algebraic Sets. The Decision Problem for the Existential Theory of the Reals. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jsc/jsc13.html#Renegar92">
+JSC 13(3)
+</a>
+: 255-300(1992)
+<dt>
+[RR93]
+<dd>
+<a name="RafanelliR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafanelli:Maurizio.html">
+Maurizio Rafanelli
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ricci:Fabrizio_L=.html">
+Fabrizio L. Ricci
+</a>
+: Mefisto: A Functional Model for Statistical Entities. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#RafanelliR93">
+TKDE 5(4)
+</a>
+: 670-681(1993)
+<dt>
+[RSSS98]
+<dd>
+<a name="RossSSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">
+Kenneth A. Ross
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stuckey:Peter_J=.html">
+Peter J. Stuckey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Foundations of Aggregation Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs193.html#RossSSS98">
+TCS 193(1-2)
+</a>
+: 149-179(1998)
+<dt>
+[SDJL96]
+<dd>
+<a name="SrivastavaDJL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">
+Shaul Dar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Answering Queries with Aggregation Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#SrivastavaDJL96">
+VLDB 1996
+</a>
+: 318-329
+<dt>
+[Sho97]
+<dd>
+<a name="Shoshani97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shoshani:Arie.html">
+Arie Shoshani
+</a>
+: OLAP and Statistical Databases: Similarities and Differences. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 185-196
+<dt>
+[Su83]
+<dd>
+... 
+<dt>
+[SW85]
+<dd>
+<a name="ShoshaniW85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shoshani:Arie.html">
+Arie Shoshani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Harry_K=_T=.html">
+Harry K. T. Wong
+</a>
+: Statistical and Scientific Database Issues. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse11.html#ShoshaniW85">
+TSE 11(10)
+</a>
+: 1040-1047(1985)
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="BenediktL99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Benedikt:Michael.html">
+Michael Benedikt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+: Exact and Approximate Aggregation in Constraint Query. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1999
+</a>
+: 102-113
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/GrumbachRT99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{St{\'e}phane&nbsp;Grumbach&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maurizio&nbsp;Rafanelli&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leonardo&nbsp;Tininini},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Querying&nbsp;Aggregate&nbsp;Data},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{174-184},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

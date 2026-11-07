@@ -1,0 +1,353 @@
+<HTML>
+<HEAD>
+<TITLE> Menu of TIME home page</TITLE>
+<META NAME="keywords" CONTENT="conference, workshop, symposium, time, 
+temporal reasoning, time representation, artificial intelligence, 
+database, logic, gis"> 
+
+<STYLE TYPE="text/css">
+<!--
+H3 {font-family: Verdana,Arial,Helvetica;font-size:14pt;font-weight:bold;}
+TT{font-family:monospace;}
+B I{color:#993366;font-size:100%;}
+DIV,TD
+SPAN SMALL{font-size:80%;}
+SPAN.times{font-family:Times New Roman,Times,serif;font-size:100%;}
+-->
+</STYLE>
+
+<!-- {font-family:Arial,Verdana,Helvetica;font-size:14pt;} -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var bV=parseInt(navigator.appVersion);
+NS4=(document.layers)?true:false;
+IE4=(document.all)?true:false;
+ver4=(NS4 || IE4)?true:false;
+if (document.images) {
+arImLoad=new Array ("selectdn.gif");
+arImList=new Array ();
+for (counter in arImLoad) {
+arImList[counter]=new Image();
+arImList[counter].src=arImLoad[counter];
+}}
+function expandIt(){return}
+function expandAll(){return}
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+isExpanded=false;
+function reDo(){window.location.reload()}
+function getIndex(el) {
+ind=null;
+for (i=0; i<document.layers.length; i++) {
+whichEl=document.layers[i];
+if (whichEl.id==el) {
+ind=i;
+break;
+}
+}
+return ind;
+}
+function arrange() {
+nextY=document.layers[firstInd].pageY + document.layers[firstInd].document.height-10;
+for (i=firstInd+1; i<document.layers.length; i++) {
+whichEl=document.layers[i];
+if (whichEl.visibility != "hide") {
+whichEl.pageY=nextY;
+nextY += whichEl.document.height-10;
+}
+}
+}
+function initIt(){
+if (NS4) {scrollTo(0,pageYOffset-30)
+for (i=0; i<document.layers.length; i++) {
+whichEl=document.layers[i];
+if (whichEl.id.indexOf("Child") != -1) {
+whichEl.visibility="hide";
+whichEl.isExpanded=false;
+}
+}
+arrange();
+setTimeout("window.onresize=reDo",1000)
+}
+else {
+tempColl=document.all.tags("DIV");
+for (i=0; i<tempColl.length; i++) {
+if (tempColl(i).className == "child") {
+tempColl(i).style.display="none";
+tempColl(i).isExpanded=false;
+}
+}
+}
+}
+function expandIt(el) {
+if (!ver4) return;
+if (IE4) {expandIE(el)} else {expandNS(el)}
+}
+function expandIE(el) { 
+whichEl=eval(el + "Child");
+whichIm=event.srcElement;
+if (whichEl.style.display == "none") {
+whichEl.style.display="block";
+whichEl.isExpanded=true;
+whichIm.src="selectdn.gif";
+}
+else {
+whichEl.style.display="none";
+whichEl.isExpanded=false;
+whichIm.src="selectrt.gif";
+}
+}
+function expandNS(el) {
+whichEl=eval("document." + el + "Child");
+whichIm=eval("document." + el + "Parent.document.images['imEx']");
+if (whichEl.visibility == "hide") {
+whichEl.visibility="show";
+whichEl.isExpanded=true;
+whichIm.src="selectdn.gif";
+}
+else {
+whichEl.visibility="hide";
+whichEl.isExpanded=false;
+whichIm.src="selectrt.gif";
+}
+arrange();
+}
+function showAll() {
+for (i=firstInd; i<document.layers.length; i++) {
+whichEl=document.layers[i];
+whichEl.visibility="show";
+}
+}
+function expandAll(isBot) {
+newSrc=(isExpanded)?"selectrt.gif":"selectdn.gif";
+if (NS4) {
+document.images["imEx"].src=newSrc;
+for (i=firstInd; i<document.layers.length; i++) {
+whichEl=document.layers[i];
+if (whichEl.id.indexOf("Parent") != -1) {
+whichEl.document.images["imEx"].src=newSrc;
+}
+if (whichEl.id.indexOf("Child") != -1) {
+whichEl.visibility=(isExpanded)?"hide":"show";
+whichEl.isExpanded=(isExpanded)?false:true;
+}
+}
+arrange();
+if (isBot && isExpanded) scrollTo(0,document.layers[firstInd].pageY);
+}
+else {
+divColl=document.all.tags("DIV");
+for (i=0; i<divColl.length; i++) {
+if (divColl(i).className == "child") {
+divColl(i).style.display=(isExpanded)?"none":"block";
+divColl(i).isExpanded=(isExpanded)?false:true;
+}
+}
+imColl=document.images.item("imEx");
+for (i=0; i<imColl.length; i++) {
+imColl(i).src=newSrc;
+}
+}
+isExpanded=!isExpanded;
+}
+with (document) {
+write("<STYLE TYPE='text/css'>");
+write(".parent {");
+if (NS4) {write("position:absolute; visibility:hidden;")};
+if (IE4) {write("margin-top:-10;")};
+write("margin-left:10;");
+write("color:#006");
+write("}");
+write(".child {");
+if (NS4) {write("position:absolute; visibility:hidden;")};
+if (IE4) {write("display:none;")};
+write("margin-left:25;");
+write("}");
+write(".other {");
+if (NS4) {write("position:absolute; visibility:hidden;")};
+write("margin-left:0;");
+write("}");
+write("</STYLE>");
+}
+function linkIt(whichEl, whichHref) {
+lay=(NS4)?eval("document."+whichEl+"Child"):eval(whichEl+"Child");
+if (!lay.isExpanded) expandIt(whichEl);
+nlay=(NS4)?lay.document.images[whichHref]:document.images[whichHref];
+if (NS4){
+sY=nlay.y+lay.pageY-20
+window.scrollTo(0,sY);
+}else{nlay.scrollIntoView();scroll(0,document.body.scrollTop-20);
+//alert(nlay.parentElement.tagName);
+nlay.parentElement.style.backgroundColor="#FF99FF";setTimeout("nlay.parentElement.style.backgroundColor='white'",1000);}
+}
+window.onload=initIt;
+//-->
+</SCRIPT>
+</HEAD>
+
+<body BGCOLOR="aquamarine">
+
+<!-- <img SRC="home.gif" height=40 width=40> -->
+
+<img SRC="hourglass.gif" height=45 width=45>
+<b><a href="title.html" target="frame2">TIME-01 Home</a></b>
+
+<p><font size=-1>
+<script language="JavaScript">
+              <!---//hide script from old browsers
+              document.write( "<br>Last updated: "+ document.lastModified );
+              //end hiding contents --->
+              </script>
+Web pages hosted by DSI - University of Milan, Italy.
+</font></p>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(!ver4)document.write("<BLOCKQUOTE>");
+//-->
+</SCRIPT>
+
+
+<P STYLE="margin-left:25;font-family:Arial,sans-serif;font-size:14pt;">
+</P>
+
+<DIV ID="elOneParent" CLASS=parent>
+<H4><A HREF="#" onClick="expandIt('elOne'); return false"><IMG
+NAME="imEx" SRC="selectrt.gif" WIDTH=12 HEIGHT=12 BORDER=0 ALT="Expand/Collapse Item">
+General Info</A></H4>
+</DIV>
+
+<DIV ID="elOneChild" CLASS=child>
+<P>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="scope.html" target="frame2">Symposium Scope</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="topics.html" target="frame2">Topics of Interest</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="status.html" target="frame2">Change of status</a></b><br>
+<!--
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="dates.html" target="frame2">Important Dates</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="sub.html" target="frame2">Paper Submission</a></b><br>
+-->
+</P>
+</DIV>
+
+<DIV ID="elTwoParent" CLASS=parent>
+<H4><A HREF="#" onClick="expandIt('elTwo'); return false"><IMG
+NAME="imEx" SRC="selectrt.gif" WIDTH=12 HEIGHT=12 BORDER=0 ALT="Expand/Collapse Item">
+Organization</A></H4>
+</DIV>
+
+<DIV ID="elTwoChild" CLASS=child>
+<P>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="org.html" target="frame2">Organizers</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="pc.html" target="frame2">Program Committee</a></b><br>
+</P>
+</DIV>
+
+<DIV ID="elThreeParent" CLASS=parent>
+<H4><A HREF="#" onClick="expandIt('elThree'); return false"><IMG
+NAME="imEx" SRC="selectrt.gif" WIDTH=12 HEIGHT=12 BORDER=0 ALT="Expand/Collapse Item">
+More about TIME-01</A></H4>
+</DIV>
+
+<DIV ID="elThreeChild" CLASS=child>
+<P>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="final_program.html" target="frame2">Final Program</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="pubs.html" target="frame2">Proceedings</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="speakers.html" target="frame2">Invited Talks</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="sponsor.html" target="frame2">Sponsors</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="location.html" target="frame2">Conference Location</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="pictures.html" target="frame2">Pictures!</a></b><br>
+<!--
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="accepted.html" target="frame2">Accepted papers</a></b><br>  
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="registration.pdf" target="frame2">Registration/Reservation Form</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="travelinfo.html" target="frame2">Travel Information</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="authorinstr.html" target="frame2">Instruction to authors</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="flyer.html" target="frame2">TIME-01 Flyer</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="hotel.pdf" target="frame2">Hotel Reservation</a></b><br>
+-->
+
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="feedback.html" target="frame2">Feedback</a></b><br>
+
+</P>
+</DIV>
+
+<DIV ID="elFourParent" CLASS=parent>
+<H4><A HREF="#" onClick="expandIt('elFour'); return false"><IMG
+NAME="imEx" SRC="selectrt.gif" WIDTH=12 HEIGHT=12 BORDER=0 ALT="Expand/Collapse Item">
+Other Links</A></H4>
+</DIV>
+
+<DIV ID="elFourChild" CLASS=child>
+<P>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="http://www.cs.uregina.ca/~temporal" target="New_window">Previous editions of TIME</a><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="http://www.cividale.com/citta/cittauk.htm" target="New_window">About Cividale</a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="trips.html" target="frame2">Short trips from Cividale</a></b><br>
+
+<!--
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="http://www.acm.org/sigmod" target="_top"> </a></b><br>
+<img SRC="ani_ball.gif" height=14 width=14>
+<b><a href="mirror.html" target="frame2">Mirror Sites</a></b><br>
+-->
+
+</P>
+</DIV>
+
+<DIV ID="elExpParent" CLASS=other>
+<A HREF="#" onClick="expandAll(true); return false"><IMG
+NAME="imEx" SRC="selectrt.gif" WIDTH=12 HEIGHT=12 BORDER=0 ALT="Expand/Collapse All"></A>
+Display/Hide All
+</DIV>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(!ver4)document.write("</BLOCKQUOTE>");
+//-->
+</SCRIPT>
+<!-- v.2 -->
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+if (NS4) {
+firstEl="elOneParent";
+firstInd=getIndex(firstEl);
+document.layers[firstInd].pageY-=10;
+showAll();
+arrange();
+}else{elExpParent.style.marginTop=-10}
+//-->
+</SCRIPT>
+
+<hr>
+<p>These web pages are hosted by DSI - University of Milan, Italy.
+</p>
+</BODY>
+</HTML>
+
+
+

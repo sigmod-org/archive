@@ -1,0 +1,121 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_2.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Design, Implementation, and Performance of the LHAM Log-Structured History Data Access Method</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_m.htm#Peter Muth">Peter Muth</a>, <a href="m_authors_o.htm#Patrick E. O'Neil">Patrick E. O'Neil</a>, <a href="m_authors_p.htm#Achim Pick">Achim Pick</a>, <a href="m_authors_w.htm#Gerhard Weikum">Gerhard Weikum</a></center></td></tr></table></center><a target="disc_pdf[834" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Numerous applications such as stock market or medical information systems require that both historical and current data be logically integrated intoa temporal database.
+The underlying access method must support different forms of "time-travel"queries, the migration of old record versions onto inexpensive archive media, and high insert and update rates.
+This paper introduces a new access method for transaction-time temporal data, called the Log- structured History Data Access Method (LHAM) that meets these demands.
+The basic principle of LHAM is to partition the data into successive components based on the timestamps of the record versions.
+Components are assigned to different levels of a storage hierarchy, and incoming data is continuously migrated through the hierarchy.
+The paper discusses the LHAM concepts, including concurrency control and recovery, our full-fledged LHAM implementation, and experimental performance results based on this implementation.
+A detailed comparison with the TSB-tree, both analytically and based on experiments with real implementations, shows that LHAM is highly superior interms of insert performance while query performance is in almost all casesat least as good as for the TSB-tree; in many cases it is much better.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Bec96]<dd><a name="BeckerGOSW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Becker:Bruno.html">Bruno Becker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gschwind:Stephan.html">Stephan Gschwind</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ohler:Thomas.html">Thomas Ohler</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widmayer:Peter.html">Peter Widmayer</a>:
+An Asymptotically Optimal Multiversion B-Tree.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#BeckerGOSW96">VLDB Journal 5(4)</a>: 264-275(1996)<dt>[BSW97]<dd><a name="BerckenSW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bercken:Jochen_Van_den.html">Jochen Van den Bercken</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widmayer:Peter.html">Peter Widmayer</a>:
+A Generic Approach to Bulk Loading Multidimensional Index Structures.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#BerckenSW97">VLDB 1997</a>: 406-415<dt>[EKW91]<dd><a name="ElmasriKW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmasri:Ramez.html">Ramez Elmasri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Yeong=Joon.html">Yeong-Joon Kim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wuu:Gene_T=_J=.html">Gene T. J. Wuu</a>:
+Efficient Implementation Techniques For the Time Index.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde91.html#ElmasriKW91">ICDE 1991</a>: 102-111<dt>[EWK93]<dd>...
+<dt>[GP87]<dd><a name="GrayP87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Putzolu:Gianfranco_R=.html">Gianfranco R. Putzolu</a>:
+The 5 Minute Rule for Trading Memory for Disk Accesses and The 10 Byte Rule for Trading Memory for CPU Time.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#GrayP87">SIGMOD Conference 1987</a>: 395-398<dt>[GR93]<dd><a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">Andreas Reuter</a>:
+Transaction Processing: Concepts and Techniques.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1993, ISBN 1-55860-190-2<br>
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">Contents</a><dt>[Gut84]<dd><a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">Antonin Guttman</a>:
+R-Trees: A Dynamic Index Structure for Spatial Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">SIGMOD Conference 1984</a>: 47-57<dt>[Jag97]<dd><a name="JagadishNSSK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narayan:P=_P=_S=.html">P. P. S. Narayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">S. Sudarshan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanneganti:Rama.html">Rama Kanneganti</a>:
+Incremental Organization for Data Recording and Warehousing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#JagadishNSSK97">VLDB 1997</a>: 16-25<dt>[Kol93]<dd>...
+<dt>[KMH97]<dd><a name="KornackerMH97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kornacker:Marcel.html">Marcel Kornacker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">C. Mohan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>:
+Concurrency and Recovery in Generalized Search Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KornackerMH97">SIGMOD Conference 1997</a>: 62-72<dt>[Lom93]<dd><a name="Lomet93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">David B. Lomet</a>:
+Key Range Locking Strategies for Improved Concurrency.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#Lomet93">VLDB 1993</a>: 655-664<dt>[LS89]<dd><a name="LometS89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">David B. Lomet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">Betty Salzberg</a>:
+Access Methods for Multiversion Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#LometS89">SIGMOD Conference 1989</a>: 315-324<dt>[LS90]<dd><a name="LometS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">David B. Lomet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">Betty Salzberg</a>:
+The Performance of a Multiversion Access Method.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#LometS90">SIGMOD Conference 1990</a>: 353-363<dt>[Moh96]<dd>...
+<dt>[OCGO96]<dd><a name="ONeilCGO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Edward.html">Edward Cheng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gawlick:Dieter.html">Dieter Gawlick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Elizabeth_J=.html">Elizabeth J. O'Neil</a>:
+The Log-Structured Merge-Tree (LSM-Tree).
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acta/acta33.html#ONeilCGO96">Acta Informatica 33(4)</a>: 351-385(1996)<dt>[OW93]<dd><a name="ONeilW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">Gerhard Weikum</a>:
+A Log-Structured History Data Access Method (LHAM).
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/hpts/hpts93.html#ONeilW93">HPTS 1993</a>: 0-<dt>[RO92]<dd><a name="RosenblumO92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenblum:Mendel.html">Mendel Rosenblum</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ousterhout:John_K=.html">John K. Ousterhout</a>:
+The Design and Implementation of a Log-Structured File System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tocs/tocs10.html#RosenblumO92">TOCS 10(1)</a>: 26-52(1992)<dt>[Sno90]<dd><a name="Snodgrass90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>:
+Temporal Databases - Status and Research Directions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod19.html#Snodgrass90">SIGMOD Record 19(4)</a>: 83-89(1990)<dt>[SOL94]<dd><a name="ShenOL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shen:Han.html">Han Shen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">Beng Chin Ooi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lu:Hongjun.html">Hongjun Lu</a>:
+The TP-Index: A Dynamic and Efficient Indexing Mechanism for Temporal Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#ShenOL94">ICDE 1994</a>: 274-281<dt>[ST94]<dd>...
+<dt>[Tan93]<dd><a name="TanselCGJSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tansel:Abdullah_Uz.html">Abdullah Uz Tansel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clifford:James.html">James Clifford</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gadia:Shashi_K=.html">Shashi K. Gadia</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jajodia:Sushil.html">Sushil Jajodia</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Segev:Arie.html">Arie Segev</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a> (Eds.):
+Temporal Databases: Theory, Design, and Implementation.
+ Benjamin/Cummings 1993, ISBN 0-8053-2413-5<br>
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/tansel93.html">Contents</a><dt>[TK95]<dd><a name="TsotrasK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsotras:Vassilis_J=.html">Vassilis J. Tsotras</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kangerlaris:Nickolas.html">Nickolas Kangerlaris</a>:
+The Snapshot Index: An I/O-optimal access method for timeslice queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is20.html#TsotrasK95">IS 20(3)</a>: 237-260(1995)</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/MuthOPW98,<br>  author    = {Peter Muth and<br>               Patrick E. O'Neil and<br>               Achim Pick and<br>               Gerhard Weikum},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Design, Implementation, and Performance of the LHAM Log-Structured<br>               History Data Access Method},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {452-463},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

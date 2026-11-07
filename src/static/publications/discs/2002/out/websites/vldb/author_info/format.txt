@@ -1,0 +1,53 @@
+
+                        VLDB FORMAT INSTRUCTIONS
+          Proceedings of the 27th International Conference on
+                          Very Large Databases
+
+	       Roma, Italy, 11th - 14th September, 2001
+
+All papers must be on 8 1/2 x 11 white bond paper (US Letter format).  
+Format of the submission should follow the attached sample for layout, 
+type sizes, and other details.  However, there are variations among the 
+many typesetting and wordprocessing packages in use.  If you cannot 
+replicate these specifications exactly, you may develop useable styles 
+by approximating these guidelines where necessary.
+
+Opening page of paper:
+Top margin = 1"
+
+Title:  Centered, initial caps, boldface
+
+drop 7/16"
+
+Author(s) Name(s): If only one author -- centered, initial caps, roman.
+If two authors -- first author should be flush left, and second author
+flush right.  If there are more than two authors -- first author should
+flush left, second author should be centered, third author should be
+flush right, and so on.  Affiliations should be centered under each
+author name.
+drop 7/16" to first line of text.
+
+Main text:
+Manuscripts must be printed two columns to a page.  The dimensions of the
+columns are 3-1/4" wide, 7/8" margins in the right and left sides, and
+1/4" gap between the two columns.  The bottom margin in all cases is 1
+1/8".  Start text on all pages except the first page at 3/4" below the
+top of the page.
+
+Begin the first paragraph (page one, column one) with the abstract -
+indented 1/4" on both sides.
+
+For the body of the text, use 10-point type in a clear, readable font
+(Times-Roman or equivalent), with 1-point leading (i.e., 10 on 11).
+
+Headings should be in 12-point type, with 1 line of space above, and
+one-half line of space below.
+
+Table and figures should be centered in one-column, or centered at top
+of page if figure is larger than a column in width.
+
+Please do not include page numbers, headers or footers in your paper.
+
+Include a copyright notice at the bottom of the first column on page
+one. This notice must use the text containted in the file
+copyright_notice.txt.

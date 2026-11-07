@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Spatial Hypertext Workshop CFP</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+<body bgcolor=black text=white>
+<center>
+<H1>Call for Position Papers</h1>
+
+Second Workshop on Spatial Hypertext<br>
+Held at the 2002 ACM Conference on Hypertext<br>
+College Park, Maryland
+<p>
+Wednesday, June 12, 2002
+<p>
+</center>
+
+<b>Important dates:</b><br>
+<li> Position papers due:  May 3, 2002<br>
+<li> Acceptance notification: May 13, 2002<p>
+
+You are invited to submit a position paper (suggested length is 5
+pages) to the Second Workshop on Spatial Hypertext to be held at ACM
+Hypertext 2002 in College Park, Maryland.  Position statements should
+indicate your interest and expertise in the area as well as how you
+view your work fitting in to the topics described below.  Do not feel
+constrained by the topic list -- we welcome all those with interests
+in spatial hypertext.
+<p>
+
+Papers should be emailed as PDF files (or other reasonable attachment
+formats) to Frank Shipman (shipman@cs.tamu.edu).
+<p>
+
+<b>Workshop Theme and Goals:</b><p>
+
+Spatial Hypertext research has been increasing since its inception
+with the first well-known spatial hypertext system, VIKI, which
+appeared in 1994. Since that time a number of other spatial hypertext
+systems have appeared: Web Squirrel, CAOS, and VKB among others, and
+the spatial hypertext research is widely cited.  The goal of this
+workshop is to bring together researchers in this field for a specific
+meeting on the subject of spatial hypertext. Among the expected topics
+would be:<p>
+
+ <li>  Spatial hypertext systems in progress
+ <li>  User experience with spatial hypertext
+ <li>  Spatial hypertext implementation issues
+ <li>  Integrating spatial hypertext with other hypertext frameworks and
+       other software environments generally
+ <li>  Rhetoric issues posed by spatial hypertext
+<p>
+
+<b>Goals for the workshop include:</b>
+<p>
+
+ <li>  Surveying the state and variety of research areas in spatial
+       hypertext
+ <li>  Providing guidance to spatial hypertext system implementers from
+       user experience
+ <li>  Surveying spatial hypertext for open questions and future research
+       directions
+ <li>  Providing a framework for broadening the reach of spatial
+       hypertext by integrating it with the software environment
+       generally
+<p>
+
+<b>Intended audience: </b> <p>
+
+Spatial hypertext system implementers, hypertext
+framework integrators, users of spatial hypertexts, writers and
+researchers on hypertext rhetoric working in spatial hypertext,
+hypertext researchers generally interested in alternative models of
+structure, researchers in structural computing.
+<p>
+
+<b>Activities Planned: </b><p>
+
+Each accepted position paper will be briefly
+presented at the workshop.  Sessions will be organized around spatial
+hypertext themes with the goal of leaving most of the time for
+discussion of issues between participants.  At least part of the
+session will be devoted to demonstations of tools/applications if
+there is interest among the participants.
+<p>
+
+
+<b>Organizers:</b><p>
+
+Frank Shipman, Texas A&M University, is a senior hypertext researcher and
+one of the original authors on the VIKI project. He is currently the
+principal investigator on the VKB project, which is a successor to VIKI,
+and is supervising PhD research in spatial hypertext. He is the author or
+co-author of numerous important papers in spatial hypertext, one of which
+received the Engelbart best paper award at Hypertext 99.<p>
+
+Jim Rosenberg, Grindstone PA, is an independent poet and hypertext
+researcher who has been executing spatial hypertexts since 1988. He is the
+author of several papers of relevance to this area, three of which were
+nominated for the Engelbart best paper award at Hypertext 96, 98, and 01.
+<p>
+
+</body>
+<hr>
+<address>
+Frank Shipman, shipman@cs.tamu.edu
+</address>
+</html>

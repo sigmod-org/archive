@@ -1,0 +1,573 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Data Base Design Principles for Striping and Placement of</TITLE>
+</HEAD>
+<BODY>
+
+<B><FONT SIZE=6><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">Data Base Design Principles for Striping and Placement of</P>
+<P ALIGN="CENTER"> Delay-Sensitive Data on Disks</P>
+</B></FONT><FONT SIZE=4><P ALIGN="CENTER"></P>
+</FONT><B><FONT SIZE=5><P ALIGN="CENTER">Stavros Christodoulakis and Fenia Zioga*</P>
+<P ALIGN="CENTER">Laboratory of Distributed Multimedia Information Systems and Applications (MU.S.I.C.), </P>
+<P ALIGN="CENTER">Technical University of Crete (TUC)</P>
+</B><P ALIGN="CENTER">e-mail: (stavros, fenia)@ced.tuc.gr</P>
+</FONT><FONT SIZE=4><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P>*work done in the context of the ESPRIT LTR Project HERMES (Foundations of <B>H</B>igh P<B>er</B>formance Multimedia    Information Manag<B>e</B>ment <B>S</B>ystems),   # 9141</P>
+
+</FONT><B><FONT SIZE=6><P>&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P><DIR>
+<DIR>
+
+<P ALIGN="CENTER">Presentation Outline</P>
+<P ALIGN="CENTER"></P></DIR>
+</DIR>
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+</B></FONT><FONT SIZE=5><LI>Overview</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Mathematical Tools </LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>The Striping Performance Model</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Disk Allocation for Striping Delay-Sensitive Objects</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Grouping of Delay-Sensitive Objects across Two Striping Partitions</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Summary</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P><DIR>
+<DIR>
+
+<P ALIGN="CENTER">Overview</P>
+<P ALIGN="CENTER"></P></DIR>
+</DIR>
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+</B></FONT><FONT SIZE=5><LI>The Basic Striping Model </LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Partitioned vs. Unpartitioned Striping</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Partitioning of Disks for Striping Two Delay-Sensitive Objects </LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Partitioning of Disks for Striping <I>r </I>Delay-Sensitive Objects</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Grouping of Objects with Equal Consumption Rates into the same Striping Partitions</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+
+
+<UL><DIR>
+<DIR>
+
+
+<UL>
+<LI>Grouping of Objects with Different Consumption Rates into the same Striping Partitions</LI></UL>
+</DIR>
+</DIR>
+</UL>
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P><DIR>
+<DIR>
+
+<P ALIGN="CENTER">Majorization Theory &amp; Schur Functions</P></DIR>
+</DIR>
+
+</FONT><U><FONT SIZE=5><P>Majorization</U>:</B> </P>
+<P><IMG SRC="Image1.gif" WIDTH=310 HEIGHT=96>        Then: <IMG SRC="Image2.gif" WIDTH=53 HEIGHT=26>   holds if         <IMG SRC="Image3.gif" WIDTH=230 HEIGHT=133>   </P>
+</FONT><FONT SIZE=2><P></FONT><FONT SIZE=5><IMG SRC="Image4.gif" WIDTH=577 HEIGHT=28></P>
+<B><U>
+<P>Schur Functions</U>:</B> </P>
+
+<P>if <IMG SRC="Image5.gif" WIDTH=94 HEIGHT=32> <B>Schur convex</B><IMG SRC="Image6.gif" WIDTH=12 HEIGHT=21>&amp; <IMG SRC="Image7.gif" WIDTH=53 HEIGHT=26>  then <IMG SRC="Image8.gif" WIDTH=102 HEIGHT=28></P>
+<P>if <IMG SRC="Image5.gif" WIDTH=94 HEIGHT=32> <B>Schur concave</B><IMG SRC="Image6.gif" WIDTH=12 HEIGHT=21>&amp; <IMG SRC="Image7.gif" WIDTH=53 HEIGHT=26>  then <IMG SRC="Image9.gif" WIDTH=106 HEIGHT=26></P>
+
+<B><U><P>Example</U>:</B> </P><DIR>
+<DIR>
+
+<I><P><FONT FACE="Symbol">&#102;</FONT>
+</I> is a cost function and its argument is the vector of disk partition probabilities </P>
+<I><P><FONT FACE="Symbol">&#102;</FONT>
+</I> is Schur-concave. Let alternative disk partition probability vectors<IMG SRC="Image10.gif" WIDTH=52 HEIGHT=28>such that <IMG SRC="Image11.gif" WIDTH=53 HEIGHT=26></P>
+<P>Then, the cost function is maximized when partition probabilities are as uniform as possible</P>
+</FONT><B><I><FONT FACE="MS Sans Serif" SIZE=1>
+</I></FONT><FONT SIZE=6><P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">The Striping Performance Model</P></DIR>
+</DIR>
+
+</FONT><U><FONT SIZE=5><P>The Striping Model</P>
+
+<UL>
+</B></U><LI>The model enables comparisons among alternative designs of striping several objects</LI></UL>
+
+
+
+<UL>
+<LI>The model’s purpose is not analytic performance prediction</LI></UL>
+
+
+
+<UL>
+<LI>Parallel retrieval (fine-grained striping): appropriate for VCR operations, more robust in clock shifts, combines well with duplication [Gemmel96]</LI></UL>
+
+<B><U><P>Assumptions</P>
+
+<UL>
+</B></U><I><LI> n </I>identical disks for striping the objects</LI></UL>
+
+
+
+<UL>
+<LI>no bottleneck with network bandwidth, secondary storage buses, server/client buffer</LI></UL>
+
+
+
+<UL>
+<LI>retrieval requests like FF, RW, STOP, RESUME not studied (see [KYDONIA])</LI></UL>
+
+<B><U>
+<P>Placement &amp; Retrieval of Striped Data</P>
+
+<UL>
+</B></U><I><LI>X</I>: size of a round-block (or a stripe)<I> </LI>
+<LI>n </I>stripe-units of size <IMG SRC="Image12.gif" WIDTH=26 HEIGHT=56><I> </I>placed onto <I>n </I>disks in a round-robin fashion (disk load balancing)</LI>
+<I><LI>k</I>: #streams that are serviced in a round-robin scheduling within a service round</LI></UL>
+<DIR>
+<DIR>
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">The Striping Performance Model (cont’d)</P>
+</FONT><FONT SIZE=5><DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+</B><P></P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<B><P>Hiccup-free Playback Condition:</B> </P></DIR>
+</DIR>
+
+<P>&#9;&#9;&#9;<IMG SRC="Image13.gif" WIDTH=174 HEIGHT=54></P>
+<B>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>Maximum  #Concurrent Streams:</B> </P>
+<P>&#9;&#9;&#9;<IMG SRC="Image14.gif" WIDTH=154 HEIGHT=77></P>
+<B><DIR>
+<DIR>
+
+<P>Capacity S(n) of an n disk partition:</B><IMG SRC="Image15.gif" WIDTH=178 HEIGHT=77>  or  <IMG SRC="Image16.gif" WIDTH=289 HEIGHT=86></P>
+<B>
+<P>Minimum #disks to support k streams:</B>&#9;&#9;<IMG SRC="Image17.gif" WIDTH=252 HEIGHT=58></P>
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">The Striping Performance Model (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"></P></DIR>
+</DIR>
+
+<P ALIGN="CENTER">Impact of Striping Parameters on Performance</P><DIR>
+<DIR>
+
+</FONT><FONT SIZE=6><P ALIGN="CENTER">The Striping Performance Model (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"></P></DIR>
+</DIR>
+
+<P ALIGN="CENTER">Impact of Striping Parameters on Performance (cont’d)</P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER"></P>
+</FONT><U><FONT SIZE=5><P>Data Prefetching in the Client</P>
+
+<UL>
+</B></U><LI>Achieves lower bandwidth requirement <I>C’ </I>from the server at real time</LI></UL>
+
+
+<UL>
+<LI>Achieves more concurrent streams <I>S(n)</LI></UL>
+
+
+<UL>
+</I><LI>Introduces start-up delay in the playback</LI>
+<LI>Requires storage at the client</LI></UL>
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER"></P>
+</B></FONT><FONT SIZE=5><P>Bandwidth Requirement:&#9;<B><IMG SRC="Image18.gif" WIDTH=102 HEIGHT=50></P>
+</B><P>Capacity:&#9;<B><IMG SRC="Image19.gif" WIDTH=248 HEIGHT=100></P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P><DIR>
+<DIR>
+
+<P ALIGN="CENTER">The Striping Performance Model (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"></P></DIR>
+</DIR>
+
+<P ALIGN="CENTER">Impact of Striping Parameters on Performance (cont’d)</P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER"></P>
+</FONT><U><FONT SIZE=5><P>Data Prefetching in the Client </U>(cont’d)</P>
+</FONT><FONT SIZE=6><P><IMG SRC="Image20.gif" WIDTH=604 HEIGHT=389></P>
+<P ALIGN="CENTER">Disk Allocation for Striping Two DS Objects</P>
+</B></FONT><FONT SIZE=5>
+<P>We seek the allocation accomplishing the maximum number of concurrent streams</P>
+<B><U>
+<P>Partitioned vs. Unpartitioned Striping</P>
+</B></U>
+
+<UL>
+<B><LI>Fixed Access Probabilities</LI></UL>
+
+
+<UL>
+
+<UL>
+</B><I><LI>S(n) </I>monotonically increasing and concave with respect to <I>n</LI></UL>
+</UL>
+
+
+<UL>
+
+<UL>
+</I><LI>Partitioned striping accomplishes more concurrent streams compared to unpartitioned</LI></UL>
+</UL>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P><IMG SRC="Image21.gif" WIDTH=528 HEIGHT=336></P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+
+<UL>
+<B><LI>Variable Access Probabilities</LI></UL>
+
+<DIR>
+<DIR>
+
+</B><P>Unpartitioned striping may outperform paritioned striping when the object probabilities have a variance</P>
+<B>
+</FONT><FONT SIZE=6><P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">&nbsp;</P></DIR>
+</DIR>
+
+<P ALIGN="CENTER">Disk Allocation for Striping Two DS Objects (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"><IMG SRC="Image22.gif" WIDTH=12 HEIGHT=20>Allocation of Striping Partitions</P>
+<U><P>Problem Definition</U>:</B> Let  <I>n<SUB>1</SUB>  n<SUB>2</I></SUB>:the #disks to stripe the 1<SUP>st</SUP> and the 2<SUP>nd</SUP> object. </P><DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>Given:<B><IMG SRC="Image23.gif" WIDTH=96 HEIGHT=33></B>: access probabilities of the DS objects (<B><IMG SRC="Image24.gif" WIDTH=73 HEIGHT=29>)</P><DIR>
+<DIR>
+<DIR>
+
+</B><I><P>   C<SUB>&#9; </I></SUB>   : consumption rate</P>
+<I><P>   B&#9;<SUB>     </I></SUB>:  round block size</P></DIR>
+</DIR>
+</DIR>
+
+<P>Find</P>
+<B><P><IMG SRC="Image25.gif" WIDTH=165 HEIGHT=32>:<IMG SRC="Image26.gif" WIDTH=148 HEIGHT=25></P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<U><P>Problem Solution</U>:</B>&#9;</P>
+<OL TYPE="a">
+
+<LI>If no incoming requests are rejected the maximum #streams <I>k<SUB>1</I></SUB> is when:&#9;&#9;<IMG SRC="Image27.gif" WIDTH=125 HEIGHT=105></LI>
+<LI>If some requests are rejected : <IMG SRC="Image28.gif" WIDTH=300 HEIGHT=69></OL>
+</LI>
+
+<UL>
+
+<UL>
+<LI><IMG SRC="Image29.gif" WIDTH=58 HEIGHT=28> is Schur-concave with respect to <B><IMG SRC="Image30.gif" WIDTH=106 HEIGHT=40></UL>
+</UL>
+</LI>
+
+<UL>
+
+<UL>
+</B><LI>allocate as equal #disks as possible to the striping partitions</LI></UL>
+</UL>
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">Disk Allocation for Striping Two DS Objects (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"><IMG SRC="Image22.gif" WIDTH=12 HEIGHT=20></P>
+<P ALIGN="CENTER">Allocation of Striping Partitions (cont’d)</P>
+<U>
+<P>Allocation Algorithm</B></U>:<B>&#9;&#9;&#9;&#9;&#9;&#9;<U> Optimal vs. Random allocations</P><DIR>
+<DIR>
+
+</U><P><IMG SRC="Image31.gif" WIDTH=480 HEIGHT=336></B>(assumes <B><IMG SRC="Image24.gif" WIDTH=73 HEIGHT=29>)</P></DIR>
+</DIR>
+
+<P>Begin</P>
+<P>If</B> <B><IMG SRC="Image32.gif" WIDTH=213 HEIGHT=34> then</P>
+</B><P>Allocate <B><IMG SRC="Image33.gif" WIDTH=120 HEIGHT=34></B>and </P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>      <B><IMG SRC="Image34.gif" WIDTH=125 HEIGHT=34></P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>else</B> </P>
+<P>&#9;<B>if</B> <B><IMG SRC="Image35.gif" WIDTH=126 HEIGHT=41></B> <B>then</P>
+</B><P>&#9;allocate <B><IMG SRC="Image36.gif" WIDTH=65 HEIGHT=33></B>and<B> <IMG SRC="Image37.gif" WIDTH=68 HEIGHT=33></P>
+</B><P>&#9;<B>else</P>
+</B><P>&#9;allocate<I>  </I><B><IMG SRC="Image38.gif" WIDTH=120 HEIGHT=34></B> and <B><IMG SRC="Image39.gif" WIDTH=88 HEIGHT=20></P>
+<P>End.</P>
+<P ALIGN="CENTER"></P>
+</FONT><FONT SIZE=6><P ALIGN="CENTER">Disk Allocation for Striping r DS Objects (cont’d)</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"><IMG SRC="Image22.gif" WIDTH=12 HEIGHT=20></P>
+<P ALIGN="CENTER">Allocation of Striping Partitions (cont’d)</P>
+<U><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P ALIGN="JUSTIFY">Allocation Algorithm</B></U>:&#9;&#9;(assumes <IMG SRC="Image40.gif" WIDTH=158 HEIGHT=29>)</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<B><P>If</B> <B><IMG SRC="Image41.gif" WIDTH=94 HEIGHT=57> then</P>
+</B><P>&#9;Allocate <B><IMG SRC="Image42.gif" WIDTH=118 HEIGHT=34> </B>to each partition (<I>i=1,..r)</P>
+</I><B><P> else</B> </P>
+<P>&#9;<B>for </B><I>i=1</I> to <I>r </I><B>do</P>
+</B><P>&#9;&#9;<B>if</B> <B><IMG SRC="Image43.gif" WIDTH=126 HEIGHT=41></B> <B>then</P>
+</B><P>&#9;&#9;&#9;allocate <B><IMG SRC="Image44.gif" WIDTH=118 HEIGHT=34> </B>to the <I>i<SUP>th</SUP> </I>partition</P>
+<P>&#9;&#9;<B>else</P>
+</B><P>&#9;&#9;&#9;allocate<I>  </I><B><IMG SRC="Image45.gif" WIDTH=134 HEIGHT=88>  </B>to the remaining partitions (<I>k=i,..r)</P><DIR>
+
+</I><B><P>Next </B>i</P></DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">Grouping of DS Objects across Two Disk Partitions</P>
+</FONT><FONT SIZE=5><P ALIGN="CENTER"></P>
+</B><P>Such grouping may be useful e.g.</P>
+
+<UL>
+<LI>When temporal variations are observed with object probabilities</LI>
+<LI>When the storage space is limited</LI></UL>
+
+
+<P>The grouping must achieve maximum number of concurrent streams</P>
+
+<B><U><P>Objects with Equal Consumption Rates</P>
+</B>
+</U><P><U>Theorem</U>: The function <IMG SRC="Image46.gif" WIDTH=505 HEIGHT=70>, </P>
+
+<P>gives the maximum #streams for two objects with<B><IMG SRC="Image47.gif" WIDTH=93 HEIGHT=41></B>striped across two partitions </P>
+<U><P>Theorem</U>: <I>F(p<SUB>1</SUB>, p<SUB>2</SUB>)</I> is Schur concave with respect to <B><IMG SRC="Image23.gif" WIDTH=96 HEIGHT=33></P>
+</B><U>
+<P>Conclusion</U>: Grouping of objects must produce as equal cumulative probability of access as possible in the two partitions</P>
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">Grouping of DS Objects across Two Disk Partitions (cont’d)</P>
+</B></FONT><FONT SIZE=5>
+<B><U><P>Objects with Different Consumption Rates</P>
+</B></U>
+<P>Given:</P><DIR>
+<DIR>
+<DIR>
+
+<I><P>P<SUB>i</I></SUB>: &#9;access probability of the i<SUP>th</SUP> DS object, (<I>i=1,..r)</P>
+<P>C<SUB>i ,&#9;</I></SUB>consumption rate of the i<SUP>th</SUP> DS object, (<I>i=1,..r)</P>
+<P>n<SUB>1</SUB>,n<SUB>2&#9;</I></SUB>partition sizes</P>
+</DIR>
+</DIR>
+</DIR>
+
+<P>The optimal grouping must assign:</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>To the 1<SUP>st</SUP> partition objects such that: <B><IMG SRC="Image48.gif" WIDTH=182 HEIGHT=85> </B>= <B><IMG SRC="Image49.gif" WIDTH=202 HEIGHT=137></P>
+</B><P>To the 2<SUP>nd</SUP> partition objects such that: <B><IMG SRC="Image50.gif" WIDTH=190 HEIGHT=85> = <IMG SRC="Image51.gif" WIDTH=202 HEIGHT=137></P></DIR>
+</DIR>
+</DIR>
+</DIR>
+
+</FONT><FONT SIZE=6><P ALIGN="CENTER">Summary</P></DIR>
+</DIR>
+
+</FONT><U><FONT SIZE=5><P>The Striping Model</P>
+</B></U><P>In our striping model the performance of striping is expressed as <B>#</B>concurrent streams supported</P>
+
+<P>The performance of striping is affected by:</P>
+
+<UL>
+
+<UL>
+<LI>The number of striping disks but increase becomes less significant with more disks</LI>
+<LI>The amount of buffer in the client</LI>
+<LI>Prefetching in the client but at the expense of start-up delay and buffer overhead</LI></UL>
+</UL>
+
+
+<B><U><P>Allocation of Striping Partitions</P>
+</B></U><P>For fixed access probabilities of the objects, partitioned striping is more efficient than unpartitioned</P>
+
+<P>When the system rejects clients, constructing equally sized partitions for striping the objects supports more clients simultaneously</P>
+
+<P>For objects with equal bandwidth requirement, objects must be grouped so that the cumulative probabilities of the striping partitions are as equal as possible</P>
+
+<P>&nbsp;</P>
+</FONT><B><FONT SIZE=6><P ALIGN="CENTER">&nbsp;</P></B></FONT></BODY>
+</HTML>

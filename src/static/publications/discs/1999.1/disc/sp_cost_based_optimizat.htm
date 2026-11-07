@@ -1,0 +1,144 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_5.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Cost-Based Optimization of Decision Support Queries Using Transient Views</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_s.htm#Subbu N. Subramanian">Subbu N. Subramanian</a>, <a href="m_authors_v.htm#Shivakumar Venkataraman">Shivakumar Venkataraman</a></center></td></tr></table></center><a target="disc_pdf" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+Next generation decision support applications, besides being capable of processing huge amounts of data, require the ability to integrate and reason over data from multiple, heterogeneous data sources. Often, these data sources differ in a variety of aspects such as their data models, the query languages they support, and their network protocols. Also, typically they are spread over a wide geographical area. The cost of processing decision support queries in such a setting is quite high. However, processing these queries often involves redundancies such as repeated access of same data source and multiple execution of similar processing sequences. Minimizing these redundancies would significantly reduce the query processing cost. In this paper, we (1) propose an architecture for processing complex decision support queries involving multiple, heterogeneous data sources; (2) introduce the notion of {\em transient-views} -- materialized views that exist only in the context of execution of a query -- that is useful for minimizing the redundancies involved in the execution of these queries; (3) develop a {\em cost-based} algorithm that takes a query plan as input and generates an optimal "covering plan", by minimizing redundancies in the original plan; (4) validate our approach by means of an implementation of the algorithms and a detailed performance study based on TPC-D benchmark queries on a commercial database system; and finally, (5) compare and contrast our approach with work in related areas, in particular, the areas of answering queries using views and optimization using common sub-expressions. Our experiments demonstrate the practicality and usefulness of transient-views in significantly improving the performance of decision support queries.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Abi97]<dd><a name="Abiteboul97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>:
+Querying Semi-Structured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Abiteboul97">ICDT 1997</a>: 1-18<dt>[AMMT96]<dd>...
+<dt>[ASD+91]<dd><a name="AhmedSDKKLRS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ahmed:Rafi.html">Rafi Ahmed</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smedt:Philippe_De.html">Philippe De Smedt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Weimin.html">Weimin Du</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kent:William.html">William Kent</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Ketabchi:Mohammad_A=.html">Mohammad A. Ketabchi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">Witold Litwin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafii:Abbas.html">Abbas Rafii</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">Ming-Chien Shan</a>:
+The Pegasus Heterogeneous Multidatabase System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer24.html#AhmedSDKKLRS91">IEEE Computer 24(12)</a>: 19-27(1991)<dt>[CAS94]<dd><a name="ChristophidesACS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christophides:Vassilis.html">Vassilis Christophides</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">Sophie Cluet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Michel.html">Michel Scholl</a>:
+From Structured Documents to Novel Query Facilities.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ChristophidesACS94">SIGMOD Conference 1994</a>: 313-324<dt>[CGH+94]<dd><a name="ChawatheGHPUW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">Sudarshan S. Chawathe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hammer:Joachim.html">Joachim Hammer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ireland:Kelly.html">Kelly Ireland</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+The TSIMMIS Project: Integration of Heterogeneous Information Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ipsj/ipsj94.html#ChawatheGHPUW94">IPSJ 1994</a>: 7-18<dt>[CKPS95]<dd><a name="ChaudhuriKPS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Potamianos:Spyros.html">Spyros Potamianos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>:
+Optimizing Queries with Materialized Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#ChaudhuriKPS95">ICDE 1995</a>: 190-200<dt>[DFJ+96]<dd><a name="DarFJST96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">Michael J. Franklin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Michael.html">Michael Tan</a>:
+Semantic Data Caching and Replacement.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#DarFJST96">VLDB 1996</a>: 330-341<dt>[Fin82]<dd><a name="Finkelstein82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finkelstein:Sheldon_J=.html">Sheldon J. Finkelstein</a>:
+Common Subexpression Analysis in Database Applications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod82.html#Finkelstein82">SIGMOD Conference 1982</a>: 235-245<dt>[GBLP95]<dd><a name="GrayCBLRVPP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">Adam Bosworth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">Andrew Layman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reichart:Don.html">Don Reichart</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Venkatrao:Murali.html">Murali Venkatrao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pellow:Frank.html">Frank Pellow</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Data Cube: A Relational Aggregation Operator Generalizing Group-by, Cross-Tab, and Sub Totals.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/datamine/datamine1.html#GrayCBLRVPP97">Data Mining and Knowledge Discovery 1(1)</a>: 29-53(1997)<dt>[GHRU97]<dd><a name="GuptaHRU97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Index Selection for OLAP.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#GuptaHRU97">ICDE 1997</a>: 208-219<dt>[GLS93]<dd><a name="GassnerLSW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gassner:Peter.html">Peter Gassner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">Guy M. Lohman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schiefer:K=_Bernhard.html">K. Bernhard Schiefer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Yun.html">Yun Wang</a>:
+Query Optimization in the IBM DB2 Family.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu16.html#GassnerLSW93">Data Engineering Bulletin 16(4)</a>: 4-18(1993)<dt>[GM80]<dd>...
+<dt>[GM81]<dd>...
+<dt>[Gup97]<dd><a name="Gupta97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>:
+Selection of Views to Materialize in a Data Warehouse.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Gupta97">ICDT 1997</a>: 98-112<dt>[Hal76]<dd>...
+<dt>[HFLP89]<dd><a name="HaasFLP89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freytag:Johann_Christoph.html">Johann Christoph Freytag</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">Guy M. Lohman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Extensible Query Processing in Starburst.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#HaasFLP89">SIGMOD Conference 1989</a>: 377-388<dt>[HKWY97]<dd><a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">Edward L. Wimmers</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">Jun Yang</a>:
+Optimizing Queries Across Diverse Data Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HaasKWY97">VLDB 1997</a>: 276-285<dt>[HRU96]<dd><a name="HarinarayanRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Implementing Data Cubes Efficiently.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HarinarayanRU96">SIGMOD Conf. 1996</a>: 205-216<dt>[Jar84]<dd>...
+<dt>[JV84]<dd><a name="JarkeK84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jarke:Matthias.html">Matthias Jarke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koch:J=uuml=rgen.html">J&uuml;rgen Koch</a>:
+Query Optimization in Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur16.html#JarkeK84">Computing Surveys 16(2)</a>: 111-152(1984)<dt>[Kim84]<dd>...
+<dt>[LMSS95]<dd><a name="LevyMSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">Alon Y. Levy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">Alberto O. Mendelzon</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">Yehoshua Sagiv</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>:
+Answering Queries Using Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#LevyMSS95">PODS 1995</a>: 95-104<dt>[LRO96]<dd><a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">Alon Y. Levy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">Joann J. Ordille</a>:
+Querying Heterogeneous Information Sources Using Source Descriptions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LevyRO96">VLDB 1996</a>: 251-262<dt>[LSS96]<dd><a name="LakshmananSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">Laks V. S. Lakshmanan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sadri:Fereidoon.html">Fereidoon Sadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Iyer_N=.html">Iyer N. Subramanian</a>:
+SchemaSQL - A Language for Interoperability in Relational Multi-Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LakshmananSS96">VLDB 1996</a>: 239-250<dt>[PGW95]<dd><a name="PapakonstantinouGW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Object Exchange Across Heterogeneous Information Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#PapakonstantinouGW95">ICDE 1995</a>: 251-260<dt>[PHH92]<dd><a name="PiraheshHH92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasan:Waqar.html">Waqar Hasan</a>:
+Extensible/Rule Based Query Rewrite Optimization in Starburst.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#PiraheshHH92">SIGMOD Conference 1992</a>: 39-48<dt>[Rou82a]<dd><a name="Roussopoulos82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>:
+The Logical Access Path Schema of a Database.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse8.html#Roussopoulos82">TSE 8(6)</a>: 563-573(1982)<dt>[Rou82b]<dd><a name="Roussopoulos82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>:
+View Indexing in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#Roussopoulos82">TODS 7(2)</a>: 258-290(1982)<dt>[RSS96]<dd><a name="RossSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">Kenneth A. Ross</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">S. Sudarshan</a>:
+Materialized View Maintenance and Integrity Constraint Checking: Trading Space for Time.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#RossSS96">SIGMOD Conf. 1996</a>: 447-458<dt>[SAB+95]<dd>...
+<dt>[SAC+79]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34<dt>[SDJL96]<dd><a name="SrivastavaDJL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">Alon Y. Levy</a>:
+Answering Queries with Aggregation Using Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#SrivastavaDJL96">VLDB 1996</a>: 318-329<dt>[Sel88]<dd><a name="Sellis88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>:
+Multiple-Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods13.html#Sellis88">TODS 13(1)</a>: 23-52(1988)<dt>[SV98]<dd>...
+<dt>[TPC93]<dd>...
+<dt>[TRS97]<dd><a name="RothS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">Mary Tork Roth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">Peter M. Schwarz</a>:
+Don't Scrap It, Wrap It! A Wrapper Architecture for Legacy Data Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#RothS97">VLDB 1997</a>: 266-275<dt>[TRV96]<dd><a name="TomasicRV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tomasic:Anthony.html">Anthony Tomasic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raschid:Louiqa.html">Louiqa Raschid</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Scaling Heterogeneous Databases and the Design of Disco.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs96.html#TomasicRV96">ICDCS 1996</a>: 449-457<dt>[VZ97]<dd>...
+<dt>[WY76]<dd><a name="WongY76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Eugene.html">Eugene Wong</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Youssefi:Karel.html">Karel Youssefi</a>:
+Decomposition - A Strategy for Query Processing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods1.html#WongY76">TODS 1(3)</a>: 223-241(1976)</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/SubramanianV98,<br>  author    = {Subbu N. Subramanian and<br>               Shivakumar Venkataraman},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Cost-Based Optimization of Decision Support Queries Using Transient<br>               Views},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {319-330},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

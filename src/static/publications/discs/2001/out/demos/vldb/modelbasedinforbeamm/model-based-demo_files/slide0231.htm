@@ -1,0 +1,199 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<title>Model-Based Mediator Demo</title>
+<meta name=Description content="30-Jan-01: Example Query Evaluation (II) ">
+<link rel=next href=slide0226.htm>
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('slide0231.htm');   
+  else
+    parent.location.href = "../model-based-demo.html";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body background="master04_background.gif" bgcolor="#000066" alink="#000044"
+link="#00cc99" vlink=yellow text=white topmargin=0 leftmargin=0
+onload="Update()">
+
+<table border=0 valign=top width=767 height=575 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=8 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=40 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=4 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=50 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=72 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=439 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=34 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=77 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=18 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=18 height=0 nowrap><img src=space.gif border=0></td>
+ </tr>
+ <tr>
+  <td width=767 height=38 colspan=11></td>
+ </tr>
+ <tr>
+  <td width=174 height=41 colspan=5></td>
+  <td width=439 height=41>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=439 height=41 align=center><font face=Helvetica color="#ffcc66"
+    size=5>Example Query Evaluation (II)</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=154 height=41 colspan=5></td>
+ </tr>
+ <tr>
+  <td width=767 height=60 colspan=11></td>
+ </tr>
+ <tr>
+  <td width=52 height=51 colspan=3></td>
+  <td width=672 height=51 colspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=540 height=0 nowrap><img src=space.gif border=0></td>
+   </tr>
+   <tr>
+    <td width=672 height=26 colspan=2><font face=Helvetica size=4><i>&quot;How
+    does the </i></font><font face=Helvetica color="#ffcc66" size=4><b><i>parallel
+    fiber</i></b></font><font face=Helvetica color=white size=4><i> output (</i></font><font
+    face=Helvetica color=yellow size=4><b><i>Yale</i></b><i>/</i><b><i>SENSELAB</i></b></font><font
+    face=Helvetica color=white size=4><i>) relate to the</i></font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=540 height=25><font face=Helvetica size=4><i>distribution of </i></font><font
+    face=Helvetica color="#ffcc66" size=4><i>Ryanodine Receptors</i></font><font
+    face=Helvetica color=white size=4><i> (</i></font><font face=Helvetica
+    color=yellow size=4><b><i>UCSD</i></b><i>/</i><b><i>NCMIR</i></b></font><font
+    face=Helvetica color=white size=4><i>)?&quot;</i></font><br>
+    </td>
+    <td width=132 height=25></td>
+   </tr>
+  </table>
+  </td>
+  <td width=43 height=51 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=767 height=49 colspan=11></td>
+ </tr>
+ <tr>
+  <td width=48 height=141 colspan=2></td>
+  <td width=599 height=141 colspan=5>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=395 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=14 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=70 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=11 height=0 nowrap><img src=space.gif border=0></td>
+   </tr>
+   <tr>
+    <td width=490 height=31 colspan=4><font face=Helvetica color="#ffcc66"
+    size=4>@SENSELAB</font><font face=Helvetica color="#dddddd" size=4>: X1 := </font><font
+    face=Helvetica color=yellow size=4>select</font><font face=Helvetica
+    color="#dddddd" size=4> output from </font><font face=Helvetica
+    color="#ffcc66" size=4><b><i>parallel fiber</i></b></font><font
+    face=Helvetica color="#dddddd" size=4><i> </i>;</font><br>
+    </td>
+    <td width=109 height=31></td>
+   </tr>
+   <tr>
+    <td width=599 height=4 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=479 height=23 colspan=3><font face=Helvetica color="#ffcc66"
+    size=4>@MEDIATOR</font><font face=Helvetica color="#dddddd" size=4>: X2 :=
+    “</font><font face=Helvetica color=yellow size=4>hang off</font><font
+    face=Helvetica color="#dddddd" size=4>” X1 from </font><font
+    face=Helvetica color=yellow size=4>Domain Map</font><font face=Helvetica
+    color="#dddddd" size=4>;</font><br>
+    </td>
+    <td width=120 height=23 colspan=2></td>
+   </tr>
+   <tr>
+    <td width=599 height=4 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=395 height=23><font face=Helvetica color="#ffcc66" size=4>@MEDIATOR</font><font
+    face=Helvetica color="#dddddd" size=4>: X3 := </font><font face=Helvetica
+    color=yellow size=4>subregion-closure</font><font face=Helvetica
+    color="#dddddd" size=4>(X2);</font><br>
+    </td>
+    <td width=204 height=23 colspan=4></td>
+   </tr>
+   <tr>
+    <td width=599 height=5 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=599 height=23 colspan=5><font face=Helvetica color="#ffcc66"
+    size=4>@NCMIR</font><font face=Helvetica color="#dddddd" size=4>:<span
+    style="mso-spacerun: yes">        </span>X4 := </font><font face=Helvetica
+    color=yellow size=4>select</font><font face=Helvetica color="#dddddd"
+    size=4> PROT-data(X3, </font><font face=Helvetica color="#ffcc66" size=4><i>Ryanodine
+    Receptors</i></font><font face=Helvetica color="#dddddd" size=4>);</font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=599 height=5 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=409 height=23 colspan=2><font face=Helvetica color="#ffcc66"
+    size=4>@MEDIATOR</font><font face=Helvetica color="#dddddd" size=4>: X5 := </font><font
+    face=Helvetica color=yellow size=4>compute aggregate</font><font
+    face=Helvetica color="#dddddd" size=4>(X4);</font><br>
+    </td>
+    <td width=190 height=23 colspan=3></td>
+   </tr>
+  </table>
+  </td>
+  <td width=120 height=141 colspan=4></td>
+ </tr>
+ <tr>
+  <td width=767 height=167 colspan=11></td>
+ </tr>
+ <tr>
+  <td width=742 height=7 colspan=9></td>
+  <td width=18 height=18 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=18 height=18 align=right><font face=Helvetica color="#ffcc66"
+    size=2>20</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=7 height=7></td>
+ </tr>
+ <tr>
+  <td width=8 height=11></td>
+  <td width=94 height=13 colspan=3 rowspan=2><img src="master04_image045.gif"
+  border=0 width=94 height=13></td>
+  <td width=640 height=11 colspan=5></td>
+  <td width=7 height=11></td>
+ </tr>
+ <tr>
+  <td width=8 height=2></td>
+  <td width=665 height=2 colspan=7></td>
+ </tr>
+ <tr>
+  <td width=767 height=8 colspan=11></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

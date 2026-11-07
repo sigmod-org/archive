@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>SMIL 2.0: Interactive Multimedia on the Web</h1>
+<h2>Lloyd Rutledge</h2>
+<br>
+<h3>Description</h3>
+<p>
+SMIL 2.0 specifies interactive multimedia on the Web. It has just been
+released as a W3C recommendation. It already enjoys substantial
+support, implemented in such Web browsers as RealNetworks' RealOne and
+Internet Explorer 6.0. This version of SMIL extends SMIL 1.0, a W3C
+recommendation since June 1998. SMIL 2.0 is 15 times as large as SMIL
+1.0, and defines a family of languages rather than just one
+language. This tutorial presents SMIL 2.0, tools for it, how to create
+presentations in it, and how it has currently been adopted by the
+community at large.
+</p>
+<p>
+The goal of the tutorial is to explain the concepts that form the
+basis of the SMIL language and to provide sufficient detail on the
+language itself so that participants can create their own simple
+presentations. Participants will also understand the underlying issues
+of temporal and spatial layout and the complexity of creating links
+within multimedia. They will also be able to use available tools to
+play and create SMIL presentations.
+</p>
+<p>
+Before describing the details of the SMIL 2.0 language, the tutorial
+first presents an overview of the components required in a hypermedia
+document description language. The SMIL language includes features for
+specifying the media items included in a document, referred to with
+URL's, how these are temporally and spatially related to one another,
+and how links can be specified within the multimedia
+environment. Alternates for different data formats for the
+heterogeneous web environment are also provided.
+</p>
+<p>
+The tutorial is intended for content developers who have created HTML
+documents or have used tools such as Macromedia Director or
+Authorware. Multimedia designers, web-page creators, creators of
+interface prototypes such as user interface designers, human factors
+practitioners and industrial designers will also benefit from this
+course.
+</p>
+<br>
+<h3>Presenter biography</h3>
+<p>
+Lloyd Rutledge is a researcher at CWI, the Dutch national center for
+computer and mathematics research.  His research involves adaptable
+and semi-automatically generated hypermedia. He received his
+Sc.D. from the University of Massachusetts Lowell, where he worked
+with the HyTime hypermedia standard.  Dr. Rutledge is a member of the
+W3C working group that developed SMIL.  He is also co-author of "SMIL:
+Interactive Multimedia on the Web", to be published in May by Pearson
+Education.
+</p>
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>

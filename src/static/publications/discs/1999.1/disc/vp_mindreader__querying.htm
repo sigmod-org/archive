@@ -1,0 +1,108 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_1.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+MindReader: Querying Databases Through Multiple Examples</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_i.htm#Yoshiharu Ishikawa">Yoshiharu Ishikawa</a>, <a href="m_authors_s.htm#Ravishankar Subramanya">Ravishankar Subramanya</a>, <a href="m_authors_f.htm#Christos Faloutsos">Christos Faloutsos</a></center></td></tr></table></center><a target="disc_pdfE83c" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Users often can not easily express their queries. For example, in a multimedia/image by content setting, the user might want photographs with sunsets; in current systems, like QBIC, the user has to give a sample query, andto specify the relative importance of color, shape and texture. Even worse, the user might want correlations between attributes, like, for example, in a traditional, medical record database, a medical researcher might wantto find "mildly overweight patients", where the implied query would be "weight/height ~ 4 lb/inch".
+<p>
+Our goal is to provide a user-friendly, but theoretically solid method, tohandle such queries. We allow the user to give several examples, and, optionally, their 'goodness' scores, and we propose a novel method to "guess" which attributes are important, which correlations are important, and withwhat weight.
+<p>
+Our contributions are twofold: (a) we formalize the problem as a minimization problem and show how to solve for the optimal solution, completely avoiding the ad-hoc heuristics of the past.
+(b) Moreover, we are the first that can handle 'diagonal' queries (like the 'overweight' query above).
+Experiments on synthetic and real datasets show that our method estimates quickly and accurately the 'hidden' distance function in the user's mind.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[BKK96]<dd><a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+The X-tree : An Index Structure for High-Dimensional Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">VLDB 1996</a>: 28-39<dt>[BKSS90]<dd><a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">Norbert Beckmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>:
+The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">SIGMOD Conference 1990</a>: 322-331<dt>[CK97]<dd><a name="CareyK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>:
+Processing Top N and Bottom N Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#CareyK97">Data Engineering Bulletin 20(3)</a>: 12-19(1997)<dt>[CKM+95]<dd><a name="ChristelKMRSSW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christel:Michael_G=.html">Michael G. Christel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanade:Takeo.html">Takeo Kanade</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mauldin:M=.html">M. Mauldin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reddy:Raj.html">Raj Reddy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sirbu:Marvin.html">Marvin Sirbu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stevens:Scott_M=.html">Scott M. Stevens</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wactlar:Howard_D=.html">Howard D. Wactlar</a>:
+Informedia Digital Video Library.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm38.html#ChristelKMRSSW95">CACM 38(4)</a>: 57-58(1995)<dt>[FBF+94]<dd><a name="FaloutsosBFHNPE94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">Ron Barber</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">Jim Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">Wayne Niblack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">William Equitz</a>:
+Efficient and Effective Querying by Image Content.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis3.html#FaloutsosBFHNPE94">JIIS 3(3/4)</a>: 231-262(1994)<dt>[FK94]<dd><a name="FaloutsosK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamel:Ibrahim.html">Ibrahim Kamel</a>:
+Beyond Uniformity and Independence: Analysis of R-trees Using the Concept of Fractal Dimension.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods94.html#FaloutsosK94">PODS 1994</a>: 4-13<dt>[FL95]<dd><a name="FaloutsosL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">King-Ip Lin</a>:
+FastMap: A Fast Algorithm for Indexing, Data-Mining and Visualization of Traditional and Multimedia Datasets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#FaloutsosL95">SIGMOD Conference 1995</a>: 163-174<dt>[GV96]<dd>...
+<dt>[Har92]<dd>...
+<dt>[HK92]<dd><a name="HirataK92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hirata:Kyoji.html">Kyoji Hirata</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kato:Toshikazu.html">Toshikazu Kato</a>:
+Query by Visual Example - Content based Image Retrieval.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt92.html#HirataK92">EDBT 1992</a>: 56-71<dt>[KS97]<dd><a name="KatayamaS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katayama:Norio.html">Norio Katayama</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Satoh:Shin=ichi.html">Shin'ichi Satoh</a>:
+The SR-tree: An Index Structure for High-Dimensional Nearest Neighbor Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KatayamaS97">SIGMOD Conference 1997</a>: 369-380<dt>[Mot88]<dd><a name="Motro88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motro:Amihai.html">Amihai Motro</a>:
+VAGUE: A User Interface to Relational Databases that Permits Vague Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tois/tois6.html#Motro88">TOIS 6(3)</a>: 187-214(1988)<dt>[RHM97]<dd>...
+<dt>[RHM98]<dd>...
+<dt>[Roc71]<dd>...
+<dt>[SK97]<dd><a name="SeidlK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seidl:Thomas.html">Thomas Seidl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+Efficient User-Adaptable Similarity Search in Large Multimedia Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#SeidlK97">VLDB 1997</a>: 506-515<dt>[SL96]<dd>...
+<dt>[Vir]<dd>...
+</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/IshikawaSF98,<br>  author    = {Yoshiharu Ishikawa and<br>               Ravishankar Subramanya and<br>               Christos Faloutsos},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {MindReader: Querying Databases Through Multiple Examples},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {218-227},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<TITLE>top_banner</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<!-- ImageReady Preload Script (top_banner.psd) -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		top_banner_01_new_orleans_over = newImage("images/top_banner_01-new_orleans_o.gif");
+		top_banner_01_hotel_over = newImage("images/top_banner_01-hotel_over.gif");
+		top_banner_02_new_orleans_over = newImage("images/top_banner_02-new_orleans_o.gif");
+		top_banner_02_hotel_over = newImage("images/top_banner_02-hotel_over.gif");
+		new_orleans_over = newImage("images/new_orleans-over.gif");
+		hotel_new_orleans_over = newImage("images/hotel-new_orleans_over.gif");
+		hotel_over = newImage("images/hotel-over.gif");
+		top_banner_05_new_orleans_over = newImage("images/top_banner_05-new_orleans_o.gif");
+		top_banner_05_hotel_over = newImage("images/top_banner_05-hotel_over.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<!-- End Preload Script -->
+</HEAD>
+<BODY BGCOLOR=#FFFFFF ONLOAD="preloadImages();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (top_banner.psd) -->
+<TABLE WIDTH=420 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		
+    <TD COLSPAN=3> <IMG NAME="top_banner_01" SRC="images/top_banner_01.gif" WIDTH=420 HEIGHT=27 BORDER=0 USEMAP="#top_banner_01_Map"></TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=3>
+			<IMG NAME="top_banner_02" SRC="images/top_banner_02.gif" WIDTH=420 HEIGHT=28 BORDER=0 USEMAP="#top_banner_02_Map"></TD>
+	</TR>
+	<TR>
+		<TD>
+			<A HREF="new_orleans/index.html" TARGET="_top"
+				ONMOUSEOVER="changeImages('top_banner_01', 'images/top_banner_01-new_orleans_o.gif', 'top_banner_02', 'images/top_banner_02-new_orleans_o.gif', 'new_orleans', 'images/new_orleans-over.gif', 'hotel', 'images/hotel-new_orleans_over.gif', 'top_banner_05', 'images/top_banner_05-new_orleans_o.gif'); return true;"
+				ONMOUSEOUT="changeImages('top_banner_01', 'images/top_banner_01.gif', 'top_banner_02', 'images/top_banner_02.gif', 'new_orleans', 'images/new_orleans.gif', 'hotel', 'images/hotel.gif', 'top_banner_05', 'images/top_banner_05.gif'); return true;">
+				<IMG NAME="new_orleans" SRC="images/new_orleans.gif" WIDTH=123 HEIGHT=45 BORDER=0></A></TD>
+		<TD>
+			<A HREF="new_orleans/lodg.html" TARGET="main"
+				ONMOUSEOVER="changeImages('top_banner_01', 'images/top_banner_01-hotel_over.gif', 'top_banner_02', 'images/top_banner_02-hotel_over.gif', 'hotel', 'images/hotel-over.gif', 'top_banner_05', 'images/top_banner_05-hotel_over.gif'); return true;"
+				ONMOUSEOUT="changeImages('top_banner_01', 'images/top_banner_01.gif', 'top_banner_02', 'images/top_banner_02.gif', 'hotel', 'images/hotel.gif', 'top_banner_05', 'images/top_banner_05.gif'); return true;">
+				<IMG NAME="hotel" SRC="images/hotel.gif" WIDTH=149 HEIGHT=45 BORDER=0></A></TD>
+		<TD>
+			<IMG NAME="top_banner_05" SRC="images/top_banner_05.gif" WIDTH=148 HEIGHT=45 BORDER=0 USEMAP="#top_banner_05_Map"></TD>
+	</TR>
+</TABLE>
+<MAP NAME="top_banner_01_Map">
+  <AREA SHAPE="rect" ALT="New Orleans Information" COORDS="0,6,172,27" HREF="new_orleans/" TARGET="_top">
+<AREA SHAPE="rect" ALT="ACM Home" COORDS="334,17,389,27" HREF="http://www.acm.org/" TARGET="_blank">
+<AREA SHAPE="rect" ALT="ACM Home" COORDS="193,3,387,17" HREF="http://www.acm.org/" TARGET="_blank">
+<AREA SHAPE="rect" ALT="ACM/SIGIR Home" COORDS="207,22,330,27" HREF="http://www.acm.org/sigir/" TARGET="_blank">
+</MAP>
+<MAP NAME="top_banner_02_Map">
+<AREA SHAPE="rect" ALT="New Orleans Information" COORDS="0,0,172,4" HREF="http://www.sigir2001.org/new_orleans/" TARGET="_blank">
+<AREA SHAPE="rect" ALT="ACM Home" COORDS="334,0,389,28" HREF="http://www.acm.org/" TARGET="_blank">
+<AREA SHAPE="rect" ALT="ACM/SIGIR Home" COORDS="207,0,330,23" HREF="http://www.acm.org/sigir/" TARGET="_blank">
+</MAP>
+<MAP NAME="top_banner_05_Map">
+<AREA SHAPE="rect" ALT="ACM Home" COORDS="62,0,117,9" HREF="http://www.acm.org/" TARGET="_blank">
+</MAP>
+<!-- End ImageReady Slices -->
+</BODY>
+</HTML>

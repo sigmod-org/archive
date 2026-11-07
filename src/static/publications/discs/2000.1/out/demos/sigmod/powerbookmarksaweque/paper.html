@@ -1,0 +1,431 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="PowerBookmarks: ASystem for Personalizable Web Information Organization, Sharing, and Management">
+   <meta name="keywords" content="paper">
+   <meta name="resource-type" content="document">
+   <meta name="distribution" content="global">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (WinNT; I) [Netscape]">
+   <title>PowerBookmarks: A
+System for Personalizable Web Information Organization, Sharing, and Management
+</title>
+<!--Converted with LaTeX2HTML 98.2 beta3 (July 4th, 1998)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<link REL="STYLESHEET" HREF="paper.css">
+</head>
+<body>
+<!--Navigation Panel-->
+<br>&nbsp;
+<p><!--End of Navigation Panel-->
+<center>
+<h1>
+<br>
+<b><font size=+2>PowerBookmarks: A System for Personalizable Web Information
+Organization, Sharing, and Management</font></b></h1></center>
+
+<center><b>Wen-Syan Li, Quoc Vu, Edward Chang, Divyakant Agrawal, Kyoji
+Hirata</b>
+<br><b>Sougata Mukherjea Yi-Leh Wu, Corey Bufi, Kevin Chang, Yoshinori
+Hara</b>
+<br><b>C&amp;C Research Laboratories, NEC USA, Inc.</b>
+<br><b>110 Rio Robles, M/S SJ100, San Jose, CA 95134, USA</b>
+<br><b>Phone: (408)943-3008 Fax: (408)943-3099)</b>
+<p><b>Reiko Ito, Yutaka Kimura, Kazuyuki Shimazu, Yukiyoshi Saito</b>
+<br><b>5th Development Department, 2nd Computers Software Division, NEC
+Corporation</b>
+<br><b>1-10, Nisshin-Cho, Fuchu-Shi, Tokyo 183-8501, JAPAN</b></center>
+
+<br>&nbsp;
+<h2>
+<a NAME="SECTION00001000000000000000"></a>1. Introduction</h2>
+Users of the Web are overloaded with information. This medium is ``polluted"
+with redundant, erroneous and low quality information. It has no aggregate
+structure which organizes distinct Web localities. Users have no global
+view of the entire Web from which to forage for relevant pages. As a matter
+of fact, a WWW survey of 11,700 users conducted from April 10 to May 10,
+1996[<a href="paper.html#gt97">1</a>] indicates that 30.31% of the users
+report "finding known info" is a problem and 27.80% and 12.16% of the users
+report organizing collected information and finding pages already visited
+as their significant problems respectively.
+<center><a NAME="fig:overview"></a><a NAME="88"></a></center>
+
+<center><table>
+<caption><b>Figure 1:</b> WebDB Functionality Overview</caption>
+
+<tr>
+<td><img SRC="img2.gif" ALT="\begin{figure*}\centerline{\psfig{figure=overview1.eps,width=186mm}}\vspace{-5pt}\end{figure*}" ></td>
+</tr>
+</table></center>
+Another study[<a href="paper.html#bookmark">2</a>] on user behavior of
+using bookmarks indicates that users gradually build a small sized archive
+where 68% of users have 11 to 100 bookmarks Over 93% of users create 0
+to 5 bookmarks in each browsing session. It also found that a larger archive
+requires more sophisticated means of organizing. However, existing Internet
+browsers only provide a <i>flat layout</i> format for bookmarks, which
+has low usability and poor scalability. An empirical study[<a href="paper.html#revisit">3</a>]
+on users' revisitation patterns to WWW pages found that 58% of an individual's
+pages are revisits. With these study results, we believe the Web users
+would like to build and organize a larger collection of bookmarks for future
+references than they can reasonably maintain now.
+<p><i>PowerBookmarks</i> is being developed under the auspices of the WebDB
+project[<a href="paper.html#www7">4</a>,<a href="paper.html#IEICE98">5</a>]
+to address the issues above. Unlike existing bookmarking schemes, where
+bookmarks cannot be shared, <i>PowerBookmarks</i> supports information
+sharing with access control.
+<i>PowerBookmarks</i> also support automated
+bookmark classification based on document <i>contents</i> as well as many
+useful personalizable services, such as automated dead link and inactive
+link removal and new or modified document subscription services. We start
+with the overview of WebDB, followed by the functionalities of <i>PowerBookmarks</i>
+with demonstrative window dumps.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+<a NAME="SECTION00002000000000000000"></a>2. WebDB Hypermedia Database
+System</h2>
+The Web is a collection of multimedia documents in the form of HTML pages
+connected through hyperlinks. Unlike most search engines, which focus on
+information retrieval based on keywords, WebDB aims at supporting database-like
+comprehensive query functionalities as well as navigation, and document
+generation functionalities with customizability. It is designed to support
+enterprise level document management, Web site page information maintenance,
+and to support hypermedia database functionalities, we augment the traditional
+concepts of tables in relational databases and classes in object-oriented
+databases with notions of document formats and navigation. We design WQL
+(Web Query Language)[<a href="paper.html#IEICE98">5</a>] as an HTML document
+manipulation language. WQL language statements contain two parts:
+<tt>SELECT...FROM...WHERE</tt>
+clauses for specifying retrieval of data contents from hypermedia databases
+and <tt>CREATE...AS...</tt> clauses for specifying the output HTML format
+and navigation of the query results.
+<p>The WebDB hypermedia database system provides storage, object-oriented
+document modeling, SQL3 like document language query processing, and HTML/VRML
+document generation for PowerBookmarks. The architecture of WebDB has two
+levels: a logical level consisting modules for logical Web modeling, the
+WQL query language, and HTML/VRML document generator; and a physical level
+consisting modules for internal class representations, query processing,
+and the query result class generator. Figure <a href="paper.html#fig:overview">1</a>
+gives an overview of WebDB architecture and its design is highlighted as
+follows:
+<ul>
+<li>
+HTML documents are <i>logically</i> modeled as object-oriented hierarchical
+structures while being <i>physically</i> modeled and stored in the underlying
+NEC PERCIO OODBMS as classes. A logical/physical schema mapping is maintained
+for query translation.</li>
+
+<center><a NAME="fig:inter_q"></a><a NAME="114"></a></center>
+
+<center><table>
+<caption><b>Figure 2:</b> Internet Query Window</caption>
+
+<tr>
+<td><img SRC="img3.gif" ALT="\begin{figure}\centerline{\psfig{figure=inter_q.ps,width=2.in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:inter_query"></a><a NAME="121"></a></center>
+
+<center><table>
+<caption><b>Figure 3:</b> Internet Query Results</caption>
+
+<tr>
+<td><img SRC="img4.gif" ALT="\begin{figure}\centerline{\psfig{figure=inter_query.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<li>
+WQL is used for querying WebDB. A visual query interface is supported to
+assist users in specifying queries while actual WQL queries are generated
+automatically by the WQL query generator. Hence, the complexity of the
+underlying schema and the query language remains transparent to the user.</li>
+
+<center><a NAME="fig:query"></a><a NAME="129"></a></center>
+
+<center><table>
+<caption><b>Figure 4:</b> Query Interface</caption>
+
+<tr>
+<td><img SRC="img5.gif" ALT="\begin{figure}\centerline{\psfig{figure=query.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:detail"></a><a NAME="136"></a></center>
+
+<center><table>
+<caption><b>Figure 5:</b> Browsing Detail Document Metadata</caption>
+
+<tr>
+<td><img SRC="img6.gif" ALT="\begin{figure}\centerline{\psfig{figure=detail.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:data_kw"></a><a NAME="250"></a></center>
+
+<center><table>
+<caption><b>Figure 6:</b> Navigation through keyword anchor <i>Database</i></caption>
+
+<tr>
+<td><img SRC="img7.gif" ALT="\begin{figure}\centerline{\psfig{figure=data_kw.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<li>
+The <tt>SELECT..FROM..WHERE</tt> clauses in WQL are then translated into
+their corresponding internal query tree representations for processing
+against the object-oriented class schema. The translation is performed
+by the WQL parser by consulting the logical/physical schema mapping.</li>
+
+<li>
+After query processing, the query results returned by the NEC PERCIO OODBMS
+are in the internal object-oriented class format. The HTML/VRML document
+generator of WebDB then converts the query results in internal representations
+to their corresponding HTML/VRML forms.</li>
+
+<li>
+Various forms of query result representations, such as HTML tables and
+VRML visualization, are supported. Anchors in the HTML result documents
+are implemented as queries to WebDB. Similarly, each node in the VRML visualization
+page is implemented as an anchor with embedded queries to WebDB to generate
+new VRML pages as navigation destinations.</li>
+</ul>
+
+<center><a NAME="fig:stru"></a><a NAME="155"></a></center>
+
+<center><table>
+<caption><b>Figure 7:</b> Bookmark Structure</caption>
+
+<tr>
+<td><img SRC="img8.gif" ALT="\begin{figure}\centerline{\psfig{figure=stru.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:software"></a><a NAME="162"></a></center>
+
+<center><table>
+<caption><b>Figure 8:</b> Navigation through Classification Hierarchy (Root&nbsp;<img SRC="img1.gif" ALT="$\rightarrow $" BORDER=0 height=14 width=20 align=BOTTOM>
+Computer&nbsp;<img SRC="img1.gif" ALT="$\rightarrow $" BORDER=0 height=14 width=20 align=BOTTOM>
+Software)</caption>
+
+<tr>
+<td><img SRC="img9.gif" ALT="\begin{figure}\centerline{\psfig{figure=software.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:sub"></a><a NAME="169"></a></center>
+
+<center><table>
+<caption><b>Figure 9:</b> Subscription Folder Browsing window</caption>
+
+<tr>
+<td><img SRC="img10.gif" ALT="\begin{figure}\centerline{\psfig{figure=sub.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<center><a NAME="fig:prefer"></a><a NAME="176"></a></center>
+
+<center><table>
+<caption><b>Figure 10:</b> User Preference Setup Window</caption>
+
+<tr>
+<td><img SRC="img11.gif" ALT="\begin{figure}\centerline{\psfig{figure=prefer.ps,width=3.5in}}\vspace{-10pt}\vspace{10pt}\end{figure}" ></td>
+</tr>
+</table></center>
+
+<h2>
+<a NAME="SECTION00003000000000000000"></a>3. PowerBookmarks Functionalities</h2>
+In this section, we summarize some major functionalities of
+<i>PowerBookmarks</i>
+as follows:
+<br>&nbsp;
+<p><b>Querying:</b><i>PowerBookmarks</i> supports a simplified query interface,
+shown in Figure <a href="paper.html#fig:inter_q">2</a>, for users to query
+the Internet. After the results are returned by Internet search engines,
+a filter program extracts useful information and present it to the user.
+Figure <a href="paper.html#fig:inter_query">3</a> shows the query results
+for keywords <i>auto</i> and <i>Ford</i>. The user can select a set of
+URLs to browse in a slide-show fashion or save them as bookmarks in <i>PowerBookmarks</i>.
+When the user requests to collect URLs into <i>PowerBookmarks</i>,
+<i>PowerBookmarks</i>
+performs a sequence of tasks as follows: (1) downloading the URLs; (2)
+extracting keywords, summary, links, and related URL metadata, such as
+last modified date, etc.; (3) indexing the URLs, including indexing in
+a full text search engine TOPIC[<a href="paper.html#jtopic">6</a>], cooccurring
+word analysis, and storing metadata in WebDB. After the documents are indexed
+in <i>PowerBookmarks</i> (through WebDB), the user can issue more complex
+queries to retrieve bookmark URLs. Figure <a href="paper.html#fig:query">4</a>
+shows the query interface used in <i>PowerBookmarks</i>. In this window,
+the user issues a query retrieving the bookmarks related to call for papers
+for conferences related to <i>XML</i>. Queries with more complex criteria,
+such as links, full text search, relaxed keyword search[<a href="paper.html#www7">4</a>],
+are also supported. The query functionalities in <i>PowerBookmarks</i>
+is carried out by the underlying WebDB.
+<br>&nbsp;
+<p><b>Browsing and Navigation:</b> The user can also click on a bookmark
+to view the HTML document or its detail descriptive meta information. Figure
+<a href="paper.html#fig:detail">5</a> shows a window dump for a bookmark
+URL. Note that at the bottom of this window, there are three comments by
+the owners who have this URL as a shared bookmark. This functionality allows
+collaborative work and social filtering in a workplace. In addition to
+browsing, the user can also navigate through the hypermedia database system
+of bookmarked HTML documents. In Figure <a href="paper.html#fig:detail">5</a>,
+the detail information for a bookmark includes a summary and its most significant
+keywords. The user can click on the keyword anchor to navigate to other
+bookmark pages with such a keyword. Figure <a href="paper.html#fig:data_kw">6</a>
+shows the navigation result when the user clicking the <i>database</i>
+keyword anchor in Figure <a href="paper.html#fig:detail">5</a>.
+<br>&nbsp;
+<p><b>Classification of Bookmarks:</b><i>PowerBookmarks</i> supports automated
+document classification by contents based external classifiers similar
+to Pharos[<a href="paper.html#Pharos">7</a>]. Figure <a href="paper.html#fig:stru">7</a>
+shows a classification tree for bookmark URLs in <i>PowerBookmarks</i>.
+Note that this window also displays the number of bookmarks in each folder
+and the access frequency of each folder (i.e. category) indicated with
+a temperature icon. The user may navigate through the path to locate URLs
+of his/her interests. Figure <a href="paper.html#fig:software">8</a> shows
+a window dump for display of documents and folders at the node&nbsp;<!-- MATH: $Computer/Software$ --><i>Computer</i>/Software.
+At this node, there are the user's own bookmarks (shared and non-shared)
+and shared bookmarks owned by other users. The bookmarks with a red cross
+are dead links detected by the system. The system can also automatically,
+if the user prefers, move the dead links and inactive bookmarks to the
+<i>Deleted folder</i> at the bottom of the window. The user can click on
+any folder to go to other nodes in the bookmark structure.
+<br>&nbsp;
+<p><b>Subscription Service:</b><i>PowerBookmarks</i> supports subscription
+services for new or modified documents on the Internet and intranet as
+described in [<a href="paper.html#FODO98">8</a>]. The user can set the
+subscription criteria, such as temporal, domains, keyword similarity, or
+document similarity, etc. When there are incoming bookmarks available,
+the user will be notified (i.e. indicated with a spark) as shown in Figure
+<a href="paper.html#fig:sub">9</a>
+<br>&nbsp;
+<p><b>Preference Setup Window:</b> One unique feature of <i>PowerBookmarks</i>
+is personalizability.
+Figure <a href="paper.html#fig:prefer">10</a> shows
+that the user sets up his preference, such as automated removal of dead
+links and inactive bookmarks as well as the depth and the fanout of bookmark
+classification tree for navigation. The parameter of the period for considering
+user access pattern is used to adjust the ranking formula for bookmarks
+in the classification structure and user profile analysis for subscription.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+<a NAME="SECTION00004000000000000000"></a>4. Conclusion</h2>
+This demonstration proposal has highlighted many features of an advanced
+and personalizable Web information management system. It shows a real and
+useful application of integrating database and Web technologies. The system
+demonstration will serve as a forum for stimulating discussion and productive
+interaction among researchers and users in the area of Web-based information
+and database system attending 1999 ACM SIGMOD/PODS Conference.
+<br>&nbsp;
+<h2>
+<a NAME="SECTIONREF"></a>Bibliography</h2>
+
+<dl COMPACT>
+<dt>
+<a NAME="gt97"></a>1</dt>
+
+<dd>
+Georgia Tech Research Corporation.</dd>
+
+<br>GVU's 7th WWW User Survey.
+<br><i>Information available at http://www.gvu.gatech.edu/user_surveys/survey-1997-04/</i>,
+1997.
+<dt>
+<a NAME="bookmark"></a>2</dt>
+
+<dd>
+David Abrams and Ron Baecker.</dd>
+
+<br>How People Use WWW Bookmarks.
+<br><i>ACM CHI 1997 Electronic Publications (Late-Breaking/Short Talks).
+Information available at http://www.acm.org/sigs/sigchi/chi97/</i>
+<br><i>proceedings/short-talk/da.htm</i>, 1997.
+<dt>
+<a NAME="revisit"></a>3</dt>
+
+<dd>
+Linda Tauscher and Saul Greenberg.</dd>
+
+<br>Revisitation Patterns in World Wide Web Navigation.
+<br>In <i>Proceedings of the 1997 ACM CHI Conference</i>, Atlanta, GA,
+March 1997.
+<dt>
+<a NAME="www7"></a>4</dt>
+
+<dd>
+Wen-Syan Li and Junho Shim.</dd>
+
+<br>Facilitating Complex Web Queries through Visual Interfaces and Query
+Relaxation.
+<br>In <i>Proc. of the 7th World-Wide Web Conference</i>, Brisbane, Queensland,
+Australia, April 1998.
+<dt>
+<a NAME="IEICE98"></a>5</dt>
+
+<dd>
+Wen-Syan Li, Yi-Leh Wu, Junho Shim, Kyoji Hirata, Sougata Mukherjea, Divyakant
+Agrawal, Yoshinori Hara, Reiko Ito, Yutaka Kimura, Kazuyuki Shimazu, and
+Yukiyoshi Saito.</dd>
+
+<br>WebDB Hypermedia Database System.
+<br><i>IEICE Transactions on Information Systems</i>, 82(1), January 1999.
+<dt>
+<a NAME="jtopic"></a>6</dt>
+
+<dd>
+NEC Corporation.</dd>
+
+<br><i>JTOPIC Developer's Kit</i>.
+<br>NEC Corporation, December 1997.
+<dt>
+<a NAME="Pharos"></a>7</dt>
+
+<dd>
+R. Dolin, D. Agrawal, A. El Abbadi, and J. Pearlman.</dd>
+
+<br>Using Automated Classification for Summarizating and Selecting Heterogeneous
+Information Sources.
+<br><i>D-Lib, Information available at http://www.dlib.org/dlib/january98/dolin/01dolin.html</i>,
+January 1998.
+<dt>
+<a NAME="FODO98"></a>8</dt>
+
+<dd>
+Wen-Syan Li, Yi-Leh Wu, Corey Bufi, Chen-Chuan Kevin Chang, Divyakant Agrawal,
+and Yoshinori Hara.</dd>
+
+<br>PowerBookmarks: An Advanced Web Bookmark Database System and its Information
+Sharing and Management.
+<br>In <i>Proceedings of 5th International Conference of Foundations of
+Data Organization (FODO'98)</i>, Kobe, Japan, November 1998.</dl>
+
+<h2>
+<a NAME="SECTION00006000000000000000"></a>About this document ...</h2>
+
+<p><br><b><font size=+2>PowerBookmarks: A System for Personalizable Web
+Information Organization, Sharing, and Management</font></b>
+<p>This document was generated using the
+<a href="http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/"><b>LaTeX</b>2<tt>HTML</tt></a>
+translator Version 98.2 beta3 (July 4th, 1998)
+<p>Copyright &copy; 1993, 1994, 1995, 1996,
+<a href="http://cbl.leeds.ac.uk/nikos/personal.html">Nikos
+Drakos</a>, Computer Based Learning Unit, University of Leeds.
+<br>Copyright &copy; 1997, 1998,
+<a href="http://www-math.mpce.mq.edu.au/~ross/">Ross
+Moore</a>, Mathematics Department, Macquarie University, Sydney.
+<p>The command line arguments were:
+<br><b>latex2html</b> <tt>-split 1 paper</tt>
+<p>The translation was initiated by Wen-Syan Li on 1999-11-30
+<hr><!--Navigation Panel-->
+<br><!--End of Navigation Panel-->
+<address>
+<i>Wen-Syan Li</i></address>
+
+<br><i>1999-11-30</i>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA: the View Factory</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="75"><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Overview:</font>
+<br><font size=+3>the View Factory</font></td>
+
+<td ALIGN=CENTER><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_architecture.html">[Back to Architecture]</a>&nbsp;&nbsp;
+<a href="#view">[View definition]</a>&nbsp;&nbsp; <a href="#creation">[View
+creation]</a></center>
+
+<p>The <i>View Factory</i> updates the cache adding more structure (classes,
+attributes, methods) and data.
+<p>Given the following information:
+<ul>
+<li>
+<font color="#A52A2A">current schema</font></li>
+
+<br>The <font color="#A52A2A">current schema</font> is the schema of the
+cache resulting from previous queries. When asking a first query, the current
+schema is empty.
+<br>&nbsp;
+<li>
+<font color="#A52A2A">target structure</font></li>
+
+<br>The <font color="#A52A2A">target structure</font> is the structure
+inferred from the user's query by matching schema components and completion,
+required to answer the user's query. For example, when asking <i>"What
+are the conferences located in Paris?"</i>, a <font color="#A52A2A">target
+structure</font> composed of two concept classes
+<font color="#008000">Conference</font>
+and <font color="#008000">Location</font> combined with the attribute <font color="#008000">location</font>
+is inferred from the query.</ul>
+the View Factory computes the <font color="#A52A2A">view definition</font>.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="view"></a><img SRC="symb1.gif" > View definition</h1>
+Our view definitions are simple since our actual conceptual representation
+is flat (there is no subclassing relationship between concept classes).
+Intuitively, when a concept class is expressed in the user's query, then
+it has to be defined in the schema of the cache specialized with the attributes
+necessary to answer the query. A view definition results from a translation
+of the <font color="#A52A2A">target structure</font> into a <font color="#A52A2A">view-expression</font>.
+The <font color="#A52A2A">view-expressions</font> are either of the form:
+<ul>
+<li>
+<tt>c &lt;= Specialization_P()</tt>, when class <tt>c</tt> is defined from
+scratch with attributes mentioned in <tt>P</tt>.</li>
+
+<li>
+<tt>c &lt;= Specialization_P(c)</tt>, when class <tt>c</tt> is already
+defined in the cache, but has to be specialized by attributes mentioned
+in
+<tt>P</tt>.</li>
+</ul>
+Suppose that the user is asking <i>"What are the conferences with a submission
+deadline in 1998?"</i>, as a first query. The query can be expressed as:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>select</b> x.name&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>from</b>&nbsp;&nbsp; x in Conference
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>where</b>&nbsp; x.submission_deadline.year=1998</pre>
+and the target structure extracted by the <i>Dispatcher</i> consists of
+two classes <font color="#008000">Conference</font> and <font color="#008000">Date</font>
+combined with the attribute <font color="#008000">submission_deadline</font>.
+The
+<i>View Factory</i> checks the <font color="#A52A2A">current schema</font>,
+which is empty, since it is the first query, and generates the following
+view-definition.
+<pre>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp; e_1 = Conference &lt;= Specialization_{(name, Conference->string),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (submission_deadline, Conference->Date)}(),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;= Specialization_{(month, Date->integer),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (day, Date->integer),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (year, Date->integer)}()</tt>
+
+</pre>
+Both classes <tt>Conference</tt> and <tt>Date</tt> are defined from scratch
+(always specialized by their corresponding key attributes).
+<p>Suppose now that the user asks a second query (refinement) such as <i>"What
+are the conferences located in Paris?"</i>, expressed by:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>select</b> x.name&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>from</b>&nbsp;&nbsp; x in Conference
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>where</b>&nbsp; x.location.city="Paris"</pre>
+The target structure extracted by the <i>Dispatcher</i> consists of two
+classes <font color="#008000">Conference</font> and <font color="#008000">Location</font>
+combined with the attribute <font color="#008000">location</font>. The
+current schema has two classes <font color="#008000">Conference</font>
+and <font color="#008000">Date</font> combined with the attribute <font color="#008000">submission_deadline</font>.
+The
+<i>View Factory</i> generates the the following view-definition.
+<pre>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp; e_2 = Conference &lt;= Specialization_{(location, Conference->Location)}(),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Location&nbsp;&nbsp; &lt;= Specialization_{(city, Location->string),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (state, Location->string),&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (country, Location->string)}()</tt>
+
+</pre>
+Class <tt>Conference</tt> is already defined, but has to be specialized
+by a new attribute <tt>location</tt>. Class <tt>Location</tt> has to be
+defined.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="creation"></a><img SRC="symb1.gif" > View creation</h1>
+When the <font color="#A52A2A">view-expression</font> is generated, the
+cache can be updated.
+<h2>
+Updating the schema</h2>
+The view mechanism is based on object-oriented inheritance. Refining (or
+specializing) a class, means extending it (in the OO sense).
+<ul>
+<li>
+<tt>c &lt;= Specialization_P()</tt>, an object class <tt>c</tt> is defined
+from scratch with attributes mentioned in <tt>P</tt>.</li>
+
+<li>
+<tt>c &lt;= Specialization_P(c)</tt>, a class <tt>c_</tt> specializes (already
+existing class <tt>c</tt>) with attributes mentioned in
+<tt>P</tt>. Class
+<tt>c_</tt> is a <b>subclass</b> of <tt>c</tt>.</li>
+</ul>
+
+<h2>
+Updating the data</h2>
+Once the new schema has been built, the task is now to migrate the objects
+of the cache. The migration is done in two steps: (1) we copy the information
+that already exists and (2) we compute the missing information. Each instance
+of a class in the AKIRA cache can build itself out of an instance of a
+super class. An instance of <tt>Conference_</tt> (defined by the extension
+<tt>e_2</tt> of <tt>e_1</tt>) is created from an instance of <tt>Conference</tt>
+(defined by the extension <tt>e_1</tt>). When migrating from <tt>Conference</tt>
+to <tt>Conference_</tt>, the system automatically uses information extraction
+agents for
+<tt>location</tt>.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<p>
+<hr WIDTH=50%>
+<center><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

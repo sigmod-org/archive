@@ -1,0 +1,2 @@
+Static value after JDK user 1: 10
+Static value after JDK user 2: 30

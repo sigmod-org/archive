@@ -1,0 +1,130 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Whirl Slides
+</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<center>
+<p><b><font size=+2>The Main Ideas in WHIRL</font></b></center>
+
+<ul>
+<li>
+<font size=+2>Model the information sources as relations but <font color="#FF0000">don't</font>
+clean up the keys.</font></li>
+
+<ul>
+<li>
+<font size=+2>Relation <a href="publisher-1.html">publisher(name,href)</a></font></li>
+
+<li>
+<font size=+2>Relation <a href="superkid-1.html">superkid(game,pub,category,priceinfo)</a></font></li>
+</ul>
+
+<li>
+<font size=+2>Use "similarity joins" to query the data; an answer is the
+<i>K</i> tuples that <b>best</b> satisfy the WHERE clause.</font></li>
+
+<br>&nbsp;
+<center><table BORDER=2 >
+<tr>
+<td VALIGN=TOP>
+<table>
+<tr>
+<td>FROM&nbsp;</td>
+
+<td>publisher as p</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>superkid as s</td>
+</tr>
+
+<tr>
+<td>WHERE&nbsp;</td>
+
+<td>s.pub=p.name</td>
+</tr>
+
+<tr>
+<td>SELECT&nbsp;</td>
+
+<td>s.game,s.pub,&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>p.name,p.href</td>
+</tr>
+</table>
+</td>
+
+<td VALIGN=TOP>
+<table>
+<tr>
+<td>FROM&nbsp;</td>
+
+<td>publisher as p,</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>superkid as s</td>
+</tr>
+
+<tr>
+<td>WHERE&nbsp;</td>
+
+<td><font color="#FF0000">similar(s.pub,p.name)</font></td>
+</tr>
+
+<tr>
+<td>SELECT&nbsp;</td>
+
+<td>s.game,s.pub,&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>p.name,p.href</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><form method=get action="query-1.html"><input type=submit></form></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></center>
+
+<li>
+Similarity is computed with <b>cosine distance</b> (widely used in information
+retrieval.) This works well in <a href="expt/index.html">controlled experiments</a>,
+and leads to an efficient query-processing algorithm.</li>
+
+<br>&nbsp;
+<li>
+Current implementation is memory-based and handles unions of select-project-join
+queries.</li>
+</ul>
+
+<center><a href="fdemo.html" target="_top">[Next slide]</a></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: XML Output of Activity NewOrder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_neworder.htm"> Previous Step</a></td>
+<td><a href="demo_engine.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>XML Output of Activity NewOrder</b></font></p>
+<p>For completeness we show here the XML document that is sent to the XML mediator when the user pressed the "Submit Order" button and the activity NewOrder is terminating.</p>
+<table>
+	<tr><td align="center"><a href="return.gif"><img src="return_tn.gif"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>When the NewOrder activity is finished, i.e., the user has entered all ordered items and pressed the "Submit Order" button, an XML document is sent to the XSQL servlet, i.e. the XML mediator, by an http post call. The structure of the output is generic and the same for all activities.</p>
+<p>Such a message consists of two major elements:
+<ol>
+<li>Business data are input or output parameters that influence the persistent business objects on which the activity’s application operates. For example, when invoking an activity to receive a new order, the customer id, id of the ordered product, and the ordered quantity are business data.</li>
+<li>Flow control data are input or output parameters that "merely" serve to drive the control (and data) flow among activities in the workflow, but have no long-term impact on persistent business objects beyond the scope of the current workflow. This category especially includes return codes of activities.</li>
+</ol>
+In this particular example we see that the business data consists of the list of the ordered items whereas flow control data sais that the customer is going to pay by credit card and that the activity processing has been successfully completed.</p>
+<p>When an activity completes, it sends the XML message to the mediator, which then parses the message and derives the necessary follow-up actions like storing new or modified business objects and sending flow control data to a workflow engine. Business data typically reside in relational databases.</p>
+<p>As this window is actually not a part of the workflow but of the demo, we simply close it by pressing the <b><a href="demo_engine.htm">"OK"</a></b> button ...
+<p>&nbsp;</p>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_neworder.htm"> Previous Step</a></td>
+<td><a href="demo_engine.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+</dd>
+</dl>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA: the user</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="75"><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Overview:</font>
+<br><font size=+3>the user</font></td>
+
+<td ALIGN=CENTER><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_architecture.html">[Back to Architecture]</a>&nbsp;&nbsp;
+<a href="#what">[What AKIRA can understand]</a>&nbsp;&nbsp; <a href="#how">[How
+to express a query]</a></center>
+
+<h1>
+<a NAME="what"></a><img SRC="symb1.gif" > What AKIRA can understand</h1>
+If AKIRA is not limited by a given imposed organization of data (as it
+is in the <i>source-driven</i> approach), then its limitations lie in its
+extraction capabilities, expressed as concepts, meta-concepts and attributes.
+The current AKIRA system offers the user a limited range of concepts to
+express his query. Today, the concepts known by the system are <font color="#008000">Conference</font>,
+<font color="#008000">Date</font> and <font color="#008000">Location</font>.
+Each concept corresponds to an IE tool.
+<p><b>concept class <font color="#008000">Conference</font></b>
+<br>Most of IE tools are domain and format dependent. AKIRA's conference
+extractor is formatted to extract conference names from a source consisting
+of <font color="#A52A2A">Calls for Papers</font>. The first step consists
+in <i>recognizing</i> in a document the strings of characters corresponding
+to conference names (and tag them in the document). The second step is
+a <i>co-reference</i> step. Different strings of characters recognized
+to be conference names, may refer to the same conference. For instance
+the strings
+<i>Int. Conf. on Very Large DataBases</i> and <i>VLDB</i> refer
+to the same conference. The <i>identification</i> step follows. To each
+set of co-referent strings correspond an instance of class <font color="#008000">Conference</font>.
+A <i>canonical representation</i> is chosen for the name of conferences.
+An instance of concept class <font color="#008000">Conference</font> is
+described with its <i>canonical representation</i> which consists of the
+acronym of the conference followed by the corresponding year. For instance,
+"SIGMOD'98", "SIGMOD'99", etc. Moreover, each document (call for papers)
+is associated to a conference (or split into several documents when it
+is the call for papers of several conferences). The mapping from documents
+to instances of class <font color="#008000">Conference</font> is used by
+other extractors with the assumption that all information extracted from
+the document refer to the instance of <font color="#008000">Conference</font>
+it refers to.
+<br>The canonical representation is indeed a <i>key</i> for the class.
+In the conceptual representation of extraction capabilities, the concept
+class
+<font color="#008000">Conference</font> is defined with at least
+two attributes:
+<b>fragment</b>, which associates to each instance the
+set of all its
+<font color="#A52A2A">fragments</font> (the pairs [file,span]
+of all its occurrences in the documents), and attribute <b>name</b>, its
+key.
+<p>&nbsp;<b>concept class <font color="#008000">Date</font></b>
+<br>The date extractor follows the same successive steps (recognition,
+co-reference and identification), but is not restricted to a source of
+<font color="#A52A2A">Calls for Papers</font> (it extract dates from any
+English textual document). The canonical representation of dates consists
+of three attributes:
+<b>month</b>, <b>day</b> and <b>year</b>, which constitute
+the key of the class.
+<p>&nbsp;<b>concept class <font color="#008000">Location</font></b>
+<br>Like the latter, the location extractor is not restricted to a given
+source, but is based on a recognizer (many thanks to Breck Baldwin who
+let us use his recognizer) which uses list of all cities, states and countries
+in the world. The chosen canonical representation is composed of <b>city</b>,
+<b>state</b> and
+<b>country</b>, which constitute the key of the class.
+<br>&nbsp;
+<p>In our <a href="thepool.html">conceptual representation</a>, a concept
+class may be specialized by either valued attributes or abstract attributes
+(<i>meta-concepts</i>). Today, AKIRA provides extractors for the following
+information about conferences:
+<ul>
+<li>
+location of the conference: <font color="#008000">location</font></li>
+
+<li>
+date of submission: <font color="#008000">submission_deadline</font></li>
+
+<li>
+dates of the conference: <font color="#008000">dates</font></li>
+
+<li>
+list of topics of interest: <font color="#008000">topics</font></li>
+
+<li>
+list of program committee members: <font color="#008000">pc_members</font>
+(which also extract the affiliation of the pc-member)</li>
+
+<li>
+the URL of the conference: <font color="#008000">web_site</font></li>
+
+<li>
+whether or not proceedings are published: <font color="#008000">published_proceedings</font></li>
+
+<li>
+series in which the proceedings are published: <font color="#008000">proceedings_series</font></li>
+
+<li>
+publisher of the proceedings: <font color="#008000">proceedings_publisher</font></li>
+
+<li>
+whether or not selected papers will be submitted to journal publication:
+<font color="#008000">submission_journal</font></li>
+
+<li>
+journal to which selected papers will be submitted: <font color="#008000">journal</font></li>
+
+<li>
+journal publisher: <font color="#008000">journal_publisher</font></li>
+</ul>
+
+<h1>
+<a NAME="how"></a><img SRC="symb1.gif" > How to express queries</h1>
+The query language available to the user is OQL-like. A query consists
+of a
+<b>select</b> ... <b>from</b> ... <b>where</b> expression. For instance
+the query <i>"What are the conferences located in Paris?"</i> is expressed
+by:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>select</b> x.name&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>from</b>&nbsp;&nbsp; x in Conference
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>where</b>&nbsp; x.location.city="Paris"</pre>
+However, within the limits of the system's knowledge, some fuzziness is
+allowed. The user can express his query using her own vocabulary. For instance
+the following expression is equivalent to the previous (and thus will have
+the same output).
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>select</b> x.name&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>from</b>&nbsp;&nbsp; x in Conf&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>where</b>&nbsp; x.location="Paris"</pre>
+AKIRA uses a primitive thesaurus and some regular expressions to map class
+attributes from the user's query to attributes understood at the level
+of components. As an illustration, the attribute <font color="#008000">submission_deadline</font>
+can be expressed by the system from any string matching the regular pattern:
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <tt>/^(conf(.*?))*(date(.*?))*sub(.*?)(date|deadline)*$/i</tt>
+
+</pre>
+Some more advanced strategies are used for more sophisticated metaconcepts.
+When necessary, tools based on regular pattern as well as their syntactic
+description, including their part of speech such as
+<b>SuperTags</b> can
+be used.
+<p>If the user expresses himself through an expression that does not match
+the pattern, the system will not be able to understand the query.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<p>
+<hr WIDTH=50%>
+<center><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

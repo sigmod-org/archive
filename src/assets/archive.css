@@ -1,0 +1,13 @@
+/* SIGMOD Archive header: the SIGMOD logo, "Archive", and a pill button back to www.sigmod.org (as on blog.sigmod.org) */
+.archive-name { font: 600 22px var(--serif); color: var(--ink); padding-left: 14px; border-left: 1px solid var(--line); }
+.nav-sigmod { display: inline-flex; align-items: center; gap: 4px; padding: 7px 16px; border: 1.5px solid var(--accent); border-radius: 999px;
+  color: var(--accent); font-weight: 600; font-size: 14.5px; text-decoration: none; white-space: nowrap; }
+.nav-sigmod:hover { background: var(--accent); color: #fff; }
+.archive-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+.archive-list li { border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; }
+.archive-list a { font-weight: 600; font-size: 18px; }
+.archive-list p { margin: 6px 0 0; }
+@media (max-width: 680px) {
+  .archive-name { font-size: 18px; padding-left: 10px; }
+  .nav-sigmod { padding: 6px 12px; font-size: 13.5px; }
+}

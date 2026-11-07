@@ -1,0 +1,492 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Snakes and Sandwiches: Optimal Clustering Strategies for a Data Warehouse</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_7.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Snakes and Sandwiches: Optimal Clustering Strategies for a Data Warehouse
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_h_v_jagadish.htm">H. V. Jagadish</a>, 
+<a href = "a_laks_v_s_lakshmana.htm">Laks V. S. Lakshmanan</a>, and 
+<a href = "a_divesh_srivastava.htm">Divesh Srivastava</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/snakesandsandwihlad.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmoclusteringering.htm">Return to Clustering</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Physical layout of data is a crucial determinant of performance in a data warehouse. The optimal clustering of data on disk, for minimizing expected I/O, depends on the query workload. In practice, we often have a reasonable sense of the likelihood of different classes of queries, e.g., 40% of the queries concern calls made from some specific telephone number in some month. In this paper, we address the problem of finding an optimal clustering of records of a fact table on disk, given an expected workload in the form of a probability distribution over query classes. Attributes in a data warehouse fact table typically have hierarchies defined on them (by means of auxiliary dimension tables). The product of the dimensional hierarchy levels forms a lattice and leads to a natural notion of query classes. Optimal clustering in this context is a combinatorially explosive problem with a huge search space (doubly exponential in number of hierarchy levels). We identify an important subclass of clustering strategies called lattice paths, and present a dynamic programming algorithm for finding the optimal lattice path clustering, in time linear in the lattice size. We additionally propose a technique called snaking, which when applied to a lattice path, always reduces its cost. For a representative class of star schemas, we show that for every workload, there is a snaked lattice path which is globally optimal. Further, we prove that the clustering obtained by applying snaking to the optimal lattice path is never much worse than the globally optimal snaked lattice path clustering. We complement our analyses and validate the practical utility of our techniques with experiments using TPC-D benchmark data.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="BaralisPT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">
+Elena Baralis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paraboschi:Stefano.html">
+Stefano Paraboschi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Teniente:Ernest.html">
+Ernest Teniente
+</a>
+: Materialized Views Selection in a Multidimensional Database. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#BaralisPT97">
+VLDB 1997
+</a>
+: 156-165
+<dt>
+[2]
+<dd>
+<a name="DeshpandeRSN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">
+Prasad Deshpande
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramasamy:Karthikeyan.html">
+Karthikeyan Ramasamy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shukla:Amit.html">
+Amit Shukla
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Caching Multidimensional Queries Using Chunks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 259-270
+<dt>
+[3]
+<dd>
+<a name="Faloutsos86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Multiattribute Hashing Using Gray Codes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1986
+</a>
+: 227-238
+<dt>
+[4]
+<dd>
+<a name="Faloutsos88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Gray Codes for Partial Match and Range Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse14.html#Faloutsos88">
+TSE 14(10)
+</a>
+: 1381-1393(1988)
+<dt>
+[5]
+<dd>
+... 
+<dt>
+[6]
+<dd>
+<a name="FaloutsosR89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roseman:Shari.html">
+Shari Roseman
+</a>
+: Fractals for Secondary Key Retrieval. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods89.html#FaloutsosR89">
+PODS 1989
+</a>
+: 247-252
+<dt>
+[7]
+<dd>
+<a name="FaloutsosJM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">
+Yannis Manolopoulos
+</a>
+: Analysis of the n-Dimensional Quadtree Decomposition for Arbitrary Hyperectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde9.html#FaloutsosJM97">
+TKDE 9(3)
+</a>
+: 373-383(1997)
+<dt>
+[8]
+<dd>
+<a name="GuptaHQ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+: Aggregate-Query Processing in Data Warehousing Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#GuptaHQ95">
+VLDB 1995
+</a>
+: 358-369
+<dt>
+[9]
+<dd>
+<a name="GuptaHRU97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">
+Himanshu Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Index Selection for OLAP. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#GuptaHRU97">
+ICDE 1997
+</a>
+: 208-219
+<dt>
+[10]
+<dd>
+<a name="HarinarayanRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Implementing Data Cubes Efficiently. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 205-216
+<dt>
+[11]
+<dd>
+<a name="HellersteinKP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koutsoupias:Elias.html">
+Elias Koutsoupias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadimitriou:Christos_H=.html">
+Christos H. Papadimitriou
+</a>
+: On the Analysis of Indexing Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#HellersteinKP97">
+PODS 1997
+</a>
+: 249-256
+<dt>
+[12]
+<dd>
+<a name="Jagadish90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+: Linear Clustering of Objects with Multiple Atributes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 332-342
+<dt>
+[13]
+<dd>
+<a name="Jagadish97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+: Analysis of the Hilbert Curve for Representing Two-Dimensional Space. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl62.html#Jagadish97">
+IPL 62(1)
+</a>
+: 17-22(1997)
+<dt>
+[14]
+<dd>
+... 
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="ONeilQ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">
+Patrick E. O'Neil
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+: Improved Query Performance with Variant Indexes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 38-49
+<dt>
+[17]
+<dd>
+<a name="OrensteinM84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merrett:T=_H=.html">
+T. H. Merrett
+</a>
+: A Class of Data Structures for Associative Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods84.html#OrensteinM84">
+PODS 1984
+</a>
+: 181-190
+<dt>
+[18]
+<dd>
+<a name="SamoladasM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Samoladas:Vasilis.html">
+Vasilis Samoladas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miranker:Daniel_P=.html">
+Daniel P. Miranker
+</a>
+: A Lower Bound Theorem for Indexing Schemes and Its Application to Multidimensional Range Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods98.html#SamoladasM98">
+PODS 1998
+</a>
+: 44-51
+<dt>
+[19]
+<dd>
+<a name="ScheuermannSV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scheuermann:Peter.html">
+Peter Scheuermann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Junho.html">
+Junho Shim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vingralek:Radek.html">
+Radek Vingralek
+</a>
+: WATCHMAN : A Data Warehouse Intelligent Cache Manager. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ScheuermannSV96">
+VLDB 1996
+</a>
+: 51-62
+<dt>
+[20]
+<dd>
+<a name="SrivastavaDJL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">
+Shaul Dar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Answering Queries with Aggregation Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#SrivastavaDJL96">
+VLDB 1996
+</a>
+: 318-329
+<dt>
+[21]
+<dd>
+<a name="SarawagiS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">
+Sunita Sarawagi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: Efficient Organization of Large Multidimensional Arrays. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#SarawagiS94">
+ICDE 1994
+</a>
+: 328-336
+<dt>
+[22]
+<dd>
+<a name="Tanaka83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tanaka:Yuzuru.html">
+Yuzuru Tanaka
+</a>
+: Adaptive Segmentation Schemes for Large Relational Database Machines. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/iwdm/iwdm83.html#Tanaka83">
+IWDM 1983
+</a>
+: 293-318
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/JagadishLS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{H.&nbsp;V.&nbsp;Jagadish&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laks&nbsp;V.&nbsp;S.&nbsp;Lakshmanan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Divesh&nbsp;Srivastava},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Snakes&nbsp;and&nbsp;Sandwiches:&nbsp;Optimal&nbsp;Clustering&nbsp;Strategies&nbsp;for&nbsp;a&nbsp;Data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warehouse},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{37-48},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

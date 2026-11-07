@@ -1,0 +1,389 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - GHOST: Fine Granularity Buffering of Indexes</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_7.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+GHOST: Fine Granularity Buffering of Indexes
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_cheng_hian_goh.htm">Cheng Hian Goh</a>, 
+<a href = "a_beng_chin_ooi.htm">Beng Chin Ooi</a>, 
+<a href = "a_d_sim.htm">D. Sim</a>, and 
+<a href = "a_kian-lee_tan.htm">Kian-Lee Tan</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/ghostfinegranulchbed.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbcachingteciques.htm">Return to Caching Techniques</a><br>
+<br><i><font size=-1>Note: The quality of the PDF contained herein reflects that of the material supplied to the DiSC'00 Production Team.</font></i><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Buffering has all along been an important strategy for exploiting the cost/performance ratio of disk versus random-access memory. The buffering of disk pages belonging to a  database has been well-studied, but literature that deals specifically with 
+<i>
+index
+</i>
+ buffering is scare. This is surprising given the significance of indexes (especially B+-tree like indexes) in modern DBMSs. In this paper, we describe a dual buffering scheme for indexes, called GHOST, in which part of the buffer is used to maintain popularly used "paths" of  the B+-tree index, while the remainder is devoted to maintaining a Splay-tree with pointers to leaf pages containing frequently used leaf pages. This scheme allows us to maintain pointers to leaf nodes long after the paths leading to the leaf nodes have been replaced, thus maintaining "ghost" paths to the nodes. In addition to describing the search and maintenance operations for the GHOST buffering scheme, we also conduct a series of experiments in which it is shown that GHOST outperforms the best existing schemes (ILRU and OLRU) by impressive margins for almost all pragmatic query workloads.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+... 
+<dt>
+[2]
+<dd>
+<a name="BayerM72" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bayer:Rudolf.html">
+Rudolf Bayer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McCreight:Edward_M=.html">
+Edward M. McCreight
+</a>
+: Organization and Maintenance of Large Ordered Indices. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acta/acta1.html#BayerM72">
+Acta Informatica 1
+</a>
+: 173-189(1972)
+<dt>
+[3]
+<dd>
+<a name="BerchtoldBK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">
+Christian B&ouml;hm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The Pyramid-Tree: Breaking the Curse of Dimensionality. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#BerchtoldBK98">
+SIGMOD Conference 1998
+</a>
+: 142-153
+<dt>
+[4]
+<dd>
+<a name="ChanOL92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chan:Chee_Yong.html">
+Chee Yong Chan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">
+Beng Chin Ooi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lu:Hongjun.html">
+Hongjun Lu
+</a>
+: Extensible Buffer Management of Indexes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1992
+</a>
+: 444-454
+<dt>
+[5]
+<dd>
+<a name="ChouD85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chou:Hong=Tai.html">
+Hong-Tai Chou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: An Evaluation of Buffer Management Strategies for Relational Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1985
+</a>
+: 127-141
+<dt>
+[6]
+<dd>
+<a name="Comer79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Comer:Douglas.html">
+Douglas Comer
+</a>
+: The Ubiquitous B-Tree. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur11.html#Comer79">
+Computing Surveys 11(2)
+</a>
+: 121-137(1979)
+<dt>
+[7]
+<dd>
+<a name="EffelsbergH84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Effelsberg:Wolfgang.html">
+Wolfgang Effelsberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+: Principles of Database  Buffer Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods9.html#EffelsbergH84">
+TODS 9(4)
+</a>
+: 560-595(1984)
+<dt>
+[8]
+<dd>
+<a name="GuibasS78" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guibas:Leonidas_J=.html">
+Leonidas J. Guibas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sedgewick:Robert.html">
+Robert Sedgewick
+</a>
+: A Dichromatic Framework for Balanced Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+FOCS 1978
+</a>
+: 8-21
+<dt>
+[9]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[10]
+<dd>
+<a name="ONeilOW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Elizabeth_J=.html">
+Elizabeth J. O'Neil
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">
+Patrick E. O'Neil
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+: The LRU-K Page Replacement Algorithm For Database Disk Buffering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#ONeilOW93">
+SIGMOD Conference 1993
+</a>
+: 297-306
+<dt>
+[11]
+<dd>
+<a name="OoiGT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">
+Beng Chin Ooi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goh:Cheng_Hian.html">
+Cheng Hian Goh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Kian=Lee.html">
+Kian-Lee Tan
+</a>
+: Fast High-Dimensional Data Search in Incomplete Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 357-367
+<dt>
+[12]
+<dd>
+<a name="Sacco87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sacco:Giovanni_Maria.html">
+Giovanni Maria Sacco
+</a>
+: Index Access with a Finite Buffer. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1987
+</a>
+: 301-309
+<dt>
+[13]
+<dd>
+<a name="SaccoS82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sacco:Giovanni_Maria.html">
+Giovanni Maria Sacco
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schkolnick:Mario.html">
+Mario Schkolnick
+</a>
+: A Mechanism for Managing the Buffer Pool in a Relational Database System Using the Hot Set Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1982
+</a>
+: 257-262
+<dt>
+[14]
+<dd>
+<a name="SleatorT85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sleator:Daniel_Dominic.html">
+Daniel Dominic Sleator
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">
+Robert Endre Tarjan
+</a>
+: Self-Adjusting Binary Search Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm32.html#SleatorT85">
+JACM 32(3)
+</a>
+: 652-686(1985)
+<dt>
+[15]
+<dd>
+<a name="Yao77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yao:S=_Bing.html">
+S. Bing Yao
+</a>
+: Approximating the Number of Accesses in Database Organizations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm20.html#Yao77">
+CACM 20(4)
+</a>
+: 260-261(1977)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/GohOST99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cheng&nbsp;Hian&nbsp;Goh&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beng&nbsp;Chin&nbsp;Ooi&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.&nbsp;Sim&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kian-Lee&nbsp;Tan},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{GHOST:&nbsp;Fine&nbsp;Granularity&nbsp;Buffering&nbsp;of&nbsp;Indexes},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{339-350},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

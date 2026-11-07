@@ -1,0 +1,762 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Integration of Spatial Join Algorithms for Processing Multiple Inputs</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_2.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Integration of Spatial Join Algorithms for Processing Multiple Inputs
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_nikos_mamoulis.htm">Nikos Mamoulis</a> and 
+<a href = "a_dimitris_papadias.htm">Dimitris Papadias</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/integrationofspnidi.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmospatialdatbases.htm">Return to Spatial Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Several techniques that compute the join between two spatial data sets have been proposed during the last decade. Among these methods, some consider existing indices for the joined inputs, while others treat datasets with no index, thus providing solutions for the case where at least one input comes as an intermediate result of another database operator. In this paper we analyse previous work on spatial joins and propose a novel algorithm, called slot index spatial join (SISJ), that efficiently computes the spatial join between two inputs, only one of which is indexed by an R-tree. Going one step further, we show how SISJ and other spatial join algorithms can be implemented as operators in a database environment that joins more than two spatial inputs. We study the differences between relational and spatial multi-way joins and propose a dynamic programming algorithm that optimizes the execution of complex spatial queries.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[APR+98]
+<dd>
+<a name="ArgePRSV98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arge:Lars.html">
+Lars Arge
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Procopiuc:Octavian.html">
+Octavian Procopiuc
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramaswamy:Sridhar.html">
+Sridhar Ramaswamy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suel:Torsten.html">
+Torsten Suel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+: Scalable Sweeping-Based Spatial Join. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#ArgePRSV98">
+VLDB 1998
+</a>
+: 570-581
+<dt>
+[BC81]
+<dd>
+<a name="BernsteinC81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chiu:Dah=Ming_W=.html">
+Dah-Ming W. Chiu
+</a>
+: Using Semi-Joins to Solve Relational Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 28(1)
+</a>
+: 25-40(1981)
+<dt>
+[BKSS90]
+<dd>
+<a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">
+Norbert Beckmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 322-331
+<dt>
+[BKS93]
+<dd>
+<a name="BrinkhoffKS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">
+Thomas Brinkhoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: Efficient Processing of Spatial Joins Using R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 237-246
+<dt>
+[BKS96]
+<dd>
+<a name="BrinkhoffKS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">
+Thomas Brinkhoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: Parallel Processing of Spartial Joins Using R-trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#BrinkhoffKS96">
+ICDE 1996
+</a>
+: 258-265
+<dt>
+[Bur89]
+<dd>
+... 
+<dt>
+[Gra93]
+<dd>
+<a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Query Evaluation Techniques for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">
+Computing Surveys 25(2)
+</a>
+: 73-170(1993)
+<dt>
+[Gü93]
+<dd>
+<a name="Gunther93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=nther:Oliver.html">
+Oliver G&uuml;nther
+</a>
+: Efficient Computation of Spatial Joins. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#Gunther93">
+ICDE 1993
+</a>
+: 50-59
+<dt>
+[Gut84]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[GG98]
+<dd>
+<a name="GaedeG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gaede:Volker.html">
+Volker Gaede
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=nther:Oliver.html">
+Oliver G&uuml;nther
+</a>
+: Multidimensional Access Methods. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur30.html#GaedeG98">
+Computing Surveys 30(2)
+</a>
+: 170-231(1998)
+<dt>
+[HJR97a]
+<dd>
+<a name="HuangJR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Yun=Wu.html">
+Yun-Wu Huang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jing:Ning.html">
+Ning Jing
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rundensteiner:Elke_A=.html">
+Elke A. Rundensteiner
+</a>
+: Spatial Joins Using R-trees: Breadth-First Traversal with Global Optimizations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HuangJR97">
+VLDB 1997
+</a>
+: 396-405
+<dt>
+[HJR97b]
+<dd>
+<a name="HuangJR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Yun=Wu.html">
+Yun-Wu Huang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jing:Ning.html">
+Ning Jing
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rundensteiner:Elke_A=.html">
+Elke A. Rundensteiner
+</a>
+: A Cost Model for Estimating the Performance of Spatial Joins Using R-trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm97.html#HuangJR97">
+SSDBM 1997
+</a>
+: 30-38
+<dt>
+[IK90]
+<dd>
+<a name="IoannidisK90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kang:Younkyung_Cha.html">
+Younkyung Cha Kang
+</a>
+: Randomized Algorithms for Optimizing Large Join Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 312-321
+<dt>
+[JK84]
+<dd>
+<a name="JarkeK84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jarke:Matthias.html">
+Matthias Jarke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koch:J=uuml=rgen.html">
+J&uuml;rgen Koch
+</a>
+: Query Optimization in Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur16.html#JarkeK84">
+Computing Surveys 16(2)
+</a>
+: 111-152(1984)
+<dt>
+[KC98]
+<dd>
+<a name="KimC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Kihong.html">
+Kihong Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cha:Sang_K=.html">
+Sang K. Cha
+</a>
+: Sibling Clustering of Tree-Based Spatial Indexes for Efficient Spatial Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm98.html#KimC98">
+CIKM 1998
+</a>
+: 398-405
+<dt>
+[KF93]
+<dd>
+<a name="KamelF93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamel:Ibrahim.html">
+Ibrahim Kamel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: On Packing R-trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm93.html#KamelF93">
+CIKM 1993
+</a>
+: 490-499
+<dt>
+[KS97]
+<dd>
+<a name="KoudasS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koudas:Nick.html">
+Nick Koudas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sevcik:Kenneth_C=.html">
+Kenneth C. Sevcik
+</a>
+: Size Separation Spatial Join. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 324-335
+<dt>
+[LR94]
+<dd>
+<a name="LoR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lo:Ming=Ling.html">
+Ming-Ling Lo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ravishankar:Chinya_V=.html">
+Chinya V. Ravishankar
+</a>
+: Spatial Joins Using Seeded Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1994
+</a>
+: 209-220
+<dt>
+[LR96]
+<dd>
+<a name="LoR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lo:Ming=Ling.html">
+Ming-Ling Lo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ravishankar:Chinya_V=.html">
+Chinya V. Ravishankar
+</a>
+: Spatial Hash-Joins. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 247-258
+<dt>
+[MP99]
+<dd>
+... 
+<dt>
+[Ore86]
+<dd>
+<a name="Orenstein86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+: Spatial Query Processing in an Object-Oriented Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1986
+</a>
+: 326-336
+<dt>
+[PD96]
+<dd>
+<a name="PatelD96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">
+Jignesh M. Patel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Partition Based Spatial-Merge Join. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 259-270
+<dt>
+[PM98]
+<dd>
+<a name="PapadopoulosM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadopoulos:Apostolos.html">
+Apostolos Papadopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">
+Yannis Manolopoulos
+</a>
+: Similarity Query Processing Using Disk Arrays. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 225-236
+<dt>
+[PMD98]
+<dd>
+<a name="PapadiasMD98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadias:Dimitris.html">
+Dimitris Papadias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mamoulis:Nikos.html">
+Nikos Mamoulis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Delis:Vasilis.html">
+Vasilis Delis
+</a>
+: Algorithms for Querying by Spatial Structure. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#PapadiasMD98">
+VLDB 1998
+</a>
+: 546-557
+<dt>
+[PMT99]
+<dd>
+<a name="PapadiasMT99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadias:Dimitris.html">
+Dimitris Papadias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mamoulis:Nikos.html">
+Nikos Mamoulis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theodoridis:Yannis.html">
+Yannis Theodoridis
+</a>
+: Processing and Optimization of Multiway Spatial Joins Using R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#PapadiasMT99">
+PODS 1999
+</a>
+: 44-55
+<dt>
+[PS85]
+<dd>
+... 
+<dt>
+[PTSE95]
+<dd>
+<a name="PapadiasTSE95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadias:Dimitris.html">
+Dimitris Papadias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theodoridis:Yannis.html">
+Yannis Theodoridis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Egenhofer:Max_J=.html">
+Max J. Egenhofer
+</a>
+: Topological Relations in the World of Minimum Bounding Rectangles: A Study with R-trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 92-103
+<dt>
+[PYK+97]
+<dd>
+<a name="PatelYKTNBHRLEKGDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">
+Jignesh M. Patel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Jie=Bing.html">
+Jie-Bing Yu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kabra:Navin.html">
+Navin Kabra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tufte:Kristin.html">
+Kristin Tufte
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nag:Biswadeep.html">
+Biswadeep Nag
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Burger:Josef.html">
+Josef Burger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">
+Nancy E. Hall
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramasamy:Karthikeyan.html">
+Karthikeyan Ramasamy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lueder:Roger.html">
+Roger Lueder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ellman:Curt.html">
+Curt Ellman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kupsch:Jim.html">
+Jim Kupsch
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guo:Shelly.html">
+Shelly Guo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Building a Scaleable Geo-Spatial DBMS: Technology, Implementation, and Evaluation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 336-347
+<dt>
+[Rot91]
+<dd>
+<a name="Rotem91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rotem:Doron.html">
+Doron Rotem
+</a>
+: Spatial Join Indices. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde91.html#Rotem91">
+ICDE 1991
+</a>
+: 500-509
+<dt>
+[RKV95]
+<dd>
+<a name="RoussopoulosKV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:Stephen.html">
+Stephen Kelley
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vincent:Fr=eacute=d=eacute=ic.html">
+Fr&eacute;d&eacute;ic Vincent
+</a>
+: Nearest Neighbor Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 71-79
+<dt>
+[RL85]
+<dd>
+<a name="RoussopoulosL85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leifker:Daniel.html">
+Daniel Leifker
+</a>
+: Direct Spatial Search on Pictorial Databases Using Packed R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1985
+</a>
+: 17-31
+<dt>
+[SKS97]
+<dd>
+<a name="SilberschatzKS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Korth:Henry_F=.html">
+Henry F. Korth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Database System Concepts, 3rd Edition.  McGraw-Hill Book Company 1997, ISBN 0-07-044756-X
+<br>
+ 
+<dt>
+[TSS98]
+<dd>
+<a name="TheodoridisSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theodoridis:Yannis.html">
+Yannis Theodoridis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stefanakis:Emmanuel.html">
+Emmanuel Stefanakis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+: Cost Models for Join Queries in Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#TheodoridisSS98">
+ICDE 1998
+</a>
+: 476-483
+<dt>
+[vdBSW97]
+<dd>
+<a name="BerckenSW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bercken:Jochen_Van_den.html">
+Jochen Van den Bercken
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widmayer:Peter.html">
+Peter Widmayer
+</a>
+: A Generic Approach to Bulk Loading Multidimensional Index Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#BerckenSW97">
+VLDB 1997
+</a>
+: 406-415
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="PapadiasMT99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadias:Dimitris.html">
+Dimitris Papadias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mamoulis:Nikos.html">
+Nikos Mamoulis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theodoridis:Yannis.html">
+Yannis Theodoridis
+</a>
+: Processing and Optimization of Multiway Spatial Joins Using R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#PapadiasMT99">
+PODS 1999
+</a>
+: 44-55
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/MamoulisP99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Nikos&nbsp;Mamoulis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimitris&nbsp;Papadias},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Integration&nbsp;of&nbsp;Spatial&nbsp;Join&nbsp;Algorithms&nbsp;for&nbsp;Processing&nbsp;Multiple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inputs},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-12},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

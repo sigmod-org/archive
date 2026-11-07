@@ -1,0 +1,119 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_2.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Dimensionality Reduction for Similarity Searching in Dynamic Databases</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_k.htm#Kothuri Venkata Ravi Kanth">Kothuri Venkata Ravi Kanth</a>, <a href="m_authors_a.htm#Divyakant Agrawal">Divyakant Agrawal</a>, <a href="m_authors_s.htm#Ambuj K. Singh">Ambuj K. Singh</a></center></td></tr></table></center><a target="disc_pdfL83X" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+Databases are increasingly being used to store multi-media objects such as maps, images, audio and video. Storage and retrieval of these objects is accomplished using multi-dimensional index structures such as R*-trees and SS-trees. As dimensionality increases, query performance in these index structures degrades. This phenomenon, generally referred to as the dimensionality curse, can be circumvented by reducing the dimensionality of the data. Such a reduction is however accompanied by a loss of precision of query results. Current techniques such as QBIC use SVD transform-based dimensionality reduction to ensure high query precision. The drawback of this approach is that SVD is expensive to compute, and therefore not readily applicable to dynamic databases. In this paper, we propose novel techniques for performing SVD-based dimensionality reduction in dynamic databases. When the data distribution changes considerably so as to degrade query precision, we recompute the SVD transform and incorporate it in the existing index structure. For recomputing the SVD-transform, we propose a novel technique that uses aggregate data from the existing index rather than the entire data. This technique reduces the SVD-computation time without compromising query precision. We then explore efficient ways to incorporate the recomputed SVD-transform in the existing index structure without degrading subsequent query response times. These techniques reduce the computation time by a factor of 20 in experiments on color and texture image vectors. The error due to approximate computation of SVD is less than 10%.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd><a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">Norbert Beckmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>:
+The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">SIGMOD Conference 1990</a>: 322-331<dt>[2]<dd><a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+The X-tree : An Index Structure for High-Dimensional Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">VLDB 1996</a>: 28-39<dt>[3]<dd>...
+<dt>[4]<dd>...
+<dt>[5]<dd>...
+<dt>[6]<dd><a name="FaloutsosRM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ranganathan:M=.html">M. Ranganathan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">Yannis Manolopoulos</a>:
+Fast Subsequence Matching in Time-Series Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#FaloutsosRM94">SIGMOD Conference 1994</a>: 419-429<dt>[7]<dd><a name="Freeston87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freeston:Michael.html">Michael Freeston</a>:
+The BANG File: A New Kind of Grid File.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#Freeston87">SIGMOD Conference 1987</a>: 260-269<dt>[8]<dd><a name="Freeston95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freeston:Michael.html">Michael Freeston</a>:
+A General Solution of the n-dimensional B-tree Problem.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#Freeston95">SIGMOD Conference 1995</a>: 80-91<dt>[9]<dd>...
+<dt>[10]<dd><a name="FriedmanBF77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Friedman:Jerome_H=.html">Jerome H. Friedman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bentley:Jon_Louis.html">Jon Louis Bentley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finkel:Raphael_A=.html">Raphael A. Finkel</a>:
+An Algorithm for Finding Best Matches in Logarithmic Expected Time.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/toms/toms3.html#FriedmanBF77">TOMS 3(3)</a>: 209-226(1977)<dt>[11]<dd>...
+<dt>[12]<dd>...
+<dt>[13]<dd><a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">Antonin Guttman</a>:
+R-Trees: A Dynamic Index Structure for Spatial Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">SIGMOD Conference 1984</a>: 47-57<dt>[14]<dd><a name="Hull94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:David_A=.html">David A. Hull</a>:
+Improving Text Retrieval for the Routing Problem using Latent Semantic Indexing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigir/sigir94.html#Hull94">SIGIR 1994</a>: 282-291<dt>[15]<dd><a name="Bentley75" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bentley:Jon_Louis.html">Jon Louis Bentley</a>:
+Multidimensional Binary Search Trees Used for Associative Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm18.html#Bentley75">CACM 18(9)</a>: 509-517(1975)<dt>[16]<dd><a name="KatayamaS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katayama:Norio.html">Norio Katayama</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Satoh:Shin=ichi.html">Shin'ichi Satoh</a>:
+The SR-tree: An Index Structure for High-Dimensional Nearest Neighbor Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KatayamaS97">SIGMOD Conference 1997</a>: 369-380<dt>[17]<dd><a name="LinJF94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">King-Ip Lin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+The TV-Tree: An Index Structure for High-Dimensional Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb3.html#LinJF94">VLDB Journal 3(4)</a>: 517-542(1994)<dt>[18]<dd><a name="LometS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">David B. Lomet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">Betty Salzberg</a>:
+The hB-Tree: A Multiattribute Indexing Method with Good Guaranteed Performance.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods15.html#LometS90">TODS 15(4)</a>: 625-658(1990)<dt>[19]<dd>...
+<dt>[20]<dd>...
+<dt>[21]<dd><a name="NiblackBEFGPYFT93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">Wayne Niblack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">Ron Barber</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">William Equitz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Glasman:Eduardo_H=.html">Eduardo H. Glasman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yanker:Peter.html">Peter Yanker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taubin:Gabriel.html">Gabriel Taubin</a>:
+The QBIC Project: Querying Images by Content, Using Color, Texture, and Shape.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/spieSR/spieSR93.html#NiblackBEFGPYFT93">Storage and Retrieval for Image and Video Databases (SPIE) 1993</a>: 173-187<dt>[22]<dd>...
+<dt>[23]<dd><a name="Salton89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salton:Gerard.html">Gerard Salton</a>:
+Automatic Text Processing: The Transformation, Analysis, and Retrieval of Information by Computer.
+ Addison-Wesley 1989, ISBN 0-201-12227-8<br>
+<dt>[24]<dd>...
+<dt>[25]<dd><a name="WhiteJ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:David_A=.html">David A. White</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jain:Ramesh.html">Ramesh Jain</a>:
+Similarity Indexing with the SS-tree.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#WhiteJ96">ICDE 1996</a>: 516-523<dt>[26]<dd><a name="WuAASS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wu:Daniel.html">Daniel Wu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">Divyakant Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abbadi:Amr_El.html">Amr El Abbadi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Singh:Ambuj_K=.html">Ambuj K. Singh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smith:Terence_R=.html">Terence R. Smith</a>:
+Efficient Retrieval for Browsing Large Image Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm96.html#WuAASS96">CIKM 1996</a>: 11-18</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/KanthAS98,<br>  author    = {Kothuri Venkata Ravi Kanth and<br>               Divyakant Agrawal and<br>               Ambuj K. Singh},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Dimensionality Reduction for Similarity Searching in Dynamic<br>               Databases},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {166-176},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

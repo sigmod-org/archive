@@ -1,0 +1,112 @@
+                              CALL FOR PAPERS 
+
+         International Conference On Mobile Data Management (MDM '2001)
+
+                     January 8 - 10, 2001, Hong Kong 
+
+                    http://www.cse.cuhk.edu.hk/mdm2001   
+
+          (formerly International Conference on Mobile Data Access) 
+ 
+     
+We are rapidly heading towards a world in which the computing
+infrastructure will contain billions of devices that are carried or 
+worn by their users as they go through their daily routines.  
+Such devices provide data access to mobile users as they move within 
+buildings, cities, or across the globe. This new infrastructure 
+presents tremendous challenges for data management technology 
+including: huge scale; variable and intermittent connectivity; 
+location-centric and location-dependent applications; bandwidth, 
+power, and device size limitations; and multimedia data delivery 
+across hybrid networks and systems.  Traditional data management 
+technologies such as query processing, transaction management, 
+workflow, business process management and metadata management must
+all be reevaluated in this emerging environment.  Furthermore, 
+non-traditional issues such as semantics of mobile data, 
+location-dependent querying, broadcast and multicast delivery and 
+caching/pre-fetching techniques must all be addressed.  
+This conference aims to investigate these and other issues, 
+focusing on the challenges and opportunities for data management 
+and data access technology in the rapidly evolving world of 
+mobile computing.
+  
+
+                             CONFERENCE TOPICS 
+ 
+ - modeling location and mobility semantics
+ - metadata management and exchanges
+ - query processing and optimization
+ - user interface and content transformation 
+ - data placement, caching, replication and relocation
+ - mobile transaction management 
+ - mobile aware/adaptive/agent applications
+ - satellite-based global positioning systems 
+ - ubiquitous computing systems 
+ - data presentation, scripting and exchange languages
+ - network and OS Support for mobility
+ - mobile Network architectures/protocols
+
+ - location dependent data, user and data tracking  
+ - workflow management  
+ - indexing and compression  
+ - micro-devices management and OS support  
+ - data publication, push, broadcast and multicast techniques  
+ - service assurance (QoS) 
+ - vehicle tracking and management systems 
+ - wireless enquiry systems 
+ - Internet, Web and wireless protocols  
+ - distributed system architecture: CORBA, IIOP, Java, DCOM
+ - multimedia in Mobile Environment  
+ - mobile Web access and Internet Applications
+
+
+                               IMPORTANT DATES 
+  
+                Submission of paper           July 28, 2000 
+                Notification of acceptance    September 12, 2000 
+                Full paper camera ready due   November 3, 2000
+
+ 
+		          	 PROCEEDINGS
+
+The conference proceedings will be published in Lecture Notes in
+Computer Science by Springer-Verlag.
+
+ 
+                           SUBMISSION INFORMATION 
+ 
+Both research and industrial papers are solicited.  Research 
+papers must be unpublished and not exceed 25 double-spaced pages.
+Industrial papers must not longer than 10 double-spaced pages and 
+should describe industrial applications, prototypes, experiences,
+and standards.  Authors of industrial papers describing applications 
+and prototypes will be invited to demonstrate their systems in the
+conference.  Authors are invited to submit their papers electronically 
+to the conference web site at 
+
+    http://www.cse.cuhk.edu.hk/mdm2001/submission.html 
+
+on or before July 28, 2000. PDF format is preferred but postscript
+format is acceptable.
+
+Direct correspondence, inquiries and submissions relating to 
+this workshop to: 
+ 
+  Professor Michael Franklin
+  Computer Science Division
+  387 Soda Hall #1776
+  University of California
+  Berkeley, CA  94720-1776
+  Phone: (510) 642-1662
+  Fax: (510) 642-5615
+  Email: franklin@cs.berkeley.edu
+ 
+  Professor John Chi-Shing Lui
+  Dept. of Computer Science & Eng.
+  Chinese University of Hong Kong
+  Shatin, N.T.
+  Hong Kong  
+  Phone: (852) 2609-8407
+  Fax: (852) 2603-5024
+  Email: cslui@cse.cuhk.edu.hk 
+

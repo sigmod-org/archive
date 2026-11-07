@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>IEEE Conference on Data Mining</TITLE>
+<STYLE>
+
+<!--
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+<CENTER>
+
+<H1><FONT COLOR="#FF0000"><U>ICDM '01</U></FONT><br>
+<FONT color=#0055ff>The 2001 IEEE International Conference
+on <NOBR>Data Mining</NOBR></FONT><br>
+Sponsored by the IEEE Computer Society</H1>
+
+<H2>Doubletree Hotel, San Jose, California, USA<BR>
+November 29 - December 2, 2001</H2>
+
+<H3>Home Page: <a
+href="http://www.cs.uvm.edu/~xwu/icdm-01.html">http://www.cs.uvm.edu/~xwu/icdm-01.html</a></H3>
+
+</CENTER>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif"
+WIDTH=100%><br>
+
+<CENTER>
+<H3><FONT color=#0055ff>Call for Papers</FONT></H3>
+
+<FONT COLOR="#FF0000"><b>Papers Due: June 15, 2001</b></FONT>
+</CENTER>
+
+<P class=body>
+
+The 2001 IEEE International Conference on Data Mining (ICDM '01)
+provides a forum for the sharing of original research results and
+practical development experiences among researchers and application
+developers from different data mining related areas such as machine
+learning, automated scientific discovery, statistics, pattern
+recognition, knowledge acquisition, soft computing, databases and data
+warehousing, data visualization, and knowledge-based systems. 
+The conference seeks solutions to challenging problems facing the
+development of data mining systems, and shapes future directions of
+research by promoting high quality, novel and daring research
+findings.
+As an important part of
+the conference, the workshops program will focus on new research
+challenges and initiatives.
+
+<H4>Topics of Interest</H4>
+
+<P class=body>
+
+Topics related to the design, analysis and implementation of data
+mining theory, systems and applications are of interest. These
+include, but are not limited to the following areas:
+
+<UL>
+
+<LI> <P class=body> Foundations and principles of data mining
+
+<LI><P class=body>Data mining algorithms and methods in traditional
+    areas (such as classification, clustering, probabilistic modeling,
+    and association analysis), and in new areas
+
+<LI> <P class=body> Data and knowledge representation for data mining
+
+<LI> <P class=body> Modeling of structured, textual, temporal,
+spatial, multimedia and Web data to support data mining
+
+<LI> <P class=body> Complexity, efficiency, and scalability issues in
+data mining
+
+<LI> <P class=body> Data pre-processing, data reduction, feature
+selection and feature transformation
+
+<LI> <P class=body> Statistics and probability in large-scale data
+mining
+
+<LI> <P class=body> Soft computing (including neural networks, fuzzy
+logic, evolutionary computation, and rough sets) and uncertainty
+management for data mining
+
+<LI> <P class=body> Integration of data warehousing, OLAP and data
+mining
+
+<LI> <P class=body> Man-machine interaction in data mining and visual
+data mining
+
+<LI> <P class=body> Artificial intelligence contributions to data
+mining
+
+<LI> <P class=body> High performance and distributed data mining
+
+<LI> <P class=body> Machine learning, pattern recognition and
+automated scientific discovery
+
+<LI> <P class=body> Quality assessment and interestingness metrics of
+data mining results
+
+<LI> <P class=body> Process centric data mining and models of data
+mining process
+
+<LI> <P class=body> Security and social impact of data mining
+
+<LI><P class=body>Emerging data mining applications, such as
+electronic commerce, bioinformatics, Web intelligence, and intelligent
+learning database systems
+
+
+</UL>
+
+
+</UL>
+
+<H4>Conference Publications and ICDM Best Paper Awards</H4>
+
+<P class=body>
+
+High quality papers in all data mining areas are solicited. Papers
+exploring new directions will receive a careful and supportive review.
+All submitted papers should be limited to a maximum of 6,000 words
+(approximately 20 A4 pages), and will be reviewed on the basis of
+technical quality, relevance to data mining, originality,
+significance, and clarity.  Accepted papers will be published in the
+conference proceedings by the IEEE Computer Society Press.  A selected
+number of ICDM '01 accepted papers will be expanded and revised for
+possible inclusion in the <A
+href="http://kais.mines.edu/~kais/">Knowledge and Information
+Systems</A> journal by Springer-Verlag. <p>
+
+<P class=body>
+ICDM Best Paper Awards will be conferred on the authors of the best
+papers at the conference.
+<P>
+
+<H4>Important Dates</H4>
+
+<center><table BORDER=2 CELLSPACING=3 >
+<tr>
+<td>June 15, 2001</td>
+
+<td>Paper submissions.&nbsp;</td>
+</tr>
+
+<tr>
+<td>July 31, 2001</td>
+
+<td>Acceptance notices.</td>
+</tr>
+
+<tr>
+<td>August 31, 2001</td>
+
+<td>Final camera-readies.</td>
+</tr>
+
+<tr>
+<td>November 29 - December 2, 2001</td>
+
+<td>Conference.</td>
+</tr>
+</table></center>
+
+
+<P class=body>
+All paper submissions will be handled electronically.  Detailed
+instructions are provided on the conference home page at <a
+href="Submission-01.shtml">http://kais.mines.edu/~xwu/icdm/icdm-01.html</a>.
+
+<pre>
+Conference Chair:
+=================
+
+      <a href="http://www.cs.uvm.edu/~xwu/">Xindong Wu</a>, University of Vermont, USA
+ 
+Program Committee Chairs:
+=========================
+
+      <a href="http://www.math.uwaterloo.ca/~ncercone/">Nick Cercone</a>, University of Waterloo, Canada
+      <a href="http://www.mathcs.sjsu.edu/faculty/tylin/">T.Y. Lin</a>, San Jose State University, USA
+ 
+ICDM '01 Workshops Chair:
+========================= 
+
+      <a href="http://www.cs.cornell.edu/johannes">Johannes Gehrke</a>, Cornell University, USA
+   
+ICDM '01 Tutorials Chair:
+========================= 
+
+      <a href="http://www.mitre.org/resources/centers/it/staffpages/clifton/">Chris Clifton</a>, MITRE, USA
+   
+ICDM '01 Panels Chair:
+====================== 
+
+      <a href="http://www.cs.mu.oz.au/~rao/">Ramamohanarao Kotagiri</a>, University of Melbourne, Australia
+   
+ICDM '01 Publicity Chair:
+========================= 
+
+      <a
+      href="http://kis.maebashi-it.ac.jp/zhong/">Ning Zhong</a>, Maebashi Institute of Technology, Japan
+   
+ICDM '01 Local Arrangements Chair:
+================================== 
+
+      <a href="mailto:thu@vigilance.com">Xiaohua (Tony) Hu</a>, Vigilance Inc., USA
+</pre>
+
+
+<H4>ICDM Steering Committee</H4>
+
+<UL>
+
+<LI> <A href="http://www.dis.port.ac.uk/~bramerma/" target=_top>Max
+    Bramer</A>, University of Portsmouth, UK<BR>
+<LI> <A href="http://www.math.uwaterloo.ca/~ncercone/"
+target=_top>Nick Cercone</A>, University of Waterloo, Canada<BR>
+<LI> <A href="http://www.cs.mu.oz.au/~rao/" target=_top>Ramamohanarao Kotagiri</A>, 
+    University of Melbourne, Australia
+<LI> <A href="http://www-ai.informatik.uni-dortmund.de/PERSONAL/morik.eng.html"
+    target=_top>Katharina Morik</A>, University of Dortmund,
+    Germany
+<LI> <A href="http://kais.mines.edu/~xwu/" target=_top>Xindong Wu</A>,
+    Chair (Colorado School of Mines, USA)<BR>
+<LI> Philip S. Yu, IBM T.J. Watson Research Center, USA<BR>
+<LI> <A href="http://ain2.ai.csse.yamaguchi-u.ac.jp/Zhong/index.html"
+target=_top>Ning Zhong</A>, Maebashi Institute of Technology,
+Japan<BR>
+<LI> <A href="http://www.cs.uncc.edu/faculty/zytkow.html"
+target=_top>Jan M.  Zytkow</A>, University of North Carolina,
+Charlotte, USA
+</LI></UL>
+
+<h4>Further Information</h4>
+<pre>
+      <a href="http://kais.mines.edu/~xwu/">Dr. Xindong Wu</a>
+      Dept. of Mathematical and Computer Sciences,
+      Colorado School of Mines,
+      1500 Illinois Street,
+      Golden, Colorado 80401, 
+      USA.
+
+      Telephone: +1-303-273-3874
+      Facsimile: +1-303-273-3875
+      E-mail: <a href="mailto:xindong@computer.org">xindong@computer.org</a>
+</pre>
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-01.dat"
+align=absmiddle> times since June 29, 2000.<br>
+Questions and comments to: <a
+href="mailto:xindong@computer.org">xindong@computer.org</a>.<br>
+Last modified: June 2, 2001.
+
+
+</BODY>
+</HTML>

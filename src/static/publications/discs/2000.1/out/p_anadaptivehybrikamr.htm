@@ -1,0 +1,711 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - An Adaptive Hybrid Server Architecture for Client Caching ODBMSs</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+An Adaptive Hybrid Server Architecture for Client Caching ODBMSs
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_kaladhar_voruganti.htm">Kaladhar Voruganti</a>, 
+<a href = "a_m_tamer_oumlzsu.htm">M. Tamer &Ouml;zsu</a>, and 
+<a href = "a_ronald_c_unrau.htm">Ronald C. Unrau</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/anadaptivehybrikamr.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdistributebases.htm">Return to Distributed Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Current client-server object database management systems employ either a page server or an object server architecture. Both of these architectures have their respective strengths, but they also have key drawbacks for important system and workload configurations. We propose a new hybrid server architecture which combines the best features of both page server and object server architectures while avoiding their problems. The new architecture incorporates new or adapted versions of data transfer, recovery, and cache consistency algorithms; in this paper we focus only on the data transfer and recovery issues. The data transfer mechanism allows the hybrid server to dynamically behave as both page and object server. The performance comparison of the hybrid server with object and page servers indicates that the performance of the hybrid server is more robust than the others.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AGLM95]
+<dd>
+<a name="AdyaGLM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adya:Atul.html">
+Atul Adya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruber:Robert.html">
+Robert Gruber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liskov:Barbara.html">
+Barbara Liskov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maheshwari:Umesh.html">
+Umesh Maheshwari
+</a>
+: Efficient Optimistic Concurrency Control Using Loosely Synchronized Clocks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#AdyaGLM95">
+SIGMOD Conference 1995
+</a>
+: 23-34
+<dt>
+[BP95]
+<dd>
+<a name="BilirisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Biliris:Alexandros.html">
+Alexandros Biliris
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Panagos:Euthimios.html">
+Euthimios Panagos
+</a>
+: A High Performance Configurable Storage Manager. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#BilirisP95">
+ICDE 1995
+</a>
+: 35-43
+<dt>
+[CALM87]
+<dd>
+<a name="CastroALM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Castro:Miguel.html">
+Miguel Castro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adya:Atul.html">
+Atul Adya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liskov:Barbara.html">
+Barbara Liskov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myers:Andrew_C=.html">
+Andrew C. Myers
+</a>
+: HAC: Hybrid Adaptive Caching for Distributed Storage Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp97.html#CastroALM97">
+SOSP 1997
+</a>
+: 102-115
+<dt>
+[CDF+94]
+<dd>
+<a name="CareyDFHMNSSTTWZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">
+Nancy E. Hall
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McAuliffe:Mark_L=.html">
+Mark L. McAuliffe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schuh:Daniel_T=.html">
+Daniel T. Schuh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Solomon:Marvin_H=.html">
+Marvin H. Solomon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">
+C. K. Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsatalos:Odysseas_G=.html">
+Odysseas G. Tsatalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">
+Michael J. Zwilling
+</a>
+: Shoring Up Persistent Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyDFHMNSSTTWZ94">
+SIGMOD Conference 1994
+</a>
+: 383-394
+<dt>
+[CDN93]
+<dd>
+<a name="CareyDN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: The 007 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CareyDN93">
+SIGMOD Conference 1993
+</a>
+: 12-21
+<dt>
+[CFZ94]
+<dd>
+<a name="CareyFZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaharioudakis:Markos.html">
+Markos Zaharioudakis
+</a>
+: Fine-Grained Sharing in a Page Server OODBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyFZ94">
+SIGMOD Conference 1994
+</a>
+: 359-370
+<dt>
+[DFB+96]
+<dd>
+<a name="DarFJST96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">
+Shaul Dar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">
+Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Michael.html">
+Michael Tan
+</a>
+: Semantic Data Caching and Replacement. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 330-341
+<dt>
+[DFMV90]
+<dd>
+<a name="DeWittFMV90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Futtersack:Philippe.html">
+Philippe Futtersack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/V=eacute=lez:Fernando.html">
+Fernando V&eacute;lez
+</a>
+: A Study of Three Alternative Workstation-Server Architectures for Object Oriented Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1990
+</a>
+: 107-121
+<dt>
+[FC94]
+<dd>
+<a name="FranklinC92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Client-Server Caching Revisited. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oodbs/oodbs92.html#FranklinC92">
+IWDOM 1992
+</a>
+: 57-78
+<dt>
+[FCL96]
+<dd>
+<a name="FranklinCL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: Transactional Client-Server Cache Consistency: Alternatives and Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods22.html#FranklinCL97">
+TODS 22(3)
+</a>
+: 315-363(1997)
+<dt>
+[FZT+92]
+<dd>
+<a name="FranklinZTCD92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">
+Michael J. Zwilling
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">
+C. K. Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Crash Recovery in Client-Server EXODUS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#FranklinZTCD92">
+SIGMOD Conference 1992
+</a>
+: 165-174
+<dt>
+[Ghe95]
+<dd>
+<a name="Ghemawat95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghemawat:Sanjay.html">
+Sanjay Ghemawat
+</a>
+: The Modified Object Buffer: A Storage Management Technique for Object-Oriented Databases. Ph.D. thesis,  MIT Laboratory for Computer Science 1995
+<br>
+ 
+<dt>
+[GK94]
+<dd>
+<a name="GerlhofK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerlhof:Carsten_Andreas.html">
+Carsten Andreas Gerlhof
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+: A Multi-Threaded Architecture for Prefetching in Object Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#GerlhofK94">
+EDBT 1994
+</a>
+: 351-364
+<dt>
+[KGBW90]
+<dd>
+<a name="KimGBW90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">
+Won Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garza:Jorge_F=.html">
+Jorge F. Garza
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Ballou:Nat.html">
+Nat Ballou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Woelk:Darrell.html">
+Darrell Woelk
+</a>
+: Architecture of the ORION Next-Generation Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#KimGBW90">
+TKDE 2(1)
+</a>
+: 109-124(1990)
+<dt>
+[KJF96]
+<dd>
+<a name="FranklinJK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">
+Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: Performance Tradeoffs for Client-Server Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#FranklinJK96">
+SIGMOD Conf. 1996
+</a>
+: 149-160
+<dt>
+[KK94]
+<dd>
+<a name="KemperK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: Dual-Buffering Strategies in Object Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 427-438
+<dt>
+[LAC+96]
+<dd>
+<a name="LiskovACDGGMMS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liskov:Barbara.html">
+Barbara Liskov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adya:Atul.html">
+Atul Adya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Castro:Miguel.html">
+Miguel Castro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Day:Mark.html">
+Mark Day
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghemawat:Sanjay.html">
+Sanjay Ghemawat
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruber:Robert.html">
+Robert Gruber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maheshwari:Umesh.html">
+Umesh Maheshwari
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myers:Andrew_C=.html">
+Andrew C. Myers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shrira:Liuba.html">
+Liuba Shrira
+</a>
+: Safe and Efficient Sharing of Persistent Objects in Thor. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#LiskovACDGGMMS96">
+SIGMOD Conf. 1996
+</a>
+: 318-329
+<dt>
+[LLOW91]
+<dd>
+<a name="LambLOW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lamb:Charles.html">
+Charles Lamb
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Landis:Gordon.html">
+Gordon Landis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinreb:Danel.html">
+Danel Weinreb
+</a>
+: The ObjectStore Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#LambLOW91">
+CACM 34(10)
+</a>
+: 50-63(1991)
+<dt>
+[MN94]
+<dd>
+<a name="MohanN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: ARIES/CSA: A Method for Database Recovery in Client-Server Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#MohanN94">
+SIGMOD Conference 1994
+</a>
+: 55-66
+<dt>
+[Obj98]
+<dd>
+Objectivity White Paper: Choosing an Object Database. (1998) 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+http://www.objectivity.com/ObjectDatabase/WP/Choosing/Choosing.html
+</a>
+<dt>
+[OS94]
+<dd>
+<a name="OTooleS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Toole:James.html">
+James O'Toole
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shrira:Liuba.html">
+Liuba Shrira
+</a>
+: Hybrid Caching for Large-Scale Object Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos94.html#OTooleS94">
+POS 1994
+</a>
+: 99-114
+<dt>
+[OVU98]
+<dd>
+<a name="OzsuVU98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsu:M=_Tamer.html">
+M. Tamer &Ouml;zsu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Voruganti:Kaladhar.html">
+Kaladhar Voruganti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Unrau:Ronald_C=.html">
+Ronald C. Unrau
+</a>
+: An Asynchronous Avoidance-Based Cache Consistency Algorithm for Client Caching DBMSs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 440-451
+<dt>
+[PBJR96]
+<dd>
+<a name="PanagosBJR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Panagos:Euthimios.html">
+Euthimios Panagos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Biliris:Alexandros.html">
+Alexandros Biliris
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+: Fine-granularity Locking and Client-Based Logging for Distributed Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#PanagosBJR96">
+EDBT 1996
+</a>
+: 388-402
+<dt>
+[TN92]
+<dd>
+<a name="TsangarisN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsangaris:Manolis_M=.html">
+Manolis M. Tsangaris
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: On the Performance of Object Clustering Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#TsangarisN92">
+SIGMOD Conference 1992
+</a>
+: 144-153
+<dt>
+[Ver98]
+<dd>
+Versant ODBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+http://www.versant.com
+</a>
+<dt>
+[WD94]
+<dd>
+<a name="WhiteD94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: QuickStore: A High Performance Mapped Object Store. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#WhiteD94">
+SIGMOD Conference 1994
+</a>
+: 395-406
+<dt>
+[WD95]
+<dd>
+<a name="WhiteD95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Implementing Crash Recovery in QuickStore: A Performance Study. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#WhiteD95">
+SIGMOD Conference 1995
+</a>
+: 187-198
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/VorugantiOU99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Kaladhar&nbsp;Voruganti&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M.&nbsp;Tamer&nbsp;{\"O}zsu&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ronald&nbsp;C.&nbsp;Unrau},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{An&nbsp;Adaptive&nbsp;Hybrid&nbsp;Server&nbsp;Architecture&nbsp;for&nbsp;Client&nbsp;Caching&nbsp;ODBMSs},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{150-161},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

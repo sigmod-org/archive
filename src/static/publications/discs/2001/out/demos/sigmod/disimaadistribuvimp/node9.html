@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Multi-Precision Similarity on Whole Images</TITLE>
+<META NAME="description" CONTENT="Multi-Precision Similarity on Whole Images">
+<META NAME="keywords" CONTENT="disima">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="disima.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html123"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html121"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html115"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html124"
+ HREF="node10.html">Querying Sub-Images</A>
+<B> Up:</B> <A NAME="tex2html122"
+ HREF="node8.html">Similarity Queries</A>
+<B> Previous:</B> <A NAME="tex2html116"
+ HREF="node8.html">Similarity Queries</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00032100000000000000">
+Multi-Precision Similarity on Whole Images</A>
+</H3>
+Users can specify the similarity threshold and 
+specify the precision level by choosing the corresponding
+grid partitions: 1 X 1, 2 X 2, 4 X 4, and
+8 X 8.
+The similarity search algorithm is defined as a
+distance between two sub-images and is used to define different
+similarity metrics. For example, in a 4-level decomposition, two images
+can be similar if:
+
+<UL>
+<LI>at level 1, the color histograms of the entire images are
+compared: 1 color histogram comparison; </LI>
+<LI>at level 2, the color
+histograms corresponding to the same 4 quadrants (1/4 of the
+entire image) are compared: 4 color histogram comparisons;</LI>
+<LI>at level 3, the color histograms corresponding to the same 16
+quadrants (1/16 of the entire image) are compared: 16 color
+histogram comparisons;</LI>
+<LI>at level 4, the color histograms corresponding to the same 64
+quadrants (1/64 of the entire image) are compared: 64 color
+histogram comparisons.</LI>
+</UL>
+Figure&nbsp;<A HREF="gif/Fish2.gif"><IMG ALIGN="BOTTOM" BORDER="1"
+ALT="[*]" SRC="gif/cross_ref_motif.gif"></A> shows a similarity
+query at similarity level 3. Part of the result is given by
+Figure&nbsp;<A HREF="gif/Fish2Res.gif"><IMG ALIGN="BOTTOM" BORDER="1"
+ALT="[*]" SRC="gif/cross_ref_motif.gif"></A></A> with the similarity
+values.
+
+<P>
+The colors in the images are organized in a hash-like index structure for
+color similarity searches. The entire image is divided into 4 quadrants, and
+ each quadrant is
+recursively divided into 4, and so on. Each image is then represented
+by a quadtree that stores the color histograms corresponding to the
+quadrants. The dimensions of the color histograms are then reduced
+and the result is stored in a multidimensional hash structure for a filtering
+step in similarity searches before using the color histograms themselves for a
+refinement step. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html123"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html121"
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html115"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html124"
+ HREF="node10.html">Querying Sub-Images</A>
+<B> Up:</B> <A NAME="tex2html122"
+ HREF="node8.html">Similarity Queries</A>
+<B> Previous:</B> <A NAME="tex2html116"
+ HREF="node8.html">Similarity Queries</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Vincent Oria</I>
+<BR><I>2001-01-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: Specification</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<img src="barrow.gif" width="30" height="10"><a href="demo_overview.htm"> Back to Demo Overview</a>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>The Benchmark Workflow</b></font></p>
+<p>Our benchmark workflow is based on the TPC-C order-entry benchmark for transaction systems [1], with the key difference that we combine multiple transaction types into a workflow and further enhance the functionality (see [2] for a full description of this workflow).</p>
+<p>Figures 1 and 2 show the workflow specification as a state and activity chart, a formalism [3,4] that has been adopted for the behavioral dimension of the UML industry standard and is used in our prototype system Mentor-lite [5,6]. Each state in Figure 1 corresponds to an activity in Figure 2 or one (or multiple, parallel) subworkflow(s), except for initial and final states. We assume that for every activity act the condition act_DONE is set to true when act is finished.</p>
+<table>
+<tr><td align="center"><a href="javascript:open('statechart.jpg');location.reload();">
+		<img width="300" height="300" src="statechart.jpg"></a></td>
+	<td align="center"><a href="javascript:open('activitychart.jpg');location.reload();">
+		<img width="300" height="300" src="activitychart.jpg"></a></td>
+</tr>
+<tr><td align="center">Figure 1: State Chart.</td>
+	<td align="center">Figure 2: Activity Chart.</td>
+</tr>
+</table>
+<p>The workflow proceeds as follows. Initially, the NewOrder activity is started. After the termination of NewOrder, the control flow branches. If the customer wants to pay by credit card, the condition PayByCreditCard is set and the CreditCardCheck activity checks the validity of the credit card. If there are problems with the credit card, the workflow is terminated. Otherwise the shipment, represented by the nested top-level state Shipment_S, is initiated spawning two orthogonal/parallel subworkflows. The first subworkflow has only one activity that sends a notification mail. The second subworkflow (sequentially) invokes for each ordered item an activity that identifies a store from which the item could be shipped. Then, a second activity instructs the store to deliver the item and waits for an acknowledgement. The two activities FindStore and CheckStore are repeated within a loop over all ordered items. After the termination of both subworkflows, the control flow is synchronized, and branches again depending on the mode of payment. The workflow terminates in the state EC_EXIT_S.</p>
+<p>&nbsp;</p>
+<p><b>References</b></p>
+<p>[1]	<a href="http://www.tpc.org">Transaction Processing Performance Council</a> (TPC).</p>
+<p>[2]	M. Gillmann, R. Mindermann, G. Weikum: <i><a href="http://www-dbs.cs.uni-sb.de/papers/benchmark-coopis.pdf">Benchmarking and Configuration of Workflow Management Systems</a></i>, in Proceedings of International Conference on Cooperative Information Systems (CoopIS), Eilat, Israel, 2000.</p>
+<p>[3]	D. Harel: <i>State Charts: A Visual Formalism for Complex Systems</i>, Science of Computer Programming 8, 1987.</p>
+<p>[4]	D. Harel, E. Gery: <i>Executable Object Modeling with Statecharts</i>, IEEE Computer 30:7, 1997.</p>
+<p>[5]	D. Wodtke, G. Weikum: <i><a href="http://www-dbs.cs.uni-sb.de/papers/icdt97.ps">A Formal Foundation For Distributed Workflow Execution Based on State Charts</a></i>, in Proceedings of International Conference on Database Theory (ICDT), Delphi, Greece, 1997.</p>
+<p>[6]	P. Muth, D. Wodtke, J. Weissenfels, G. Weikum, A. Kotz Dittrich: <i><a href="http://www-dbs.cs.uni-sb.de/papers/NATO-WF.ps">Enterprise-wide Workflow Management based on State and Activity Charts</a></i>, in: A. Dogac, L. Kalinichenko, M.T. Ozsu, A. Sheth (Eds.): <i>Workflow Management Systems and Interoperability</i>, NATO Advanced Study Institute, Springer, 1998.</p>
+<p>&nbsp;</p>
+<img src="barrow.gif" width="30" height="10"><a href="demo_overview.htm"> Back to Demo Overview</a>
+</dd>
+</dl>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Mobile Communication Simulation</title>
+<!--body background="bgchalk.jpg" bgcolor="#FFFFFF" text="#000000"
+link="#0000EE" vlink="#551A8B" alink="#FF0000"-->
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<h1 name="top">
+Mobile Communication Simulation<br>
+<img SRC="sha_ln4.jpg" height=3 width=640></h1>
+<!--h2><a><img src="dot.gif" width="10" height="10"></a> <a
+href="DEMO/index.html">User Interface of the Simulation</a></h2-->
+<h2>
+<img SRC="dot.gif" height=10 width=10> Demo Description</h2>
+
+<blockquote>Our demo program simulates mobile communication service using
+Xmas as a storage system according to the simplified model for mobile communication
+service.
+<p>The user interface, implemented in Java, shows the movements and call
+setups of mobile stations. There are four registration areas and 40 mobile
+stations. The right-below graph shows the number of messages per second
+processed at the home location register. Here, home location register is
+the database which maintains the location and service profile information
+of mobile stations. The right-above graph shows the number of database
+operations performed at home location register to process these messages.
+<p>This simulation compares the performance with/without composite actions.
+For example, when a mobile station enters a new registration area, the
+mobile switching center in the area detects its entrance, and then, sends
+a REGNOT message to the home location register. To process this message,
+the home location register performs at least three database opearations:
+one update for the location update of the mobile station and two lookup
+for authentication and registration cancellation.
+<p>If we use only system-provided basic actions, processing this message
+requires three interprocess communications for three database operations.
+In contrast, when we define a composite action for processing this message,
+only one interprocess communication is sufficient. Consequently, using
+composite actions improve the performance, in this simulation environment,
+more than 20 %.
+<br>&nbsp;
+<br>&nbsp;</blockquote>
+
+<center><img SRC="FigGSM.gif" height=413 width=555></center>
+
+<blockquote>&nbsp;
+<p>The basic network architecture of wireless communication systems consisis
+of a set of radio ports connected to a fixed wire-line network through
+mobile switching centers(MSC). User communications take place by establishing
+call connections through fadio ports, MSC's, and the wire-line network.
+IS-41, which is one of the major standards of wireless communication, requires
+user profiles to be stored in a home location register(HLR), which is typically
+located in a MSC. When a user moves out of the region maintained by his
+HLR, a copy of the profile is created in a visiting database or visiting
+location register(VLR) in the user's current region. In addition, the profile
+in the HLR is updated to reflect the user's current location. Therfore,
+a MSC usually maintains a HLR and a VLR.</blockquote>
+
+<blockquote>Profile lookups occur when a caller initialize a call to a
+callee. The caller's MSC searches for the callee's location by first querying
+the local VLR. If the callee is not currently served by this VLR, then
+a location request is sent to the callee's HLR. If the callee is not at
+home, the HLR should query the VLR at the callee's current location for
+the necessary location/routing information. After finding the callee and
+establishing the network route, the caller's and the callee's status should
+be updated. User profile updates also occur when a user moves into a region
+maintained by a new VLR.</blockquote>
+<a href="index.htm">Back</a>
+<hr border="1">
+<center>
+<p><a href="http://kdb.snu.ac.kr/project/Xmas">Xmas Home Page</a>
+<br><a href="http://kdb.snu.ac.kr/" target="_top">Knowledge and Data Engineering
+Laboratory</a>
+<br><a href="http://ee.snu.ac.kr/">School of Electrical Engineering</a>
+<br><a href="http://www.snu.ac.kr/">Seoul National University</a></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

@@ -1,0 +1,557 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Rewriting Aggregate Queries Using Views</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_12.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Rewriting Aggregate Queries Using Views
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_sara_cohen.htm">Sara Cohen</a>, 
+<a href = "a_werner_nutt.htm">Werner Nutt</a>, and 
+<a href = "a_a_serebrenik.htm">A. Serebrenik</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/rewritingaggregsawea.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsviewsquerieries.htm">Return to Views/Queries</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ We investigate the problem of rewriting queries with aggregate operators using views that may or may not contain aggregate operators. A rewriting of a query is a second query that uses view predicates such that evaluating first the views and then the rewriting yields the same result as evaluating the original query. In this sense, the original query and the rewriting are equivalent modulo the view definitions. The queries and views we consider correspond to unnested SQL queries, possibly with union, that employ the operators min, max, count, and sum. Our approach is based on syntactic characterizations of the equivalence of aggregate queries. One contribution of this paper are characterizations of the equivalence of disjunctive aggregate queries, which generalize our previous results for the conjunctive case. Rewriting queries using views is a fundamental problem in databases, which has attracted considerable attention. View usability techniques have applications in a number of areas. In query optimization, the execution of a query can be accelerated if results from previous queries can be used to compute answers [YL87, CR94, CKPS95]. In designing information systems over which a huge number of a priori known queries are posed periodically, it can be beneficial to store such intermediate results beforehand that are useful for as many queries as possible [LFS97, RSS96]. Integrating heterogeneous information sources is another problem which may be reduced to the view usability problem (LSK95]. For each operator CZ, we introduce several types of queries using views as candidates for rewritings. We unfold such a candidate by replacing each occurrence of a view predicate with its definition, thus obtaining a regular aggregate query. The candidates have a different, usually more complex operator than LY. We prove that unfolding the candidate, however, results in a regular aggregate query that is equivalent to the candidate modulo the view definitions. This property justifies considering these types of queries as natural candidates for rewritings. In this way, we reduce the problem of whether there exist rewritings of a particular type to a problem involving equivalence. While the focus of this work was for a long time on queries without aggregation, interest in aggregate queries has been motivated recently by the surge of data warehousing and decision support applications, where queries of this kind typically occur. Optimization based on the reuse of previously computed results is particularly promising for aggregate queries, since often huge numbers of data items are processed to produce a single aggregate value. In fact, most existing data warehouses make use of this idea in their optimization algorithms in a more or less ad hoc way [Kim96]. We distinguish between partial rewritings that contain at least one view predicate and complete rewritings that contain only view predicates. In contrast to previous work on this topic, we not only give sufficient, but also necessary conditions for a rewriting to exist. More precisely, we show for each type of candidate that the existence of both, partial and complete rewritings is decidable, and we provide upper and lower complexity bounds.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[ASU79]
+<dd>
+<a name="AhoSU79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">
+Alfred V. Aho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Efficient Optimization of a Class of Relational Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods4.html#AhoSU79">
+TODS 4(4)
+</a>
+: 435-454(1979)
+<dt>
+[CKPS95]
+<dd>
+<a name="ChaudhuriKPS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">
+Ravi Krishnamurthy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Potamianos:Spyros.html">
+Spyros Potamianos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: Optimizing Queries with Materialized Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#ChaudhuriKPS95">
+ICDE 1995
+</a>
+: 190-200
+<dt>
+[CM77]
+<dd>
+<a name="ChandraM77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chandra:Ashok_K=.html">
+Ashok K. Chandra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merlin:Philip_M=.html">
+Philip M. Merlin
+</a>
+: Optimal Implementation of Conjunctive Queries in Relational Data Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+STOC 1977
+</a>
+: 77-90
+<dt>
+[CR94]
+<dd>
+<a name="ChenR94a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Chung=Min.html">
+Chung-Min Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+: The Implementation and Performance Evaluation of the ADMS Query Optimizer: Integrating Query Result Caching and Matching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#ChenR94a">
+EDBT 1994
+</a>
+: 323-336
+<dt>
+[CV93]
+<dd>
+<a name="ChaudhuriV93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Optimization of 
+<i>
+Real
+</i>
+ Conjunctive Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1993
+</a>
+: 59-70
+<dt>
+[GHQ95]
+<dd>
+<a name="GuptaHQ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">
+Venky Harinarayan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+: Aggregate-Query Processing in Data Warehousing Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#GuptaHQ95">
+VLDB 1995
+</a>
+: 358-369
+<dt>
+[IR95]
+<dd>
+<a name="IoannidisR95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+: Containment of Conjunctive Queries: Beyond Relations as Sets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods20.html#IoannidisR95">
+TODS 20(3)
+</a>
+: 288-324(1995)
+<dt>
+[JK83]
+<dd>
+<a name="JohnsonK83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:David_S=.html">
+David S. Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Klug:Anthony_C=.html">
+Anthony C. Klug
+</a>
+: Optimizing Conjunctive Queries that Contain Untyped Variables. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp12.html#JohnsonK83">
+SIAM J. Comput. 12(4)
+</a>
+: 616-640(1983)
+<dt>
+[Kim96]
+<dd>
+<a name="Kimball96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kimball:Ralph.html">
+Ralph Kimball
+</a>
+: The Data Warehouse Toolkit: Practical Techniques for Building Dimensional Data Warehouses.  John Wiley 1996, ISBN 0-471-15337-0
+<br>
+ 
+<dt>
+[LFS97]
+<dd>
+<a name="LlirbatFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Llirbat:Fran=ccedil=ois.html">
+Fran&ccedil;ois Llirbat
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fabret:Fran=ccedil=oise.html">
+Fran&ccedil;oise Fabret
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Simon:Eric.html">
+Eric Simon
+</a>
+: Eliminating Costly Redundant Computations from SQL Trigger Executions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#LlirbatFS97">
+SIGMOD Conference 1997
+</a>
+: 428-439
+<dt>
+[LMSS93]
+<dd>
+<a name="LevyMSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">
+Inderpal Singh Mumick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shmueli:Oded.html">
+Oded Shmueli
+</a>
+: Equivalence, Query-Reachability, and Satisfiability in Datalog Extensions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1993
+</a>
+: 109-122
+<dt>
+[LMSS95]
+<dd>
+<a name="LevyMSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Answering Queries Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1995
+</a>
+: 95-104
+<dt>
+[LS95]
+<dd>
+<a name="LevyS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+: Semantic Query Optimization in Datalog Programs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1995
+</a>
+: 163-173
+<dt>
+[LSK95]
+<dd>
+<a name="LevySK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kirk:Thomas.html">
+Thomas Kirk
+</a>
+: Data Model and Query Evaluation in Global Information Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis5.html#LevySK95">
+JIIS 5(2)
+</a>
+: 121-143(1995)
+<dt>
+[NSS98]
+<dd>
+<a name="NuttSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nutt:Werner.html">
+Werner Nutt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shurin:Sara.html">
+Sara Shurin
+</a>
+: Deciding Equivalences Among Aggregate Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 214-223
+<dt>
+[RSS96]
+<dd>
+<a name="RossSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">
+Kenneth A. Ross
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Materialized View Maintenance and Integrity Constraint Checking: Trading Space for Time. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#RossSS96">
+SIGMOD Conf. 1996
+</a>
+: 447-458
+<dt>
+[SDJL96]
+<dd>
+<a name="SrivastavaDJL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">
+Shaul Dar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Answering Queries with Aggregation Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#SrivastavaDJL96">
+VLDB 1996
+</a>
+: 318-329
+<dt>
+[SS92]
+<dd>
+... 
+<dt>
+[SY81]
+<dd>
+<a name="SagivY80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: Equivalences Among Relational Expressions with the Union and Difference Operators. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 27(4)
+</a>
+: 633-655(1980)
+<dt>
+[Ull88]
+<dd>
+<a name="Ullman88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Principles of Database  and Knowledge-Base Systems, Volume I.  Computer Science Press 1988, ISBN 0-7167-8158-1
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/ullman89.html">
+Contents
+</a>
+<dt>
+[vdM92]
+<dd>
+<a name="Meyden92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meyden:Ron_van_der.html">
+Ron van der Meyden
+</a>
+: The Complexity of Querying Indefinite Data about Linearly Ordered Domains. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1992
+</a>
+: 331-345
+<dt>
+[YL87]
+<dd>
+<a name="YangL87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:H=_Z=.html">
+H. Z. Yang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">
+Per-&Aring;ke Larson
+</a>
+: Query Transformation for PSJ-Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#YangL87">
+VLDB 1987
+</a>
+: 245-254
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="CalvaneseGLV99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Calvanese:Diego.html">
+Diego Calvanese
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Giacomo:Giuseppe_De.html">
+Giuseppe De Giacomo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lenzerini:Maurizio.html">
+Maurizio Lenzerini
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Rewriting of Regular Expressions and Regular Path Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1999
+</a>
+: 194-204
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/CohenNS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Sara&nbsp;Cohen&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Werner&nbsp;Nutt&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A.&nbsp;Serebrenik},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Rewriting&nbsp;Aggregate&nbsp;Queries&nbsp;Using&nbsp;Views},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{155-166},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

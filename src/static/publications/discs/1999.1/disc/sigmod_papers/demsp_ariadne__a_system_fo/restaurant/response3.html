@@ -1,0 +1,169 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Response</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<br>&nbsp;
+<center><table BORDER >
+<tr>
+<td COLSPAN="2" BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>You requested the following:</font></font></center>
+</td>
+</tr>
+
+<tr BGCOLOR="#775577">
+<td><i><font color="#FFFFFF">Attribute</font></i></td>
+
+<td><i><font color="#FFFFFF">Constraint</font></i></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">City</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= Santa Monica</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Cuisine</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= Pacific New Wave</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Food</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= Excellent <i>or</i> Good</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Service</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= FLEX</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Decor</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= FLEX</font></tt></td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<tr>
+<td BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>This corresponds to the ATTRIBUTE
+query</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td WIDTH="50" BGCOLOR="#336666">
+<pre WIDTH="50"><font color="#00FF00">(SIMS-RETRIEVE (?REST-NAME ?STREET ?CITY ?STATE ?FOOD ?SERVICE ?DECOR ?RLAT ?RLON&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?URL)
+&nbsp; (:AND (RESTAURANT ?R)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CITY ?R ?CITY)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= ?CITY "Santa Monica")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CUISINE ?R ?CUISINE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= ?CUISINE "Pacific New Wave")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FOOD ?R ?FOOD)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MEMBER ?FOOD ("29" "28" "27" "26" "25" "24" "23" "22" "21" "20" "19" "18"))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SERVICE ?R ?SERVICE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (DECOR ?R ?DECOR)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (REST-NAME ?R ?REST-NAME)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (STREET ?R ?STREET)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (STATE ?R ?STATE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= ?STATE "CA")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RLON ?R ?RLON)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RLAT ?R ?RLAT)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (URL ?R ?URL)))</font></pre>
+</td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<caption>
+<center><ALIGN ALIGN="TOP"></ALIGN></center>
+</caption>
+
+<tr>
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rest-Name</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Street</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">City</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">State</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Food</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Service</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Decor</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rlat</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rlon</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Url</font></th>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Chinois on Main</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">2709 Main St.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Santa Monica</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">28</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">22</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">22</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.48153</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.00094</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2195&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<tr>
+<td BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>Which becomes the MAP query</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td WIDTH="50" BGCOLOR="#336666">
+<pre WIDTH="50"><font color="#00FF00">(SIMS-RETRIEVE (?URL)
+&nbsp; (:AND (TIGER_OUT ?T)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (PLACES_LIST ?T "((Chinois on Main^2709 Main St.^Santa Monica^CA^28^22^22^-118.48153^34.00094^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2195&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^))")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MAP_URL ?T ?URL)))</font></pre>
+</td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<caption>
+<center><ALIGN ALIGN="TOP"></ALIGN></center>
+</caption>
+
+<tr>
+<th BGCOLOR="#333399"><font color="#FFFFFF">URL: click to view map</font></th>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00"><a href="Chinois.html">http://www.isi.edu/~barish/tiger/Chinois.html</a></font></td>
+</tr>
+</table></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

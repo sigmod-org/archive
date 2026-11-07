@@ -1,0 +1,123 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_5.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+PUBLIC: A Decision Tree Classifier that Integrates Building and Pruning</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_r.htm#Rajeev Rastogi">Rajeev Rastogi</a>, <a href="m_authors_s.htm#Kyuseok Shim">Kyuseok Shim</a></center></td></tr></table></center><a target="disc_pdf<75" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Classification is an important problem in data mining.
+Given a database of records, each with a class label, a classifier generates a concise and meaningful description for each class that can be used toclassify subsequent records.
+A number of popular classifiers construct decision trees to generate classmodels.
+These classifiers first build a decision tree and then prune sub- trees from the decision tree in a subsequent <i>pruning</i> phase to improve accuracy and prevent "overfitting".
+<p>
+In this paper, we propose PUBLIC, an improved decision tree classifier that integrates the second "pruning" phase with the initial "building" phase.
+In PUBLIC, a node is not expanded during the building phase, if it is determined that it will be pruned during the subsequent pruning phase.
+In order to make this determination for a node, before it is expanded, PUBLIC computes a lower bound on the minimum cost subtree rooted at the node.
+This estimate is then used by PUBLIC to identify the nodes that are certain to be pruned, and for such nodes, not expend effort on splitting them.
+Experimental results with real-life as well as synthetic data sets demonstrate the effectiveness of PUBLIC's integrated approach which has the ability to deliver substantial performance improvements.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AGI+92]<dd><a name="AgrawalGIIS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghosh:Sakti_P=.html">Sakti P. Ghosh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyer:Balakrishna_R=.html">Balakrishna R. Iyer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+An Interval Classifier for Database Mining Applications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#AgrawalGIIS92">VLDB 1992</a>: 560-573<dt>[AIS93]<dd><a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Database Mining: A Performance Perspective.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#AgrawalIS93">TKDE 5(6)</a>: 914-925(1993)<dt>[BFOS84]<dd>Leo Breiman, J. H. Friedman, R. A. Olshen, C. J. Stone:
+Classification and Regression Trees.
+ Wadsworth 1984, ISBN 0-534-98053-8<br>
+<dt>[CKS+88]<dd>...
+<dt>[Fay91]<dd>...
+<dt>[FI93]<dd>...
+<dt>[FMM96]<dd><a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">Takeshi Fukuda</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">Yasuhiko Morimoto</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">Shinichi Morishita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">Takeshi Tokuyama</a>:
+Constructing Efficient Decision Trees by Using Optimized Numeric Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#FukudaMMT96">VLDB 1996</a>: 146-155<dt>[Gol89]<dd><a name="Goldberg89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldberg:David_E=.html">David E. Goldberg</a>:
+Genetic Algorithms in Search Optimization and Machine Learning.
+ Addison-Wesley 1989, ISBN 0-201-15767-5<br>
+<dt>[GRG98]<dd><a name="GehrkeRG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">Johannes Gehrke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">Venkatesh Ganti</a>:
+RainForest - A Framework for Fast Decision Tree Construction of Large Datasets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#GehrkeRG98">VLDB 1998</a>: 416-427<dt>[HMS66]<dd>...
+<dt>[KT81]<dd>...
+<dt>[MAR96]<dd><a name="MehtaAR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rissanen:Jorma.html">Jorma Rissanen</a>:
+SLIQ: A Fast Scalable Classifier for Data Mining.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#MehtaAR96">EDBT 1996</a>: 18-32<dt>[MRA95]<dd><a name="MehtaRA95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rissanen:Jorma.html">Jorma Rissanen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>:
+MDL-Based Decision Tree Pruning.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd95.html#MehtaRA95">KDD 1995</a>: 216-221<dt>[MST94]<dd>...
+<dt>[QR89]<dd>...
+<dt>[Qui86]<dd><a name="Quinlan86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">J. Ross Quinlan</a>:
+Induction of Decision Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml1.html#Quinlan86">Machine Learning 1</a>: 81-106(1986)<dt>[Qui87]<dd>...
+<dt>[Qui93]<dd><a name="Quinlan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">J. Ross Quinlan</a>:
+C4.5: Programs for Machine Learning.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1993, ISBN 1-55860-238-0<br>
+<dt>[Rip96]<dd>...
+<dt>[Ris78]<dd>...
+<dt>[Ris89]<dd>...
+<dt>[RS98]<dd>...
+<dt>[SAM96]<dd><a name="ShaferAM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shafer:John_C=.html">John C. Shafer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>:
+SPRINT: A Scalable Parallel Classifier for Data Mining.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ShaferAM96">VLDB 1996</a>: 544-555</dl>
+Referenced By:
+<ol>
+<li> <a name="GehrkeRG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">Johannes Gehrke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">Venkatesh Ganti</a>:
+RainForest - A Framework for Fast Decision Tree Construction of Large Datasets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#GehrkeRG98">VLDB 1998</a>: 416-427</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/RastogiS98,<br>  author    = {Rajeev Rastogi and<br>               Kyuseok Shim},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {PUBLIC: A Decision Tree Classifier that Integrates Building and<br>               Pruning},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {404-415},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

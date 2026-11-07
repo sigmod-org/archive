@@ -1,0 +1,537 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Comparing Hierarchical Data in External Memory</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_8.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Comparing Hierarchical Data in External Memory
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_sudarshan_s_chawat.htm">Sudarshan S. Chawathe</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/comparinghierarsu.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbchangesandldata.htm">Return to Changes and Temporal Data</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We present an external-memory algorithm for computing a minimum-cost edit script between two rooted, ordered, labeled trees. The I/O, RAM, and CPU costs of our algorithm are, respectively, 
+<i>
+4mn+7m+5n
+</i>
+, 
+<i>
+6S
+</i>
+, and 
+<i>
+O(MN+(M+N)S
+<sup>
+1.5
+</sup>
+)
+</i>
+, where 
+<i>
+M
+</i>
+ and 
+<i>
+N
+</i>
+ are the input tree sizes,  
+<i>
+S
+</i>
+ is the block size, 
+<i>
+m=M/S
+</i>
+, and 
+<i>
+n=N/S
+</i>
+. This algorithm can make effective use of surplus RAM capacity to quadratically reduce I/O cost. We extend to trees the commonly used mapping from sequence comparison problems to shortest-path problems in edit graphs.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AHU76]
+<dd>
+<a name="AhoHU76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">
+Alfred V. Aho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hirschberg:Daniel_S=.html">
+Daniel S. Hirschberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Bounds on the Complexity of the Longest Common Subsequence Problem. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 23(1)
+</a>
+: 1-12(1976)
+<dt>
+[CAW98]
+<dd>
+<a name="ChawatheAW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">
+Sudarshan S. Chawathe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Representing and Querying Changes in Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#ChawatheAW98">
+ICDE 1998
+</a>
+: 4-13
+<dt>
+[CGM97]
+<dd>
+<a name="ChawatheG97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">
+Sudarshan S. Chawathe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Meaningful Change Detection in Structured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ChawatheG97">
+SIGMOD Conference 1997
+</a>
+: 26-37
+<dt>
+[CRGMW96]
+<dd>
+<a name="ChawatheRGW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">
+Sudarshan S. Chawathe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Change Detection in Hierarchically Structured Information. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ChawatheRGW96">
+SIGMOD Conf. 1996
+</a>
+: 493-504
+<dt>
+[LGM96]
+<dd>
+<a name="LabioG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Labio:Wilburt.html">
+Wilburt Labio
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Efficient Snapshot Differential Algorithms for Data Warehousing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 63-74
+<dt>
+[MM85]
+<dd>
+<a name="MillerM85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miller:Webb.html">
+Webb Miller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myers:Eugene_W=.html">
+Eugene W. Myers
+</a>
+: A File Comparison Program. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe15.html#MillerM85">
+SP&amp;E 15(11)
+</a>
+: 1025-1040(1985)
+<dt>
+[MP80]
+<dd>
+<a name="MasekP80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Masek:William_J=.html">
+William J. Masek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paterson:Michael_S=.html">
+Michael S. Paterson
+</a>
+: A Faster Algorithm Computing String Edit Distances. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss20.html#MasekP80">
+JCSS 20(1)
+</a>
+: 18-31(1980)
+<dt>
+[Mye86]
+<dd>
+<a name="Meyers86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myers:Eugene_W=.html">
+Eugene W. Myers
+</a>
+: An O(ND) Difference Algorithm and Its Variations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/algorithmica/algorithmica1.html#Meyers86">
+Algorithmica 1(2)
+</a>
+: 251-266(1986)
+<dt>
+[Sel77]
+<dd>
+<a name="Selkow77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selkow:Stanley_M=.html">
+Stanley M. Selkow
+</a>
+: The Tree-to-Tree Editing Problem. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl6.html#Selkow77">
+IPL 6(6)
+</a>
+: 184-186(1977)
+<dt>
+[SK83]
+<dd>
+... 
+<dt>
+[Tic85]
+<dd>
+<a name="Tichy85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tichy:Walter_F=.html">
+Walter F. Tichy
+</a>
+: RCS - A System for Version Control. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe15.html#Tichy85">
+SP&amp;E 15(7)
+</a>
+: 637-654(1985)
+<dt>
+[Vit98]
+<dd>
+<a name="Vitter98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+: External Memory Algorithms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods98.html#Vitter98">
+PODS 1998
+</a>
+: 119-128
+<dt>
+[WC76]
+<dd>
+<a name="WongC76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:C=_K=.html">
+C. K. Wong
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chandra:Ashok_K=.html">
+Ashok K. Chandra
+</a>
+: Bounds for the String Editing Problem. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 23(1)
+</a>
+: 13-16(1976)
+<dt>
+[WCM+94]
+<dd>
+<a name="WangCMSSZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Jason_Tsong=Li.html">
+Jason Tsong-Li Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chirn:Gung=Wei.html">
+Gung-Wei Chirn
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Marr:Thomas_G=.html">
+Thomas G. Marr
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Bruce_A=.html">
+Bruce A. Shapiro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shasha:Dennis.html">
+Dennis Shasha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Kaizhong.html">
+Kaizhong Zhang
+</a>
+: Combinatorial Pattern Discovery for Scientific Data: Some Preliminary Results. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#WangCMSSZ94">
+SIGMOD Conference 1994
+</a>
+: 115-125
+<dt>
+[WF74]
+<dd>
+<a name="WagnerF74" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wagner:Robert_A=.html">
+Robert A. Wagner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fischer:Michael_J=.html">
+Michael J. Fischer
+</a>
+: The String-to-String Correction Problem. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 21(1)
+</a>
+: 168-173(1974)
+<dt>
+[WMG90]
+<dd>
+<a name="WuMMM90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wu:Sun.html">
+Sun Wu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manber:Udi.html">
+Udi Manber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myers:Gene.html">
+Gene Myers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miller:Webb.html">
+Webb Miller
+</a>
+: An O(NP) Sequence Comparison Algorithm. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl35.html#WuMMM90">
+IPL 35(6)
+</a>
+: 317-323(1990)
+<dt>
+[WSC+97]
+<dd>
+<a name="WangSCRZP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Jason_Tsong=Li.html">
+Jason Tsong-Li Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shasha:Dennis.html">
+Dennis Shasha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:George_Jyh=Shian.html">
+George Jyh-Shian Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Relihan:Liam.html">
+Liam Relihan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Kaizhong.html">
+Kaizhong Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Girish.html">
+Girish Patel
+</a>
+: Structural Matching and Discovery in Document Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#WangSCRZP97">
+SIGMOD Conference 1997
+</a>
+: 560-563
+<dt>
+[WZJS94]
+<dd>
+<a name="WangZJS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Jason_Tsong=Li.html">
+Jason Tsong-Li Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Kaizhong.html">
+Kaizhong Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jeong:Karpjoo.html">
+Karpjoo Jeong
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shasha:Dennis.html">
+Dennis Shasha
+</a>
+: A System for Approximate Tree Matching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde6.html#WangZJS94">
+TKDE 6(4)
+</a>
+: 559-571(1994)
+<dt>
+[Yan91]
+<dd>
+<a name="Yang91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Wuu.html">
+Wuu Yang
+</a>
+: Identifying Syntactic differences Between Two Programs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe21.html#Yang91">
+SP&amp;E 21(7)
+</a>
+: 739-755(1991)
+<dt>
+[ZS89]
+<dd>
+<a name="ZhangS89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Kaizhong.html">
+Kaizhong Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shasha:Dennis.html">
+Dennis Shasha
+</a>
+: Simple Fast Algorithms for the Editing Distance Between Trees and Related Problems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp18.html#ZhangS89">
+SIAM J. Comput. 18(6)
+</a>
+: 1245-1262(1989)
+<dt>
+[ZWS95]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/Chawathe99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Sudarshan&nbsp;S.&nbsp;Chawathe},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Comparing&nbsp;Hierarchical&nbsp;Data&nbsp;in&nbsp;External&nbsp;Memory},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{90-101},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

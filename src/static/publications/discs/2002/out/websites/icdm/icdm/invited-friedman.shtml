@@ -1,0 +1,28 @@
+<BODY bgcolor="#ffffee">
+
+<h2>Predictive Data Mining  
+                                  with
+                  Multiple Additive Regression Trees</h2>
+<h3>by Jerome H. Friedman, Stanford University</h3>
+
+Predicting future outcomes based on past observational data is a
+common application in data mining. The primary goal is usually
+predictive accuracy, with secondary goals being speed, ease of use,
+and interpretability of the resulting predictive model. New automated
+procedures for predictive data mining, based on "boosting" (CART)
+regression trees, are described.  The goal is a class of fast
+"off-the-shelf" procedures for classification and regression that are
+competitive in accuracy with more customized approaches, while being
+fairly automatic to use (little tuning), and highly robust especially
+when applied to less than clean data. Tools are presented for
+interpreting and visualizing these multiple additive regression tree
+(MART) models.
+<p>
+
+<hr>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=invited-friedman.dat"
+align=absmiddle> times since October 3, 2001.
+
+</BODY>

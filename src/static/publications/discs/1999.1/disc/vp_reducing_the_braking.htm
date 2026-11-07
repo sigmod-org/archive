@@ -1,0 +1,119 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_7.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Reducing the Braking Distance of an SQL Query Engine</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_c.htm#Michael J. Carey">Michael J. Carey</a>, <a href="m_authors_k.htm#Donald Kossmann">Donald Kossmann</a></center></td></tr></table></center><a target="disc_pdf]75" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+In a recent paper, we proposed adding a STOP AFTER clause to SQL to permitthe cardinality of a query result to be explicitly limited by query writers and query tools.
+We demonstrated the usefulness of having this clause, showed how to extenda traditional cost-based query optimizer to accommodate it, and demonstrated via DB2-based simulations that large performance gains are possible when STOP AFTER queries are explicitly supported by the database engine.
+In this paper, we present several new strategies for efficiently processing STOP AFTER queries.
+These strategies, based largely on the use of range partitioning techniques, offer significant additional savings for handling STOP AFTER queries that yield sizeable result sets.
+We describe classes of queries where such savings would indeed arise and present experimental measurements that show the benefits and tradeoffs associated with the new processing strategies.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AHU83]<dd><a name="AhoHU83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">Alfred V. Aho</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hopcroft:John_E=.html">John E. Hopcroft</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Data Structures and Algorithms.
+ Addison-Wesley 1983, ISBN 0-201-00023-7<br>
+<dt>[BCC94]<dd><a name="BrownCC94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Eric_W=.html">Eric W. Brown</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Callan:James_P=.html">James P. Callan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Croft:W=_Bruce.html">W. Bruce Croft</a>:
+Fast Incremental Indexing for Full-Text Information Retrieval.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#BrownCC94">VLDB 1994</a>: 192-202<dt>[BGW+81]<dd><a name="BernsteinGWRR81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">Philip A. Bernstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">Nathan Goodman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Eugene.html">Eugene Wong</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reeve:Christopher_L=.html">Christopher L. Reeve</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rothnie_Jr=:James_B=.html">James B. Rothnie Jr.</a>:
+Query Processing in a System for Distributed Databases (SDD-1).
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods6.html#BernsteinGWRR81">TODS 6(4)</a>: 602-625(1981)<dt>[CG96]<dd><a name="ChaudhuriG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gravano:Luis.html">Luis Gravano</a>:
+Optimizing Queries over Multimedia Repositories.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ChaudhuriG96">SIGMOD Conf. 1996</a>: 91-102<dt>[CK97]<dd><a name="CareyK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>:
+On Saying "Enough Already!" in SQL.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyK97">SIGMOD Conference 1997</a>: 219-230<dt>[DG92]<dd><a name="DeWittG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>:
+Parallel Database Systems: The Future of High Performance Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#DeWittG92">CACM 35(6)</a>: 85-98(1992)<dt>[DNS91a]<dd><a name="DeWittNS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+An Evaluation of Non-Equijoin Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb91.html#DeWittNS91">VLDB 1991</a>: 443-452<dt>[DNS91b]<dd><a name="DeWittNS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+Parallel Sorting on a Shared-Nothing Architecture using Probabilistic Splitting.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis91.html#DeWittNS91">PDIS 1991</a>: 280-291<dt>[DNSS92]<dd><a name="DeWittNSS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>:
+Practical Skew Handling in Parallel Joins.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#DeWittNSS92">VLDB 1992</a>: 27-40<dt>[HS92]<dd><a name="HaasS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Sequential Sampling Procedures for Query Size Estimation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#HaasS92">SIGMOD Conference 1992</a>: 341-350<dt>[Knu73]<dd><a name="Knuth73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">Donald E. Knuth</a>:
+The Art of Computer Programming, Volume III: Sorting and Searching.
+ Addison-Wesley 1973, ISBN 0-201-03803-X<br>
+<dt>[Koo80]<dd><a name="Kooi80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kooi:Robert.html">Robert Kooi</a>:
+The Optimization of Queries in Relational Databases.
+Ph.D. thesis,  Case Western Reserve University 1980<br>
+<dt>[KS95]<dd><a name="KimballS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kimball:Ralph.html">Ralph Kimball</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Strehlo:Kevin.html">Kevin Strehlo</a>:
+Why Decision Support Fails and How To Fix It.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod24.html#KimballS95">SIGMOD Record 24(3)</a>: 92-97(1995)<dt>[LNS90]<dd><a name="LiptonNS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">Richard J. Lipton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+Practical Selectivity Estimation through Adaptive Sampling.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#LiptonNS90">SIGMOD Conference 1990</a>: 1-11<dt>[MD88]<dd><a name="MuralikrishnaD88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muralikrishna:M=.html">M. Muralikrishna</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Equi-Depth Histograms For Estimating Selectivity Factors For Multi-Dimensional Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#MuralikrishnaD88">SIGMOD Conference 1988</a>: 28-36<dt>[PI97]<dd><a name="PoosalaI97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>:
+Selectivity Estimation Without the Attribute Value Independence Assumption.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#PoosalaI97">VLDB 1997</a>: 486-495<dt>[PIHS96]<dd><a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>:
+Improved Histograms for Selectivity Estimation of Range Predicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">SIGMOD Conf. 1996</a>: 294-305<dt>[PSC84]<dd><a name="Piatetsky-ShapiroC84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">Gregory Piatetsky-Shapiro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connell:Charles.html">Charles Connell</a>:
+Accurate Estimation of the Number of Tuples Satisfying a Condition.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Piatetsky-ShapiroC84">SIGMOD Conference 1984</a>: 256-276<dt>[WKHM98]<dd>...
+<dt>[Yao79]<dd><a name="Yao79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yao:S=_Bing.html">S. Bing Yao</a>:
+Optimization Of Query Evaluation Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods4.html#Yao79">TODS 4(2)</a>: 133-155(1979)</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/CareyK98,<br>  author    = {Michael J. Carey and<br>               Donald Kossmann},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Reducing the Braking Distance of an SQL Query Engine},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {158-169},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

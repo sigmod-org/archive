@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>HT02--
+International Workshop on Open Hypermedia Systems 2002</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+<body bgcolor=black text=white>
+
+<p align="left"><font size="4" face="Arial"><strong>International
+Workshop on Open Hypermedia Systems 2002 </strong>: Core Concepts
+&amp; Research Directions</font></p>
+
+<p>The 2002 Workshop on Open Hypermedia Systems (OHS2002) will be
+held in conjunction with <a href="http://www.cs.umd.edu/ht02/">Hypertext
+2002</a>, the premier ACM conference on hypertext and hypermedia.
+</p>
+
+<p>OHS2002 also has its <a href="http://www.ecs.soton.ac.uk/~dem/workshops/ohs2002/ohs2002.html">own
+workshop pages</a> - where the position papers and presentations
+will be made available.</p>
+
+<p>Previous workshops on Hypermedia Systems development include:</p>
+
+<ul>
+    <li><a href="http://www.aue.auc.dk/~kock/OHS-ECHT94/">OHS1</a>
+        (the 1st OHS Workshop held at ECHT '94 Edinburgh,
+        Scotland, September 1994)</li>
+    <li><a href="http://www.aue.auc.dk/~kock/OHS-HT96/">OHS2</a>
+        (the 2nd OHS Workshop held at Hypertext '96 Washington, D.C.,
+        March 1996)</li>
+    <li><a href="http://www.aue.auc.dk/~kock/OHS-HT97/">OHS3</a>
+        (the 3rd OHS Workshop held at Hypertext '97 in sunny
+        Southampton, UK, April 1997)</li>
+    <li><a href="http://www.aue.auc.dk/~kock/OHS-HT98/">OHS4</a>
+        (the 4th OHS Workshop held at Hypertext '98 in
+        Pittsburgh, PA, June 1998)</li>
+    <li><a href="http://www.aue.auc.dk/~kock/OHS-HT99/">OHS5</a>
+        (the 5th Workshop held at Hypertext '99 in Darmstadt,
+        Germany, February 1999)</li>
+    <li><a href="http://www.ifs.uni-linz.ac.at/~sre/ohs6/">OHS6</a>
+        (the 6th Workshop held at Hypertext '00 in San Antonio,
+        TX, May 2000)</li>
+    <li><a href="http://www.salzburgresearch.at/suntrec/ohs7/">OHS7</a>
+        (the 7th Workshop held at Hypertext '01 in Carhus,
+        Denmark, August 2001)</li>
+</ul>
+
+<p>This workshop will be open to all aspects relevant to Open
+Hypermedia Systems but with a clear focus on the following topics:</p>
+
+<ul>
+    <li>Core OHS Concepts: &quot;where we were wrong&quot; as
+        well as the usual &quot;where we were right&quot;</li>
+    <li>OHS meets the web: How can we influence web-standards. Do
+        we want to make the web more like an OHS or do we want to
+        get OHS' on the web?</li>
+    <li>Lessons learned from the application of OHS&#146;: What
+        can systems developers learn from the application of OHS
+        technology to real world problems or novel applications?</li>
+    <li>Future of OHS research: What are the major research
+        challenges facing researchers? </li>
+</ul>
+
+<p><strong>Participants</strong></p>
+
+<p>Workshops on Open Hypermedia Systems have taken place at
+Hypertext Conferences since 1994. Thus, this workshop series is
+well known and established in the community and in the past has
+had a constant number of approximately 20 participants (with its
+high in 2001 with 30 participants). In order to allow people to
+present their ideas and discuss them with others in sufficient
+depth the number of participants will be limited to 20.</p>
+
+<p>The workshop is a systems workshop. Hence, both researchers
+and practitioners working with middleware for hypermedia and Web
+based systems are the main target audience. Participation in the
+workshop will be by submission of a short position paper (of two
+to five A4 pages). In case there are more submissions than
+feasible for a one-day workshop those contributions most
+appropriate to the workshop theme will be selected for
+presentation. Authors will get feedback for their contributions
+and will be required to include the feedback in their final
+version of the paper.</p>
+
+<p>It is planned to publish post-workshop proceedings as a
+technical report at the FernUniversitaet Hagen. </p>
+
+<p><strong>Activities Planned</strong></p>
+
+<p>The workshop is to be organised by splitting it into sessions.
+Sessions will consist of brief position statements and
+discussions. A closing session will summarise the outcome of the
+workshop and determine any further activities to be performed.
+Furthermore, it is planned to briefly report on the outcome to
+the OHSWG group and to all interested hypertext researchers via a
+summary statement in the SIGWeb newsletter.</p>
+
+<p><font size="3"><strong>Submission Details &amp; Authoring
+Guidelines</strong></font></p>
+
+<p>Submit your position paper not later than May 6th, 2002
+encoded as PDF or HTML via e-mail to <a
+href="mailto:dem@ecs.soton.ac.uk">dem@ecs.soton.ac.uk</a>.
+Submitted papers will be refereed; after your presentation at the
+workshop you will have the possibility to update your paper and
+submit a final version. All accepted position papers will be
+published in a technical report at the FernUniversitaet Hagen. </p>
+
+<p><font size="3"><strong>Important Dates</strong></font></p>
+
+<p>Position papers due May 6th, 2002 <br>
+Notification of acceptance (provisionally May 22nd, 2002 - we
+will ensure that this is early enough for early registration)<br>
+Workshop date 12th June, 2002 <br>
+Final version of paper due July 19th, 2002 </p>
+
+<h2><font size="3"><strong>Organisers Names and
+Background</strong></font></h2>
+
+<p>David Millard is a Research Fellow in the Intelligence, Agents
+and Multimedia Group at the University of Southampton. He has
+participated in the Open Hypermedia Workshops and Working Group
+meetings since 1997, where he was a key contributor to the OHP
+suite of protocols and the development of the Fundamental Open
+Hypermedia Model (FOHM).</p>
+
+<p>Joerg Haake is chair for distributed systems at
+FernUniversitaet Hagen, the German distance learning university.
+He is actively participating in Hypertext conferences since 1991
+and is engaged in OHS workshops since 1996.</p>
+
+<p>Sigi Reich is the head of SunTREC (Sun Technology and Research
+Excellence Center) at Salzburg Research, Austria. He has
+participated in the Open Hypermedia Workshops and Working Group
+meetings since 1996. Over the last few years Sigi Reich has been
+involved in aspects of interoperability of Open Hypermedia
+Systems, in particular the development of the Open Hypermedia
+Navigational Interface (OHP-Nav) and the Fundamental Open
+Hypermedia Model (FOHM). </p>
+
+<h2><font size="3"><strong>Contact:</strong></font></h2>
+
+<p>David Millard<br>
+Department of Electronics &amp; Computer Science,<br>
+University of Southampton,<br>
+Highfield, Southampton,<br>
+SO17 1BJ, UK<br>
+<a href="mailto:dem@ecs.soton.ac.uk">dem@ecs.soton.ac.uk</a></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

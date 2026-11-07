@@ -1,0 +1,13 @@
+Biografia - Maria Luiza M. Campos
+
+Maria Luiza M. Campos obteve o titulo de Mestre em Ciência da Computação em
+1984 pela COPPE, Universidade Federal do RIo de Janeiro, e o de PhD em
+SIstemas de Informação em 1994 pela University of East Anglia, Inglaterra.
+Atualmente é professora adjunta no Departamento de Ciência da
+Computação-Instituto de Matemática da UFRJ, atuando também como analista de
+sistemas colaboradora junto ao Núcleo de Computação Eletrônica da mesma
+universidade. Coordena o grupo de pesquisa Dataware, desenvolvendo projetos
+na área de integração de informações heterogêneas, data warehousing,
+gerência de metadados e gestão do conhecimento, tendo orientado diversas
+teses e apresentado trabalhos em con-ferências e publicações nacionais e
+internacionais nestes temas.

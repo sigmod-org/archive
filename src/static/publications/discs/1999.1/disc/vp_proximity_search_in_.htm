@@ -1,0 +1,120 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_0.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Proximity Search in Databases</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_g.htm#Roy Goldman">Roy Goldman</a>, <a href="m_authors_s.htm#Narayanan Shivakumar">Narayanan Shivakumar</a>, <a href="m_authors_v.htm#Suresh Venkatasubramanian">Suresh Venkatasubramanian</a>, <a href="m_authors_g.htm#Hector Garcia-Molina">Hector Garcia-Molina</a></center></td></tr></table></center><a target="disc_pdfD77%" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+An information retrieval (IR) engine can rank documents based on textual proximity of keywords within each document. In this paper we apply this notion to search across an entire database for objects that are "near" other relevant objects. Proximity search enables simple "focusing" queries basedon general relationships among objects, helpful for interactive query sessions. We view the database as a graph, with data in vertices (objects) andrelationships indicated by edges. Proximity is defined based on shortest paths between objects. We have implemented a prototype search engine that uses this model to enable keyword searches over databases, and we have found it very effective for quickly finding relevant information. Computing the distance between objects in a graph stored on disk can be very expensive. Hence, we show how to build compact indexes that allow us to quickly find the distance between objects at search time. Experiments show that our algorithms are efficient and scale well.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AHU74]<dd><a name="AhoHU74" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">Alfred V. Aho</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hopcroft:John_E=.html">John E. Hopcroft</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+The Design and Analysis of Computer Algorithms.
+ Addison-Wesley 1974, ISBN 0-201-00029-6<br>
+<dt>[AKR93]<dd>...
+<dt>[Bod96]<dd><a name="Bodlaender96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bodlaender:Hans_L=.html">Hans L. Bodlaender</a>:
+A Linear-Time Algorithm for Finding Tree-Decompositions of Small Treewidth.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp25.html#Bodlaender96">SIAM J. Comput. 25(6)</a>: 1305-1317(1996)<dt>[Con97]<dd>...
+<dt>[CZ95]<dd><a name="ChaudhuriZ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Shiva.html">Shiva Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaroliagis:Christos_D=.html">Christos D. Zaroliagis</a>:
+Shortest Path Queries in Digraphs of Small Treewidth.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icalp/icalp95.html#ChaudhuriZ95">ICALP 1995</a>: 244-255<dt>[DGEP98]<dd><a name="DarEGP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Entin:Gadi.html">Gadi Entin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Geva:Shai.html">Shai Geva</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Palmon:Eran.html">Eran Palmon</a>:
+DTL's DataSpot: Database Exploration Using Plain Language.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#DarEGP98">VLDB 1998</a>: 645-649<dt>[Dij59]<dd>...
+<dt>[DM97]<dd><a name="DesslochM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/De=szlig=loch:Stefan.html">Stefan De&szlig;loch</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mattos:Nelson_Mendon=ccedil=a.html">Nelson Mendon&ccedil;a Mattos</a>:
+Integrating SQL Databases with Content-Specific Search Engines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#DesslochM97">VLDB 1997</a>: 528-537<dt>[DR94]<dd><a name="DarR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>:
+A Performance Study of Transitive Closure Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#DarR94">SIGMOD Conference 1994</a>: 454-465<dt>[Fag96]<dd><a name="Fagin96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">Ronald Fagin</a>:
+Combining Fuzzy Information from Multiple Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#Fagin96">PODS 1996</a>: 216-226<dt>[Flo62]<dd>...
+<dt>[Goo61]<dd>...
+<dt>[GSVGM98]<dd>...
+<dt>[HKRS94]<dd><a name="KleinRRS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Klein:Philip_N=.html">Philip N. Klein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rao:Satish.html">Satish Rao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rauch:Monika.html">Monika Rauch</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Sairam.html">Sairam Subramanian</a>:
+Faster shortest-path algorithms for planar graphs.
+<a href="http://theory.lcs.mit.edu/~dmjones/STOC/stoc94.html">STOC 1994</a>: 27-37<dt>[KS]<dd>...
+<dt>[LT80]<dd><a name="LiptonT80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">Richard J. Lipton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">Robert Endre Tarjan</a>:
+Applications of a Planar Separator Theorem.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp9.html#LiptonT80">SIAM J. Comput. 9(3)</a>: 615-627(1980)<dt>[MAG+97]<dd><a name="McHughAGQW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">Jason McHugh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">Roy Goldman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Lore: A Database Management System for Semistructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#McHughAGQW97">SIGMOD Record 26(3)</a>: 54-66(1997)<dt>[Ora97]<dd>...
+<dt>[Pel97]<dd>...
+<dt>[PGMW95]<dd><a name="PapakonstantinouGW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Object Exchange Across Heterogeneous Information Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#PapakonstantinouGW95">ICDE 1995</a>: 251-260<dt>[Sal89]<dd><a name="Salton89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salton:Gerard.html">Gerard Salton</a>:
+Automatic Text Processing: The Transformation, Analysis, and Retrieval of Information by Computer.
+ Addison-Wesley 1989, ISBN 0-201-12227-8<br>
+<dt>[Ull89]<dd><a name="Ullman89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Principles of Database  and Knowledge-Base Systems, Volume II.
+ Computer Science Press 1989, ISBN 0-7167-8162-X<br>
+<dt>[UY91]<dd>...
+<dt>[ZMSD93]<dd><a name="ZobelMS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zobel:Justin.html">Justin Zobel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moffat:Alistair.html">Alistair Moffat</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sacks=Davis:Ron.html">Ron Sacks-Davis</a>:
+Searching Large Lexicons for Partially Specified Terms using Compressed Inverted Files.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#ZobelMS93">VLDB 1993</a>: 290-301</dl>
+Referenced By:
+<ol>
+<li> <a name="GravanoP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gravano:Luis.html">Luis Gravano</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>:
+Mediating and Metaseraching on the Internet.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu21.html#GravanoP98">Data Engineering Bulletin 21(2)</a>: 28-36(1998)<li> <a name="DarEGP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Entin:Gadi.html">Gadi Entin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Geva:Shai.html">Shai Geva</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Palmon:Eran.html">Eran Palmon</a>:
+DTL's DataSpot: Database Exploration Using Plain Language.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#DarEGP98">VLDB 1998</a>: 645-649</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/GoldmanSVG98,<br>  author    = {Roy Goldman and<br>               Narayanan Shivakumar and<br>               Suresh Venkatasubramanian and<br>               Hector Garcia-Molina},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Proximity Search in Databases},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {26-37},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

@@ -1,0 +1,1868 @@
+<html>
+<head>
+<title> Time Series in Finance</title></head>
+<body>
+<HR><H1> Time Series in Finance: the array database approach</H1>
+<font size=3>
+<br>
+Prof. Dennis Shasha<br>
+Courant Institute of Mathematical Sciences <br>
+Department of Computer Science <br>
+New York University  <br>
+shasha@cs.nyu.edu <br>
+http://cs.nyu.edu/cs/faculty/shasha/index.html  <br>
+<br>
+<HR><H1> Outline </H1>
+<ul>
+<li>
+What are time series as
+used in business and finance?
+<li>
+What do typical systems (FAME, S-PLUS, SAS, KSQL) 
+do to support them?
+<br>
+I include challenge queries for you to try against your
+favorite SQL or alternative database management system.
+<li>
+What are the relevant strengths of each system?
+<li>
+Is there an ideal time-series language?
+<li>
+Fintime, a time series benchmark
+<br>
+http://cs.nyu.edu/cs/faculty/shasha/fintime.html
+<li>
+Which research in temporal data mining might help
+finance?
+<li>
+Time series bibliography.
+<li>
+Brief glossary of statistical concepts.
+</ul>
+<HR><H1> Scenario</H1>
+<ul>
+<li>
+Group discovers the desirability of ``pairs trading.''
+<li>
+The goal is to identify pairs (or in general groups) of stocks
+whose prices track one another after factoring in dividends.
+<br>
+One can make money (lots was made in the 1980s), because, for example,
+if you know that the two banks Chase and Citibank track
+one another (their difference is a stationary process) and Chase goes up 
+but Citibank doesn't, then buy Citibank and sell Chase.
+(Unless there is a good external reason for the difference.)
+<li>
+Typical <i> challenge queries </i> from such an application:
+<ul>
+<li>
+Correlate the price histories of two stocks
+(or in general among many stocks).
+<li>
+Perform the correlation over certain time intervals
+to evaluate the stationarity.
+<li>
+The correlation might be weighted: recent history 
+counts more than distant history
+(Explains why brokers are a forgetful lot.)
+</ul>
+</ul>
+<HR><H1> So, What's the Database Problem?</H1>
+<ul>
+<li>
+The raw data comes in the form of ticks (stock, quantity, price)
+and can be stored in a relational database without a problem.
+<li>
+The fundamental difficulty is that the relational model 
+does not take advantage of the order of rows.
+Whereas one can perform an ``order by'' query and
+manipulate the data in some other language, one cannot natively
+manipulate the ordered data using select, from, and where.
+<br>
+Arguably, this is good for data independence, but it is bad
+for time series.
+<li>
+Realizing this, the traders curse a lot and tell their programmers
+to cobble something together.
+The programmers do so and create a piece of software that is part
+spreadsheet, part special purpose database, with lots of C++ code.
+<br>
+Employment goes up.
+<li>
+<b>
+Note 1:
+</b>
+Joe Celko shows how to bend
+SQL to the task of simulating order in his popular and excellent book
+<i> The SQL Puzzle Book</i>, published by Morgan Kaufmann.
+Usually, the bending results in a loss of efficiency.
+It also works only for special cases.
+<li>
+<b>
+Note 2:
+</b>
+Object-relational systems address this
+issue by providing special data types
+and user-defined functions. 
+My goal is to show the array database approach.
+The two are converging, but the array people
+have been at it longer and have some good ideas.
+</ul>
+<HR><H1> What Are Time Series</H1>
+<ul>
+<li>
+Time series = sequence of values usually recorded at regular 
+increasing intervals
+<br>
+(yearly, monthly, weekly, ... secondly).
+<br>
+<b> Regularity </b> is critical: without regularity, moving
+averages, autocorrelations, and volatility would not make sense
+(e.g. if I have a sequence of daily 
+price closings and then 1,000 values within one day, the moving
+average covering the entire sequence doesn't make much sense).
+<br>
+Non-regular time series are also of interest (e.g. the history
+of stock splits), but we can say less about them.
+<li>
+Time series also exhibit <b> historicity</b>: the past
+is an indicator of the future.
+That is why autoregression can be used to predict the future
+of sales and why the past volatility may predict future volatility.
+<li>
+Notice that temporal logics, for example, use the fact that
+the i+1st value in a sequence is at a later time than the ith value,
+but assume neither regularity nor historicity.
+Temporal query languages are equally agnostic about this question.
+</ul>
+<HR><H1> System Support for Time Series</H1>
+<ul>
+<li>
+We want to be able to create time series, manipulate them,
+keep them in persistent storage, and display them in reports.
+<li>
+Time series have frequencies, but may not have values
+for every time instance at the stated frequency,
+e.g. business day has the frequency of a day but has no values on 
+holidays or weekends.
+<p>
+On the other hand, time frequencies with gaps can present problems
+in international markets.
+For example, 
+some Asian stock markets are open on Saturdays.
+Different markets don't have the same holidays in general.
+One solution is to store values without gaps everywhere
+(i.e. every day).
+<li>
+Then the question becomes: How to fill the gaps?
+<br>
+The answer has to do with the kind of value stored.
+<li>
+The values associated with each time are of two general types
+(we borrow this distinction from the FAME system):
+<ul>
+<li>
+<b> level</b> values stay the same
+from one period to the next in the absence
+of activity.
+For example, inventory is a level value, because
+inventory stays the same if you neither buy nor sell.
+<li>
+<b>flow</b> values are zero in the absence of activity.
+For example, 
+expenses go to zero if you buy nothing.
+</ul>
+<li>
+This distinction turns out to be important when interpolating
+missing values and for time scale conversion.
+</ul>
+<HR><H1> Operations on Time Series Data </H1>
+<ul>
+<li>
+A typical framework 
+is that of the FAME system, since it embodies an excellent
+understanding of the special properties of time series.
+FAME stands for forecasting, analysis and modeling environment
+<br>
+FAME information systems, Ann Arbor Michigan.       
+<br>
+www.fame.com
+<li>
+Data Preparation (i.e. interpolating and time scale conversion) -- curve-fitting
+<li>
+Queries (e.g. moving averages and sums) -- aggregates over time.
+<li>
+Forecasting (e.g. statistical or data mining-based extrapolation)
+-- regression, correlation, Fourier analysis, and pattern-finding.
+</ul>
+
+
+<HR><H1> Data Preparation </H1>
+<ul>
+<li>
+Sometimes it is necessary to relate time series that don't
+have the same time frequencies, e.g. mine is days and yours is weeks.
+<li>
+Converting one to the other depends on the kind of value one has.
+<br>
+For example, if the daily time series denotes inventory level,
+then converting from daily to weekly simply entails taking 
+the inventory level at the end of each week.
+<br>
+On the other hand, if the daily time series denotes revenues (a flow
+type of value),
+then one must sum them up to get weekly revenues.
+<li>
+Time conversion can force interpolation too, especially when
+graphing values.
+Typically, systems use various spline techniques
+such as a cubic spline to interpolate missing values.
+<li>
+Interpolation can be more involved than mere curve-fitting, however
+as in the Black-Derman-Toy interpolation of the yield curve.
+So, users should be able to add in their own interpolation functions.
+</ul>
+<HR><H1> Query Types -- try these on your Database</H1>
+<ul>
+<li>
+cumulative sum, e.g. year to date sales.
+<li>
+moving averages, e.g. 30 day average of stock prices.
+<li>
+nth best, e.g. 5th best sales region.
+<br>
+median --- one in the middle
+<br>
+rank -- associate ordinal to each value based on its sort order.
+<li>
+discretize --- e.g. rank the revenues by whether they
+are in the top third, the middle third, or the bottom third.
+<br>
+This implies discovering the boundaries and then using them
+in an update query.
+<li>
+year-to-year comparisons --- e.g. balance of trade of this year vs. last.
+<li>
+accounting functions --- e.g. average growth rate, amortization,
+internal rate of return and so on.
+<li>
+statistical functions --- e.g. autocorrelation, and correlation between
+two series.
+</ul>
+
+<HR><H1> Forecasting </H1>
+<ul>
+<li>
+Before the 1920s, forecasting meant 
+by drawing lines through clouds of data values.
+Yule 
+invented the autoregressive technique in 1927,
+so he 
+could predict the annual number of sunspots. 
+This was a linear model and the basic approach
+was to assume a linear process modified by noise.
+That model is often used in marketing (e.g., what will
+my sales of wheat be next month).
+<li>
+Autoregression uses a weighted sum of previous
+values to predict future ones.
+There are also seasonal autoregressive models. 
+<li>
+These and other models are incorporated 
+in time series products such as FAME, SAS and SPLUS.
+<li>
+In options finance, the basic approach is to assume that the price
+of an equity is based on a random walk (Brownian motion)
+around a basic slope.
+The magnitude of the randomness is called the volatility.
+In a result due to Norbert Wiener (he worked it out to shoot down
+bombers over London) the standard deviation of such a price ``process''
+rises as the square root of the time.
+</ul>
+<HR><H1> Steps in a Typical FAME Session</H1>
+<ul>
+<li>
+Specify frequency.
+Say monthly, starting at January 1, 1996
+and ending at the current time.
+<li>
+Create
+sales and expenses time series by importing
+these from a file or typing them in.
+Specify that these are flow type time series.
+<li>
+Create a new time series:
+<br>
+formula profit = sales - expenses.
+<li>
+Create a fourth time series with weekly frequency
+on inventory.
+Specify that inventory is a level type time series.
+<li>
+Convert the first three time series to a weekly
+frequency (by dividing the monthly values by 4.2
+or by constructing a cubic spline to make
+the sales, expenses, and profits curve look smooth).
+<br>
+This interpolation depends on knowing that sales and expenses
+are flow-type values.
+<li>
+Now, use autoregression to predict future time series values.
+</ul>
+<HR><H1> S-Plus</H1>
+<ul>
+<li>
+S-PLUS is an interpretive environment for data analysis,
+not specifically oriented towards time series, but
+based on vectors.
+<br>
+http://www.mathsoft.com/splus/
+<br>
+http://www.math.umbc.edu/~arghya/Splus/splus.html
+<p>
+S-Plus is  derived from the S 
+language developed at 
+ATT Bell Laboratories by Becker, Chambers and Wilkens, but development
+now belongs to
+MathSoft Inc. 
+<p>
+<li>
+S-Plus has 
+<ul>
+<li>
+standard statistical
+and mathematical functions, including anova, wavelets, bootstrapping
+to check for model overfitting, and so on.
+<li>
+graphics capabilities for visualization (user testimonials
+say this is a particular strong point).
+<li>
+combinatorial data mining (e.g. inference of classification trees
+and regression).
+<li>
+an object-oriented language
+allowing encapsulation and overloading.
+For example, objects of a certain class will have 
+a special plot function.
+</ul>
+<li>
+Applications in finance include statistical models for futures trading,
+e.g., correlation of Australian and US bonds, and other single or
+multi-sequence
+correlations.
+</ul>
+<HR><H1> S-Plus, some details </H1>
+<ul>
+<li>
+A nice reference to the language on the web has been written by
+<br>
+Carlos Alzola and Frank Harrell.
+It is entitled
+<i> An Introduction to S-Plus and the Hmisc
+and Design Libraries </i>)
+at the University of Virginia.
+(Hmisc is a set of add-on functions that are truly
+miscellaneous.)
+<br>
+http://fharrell.biostat.virginia.edu/s/index.html
+<li>
+The S-Plus programming model is vector-oriented.
+Here are some typical statements:
+<ul>
+<li>
+sum(age < mean(age)) gives the count of people
+who are younger than the mean.
+<li>
+ageg <-- ifelse(age < 16, 'Young', 'Old')
+assigns to the vector ageg, a sequence of Young/Old values
+thus discretizing the data.
+<li>
+find positions of elements
+in a table that have the values of x,
+thus performing a select while maintaining order.
+</ul>
+<li>
+So, one can create vectors, do statistics on them,
+and perform selection-style operations on them.
+<li>
+The S-Plus  implementation is also vector-oriented.
+In their case, this creates a performance discontinuity.
+S-Plus is slow for large databases,
+even for data that exceeds RAM size.
+Below RAM size, it is very fast.
+For this reason,
+S-PLUS is often used with SAS, because SAS has some data management
+capabilities as we'll see.
+</ul>
+<HR><H1> SAS </H1>
+<ul>
+<li>
+SAS
+(www.sas.com)
+is a leading vendor of statistical databases.
+(Originally, it stood for Statistical Analysis System, but
+now the acronym stands for itself.)
+<li>
+A SAS programmer interacts
+with the system by parametrizing varioius functions
+as the following example shows:
+<p>
+proc forecast data=leadprd
+<br>
+ar=1            /* number of autoregressive parameters to estimate  */
+<br>
+interval=month  /* frequency of input time series       */
+<br>
+trend=1         /* fit a constant trend model           */
+<br>
+method=stepar   /* use stepwise autoregressive method   */
+<br>
+out=leadout1    /* create output data set for forecasts */
+<br>
+lead=12         /* number of forecast periods           */
+<br>
+outlimit
+<br>
+outstd;
+<br>
+var leadprod;
+<br>
+id date;                   /* identification variable              */
+<br>
+run;
+<li>
+In addition,
+SAS has an integrated, fairly complete, SQL dialect called Proc SQL.
+<li>
+SAS has modules for data mining and data warehousing as well.
+<li>
+To obtain support for time series data management in SAS,
+you purchase a library called ETS that enables you to do 
+<ul>
+<li>
+interpolation,
+<li>
+econometric forecasting (e.g. maximum likelihood method) 
+<li> financial analysis (analysis of fixed rate, adjustable
+rate etc.), 
+<li>
+time series forecasting
+(exponential smoothing, ARIMA, dynamic regression).
+</ul>
+<li>
+By reputation, SAS is harder to extend than S-Plus,
+but SAS programmers have become clever with the language
+over the years.
+The libraries are very rich.
+<li>
+Bottom line: S-Plus is more flexible for special purpose problems
+and is fast for problems that
+fit into RAM.
+It also has great graphics.
+Combining the two works well if the application
+selects a subset of data and then works on it (like a loose-coupling
+expert system).
+</ul>
+<HR><H1>  KDB </H1> 
+<ul>
+<li>
+KDB is a database system
+implemented on top of the K language environment (produced by Kx systems
+www.kx.com), an array language.
+Data structures (e.g. tables) can be interchanged between
+the two and functions can be called in both directions.
+A free trial version can be downloaded.
+<li>
+KDB supports an SQL dialect called KSQL.
+KSQL is easy to learn (for anyone fluent in SQL) and carries
+over the speed and functionality of K to large data manipulation.               
+KDB also supports most of standard SQL.
+<li>
+The basic data structure in KSQL is the
+<b> arrable </b> (array-table) which is a table whose order can be exploited.
+In this way, it is very similar to S-Plus.
+<li>
+Arrables are non-first-normal form objects: a field of a record
+can be an array.
+For example, an entire time series can be stored in a field.
+<li>
+Like most modern SQLs, KSQL allows the inclusion of
+user-defined functions inside database statements.
+Unlike other SQL's KSQL allows functions to be defined over
+arrays as well as scalars.                   
+<li>
+Like classical SQL, KSQL has aggregates, grouping,
+selections and string matching, and so on.
+<li>
+KSQL adds many useful functions to SQL, permitting
+economical expression and often better performance by exploiting order.
+For example, finding the second highest value is a linear time
+operation in KSQL but requires a self-join in SQL, which
+is only sometimes linear time.
+<li>
+KDB can function as a high performance distributed server
+with full recovery and distributed consistency.
+(KDB guarantees consistency by using ordered atomic 
+broadcast and a replicated state machine 
+design rather than two phase commit.)
+<li>
+Some performance notes
+<ul>
+<li>
+KDB can do
+40,000+ TPC/B transactions per second against a 100
+megabyte database
+on a Pentium 2.
+<li>
+Typical real-world application (at Lehman Brothers):
+time series: keyed by instrument id, date.
+<br>
+Data: 11 million rows, couple of hundred
+columns, typical query returns 7500 rows
+with 15 columns.
+10 gigabytes.
+<br>
+Query: is find all information having
+to do with a given set of instruments at a given date.
+This returns 7500 rows in less than a second.
+</ul>
+</ul>
+<HR><H1>  KSQL Basics -- an extended example</H1> 
+<br>
+<ul>
+<li>
+Create tables (arrables, really, but we'll conform to standard
+terminology, even though it's slightly inexact)
+either through K or within .t scripts.
+We will use .t scripts for now and will set up
+a simple trade database and then go through it line
+by line (you can copy out this file and run it, provided
+you also copy out newstat.k which will be given later).
+<pre>
+'trade.t'
+
+n:1000  # number of trades
+
+'generate'
+stock:([name:('Alcatel','Alstom','AirFrance','FranceTelecom','Snecma','Supra')]
+ industry:('telecom','engineering','aviation','telecom','aviation','consulting'))
+
+trade:([]
+ stock:n rand stock.name,
+ price:50 + .25 * n rand 200,
+ amount:100 * 10 + n rand 20,
+ date:date['1998-01-01'] + n rand 365)
+
+trade:'date' asc trade
+
+show'trade'
+
+'last price (in time) by stock, month'
+'we get a vector and then take the last'
+t1:select last price by stock, date.month from trade
+
+
+'trade volume by month and industry'
+show select volume:sum amount * price 
+ by date.month, stock.industry from trade
+
+'5 day moving avg price by stock, month'
+t3:select 5 avgs price by stock, date.month from trade
+
+\\l newstat.k
+
+
+'5 day moving max price by stock, month'
+t4:select movingmax[5,price] by stock, date.month from trade
+
+</pre>
+<li>
+Here is the newstat.k file.
+<pre>
+/ newstat.k
+
+/ moving max of last num elements
+movingmax:{[num; vec]
+        minel: &/vec
+        vec: ((num-1) # minel), vec
+        size: #vec
+        indexes: (num-1) + !(size-(num-1))
+        findmax:{[n;v;i] |/v[(i-(n-1))+!n]}
+        :findmax[num;vec]'indexes
+}
+
+</pre>
+</ul>
+<br>
+<HR><H1>  Commentary on Part of trade.t</H1> 
+<br>
+<ul>
+<li>
+The line
+<pre>
+t1:select last price by stock, date.month from trade
+</pre>
+performs a group by stock and year-month in the trade table.
+Mathematically, the by clause partitions the
+records based on distinct stock/year-month
+values, like
+a group by in SQL.
+What is different is that
+each partition is guaranteed to
+be ordered in the same way as in the table (arrable),
+in this case, by ascending order of date.
+For each partition
+corresponding to stock s and year-month x,
+the <pre> select last price </pre> part will return
+s, x, and p where p is the price of the last record in the partition
+corresponding to s and x. 
+Because the table is ordered by date, the last record will be
+the one with the most recent date.
+<!--
+<br>
+Note that the stock and year-month values s and x are returned
+because they are in the by clause.
+There is no need to write stock and date.month explicitly in the select
+clause.
+The schema of the result is price, stock, and date, implicitly inherited
+from the input table.
+Further, the result (t1 in this case) is sorted by stock and date.month
+and those two fields constitute its key.
+-->
+<li>
+In the select statement
+<pre>
+show select volume:sum amount * price
+ by date.month, stock.industry from trade
+</pre>
+<br>
+(i) the date.month expression in the by
+clause gives each distinct year-month value in the date column.
+This is a big convenience in time series applications.
+The by clause groups by these year-month values.
+<!--
+<br>
+(ii) the stock.industry expression does an implicit join between the
+stock  field in trade and the name field
+in stock (i.e. the key of stock).
+This notation occurs because stock is both the name of a field
+in trade as well as the name of a table.
+KDB implements these foreign key joins particularly efficiently.
+<br>
+Parenthetical note: 
+If the stock field in the trade were renamed as, say, stock2, then the join
+would require the phrase <pre> stock[stock2].industry </pre>.
+This should be read: ``take each stock2 value from trade and use it
+as a key value in the stock table and project the resulting industry field.''
+Thus, the following KSQL statement (assuming the stock
+field in trade has been renamed to stock2):
+<pre>
+select stock[stock2].industry from trade where price > 50
+</pre>
+is equivalent to the SQL statement:
+<pre>
+select stock.industry
+from stock, trade
+where stock.name = trade.stock2
+and trade.price > 50
+</pre>
+-->
+<li>
+The lines
+<pre>
+'5 day moving avg price by stock, month'
+t3:select 5 avgs price by stock, date.month from trade
+</pre>
+use the avgs function which, given a vector (price for
+each stock in this case),  returns a vector
+of the same length, computing a moving average.
+5 avgs computes the five day moving average.
+<li>
+The line
+<pre>
+\\l newstat.k
+</pre>
+loads one or more k functions from the file
+newstat.k, in this case a single moving
+maximum taking two arguments, a number and a vector.
+<li>
+The line
+<pre>
+t4:select movingmax[5,price] by stock, date.month from trade
+</pre>
+uses the movingmax function defined in the K file
+newstat.k to compute the 5 day moving
+maximum of prices grouped by stock and year-month. 
+The movingmax function takes a scalar and a vector and that's
+exactly what the by clause delivers.
+</ul>
+<HR><H1> Two of our Challenge Queries using Vectors</H1>
+<ul>
+<li>
+Dot product of prices offset by 10 days for each stock
+<pre>
+\dotprod:{[x;y] +/(x*y)}
+t4: select dotprod[(10 drop price), (-10 drop price)] by stock from trade
+</pre>
+<li>
+The 10th highest price for each stock
+<pre>
+t5: select last 10 first price by stock from 'price' desc trade
+</pre>
+<li>
+You should be able to do the rest assuming that you can put in arbitrary
+functions.
+</ul>
+<HR><H1> Is There an Ideal Time Series Language?</H1>
+<ul>
+<li>
+The ability to treat sequences as first class objects
+on which one can do useful operations <b> within </b>
+the database system.
+<br>
+<i>
+FAME, S-Plus, SAS, and KSQL.
+</i>
+<li>
+The ability to treat multiple sequences together
+for correlations and other purposes.
+<br>
+<i>
+FAME, S-Plus, SAS, and KSQL.
+</i>
+<li>
+A basic collection of functions, e.g.
+aggregates, moving aggregates, statistics, cross-correlations,
+interpolation, etc.
+<br>
+<i>
+FAME, S-Plus, SAS, and KSQL.
+</i>
+<li>
+The ability to integrate user-defined functions into the query
+engine.
+My belief: <i> user-defined functions are
+necessary for time series. There is no analogue to relational completeness
+that will satisfy all (or even most) time series applications.
+</i>
+Prove me wrong if you can.
+<br>
+<i>
+KSQL and S-Plus; FAME and SAS to some extent.
+</i>
+<li>
+The main helpful database amenities include 
+a rich relational vocabulary and
+the ability to work efficiently with disk- as well as RAM-resident
+data. 
+<br>
+<i>
+KSQL, FAME and SAS.
+</i>
+<li>
+Treat time 
+specially, e.g. be able to group by date.month or date.year of KSQL.
+<br>
+<i>
+FAME, SAS, S-Plus with libraries, and KSQL.
+</i>
+<li>
+Treat values appropriately, e.g. with the level and flow concepts of FAME.
+<br>
+<i>
+FAME, natively.
+The others require libraries.
+</i>
+<li>
+Give support for bitemporality (discussed next) at least as an extension.
+<br>
+<i>
+No system, natively.
+</i>
+<li>
+Object-relational database vendors have begun to field
+products with time-series extensions.
+It will be interesting to see how well they measure up.
+</ul>
+
+
+<HR><H1> The Bitemporal Challenge </H1>
+<ul>
+<li>
+Even in finance, there is more to life than looking at flows
+and levels.
+Sometimes, one must do historical searches and understand the
+state of the enterprise in the past or future.
+<li>
+Bitemporal = two times (Snodgrass, Ahn, Jensen, and others)
+(A very nice review paper was published in Information Systems:
+<br>
+``Semantics of Time-Varying Information
+Christian S. Jensen, Richard T. Snodgrass
+Information Systems, 21(4): 311-352 (1996) )
+<br>
+The two times are <b> valid time </b> (when a fact holds)
+and <b> transaction time </b> (when the fact was asserted).
+<li>
+Using this model, one can ask:
+<br>
+<i>
+What was Rick's salary on April 1, 1998?
+</i>
+<br>
+Suppose the answer was $1,500 per week, given
+the information we know now (i.e. according to
+the latest transaction).
+But somehow we sent Rick a check for much more.
+This gives rise to a new question:
+<br>
+<i>
+What did we believe on March 28, 1998 (when payroll printed out Rick's
+100,000 dollar weekly check) about Rick's salary valid on April 1, 1998?
+</i>
+Thus, we look at the transactions concerning Rick's salary
+that preceded March 29, 1998 and see what was asserted
+about Rick's salary as of April 1, 1998.
+If the asserted value was 100,000 dollars per week, then
+we know that the mistaken payment was due to a database error,
+not a payroll processing error.
+<br>
+So, bitemporal databases are useful to track the cause of failures 
+in operations.
+<li>
+This example also
+shows their general usefulness for human resources applications,
+<i>
+What is the job history of this candidate within the organization?
+</i>
+<li>
+Or the more challenging:
+<i>
+How has the job history of this candidate been corrected?
+</i>
+<li>
+For trading applications, we can use bitemporality to track the correlations
+between predictions of earnings and price,
+<i>
+What did we believe as of January of this year that first
+quarter earnings would be?
+</i>
+<li>
+Unitemporal example for those with SQL skill:
+Rick Snodgrass suggested the following example
+to test your system's temporal acumen.
+The salary of employees changes over time, usually in a positive direction.
+Each salary for an employee therefore has a time when it is valid,
+marked by starttime and endtime, the notion being that the salary
+becomes valid at starttime and ceases being valid at endtime.
+Your task is to compute the average salary over time as a set of rows
+having the average salary as well as the start and end times.
+Two consecutive intervals with the same average salary should be merged.
+Send me mail if you want to see a KSQL version.
+</ul>
+<HR><H1> FinTime a Financial Time Series Databases</H1>
+<p>
+The design of this benchmark is joint work 
+with Kaippallim Jacob of Morgan Stanley (kjacob@ms.com)
+and its full description can be found at
+http://cs.nyu.edu/cs/faculty/shasha/fintime.html.
+<br>
+Here we present a summary of that benchmark.
+
+<P>Goal</P></U><P>
+The FinTime benchmark tries to model the practical uses
+of time-series databases in financial applications.
+The 
+models suggested in FinTime reflect two frequently occurring cases in the 
+financial industry, namely, a historical market data system and real-time price 
+tick database. These models are quite similar to two well-studied models in the
+relational world, namely, decision support systems and OLTP systems.
+FinTime
+also suggests and defines metrics that capture three useful dimensions of any 
+time-series system, namely, performance in a single-user mode, performance
+in a 
+multi-user mode and the price to performance ratio. </P>
+
+<U><P>Models for a 
+Time-series Benchmark </P></U><P>Before deciding on a model, we have to
+examine the different parameters that determine a model for time-series
+system. 
+The most important parameters that influence a time-series database system 
+are:</P><OL><LI>Periodicity of data (Regular/irregular)</LI><LI>Density of
+data 
+(Dense/Sparse)</LI><LI>Schedule of updates (periodic,
+continuous)</LI><LI>Types 
+of queries (Simple/Complex)</LI><LI>Time interval between queries (Ad 
+hoc/Batch)</LI><LI>Number of concurrent users 
+(Few/Many)</LI></OL><P>Combinations of these factors will give rise to 64 
+possible models but for simplicity we can focus on the following commonly 
+occurring cases in the financial industry</P><P> </P><I><U><P>Model 1: 
+Historical market Information</P></I></U></FONT><FONT 
+SIZE=3><P>&nbsp;</P></FONT><TABLE BORDER CELLSPACING=2
+BORDERCOLOR="#000000" 
+CELLPADDING=7 WIDTH=536><TR><TD WIDTH="33%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Attribute </FONT></TD><TD WIDTH="67%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Specification</FONT></TD></TR><TR><TD
+WIDTH="33%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Periodicity of 
+Data</FONT></TD><TD WIDTH="67%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>Periodic</FONT></TD></TR><TR><TD WIDTH="33%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Density of Data</FONT></TD><TD
+WIDTH="67%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Dense</FONT></TD></TR><TR><TD 
+WIDTH="33%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Schedule of 
+updates</FONT></TD><TD WIDTH="67%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>Periodic updates (e.g. at the end of a business 
+day)</FONT></TD></TR><TR><TD WIDTH="33%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Complexity of queries</FONT></TD><TD WIDTH="67%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Complex (e.g.
+Decision support 
+queries)</FONT></TD></TR><TR><TD WIDTH="33%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Nature of query arrival</FONT></TD><TD WIDTH="67%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Batch</FONT></TD></TR><TR><TD 
+WIDTH="33%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Concurrency of 
+users</FONT></TD><TD WIDTH="67%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>Low (e.g. Few concurrent
+users)</FONT></TD></TR></TABLE><FONT 
+SIZE=3></FONT><FONT FACE="Arial"
+SIZE=3><P>&nbsp;</P><I><U><P>Model 2: Tick 
+databases for financial instruments</P></I></U></FONT><FONT 
+SIZE=3><P>&nbsp;</P></FONT><TABLE BORDER CELLSPACING=2
+BORDERCOLOR="#000000" 
+CELLPADDING=7 WIDTH=423><TR><TD WIDTH="42%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Attribute</FONT></TD><TD WIDTH="58%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Specification</FONT></TD></TR><TR><TD
+WIDTH="42%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Periodicity of 
+Data</FONT></TD><TD WIDTH="58%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>Non-periodic</FONT></TD></TR><TR><TD WIDTH="42%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Density of
+Data</FONT></TD><TD 
+WIDTH="58%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Sparse
+to moderately 
+dense</FONT></TD></TR><TR><TD WIDTH="42%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Schedule of updates</FONT></TD><TD WIDTH="58%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Continuous</FONT></TD></TR><TR><TD
+WIDTH="42%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Complexity of 
+queries</FONT></TD><TD WIDTH="58%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>Simple</FONT></TD></TR><TR><TD WIDTH="42%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Nature of query arrival</FONT></TD><TD
+WIDTH="58%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Ad hoc
+</FONT></TD></TR><TR><TD 
+WIDTH="42%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Concurrency of 
+users</FONT></TD><TD WIDTH="58%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>High (e.g. Many concurrent
+users)</FONT></TD></TR></TABLE><FONT 
+FACE="Arial" SIZE=3><P>&nbsp;</P><P>Let us now discuss the
+characteristics of 
+the two models in some detail:</P><U><P>Model 1: Historical Market 
+Information</P></U><DIR><P>Historical Market data systems are closely 
+related to decision support systems of the traditional relational database 
+world.  The various elements of this model
+are:</P></DIR><UL><I><LI>Data Model: 
+</I> In the case of historical time-series databases for market information, 
+the model consists of a few relational tables that typically contain 
+infrequently changing (static) information and a number of time-series tables. 
+The following tables describe the data in this 
+benchmark</LI></UL><I><P>&nbsp;</P><P>&nbsp;</P><DIR><P
+ALIGN="CENTER">Base 
+Information Table</P><P
+ALIGN="CENTER"></P></DIR></I></FONT><TABLE BORDER 
+CELLSPACING=2 BORDERCOLOR="#008000" CELLPADDING=7
+WIDTH=590><TR><TD WIDTH="17%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P
+ALIGN="CENTER">Field 
+Name</FONT></TD><TD WIDTH="18%" VALIGN="TOP"><FONT
+FACE="Arial" SIZE=3><P 
+ALIGN="CENTER">Type</FONT></TD><TD WIDTH="65%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P ALIGN="CENTER">Comments</FONT></TD></TR><TR><TD
+WIDTH="17%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Id</FONT></TD><TD
+WIDTH="18%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(30)</FONT></TD><TD WIDTH="65%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Unique Identifier for
+the financial 
+instrument e.g. IBM.N</FONT></TD></TR><TR><TD WIDTH="17%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Ex</FONT></TD><TD WIDTH="18%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Char(3)</FONT></TD><TD WIDTH="65%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Exchange on which the instrument is traded e.g. 
+&quot;N&quot; for the New York Stock
+Exchange</FONT></TD></TR><TR><TD 
+WIDTH="17%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Descr</FONT></TD><TD 
+WIDTH="18%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Varchar(256)</FONT></TD><TD WIDTH="65%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>A brief description of the financial security e.g. 
+&quot;International Business Machines, Armonk,
+NY&quot;</FONT></TD></TR><TR><TD 
+WIDTH="17%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>SIC</FONT></TD><TD 
+WIDTH="18%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(10)</FONT></TD><TD 
+WIDTH="65%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Standard Industry Code 
+e.g. &quot;COMPUTERS&quot; or
+&quot;CHEMICAL&quot;</FONT></TD></TR><TR><TD 
+WIDTH="17%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>SPR</FONT></TD><TD 
+WIDTH="18%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Char
+(4)</FONT></TD><TD 
+WIDTH="65%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>S&amp;P Rating for the 
+company e.g. &quot;AAA&quot;</FONT></TD></TR><TR><TD
+WIDTH="17%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Cu</FONT></TD><TD WIDTH="18%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(5)</FONT></TD><TD WIDTH="65%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The base currency in
+which the 
+security is traded e.g. &quot;USD&quot; for US
+Dollars</FONT></TD></TR><TR><TD 
+WIDTH="17%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>CreateDate</FONT></TD><TD 
+WIDTH="18%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Date</FONT></TD><TD 
+WIDTH="65%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Date
+this security came 
+into existence</FONT></TD></TR></TABLE><I><FONT FACE="Arial"
+SIZE=3><P 
+ALIGN="CENTER"></P><P ALIGN="CENTER">&nbsp;</P><P 
+ALIGN="CENTER">&nbsp;</P><DIR><DIR><P ALIGN="CENTER">Stock
+Splits (Irregular 
+Time-series)</P><P
+ALIGN="CENTER"></P></DIR></DIR></I></FONT><TABLE BORDER 
+CELLSPACING=2 BORDERCOLOR="#008000" CELLPADDING=7
+WIDTH=590><TR><TD WIDTH="17%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Field
+Name</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Type</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Comments</FONT></TD></TR><TR><TD 
+WIDTH="17%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Id</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(30)</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Identifier</FONT></TD></TR><TR><TD WIDTH="17%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>SplitDate</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Date</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Date the split is
+actually 
+effective</FONT></TD></TR><TR><TD WIDTH="17%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>EntryDate</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Date</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Date the split is announced</FONT></TD></TR><TR><TD
+WIDTH="17%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>SplitFactor</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The
+split factor 
+expressed as a decimal value. E.g. a 2 for 1 split is expressed as 0.5 (ie 
+1/2), a 4 for 3 is expressed as 0.75(ie
+3/4)</FONT></TD></TR></TABLE><I><FONT 
+FACE="Arial" SIZE=3><P ALIGN="CENTER"></P><P
+ALIGN="CENTER">&nbsp;</P><P 
+ALIGN="CENTER">&nbsp;</P><DIR><DIR><P
+ALIGN="CENTER">Dividends (Irregular 
+Timeseries)</P><P
+ALIGN="CENTER"></P></DIR></DIR></I></FONT><TABLE BORDER 
+CELLSPACING=2 BORDERCOLOR="#008000" CELLPADDING=7
+WIDTH=584><TR><TD WIDTH="20%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>FieldName</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Type</FONT></TD><TD WIDTH="66%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Comments</FONT></TD></TR><TR><TD 
+WIDTH="20%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Id</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(30)</FONT></TD><TD 
+WIDTH="66%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Identifier</FONT></TD></TR><TR><TD WIDTH="20%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>XdivDate</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FON
+T FACE="Arial" SIZE=3><P>Date</FONT></TD><TD WIDTH="66%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Date on which dividend is 
+disbursed</FONT></TD></TR><TR><TD WIDTH="20%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>DivAmt</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Float</FONT></TD><TD WIDTH="66%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Dividend Amount In the base currency of the 
+instrument</FONT></TD></TR><TR><TD WIDTH="20%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>AnnounceDate</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Date</FONT></TD><TD WIDTH="66%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Date on which the dividend is 
+announced</FONT></TD></TR></TABLE><FONT FACE="Arial"
+SIZE=3><P 
+ALIGN="CENTER"></P><P ALIGN="CENTER">&nbsp;</P><P 
+ALIGN="CENTER">&nbsp;</P><DIR><DIR><I><P
+ALIGN="CENTER">Market Data (Regular 
+Timeseries)</P><P
+ALIGN="CENTER"></P></DIR></DIR></I></FONT><TABLE BORDER 
+CELLSPACING=2 BORDERCOLOR="#008000" CELLPADDING=7
+WIDTH=583><TR><TD WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>FieldName</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Type</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Comments</FONT></TD></TR><TR><TD 
+WIDTH="16%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Id</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(30)</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Identifier</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Tradedate</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Date</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Trade
+Date</FONT></TD></TR><TR><TD 
+WIDTH="16%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>HightPrice</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>High
+price for the day    
+        </FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>LowPrice</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Low price for the day</FONT></TD></TR><TR><TD
+WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>ClosePrice</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Closing price for the 
+day</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>OpenPrice</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Open price for the day</FONT></TD></TR><TR><TD
+WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Volume</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Long</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Volume of shares 
+traded</FONT></TD></TR></TABLE><FONT FACE="Arial"
+SIZE=3><UL><LI>
+Market information is typically provided as a set of input files by a market 
+data vendor at the <I>end of each trading day</I>. These files correspond to 
+the tables defined above.  While the data for the <I>Base</I> 
+<I>Information</I> table, <I>Split Adjustment</I> Table and
+<I>Dividend</I> 
+Table is irregular (ie an external event triggers an entry into these tables), 
+the <I>Market Information</I> Table has an entry for every trading day. For
+the 
+purposes of this benchmark the implementation can select a scale factor 
+combination of the number securities under consideration and the number of 
+events for those securities. We suggest 3 scale factors, namely, 50,000 
+securities, 100,000 securities,
+and 1,000,000 securities, all for 4,000 days.
+These roughly correspond to all equity 
+securities in the US, all equity securities in the G7 countries and all equity 
+securities in the world.  Programs to generate the data can be found
+on the benchmark pages.
+</LI></UL><UL><LI>Query characteristics. </I>
+The queries model:</LI></UL><OL><DIR><DIR><OL><LI>Join of
+relational data and 
+time-series information</LI><LI>Access of long depth time-series
+information 
+for a few keys (deep history query) </LI><LI>Access of a short depth 
+time-series for a large number of keys (cross-sectional 
+queries)</LI><LI>Sorting</LI><LI>Grouping and 
+Aggregation</LI></OL></DIR></DIR></OL><DIR><DIR><P>Following are
+the 
+benchmark queries (we don't require any special query language). 
+Many of them include a notion of ``specified set of securities''
+or ``specified period''. These notions are defined
+with respect to a simple random model.
+</P></DIR></DIR></FONT><TABLE BORDER CELLSPACING=1
+BORDERCOLOR="#008080" 
+CELLPADDING=7 WIDTH=590><TR><TD WIDTH="5%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>1</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Get the closing price of a set of 10 stocks for a 10-year period
+and 
+group into weekly, monthly and yearly aggregates. For each aggregate period 
+determine the low, high and average closing price value. The output should be
+sorted by id and trade date.</FONT></TD></TR><TR><TD WIDTH="5%"
+VALIGN="TOP" 
+BGCOLOR="#c0c0c0"><FONT FACE="Arial"
+SIZE=3><P>2</FONT></TD><TD WIDTH="95%" 
+VALIGN="TOP" BGCOLOR="#c0c0c0"><FONT FACE="Arial"
+SIZE=3><P>Adjust all prices 
+and volumes (prices are multiplied by the split factor and volumes are divided 
+by the split factor) for a set of 1000 stocks to reflect the split events 
+during a specified 300 day period, 
+assuming that events occur before the first trade of 
+the split date. These are called split-adjusted prices and volumes. 
+</FONT></TD></TR><TR><TD WIDTH="5%" VALIGN="TOP"><FONT
+FACE="Arial" 
+SIZE=3><P>3</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>For each stock in a specified list of 1000 stocks, find the 
+differences between the daily high and daily low on the day of each split event
+during a specified period.</FONT></TD></TR><TR><TD WIDTH="5%"
+VALIGN="TOP" 
+BGCOLOR="#c0c0c0"><FONT FACE="Arial"
+SIZE=3><P>4</FONT></TD><TD WIDTH="95%" 
+VALIGN="TOP" BGCOLOR="#c0c0c0"><FONT FACE="Arial"
+SIZE=3><P>Calculate the value 
+of the S&amp;P500 and Russell 2000 index for a specified day using
+unadjusted 
+prices and the index composition of the 2 indexes (assume to be given) on the 
+specified day</FONT></TD></TR><TR><TD WIDTH="5%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>5</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Find the 21-day and 5-day moving average price
+for a 
+specified list of 1000 stocks during a 6-month period. (Use split adjusted 
+prices)</FONT></TD></TR><TR><TD WIDTH="5%" VALIGN="TOP"
+BGCOLOR="#c0c0c0"><FONT 
+FACE="Arial" SIZE=3><P>6</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP" 
+BGCOLOR="#c0c0c0"><FONT FACE="Arial" SIZE=3><P>(Based on the
+previous query) 
+Find the points (specific days) when the 5-month moving average intersects
+the 
+21-day moving average for these stocks. The output is to be sorted by id and 
+date.</FONT></TD></TR><TR><TD WIDTH="5%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>7</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Determine the value of  $100,000 now if 1 year ago it was
+invested 
+equally in 10 specified stocks (i.e. allocation for each stock is $10,000). The 
+trading strategy is: </P><P>When the 20-day moving average crosses over the 
+5-month moving average the complete allocation for that stock is invested and 
+when the 20-day moving average crosses below the 5-month moving average
+the 
+entire position is sold. The trades happen on the closing price of the trading 
+day.</FONT></TD></TR><TR><TD WIDTH="5%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>8</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Find the pair-wise coefficients of correlation in a set of 10 
+securities for a 2 year period. Sort the securities by the coefficient of 
+correlation, indicating the pair of securities corresponding to that row. 
+[Note: coefficient of correlation defined in
+appendix]</FONT></TD></TR><TR><TD 
+WIDTH="5%" VALIGN="TOP" BGCOLOR="#c0c0c0"><FONT
+FACE="Arial" 
+SIZE=3><P>9</FONT></TD><TD WIDTH="95%" VALIGN="TOP"
+BGCOLOR="#c0c0c0"><FONT 
+FACE="Arial" SIZE=3><P>Determine the yearly dividends and annual yield 
+(dividends/average closing price) for the past 3 years for all the stocks in 
+the Russell 2000 index that did not split during that period. Use unadjusted 
+prices since there were no splits to adjust for.
+</FONT></TD></TR></TABLE><FONT 
+FACE="Arial" SIZE=3><P>&nbsp;</P><UL><I><LI>Operational 
+parameters</LI></UL><DIR></I><P>Since the benchmark model assumes
+that the 
+level of concurrency is small, the number of users should be 5. The
+benchmark 
+methodology should be that each of the five users will pick a query at random 
+from the set above and submit it to the database. The five users will be 
+simultaneously active at any point in 
+time.</P><P>&nbsp;</P><P>&nbsp;</P></DIR><U><P>Model 2: Tick
+databases for 
+financial instruments</P></U></FONT><FONT FACE="Arial"
+SIZE=3></FONT><FONT 
+FACE="Arial" SIZE=3><P>This second benchmark 
+models the
+case where the database (consisting
+of ticks) is expected to keep up with a very high rate of 
+updates while responding to several users issuing fairly simple queries. 
+</P><P>
+Ticks are price 
+quotation or trade (transaction) prices and associated attributes for 
+individual securities that occur either on the floor of a stock exchange or in 
+an electronic trading system, such as the NASDAQ market system. Ticks
+include 2 
+basic kinds of data (1) Trades are transactions between buyers and a sellers at 
+a fixed price and quantity (2) Quotes are price quotations offered by buyers 
+and sellers.  Quotes can have the ask quote, the bid quote or both along with 
+their associate attributes such as quantity offered.</P><P>Let us now define 
+the different elements of this benchmark. They are:</P><UL><I><LI>Data
+model. 
+</I>The data model for this benchmark is simple. It consists of the following
+2 
+tables: </LI></UL><I><DIR><P ALIGN="CENTER">Base Information 
+Table</P></DIR></I></FONT><TABLE BORDER CELLSPACING=2
+BORDERCOLOR="#008000" 
+CELLPADDING=7 WIDTH=510><TR><TD WIDTH="19%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Field Name</FONT></TD><TD WIDTH="22%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Type</FONT></TD><TD WIDTH="59%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Comments</FONT></TD></TR><TR><TD WIDTH="19%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Id</FONT></TD><TD WIDTH="22%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Char(30)</FONT></TD><TD WIDTH="59%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Identifier for a
+security</FONT></TD></TR><TR><TD 
+WIDTH="19%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Ex</FONT></TD><TD 
+WIDTH="22%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(3)</FONT></TD><TD 
+WIDTH="59%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Exchange on which the 
+instrument is traded e.g. &quot;N&quot; for the New York Stock 
+Exchange</FONT></TD></TR><TR><TD WIDTH="19%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Descr</FONT></TD><TD WIDTH="22%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Varchar (256)</FONT></TD><TD WIDTH="59%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>A short description of the 
+security</FONT></TD></TR><TR><TD WIDTH="19%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>SIC</FONT></TD><TD WIDTH="22%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Char(10)</FONT></TD><TD WIDTH="59%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>The standard industry code for the
+security</FONT></TD></TR><TR><TD 
+WIDTH="19%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Cu</FONT></TD><TD 
+WIDTH="22%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(10)</FONT></TD><TD 
+WIDTH="59%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Base
+currency for the 
+security</FONT></TD></TR></TABLE><FONT FACE="Arial" 
+SIZE=3><P>&nbsp;</P><DIR><DIR><I><P
+ALIGN="CENTER">Trades/Quotes 
+Table</P></I></FONT><FONT SIZE=3></DIR></DIR></FONT><TABLE
+BORDER 
+CELLSPACING=2 BORDERCOLOR="#008000" CELLPADDING=7
+WIDTH=590><TR><TD WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>FieldName</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Type</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Comments</FONT></TD></TR><TR><TD 
+WIDTH="16%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Id</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Char(30)</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Identifier</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>SeqNo</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Integer</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>A unique sequence number for each trade or 
+quote</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>TradeDate</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Date</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>The trading date</FONT></TD></TR><TR><TD
+WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>TimeStamp</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Time</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The time a particular
+trade was 
+executed or Quote was generated</FONT></TD></TR><TR><TD
+WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>TradePrice</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The price at which the
+trade was 
+executed</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>TradeSize</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Integer</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>The number of shares traded in a
+transaction</FONT></TD></TR><TR><TD 
+WIDTH="16%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>AskPrice</FONT></TD><TD 
+WIDTH="14%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD 
+WIDTH="70%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The
+Price at which a 
+seller would sell a security</FONT></TD></TR><TR><TD WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>AskSize</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The size of the
+transaction offered 
+at the specified ask price.</FONT></TD></TR><TR><TD WIDTH="16%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>BidPrice</FONT></TD><TD WIDTH="14%" 
+VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>Float</FONT></TD><TD WIDTH="70%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>The price at which a
+buyer would buy 
+the security </FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>BidSize</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>Float</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT 
+FACE="Arial" SIZE=3><P>The size of the transaction offered at the specified
+bid 
+price</FONT></TD></TR><TR><TD WIDTH="16%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Type</FONT></TD><TD WIDTH="14%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Char</FONT></TD><TD WIDTH="70%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>An indication if this is a quoteor a trade  
+</FONT></TD></TR></TABLE><FONT FACE="Arial"
+SIZE=3><UL><I><LI>Data population, 
+Update frequency and volume.</I> Tick databases are generally populated by 
+adapters that receive data from real-time feeds. The frequency of updates is 
+constantly increasing but on the average we can assume that each security ticks
+(each corresponding to a record in the database) about 100 times during an 
+8-hour trading day.  Additionally, we can assume that the set of securities 
+being tracked is traded around the world and hence there is no quiescent
+period.
+ For the purposes of this benchmark we will assume that the system monitors 
+ticks on 1,000, 10,000 or 100,000 securities, where each represents a different 
+scale factor. </LI></UL><DIR><P>A very important consideration in tick 
+databases is the ability to quickly apply &quot;cancel/correct&quot;. 
+Occasionally an incorrect quote or trade record is published. The vendor will 
+then send a correction record with the identifier of the security and its 
+sequence number. The record will either be corrected according to the new 
+published or simply deleted.</P></DIR><UL><LI>Query characteristics. The 
+kinds of queries issued against an online tick databases are usually simple and 
+pre-determined.  Listed below are the set of queries to be used in the 
+benchmark.</LI></UL><I><P>&nbsp;</P></I></FONT><TABLE BORDER
+CELLSPACING=1 
+BORDERCOLOR="#008080" CELLPADDING=7 WIDTH=590><TR><TD
+WIDTH="5%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>1</FONT></TD><TD
+WIDTH="95%" 
+VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Get all ticks a specified
+set of 100 
+securities for a specified three hour time period on a specified trade 
+date.</FONT></TD></TR><TR><TD WIDTH="5%" VALIGN="TOP"
+BGCOLOR="#c0c0c0"><FONT 
+FACE="Arial" SIZE=3><P>2.</FONT></TD><TD WIDTH="95%"
+VALIGN="TOP" 
+BGCOLOR="#c0c0c0"><FONT FACE="Arial" SIZE=3><P>Determine the
+volume weighted 
+price of a security considering only the ticks in a specified 
+three hour interval</FONT></TD></TR>
+<TR><TD WIDTH="5%" VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>3. </FONT></TD><TD WIDTH="95%"
+VALIGN="TOP"><FONT FACE="Arial" 
+SIZE=3><P>Determine the top 10 percentage losers for the specified date on
+the 
+specified exchanges sorted by percentage loss. The loss is calculated as a 
+percentage of the last trade price of the previous
+day.</FONT></TD></TR><TR><TD 
+WIDTH="5%" VALIGN="TOP" BGCOLOR="#c0c0c0"><FONT
+FACE="Arial" SIZE=3><P>4. 
+</FONT></TD><TD WIDTH="95%" VALIGN="TOP"
+BGCOLOR="#c0c0c0"><FONT FACE="Arial" 
+SIZE=3><P>Determine the top 10 most active stocks for a specified date
+sorted 
+by cumulative trade volume by considering all trades
+</FONT></TD></TR><TR><TD 
+WIDTH="5%" VALIGN="TOP"><FONT FACE="Arial"
+SIZE=3><P>5.</FONT></TD><TD 
+WIDTH="95%" VALIGN="TOP"><FONT FACE="Arial" SIZE=3><P>Find
+the most active 
+stocks in the &quot;COMPUTER&quot; industry (use SIC 
+code)</FONT></TD></TR><TR><TD WIDTH="5%" VALIGN="TOP"
+BGCOLOR="#c0c0c0"><FONT 
+FACE="Arial" SIZE=3><P>6. </FONT></TD><TD WIDTH="95%"
+VALIGN="TOP" 
+BGCOLOR="#c0c0c0"><FONT FACE="Arial" SIZE=3><P> Find the 10
+stocks with the 
+highest percentage spreads. Spread is the difference between the last ask-price 
+and the last bid-price. Percentage spread is calculated as a percentage of the 
+mid-point price (average of ask and bid
+price).</FONT></TD></TR></TABLE><FONT 
+FACE="Arial" SIZE=3><I><P>&nbsp;</P><UL><LI>Operational
+parameters. </I>Since 
+usually tick systems have a relatively large number of concurrent users, we 
+will assume that there are 50 concurrent users for the benchmark. These users 
+randomly pick queries from the list above and submit them for execution.
+Each 
+user will submit each query only once and run through the complete list of 
+queries.</LI></UL><P>&nbsp;</P>
+<HR><H1> Finding Patterns in Temporal Data </H1>
+<br>
+<ul>
+<li>
+Financial traders have done data mining for many years.
+One trader described his work to me as follows:
+<i> I think about an arbitrage trick (pairs trading
+is such a trick). Program for a few months.
+Try the trick and either it works or it doesn't.
+If it doesn't, I try something new.
+If it works, I enjoy it until the arbitrage disappears.
+</i>
+<li>
+What does the research community have to offer to 
+such traders?
+<br>
+I present some research that I think might be most relevant.
+I will be updating this as time goes on.
+
+<li>
+U.M. Fayyad, G. Piatetsky-Shapiro, P. Smyth, and R. Uthurusamy, editors
+<i> Advances in Knowledge Discovery and Data mining</i>
+AAAI Press/ The MIT Press, 1996.
+The article by Berndt and Clifford about
+finding patterns in time series is particularly relevant to finance.
+<li>
+<i> Temporal Databases -- Research and Practice</i>
+Editors: Opher Etzion, Sushil Jajodia, Sury Sripada. (Springer-Verlag,
+1998).
+There, you will find articles about finding unexpected patterns (e.g. fraud) and
+multi-granularity data mining.
+<li>
+Christos Faloutsos 
+<i>
+Searching Multimedia Databases by Content
+</i>
+Kluwer Academic Publishers.
+<br>
+This book shows how to do signal processing analysis on time series
+to solve problems such as:
+<ul>
+<li>
+Discovering whether two time series have similar shapes:
+the basic idea is to 
+store the first few Fourier coefficients of a time sequence in a
+database and assert that two time sequences are similar if 
+their Fourier coefficients are close.
+(Remarkably this works well because the energy spectrum for
+stock prices declines with
+the power 2 with increasing coefficients.)
+Joint work with Rakesh Agrawal and Arun Swami.
+<br>
+The efficiency of this technique has been improved by
+Davood Rafiei and Alberto Mendelzon of the University of Toronto.
+<li>
+Subsequence matching (is this sequence
+close to some subsequence of that sequence?).
+Faloutsos
+uses a special data structure called Fastmap to make this performant.
+</ul>
+<li>
+Other papers explore
+the question of similarity search when time scaling and inversion
+is possible:
+<ul>
+<li>
+R. Agrawal, K-I Lin, H.S. Sawhney and K. Shim.
+``Fast similarity search in the presence of noise, scaling
+and translation in time-series databases.''
+Proc of the 21st VLDB Conference, 1995
+<li>
+D. Q. Goldin and P. C. Kanellakis.
+``On similarity queries for time-series data:
+constraint specification and implementation.''
+1st International Conference on the Principles
+and Practice of Constraint Programming. pp. 137-153.
+Springer-Verlag, LNCS 976. September 1995.
+<li>
+Davood Rafiei and Alberto Mendelzon.
+``Similarity-based queries for time series data''
+ACM Sigmod, pp. 13-24. May 1997
+<li>
+Yi,
+Efficient Retrieval of Similar Time
+Sequences Under Time Warping.
+Data Engineering, 1998.
+<li>
+Excellent work has also been done on data structures
+by many researchers at Brown, Polytechnic, and the
+University of Maryland, but that falls outside the data mining
+purview.
+</ul>
+
+<li>
+As an alternative to seeing whether two sequences or subsequences match,
+one might want to describe a desirable sequence (e.g. a head-and-shoulders
+movement of stock prices) and see whether it is present.
+Relevant papers about this include:
+<ul>
+<li>
+H.V. Jagadish, A. O. Mendelzon and T. Milo.
+Similarity-based queries. PODS 1995.
+<li>
+R. Agrawal, G. Psaila, E. L. Wimmers and M. Zait.
+Querying shapes of histories.
+Proceedings of the 21st VLDB Conference.
+pp. 502-514. 1995.
+<li>
+P. Seshadri, M. Livny and R. Ramakrishnan.
+Sequence query processing.
+ACM SIGMOD, pp. 430-441, 1994
+<br>
+Data model and query language for sequences in general,
+with time series as a special case.
+<li>
+Arie Shoshani, Kyoji Kawagoe: Temporal Data Management. VLDB 1986:
+79-88
+<br>
+One of the first papers in the literature.
+<li>
+Snodgrass, R.~T., editor, <i> The TSQL2 Temporal Query Language </i>,
+Kluwer
+Academic Publishers, 1995, 674+xxiv pages. The TSQL2 Language Design
+Committee consisted of Richard Snodgrass (chair), 
+Ilsoo Ahn, Gad Ariav, Don Batory, James
+Clifford, Curtis E. Dyreson, Ramez Elmasri, Fabio Grandi, Christian
+S. Jensen, Wolfgang Kaefer, Nick Kline, Krishna Kulkarni,
+T. Y. Cliff Leung, Nikos Lorentzos, John F. Roddick, Arie Segev,
+Michael D. Soo and Suryanarayana M. Sripada.
+<br>
+TSQL2 has time-varying aggregates, including moving window aggregates,
+aggregates over different time granularities, and weighted over time.
+<li>
+Munir Cochinwala, John Bradley: A Multidatabase System for Tracking and
+Retrieval of Financial Data. VLDB 1994: 714-721   
+<br>
+A paper discussing the implementation of a tick capture
+and query system --- for those brave enough to roll their own.
+<li>
+Raghu Ramakrishnan,
+Donko Donjerkovic,
+Arvind Ranganathan,
+Keven S. Beyer, and
+Muralidhar Krishnaprasad:
+SRQL: sorted relational query language
+SSDBM 98
+<br>
+A paper discussing a model in which relations are tables
+that can be ordered.
+This allows one to do moving averages, find ten cheapest, preceding
+fifteen, etc.
+The strategy is to extend SQL with order and special operators.
+<li>
+Leonid Libkin and colleagues:
+An optimizable array-oriented language based on comprehensions.
+The basic primitives are tabulation (analogous to selection),
+subscripting (remove elements from arrays), dimension
+reduction (like count of an array), and interaction
+between sets and arrays.
+<br>
+Optimizations are analogous to pushing selects into expressions
+and techniques that reduce the complexity of expressions.
+
+</ul>
+</ul>
+<HR><H1> Books on Time Series for Computer Scientists </H1>
+<ul>
+<li>
+C. Chatfield, 
+<i> The Analysis of Time Series: Theory and Practice </i>
+Chapman & Hall fourth edition 1984.
+Good general introduction, especially for those completely 
+new to time series.
+<li>
+P.J. Brockwell and R.A. Davis, 
+<i> Time Series: Theory and Methods</i>, 
+Springer Series in Statistics (1986).
+<li>
+B.D. Ripley and W.N. Venables, 
+<i> Modern Applied Statistics with S-Plus, Springer (1994) </i>
+Chapter 14 has a good discussion of time series.
+<br>
+http://www.stats.ox.ac.uk/~ripley/
+has a lot of useful functions.
+<li>
+FinTime, a time series benchmark for finance
+<br>
+http://cs.nyu.edu/cs/faculty/shasha/fintime.html
+</ul>
+<HR><H1> Appendix: Informal Review of Statistical Concepts</H1>
+<ul>
+<li>
+Recall that the goal of probability theory is to determine the likelihood
+of a given event given a probability distribution (e.g. how likely
+is it to get 5,300 heads in 10,000 flips of a fair coin?).
+<br>
+The goal of statistics is to determine a probability distribution
+given a series of observations or at least
+to disprove a null hypothesis (e.g. is a fair coin a reasonable
+model if I get 8,000 heads in 10,000 flips?).
+<li>
+In <b> parametric </b> statistics, one knows the form of the target probability
+distribution but not the value of certain parameters, e.g.
+coin flips are binomial but the probability of a head may be unknown.
+<br>
+In <b> non-parametric </b> statistics, one does not know the form
+of the target probability distribution.
+<br>
+In finance, most models are parametric (autoregression, option pricing).
+When models aren't, people use queries and eyeballs to figure
+out what to do.
+<li>
+<b> Stationary process </b>: one whose statistics (mean and variance)
+do not vary with time.
+Stationarity is a fundamental assumption of pairs trading
+and options pricing.
+<li>
+<b> Correlation</b>: a measure of the association between two series,
+e.g. the option open interest and the price of a security
+5 days later.
+If cov(x,y) represents the covariance between x and y
+and sigma(x) is the standard deviation of x, then
+<br>
+correlation(x,y) = cov(x,y)/(sigma(x)*sigma(y))
+<br>
+so is entirely symmetric and lies always between -1 and 1.
+<li>
+<b> Partial correlation </b>:
+suppose you are looking at the one day returns of Merck and Pfizer
+(two drug companies). You can look at them as raw data or you
+can subtract out the market influence via a least squares estimate 
+and use the correlation of the residuals.
+Least squares may not work because of differing betas (see below).
+<li>
+<b> Volatility </b>: a measure of the standard deviation
+of the value of a variable over a specific time,
+e.g. the annualized standard deviation of the returns.
+The return at time t is ln(p(t)/p(t-1)).
+This is a critical parameter in options pricing, because it determines
+the probability that a price will exceed a certain price range.
+<li>
+<b> Alpha and Beta</b>: suppose we estimate the relationship
+between the percentage change in price of some stock S vs.
+the percentage change in some market index M using a best fit
+(least squares)
+linear relationship:
+<br>
+s = a + bm
+<br>
+Then the parameter alpha (a) is the change in S independent of M
+and beta (b) is the slope of the best fit line.
+A riskless investment has a positive alpha and a zero beta,
+but most investments have a zero alpha and a positive beta.
+If beta is greater than 1, then S is more volatile than the market.
+If beta is negative, then S moves in the opposite direction
+from the market.
+Note that beta is different from correlation (and can
+be arbitrarily large or small) because it is not symmetric:
+<br>
+beta = cov(S,M)/(sigma(M)*sigma(M))
+<li>
+<b> ANOVA</b>: analysis of variance in cases when there is no missing data.
+This is used to model situations in which several factors can play
+a role and one wants to tease out a probabilistic model that describes
+their interaction.
+For example, product, location and customer income may be factors
+that influence buying behavior.
+ANOVA helps to figure out how to weight each one.
+More significant variants of this include
+<b> principal components analysis </b> 
+and <b> factor analysis </b>.
+In finance, one might use one of these to figure out what determines
+the price movement of a stock (perhaps half general market movement,
+one third interest rates, etc.).
+In psychology, one can ask a person 100 questions and then
+categorize the person according to a weighted sum of a few questions.
+<li>
+<b> Autoregression</b>: a statistical model which predicts future
+values from one or more previous ones.
+This generalizes trend forecasting as used to predict sales.
+Financial traders use this sparingly since models that look
+at the recent past often just follow a short term trend.
+As one trader put it:
+``they
+follow a trend and are always a day late and many dollars short.''
+In general, <b> regression </b> of y on x is a determination
+of how y depends on x.
+<li>
+<b> Maximum likelihood method</b>: suppose you are given a training set
+consisting of observations and the categories to which the observations
+belong.
+The maximum likelihood method selects the probability distribution
+that best explains the training set.
+For example, if you toss a coin 10,000 times and observe 
+that heads comes up 8,000, you assign a probability to the heads
+that maximizes the probability of this event.
+This will make the probability of heads be greater than 1/2.
+In finance, the maximum likelihood method is often used for forecasting
+based on previously seen patterns.
+</ul>
+
+<HR><H1> Acknowledgments </H1>
+<p>
+Lory Molesky,
+Judy Smith, David Rothman,
+and Rick Snodgrass
+made several  suggestions that contributed
+to this presentation.
+<p>
+Thank you for your attention.
+</body>
+</html>
+

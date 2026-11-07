@@ -1,0 +1,133 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_6.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Diag-Join: An Opportunistic Join Algorithm for 1:N Relationships</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_h.htm#Sven Helmer">Sven Helmer</a>, <a href="m_authors_w.htm#Till Westmann">Till Westmann</a>, <a href="m_authors_m.htm#Guido Moerkotte">Guido Moerkotte</a></center></td></tr></table></center><a target="disc_pdfF66" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Time of creation is one of the predominant (often implicit) clustering strategies found not only in Data Warehouse systems: line items are created together with their corresponding order, objects are created together with their subparts and so on.
+The newly created data is then appended to the existing data.
+We present a new join algorithm, called Diag- Join, which exploits time-of-creation clustering.
+If we are able to take advantage of time- of-creation clustering, then theperformance evaluation reveals the superiority of Diag-Join over standard join algorithms like block-wise nested-loop join, GRACE hash join, and index nested-loop join.
+We also present an analytical cost model for Diag-Join.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd>...
+<dt>[2]<dd><a name="Bratbergsengen84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bratbergsengen:Kjell.html">Kjell Bratbergsengen</a>:
+Hashing Methods and Relational Algebra Operations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb84.html#Bratbergsengen84">VLDB 1984</a>: 323-333<dt>[3]<dd><a name="DeWittG85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerber:Robert_H=.html">Robert H. Gerber</a>:
+Multiprocessor Hash-Based Join Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb85.html#DeWittG85">VLDB 1985</a>: 151-164<dt>[4]<dd><a name="DeWittKOSSW84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">Randy H. Katz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olken:Frank.html">Frank Olken</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">Leonard D. Shapiro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wood:David_A=.html">David A. Wood</a>:
+Implementation Techniques for Main Memory Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#DeWittKOSSW84">SIGMOD Conference 1984</a>: 1-8<dt>[5]<dd><a name="DeWittNS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+Parallel Sorting on a Shared-Nothing Architecture using Probabilistic Splitting.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis91.html#DeWittNS91">PDIS 1991</a>: 280-291<dt>[6]<dd><a name="FushimiKT86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fushimi:Shinya.html">Shinya Fushimi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tanaka:Hidehiko.html">Hidehiko Tanaka</a>:
+An Overview of The System Software of A Parallel Relational Database Machine GRACE.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb86.html#FushimiKT86">VLDB 1986</a>: 209-219<dt>[7]<dd>...
+<dt>[8]<dd><a name="Graefe94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Sort-Merge-Join: An Idea whose time has(h) passed?
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#Graefe94">ICDE 1994</a>: 406-417<dt>[9]<dd><a name="GraefeLS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Linville:Ann.html">Ann Linville</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">Leonard D. Shapiro</a>:
+Sort versus Hash Revisited.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde6.html#GraefeLS94">TKDE 6(6)</a>: 934-944(1994)<dt>[10]<dd><a name="HaasCLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">Miron Livny</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Skukla:Amit.html">Amit Skukla</a>:
+Seeking the Truth About ad hoc Join Costs.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb6.html#HaasCLS97">VLDB Journal 6(3)</a>: 241-256(1997)<dt>[11]<dd><a name="Harder78" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">Theo H&auml;rder</a>:
+Implementing a Generalized Access Path Structure for a Relational Database System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods3.html#Harder78">TODS 3(3)</a>: 285-298(1978)<dt>[12]<dd><a name="HarrisR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harris:Evan_P=.html">Evan P. Harris</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamohanarao:Kotagiri.html">Kotagiri Ramamohanarao</a>:
+Join Algorithm Costs Revisited.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#HarrisR96">VLDB Journal 5(1)</a>: 64-84(1996)<dt>[13]<dd>...
+<dt>[14]<dd>...
+<dt>[15]<dd><a name="KilgerM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kilger:Christoph.html">Christoph Kilger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moerkotte:Guido.html">Guido Moerkotte</a>:
+Indexing Multiple Sets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#KilgerM94">VLDB 1994</a>: 180-191<dt>[16]<dd><a name="KimKD89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">Won Kim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Kyung=Chang.html">Kyung-Chang Kim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dale:Alfred_G=.html">Alfred G. Dale</a>:
+Indexing Techniques for Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/kim89.html#KimKD89">Object-Oriented Concepts, Databases, and Applications 1989</a>: 371-394<dt>[17]<dd><a name="Kimball96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kimball:Ralph.html">Ralph Kimball</a>:
+The Data Warehouse Toolkit: Practical Techniques for Building Dimensional Data Warehouses.
+ John Wiley 1996, ISBN 0-471-15337-0<br>
+<dt>[18]<dd><a name="KitsuregawaNT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nakayama:Masaya.html">Masaya Nakayama</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Takagi:Mikio.html">Mikio Takagi</a>:
+The Effect of Bucket Size Tuning in the Dynamic Hybrid GRACE Hash Join Method.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb89.html#KitsuregawaNT89">VLDB 1989</a>: 257-266<dt>[19]<dd><a name="LorieY89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Young:Honesty_C=.html">Honesty C. Young</a>:
+A Low Communication Sort Algorithm for a Parallel Database Machine.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb89.html#LorieY89">VLDB 1989</a>: 125-134<dt>[20]<dd><a name="Menon86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Menon:Jai.html">Jai Menon</a>:
+A Study of Sort Algorithms for Multiprocessor Database Machines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb86.html#Menon86">VLDB 1986</a>: 197-206<dt>[21]<dd><a name="MishraE92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mishra:Priti.html">Priti Mishra</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eich:Margaret_H=.html">Margaret H. Eich</a>:
+Join Processing in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur24.html#MishraE92">Computing Surveys 24(1)</a>: 63-113(1992)<dt>[22]<dd><a name="NakayamaK88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nakayama:Masaya.html">Masaya Nakayama</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Takagi:Mikio.html">Mikio Takagi</a>:
+Hash-Partitioned Join Method Using Dynamic Destaging Strategy.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb88.html#NakayamaK88">VLDB 1988</a>: 468-478<dt>[23]<dd><a name="ONeilG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Multi-Table Joins Through Bitmapped Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod24.html#ONeilG95">SIGMOD Record 24(3)</a>: 8-11(1995)<dt>[24]<dd><a name="SalzbergTGSUV90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">Betty Salzberg</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsukerman:Alex.html">Alex Tsukerman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stewart:Michael.html">Michael Stewart</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Uren:Susan.html">Susan Uren</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vaughan:Bonnie.html">Bonnie Vaughan</a>:
+FastSort: A Distributed Single-Input Single-Output External Sort.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#SalzbergTGSUV90">SIGMOD Conference 1990</a>: 94-101<dt>[25]<dd><a name="SchneiderD90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Tradeoffs in Processing Complex Join Queries via Hashing in Multiprocessor Database Machines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#SchneiderD90">VLDB 1990</a>: 469-480<dt>[26]<dd><a name="Shapiro86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">Leonard D. Shapiro</a>:
+Join Processing in Database Systems with Large Main Memories.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods11.html#Shapiro86">TODS 11(3)</a>: 239-264(1986)<dt>[27]<dd><a name="ShinM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shin:Dong_Keun.html">Dong Keun Shin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meltzer:Arnold_Charles.html">Arnold Charles Meltzer</a>:
+A New Join Algorithm.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod23.html#ShinM94">SIGMOD Record 23(4)</a>: 13-18(1994)<dt>[28]<dd>...
+<dt>[29]<dd><a name="Valduriez87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#Valduriez87">TODS 12(2)</a>: 218-246(1987)<dt>[30]<dd><a name="XieH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xie:Zhaohui.html">Zhaohui Xie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>:
+Join Index Hierarchies for Supporting Efficient Navigations in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#XieH94">VLDB 1994</a>: 522-533</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/HelmerWM98,<br>  author    = {Sven Helmer and<br>               Till Westmann and<br>               Guido Moerkotte},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Diag-Join: An Opportunistic Join Algorithm for 1:N Relationships},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {98-109},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

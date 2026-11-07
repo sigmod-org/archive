@@ -1,0 +1,124 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_2.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Incremental Clustering for Mining in a Data Warehousing Environment</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_e.htm#Martin Ester">Martin Ester</a>, <a href="m_authors_k.htm#Hans-Peter Kriegel">Hans-Peter Kriegel</a>, <a href="m_authors_s.htm#Jorg Sander">Jorg Sander</a>, <a href="m_authors_w.htm#Michael Wimmer">Michael Wimmer</a>, <a href="m_authors_x.htm#Xiaowei Xu">Xiaowei Xu</a></center></td></tr></table></center><a target="disc_pdf 84" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Data warehouses provide a great deal of opportunities for performing data mining tasks such as classification and clustering.
+Typically, updates are collected and applied to the data warehouse periodically in a batch mode, e.g., during the night.
+Then, all patterns derived from the warehouse by some data mining algorithm have to be updated as well.
+Due to the very large size of the databases, it is highly desirable to perform these updates incrementally.
+In this paper, we present the first incremental clustering algorithm.
+Our algorithm is based on the clustering algorithm DBSCAN which is applicable to any database containing data from a metric space, e.g., to a spatial database or to a WWW-log database.
+Due to the density-based nature of DBSCAN, the insertion or deletion of anobject affects the current clustering only in the neighborhood of this object.
+Thus, efficient algorithms can be given for incremental insertions and deletions to an existing clustering.
+Based on the formal definition of clusters, it can be proven that the incremental algorithm yields the same result as DBSCAN.
+A performance evaluation of Incremental DBSCAN on a spatial database as well as on a WWW-log database is presented, demonstrating the efficiency of the proposed algorithm.
+Incremental DBSCAN yields significant speed-up factors over DBSCAN even for large numbers of daily updates in a data warehouse.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AF 96]<dd>...
+<dt>[AS 94]<dd><a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>:
+Fast Algorithms for Mining Association Rules in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#AgrawalS94">VLDB 1994</a>: 487-499<dt>[BKSS 90]<dd><a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">Norbert Beckmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>:
+The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">SIGMOD Conference 1990</a>: 322-331<dt>[Bou 96]<dd><a name="Bouguetta96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bouguettaya:Athman.html">Athman Bouguettaya</a>:
+On-Line Clustering.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#Bouguetta96">TKDE 8(2)</a>: 333-339(1996)<dt>[CHNW 96]<dd><a name="CheungHNW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheung:David_Wai=Lok.html">David Wai-Lok Cheung</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Vincent.html">Vincent Ng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:C=_Y=.html">C. Y. Wong</a>:
+Maintenance of Discovered Association Rules in Large Databases: An Incremental Updating Technique.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#CheungHNW96">ICDE 1996</a>: 106-114<dt>[CPZ 97]<dd><a name="CiacciaPZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ciaccia:Paolo.html">Paolo Ciaccia</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patella:Marco.html">Marco Patella</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zezula:Pavel.html">Pavel Zezula</a>:
+M-tree: An Efficient Access Method for Similarity Search in Metric Spaces.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#CiacciaPZ97">VLDB 1997</a>: 426-435<dt>[EKSX 96]<dd><a name="EsterKSX96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">Martin Ester</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">J&ouml;rg Sander</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">Xiaowei Xu</a>:
+A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#EsterKSX96">KDD 1996</a>: 226-231<dt>[EKX 95]<dd><a name="EsterKX95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">Martin Ester</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">Xiaowei Xu</a>:
+Knowledge Discovery in Large Spatial Databases: Focusing Techniques for Efficient Class Identification.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssd/ssd95.html#EsterKX95">SSD 1995</a>: 67-82<dt>[EW 98]<dd><a name="EsterW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">Martin Ester</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wittmann:R=.html">R. Wittmann</a>:
+Incremental Generalization for Mining in a Data Warehousing Environment.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt98.html#EsterW98">EDBT 1998</a>: 135-149<dt>[FAAM 97]<dd><a name="FeldmanAAM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Feldman:Ronen.html">Ronen Feldman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aumann:Yonatan.html">Yonatan Aumann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Amir:Amihood.html">Amihood Amir</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">Heikki Mannila</a>:
+Efficient Algorithms for Discovering Frequent Sets in Incremental Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dmkd/dmkd97.html#FeldmanAAM97">DMKD 1997</a>: 0-<dt>[FPS 96]<dd><a name="FayyadPS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fayyad:Usama_M=.html">Usama M. Fayyad</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">Gregory Piatetsky-Shapiro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smyth:Padhraic.html">Padhraic Smyth</a>:
+Knowledge Discovery and Data Mining: Towards a Unifying Framework.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#FayyadPS96">KDD 1996</a>: 82-88<dt>[Gue 94]<dd><a name="Guting94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=ting:Ralf_Hartmut.html">Ralf Hartmut G&uuml;ting</a>:
+An Introduction to Spatial Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb3.html#Guting94">VLDB Journal 3(4)</a>: 357-399(1994)<dt>[HCC93]<dd><a name="HanCC93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cai:Yandong.html">Yandong Cai</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cercone:Nick.html">Nick Cercone</a>:
+Data-Driven Discovery of Quantitative Rules in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#HanCC93">TKDE 5(1)</a>: 29-40(1993)<dt>[Huy 97]<dd><a name="Huyn97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huyn:Nam.html">Nam Huyn</a>:
+Multiple-View Self-Maintenance in Data Warehousing Environments.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#Huyn97">VLDB 1997</a>: 26-35<dt>[KR 90]<dd>L. Kaufman, P. J. Rousseeuw:
+Finding Groups in Data: An Introduction to Cluster Analysis.
+ John Wiley 1990<br>
+<dt>[Luo 95]<dd>...
+<dt>[MJHS 96]<dd>...
+<dt>[MQM 97]<dd><a name="MumickQM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Barinderpal_Singh.html">Barinderpal Singh Mumick</a>:
+Maintenance of Data Cubes and Summary Tables in a Warehouse.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#MumickQM97">SIGMOD Conference 1997</a>: 100-111<dt>[NH 94]<dd><a name="NgH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">Raymond T. Ng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>:
+Efficient and Effective Clustering Methods for Spatial Data Mining.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#NgH94">VLDB 1994</a>: 144-155<dt>[SEKX 98]<dd>...
+<dt>[Sib 73]<dd><a name="Sibson73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sibson:R=.html">R. Sibson</a>:
+SLINK: An Optimally Efficient Algorithm for the Single-Link Cluster Method.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cj/cj16.html#Sibson73">The Computer Journal 16(1)</a>: 30-34(1973)<dt>[ZRL 96]<dd><a name="ZhangRL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Tian.html">Tian Zhang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">Miron Livny</a>:
+BIRCH: An Efficient Data Clustering Method for Very Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ZhangRL96">SIGMOD Conf. 1996</a>: 103-114</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/EsterKSWX98,<br>  author    = {Martin Ester and<br>               Hans-Peter Kriegel and<br>               J{\"o}rg Sander and<br>               Michael Wimmer and<br>               Xiaowei Xu},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Incremental Clustering for Mining in a Data Warehousing Environment},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {323-333},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

@@ -1,0 +1,540 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - DBMSs on a Modern Processor: Where Does Time Go?</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+DBMSs on a Modern Processor: Where Does Time Go?
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_anastassia_ailamak.htm">Anastassia Ailamaki</a>, 
+<a href = "a_david_j_dewitt.htm">David J. DeWitt</a>, 
+<a href = "a_mark_d_hill.htm">Mark D. Hill</a>, and 
+<a href = "a_david_a_wood.htm">David A. Wood</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/dbmssonamodernpandam.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbunderstandmance.htm">Return to Understanding Database Performance</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Recent high-performance processors employ sophisticated techniques to overlap and simultaneously execute multiple computation and memory operations. Intuitively, these techniques should help database applications, which are becoming increasingly compute and memory bound. Unfortunately, recent studies report that faster processors do not improve database system performance to the same extent as scientific workloads. Recent work on database systems focusing on minimizing memory latencies, such as cache-conscious algorithms for sorting and data placement, is one step toward addressing this problem. However, to best design high performance DBMSs we must carefully evaluate and understand the processor and memory behavior of commercial DBMSs on today's hardware platforms. 
+<p>
+ In this paper we answer the question "Where does time go when a database system is executed on a modern computer platform?" We examine four commercial DBMSs running on an Intel Xeon and NT 4.0. We introduce a framework for analyzing query execution time on a DBMS running on a server with a modern processor and memory architecture. To focus on processor and memory interactions and exclude effects from the I/O subsystem, we use a memory resident database. Using simple queries we find that database developers should (a) optimize data placement for the second level of data cache, and not the first, (b) optimize instruction placement to reduce first-level instruction cache stalls, but (c) not expect the overall execution time to decrease significantly without addressing stalls related to subtle implementation issues (e.g., branch prediction).  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="Arpaci-DusseauACHP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpaci=Dusseau:Andrea_C=.html">
+Andrea C. Arpaci-Dusseau
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpaci=Dusseau:Remzi.html">
+Remzi Arpaci-Dusseau
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Culler:David_E=.html">
+David E. Culler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">
+David A. Patterson
+</a>
+: High-Performance Sorting on Networks of Workstations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#Arpaci-DusseauACHP97">
+SIGMOD Conference 1997
+</a>
+: 243-254
+<dt>
+[2]
+<dd>
+<a name="BarrosoGB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barroso:Luiz_Andr=eacute=.html">
+Luiz Andr&eacute; Barroso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gharachorloo:Kourosh.html">
+Kourosh Gharachorloo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bugnion:Edouard.html">
+Edouard Bugnion
+</a>
+: Memory System Characterization of Commercial Workloads. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca98.html#BarrosoGB98">
+ISCA 1998
+</a>
+: 3-14
+<dt>
+[3]
+<dd>
+<a name="ChilimbiHL99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chilimbi:Trishul_M=.html">
+Trishul M. Chilimbi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hill:Mark_D=.html">
+Mark D. Hill
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larus:James_R=.html">
+James R. Larus
+</a>
+: Cache-Conscious Structure Layout. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pldi/pldi99.html#ChilimbiHL99">
+PLDI 1999
+</a>
+: 1-12
+<dt>
+[4]
+<dd>
+<a name="EickemeyerJKSL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eickemeyer:Richard_J=.html">
+Richard J. Eickemeyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:Ross_E=.html">
+Ross E. Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kunkel:Steven_R=.html">
+Steven R. Kunkel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Squillante:Mark_S=.html">
+Mark S. Squillante
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liu:Shiafun.html">
+Shiafun Liu
+</a>
+: Evaluation of Multithreaded Uniprocessors for Commercial Application Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca96.html#EickemeyerJKSL96">
+ISCA 1996
+</a>
+: 203-212
+<dt>
+[5]
+<dd>
+<a name="Gray93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+: The Benchmark Handbook for Database and Transaction Systems (2nd Edition).  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993
+<br>
+ 
+<dt>
+[6]
+<dd>
+<a name="HennessyP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hennessy:John_L=.html">
+John L. Hennessy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">
+David A. Patterson
+</a>
+: Computer Architecture: A Quantitative Approach, 2nd Edition.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1996, ISBN 1-55860-329-8
+<br>
+ 
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="KeetonPHRB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keeton:Kimberly.html">
+Kimberly Keeton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">
+David A. Patterson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/He:Yong_Qiang.html">
+Yong Qiang He
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raphael:Roger_C=.html">
+Roger C. Raphael
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baker:Walter_E=.html">
+Walter E. Baker
+</a>
+: Performance Characterization of a Quad Pentium Pro SMP using OLTP Workloads. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca98.html#KeetonPHRB98">
+ISCA 1998
+</a>
+: 15-26
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="LarsonG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">
+Per-&Aring;ke Larson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Memory Management During Run Generation in External Sorting. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#LarsonG98">
+SIGMOD Conference 1998
+</a>
+: 472-483
+<dt>
+[13]
+<dd>
+<a name="LoBEGLP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lo:Jack_L=.html">
+Jack L. Lo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barroso:Luiz_Andr=eacute=.html">
+Luiz Andr&eacute; Barroso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eggers:Susan_J=.html">
+Susan J. Eggers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gharachorloo:Kourosh.html">
+Kourosh Gharachorloo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Henry_M=.html">
+Henry M. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Parekh:Sujay_S=.html">
+Sujay S. Parekh
+</a>
+: An Analysis of Database Workload Performance on Simultaneous Multithreaded Processors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca98.html#LoBEGLP98">
+ISCA 1998
+</a>
+: 39-50
+<dt>
+[14]
+<dd>
+<a name="MaynardDO94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maynard:Ann_Marie_Grizzaffi.html">
+Ann Marie Grizzaffi Maynard
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Donnelly:Colette_M=.html">
+Colette M. Donnelly
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olszewski:Bret_R=.html">
+Bret R. Olszewski
+</a>
+: Contrasting Characteristics and Cache Performance of Technical and Multi-User Commercial Workloads. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/asplos/asplos94.html#MaynardDO94">
+ASPLOS 1994
+</a>
+: 145-156
+<dt>
+[15]
+<dd>
+<a name="NybergBCGL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nyberg:Chris.html">
+Chris Nyberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barclay:Tom.html">
+Tom Barclay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cvetanovic:Zarka.html">
+Zarka Cvetanovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+: AlphaSort: A RISC Machine Sort. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#NybergBCGL94">
+SIGMOD Conference 1994
+</a>
+: 233-242
+<dt>
+[16]
+<dd>
+<a name="RanganathanGAB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ranganathan:Parthasarathy.html">
+Parthasarathy Ranganathan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gharachorloo:Kourosh.html">
+Kourosh Gharachorloo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adve:Sarita_V=.html">
+Sarita V. Adve
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barroso:Luiz_Andr=eacute=.html">
+Luiz Andr&eacute; Barroso
+</a>
+: Performance of Database Workloads on Shared-Memory Systems with Out-of-Order Processors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/asplos/asplos98.html#RanganathanGAB98">
+ASPLOS 1998
+</a>
+: 307-318
+<dt>
+[17]
+<dd>
+<a name="ShatdalKN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shatdal:Ambuj.html">
+Ambuj Shatdal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kant:Chander.html">
+Chander Kant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Cache Conscious Algorithms for Relational Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 510-521
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+... 
+<dt>
+[20]
+<dd>
+<a name="YehP91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yeh:Tse=Yu.html">
+Tse-Yu Yeh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patt:Yale_N=.html">
+Yale N. Patt
+</a>
+: Two-Level Adaptive Training Branch Prediction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/micro/micro91.html#YehP91">
+MICRO 1991
+</a>
+: 51-61
+<dt>
+[21]
+<dd>
+<a name="RosenblumBHWG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenblum:Mendel.html">
+Mendel Rosenblum
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bugnion:Edouard.html">
+Edouard Bugnion
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Herrod:Stephen_Alan.html">
+Stephen Alan Herrod
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Witchel:Emmett.html">
+Emmett Witchel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Anoop.html">
+Anoop Gupta
+</a>
+: The Impact of Architectural Trends on Operating System Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp95.html#RosenblumBHWG95">
+SOSP 1995
+</a>
+: 285-298
+<dt>
+[22]
+<dd>
+<a name="ThakkarS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thakkar:Shreekant_S=.html">
+Shreekant S. Thakkar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sweiger:Mark.html">
+Mark Sweiger
+</a>
+: Performance of an OLTP Application on Symmetry Multiprocessor System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca90.html#ThakkarS90">
+ISCA 1990
+</a>
+: 228-238
+<dt>
+[23]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/AilamakiDHW99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Anastassia&nbsp;Ailamaki&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David&nbsp;J.&nbsp;DeWitt&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;D.&nbsp;Hill&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David&nbsp;A.&nbsp;Wood},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{DBMSs&nbsp;on&nbsp;a&nbsp;Modern&nbsp;Processor:&nbsp;Where&nbsp;Does&nbsp;Time&nbsp;Go?},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{266-277},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

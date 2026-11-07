@@ -1,0 +1,682 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Exact and Approximate Aggregation in Constraint Query</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_1.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Exact and Approximate Aggregation in Constraint Query
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_michael_benedikt.htm">Michael Benedikt</a> and 
+<a href = "a_leonid_libkin.htm">Leonid Libkin</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/exactandapproximile.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="slides/pods/exactandapproximile/index.pdf" >View Slides (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsdatabasethmpler.htm">Return to Database Theory Sampler</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ We investigate the problem of how to extend constraint query languages with aggregate operators. We deal with standard relational aggregation, and also with aggregates specific to spatial ,data, such as volume. We study several approaches, including the addition of a new class of approximate aggregate operators which allow an error tolerance in the computation. We show how techniques based on VC-dimension can be used to give languages with approximation operators, but also show that these languages have a number of shortcomings. We then give a set of results showing that it is impossible to get constraint-based languages that admit definable aggregation operators, both for exact operators and for approximate ones. These results are quite robust, in that they show that closure under aggregation is problematic even .when the class of functions permitted in constraints is expanded. This motivates a different approach to the aggregation problem. We introduce a language FO + POLY + SUM, which permits standard discrete aggregation operators to be applied to the outputs of range-restricted constraint queries. We show that this language has a number of attractive closure and expressivity properties, and that it can compute volumes of linear-constraint databases. We also show, using techniques from machine learning, that a small extension of FO + POLY + SUM can probabilistically find approximations of volumes for polynomial-constraint databases.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AbiteboulHV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">
+Richard Hull
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Foundations of Databases.  Addison-Wesley 1995, ISBN 0-201-53771-0
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/abiteboul95.html">
+Contents
+</a>
+<dt>
+[2]
+<dd>
+<a name="AbiteboulV91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Datalog Extensions for Database Queries and Updates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss43.html#AbiteboulV91">
+JCSS 43(1)
+</a>
+: 62-124(1991)
+<dt>
+[3]
+<dd>
+... 
+<dt>
+[4]
+<dd>
+... 
+<dt>
+[5]
+<dd>
+<a name="BenediktDLW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Benedikt:Michael.html">
+Michael Benedikt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dong:Guozhu.html">
+Guozhu Dong
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Limsoon.html">
+Limsoon Wong
+</a>
+: Relational Expressive Power of Constraint Query Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm45.html#BenediktDLW98">
+JACM 45(1)
+</a>
+: 1-34(1998)
+<dt>
+[6]
+<dd>
+<a name="BenediktL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Benedikt:Michael.html">
+Michael Benedikt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+: Languages for Relational Databases over Interpreted Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 87-98
+<dt>
+[7]
+<dd>
+<a name="BenediktL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Benedikt:Michael.html">
+Michael Benedikt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">
+Leonid Libkin
+</a>
+: Safe Constraint Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 99-108
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="BlumerEHW89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blumer:Anselm.html">
+Anselm Blumer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ehrenfeucht:Andrzej.html">
+Andrzej Ehrenfeucht
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haussler:David.html">
+David Haussler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Warmuth:Manfred_K=.html">
+Manfred K. Warmuth
+</a>
+: Learnability and the Vapnik-Chervonenkis Dimension. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 36(4)
+</a>
+: 929-965(1989)
+<dt>
+[11]
+<dd>
+<a name="ChomickiGK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chomicki:Jan.html">
+Jan Chomicki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldin:Dina_Q=.html">
+Dina Q. Goldin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuper:Gabriel_M=.html">
+Gabriel M. Kuper
+</a>
+: Variable Independence and Aggregation Closure. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1996
+</a>
+: 40-48
+<dt>
+[12]
+<dd>
+<a name="ChomickiK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chomicki:Jan.html">
+Jan Chomicki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuper:Gabriel_M=.html">
+Gabriel M. Kuper
+</a>
+: Measuring Infinite Relations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1995
+</a>
+: 78-85
+<dt>
+[13]
+<dd>
+<a name="DenenbergGS86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Denenberg:Larry.html">
+Larry Denenberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gurevich:Yuri.html">
+Yuri Gurevich
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shelah:Saharon.html">
+Saharon Shelah
+</a>
+: Definability by Constant-Depth Polynomial-Size Circuits. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Information and Control 70(2/3)
+</a>
+: 216-240(1986)
+<dt>
+[14]
+<dd>
+<a name="DyerF88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dyer:M=_E=.html">
+M. E. Dyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Frieze:Alan_M=.html">
+Alan M. Frieze
+</a>
+: On the Complexity of Computing the Volume of a Polyhedron. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp17.html#DyerF88">
+SIAM J. Comput. 17(5)
+</a>
+: 967-974(1988)
+<dt>
+[15]
+<dd>
+<a name="DyerFK91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dyer:Martin.html">
+Martin Dyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Frieze:Alan_M=.html">
+Alan M. Frieze
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kannan:Ravi.html">
+Ravi Kannan
+</a>
+: A Random Polynomial Time Algorithm for Approximating the Volume of Convex Bodies. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm38.html#DyerFK91">
+JACM 38(1)
+</a>
+: 1-17(1991)
+<dt>
+[16]
+<dd>
+<a name="GibbonsM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+: New Sampling-Based Summary Statistics for Improving Approximate Query Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#GibbonsM98">
+SIGMOD Conference 1998
+</a>
+: 331-342
+<dt>
+[17]
+<dd>
+<a name="GoldbergJ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldberg:Paul_W=.html">
+Paul W. Goldberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jerrum:Mark.html">
+Mark Jerrum
+</a>
+: Bounding the Vapnik-Chervonenkis Dimension of Concept Classes Parameterized by Real Numbers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml18.html#GoldbergJ95">
+Machine Learning 18(2-3)
+</a>
+: 131-148(1995)
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="GrumbachS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grumbach:St=eacute=phane.html">
+St&eacute;phane Grumbach
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Su:Jianwen.html">
+Jianwen Su
+</a>
+: Finitely Representable Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss55.html#GrumbachS97">
+JCSS 55(2)
+</a>
+: 273-298(1997)
+<dt>
+[20]
+<dd>
+<a name="GrumbachS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grumbach:St=eacute=phane.html">
+St&eacute;phane Grumbach
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Su:Jianwen.html">
+Jianwen Su
+</a>
+: Queries with Arithmetical Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs173.html#GrumbachS97">
+TCS 173(1)
+</a>
+: 151-181(1997)
+<dt>
+[21]
+<dd>
+<a name="GrumbachRT99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grumbach:St=eacute=phane.html">
+St&eacute;phane Grumbach
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafanelli:Maurizio.html">
+Maurizio Rafanelli
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tininini:Leonardo.html">
+Leonardo Tininini
+</a>
+: Querying Aggregate Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1999
+</a>
+: 174-184
+<dt>
+[22]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HellersteinHW97">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[23]
+<dd>
+<a name="KanellakisKR95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanellakis:Paris_C=.html">
+Paris C. Kanellakis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuper:Gabriel_M=.html">
+Gabriel M. Kuper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Revesz:Peter_Z=.html">
+Peter Z. Revesz
+</a>
+: Constraint Query Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss51.html#KanellakisKR95">
+JCSS 51(1)
+</a>
+: 26-52(1995)
+<dt>
+[24]
+<dd>
+<a name="KarpinskiM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Karpinski:Marek.html">
+Marek Karpinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Macintyre:Angus.html">
+Angus Macintyre
+</a>
+: Approximating the Volume of General Pfaffian Bodies. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/birthday/ehrenfeucht97.html#KarpinskiM97">
+Structures in Logic and Computer Science 1997
+</a>
+: 162-173
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26]
+<dd>
+<a name="Koiran95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koiran:Pascal.html">
+Pascal Koiran
+</a>
+: Approximating the Volume of Definable Sets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/focs/focs95.html#Koiran95">
+FOCS 1995
+</a>
+: 134-141
+<dt>
+[27]
+<dd>
+<a name="Kuper93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuper:Gabriel_M=.html">
+Gabriel M. Kuper
+</a>
+: Aggregation in Constraint Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ppcp/ppcp93.html#Kuper93">
+PPCP 1993
+</a>
+: 166-173
+<dt>
+[28]
+<dd>
+... 
+<dt>
+[29]
+<dd>
+<a name="NaqviT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naqvi:Shamim_A=.html">
+Shamim A. Naqvi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsur:Shalom.html">
+Shalom Tsur
+</a>
+: A Logical Language for Data and Knowledge Bases.  Computer Science Press 1989, ISBN 0-7167-8200-6
+<br>
+ 
+<dt>
+[30]
+<dd>
+<a name="PapadimitriouSV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadimitriou:Christos_H=.html">
+Christos H. Papadimitriou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Topological Queries in Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1996
+</a>
+: 81-92
+<dt>
+[31]
+<dd>
+<a name="PapadimitriouY96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadimitriou:Christos_H=.html">
+Christos H. Papadimitriou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: On Limited Nondeterminism and the Complexity of the V-C Dimension. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss53.html#PapadimitriouY96">
+JCSS 53(2)
+</a>
+: 161-170(1996)
+<dt>
+[32]
+<dd>
+<a name="ParedaensBG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paredaens:Jan.html">
+Jan Paredaens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bussche:Jan_Van_den.html">
+Jan Van den Bussche
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gucht:Dirk_Van.html">
+Dirk Van Gucht
+</a>
+: First-order Queries on Finite Structures over the Reals. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+LICS 1995
+</a>
+: 79-87
+<dt>
+[33]
+<dd>
+... 
+<dt>
+[34]
+<dd>
+... 
+<dt>
+[35]
+<dd>
+<a name="SegoufinV98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Segoufin:Luc.html">
+Luc Segoufin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Querying Spatial Databases via Topological Invariants. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 89-98
+<dt>
+[36]
+<dd>
+... 
+<dt>
+[37]
+<dd>
+... 
+<dt>
+[38]
+<dd>
+<a name="VandeurzenGG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vandeurzen:Luc.html">
+Luc Vandeurzen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">
+Marc Gyssens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gucht:Dirk_Van.html">
+Dirk Van Gucht
+</a>
+: An Expressive Language for Linear Spatial Database Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 109-118
+<dt>
+[39]
+<dd>
+... 
+<dt>
+[40]
+<dd>
+... 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Vianu00c" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Review - Exact and Approximate Aggregation in Constraint Query. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dr/dr2.html#Vianu00c">
+ACM SIGMOD Digital Review 2
+</a>
+: (2000)
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/BenediktL99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Michael&nbsp;Benedikt&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leonid&nbsp;Libkin},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Exact&nbsp;and&nbsp;Approximate&nbsp;Aggregation&nbsp;in&nbsp;Constraint&nbsp;Query},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{102-113},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

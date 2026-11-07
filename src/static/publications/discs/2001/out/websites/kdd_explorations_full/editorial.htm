@@ -1,0 +1,2937 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=FrontPage.Editor.Document>
+<meta name=Generator content="Microsoft FrontPage 4.0">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./editorial_files/filelist.xml">
+<link rel=Edit-Time-Data href="./editorial_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>SIGKDD Explorations, Volume 2, Issue 2: Editorial</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>End User Computing Services</o:Author>
+  <o:LastAuthor>paulb</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>90</o:TotalTime>
+  <o:LastPrinted>2001-03-24T18:01:00Z</o:LastPrinted>
+  <o:Created>2001-03-24T18:03:00Z</o:Created>
+  <o:LastSaved>2001-03-24T18:03:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>5188</o:Words>
+  <o:Characters>29576</o:Characters>
+  <o:Company>ACM</o:Company>
+  <o:Lines>246</o:Lines>
+  <o:Paragraphs>59</o:Paragraphs>
+  <o:CharactersWithSpaces>36321</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackRevisions/>
+  <w:DoNotShowRevisions/>
+  <w:DoNotPrintRevisions/>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:UsePrinterMetrics/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:536902279 -2147483648 8 0 511 0;}
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536902279 -2147483648 8 0 511 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l0 level1 lfo3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l0 level2 lfo3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-parent:"Heading 2";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l0 level3 lfo3;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h4
+	{mso-style-parent:"Heading 3";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l0 level4 lfo3;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h5
+	{mso-style-parent:"List Number 3";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l0 level5 lfo3;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l0 level6 lfo3;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l0 level7 lfo3;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l0 level8 lfo3;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:justify;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l0 level9 lfo3;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.1in;
+	text-align:justify;
+	text-indent:-.1in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{mso-ansi-font-size:9.0pt;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	vertical-align:super;}
+p.MsoListNumber3, li.MsoListNumber3, div.MsoListNumber3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.75in;
+	text-align:justify;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.Author, li.Author, div.Author
+	{mso-style-name:Author;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.Paper-Title, li.Paper-Title, div.Paper-Title
+	{mso-style-name:Paper-Title;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Affiliations, li.Affiliations, div.Affiliations
+	{mso-style-name:Affiliations;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.Bullet, li.Bullet, div.Bullet
+	{mso-style-name:Bullet;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.1in;
+	text-align:justify;
+	text-indent:-.1in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.E-Mail, li.E-Mail, div.E-Mail
+	{mso-style-name:E-Mail;
+	mso-style-parent:Author;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Helvetica;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.Abstract, li.Abstract, div.Abstract
+	{mso-style-name:Abstract;
+	mso-style-parent:"Heading 1";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Captions, li.Captions, div.Captions
+	{mso-style-name:Captions;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-element:frame;
+	mso-element-frame-width:3.25in;
+	mso-element-frame-height:1.5in;
+	mso-element-frame-hspace:9.35pt;
+	mso-element-wrap:around;
+	mso-element-anchor-horizontal:column;
+	mso-element-top:bottom;
+	mso-height-rule:exactly;
+	mso-element-anchor-lock:locked;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.References, li.References, div.References
+	{mso-style-name:References;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+ins
+	{mso-style-type:export-only;
+	text-decoration:none;}
+span.msoDel
+	{mso-style-type:export-only;
+	mso-style-name:"";
+	text-decoration:line-through;
+	display:none;
+	color:red;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-numbers:roman-lower;
+	mso-footer:url("./editorial_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-numbers:roman-lower;
+	mso-columns:4 not-even 112.5pt 4.5pt 112.5pt 9.0pt 111.35pt 20.25pt 133.9pt;
+	mso-footer:url("./editorial_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-columns:3 even 0in;
+	mso-footer:url("./editorial_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+@page Section4
+	{size:8.5in 11.0in;
+	margin:76.5pt .75in 67.5pt .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-page-numbers:roman-lower;
+	mso-columns:2 even 23.75pt;
+	mso-footer:url("./editorial_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section4
+	{page:Section4;}
+@page Section5
+	{size:8.5in 11.0in;
+	margin:.75in .75in 1.0in .75in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-footer:url("./editorial_files/header.htm") f1;
+	mso-paper-source:0;}
+div.Section5
+	{page:Section5;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:-5;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level4
+	{mso-level-style-link:"Heading 4";
+	mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level5
+	{mso-level-style-link:"Heading 5";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level6
+	{mso-level-style-link:"Heading 6";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:0in;
+	mso-level-legacy-space:.1in;
+	margin-left:0in;
+	text-indent:0in;}
+@list l1
+	{mso-list-id:1864198689;
+	mso-list-type:simple;
+	mso-list-template-ids:-1911514014;}
+@list l1:level1
+	{mso-level-text:"\[%1\]";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=Paper-Title style='margin-bottom:3.0pt'><span style='mso-bidi-font-family:
+Tahoma'>Editorial<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></p>
+
+</div>
+
+<span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><ins cite="mailto:paulb"
+datetime="2001-02-20T10:48"><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</ins></span>
+
+<div class=Section2>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">P. S. Bradley<o:p></o:p></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><span
+style='font-size:9.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">digiMine, Inc<o:p></o:p></ins></span></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">10500 NE 8<sup>th</sup>
+Street<br>
+Bellevue, WA<span style="mso-spacerun: yes">  </span>98004 <o:p></o:p></ins></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">U.S.A.<o:p></o:p></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">paulb@digiMine.com</ins></span><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:48"><o:p></o:p></del></span></ins></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:48"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:48"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></span></p>
+
+<p class=Author style='margin-bottom:0in;margin-bottom:.0001pt;mso-list:none;
+mso-list-ins:"Kyuseok Shim" 20010219T0213'><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:48">P. S. Bradley</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:48"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">K. Shim</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><o:p></o:p></del></span></ins></span></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:48">Microsoft Research</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:48"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">Computer Science
+Department</del></span></ins><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37"><br>
+</del></span><ins datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:49">One Microsoft Way</del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:49"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">KAIST</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><br>
+</del></span><ins datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:49">Redmond, WA<span
+style="mso-spacerun: yes">  </span>98052</del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:49"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">373-1 Kusong-dong,
+Yu-song-gu<o:p></o:p></del></span></ins></span></p>
+
+<p class=Affiliations style='mso-list:none;mso-list-ins:paulb 20010220T1049'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:paulb" datetime="2001-02-20T10:49"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">Korea</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><br>
+</del></span></ins></span><span style='font-size:11.0pt;mso-bidi-font-size:
+10.0pt'><ins cite="mailto:paulb" datetime="2001-02-20T10:49"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">shim@cs.kaist.ac.kr</del></span></ins></span><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:paulb" datetime="2001-02-20T10:49"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"> </del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:49">U.S.A.</del></span><ins
+datetime="2001-02-19T02:13"><o:p></o:p></ins></ins></span></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><ins
+cite="mailto:paulb" datetime="2001-02-20T10:50"><br clear=all style='mso-column-break-before:
+always'>
+</ins></span>
+
+<p class=E-Mail style='text-indent:0in;mso-text-indent-alt:0in;mso-list:none;
+mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13"><span class=msoDel><del>bradley@microsoft.com</del></span><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T10:51"><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:51"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13">U</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T09:57"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:40">.</del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:40">sama</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"> Fayyad<o:p></o:p></ins></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:53">D</del></span></ins><ins cite="mailto:paulb"
+datetime="2001-02-20T10:53">d</ins><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13">igiMine, Inc<br>
+<span class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T10:53"><ins
+datetime="2001-02-19T02:13">11250 Kirkland Way, Suite 201</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:53">10500 NE 8<sup><span
+style='mso-prop-change:paulb 20010220T1053'><span style='mso-prop-change:paulb 20010220T1053'>th</span></span></sup>
+Street</ins><ins cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><br>
+<span class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T10:53"><ins
+datetime="2001-02-19T02:13">Kirkland</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:53">Bellevue</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13">, WA<span
+style="mso-spacerun: yes">  </span>980<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:53"><ins datetime="2001-02-19T02:13">3</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:53">0</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:53">3</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:53">4</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><br>
+U.S.A.<o:p></o:p></ins></span></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:paulb 20010220T1053'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:paulb"
+datetime="2001-02-20T10:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:38"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></span></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13">fayyad@acm.org</ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:50"><o:p></o:p></ins></span></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Tahoma;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><ins
+cite="mailto:paulb" datetime="2001-02-20T10:50"><br clear=all style='mso-special-character:
+line-break;mso-column-break-before:always'>
+</ins></span>
+
+<p class=E-Mail style='text-indent:0in;mso-text-indent-alt:0in;mso-list:none;
+mso-list-ins:paulb 20010220T1050'><span style='mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:54"><o:p></o:p></del></span></ins></span></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:54"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13">S. Sarawagi<o:p></o:p></ins></p>
+
+<p class=Affiliations style='margin-top:0in;margin-right:-10.15pt;margin-bottom:
+0in;margin-left:0in;margin-bottom:.0001pt;mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13">School of Information Tech</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">.</ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">nology</del></span><ins
+datetime="2001-02-19T02:13"><br>
+IIT Bombay<br>
+Powai<span style="mso-spacerun: yes">  </span>Mumbai-400076<br>
+India</ins></ins><ins cite="mailto:paulb" datetime="2001-02-20T10:54"><o:p></o:p></ins></span></p>
+
+<p class=Affiliations style='text-align:justify;mso-list:none;mso-list-ins:
+paulb 20010220T1054'><span style='mso-bidi-font-family:Tahoma'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:38"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></span></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13">sunita@it.iitb.ernet.in
+</ins><ins cite="mailto:paulb" datetime="2001-02-20T10:50"><o:p></o:p></ins></span></p>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><ins
+cite="mailto:paulb" datetime="2001-02-20T10:51"><br clear=all style='mso-column-break-before:
+always'>
+</ins></span>
+
+<p class=Author style='margin-bottom:0in;margin-bottom:.0001pt;text-indent:
+0in;mso-text-indent-alt:0in;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37">K. Shim<o:p></o:p></ins></span></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1837'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37">Computer Science Department<br>
+KAIST<br>
+373-1 Kusong-dong, Yu-song-gu<o:p></o:p></ins></span></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:paulb 20010220T1050'><span
+style='mso-bidi-font-family:Tahoma'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37">Korea<br>
+</ins></span><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">shim@cs.kaist.ac.kr</ins></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:14"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:54"><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0214'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:54"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:14"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:55">K</del></span><ins
+datetime="2001-02-19T09:57"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:55">.</del></span><ins datetime="2001-02-19T02:14"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T10:55"> Shim</del></span></ins></ins></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:55"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">P. S. Bradley</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:16"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><o:p></o:p></del></span></ins></p>
+
+<p class=E-Mail style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0216'><span
+style='font-size:10.0pt'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:16"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:55">Computer Science Department</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:55"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">digiMine, Inc</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><o:p></o:p></del></span></ins></span></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0213'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:14"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:55">KAIST</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:55"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">10500 NE 8<sup><span
+style='mso-prop-change:paulb 20010220T1055'><span style='mso-prop-change:paulb 20010220T1055'>th</span></span></sup>
+Street</del></span></ins><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37"><br>
+</del></span><ins datetime="2001-02-19T02:16"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:55">373-1 Kusong-dong, Yu-</del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:55"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">Bellevue, WA<span
+style="mso-spacerun: yes">  </span>98004 </del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:16"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:55">song-gu</del></span><ins
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:55"><br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></del></span></ins></ins><ins cite="mailto:paulb"
+datetime="2001-02-20T10:55"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37"><o:p></o:p></del></span></ins></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:paulb 20010220T1055'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:14"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:55">Korea</del></span></ins><ins cite="mailto:paulb"
+datetime="2001-02-20T10:55"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37">U.S.A.</del></span><ins datetime="2001-02-20T14:59"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37"><o:p></o:p></del></span></ins></ins></p>
+
+<p class=Affiliations style='margin-bottom:0in;margin-bottom:.0001pt;
+mso-list:none;mso-list-ins:paulb 20010220T1459'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T02:17"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:37"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=Affiliations style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0217'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:17"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T10:56">shim</del></span><ins
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T10:56">@</del></span><ins datetime="2001-02-19T02:17"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T10:56">cs.kaist.ac.kr</del></span><ins
+datetime="2001-02-19T02:13"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T14:56"><o:p></o:p></del></span></ins></ins></ins></ins></span></p>
+
+<p class=E-Mail style='text-align:justify;mso-list:none;mso-list-ins:paulb 20010220T1459'><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T14:59"><![if !supportEmptyParas]>&nbsp;<![endif]></del></span><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T14:59"><o:p></o:p></del></span></span></p>
+
+<p class=E-Mail><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:paulb" datetime="2001-02-20T14:59"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:37">paulb@digimine.com</del></span></ins></span><ins
+cite="mailto:paulb" datetime="2001-02-20T14:59"><o:p></o:p></ins></p>
+
+</div>
+
+<span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><ins
+cite="mailto:paulb" datetime="2001-02-20T14:59"><br clear=all style='page-break-before:
+auto;mso-break-type:section-break'>
+</ins></span>
+
+<div class=Section3>
+
+<p class=Author style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">P.
+S. Bradley</del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=Affiliations><span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Tahoma'><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">Microsoft Research<br>
+One Microsoft Way<br>
+Redmond, WA<span style="mso-spacerun: yes">  </span>98052</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:17"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br>
+U.S.A.</del></span></ins><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=E-Mail><span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Tahoma'><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">bradley@microsoft.com</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Tahoma;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br
+clear=all style='mso-column-break-before:always'>
+</del></span></span>
+
+<p class=Author style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">S.
+Sarawagi</del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=Affiliations><span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Tahoma'><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">School of Information Technology<br>
+IIT Bombay<br>
+Powai<span style="mso-spacerun: yes">  </span>Mumbai-400076</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:16"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br>
+India</del></span></ins><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=E-Mail><span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Tahoma'><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">sunita@it.iitb.ernet.in</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;font-family:Helvetica;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Tahoma;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br
+clear=all style='mso-column-break-before:always'>
+</del></span></span>
+
+<p class=Author style='margin-bottom:0in;margin-bottom:.0001pt'><span
+style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">Usama
+Fayyad</del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=Affiliations style='mso-list:none;mso-list-ins:Unknown 19000000T0000'><span
+style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-bidi-font-family:Tahoma'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">DigiMine</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:16"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">, Inc</del></span></ins><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:16">.com</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br>
+11250 Kirkland Way, Suite 201<br>
+Kirkland, WA<span style="mso-spacerun: yes">  </span>98033</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:17"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><br>
+</del></span><ins datetime="2000-07-29T14:16"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">U</del></span><ins
+datetime="2000-07-29T14:17"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">.</del></span><ins datetime="2000-07-29T14:16"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">S</del></span><ins
+datetime="2000-07-29T14:17"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">.</del></span><ins datetime="2000-07-29T14:16"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56">A</del></span><ins
+datetime="2000-07-29T14:17"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">.</del></span></ins></ins></ins></ins></ins></ins></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=E-Mail><span style='font-size:8.0pt;mso-bidi-font-size:10.0pt;
+mso-bidi-font-family:Tahoma'><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:56">fayyad@acm.org</del></span><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:56"><o:p></o:p></del></span></span></p>
+
+<p class=E-Mail><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+<span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section4>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">The Challenge is
+Growing<o:p></o:p></ins></span></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">According to</ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:47"> </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-23T23:47"><span style="mso-spacerun:
+yes"> </span>some </del></span><ins datetime="2001-03-18T18:15">recent studies <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:18"><ins
+datetime="2001-03-18T18:15">that have covered</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:19">on</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> the tremendous <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:19"><ins
+datetime="2001-03-18T18:15">growth</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:19">increase</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:19"><ins datetime="2001-03-18T18:15">in</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:19">in</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> the amount of data <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:19"><ins
+datetime="2001-03-18T18:15">being </ins></del></span>recorded and stored on
+digital media, it is clear that the gap between </ins><ins cite="mailto:paulb"
+datetime="2001-03-23T23:47">this digitally stored data</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-23T23:48">the amount of data going to
+storage,</del></span><ins datetime="2001-03-18T18:15"> and our ability to
+process <span class=msoDel><del cite="mailto:paulb" datetime="2001-03-23T23:48"><ins
+datetime="2001-03-18T18:15">it</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:48">it</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> is widening. The
+primary driver for this phenomenon is the<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:20"><ins datetime="2001-03-18T18:15">
+a</ins></del></span> more aggressive relative of the familiar “Moore’s
+Law”.<span style="mso-spacerun: yes">  </span>Moore’s Law is the observation
+that <span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:21"><ins
+datetime="2001-03-18T18:15">the </ins></del></span>computational power <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:20"><ins
+datetime="2001-03-18T18:15">seems to </ins></del></span>double</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:20">s</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> approximately every
+18 months. The corresponding law in the world of digital storage is even more
+amazing. Storage capacity, for a fixed price, appears to be doubling
+approximately every 9 months! [1].<span style="mso-spacerun: yes">  </span>In a
+world governed by these two empirical laws, </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:26">the importance of the </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:27">it becomes very clear why the </del></span><ins
+datetime="2001-03-18T18:15">fields of databases and <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:21"><ins datetime="2001-03-18T18:15">of
+</ins></del></span>Data Mining and Knowledge Discovery are growing<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:28"><ins
+datetime="2001-03-18T18:15"> in importance</ins></del></span>. </ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:28"><span style="mso-spacerun:
+yes"> </span></ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">From
+a strategic perspective, our need to <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:23"><ins datetime="2001-03-18T18:15">be able to </ins></del></span>navigate
+<span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:23"><ins
+datetime="2001-03-18T18:15">and exploit </ins></del></span>the rapidly growing
+universe of digital data will rely heavily on our ability to come up with the
+right systems that </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:23">can
+</ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">scale <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:24"><ins
+datetime="2001-03-18T18:15">to</ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:24">with</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15"> <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:24"><ins datetime="2001-03-18T18:15">these</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:24">these </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:25">growth </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:25"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-03-18T18:15">rates</ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:25">, </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:25"><span style="mso-spacerun:
+yes"> </span>of growth and</del></span><ins datetime="2001-03-18T18:15"> <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:24"><ins
+datetime="2001-03-18T18:15">that </ins></del></span>allow</ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:25">ing</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> us to effectively
+manage and mine the raw data. <o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:29">The </del></span><ins
+datetime="2001-03-18T18:15">Data Mining <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:29"><ins datetime="2001-03-18T18:15">field
+is </ins></del></span></ins></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:29">centers </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">about developing algorithms for extracting
+structure from data. </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:30"><span
+style="mso-spacerun: yes"> </span></ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">Th<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:30"><ins datetime="2001-03-18T18:15">e</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:30">is</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> structure can take
+the form of statistical patterns, models, and relationships<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:30"><ins datetime="2001-03-18T18:15">
+over the data</ins></del></span>. Viewed at a high level, these “structures”
+are basic <i>data reductions</i> that enable us to summarize the data, to bring
+it down in dimensionality to spaces <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:30"><ins datetime="2001-03-18T18:15">that</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:30">in which</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> we have some hope of
+understanding and visualizing</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:32">.<span style="mso-spacerun: yes">  </span>These
+structures provide the basis for</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:32">,</del></span><ins datetime="2001-03-18T18:15"> <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:31"><ins
+datetime="2001-03-18T18:15">and to enable </ins></del></span>us to predict and
+anticipate when certain events occur. When viewed at this level, one begins to
+understand the fundamental importance of data mining in the future of the
+digital data universe. For a more futuristic outlook, see the article</ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:33"> </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">[2].<o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s1027" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:13.4pt;width:512.4pt;height:180pt;
+ z-index:1;mso-position-horizontal:left' stroked="f">
+ <v:textbox style='mso-next-textbox:#_x0000_s1027'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal><ins cite="mailto:Usama%20Fayyad"
+    datetime="2001-03-18T18:59"><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+     o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+     stroked="f">
+     <v:stroke joinstyle="miter"/>
+     <v:formulas>
+      <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+      <v:f eqn="sum @0 1 0"/>
+      <v:f eqn="sum 0 0 @1"/>
+      <v:f eqn="prod @2 1 2"/>
+      <v:f eqn="prod @3 21600 pixelWidth"/>
+      <v:f eqn="prod @3 21600 pixelHeight"/>
+      <v:f eqn="sum @0 0 1"/>
+      <v:f eqn="prod @6 1 2"/>
+      <v:f eqn="prod @7 21600 pixelWidth"/>
+      <v:f eqn="sum @8 21600 0"/>
+      <v:f eqn="prod @7 21600 pixelHeight"/>
+      <v:f eqn="sum @10 21600 0"/>
+     </v:formulas>
+     <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+     <o:lock v:ext="edit" aspectratio="t"/>
+    </v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:498pt;
+     height:158.25pt'>
+     <v:imagedata src="image001.png" o:title="dilbert-11-13-00"
+      cropbottom="6113f"/>
+    </v:shape></ins><ins cite="mailto:Usama%20Fayyad"
+    datetime="2001-03-18T19:00"><o:p></o:p></ins></p>
+    <p class=MsoNormal><ins cite="mailto:Usama%20Fayyad"
+    datetime="2001-03-18T19:00">DILBERT reprinted by permission of United
+    Feature Syndicate, Inc. [2</ins><ins cite="mailto:Usama%20Fayyad"
+    datetime="2001-03-18T19:01">000].</ins></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <w:wrap type="square"/>
+</v:shape><![endif]-->
+<![if !vml]>
+<img width=686 height=242 src="./image002.gif" align=left hspace=12 alt="Text Box:  &#13;&#10;DILBERT reprinted by permission of United Feature Syndicate, Inc. [2000].&#13;&#10;" v:shapes="_x0000_s1027">
+<![endif]><b><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Beyond
+the Giants and the Monsters<o:p></o:p></ins></span></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">A recent study
+conducted at </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:33">UC-</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Berkeley indicates
+that humankind seems to be producing over two exabytes of information per year<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:33"><ins
+datetime="2001-03-18T18:15">.</ins></del></span> <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:33"><ins datetime="2001-03-18T18:15"><span
+style="mso-spacerun: yes"> </span></ins></del></span>[3]. This study confirms
+the persistence of the original trends first uncovered in [4]. The amount of
+information generated in 1999 constitutes more than 12% of the aggregate amount
+of information generated by humankind in all of recorded history.</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:34"><span style="mso-spacerun:
+yes">  </span>We conjecture that the rate is more dramatic for the year 2000. </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:34"><span style="mso-spacerun:
+yes"> </span>I have not seen the computation done for the year 2000, but I am
+sure that the rate is getting even more dramatic.</del></span><ins
+datetime="2001-03-18T18:15"> It is interesting that <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:35"><ins datetime="2001-03-18T18:15">the</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:35">an</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> overwhelming majority
+of <span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:36"><ins
+datetime="2001-03-18T18:15">the </ins></del></span>collected data is never seen
+by humans [4]. <o:p></o:p></ins></p>
+
+<p class=MsoNormal style='text-indent:0in;mso-text-indent-alt:0in;mso-list:
+none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">As recently as three years ago, people were
+wondering how they <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:38"><ins datetime="2001-03-18T18:15">will</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:38">would</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> manage terabyte
+databases. </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:36"><span
+style="mso-spacerun: yes"> </span></ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">Jim Gray, who is familiar with <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:37"><ins datetime="2001-03-18T18:15">the
+</ins></del></span>systems and scalability issues <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:37"><ins datetime="2001-03-18T18:15">of</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:37">when dealing with</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:37"><ins datetime="2001-03-18T18:15">dealing
+with very </ins></del></span>large <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:38"><ins datetime="2001-03-18T18:15">databases</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:38">amounts of data</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">, used to refer to
+these <span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:37"><ins
+datetime="2001-03-18T18:15">databases </ins></del></span>as “Terror Byte”
+databases. It is interesting that <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:39"><ins datetime="2001-03-18T18:15">now </ins></del></span>we
+have </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:39">now </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">gone beyond <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:39"><ins
+datetime="2001-03-18T18:15">the </ins></del></span>gigabytes and <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:39"><ins
+datetime="2001-03-18T18:15">the </ins></del></span>terabytes, and are now
+worried about petabytes and exabytes. Interestingly, </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:39">“</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Giga</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:39">”</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> derives from the
+Latin </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:39">term </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">for </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">“</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Giant</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">”</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">, and </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:39">“</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Tera</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:39">”</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> derives from the
+Greek </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:40">term </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">for </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">“</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Monster</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">”</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">. A gigabyte is 10<sup><span
+style='mso-prop-change:"Usama Fayyad" 20010318T1840'><span style='mso-prop-change:
+"Usama Fayyad" 20010318T1840'>9</span></span></sup> bytes, while a terabyte is
+10<sup><span style='mso-prop-change:"Usama Fayyad" 20010318T1841'><span
+style='mso-prop-change:"Usama Fayyad" 20010318T1841'>12</span></span></sup>
+bytes. </ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">The <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:40"><ins
+datetime="2001-03-18T18:41">next </ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">higher </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">units <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:40"><ins
+datetime="2001-03-18T18:41">up become </ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:40">have </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">less colorful<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:41"><ins
+datetime="2001-03-18T18:41"> in</ins></del></span> names: <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:41"><ins datetime="2001-03-18T18:41">P</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:41">p</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">etabyte and <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:41"><ins
+datetime="2001-03-18T18:41">E</ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:41">e</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:41">xabyte. </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:41"><span style="mso-spacerun: yes"> </span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:41">Interestingly, t</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:41">T</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">he next </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:41">term is </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:41">units up the </del></span><ins
+datetime="2001-03-18T18:41">the <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:41"><ins datetime="2001-03-18T18:41">Z</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:41">z</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">ettabyte (deriving
+from the last letter of the Greek alphabet), <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:42"><ins datetime="2001-03-18T18:41">and
+</ins></del></span>then the <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:42"><ins datetime="2001-03-18T18:41">Y</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:42">y</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:41">otta</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:42">byte, indicating a
+backtracking from <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:42"><ins datetime="2001-03-18T18:42">going to</ins></del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:43"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:42"> </del></span><ins
+datetime="2001-03-18T18:43">the last letter.<o:p></o:p></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1843'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:47">In the Data Mining
+field, it is fairly safe to think that we are wrestling with </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:42">the </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:47">issues <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:43"><ins
+datetime="2001-03-18T18:47">of</ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:43">in</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:47"> dealing with giants (gigabytes). We certainly have
+not<span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:43"><ins
+datetime="2001-03-18T18:47">e</ins></del></span> stepped up to the <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:43"><ins
+datetime="2001-03-18T18:47">M</ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:43">m</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:47">onsters yet. </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:48">It is</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:47"> </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:48">worrisome that within</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46"> this plethora of
+names</ins><ins cite="mailto:paulb" datetime="2001-03-19T01:44"> </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:44">, we still worry that </del></span><ins
+datetime="2001-03-18T18:46">we <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-23T23:52"><ins datetime="2001-03-18T18:46">barely </ins></del></span>have
+<span class=msoDel><del cite="mailto:paulb" datetime="2001-03-23T23:52"><ins
+datetime="2001-03-18T18:46">any</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:52">few</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46"> ideas </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:44">on </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46">how </ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:52">to </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:44">to even </del></span><ins
+datetime="2001-03-18T18:46">approach the monste</ins><ins
+datetime="2001-03-18T18:49">rs. The terabytes are still indeed the </ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:44">“</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:49">terror bytes</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:44">”</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:49">. However, given the
+driving forces of technology out there, it is with urgency that we must </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:50">start to see progress
+in scaling to <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:46"><ins datetime="2001-03-18T18:50">the </ins></del></span>larger
+databases. With each year, the challenges will grow larger, and so will the </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:47">corresponding </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:50">pressure for
+breakthrough advancement in data mining technologies<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:47"><ins datetime="2001-03-18T18:50">,</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:47">.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:50"> </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:48"><span style="mso-spacerun:
+yes"> </span></ins><ins cite="mailto:paulb" datetime="2001-03-19T01:47">Data
+mining solution provide</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:48">r</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:47">s</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:48"> will be measured along the lines of successful </ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:53">real world </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:48">applications</ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:54">.<span style="mso-spacerun:
+yes">  </span></ins><ins cite="mailto:paulb" datetime="2001-03-23T23:55">Integrating
+with </ins><ins cite="mailto:paulb" datetime="2001-03-23T23:56">new generation
+business</ins><ins cite="mailto:paulb" datetime="2001-03-23T23:55"> </ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:56">practices </ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:55">is essential</ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:56">.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:50"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:49">in modes of providing data
+mining solutions, and in real examples of their integration with the way the
+new generation of business is conducted.</del></span><ins
+datetime="2001-03-18T18:15"><o:p></o:p></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:50">A large number of c</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:50">C</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">orporations </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:50">currently are and </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">have been collecting <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:51"><ins
+datetime="2001-03-18T18:15">their </ins></del></span>business data</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:51">.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T01:51"> and the volume of this data
+grows significantly every year.</del></span><ins datetime="2001-03-18T18:15">&nbsp;
+Furthermore, with the <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-23T23:57"><ins datetime="2001-03-18T18:15">spread</ins></del></span></ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:57">growth</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> of E-commerce and the
+World Wide Web, online stores are </ins><ins cite="mailto:paulb"
+datetime="2001-03-23T23:58">automatically </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">collecting huge amounts of valuable data<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-23T23:58"><ins
+datetime="2001-03-18T18:15"> automatically</ins></del></span>.&nbsp; For
+example, web servers typically generate large volumes of daily access log</ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:58">s</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-23T23:58"> data</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:58">, </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-23T23:58"><span style="mso-spacerun:
+yes"> </span>that captures</del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:52">capturing</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15"> </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:53">page </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:53">the </del></span><ins datetime="2001-03-18T18:15">sequences
+<span class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:53"><ins
+datetime="2001-03-18T18:15">of page accesses </ins></del></span>for millions of
+users. </ins></ins><ins cite="mailto:paulb" datetime="2001-03-19T01:53"><span
+style="mso-spacerun: yes"> </span></ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:52">Sites can easily generates tens of gigabytes of
+data per day. </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">Thus, we<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-23T23:59"><ins datetime="2001-03-18T18:15"> can</ins></del></span>
+easily witness the wide availability of huge amounts of data</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:52">; data that was hardly
+there three or four years ago</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">. </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:51"><span style="mso-spacerun: yes"> </span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T01:54">A</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T01:51">nd the volume of this data grows significantly
+every year.</ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:52"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1852'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">However, it is very </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:52">difficult</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> to turn such data
+into useful information due to the limited availability of scalable data mining
+algorithms. For <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:57"><ins datetime="2001-03-18T18:15">the </ins></del></span>algorithms
+to be scalable, the execution time should increase linearly</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:53">, or preferably
+sub-linearly,</ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">
+in proportion to the size of the input data. Traditional data analysis
+algorithms generally do not scale <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T01:57"><ins datetime="2001-03-18T18:15">up </ins></del></span>well
+with limited system resources<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-23T23:59"><ins datetime="2001-03-18T18:15"> such as</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:59"> (e.g.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> main memory</ins><ins
+cite="mailto:paulb" datetime="2001-03-23T23:59">)</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">. Therefore, we are
+now faced with exciting opportunities and great challenges for data mining to
+develop </ins><ins cite="mailto:paulb" datetime="2001-03-19T01:58">efficient, </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">scalable <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:58"><ins
+datetime="2001-03-18T18:15">and efficient </ins></del></span>algorithms<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:58"><ins
+datetime="2001-03-18T18:15"> that are acceptable in large databases</ins></del></span>.
+</ins><ins cite="mailto:paulb" datetime="2001-03-19T01:59"><span
+style="mso-spacerun: yes"> </span></ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:53">This “scalability challenge” goes beyond <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T01:59"><ins
+datetime="2001-03-18T18:53">just the </ins></del></span>algorithms</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:00"> </ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:00">to </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:00">includ</ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:00">e</ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:00">: </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:53"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T02:00">. It includes how </del></span><ins
+datetime="2001-03-18T18:53">systems issues<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:00"><ins datetime="2001-03-18T18:53">
+are addressed</ins></del></span>, </ins></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:01">the delivery of services</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:53"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:01">how services and capabilities
+are delivered</del></span><ins datetime="2001-03-18T18:53">, and </ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:00">the delivery of mining
+results.<span style="mso-spacerun: yes">  </span></ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:02">R</ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:00">esults </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:53"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:01">how the results of mining are</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:02">need to</ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:01"> be </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:53"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:01"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-03-18T18:53">made usable and
+useful for <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T02:02"><ins datetime="2001-03-18T18:53">individuals in </ins></del></span>businesses
+and organizations <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T02:02"><ins datetime="2001-03-18T18:53">who </ins></del></span>know</ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:02">ing</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:53"> little about</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:03"> data</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:53"> mining<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:03"><ins
+datetime="2001-03-18T18:53">, statistics</ins></del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:55"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:03">, and other esoteric
+technologies</del></span><ins datetime="2001-03-18T18:55">. </ins></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:03"><span style="mso-spacerun:
+yes"> </span></ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:55">This
+challenge must be addressed for data mining to cross into its next level of
+integration within mainstream business and <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:04"><ins datetime="2001-03-18T18:55">the
+</ins></del></span>daily </ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:56">operations of organizations.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><b><span
+style='font-size:10.0pt'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">Special Issue on “Scalable Data Mining Algorithms”<o:p></o:p></ins></span></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">We focus this issue of
+SIGKDD Explorations on the topic of Scalable Data Mining Algorithms, and we
+welcome <b>Kyuseok Shim</b> as <b>Guest Editor</b>.<span style="mso-spacerun:
+yes">  </span>On this challenging and exciting topic, eleven articles are
+included in the </ins><ins cite="mailto:paulb" datetime="2001-03-19T02:05">section
+on </ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:05">contributed
+article section on </del></span><ins datetime="2001-03-18T18:15">scalable data
+mining algorithms. <o:p></o:p></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Kristin P. Bennett and
+Colin Campbell contributed a nice tutorial article on support vector machines
+that have become popular tools for data mining applications. Jiawei Han and
+Jian Pei present a new methodology called frequent pattern growth that avoids
+candidate generation in Apriori-style algorithms. This technique can be an
+alternative solution for mining frequent patterns when the candidate generation
+and test cost is very expensive in applications with long and numerous
+patterns. Laks. V.S. Lakshmanan, Carson Kai-Sang Leung, and Raymond Ng describe
+a data structure called segment support map that boosts the performance of
+frequent itemset mining algorithms by computing sharper upper bounds on the
+support and better exploitation of constraints. Wei Wang, Jiong Yang and Philip
+S. Yu propose several models to address different types of noise and provide
+scalable algorithms for each model. George Forman and Bin Zhang present a
+technique for developing parallel version</ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:08">s</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15"> of centroid-based clustering algorithms that
+communicate only</ins><ins cite="mailto:paulb" datetime="2001-03-24T00:08">
+through</ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">
+sufficient statistics. <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:09"><ins datetime="2001-03-18T18:15">The a</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:09">A</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">pproaches for
+exploiting and pushing user-defined model constraints to speed up the mining
+process are discussed by Minos Garofalakis and Rajeev Rastogi. Such techniques
+can help to improve the system performance significantly by focusing on only
+interesting patterns by users. Thus, it is worthy of investigation for many
+existing data mining algorithms. Claudia Diamantini and Maurizio Panti show
+that compression capabilities of the Vector Quantizer architecture can be
+exploited to find simple and effective classification rules when it is trained <span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-24T00:10"><ins
+datetime="2001-03-18T18:15">with</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:10">using</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> a stochastic gradient
+algorithm. William A. Maniatty and Mohammed J. Zaki address desirable design
+features of parallel data mining algorithms and investigate a migration path
+from sequential algorithms by considering an integrated hardware and software
+approach. Yves Bastide et al. present the PASCAL algorithm</ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:11">,</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:11"><ins datetime="2001-03-18T18:15">that</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:11">which</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> improves Apriori<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-24T00:10"><ins
+datetime="2001-03-18T18:15"> </ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:10">-</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:15">style algorithms based on pattern counting
+inference <span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:11"><ins datetime="2001-03-18T18:15">that</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:11">and</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> can reduce database
+access significantly. Gregory Piatetsky-Shapiro and Sam Steingold propose a new
+measure called L-quality that helps to compare predictive models by looking at
+the entire lift curve. Stephen D. Bay et al. describe new data sets that are available
+in the UCI KDD archive to help in evaluating scalable data mining algorithms.
+Considering it is very difficult to get large real-life data sets to conduct
+performance studies of scalable algorithms, this addition of large data sets to
+UCI KDD Archive will stimulate and foster systematic progress significantly in
+developing scalable data mining algorithms.<o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">KDD-2000 Reports<o:p></o:p></ins></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">Also included in this
+issue of Explorations are a series of reports from KDD-2000:<span
+style="mso-spacerun: yes">  </span>The Sixth ACM SIGKDD International
+Conference on Knowledge Discovery and Data Mining.<span style="mso-spacerun:
+yes">  </span>KDD-2000 took place in Boston, MA on August 20 – 23, 2000.<span
+style="mso-spacerun: yes">  </span>The organizing committee expected 700
+attendees.<span style="mso-spacerun: yes">  </span>After the final numbers were
+tabulated, a total of 920 people attended<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:12"><ins datetime="2001-03-18T18:15">
+KDD-2000</ins></del></span>!<span style="mso-spacerun: yes">  </span>Enthusiasm
+and interest in the field is rapidly increasing. <o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">The KDD Cup 2000
+annual data mining competition consisted of five questions to be answered based
+on web-browsing data collected from an online retailer.<span
+style="mso-spacerun: yes">   </span>Ron Kohavi, Carla Brodley, Brian Frasca,
+Llew Mason, and Zijan Zheng provide an excellent report on</ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:13"> the</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"> competition including
+summary reports by the winners of the five question areas.<o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1815'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15">KDD-2000 conference
+highlights included workshops and panel presentations.<span
+style="mso-spacerun: yes">  </span><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:13"><ins datetime="2001-03-18T18:15">I thank the
+organizers for the time and effort required to provide reports from their
+respective workshops and panels. </ins></del></span><span style="mso-spacerun:
+yes"> </span>Marko Grobelnik, Dunja Mladenic, and Natasa Milic-Frayling have
+provided a report on the KDD-2000 Workshop on Text Mining.<span
+style="mso-spacerun: yes">  </span>Simeon Simoff and Osmar Zaïane report on
+MDM/KDD2000:<span style="mso-spacerun: yes">  </span>The 1<sup>st</sup>
+International Workshop on Multimedia Data Mining. A summary of the WEBKDD 2000
+workshop was provided by Myra Spiliopoulou, Jaideep Srivastava, Ron Kohavi and
+Brij Masand.<span style="mso-spacerun: yes">  </span>A report on the Workshop
+on Distributed and Parallel Knowledge Discovery by Hillol Kargupta, Joydeep
+Ghosh, Vipin Kumar, and Zoran Obradovic is included.<span style="mso-spacerun:
+yes">  </span>Ivan Bruha and A. Famili have provided a report on the Workshop
+on Postprocessing in Machine Learning and Data Mining.<span
+style="mso-spacerun: yes">  </span>Alexander Tuzhilin summarized the Panel on
+Personalization and Data Mining.</ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:13"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:paulb 20010324T0013'><ins
+cite="mailto:paulb" datetime="2001-03-24T00:14">We thank the organizers for the
+time and effort required to provide these reports.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:15"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:14"> </del></span><ins
+datetime="2001-03-18T18:15"><o:p></o:p></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1814'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:46">Concluding Remarks</ins></b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:14"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1814'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:35"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:44">With t</del></span><ins
+datetime="2000-07-29T13:33"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44">his issue of <i>SIGKDD Explorations</i></del></span><i><ins
+datetime="2000-07-29T13:35"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44"> </del></span></ins></i><ins
+datetime="2000-07-29T13:35"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44">we launch our second volume</del></span><ins
+datetime="2000-07-29T13:36"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44"> of the newsletter. With our continued growth and
+the continued growth of the field we need to grow </del></span><i><ins
+datetime="2000-07-29T13:37"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44">Explorations</del></span></ins></i><ins
+datetime="2000-07-29T13:37"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44"> accordingly. We are pleased to bring in two
+changes to the editorial staff and format of your newsletter. We have invited
+Paul Bradley to join the </del></span><ins datetime="2000-07-29T13:37"><span
+class=msoDel><del cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:40">editor</del></span><ins
+datetime="2000-07-29T13:39"><span class=msoDel><del cite="mailto:Paul%20Bradley"
+datetime="2000-07-31T10:40">al</del></span></ins></ins></ins></ins></ins></ins></ins><ins
+cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:40"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:44">editorial</del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:39"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:44"> staff</del></span><ins
+datetime="2000-07-29T13:37"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44"> as Associate Editor</del></span><ins
+datetime="2000-07-29T13:40"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44">. We have also asked him to serve as Guest Editor
+of this issue. This represented the second change in editorial format: future
+issues will have themes and special topics with guest editors i</del></span><ins
+datetime="2000-07-29T13:41"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44">nvited to cover each special topic. We shall of
+course continue to include contributed articles on topics of interest and
+conference and workshop reports. </del></span><ins datetime="2000-07-29T13:44"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:44">In
+addition to serving as Guest Editor on this issue, Paul has also taken a major
+load of additional work on producing this issue in his new role as Associate
+Editor.</del></span><ins datetime="2000-07-29T13:45"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:44"> Having welcomed Paul
+aboard, we’ll let him introduce this issue’s special focus.</del></span><ins
+datetime="2000-07-29T13:43"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T19:44"><o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1343'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:43"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">Th</del></span><ins
+datetime="2000-07-29T13:45"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T20:27">e</del></span><ins datetime="2000-07-29T13:43"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">
+special issue </del></span><ins datetime="2000-07-29T13:45"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">section </del></span><ins
+datetime="2000-07-29T13:43"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T20:27">of</del></span><ins datetime="2000-07-29T13:45"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">
+this issue</del></span><ins datetime="2000-07-29T13:43"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27"> <i>SIGKDD
+Explorations</i> is focused on </del></span><ins datetime="2000-07-29T13:44"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">“Internet
+Data Mining</del></span><ins datetime="2000-07-29T13:46"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T20:27">”.</del></span><ins
+datetime="2000-07-29T13:44"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T20:27"> </del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:53"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">A large number of
+corporations have been collecting their business data and the volume of this
+data grows significantly every year.&nbsp; </del></span><ins
+datetime="2001-02-19T01:22"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Furthe</del></span><ins datetime="2001-02-19T01:23"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">r</del></span><ins
+datetime="2001-02-19T01:22"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">more, </del></span><ins datetime="2001-02-18T19:53"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">with
+the spread of E-commerce</del></span><ins datetime="2001-02-18T19:58"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> and
+World Wide Web</del></span><ins datetime="2001-02-18T19:54"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">,</del></span><ins
+datetime="2001-02-18T19:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> online stores are collecting huge amounts of
+valuable data </del></span><ins datetime="2001-02-18T19:59"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">automatically</del></span><ins
+datetime="2001-02-18T19:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">.&nbsp; </del></span><ins
+datetime="2001-02-18T19:59"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">For example, </del></span><ins
+datetime="2001-02-18T20:00"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">web servers typically generate large volume</del></span><ins
+datetime="2001-02-18T20:01"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">s</del></span><ins datetime="2001-02-18T20:00"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> of</del></span><ins
+datetime="2001-02-18T20:01"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> daily access log data that </del></span><ins
+datetime="2001-02-18T20:02"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">captures the sequences of page accesses for
+millions of users. </del></span><ins datetime="2001-02-18T20:49"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Thus,
+we can easily witness the wide availability of huge amounts of </del></span><ins
+datetime="2001-02-18T20:50"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">data</del></span><ins datetime="2001-02-18T20:52"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> </del></span><ins
+datetime="2001-02-19T01:23"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">that</del></span><ins datetime="2001-02-18T20:53"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> was
+very difficult</del></span><ins datetime="2001-02-18T20:50"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> in the past.</del></span><ins
+datetime="2001-02-18T20:49"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"><span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-18T20:34"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">However, it is </del></span><ins
+datetime="2001-02-18T21:12"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">very </del></span><ins datetime="2001-02-19T01:23"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">hard</del></span><ins
+datetime="2001-02-18T20:34"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> to </del></span><ins datetime="2001-02-18T20:54"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">turn
+such data into useful information </del></span><ins datetime="2001-02-18T20:55"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">due
+to </del></span><ins datetime="2001-02-18T21:12"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">the </del></span><ins
+datetime="2001-02-18T20:55"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">limited availability of scalable </del></span><ins
+datetime="2001-02-18T20:56"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">data mining algorithms.</del></span><ins
+datetime="2001-02-18T21:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> For </del></span><ins datetime="2001-02-19T01:24"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">the </del></span><ins
+datetime="2001-02-18T21:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">algorithms to be scalable, the execution time
+should be increased almost linearly in </del></span><ins
+datetime="2001-02-18T21:13"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">proportion to </del></span><ins
+datetime="2001-02-18T21:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">the size of </del></span><ins
+datetime="2001-02-18T21:14"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">the </del></span><ins datetime="2001-02-18T21:09"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">input
+data.</del></span><ins datetime="2001-02-18T20:56"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> </del></span><ins
+datetime="2001-02-18T21:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Traditional data analysis algorithms generally </del></span><ins
+datetime="2001-02-18T21:04"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">do not scale up </del></span><ins
+datetime="2001-02-18T21:05"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">well </del></span><ins datetime="2001-02-18T21:04"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">with
+limited system resources such as main memory</del></span><ins
+datetime="2001-02-18T20:35"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">.</del></span><ins datetime="2001-02-18T20:34"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> </del></span><ins
+datetime="2001-02-18T19:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Therefore, we are now faced with exciting
+opportunities and great challenges for data mining to develop scalable</del></span><ins
+datetime="2001-02-19T01:25"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> and efficient</del></span><ins
+datetime="2001-02-18T21:11"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-18T19:53"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">algorithms
+that are acceptable in large databases. </del></span><ins
+datetime="2001-02-18T20:25"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">We focus this issue of </del></span><ins
+datetime="2001-02-18T19:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">SIGKDD Explorations on </del></span><ins
+datetime="2001-02-18T20:26"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">the topic of “Scalable Data Mining Algorithms</del></span><ins
+datetime="2001-02-18T20:27"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">”.</del></span><ins datetime="2001-02-18T19:53"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010218T1953'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T19:53"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:52"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010218T1953'><i><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:33"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"><span
+style="mso-spacerun: yes"> </span></del></span></ins></i><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">The “Internet”
+continues to provide the general population of computer users with innumerable
+benefits (and possibly some drawbacks).<span style="mso-spacerun: yes"> 
+</span>It also provides the data mining community with large amounts of data
+and great challenges through new applications areas like customer relationship
+management, e-commerce and web search. </del></span><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:Unknown 19000000T0000'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">As
+the </del></span><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:47">internet</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:47"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">Internet</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> expands, there is a
+greater need to effectively index and classify content to support efficient
+search and navigation.<span style="mso-spacerun: yes">  </span>In addition, the
+</del></span><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:47">internet</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:47"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">Internet</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> provides businesses
+with an operational platform for interaction with their customers </del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:47">24
+hours per day, 365 days per year</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:47"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">around the clock</del></span></ins><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:47">,</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">
+without geographic or physical boundaries.<span style="mso-spacerun: yes"> 
+</span>According to a Forrester report, “worldwide net commerce – both B2B and
+B2C – will hit $6.8 trillion in 2004” [3].<span style="mso-spacerun: yes"> 
+</span>Databases currently are (and will continue to be) critical components in
+the e-commerce arena.<span style="mso-spacerun: yes">  </span>The data
+generated by this domain provide “all the right ingredients for successful data
+mining” [1].<span style="mso-spacerun: yes">  </span>In addition to providing
+some of the key foundations in internet content indexing, text mining
+techniques may prove very useful in helping the end-user deal with the
+information overload streaming down to her or him by processing email and other
+electronic communication and prioritizing</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:48"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> messages and tasks</del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">
+[2].</del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">While </del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:49">there is </del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">such
+</del></span><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:50">excitement </del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:50"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">enthusiasm </del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">and
+opportunity for data mining in the </del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:48">internet</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:48"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">Internet</del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">
+arena</del></span><ins cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:49"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> is
+exciting</del></span><ins datetime="2000-07-29T13:50"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> and intriguing</del></span></ins></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">,
+the serious issue of privacy needs to be effectively handled.<span
+style="mso-spacerun: yes">  </span>Although it is not only an issue with data
+mining and the </del></span><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:50">internet</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:50"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">Internet</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">, data mining
+practitioners in this space </del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:50">should </del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:50"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">need to </del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">be
+constantly aware of </del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:50">such </del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:50"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">the </del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">implications</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:51"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"> of tracking and
+analysis technologies on privacy</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">.<span
+style="mso-spacerun: yes">  </span>Without properly addressing the issue of
+privacy on the </del></span><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:51">internet</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T13:51"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T21:15">Internet</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">, this abundant tap of
+data may eventually flow much slower due to regulations, </del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:52">etc</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:52"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">and other corrective
+or preventive restrictions</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15">.</del></span><ins
+cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T21:15"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Paul Bradley" 20000731T1037'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:01"><span class=msoDel><del
+cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1401'><span
+class=msoDel><del cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37"><![if !supportEmptyParas]>&nbsp;<![endif]></del></span><span
+class=msoDel><del cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:Unknown 19000000T0000'><span
+class=msoDel><del cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37">G</del></span><ins
+cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:37"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02">G</del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02">iven
+the opportunities, challenges and issues touched upon above, </del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:52"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02">we chose to focus </del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02">this
+issue of </del></span><i><span style='mso-prop-change:"Usama Fayyad" 20000729T1352'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02"><span
+style='mso-prop-change:"Usama Fayyad" 20000729T1352'>SIGKDD Explorations</span></del></span></span></i><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:02"> </del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:52">focuses
+</del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T23:02">on the topic of “Internet Data Mining”.<span
+style="mso-spacerun: yes">  </span></del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">On this </del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T02:05"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">challenging and
+exciting </del></span></ins><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">topic, </del></span><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:03">five </del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:03"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">eleven </del></span></ins><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">articles
+are included</del></span><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-18T23:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">contributed article section on scalable data mining</del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:53"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:03">special</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:04"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> algorithms</del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:53"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:04"> focus section</del></span></ins><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">. </del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:22"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Kristin P. Bennet</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T10:51"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">t</del></span></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:22"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> and Colin Campbell
+contributed a </del></span><ins datetime="2001-02-19T01:26"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">nice </del></span><ins
+datetime="2001-02-18T23:24"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">tutorial</del></span><ins
+datetime="2001-02-18T23:22"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> article </del></span><ins
+datetime="2001-02-18T23:23"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">on support vector machine</del></span><ins
+datetime="2001-02-19T01:28"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">s</del></span><ins datetime="2001-02-19T01:26"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+that have become popular tools for data mining applications</del></span><ins
+datetime="2001-02-18T23:23"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">. </del></span><ins datetime="2001-02-18T23:40"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Jiawei
+Han and Jian Pei present </del></span><ins datetime="2001-02-18T23:41"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">a
+new methodology called frequent pattern growth that </del></span><ins
+datetime="2001-02-18T23:45"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">avoids candidate generation in Apriori-style
+algorithms. </del></span><ins datetime="2001-02-19T01:30"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">This technique can be
+an alternative solution for mining frequent patterns when the candidate
+generation and test cost is very expensive in applications such as long and
+numerous patterns. </del></span><ins datetime="2001-02-18T23:49"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Laks.
+V.S. Lakshmanan, Carson Kai-Sang Leung, and</del></span><ins
+datetime="2001-02-18T23:43"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:22"><span
+style="mso-spacerun: yes"> </span></del></span><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Raymond </del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:50"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Ng describe a data
+structure called segment support map that boosts the performance of </del></span><ins
+datetime="2001-02-18T23:51"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">frequent itemset </del></span><ins
+datetime="2001-02-18T23:52"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">mining algorithms by computing sharper upper bound</del></span><ins
+datetime="2001-02-18T23:53"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">s on the support and better exploitation of
+constraints. </del></span><ins datetime="2001-02-18T23:55"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Wei Wang, Jiong Yang
+and Philip S. Yu </del></span><ins datetime="2001-02-18T23:56"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">propose</del></span><ins
+datetime="2001-02-19T01:34"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-18T23:56"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">several
+models to add</del></span><ins datetime="2001-02-18T23:57"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">ress different types
+of noises and provide scalable algorithms for each model.</del></span><ins
+datetime="2001-02-18T23:56"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-18T23:59"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">George
+Forman and Bin Zhang present a t</del></span><ins datetime="2001-02-19T00:01"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">echnique</del></span><ins
+datetime="2001-02-18T23:59"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-19T00:01"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">for </del></span><ins
+datetime="2001-02-19T01:37"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">developing </del></span><ins
+datetime="2001-02-18T23:59"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">paralle</del></span><ins datetime="2001-02-19T00:02"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">l</del></span><ins
+datetime="2001-02-19T01:37"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> version of</del></span><ins
+datetime="2001-02-19T00:00"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> centroid-based clustering algorithms </del></span><ins
+datetime="2001-02-19T02:04"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">that</del></span><ins datetime="2001-02-19T00:00"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+communicate only sufficient statistics.</del></span><ins
+datetime="2001-02-19T00:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-19T02:01"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><span
+style="mso-spacerun: yes"> </span></del></span><ins datetime="2001-02-19T02:03"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">The </del></span><ins
+datetime="2001-02-19T00:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">scalable algorithms for</del></span><ins
+datetime="2001-02-19T00:06"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-19T00:03"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">exploiting</del></span><ins
+datetime="2001-02-19T00:06"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> and pushing</del></span><ins
+datetime="2001-02-19T00:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> user-defined model constraints </del></span><ins
+datetime="2001-02-19T02:08"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">to speed up </del></span><ins
+datetime="2001-02-19T00:03"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">during mining process</del></span><ins
+datetime="2001-02-19T02:02"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> are discussed by Minos Garofalakis and Rajeev
+Rastogi</del></span><ins datetime="2001-02-19T00:06"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">. </del></span><ins
+datetime="2001-02-19T01:39"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Such techniques can help to improve the system
+performance significantly by focusing </del></span><ins
+datetime="2001-02-19T01:43"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">on only </del></span><ins
+datetime="2001-02-19T01:39"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">intere</del></span><ins datetime="2001-02-19T01:43"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">s</del></span><ins
+datetime="2001-02-19T01:39"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">ting patterns by user</del></span><ins
+datetime="2001-02-19T01:43"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">s</del></span><ins datetime="2001-02-19T01:39"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">. </del></span><ins
+datetime="2001-02-19T00:08"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Claudia Diamantini and Maurizio Panti show that
+compression capabilities of Vector Quantizer architecture can be exploited to
+find simple and effective classification rule when we train</del></span><ins
+datetime="2001-02-19T01:48"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> it with </del></span><ins
+datetime="2001-02-19T00:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">a stochastic gradient algorithm.</del></span><ins
+datetime="2001-02-19T00:11"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-19T00:13"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">William
+A. Maniatty and Mohammed J. Zaki address desirable design features of parallel</del></span><ins
+datetime="2001-02-19T00:16"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> data mining algorithms</del></span><ins
+datetime="2001-02-19T01:49"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> and investigate migration path from sequential
+algorithms by </del></span><ins datetime="2001-02-19T01:51"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">considering an
+integrated hardware and software approach</del></span><ins
+datetime="2001-02-19T00:16"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">. </del></span><ins datetime="2001-02-19T00:38"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Yves
+Bastide et al. present PASCAL algorithm that improves Apriori style algorithm</del></span><ins
+datetime="2001-02-19T01:52"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">s</del></span><ins datetime="2001-02-19T00:38"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+based on pattern counting inference that can reduce database</del></span><ins
+datetime="2001-02-19T00:41"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> access</del></span><ins datetime="2001-02-19T01:52"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+significantly</del></span><ins datetime="2001-02-19T00:38"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">. </del></span><ins
+datetime="2001-02-19T00:19"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Gregory Piatetsky-Shapiro and Sam Steingold </del></span><ins
+datetime="2001-02-19T00:20"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">propose a new measure called L-quality that helps
+to compare </del></span><ins datetime="2001-02-19T01:53"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">predictive </del></span><ins
+datetime="2001-02-19T00:20"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">models</del></span><ins datetime="2001-02-19T01:54"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> by
+looking at the entire lift curve</del></span><ins datetime="2001-02-19T00:20"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">.
+Stephen D. Bay et al. </del></span><ins datetime="2001-02-19T00:23"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">describe
+new data sets </del></span><ins datetime="2001-02-19T00:25"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">that are available </del></span><ins
+datetime="2001-02-19T00:23"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">in the UCI KDD archive</del></span><ins
+datetime="2001-02-19T00:25"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> to </del></span><ins datetime="2001-02-19T00:27"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">help
+the test of scalable data mining algorithms. Considering it is very difficult
+to get large </del></span><ins datetime="2001-02-19T00:28"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">real-life </del></span><ins
+datetime="2001-02-19T00:27"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">data sets</del></span><ins
+datetime="2001-02-19T00:28"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> to conduct performance study of scalable
+algorithms, this addition of large data sets to UCI KDD Archive will stimulate
+and foster systematic progress</del></span><ins datetime="2001-02-19T01:55"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+significantly</del></span><ins datetime="2001-02-19T00:28"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> in developing
+scalable data mining algorithms.</del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins><ins
+cite="mailto:paulb" datetime="2001-02-20T15:00"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:paulb 20010220T1500'><ins
+cite="mailto:paulb" datetime="2001-02-20T15:00"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Also included in this
+issue of Explorations are </del></span><ins datetime="2001-02-20T15:01"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">a
+series of </del></span><ins datetime="2001-02-20T15:00"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">reports from
+KDD-2000:<span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-20T15:01"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">The</del></span><ins datetime="2001-02-20T15:00"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"> </del></span><ins
+datetime="2001-02-20T15:01"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Sixth ACM SIGKDD International Conference on
+Knowledge Discovery and Data Mining.<span style="mso-spacerun: yes"> 
+</span>KDD-2000 took place in Boston, MA </del></span><ins
+datetime="2001-02-20T15:02"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">on August 20 – 23, 2000.<span style="mso-spacerun:
+yes">  </span>The organizing committee expected 700 </del></span><ins
+datetime="2001-02-20T15:08"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">attendees</del></span><ins
+datetime="2001-02-20T15:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">.<span style="mso-spacerun: yes">  </span>After the
+final numbers were tabulated, a total of 920 people attended KDD-2000!<span
+style="mso-spacerun: yes">  </span>Enthusiasm and interest in the field </del></span><ins
+datetime="2001-02-20T15:57"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">is rapidly increasing.</del></span><ins
+datetime="2001-02-20T15:09"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span><ins datetime="2001-02-20T15:10"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:paulb 20010220T1510'><ins
+cite="mailto:paulb" datetime="2001-02-20T15:36"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">The </del></span><ins
+datetime="2001-02-20T15:39"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">KDD Cup 2000 </del></span><ins
+datetime="2001-02-20T15:36"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">annual data mining competition consisted of five
+questions to be answered based on web-browsing data collected from an online
+retailer.</del></span><ins datetime="2001-02-20T15:13"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><span
+style="mso-spacerun: yes">   </span></del></span><ins
+datetime="2001-02-20T15:37"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">The</del></span><ins datetime="2001-02-20T15:17"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">
+report on the KDD 2000 Cup by </del></span><ins datetime="2001-02-20T15:13"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Ron
+Kohavi, Carla Brodley, </del></span><ins datetime="2001-02-20T15:17"><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Brian
+Frasca, Llew Mason, and Zijan Zheng includes </del></span><ins
+datetime="2001-02-20T15:37"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">summary reports by the winners of the five
+questions.</del></span><ins datetime="2001-02-20T15:38"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:paulb 20010220T1538'><ins
+cite="mailto:paulb" datetime="2001-02-20T15:39"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Conference highlights
+included workshops and panel presentations.<span style="mso-spacerun: yes"> 
+</span></del></span><ins datetime="2001-02-20T15:47"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">We thank the
+organizers for the time and effort required to provide reports from their
+respective workshops.<span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-20T15:40"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Marko Grobelnik, Dunja Mladenic</del></span><ins
+datetime="2001-02-20T15:17"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">, and Natasa Milic-Frayling</del></span><ins
+datetime="2001-02-20T15:41"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> have provided a report on the KDD-2000 Workshop on
+Text Mining.<span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-20T15:42"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Simeon Simoff and Osmar Zaïane</del></span><ins
+datetime="2001-02-20T15:43"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> report on MDM/KDD2000</del></span><ins
+datetime="2001-02-20T15:42"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">:<span style="mso-spacerun: yes">  </span>The 1<sup><span
+style='mso-prop-change:paulb 20010220T1543'><span style='mso-prop-change:paulb 20010220T1543'>st</span></span></sup>
+</del></span><ins datetime="2001-02-20T15:43"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">International Workshop
+on Multimedia Data Mining.<span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-20T15:46"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">A summary of the WEBKDD 2000 workshop was provided
+by </del></span><ins datetime="2001-02-20T15:48"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Myra Spiliopoulou,
+Jaideep Srivastava, Ron Kohavi and Brij Masand</del></span><ins
+datetime="2001-02-20T15:49"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">.<span style="mso-spacerun: yes">  </span></del></span><ins
+datetime="2001-02-20T15:44"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">A report on the Workshop on Distributed and
+Parallel Knowledge Discovery by Hillol Kargupta, Joydeep Ghosh, </del></span><ins
+datetime="2001-02-20T15:45"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">Vipin Kumar, and Zoran Obradovic is included.<span
+style="mso-spacerun: yes">  </span>Ivan Bruha and </del></span><ins
+datetime="2001-02-20T15:50"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16">A. Famili have provided a report on the Workshop on
+Postprocessing in Machine Learning and Data Mining.<span style="mso-spacerun:
+yes">  </span></del></span><ins datetime="2001-02-20T15:51"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16">Alexander Tuzhilin
+summarized the Panel on Personalization and Data Mining.</del></span><ins
+datetime="2001-02-20T15:45"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:16"> </del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:28"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:16"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0029'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:27"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-02-19T00:23"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-02-19T00:24"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-02-19T00:21"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><span style="mso-spacerun:
+yes"> </span></del></span><ins datetime="2001-02-19T00:13"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><o:p></o:p></del></span></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0100'><b><span
+style='mso-prop-change:"Kyuseok Shim" 20010219T0101'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:00"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:00"><span style='mso-prop-change:
+"Kyuseok Shim" 20010219T0101'>Paul Bradley, please fill this part!!<span
+style='mso-prop-change:"Kyuseok Shim" 20010219T0101'><o:p></o:p></span></span></del></span></ins></span></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0101'><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-18T23:54">Kosala
+and Hendrik Blockeel contribute a survey on web mining research, providing an
+overview of sub-areas and problems encompassed by web mining.<span
+style="mso-spacerun: yes">  </span>Yiming Ma, Bing Liu and Ching Kian Wong
+propose a web-browser-based graphical user interface for displaying, navigating
+and annotating a set of discovered rules.<span style="mso-spacerun: yes"> 
+</span>Sunita Sarawagi and Sree Hari Nagaralu discuss the notion, use and
+implication of providing data mining models as services on the web.<span
+style="mso-spacerun: yes">  </span>Stanley Loh, Leandro Krug Wives and José
+Palazzo de Oliveira propose a concept-based approach to analyzing texts
+extracted from the web using an interesting collaboration between human and
+computer to obtain the final result.<span style="mso-spacerun: yes"> 
+</span>José Borges and Mark Levene present a heuristic for speeding up a
+previous system based upon a hypertext probabilistic grammar for extracting
+browsing behavior from web log data.</del></span><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:51"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:00">Additional articles addressing general topics of
+interest to the SIGKDD community include the introduction of a simple new
+scalable k-means clustering algorithm proposed and evaluated by Frederik
+Farnstrom, James Lewis and Charles Elkan.<span style="mso-spacerun: yes">  
+</span>We hope that this article prompts further discussion on scalable data
+mining algorithms in general.<span style="mso-spacerun: yes">  </span>A survey
+and overview of algorithms discovering association rules appears by Jochen
+Hipp, Ulrich Güntzer and Gholamreza Nakhaeizadeh, including several runtime
+experiments.<span style="mso-spacerun: yes">   </span>Alex Freitas provides a
+position paper outlining differences between the classification task and that
+of discovering association rules and raises many interesting points, hopefully
+prompting further discussion on the subject from the SIGKDD community</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:54"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:00">.</del></span><ins
+datetime="2000-07-29T13:54"><span class=msoDel><del cite="mailto:Paul%20Bradley"
+datetime="2000-07-31T10:34"><o:p></o:p></del></span></ins></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1354'><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:54">.</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:01"><span class=msoDel><del
+cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:34"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1401'><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:53"><![if !supportEmptyParas]>&nbsp;<![endif]></del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:53"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1401'><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:54"><![if !supportEmptyParas]>&nbsp;<![endif]></del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:54"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:00">Reports from workshops and meetings of interest
+include a report from Jeanne Behnke, Elaine Dobinson and others on the NASA
+Workshop on Issues in the Application of Data Mining to Scientific Data.<span
+style="mso-spacerun: yes">  </span>Coming from one of the early organizations
+with a definite need to analyze large data sets, the topics discussed in this
+report provide interesting insight into the relationship between the data
+analyst and the domain specialist in scientific areas of interest to NASA.<span
+style="mso-spacerun: yes">  </span>Dan Suciu and Gottfried Vossen have kindly
+provided a report from WebDB’2000 following the ACM PODS/SIGMOD
+conferences.<span style="mso-spacerun: yes">   </span>Dimitrios Gunopulos and
+Rajeev Rastogi have, similarly, kindly provided a report on the ACM SIGMOD
+Workshop on Research Issues in Data Mining and Knowledge Discovery.</del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:10"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1355'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55"><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:00"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1355'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55">We hope that SIGKDD
+Explorations continues to meet your expectations on covering timely topics and
+events in this growing field. Our shift in format towards special focus topics
+is not intended to limit the scope of our coverage of the field. We still welcome
+articles and contributions, including position and idea papers as well as
+controversial topics that stimulate discussion and deliberation. We hope the
+special focus sections will allow us to continue the general breadth of
+coverage </ins><ins cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:58">while</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55"> provid</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:58">ing</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55"> some </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:58">additional </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55">depth along the</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:58"> focus</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55"> topic.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:59"> <o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20000729T1359'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:59">We u<span
+class=msoDel><del cite="mailto:Paul%20Bradley" datetime="2000-07-31T10:35"><ins
+datetime="2000-07-29T13:59">s</ins></del></span>rge interested readers and
+contributors to propose special topics. </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:06"><span style="mso-spacerun: yes"> </span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:59">We welcome guest
+editors from within the field and from outside it to help us cover related
+focus topics. Please contact<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:15"><ins datetime="2000-07-29T13:59">s</ins></del></span>
+us with <span class=msoDel><del cite="mailto:paulb" datetime="2001-03-24T00:15"><ins
+datetime="2000-07-29T13:59">any i</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:16">i</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:59">deas for future topics
+of interest, and any feedback on </ins><i><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T14:00">Explorations</ins></i><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:00">.</ins><span
+style='mso-prop-change:"Usama Fayyad" 20000729T1400'><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T13:55"><span
+style='mso-prop-change:"Usama Fayyad" 20000729T1400'><o:p></o:p></span></ins></span></p>
+
+<p class=MsoNormal><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:32">We conclude with a reminder that the premier event
+in the SIGKDD community is quickly approaching.<span style="mso-spacerun:
+yes">  </span>KDD-200</del></span><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:30"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:32">1</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:30">0</del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32"> is
+taking place in </del></span><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:32">Boston</del></span><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:32"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:32">San Fransisco</del></span></ins><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">, </del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:32">MA</del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:32"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">CA</del></span></ins><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">,
+beginning Sunday, August 2</del></span><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:32"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:32">6</del></span></ins><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:32">0</del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">th
+and concluding on August 23rd.<span style="mso-spacerun: yes">  </span>See the
+conference website for details (http://www.acm.org/sigkdd/kdd200</del></span><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33"><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">1</del></span></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">0</del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">).<span
+style="mso-spacerun: yes">  </span>We look forward to seeing you in Boston!</del></span><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1831'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31">KDD-2001 in San
+Francisco, California, USA<o:p></o:p></ins></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1831'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:07">I</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:07">We</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31"> conclude with a
+reminder that the premier event in the SIGKDD community, KDD-2001, will take
+place in San Fran<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-19T02:08"><ins datetime="2001-03-18T18:31">s</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:08">c</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31">isco, </ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:07"><span style="mso-spacerun:
+yes"> </span></ins><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31">CA,
+beginning Sunday, August 26th and concluding on August 29th<span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:07"><ins datetime="2001-03-18T18:31">
+next year</ins></del></span>. </ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:07"><span style="mso-spacerun: yes"> </span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:07">The</del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:07">Conference</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:31"> details<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:07"><ins
+datetime="2001-03-18T18:31"> of the conference including paper submissions</ins></del></span>
+are available at http://www.acm.org/sigkdd/kdd2001.<span style="mso-spacerun:
+yes">  </span>We are looking forward to seeing you in San Fran<span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:08"><ins
+datetime="2001-03-18T18:31">s</ins></del></span></ins><ins cite="mailto:paulb"
+datetime="2001-03-19T02:08">c</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:31">isco!<o:p></o:p></ins></p>
+
+<p class=MsoNormal style='text-indent:0in;mso-text-indent-alt:0in;mso-list:
+none;mso-list-ins:"Usama Fayyad" 20010318T1832'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">Acknowledgement:</ins></b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32"> <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:16"><ins datetime="2001-03-18T18:32">t</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:16">T</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">he guest editor would
+like to thank Paul Bradley, Usama Fayyad and Sunita Sarawagi for the
+opportunity of contributing to SIGKDD Explorations. Without the support of
+Yesook Shim, it would have been impossible to complete the</ins><ins
+cite="mailto:paulb" datetime="2001-03-19T02:08"> </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">special focus sections
+of this issue.</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T19:06"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1906'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:36"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></b></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1836'><b><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:36">References</ins></span></b><span
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:36"><o:p></o:p></ins></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1832'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:33">[</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:34">1</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:33">] J. Gray and P.
+Shenoy. Rules of thumb in data engineering. <i>in Proceedings of 16th
+International Conference on Data Engineering</i>, pages 3-12. IEEE, 2000.</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:35"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1835'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:35">[2] U. Fayyad. “The
+digital physics of Data Mining</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:36">”, <i>Communications of the ACM</i>, March 2001.</ins><span
+style='mso-prop-change:"Usama Fayyad" 20010318T1836'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32"><span
+style='mso-prop-change:"Usama Fayyad" 20010318T1836'><o:p></o:p></span></ins></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1832'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:32">[3] P. Lyman, H. R.
+Varian, J. Dunn, A. Strygin, K. Swearingen, 2001. “How Much Information”<i>,
+University of California, Berkeley, Technical Report.</i></ins><i><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:34"><o:p></o:p></ins></i></p>
+
+<p class=MsoNormal><ins cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:34">[4]
+M. Lesk. “How much information is there in the world?” <i><span
+style='mso-prop-change:"Usama Fayyad" 20010318T1835'><span style='mso-prop-change:
+"Usama Fayyad" 20010318T1835'>Technical report</span></span></i>,</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:35">
+http://www.lesk.com/mlesk/ksg97/ksg.html</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:34"> 1997.</ins><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1906'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T19:06"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1845'><!--[if gte vml 1]><v:line
+ id="_x0000_s1028" style='position:absolute;left:0;text-align:left;z-index:2;
+ mso-position-horizontal:absolute;mso-position-vertical:absolute' from="-.45pt,13.45pt"
+ to="242.55pt,13.45pt"/><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+position:relative;z-index:1;left:-2px;top:17px;width:327px;height:20px'><img
+width=327 height=3 src="image003.gif" v:shapes="_x0000_s1028"></span><![endif]><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:12"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<h1 style='margin-top:0in;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1904;
+tab-stops:238.5pt'><span style='mso-prop-change:paulb 20010324T1003'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T19:04"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-19T02:11"><span style='mso-prop-change:
+paulb 20010324T1003'>About the Editors</span></del></span><span
+style='mso-prop-change:paulb 20010324T1003'><ins datetime="2001-03-18T19:05"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:11"><span
+style='mso-tab-count:1'>  </span></del></span><ins datetime="2001-03-18T19:04"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-03-19T02:11"><o:p></o:p></del></span></ins></ins></span></ins></span></h1>
+
+<h1 style='margin-top:0in;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1905'><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T19:05"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></h1>
+
+<h1 style='margin-top:0in;mso-list:none;mso-list-ins:paulb 20010319T0211'><ins
+cite="mailto:paulb" datetime="2001-03-19T02:11">About the Editors<o:p></o:p></ins></h1>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:paulb 20010319T0211'><!--[if gte vml 1]><v:line
+ id="_x0000_s1029" style='position:absolute;left:0;text-align:left;z-index:3;
+ mso-position-horizontal:absolute;mso-position-vertical:absolute' from="-.45pt,.15pt"
+ to="242.55pt,.15pt"/><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
+position:relative;z-index:2'><span style='left:0px;position:absolute;
+left:-2px;top:-1px;width:327px;height:3px'><img width=327 height=3
+src="image004.gif" v:shapes="_x0000_s1029"></span></span><![endif]><ins
+cite="mailto:paulb" datetime="2001-03-19T02:11"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<h1 style='margin-top:0in;mso-list:none'><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">REFERENCES</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33"><o:p></o:p></del></span></h1>
+
+<p class=References align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;mso-list:l1 level1 lfo2;mso-list-change:"\[%1\:1\:0\:\]" "Usama Fayyad" 20000729T1329'><![if !supportLists]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">[1]</del></span><![endif]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">Kohavi,
+R.<span style="mso-spacerun: yes">  </span>Mining E-commerce Data:<span
+style="mso-spacerun: yes">  </span>Challenges and Stories from the
+Trenches.<span style="mso-spacerun: yes">  </span>Presentation at DIMACS/IBM
+Workshop on Data Mining in the Internet Age.<span style="mso-spacerun: yes"> 
+</span>May 2, 2000.</del></span><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33"><o:p></o:p></del></span></p>
+
+<p class=References align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;mso-list:l1 level1 lfo2;mso-list-change:"\[%1\:2\:0\:\]" "Usama Fayyad" 20000729T1329'><![if !supportLists]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">[1]</del></span><![endif]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">Markoff,
+J.<span style="mso-spacerun: yes">  </span>Microsoft Sees Software ‘Agent’ as
+Way to Avoid Distractions.<span style="mso-spacerun: yes">  </span>New York
+Times, Technology Section, July 17, 2000.</del></span><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33"><o:p></o:p></del></span></p>
+
+<p class=References align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;text-indent:0in;mso-list:l1 level1 lfo2;mso-list-change:"\[%1\:3\:0\:\]" "Usama Fayyad" 20000729T1329'><![if !supportLists]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">[1]</del></span><![endif]><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33">Sanders,
+M. R., and Temkin, B. D.<span style="mso-spacerun: yes">  </span>Global
+eCommerce Approaches Hypergrowth.<span style="mso-spacerun: yes">  </span>The
+Forrester Brief, April 18, 2000.<span style="mso-spacerun: yes"> 
+</span>http://www.forrester.com.<span style="mso-spacerun: yes">  </span></del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:33"><o:p></o:p></del></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:Unknown 19000000T0000'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:44">Editor-in-Chief:</ins><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:57">Paul Bradley </del></span></b><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:57">is a </del></span><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">Researcher in
+the Data Management, Exploration and Mining Group at Microsoft Research.<span
+style="mso-spacerun: yes">  </span>Research interests include classification
+and clustering algorithms; underlying mathematical problem formulations; and
+issues related to scalability.<span style="mso-spacerun: yes">  </span>After
+receiving the Ph.D. degree from the University of Wisconsin-Madison in 1998</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:02"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"> on the topic of mathematical
+programming and data mining</del></span></ins><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56">, he joined Microsoft Research</del></span><ins
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:02"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"> where he works on </del></span><ins
+datetime="2000-07-29T14:06"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">research in </del></span><ins
+datetime="2000-07-29T14:02"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">developing new </del></span><ins
+datetime="2000-07-29T14:03"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">data mining </del></span><ins
+datetime="2000-07-29T14:02"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">algorithms</del></span><ins
+datetime="2000-07-29T14:06"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> as well as on shipping data mining components in
+Microsoft products such as SQL Server and Commerce Server</del></span></ins></ins></ins></ins></ins></ins><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">.</del></span><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:57"><span
+style="mso-spacerun: yes">  </span></del></span></p>
+
+<p class=MsoNormal style='text-indent:0in;mso-text-indent-alt:0in;mso-list:
+none;mso-list-ins:"Kyuseok Shim" 20010219T0158'><b><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:58">Usama Fayyad </ins></b><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:58">is President &amp; CEO
+of digiMine, Inc.<span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:52"><ins datetime="2001-02-19T01:58">.</ins></del></span>
+<span class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:43"><ins
+datetime="2001-02-19T01:58"><span style="mso-spacerun: yes"> </span></ins></del></span>He
+received his Ph.D. from The University of Michigan, Ann Arbor in 1991. He is an
+Editor-in-Chief of <i>Data Mining and Knowledge Discovery, </i>the primary
+technical journal in the field, and has chaired several past KDD conferences.
+Prior to digiMine, he was at Microsoft where he founded and led Microsoft
+Research’s Data Mining &amp; Exploration (DMX) Group.<span style="mso-spacerun:
+yes">  </span>His work with Microsoft product groups included the development
+of data mining prediction components that ship with Microsoft Site Server
+(Commerce Server 3.0 and 4.0) and developing scalable algorithms for mining
+large databases and architecting their fit with server products such as
+Microsoft SQL Server and OLAP Services.<span style="mso-spacerun: yes"> 
+</span>In addition to managing the DMX research group, he managed the core part
+of the development team that is building providers in the SQL Server product
+group.<span style="mso-spacerun: yes">  </span>He was also a driving force
+behind establishing a new industry standard in data mining based on Microsoft’s
+OLE DB API. Prior to joining Microsoft, Usama was at the Jet Propulsion
+Laboratory (JPL), California Institute of Technology (1989-1995) where he
+founded and headed the Machine Learning Systems Group and developed data mining
+systems for the analysis of large scientific databases. For this work he
+received the most distinguished excellence awards from Caltech/JPL and a U.S. Government
+Medal from NASA. He remained affiliated with JPL as Distinguished Visiting
+Scientist after he moved to Microsoft.<span style="mso-spacerun: yes">  </span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:57"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1844'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:44">Associate Editors:</ins></b><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:58"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:Unknown 19000000T0000'><b><span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45">Sunita
+Sarawagi </del></span></b><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:45">is assistant professor at the Indian Institute of
+Technology, Bombay.<span style="mso-spacerun: yes">  </span>She received her
+Ph.D. degree in 1996 from the University of California at Berkeley and was a
+research staff member at the data mining group of IBM Almaden Research Center
+before joining IIT Bombay in 1999.<span style="mso-spacerun: yes">  </span>Her
+research interests include database mining, OLAP and extended relational
+database systems.<span style="mso-spacerun: yes">  </span>She has several
+publications in international conferences including a best paper award at the
+1998 ACM SIGMOD conference.<span style="mso-spacerun: yes">  </span>She has
+served as program committee member for SIGMOD, VLDB and ICDE conferences and is
+an associate editor of the ACM SIGKDD newsletter and IEEE Data Engineering
+Bulletin.</del></span><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:45"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;mso-list:
+none;mso-list-ins:"Kyuseok Shim" 20010219T0048;mso-layout-grid-align:none;
+text-autospace:none'><b><ins cite="mailto:paulb" datetime="2001-02-20T15:57">Paul
+Bradley </ins></b><ins cite="mailto:paulb" datetime="2001-02-20T15:57">is a <span
+class=msoDel><del cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:44"><ins
+datetime="2001-02-20T15:57">developer</ins></del></span></ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:44">Data Mining Engineer</ins><ins
+cite="mailto:paulb" datetime="2001-02-20T15:57"> at digiMine, Inc.<span
+style="mso-spacerun: yes">  </span>His focus is on </ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:17">the </ins><ins
+cite="mailto:paulb" datetime="2001-02-20T15:57">integration and architecture of
+data mining services.<span style="mso-spacerun: yes">  </span>He received his
+Ph.D. from the University of Wisconsin in 1998 on the topic of mathematical
+programming and data mining.<span style="mso-spacerun: yes">  </span>Prior to
+joining digiMine, he was a researcher in the Data Management, Exploration and
+Mining Group at Microsoft Research.<span style="mso-spacerun: yes"> 
+</span>Research interests include classification and clustering algorithms;
+underlying mathematical programming formulations; and issues related to
+scalability.<span style="mso-spacerun: yes">  </span>While at Microsoft
+Research, he worked on data mining components </ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:19">shipping with SQL Server</ins><ins
+cite="mailto:paulb" datetime="2001-02-20T15:57"> </ins><ins cite="mailto:paulb"
+datetime="2001-03-24T00:19">and </ins><ins cite="mailto:paulb"
+datetime="2001-02-20T15:57">Commerce Server. </ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:57"><o:p></o:p></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1857;
+mso-layout-grid-align:none;text-autospace:none'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:45"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1845'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45">Sunita Sarawagi </ins></b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45">is assistant professor
+at the Indian Institute of Technology, Bombay.<span style="mso-spacerun: yes"> 
+</span>She received her Ph.D. degree in 1996 from the University of California
+at Berkeley and was a research staff member <span class=msoDel><del
+cite="mailto:paulb" datetime="2001-03-24T00:20"><ins datetime="2001-03-18T18:45">at</ins></del></span></ins><ins
+cite="mailto:paulb" datetime="2001-03-24T00:20">with</ins><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45"> the data mining group
+of IBM Almaden Research Center before joining IIT Bombay in 1999.<span
+style="mso-spacerun: yes">  </span>Her research interests include database
+mining, OLAP and extended relational database systems.<span
+style="mso-spacerun: yes">  </span>She has several publications in
+international conferences including a best paper award at the 1998 ACM SIGMOD
+conference.<span style="mso-spacerun: yes">  </span>She has served as program
+committee member for SIGMOD, VLDB and ICDE conferences and is an associate
+editor of the ACM SIGKDD newsletter and IEEE Data Engineering Bulletin.<o:p></o:p></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1845;
+mso-layout-grid-align:none;text-autospace:none'><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:45"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Usama Fayyad" 20010318T1845;
+mso-layout-grid-align:none;text-autospace:none'><b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45">Guest Editor:</ins></b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45"><o:p></o:p></ins></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;mso-list:
+none;mso-list-ins:"Usama Fayyad" 20010318T1845;mso-layout-grid-align:none;
+text-autospace:none'><b><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T18:45">Kyuseok Shim</ins></b><ins
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T18:45"> is currently an
+Assistant Professor at Korea Advanced Institute of Science and Technology
+(KAIST) in Korea. Before joining KAIST, he was a member of technical staff
+(MTS) in Bell Laboratories in which he initiated and worked for the Serendip
+data mining project with Rajeev Rastogi. Before that, he was a research staff
+member<span style="mso-spacerun: yes">  </span>of<span style="mso-spacerun:
+yes">  </span>Quest Data Mining project at IBM Almaden Research Center. He also
+worked as a summer intern for two summers at Hewlett Packard Laboratories. He
+received B.S. degree in Electrical Engineering from Seoul National University
+in 1986, and the MS and Ph.D. degrees in Computer Science from University of
+Maryland, College Park, in 1988 and 1993 respectively.<span
+style="mso-spacerun: yes">  </span>He has been working in the area of<span
+style="mso-spacerun: yes">  </span>data mining, data warehousing, query
+processing and query optimization, XML and semi-structured data. He has been an
+Advisory Committee Member for ACM SIGKDD. He has also served as a program
+committee member on international conferences that include ICDE'97, KDD'98,
+SIGMOD'99, SIGKDD'99, VLDB'00 and SIGKDD’01. He did a data mining tutorial at
+CIKM'99, ICDE'99 and SIGKDD'99 conferences.<span style="mso-spacerun: yes"> 
+</span>He was co-chair of the 1999 ACM SIGMOD Workshop on Research Issues in
+Data Mining and Knowledge Discovery.</ins><ins cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T19:04"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-03-24T00:21"><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;mso-list:
+none;mso-list-ins:"Usama Fayyad" 20010318T1845;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='mso-prop-change:"Kyuseok Shim" 20010219T0049'><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:48"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"><span style='mso-prop-change:
+"Kyuseok Shim" 20010219T0049'>Kyuseok Shim</span></del></span></ins></span></b><ins
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T00:48"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"> is currently an Assistant
+Professor at Korea Advanced Institute of Science and Technology (KAIST) in
+Korea. Before joining KAIST, he was a member of technical staff (MTS)</del></span><ins
+datetime="2001-02-19T00:57"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> in</del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56"> Bell
+Laboratories</del></span><ins datetime="2001-02-19T00:57"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"> in which</del></span><ins
+datetime="2001-02-19T00:52"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">he </del></span><ins
+datetime="2001-02-19T00:51"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">initiated and worked </del></span><ins
+datetime="2001-02-19T00:52"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">for </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">the Serendip
+data mining project </del></span><ins datetime="2001-02-19T00:52"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">with Rajeev
+Rastogi</del></span><ins datetime="2001-02-19T00:48"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56">. Before that, he </del></span><ins
+datetime="2001-02-19T00:58"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">was a research staff member<span
+style="mso-spacerun: yes">  </span>of </del></span><ins
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"><span style="mso-spacerun: yes"> </span>Quest</del></span><ins
+datetime="2001-02-19T00:49"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">Data Mining
+project at IBM Almaden Research Center. He also worked as a summer intern for
+two summers at Hewlett Packard Laboratories. He received B.S. degree in
+Electrical Engineering from Seoul National University in 1986, and the MS and
+Ph.D. degrees in Computer Science from University of Maryland, College Park, in
+1988 and 1993 respectively.</del></span><ins datetime="2001-02-19T00:59"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56"><o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0059;
+mso-layout-grid-align:none;text-autospace:none'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:59"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0059;
+mso-layout-grid-align:none;text-autospace:none'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:54"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"><span style="mso-spacerun: yes"> </span>He</del></span><ins
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> has been working in the area of </del></span><ins
+datetime="2001-02-19T00:59"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"><span style="mso-spacerun: yes"> </span></del></span><ins
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">data mining,</del></span><ins
+datetime="2001-02-19T00:50"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">data
+warehousing, query processing and query optimization, XML and semi-structured
+data. He has been an Advisory Committee Member for ACM SIGKDD.</del></span><ins
+datetime="2001-02-19T00:50"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">He has also
+served as a program committee member on </del></span><ins
+datetime="2001-02-19T00:55"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">international conferences that include </del></span><ins
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56">ICDE'97,</del></span><ins
+datetime="2001-02-19T00:50"><span class=msoDel><del cite="mailto:paulb"
+datetime="2001-02-20T15:56"> </del></span><ins datetime="2001-02-19T00:48"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56">KDD'98,
+SIGMOD'99, SIGKDD'99, VLDB'00</del></span><ins datetime="2001-02-19T00:56"><span
+class=msoDel><del cite="mailto:paulb" datetime="2001-02-20T15:56"> and
+SIGKDD’01.</del></span><ins datetime="2001-02-19T00:48"><span class=msoDel><del
+cite="mailto:paulb" datetime="2001-02-20T15:56"> He did a data mining tutorial
+at CIKM'99, ICDE'99 and SIGKDD'99 conferences.<span style="mso-spacerun: yes"> 
+</span>He was co-chair of the 1999 ACM SIGMOD Workshop on Research Issues in
+Data Mining and Knowledge Discovery.<o:p></o:p></del></span></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></ins></p>
+
+<p class=MsoNormal align=left style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:left;mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0048;
+mso-layout-grid-align:none;text-autospace:none'><span style='font-size:10.0pt;
+font-family:"Courier New"'><ins cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T00:48"><span class=msoDel><del cite="mailto:Usama%20Fayyad"
+datetime="2001-03-18T19:03"><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></del></span></ins></span></p>
+
+<p class=MsoNormal style='mso-list:none;mso-list-ins:"Kyuseok Shim" 20010219T0048'><b><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:00"><![if !supportEmptyParas]>&nbsp;<![endif]></del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:00"><o:p></o:p></del></span></b></p>
+
+<p class=MsoNormal><b><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:57">Usama Fayyad </del></span></b><span class=msoDel><del
+cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:57">is President &amp; CEO
+of digiMine</del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T14:07"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:57">, Inc.</del></span></ins><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2000-07-29T14:07">.com</del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:57">.<span
+style="mso-spacerun: yes">  </span></del></span><ins cite="mailto:Usama%20Fayyad"
+datetime="2000-07-29T14:08"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:57">He received his Ph.D. from The University of
+Michigan, Ann Arbor in 1991. </del></span><ins datetime="2000-07-29T14:09"><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:57">He
+is an Editor-in-Chief of <i>Data Mining and Knowledge Discovery, </i></del></span><ins
+datetime="2000-07-29T14:10"><span class=msoDel><del cite="mailto:Kyuseok%20Shim"
+datetime="2001-02-19T01:57">the primary technical journal in the field, and has
+chaired several past KDD conferences. </del></span></ins></ins></ins><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:57">Prior
+to digiMine, he was at Microsoft where he founded and led Microsoft Research’s
+Data Mining &amp; Exploration (DMX) Group.<span style="mso-spacerun: yes"> 
+</span>His work with Microsoft product groups included the development of data
+mining prediction components that ship with Microsoft Site Server (Commerce
+Server 3.0 and 4.0) and developing scalable algorithms for mining large
+databases and architecting their fit with server products such as Microsoft SQL
+Server and OLAP Services.<span style="mso-spacerun: yes">  </span>In addition
+to managing the DMX research group, he managed the core part of the development
+team that is building providers in the SQL Server product group.<span
+style="mso-spacerun: yes">  </span>He was also a driving force behind
+establishing a new industry standard in data mining based on Microsoft’s OLE DB
+API. Prior to joining Microsoft, Usama was at the Jet Propulsion Laboratory
+(JPL), California Institute of Technology (1989-1995) where he founded and
+headed the Machine Learning Systems Group and developed data mining systems for
+the analysis of large scientific databases. For this work he received the most
+distinguished excellence awards from Caltech/JPL and a U.S. Government Medal
+from NASA. He remained affiliated with JPL as Distinguished Visiting Scientist
+after he moved to Microsoft.<span style="mso-spacerun: yes">  </span></del></span><span
+class=msoDel><del cite="mailto:Kyuseok%20Shim" datetime="2001-02-19T01:57"><o:p></o:p></del></span></p>
+
+</div>
+
+<span style='font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><span class=msoDel><del
+cite="mailto:Usama%20Fayyad" datetime="2001-03-18T19:04"><br clear=all
+style='page-break-before:auto;mso-break-type:section-break'>
+</del></span></span>
+
+<div class=Section5>
+
+<p class=Paper-Title style='text-align:justify'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

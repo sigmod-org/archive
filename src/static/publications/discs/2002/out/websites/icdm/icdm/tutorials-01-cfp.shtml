@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>IEEE Conference on Data Mining: Call for Tutorials</TITLE>
+<STYLE>
+
+<!--
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+<CENTER>
+
+<H1><FONT COLOR="#FF0000"><U>ICDM '01</U></FONT><br>
+<FONT color=#0055ff>The 2001 IEEE International Conference
+on <NOBR>Data Mining</NOBR></FONT><br>
+Sponsored by the IEEE Computer Society</H1>
+
+<H2>San Jose, California, USA<BR>
+November 29 - December 2, 2001</H2>
+
+<H3>Home Page: <a
+href="http://www.cs.uvm.edu/~xwu/icdm-01.html">http://www.cs.uvm.edu/~xwu/icdm-01.html</a></H3>
+
+</CENTER>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif"
+WIDTH=100%><br>
+
+<CENTER>
+<H3><FONT color=#0055ff>Call for Tutorials</FONT></H3>
+</CENTER>
+
+<P class=body>
+
+The 2001 IEEE International Conference on Data Mining (ICDM '01) will
+include tutorials providing in-depth background on specific subjects
+in data mining.  The recency of the data mining field, and the variety
+of disciplines that are represented, lead to many possibilities for
+good tutorials:
+
+<UL>
+
+<LI>Short courses on areas of machine learning, databases, or
+statistics that may be "old hat" to specialists in that discipline,
+but are new to a majority of the conference attendees.  (e.g.,
+<cite>An Introduction to Hidden Markov Models</cite>).
+
+<LI>Surveys of new and developing research areas in data mining.
+(e.g., <cite>Text Mining</cite>).
+
+<LI>End-to-end descriptions of the practical application of data
+mining technology (i.e., applications that may be "typical" for a
+paper, but provide an example of issues faced in a data mining project
+that would generalize to problems faced by the conference attendees).
+
+<LI>An in-depth coverage of a past research breakthrough that is now
+becoming a mature technology.
+</UL>
+
+<P class=body>
+
+The topics of interest fall within those described in the conference
+<A HREF="cfp-01.shtml">Call for Papers</A>.
+
+<H4>Submission Details</H4>
+
+The tutorial proposal should include the following:
+
+<OL>
+<LI>Title and abstract of the tutorial; 
+
+<P class=body>
+<LI>Intended audience.  Include prerequisite knowledge required of the
+attendees, and the expected areas of interest.  (For example, a
+tutorial on statistics for people applying data mining tools vs. a
+tutorial on statistics for people building data mining tools);
+
+<LI>Length of time needed (e.g., half day or full day); and
+
+<LI>Short biographies of the presenters.
+</OL>
+
+<P class=body>
+Tutorial materials such as handouts and slides should be included if
+available, but are not required for submission.  However, providing
+such materials will show depth and maturity of the tutorial, and will
+be a strong factor in the selection process.
+
+<P class=body>
+Please send a soft copy (preferred) of your proposal to <A
+HREF="mailto:clifton@computer.org">clifton@computer.org</A>, or a hard
+copy to:
+<pre>
+     <A HREF="http://www.mitre.org/resources/centers/it/staffpages/clifton/">Dr. Chris Clifton</A>
+     The MITRE Corporation
+     M/S K308,
+     202 Burlington Rd,
+     Bedford, MA 01730-1420,
+     USA
+</pre>
+
+<H4>Important Dates</H4>
+
+<center><table BORDER=2 CELLSPACING=3 >
+<tr>
+<td>June 30, 2001</td>
+<td>Tutorial submissions.</td>
+</tr>
+
+<tr>
+<td>July 31, 2001</td>
+<td>Acceptance notices.</td>
+</tr>
+
+<tr>
+<td>August 31, 2001</td>
+<td>Camera-ready copy of tutorial handouts.</td>
+</tr>
+
+<tr>
+<td>November 29, 2001</td>
+
+<td>ICDM '01 tutorials.</td>
+</tr>
+</table></center>
+<p>
+
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-01-tute.dat"
+align=absmiddle> times since August 1, 2000.<br>
+Questions and comments to: <a
+href="mailto:clifton@computer.org">clifton@computer.org</a>.<br>
+Last modified:
+April 4, 2001.
+
+</BODY>
+</HTML>

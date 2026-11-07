@@ -1,0 +1,37 @@
+{#- The archive site: the www.sigmod.org look with a simpler header. Links to www.sigmod.org are absolute. -#}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page.url != "/" %}{{ title }} – {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ (description or site.description) | escape }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/footer.css">
+<link rel="stylesheet" href="/assets/content.css">
+<link rel="stylesheet" href="/assets/archive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="/" aria-label="SIGMOD Archive home">
+      <img class="brand-logo" src="/assets/logo/sigmod-current.png" alt="ACM SIGMOD" width="200" height="64">
+      <span class="archive-name">Archive</span>
+    </a>
+    <a class="nav-sigmod" href="{{ site.www }}/">ACM SIGMOD<svg class="ext" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </div>
+</header>
+<main id="main">
+{{ content | safe }}
+</main>
+{% include "footer.njk" %}
+</body>
+</html>

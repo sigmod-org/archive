@@ -1,0 +1,88 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Building Complex Structures</TITLE> 
+</HEAD>
+
+<BODY BGCOLOR=white     >
+
+ <H1>Building Complex Structures</H1> 
+ <P><UL>
+<LI><H2>Atomic values are not enough.
+</H2>
+</UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2>The fork operator “#” permits to follow a path along various subpaths. Results are put together into a list.
+</H2>
+</UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2>Following the previous example, we can extract the entire stock information and put it in one structure.
+</H2>
+</UL><UL>
+<H2>
+</H2>
+</UL><UL>
+<H2>html.body.center.table[i:*]
+</H2>
+</UL><UL>
+<H2>    ( .tr[0].td[0].b[0].txt                                     // name
+</H2>
+</UL><UL>
+<H2>    # .tr[0].td[0].b[0]-&#062pcdata[1].txt, match /[(](.*?):/       // trading place
+</H2>
+</UL><UL>
+<H2>    # .tr[0].td[0].b[0]-&#062pcdata[1].txt, match /:(.*?)[)]/       // ticker  
+</H2>
+</UL><UL>
+<H2>    # .tr[1].td[0].b[0].txt                                     // last trade
+</H2>
+</UL><UL>
+<H2>    # .tr[1].td[3].pcdata[1].txt                                // volume
+</H2>
+</UL><UL>
+<H2>    # .tr[1].td[1].txt, match /[(](.*?)[)]/                     // change %
+</H2>
+</UL><UL>
+<H2>    # .tr[2].td[0].txt, match /Range(.*)/, split /-/            // Day range
+</H2>
+</UL><UL>
+<H2>    # .tr[3].td[0].txt, match /Range(.*)/, split /-/            // Year range
+</H2>
+</UL><UL>
+<H2>    )
+</H2>
+</UL><UL>
+<H2>where html.body.center.table[i].tr[0].td[0].getAttr(colspan) = "7";
+</H2>
+</UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2>
+</H2>
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld015.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld017.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld016.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

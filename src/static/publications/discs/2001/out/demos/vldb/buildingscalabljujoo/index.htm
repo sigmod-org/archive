@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Building Scalable Internet Application with Oracle8i JServer</title>
+  </head>
+
+  <body>
+      <h1>Building Scalable Internet Applications with Oracle8i JServer</h1>
+
+      <hr>
+      <address><a href="mailto:Julie.Basu@oracle.com">Julie Basu</a></address>
+<p>
+
+<h2> Goal of the Demonstration</h2>
+
+In this session at VLDB 2000, we demonstrated the salient architectural
+features of Oracle8i JServer that enable the development of powerful and
+scalable Java applications for the Internet.
+
+<h2> What is Oracle8i JServer? </h2>
+
+Java is emerging as the primary language for writing Internet
+applications. Reasons for its popularity include its rich object-oriented
+framework, memory safety, and platform independence.  The Oracle8i database
+embeds a Java Virtual Machine (JVM) that is designed for high performance and
+scalability in the web environment. This JVM serves as the basis for the
+JServer platform, which provides a comprehensive set of Java-based programming
+tools such as Java stored programs for procedural computations, Enterprise
+JavaBeans for writing modular business logic components, Java servlets and
+JavaServer Pages for web-based access, and JDBC / SQLJ for SQL data
+manipulation.  The powerful APIs in Java 2 Enterprise Edition (J2EE) are
+completely supported by JServer.
+
+
+<h2>Scalability of Java Web Applications </h2>
+
+The Internet imposes stringent requirements on the performance and scalability
+of web applications.  These applications must provide response times that are
+acceptable for "online" human interaction, and they must be capable of handling
+concurrent requests from possibly hundreds or even thousands of simultaneous
+users.  Any performance degradation, which is inevitable in practice for such
+large numbers of users due to system limitations, should be graceful and not
+erratic.
+
+<p> 
+
+In order for a Java application to be highly scalable, the Java server platform
+must support efficient execution of code from concurrent clients.  The storage
+management strategy of the server is of great importance, because the Java
+language mandates automatic memory allocation and garbage
+collection. Furthermore, the Java application developer should not be unduly
+burdened with writing highly complex multi-threaded code, which is error prone,
+in order to be scalable.
+
+<h2>Why Oracle8i JServer Scales Well</h2>
+
+Below we list the architectural features of Oracle8i JServer that are behind
+its superior scalability:
+
+<ul>
+
+<li> <b>Tight Integration with Oracle8i Database</b>
+<p>
+
+The JVM in Oracle8i runs within the same address space as the database SQL
+engine, providing fast access to SQL data. It is closely integrated with the
+database, and shares the notion of a user session.  A SQL session also
+translates to a Java user session within Oracle8i JServer.
+<p>
+
+<li><b>Session-Oriented Architecture</b>
+<p>
+
+JServer introduces the notion of <i>session-based</i> Java execution in which
+each user session effectively has its own "virtual" JVM.  In other words, the
+programmer can assume a virtually isolated environment for each user session,
+where interference among multiple concurrent sessions is minimized.  For
+example, erratic generation of garbage by user session A will not clog user
+sessions B or C. This unique architecture reduces synchronization and garbage
+collection bottlenecks that can frequently arise in a single JVM. It enables
+Java applications running on Oracle8i JServer to scale smoothly for increasing
+numbers of concurrent users without erratic degradation in performance (of
+course, this scaling is ultimately subject to system limitations).
+
+<p>
+
+<li><b>Effective Storage Management</b>
+<p> Oracle8i JServer has a small
+memory footprint for each virtual JVM session.  Although it provides the
+appearance of a virtual JVM for each user session, memory resources are shared
+between sessions as much as possible.  For example, the read-only byte code of
+common classes is not duplicated but is shared between the different user
+sessions.  Only state variables that are unique to a session are stored
+privately.  Additionally, each virtual session maintains its own memory that
+can be garbage collected independently of other sessions.  Sophisticated memory
+allocation techniques and "generational" garbage collection algorithms are used
+to maximize the performance.
+
+<p> 
+
+<li><b>Simplified Programming Model</b> 
+<p>
+The session-based programming model of JServer also alleviates the burden on
+the Java application developer of writing complex multi-threaded code to
+effectively handle resource sharing.  The simpler programming paradigm supports
+robustness and "automatic" scalability of applications.  For example, consider
+the initialization of a static variable in a class to a certain value.  For the
+case of a single JVM, bad or "rogue" code in another user session could easily
+set a shared static variable to an undesirable value.  This error scenario
+cannot arise in JServer, since the session-oriented virtual JVM architecture
+presents the appearance that each user session has its own set of static
+variables.  Thus, the Java developer can program the application considering a
+single-user scenario, and without complex multi-threaded code for resource
+sharing.
+
+<p>
+<li><b>Efficient Code Execution</b>
+<p>
+Oracle8i JServer incorporates advanced compilation technology that converts
+      platform-independent Java byte code to efficient native code.  This
+	optimization is done during deployment of Java code in JServer, rather
+	than at execution time as in the usual JIT (Just-in-Time) approach,
+	permitting more comprehensive optimization techniques to be applied. 
+</ul>
+<p>
+
+
+<h2>Demonstrated Examples</h2>
+
+The examples demonstrated at the VLDB session showed the difference between
+executing a program on the JDK and on the session-oriented JServer.
+Specifically, the intent was to show, through some simple code samples, the
+difference in the handling of static variables and in the programming style for
+the two Java platforms.  Here is how this was done.
+
+<p> There is a basic class called <tt>SessionTest</tt>. The class is public and
+defines a static variable called <tt>staticVar</tt>.  This class also defines a
+method <tt>incrementStaticVar</tt> that adds the input value (i.e., the
+	parameter to this method) to the static variable.  There is another
+	method <tt>getStaticVar</tt> which returns the current value of the
+	static variable. 
+<p>
+
+The code for the <tt>SessionTest</tt> class appears in the file <a
+href="SessionTest.java">SessionTest.java</a>.  This code was deployed on the
+JDK as a compiled Java class, and on the Oracle8i JServer as a stored Java
+program (refer to the Oracle documentation on the steps involved in this
+process).  On JServer, the <tt>incrementStaticVar</tt> method was deployed as a
+stored procedure (since it does not return any value), and the
+<tt>getStaticVar()</tt> method was deployed as a stored function (since it
+returns an integer value).
+
+<p> Next, we define a set of platform-specific classes to demonstrate the
+difference in programming paradigms between the JDK and JServer.  
+
+<h3>Code for JDK</h3>
+
+The relevant
+classes for the JDK platform are:
+<ul>
+
+<li> <a href="User.java"><tt>User.java</tt></a>.  The constructor for this
+class increments the static variable in the <tt>SessionTest</tt> class by the
+input argument.
+
+<li> <a href="SessionDemo.java"><tt>SessionDemo.java</tt></a>. The
+<tt>main</tt> method in this class constructs two instances of the
+<tt>User</tt> class with arguments 10 and 20 respectively. It prints out the
+value of the static variable after each instance is constructed.
+
+</ul> 
+
+<h3>Code for JServer</h3>
+The relevant classes for the JServer platform are:
+
+<ul>
+<li> <a href="Oracle8iUser.java"><tt>Oracle8iUser.java</tt></a>.  Like the
+<tt>User</tt> class, the constructor for the <tt>Oracle8iUser</tt> class
+increments the static variable in the <tt>SessionTest</tt> class by the input
+argument.  Since <tt>SessionTest</tt> is deployed as a stored procedure in
+JServer, calling its <tt>incrementStaticVar()</tt> method requires a JDBC call
+to the corresponding stored procedure. Likewise, reading the value of the
+static variable also requires a JDBC call to the stored function
+<tt>getStaticVar()</tt>.
+
+<li> <a href="SessionDemo8i.java"><tt>SessionDemo8i.java</tt></a>. The
+<tt>main</tt> method in this class constructs two instances of the
+<tt>Oracle8iUser</tt> class with input arguments 10 and 20, and prints out the
+value of the static variable after each instance is constructed (by calling the
+method <tt>getStaticVar()</tt> in the <tt>Oracle8iUser</tt> class, which in
+turn calls the stored function <tt>getStaticVar()</tt> defined in the
+<tt>SessionTest</tt> class.
+
+
+</ul>
+
+
+<h3> Executing on JDK </h3>
+
+The relevant Java code appears in the files <a href="User.java">User.java</a>
+      and <a href="SessionDemo.java">SessionDemo.java</a>.
+<p> 
+
+The output of after compiling these files and executing the <tt>main</tt>
+method in the <tt>SessionDemo</tt> class is provided in the <a
+href="JDK_output.txt">JDK_output.txt</a> file.  As shown in this file, the
+value of the static variable is 10 after construction of the first
+<tt>User</tt> instance, and is 30 after construction of the second
+<tt>User</tt> instance.
+
+
+<h3> Executing on JServer</h3>
+
+The relevant Java code appears in the files
+          <a href="Oracle8iUser.java">Oracle8iUser.java</a> and
+          <a href="SessionDemo8i.java">SessionDemo8i.java</a>.
+
+<p>
+
+The output of  the SessionDemo8i   provided in the <a
+href="JServer_output.txt">JServer_output.txt</a> file.  As shown in this file, 
+the value of
+the static variable is 10 after  construction of the first <tt>User</tt>
+instance, and is 20 after construction of the second <tt>User</tt> instance. 
+In contrast to the JDK, the value of the static variable did not get
+incremented to 30.  This is because each user (database) session is effectively
+executing in its own virtual JVM, insulating it from the effects of static
+variable manipulation in other sessions. 
+
+
+<h2> Summary</h2>
+
+ Most Java platforms that claim to be scalable require application developers
+ to employ complex threading techniques.  This approach is inherently
+ problematic, since applications that are heavily multi-threaded are generally
+ difficult to design, code, and debug.  Other problems include contention from
+ memory sharing, and a single garbage collector that deals with common garbage
+ from all users of a JVM.
+<p>
+  Oracle8i JServer is a comprehensive enterprise-level highly scalable Java
+  server platform that is tightly integrated with the Oracle8i database.  Both
+  have a common notion of a user session that is effectively isolated from
+  other concurrent user sessions, thus providing a simpler programming
+  model. JServer presents the appearance of a dedicated virtual JVM for each
+  user.  This behavior was demonstrated through Java code executed on the JDK
+  and on the Oracle8i JServer, and specifically for initialization of static
+variables. 
+
+<p> In conclusion, JServer does not require complex multi-threaded coding for
+applications to be scalable.  Memory management is highly optimized in this
+session-oriented server architecture, with independent allocation and garbage
+collection for each user session.  Applications can be natively compiled during
+deployment, and once deployed, high scalability is achieved through the
+underlying sophisticated and efficient architecture of JServer.
+
+  </body>
+</html>

@@ -1,0 +1,1185 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - PM3: An Orthogonal Persistent Systems Programming Language - Design, Implementation, Performance</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+PM3: An Orthogonal Persistent Systems Programming Language - Design, Implementation, Performance
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_antony_l_hosking.htm">Antony L. Hosking</a> and 
+<a href = "a_jiawan_chen.htm">Jiawan Chen</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/pm3anorthogonalanji.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbhighperforpport.htm">Return to High-performance Application Support</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  PM3 is an orthogonally persistent extension of the Modula-3 systems programming language, supporting persistence by reachability from named persistent roots. We describe the design and implementation of the PM3 prototype, and show that its performance is competitive with its non-orthogonal counterparts by direct comparison with the SHORE/C++ language binding to the SHORE object store. Experimental results, using the traversal portions of the OO7 benchmark, reveal that the overheads of orthogonal persistence are not inherently more expensive than for non-orthogonal persistence, and justify our claim that orthogonal persistence deserves a level of acceptance similar to that now emerging for automatic memory management (i.e., "garbage collection"), even in performance-conscious settings. The consequence will be safer and more flexible persistent systems that do not compromise performance.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[Agrawal and Gehani 1989]
+<dd>
+<a name="AgrawalG89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehani:Narain_H=.html">
+Narain H. Gehani
+</a>
+: ODE (Object Database and Environment): The Language and the Data Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#AgrawalG89">
+SIGMOD Conference 1989
+</a>
+: 36-45
+<dt>
+[Agrawal and Gehani 1990]
+<dd>
+<a name="AgrawalG89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehani:Narain_H=.html">
+Narain H. Gehani
+</a>
+: Rationale for the Design of Persistence and Query Processing Facilities in the Database Programming Language O++. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl89.html#AgrawalG89">
+DBPL 1989
+</a>
+: 25-40
+<dt>
+[Algagic 1997]
+<dd>
+<a name="Alagic97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alagic:Suad.html">
+Suad Alagic
+</a>
+: The ODMG Object Model: Does it Make Sense? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla97.html#Alagic97">
+OOPSLA 1997
+</a>
+: 253-270
+<dt>
+[Appel and Li 1991]
+<dd>
+<a name="AppelL91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Appel:Andrew_W=.html">
+Andrew W. Appel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Kai.html">
+Kai Li
+</a>
+: Virtual Memory Primitives for User Programs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/asplos/asplos91.html#AppelL91">
+ASPLOS 1991
+</a>
+: 96-107
+<dt>
+[Atkinson et al. 1982]
+<dd>
+... 
+<dt>
+[Atkinson et al. 1983a]
+<dd>
+<a name="AtkinsonBCCM83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bailey:P=_J=.html">
+P. J. Bailey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chisholm:K=_J=.html">
+K. J. Chisholm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cockshott:W=_Paul.html">
+W. Paul Cockshott
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+: An Approach to Persistent Programming. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cj/cj26.html#AtkinsonBCCM83">
+The Computer Journal 26(4)
+</a>
+: 360-365(1983)
+<dt>
+[Atkinson and Buneman 1987]
+<dd>
+<a name="AtkinsonB87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+: Types and Persistence in Database Programming Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur19.html#AtkinsonB87">
+Computing Surveys 19(2)
+</a>
+: 105-190(1987)
+<dt>
+[Atkinson et al. 1983b]
+<dd>
+<a name="AtkinsonCCM83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chisholm:Ken.html">
+Ken Chisholm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cockshott:W=_Paul.html">
+W. Paul Cockshott
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Marshall:Richard.html">
+Richard Marshall
+</a>
+: Algorithms for a Persistent Heap. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe13.html#AtkinsonCCM83">
+SP&amp;E 13(3)
+</a>
+: 259-271(1983)
+<dt>
+[Atkinson et al. 1996]
+<dd>
+<a name="AtkinsonDJPS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayn=egrave=s:Laurent.html">
+Laurent Dayn&egrave;s
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jordan:Mick_J=.html">
+Mick J. Jordan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Printezis:Tony.html">
+Tony Printezis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spence:Susan.html">
+Susan Spence
+</a>
+: An Orthogonally Persistent Java. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod25.html#AtkinsonDJPS96">
+SIGMOD Record 25(4)
+</a>
+: 68-75(1996)
+<dt>
+[Atkinson et al. 1997]
+<dd>
+<a name="AtkinsonJDS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jordan:Mick_J=.html">
+Mick J. Jordan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayn=egrave=e:Laurent.html">
+Laurent Dayn&egrave;e
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spence:Susan.html">
+Susan Spence
+</a>
+: Design Issues for Persistent Java: A Type-Safe, Object-Oriented, Orthogonally Persistent System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos96.html#AtkinsonJDS96">
+POS 1996
+</a>
+: 33-47
+<dt>
+[Atkinson and Morrison 1995]
+<dd>
+<a name="AtkinsonM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+: Orthogonally Persistent Object Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb4.html#AtkinsonM95">
+VLDB Journal 4(3)
+</a>
+: 319-401(1995)
+<dt>
+[Bartlett 1988]
+<dd>
+... 
+<dt>
+[Bartlett 1989]
+<dd>
+... 
+<dt>
+[Baumann 1997]
+<dd>
+... 
+<dt>
+[Brahnmath et al. 1998]
+<dd>
+<a name="BrahnmathNHC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brahnmath:Kumar.html">
+Kumar Brahnmath
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nystrom:Nathaniel.html">
+Nathaniel Nystrom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cutts:Quintin_I=.html">
+Quintin I. Cutts
+</a>
+: Swizzle Barrier Optimizations for Orthogonal Persistence in Java. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos98.html#BrahnmathNHC98">
+POS/PJW 1998
+</a>
+: 268-278
+<dt>
+[Brahnmath 1988]
+<dd>
+... 
+<dt>
+[Cardelli et al. 1991]
+<dd>
+... 
+<dt>
+[Carey et al. 1994]
+<dd>
+<a name="CareyDFHMNSSTTWZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">
+Nancy E. Hall
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McAuliffe:Mark_L=.html">
+Mark L. McAuliffe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schuh:Daniel_T=.html">
+Daniel T. Schuh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Solomon:Marvin_H=.html">
+Marvin H. Solomon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">
+C. K. Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsatalos:Odysseas_G=.html">
+Odysseas G. Tsatalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">
+Michael J. Zwilling
+</a>
+: Shoring Up Persistent Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyDFHMNSSTTWZ94">
+SIGMOD Conference 1994
+</a>
+: 383-394
+<dt>
+[Carey et al. 1993a]
+<dd>
+<a name="CareyDN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: The 007 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CareyDN93">
+SIGMOD Conference 1993
+</a>
+: 12-21
+<dt>
+[Carey et al. 1994b]
+<dd>
+<a name="CareyFZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaharioudakis:Markos.html">
+Markos Zaharioudakis
+</a>
+: Fine-Grained Sharing in a Page Server OODBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyFZ94">
+SIGMOD Conference 1994
+</a>
+: 359-370
+<dt>
+[Cattell et al. 1997]
+<dd>
+<a name="Cattell97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cattell:R=_G=_G=.html">
+R. G. G. Cattell
+</a>
+ (Ed.): The Object Database Standard: ODMG 2.0.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1997
+<br>
+ 
+<dt>
+[Chase et al. 1994]
+<dd>
+<a name="ChaseLFL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chase:Jeffrey_S=.html">
+Jeffrey S. Chase
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Henry_M=.html">
+Henry M. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Feeley:Michael_J=.html">
+Michael J. Feeley
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lazowska:Edward_D=.html">
+Edward D. Lazowska
+</a>
+: Sharing and Protection in a Single-Address-Space Operating System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tocs/tocs12.html#ChaseLFL94">
+TOCS 12(4)
+</a>
+: 271-307(1994)
+<dt>
+[Chase et al. 1992]
+<dd>
+<a name="ChaseLLB92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chase:Jeffrey_S=.html">
+Jeffrey S. Chase
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Henry_M=.html">
+Henry M. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lazowska:Edward_D=.html">
+Edward D. Lazowska
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baker=Harvey:Miche.html">
+Miche Baker-Harvey
+</a>
+: Lightweight Shared Objects in a 64-Bit Operating System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla92.html#ChaseLLB92">
+OOPSLA 1992
+</a>
+: 397-413
+<dt>
+[Cheney 1970]
+<dd>
+<a name="Cheney70" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheney:C=_J=.html">
+C. J. Cheney
+</a>
+: A Nonrecursive List Compacting Algorithm . 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm13.html#Cheney70">
+CACM 13(11)
+</a>
+: 677-678(1970)
+<dt>
+[Connor and Nettles 1997]
+<dd>
+<a name="96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connor:Richard_C=_H=.html">
+Richard C. H. Connor
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nettles:Scott.html">
+Scott Nettles
+</a>
+ (Eds.): Proceedings of the 7th Workshop on Persistent Object Systems, Cape May, New Jersey, USA, 1996.  Morgan-Kaufmann 1997, ISBN 1-55860-447-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos96.html">
+Contents
+</a>
+<dt>
+[Cutts and Hosking 1997]
+<dd>
+... 
+<dt>
+[Dearle et al. 1990a]
+<dd>
+<a name="DearleCBM89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dearle:Alan.html">
+Alan Dearle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connor:Richard_C=_H=.html">
+Richard C. H. Connor
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Fred.html">
+Fred Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+: Napier88 - A Database Programming Language? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl89.html#DearleCBM89">
+DBPL 1989
+</a>
+: 179-195
+<dt>
+[Dearle et al. 1994]
+<dd>
+<a name="DearleBFHLRV94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dearle:Alan.html">
+Alan Dearle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bona:Rex_di.html">
+Rex di Bona
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Farrow:James.html">
+James Farrow
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Henskens:Frans.html">
+Frans Henskens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindstr=ouml=m:Anders.html">
+Anders Lindstr&ouml;m
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenberg:John.html">
+John Rosenberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vaughan:Francis.html">
+Francis Vaughan
+</a>
+: Grasshopper: An Orthogonally Persistent Operating System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csys/csys7.html#DearleBFHLRV94">
+Computing Systems 7(3)
+</a>
+: 289-312(1994)
+<dt>
+[Dearle et al. 1990b]
+<dd>
+<a name="90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dearle:Alan.html">
+Alan Dearle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shaw:Gail_M=.html">
+Gail M. Shaw
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+ (Eds.): Implementing Persistent Object Bases, Principles and Practice, Proceedings of the Fourth International Workshop on Persistent Objects, 23-27 September 1990, Martha's Vineyard, MA, USA.  Morgan-Kaufmann 1990, ISBN 1-55860-168-6
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos90.html">
+Contents
+</a>
+<dt>
+[Elphinstone et al. 1997]
+<dd>
+<a name="ElphinstoneRHL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elphinstone:Kevin.html">
+Kevin Elphinstone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Russell:Stephen.html">
+Stephen Russell
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heiser:Gernot.html">
+Gernot Heiser
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liedtke:Jochen.html">
+Jochen Liedtke
+</a>
+: Supporting Persistent Object Systems in a Single Address Space. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos96.html#ElphinstoneRHL96">
+POS 1996
+</a>
+: 111-119
+<dt>
+[Haines et al. 1994]
+<dd>
+<a name="HainesKMNW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haines:Nicholas.html">
+Nicholas Haines
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kindred:Darrell.html">
+Darrell Kindred
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrisett:J=_Gregory.html">
+J. Gregory Morrisett
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nettles:Scott.html">
+Scott Nettles
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wing:Jeannette_M=.html">
+Jeannette M. Wing
+</a>
+: Composing First-Class Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/toplas/toplas16.html#HainesKMNW94">
+TOPLAS 16(6)
+</a>
+: 1719-1736(1994)
+<dt>
+[Heiser et al. 1998]
+<dd>
+<a name="HeiserEVRL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heiser:Gernot.html">
+Gernot Heiser
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elphinstone:Kevin.html">
+Kevin Elphinstone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vochteloo:Jerry.html">
+Jerry Vochteloo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Russell:Stephen.html">
+Stephen Russell
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liedtke:Jochen.html">
+Jochen Liedtke
+</a>
+: The Mungi Single-Address-Space Operating System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe28.html#HeiserEVRL98">
+SP&amp;E 28(9)
+</a>
+: 901-928(1998)
+<dt>
+[Hosking 1995]
+<dd>
+... 
+<dt>
+[Hosking 1997]
+<dd>
+<a name="Hosking96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+: Residency Check Elimination for Object-Oriented Persistent Language. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos96.html#Hosking96">
+POS 1996
+</a>
+: 174-183
+<dt>
+[Hosking and Chen 1999]
+<dd>
+... 
+<dt>
+[Hosking and Moss 1990]
+<dd>
+<a name="HoskingM90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moss:J=_Eliot_B=.html">
+J. Eliot B. Moss
+</a>
+: Towards Compile-Time Optimizations for Persistence. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos90.html#HoskingM90">
+POS 1990
+</a>
+: 17-27
+<dt>
+[Hosking and Moss 1991]
+<dd>
+... 
+<dt>
+[Hosking and Moss 1993]
+<dd>
+<a name="HoskingM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moss:J=_Eliot_B=.html">
+J. Eliot B. Moss
+</a>
+: Protection Traps and Alternatives for Memory Management of an Object-Oriented Language. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp93.html#HoskingM93">
+SOSP 1993
+</a>
+: 106-119
+<dt>
+[Hosking and Novianto 1997]
+<dd>
+... 
+<dt>
+[Hosking et al. 1999]
+<dd>
+<a name="HoskingNCB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nystrom:Nathaniel.html">
+Nathaniel Nystrom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cutts:Quintin_I=.html">
+Quintin I. Cutts
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brahnmath:Kumar.html">
+Kumar Brahnmath
+</a>
+: Optimizing the Read and Write Barriers for Orthogonal Persistence. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos98.html#HoskingNCB98">
+POS/PJW 1998
+</a>
+: 149-159
+<dt>
+[Hull et al. 1990]
+<dd>
+<a name="89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">
+Richard Hull
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stemple:David_W=.html">
+David W. Stemple
+</a>
+ (Eds.): Proceedings of the Second International Workshop on Database Programming Languages, 4-8 June, 1989, Salishan Lodge, Gleneden Beach, Oregon.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1990, ISBN 1-55860-072-8
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl89.html">
+Contents
+</a>
+<dt>
+[ISMM 1998]
+<dd>
+... 
+<dt>
+[Jones 1996]
+<dd>
+<a name="JonesL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jones:Richard.html">
+Richard Jones
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lins:Rafael_D=.html">
+Rafael D. Lins
+</a>
+: Garbage Collection: Algorithms for Automatic Dynamic Memory Management.  John Wiley 1996, ISBN 0-471-94148-4
+<br>
+ 
+<dt>
+[Kaehler 1986]
+<dd>
+<a name="Kaehler86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kaehler:Ted.html">
+Ted Kaehler
+</a>
+: Virtual Memory on a Narrow Machine for an Object-Oriented Language. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla86.html#Kaehler86">
+OOPSLA 1986
+</a>
+: 87-106
+<dt>
+[Kaehler et al. 1983]
+<dd>
+... 
+<dt>
+[Kakkad et al. 1998]
+<dd>
+<a name="KakkadJW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kakkad:Sheetal_V=.html">
+Sheetal V. Kakkad
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnstone:Mark_S=.html">
+Mark S. Johnstone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilson:Paul_R=.html">
+Paul R. Wilson
+</a>
+: Portable Run-Time Type Description for Conventional Compilers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/iwmm/ismm98.html#KakkadJW98">
+ISMM 1998
+</a>
+: 146-153
+<dt>
+[Kiesel et al. 1995]
+<dd>
+<a name="KieselSW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kiesel:Norbert.html">
+Norbert Kiesel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sch=uuml=rr:Andy.html">
+Andy Sch&uuml;rr
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Westfechtel:Bernhard.html">
+Bernhard Westfechtel
+</a>
+: GRAS, a Graph-Oriented (Software) Engineering Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is20.html#KieselSW95">
+IS 20(1)
+</a>
+: 21-51(1995)
+<dt>
+[Lamb et al. 1991]
+<dd>
+<a name="LambLOW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lamb:Charles.html">
+Charles Lamb
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Landis:Gordon.html">
+Gordon Landis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinreb:Danel.html">
+Danel Weinreb
+</a>
+: The ObjectStore Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#LambLOW91">
+CACM 34(10)
+</a>
+: 50-63(1991)
+<dt>
+[Matthes and Schmidt 1994]
+<dd>
+<a name="MatthesS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matthes:Florian.html">
+Florian Matthes
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schmidt:Joachim_W=.html">
+Joachim W. Schmidt
+</a>
+: Persistent Threads. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 403-414
+<dt>
+[Morrison et al. 1990]
+<dd>
+<a name="MorrisonBCCDA89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Alfred_L=.html">
+Alfred L. Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carrick:R=.html">
+R. Carrick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connor:Richard_C=_H=.html">
+Richard C. H. Connor
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dearle:Alan.html">
+Alan Dearle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+: The Napier Type System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos89.html#MorrisonBCCDA89">
+POS 1989
+</a>
+: 3-18
+<dt>
+[Moss 1992]
+<dd>
+<a name="Moss92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moss:J=_Eliot_B=.html">
+J. Eliot B. Moss
+</a>
+: Working with Persisten Objects: To Swizzle or Not to Swizzle. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse18.html#Moss92">
+TSE 18(8)
+</a>
+: 657-673(1992)
+<dt>
+[Moss and Hosking 1995]
+<dd>
+<a name="MossH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moss:J=_Eliot_B=.html">
+J. Eliot B. Moss
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hosking:Antony_L=.html">
+Antony L. Hosking
+</a>
+: Expressing Object Residency Optimizations Using Pointer Type Annotations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos94.html#MossH94">
+POS 1994
+</a>
+: 3-15
+<dt>
+[Nystrom et al. 1998]
+<dd>
+... 
+<dt>
+[Nystrom 1998]
+<dd>
+... 
+<dt>
+[Richardson 1990]
+<dd>
+<a name="Richardson90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Richardson:Joel_E=.html">
+Joel E. Richardson
+</a>
+: Compiled Item Faulting: A New Technique for Managing I/O in a Persistent Language. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos90.html#Richardson90">
+POS 1990
+</a>
+: 3-16
+<dt>
+[Richardson and Carey 1987]
+<dd>
+<a name="RichardsonC87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Richardson:Joel_E=.html">
+Joel E. Richardson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Programming Constructs for Database System Implementation in EXODUS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#RichardsonC87">
+SIGMOD Conference 1987
+</a>
+: 208-219
+<dt>
+[Richardson and Carey 1990]
+<dd>
+<a name="RichardsonC89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Richardson:Joel_E=.html">
+Joel E. Richardson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Persistence in the E Language: Issues and Implementation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe19.html#RichardsonC89">
+SP&amp;E 19(12)
+</a>
+: 1115-1150(1989)
+<dt>
+[Rosenberg et al. 1996]
+<dd>
+<a name="RosenbergDHLN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenberg:John.html">
+John Rosenberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dearle:Alan.html">
+Alan Dearle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hulse:David.html">
+David Hulse
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindstr=ouml=m:Anders.html">
+Anders Lindstr&ouml;m
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Norris:Stephen.html">
+Stephen Norris
+</a>
+: Operating System Support for Persistant and Recoverable Computations: Guaranteeing data recovery and consistency, the authors' experimental Grasshopper persistent operating system simplifies application development and encourages construction of integrated systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm39.html#RosenbergDHLN96">
+CACM 39(9)
+</a>
+: 62-69(1996)
+<dt>
+[Schkolnick 1977]
+<dd>
+<a name="Schkolnick77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schkolnick:Mario.html">
+Mario Schkolnick
+</a>
+: A Clustering Algorithm for Hierarchical Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods2.html#Schkolnick77">
+TODS 2(1)
+</a>
+: 27-44(1977)
+<dt>
+[Sigmod 1994]
+<dd>
+<a name="94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">
+Richard T. Snodgrass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Winslett:Marianne.html">
+Marianne Winslett
+</a>
+ (Eds.): Proceedings of the 1994 ACM SIGMOD International Conference on Management of Data, Minneapolis, Minnesota, May 24-27, 1994.  ACM Press 1994
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/index.html#94">
+Contents
+</a>
+<dt>
+[Singhal et al. 1992]
+<dd>
+<a name="SinghalKW92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Singhal:Vivek.html">
+Vivek Singhal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kakkad:Sheetal_V=.html">
+Sheetal V. Kakkad
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilson:Paul_R=.html">
+Paul R. Wilson
+</a>
+: Texas: An Efficient, Portable Persistent Store. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos92.html#SinghalKW92">
+POS 1992
+</a>
+: 11-33
+<dt>
+[Straw et al. 1989]
+<dd>
+<a name="StrawMR89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Straw:Andrew.html">
+Andrew Straw
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mellender:Fred.html">
+Fred Mellender
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Riegel:Steve.html">
+Steve Riegel
+</a>
+: Object Management in a Persistent Smalltalk System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/spe/spe19.html#StrawMR89">
+SP&amp;E 19(8)
+</a>
+: 719-737(1989)
+<dt>
+[White and DeWitt 1994]
+<dd>
+<a name="WhiteD94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: QuickStore: A High Performance Mapped Object Store. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#WhiteD94">
+SIGMOD Conference 1994
+</a>
+: 395-406
+<dt>
+[Wilson and Kakkad 1992]
+<dd>
+... 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Snodgrass99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">
+Richard T. Snodgrass
+</a>
+: Review - PM3: An Orthogonal Persistent Systems Programming Language - Design, Implementation, Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dr/dr1.html#Snodgrass99">
+ACM SIGMOD Digital Review 1
+</a>
+: (1999)
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/HoskingC99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Antony&nbsp;L.&nbsp;Hosking&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jiawan&nbsp;Chen},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{PM3:&nbsp;An&nbsp;Orthogonal&nbsp;Persistent&nbsp;Systems&nbsp;Programming&nbsp;Language&nbsp;-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design,&nbsp;Implementation,&nbsp;Performance},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{587-598},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

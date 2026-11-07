@@ -1,0 +1,446 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Database Architecture Optimized for the New Bottleneck: Memory Access</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_8.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Database Architecture Optimized for the New Bottleneck: Memory Access
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_peter_a_boncz.htm">Peter A. Boncz</a>, 
+<a href = "a_stefan_manegold.htm">Stefan Manegold</a>, and 
+<a href = "a_martin_l_kersten.htm">Martin L. Kersten</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/databasearchitepestm.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbmainmemoryching.htm">Return to Main-Memory Caching</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In the past decade, advances in speed of commodity CPUs have far out-paced advances in memory latency. Main-memory access is therefore incresasingly a performance bottleneck for many computer applications, including database systems. In this article, we use a simple scan test to show the severe impact of this bottleneck. The insights gained are translated into guidelines for database architecture; in terms of both data structures and algorithms. We discuss how vertically fragmented data structures optimize cache performance on sequential data access. We then focus on equi-join, typically a random-access operation, and introduce radix algorithms for partitioned hash-join. The performance of these algorithms is quantified using a detailed analytical model that incorporates memory access cost. Experiments that validate this model were performed on the Monet database System. We obtained exact statistics on events like TLB misses, L1 and L2 cache misses, by using hardware performance counters found in modern CPUs. Using our cost model, we show how the carefully tuned memory access pattern of our radix algorithms make them perform well, which is confirmed by experimental results.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AvdBF+92]
+<dd>
+<a name="ApersBFGKW92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Apers:Peter_M=_G=.html">
+Peter M. G. Apers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berg:Carel_A=_van_den.html">
+Carel A. van den Berg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flokstra:Jan.html">
+Jan Flokstra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grefen:Paul_W=_P=_J=.html">
+Paul W. P. J. Grefen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kersten:Martin_L=.html">
+Martin L. Kersten
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilschut:Annita_N=.html">
+Annita N. Wilschut
+</a>
+: PRISMA/DB: A Parallel Main Memory Relational DBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde4.html#ApersBFGKW92">
+TKDE 4(6)
+</a>
+: 541-554(1992)
+<dt>
+[BQK96]
+<dd>
+<a name="BonczQK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Boncz:Peter_A=.html">
+Peter A. Boncz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quak:Wilko.html">
+Wilko Quak
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kersten:Martin_L=.html">
+Martin L. Kersten
+</a>
+: Monet And Its Geographic Extensions: A Novel Approach to High Performance GIS Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#BonczQK96">
+EDBT 1996
+</a>
+: 147-166
+<dt>
+[BRK98]
+<dd>
+<a name="BonczRK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Boncz:Peter_A=.html">
+Peter A. Boncz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/R=uuml=hl:Tim.html">
+Tim R&uuml;hl
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kwakkel:Fred.html">
+Fred Kwakkel
+</a>
+: The Drill Down Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 628-632
+<dt>
+[BWK98]
+<dd>
+<a name="BronczWK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Boncz:Peter_A=.html">
+Peter A. Boncz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilschut:Annita_N=.html">
+Annita N. Wilschut
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kersten:Martin_L=.html">
+Martin L. Kersten
+</a>
+: Flattening an Object Algebra to Provide Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#BronczWK98">
+ICDE 1998
+</a>
+: 568-577
+<dt>
+[CK85]
+<dd>
+<a name="CopelandK85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Copeland:George_P=.html">
+George P. Copeland
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Khoshafian:Setrag.html">
+Setrag Khoshafian
+</a>
+: A Decomposition Storage Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod85.html#CopelandK85">
+SIGMOD Conference 1985
+</a>
+: 268-279
+<dt>
+[htt96]
+<dd>
+... 
+<dt>
+[htt97]
+<dd>
+... 
+<dt>
+[Knu68]
+<dd>
+<a name="Knuth68" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">
+Donald E. Knuth
+</a>
+: The Art of Computer Programming, Volume I: Fundamental Algorithms.  Addison-Wesley 1968
+<br>
+ 
+<dt>
+[LC86]
+<dd>
+<a name="LehmanC86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lehman:Tobin_J=.html">
+Tobin J. Lehman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: A Study of Index Structures for Main Memory Database Management Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1986
+</a>
+: 294-303
+<dt>
+[LN96]
+<dd>
+<a name="ListgartenN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Listgarten:Sherry.html">
+Sherry Listgarten
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Neimat:Marie=Anne.html">
+Marie-Anne Neimat
+</a>
+: Modelling Costs for a MM-DBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/rtdb/rtdb96.html#ListgartenN96">
+RTDB 1996
+</a>
+: 72-78
+<dt>
+[MBK99]
+<dd>
+... 
+<dt>
+[McC95]
+<dd>
+... 
+<dt>
+[MKW+98]
+<dd>
+<a name="McKeeKWWSAB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McKee:Sally_A=.html">
+Sally A. McKee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Klenke:Robert_H=.html">
+Robert H. Klenke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wright:Kenneth_L=.html">
+Kenneth L. Wright
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wulf:William_A=.html">
+William A. Wulf
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salinas:Maximo_H=.html">
+Maximo H. Salinas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aylor:James_H=.html">
+James H. Aylor
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baston:Alan_P=.html">
+Alan P. Baston
+</a>
+: Smarter Memory: Improving Bandwidth for Streamed References. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer31.html#McKeeKWWSAB98">
+IEEE Computer 31(7)
+</a>
+: 54-63(1998)
+<dt>
+[Mow94]
+<dd>
+... 
+<dt>
+[NBC+94]
+<dd>
+<a name="NybergBCGL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nyberg:Chris.html">
+Chris Nyberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barclay:Tom.html">
+Tom Barclay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cvetanovic:Zarka.html">
+Zarka Cvetanovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+: AlphaSort: A RISC Machine Sort. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#NybergBCGL94">
+SIGMOD Conference 1994
+</a>
+: 233-242
+<dt>
+[Ron98]
+<dd>
+... 
+<dt>
+[Sil97]
+<dd>
+... 
+<dt>
+[SKN94]
+<dd>
+<a name="ShatdalKN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shatdal:Ambuj.html">
+Ambuj Shatdal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kant:Chander.html">
+Chander Kant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Cache Conscious Algorithms for Relational Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 510-521
+<dt>
+[Val87]
+<dd>
+<a name="Valduriez87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">
+Patrick Valduriez
+</a>
+: Join Indices. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#Valduriez87">
+TODS 12(2)
+</a>
+: 218-246(1987)
+<dt>
+[WK90]
+<dd>
+<a name="WhangK90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Whang:Kyu=Young.html">
+Kyu-Young Whang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">
+Ravi Krishnamurthy
+</a>
+: Query Optimization in a Memory-Resident Domain Relational Calculus Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods15.html#WhangK90">
+TODS 15(1)
+</a>
+: 67-95(1990)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/BonczMK99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Peter&nbsp;A.&nbsp;Boncz&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stefan&nbsp;Manegold&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Martin&nbsp;L.&nbsp;Kersten},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Database&nbsp;Architecture&nbsp;Optimized&nbsp;for&nbsp;the&nbsp;New&nbsp;Bottleneck:&nbsp;Memory<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{54-65},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

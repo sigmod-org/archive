@@ -1,0 +1,77 @@
+BODY, TABLE, P { 
+	background-color: #000033;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color : #F5F5DC;
+	font-size : 10pt;
+}
+
+H1 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+      color: #DDC56D;
+}
+
+H2 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+      color: #DECE72;
+}
+
+H3 {
+      font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+      font-size: 14pt;
+      font-weight: bold;
+      color: #DECE72;
+}
+
+A {
+      color: #DECE72;
+}
+
+EM {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.tableHeader {
+	background-color:#DECE72;
+	color:black;
+	font-weight: bold;
+	text-align: center;
+}
+
+.tableTitle {
+	background-color:#FFFFC0;
+	font-weight: bold;
+	color:black;
+}
+
+.darkTableTitle {
+	background-color:#EFEFB0;
+	font-weight: bold;
+	color:black;
+}
+
+
+.tableItem {
+	color:black;
+	background-color:white;
+}
+
+.darkTableItem {
+	color:black;
+	background-color:#EEEEEE;
+}
+
+
+.BIGH1 {
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size: 36pt;
+        font-weight: bold;
+      color: #DDC56D;
+}
+

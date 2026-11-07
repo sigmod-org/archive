@@ -1,0 +1,12 @@
+Biografia - Marcus Sampaio
+
+Marcus Sampaio obteve os títulos de Mestre em Ciência da Computação em 1984
+pelo Departamento de Sistemas e Computação da Universidade Federal da
+Paraíba (DSC/UFPB), campus de Campina Grande, e Doutor em Informática pela
+Université de Montpellier II (Montpellier-França). Atualmente, é professor
+adjunto do DSC/UFPB, onde trabalha desde 1980. Atuando na área de pesquisa
+desde 1985, é autor de mais de 20 trabalhos publicados em conferências
+nacionais e internacionais, periódico e livros, além de integrar o comitê de
+programa do SBBD. Atualmente, coordena projetos de pesquisa envolvendo Data
+Warehouse Orientado a Objeto, Data Mining e Integração Web-BD. Exerce
+também atividades de consultoria e treinamento.

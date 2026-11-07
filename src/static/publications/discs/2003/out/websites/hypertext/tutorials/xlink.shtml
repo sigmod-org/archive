@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>Xlink and XSLT</h1> 
+<h2>Steven J. DeRose, David Durand</h2>
+<br>
+<h3>Description</h3>
+<p>
+XML is starting to revolutionize the way data and documents are 
+managed and produced, on the web and elsewhere, by bringing years of 
+text-encoding experience to bear on these problems. XLink promises to 
+do the same thing for hypertext linking. XSLT (the W3C's XML 
+transformation language) is becoming a key tool in the XML 
+implementors toolbox. The course will take advantage synergies 
+between the two standards: XLink and XSLT share a key component (the 
+XPath pattern matching language); and XSLT can be a useful tool in 
+implementing Xlink processing systems. Xlink provides much more 
+powerful link representation and addressing features than HTML, and 
+XSLT provides an XML processing language tuned to the creation of 
+document translations.  The course is target\ted towards anyone who 
+knows something about XML and wants to see how it can be used to 
+support advanced hypertext functionality. It assumes a basic 
+knowledge of XML, and some knowledge of hypertext linking.
+</p>
+<br>
+<h3>Presenter biographies</h3>
+<p>
+Steven J. DeRose is Chair, Bible Technologies Group. He has served as 
+Chief Scientist at Inso Corporation, and Visiting Chief Scientist at 
+the Brown Univesity Scholarly Technology Group. Dr. DeRose is an 
+Editor of the Xlink specification, and has taken part in the XML, 
+TEI, and HyTime standards efforts. He was a founder of Electronic 
+Book Technologies and architect of the Dynatext product. He was head 
+of the TEI working group on Hypertext representation, and wrote the 
+TEI hypertext specification with David.
+</p>
+<p>
+David Durand is VP software architecture at Ingenta plc,  Chief 
+Scientist at the Scholarly Technology Group, and Adjunct Associate 
+Professor at Brown's Department of Computer Science. Dr. Durand is a 
+co-author, with Steve, of "Making Hypermedia Work: A User's Guide to 
+HyTime." He has taken part in the Text Encoding Initiative, XML, 
+HyTime, XLink and WebDAV standards efforts, and has been working with 
+and on structured document representations and hypertext for the last 
+20 years, in academic and industrial contexts.
+</p>
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>

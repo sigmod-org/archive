@@ -1,0 +1,440 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Window-Accumulated Subsequence Matching Problem is Linear</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Window-Accumulated Subsequence Matching Problem is Linear
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_luc_boasson.htm">Luc Boasson</a>, 
+<a href = "a_patrick_cegielski.htm">Patrick Cegielski</a>, 
+<a href = "a_iregravene_guessar.htm">Ir&egrave;ne Guessarian</a>, and 
+<a href = "a_yuri_matiyasevich.htm">Yuri Matiyasevich</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/windowaccumulatlupai.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsindexingexing.htm">Return to Indexing</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Given two strings, text t of length n, and pattern p = p1 . . . pk of length k, and given a natural number w, the subsequence matching problem consists in finding the number of size w windows of text t which contain pattern p as a subsequence, i.e. the letters p1,. . . ,pk occur in the window, in the same order as in p, but not necessarily consecutively (they may be interleaved with other letters). Subsequence matching is used for finding frequent patterns and association rules in databases. We generalize the Knuth- Morris-Pratt (KMP) pattern matching algorithm; we define a non-conventional kind of RAM, the MP-RAMS which model more closely the microprocessor operations; we design an O(n) on-line algorithm for solving the subsequence matching problem on MP- RAMS.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[A90]
+<dd>
+... 
+<dt>
+[AHU74]
+<dd>
+<a name="AhoHU74" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">
+Alfred V. Aho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hopcroft:John_E=.html">
+John E. Hopcroft
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: The Design and Analysis of Computer Algorithms.  Addison-Wesley 1974, ISBN 0-201-00029-6
+<br>
+ 
+<dt>
+[BYG92]
+<dd>
+<a name="Baeza-YatesG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+Ricardo A. Baeza-Yates
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gonnet:Gaston_H=.html">
+Gaston H. Gonnet
+</a>
+: A New Approach to Text Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#Baeza-YatesG92">
+CACM 35(10)
+</a>
+: 74-82(1992)
+<dt>
+[BYN96]
+<dd>
+<a name="Baeza-YatesN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+Ricardo A. Baeza-Yates
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Navarro:Gonzalo.html">
+Gonzalo Navarro
+</a>
+: A Faster Algorithm for Approximate String Matching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cpm/cpm96.html#Baeza-YatesN96">
+CPM 1996
+</a>
+: 1-23
+<dt>
+[BG95]
+<dd>
+<a name="Ben-AmramG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Ben=Amram:Amir_M=.html">
+Amir M. Ben-Amram
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Galil:Zvi.html">
+Zvi Galil
+</a>
+: On the Power of the Shift Instruction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Information and Computation 117(1)
+</a>
+: 19-36(1995)
+<dt>
+[C71]
+<dd>
+... 
+<dt>
+[C88]
+<dd>
+<a name="Crochemore88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Crochemore:Maxime.html">
+Maxime Crochemore
+</a>
+: String Matching with Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/mfcs/mfcs88.html#Crochemore88">
+MFCS 1988
+</a>
+: 44-58
+<dt>
+[DFGGK97]
+<dd>
+<a name="DasFGGK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Das:Gautam.html">
+Gautam Das
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fleischer:Rudolf.html">
+Rudolf Fleischer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gasieniec:Leszek.html">
+Leszek Gasieniec
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/K=auml=rkk=auml=inen:Juha.html">
+Juha K&auml;rkk&auml;inen
+</a>
+: Episode Matching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cpm/cpm97.html#DasFGGK97">
+CPM 1997
+</a>
+: 12-27
+<dt>
+[G81]
+<dd>
+<a name="Galil81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Galil:Zvi.html">
+Zvi Galil
+</a>
+: String Matching in Real Time. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 28(1)
+</a>
+: 134-149(1981)
+<dt>
+[KMP77]
+<dd>
+<a name="KnuthMP77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">
+Donald E. Knuth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morris_Jr=:James_H=.html">
+James H. Morris Jr.
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pratt:Vaughan_R=.html">
+Vaughan R. Pratt
+</a>
+: Fast Pattern Matching in Strings. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp6.html#KnuthMP77">
+SIAM J. Comput. 6(2)
+</a>
+: 323-350(1977)
+<dt>
+[KR97]
+<dd>
+<a name="KucherovR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kucherov:Gregory.html">
+Gregory Kucherov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rusinowitch:Micha=euml=l.html">
+Micha&euml;l Rusinowitch
+</a>
+: Matching a Set of Strings with Variable Length don't Cares. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs178.html#KucherovR97">
+TCS 178(1-2)
+</a>
+: 129-154(1997)
+<dt>
+[MBY91]
+<dd>
+<a name="ManberB91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manber:Udi.html">
+Udi Manber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+Ricardo A. Baeza-Yates
+</a>
+: An Algorithm for String Matching with a Sequence of don't Cares. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl37.html#ManberB91">
+IPL 37(3)
+</a>
+: 133-136(1991)
+<dt>
+[M97]
+<dd>
+<a name="Mannila97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: Methods and Problems in Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Mannila97">
+ICDT 1997
+</a>
+: 41-55
+<dt>
+[MTV95]
+<dd>
+<a name="MannilaTV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Verkamo:A=_Inkeri.html">
+A. Inkeri Verkamo
+</a>
+: Discovering Frequent Episodes in Sequences. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd95.html#MannilaTV95">
+KDD 1995
+</a>
+: 210-215
+<dt>
+[Ma71]
+<dd>
+... 
+<dt>
+[PRS74]
+<dd>
+<a name="PrattRS74" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pratt:Vaughan_R=.html">
+Vaughan R. Pratt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rabin:Michael_O=.html">
+Michael O. Rabin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stockmeyer:Larry_J=.html">
+Larry J. Stockmeyer
+</a>
+: A Characterization of the Power of Vector Machines. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+STOC 1974
+</a>
+: 122-134
+<dt>
+[S71]
+<dd>
+<a name="Slisenko78" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Slisenko:A=_O=.html">
+A. O. Slisenko
+</a>
+: String-Matching in Real Time: Some Properties of the Data Structure. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/mfcs/mfcs78.html#Slisenko78">
+MFCS 1978
+</a>
+: 493-496
+<dt>
+[TRL92]
+<dd>
+<a name="TrahanLR92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Trahan:Jerry_L=.html">
+Jerry L. Trahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Loui:Michael_C=.html">
+Michael C. Loui
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramachandran:Vijaya.html">
+Vijaya Ramachandran
+</a>
+: Multiplication, Division and Shift Instructions in Parallel Random Access Machines. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs100.html#TrahanLR92">
+TCS 100(1)
+</a>
+: 1-44(1992)
+<dt>
+[U95]
+<dd>
+<a name="Ukkonen95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ukkonen:Esko.html">
+Esko Ukkonen
+</a>
+: On-Line Construction of Suffix Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/algorithmica/algorithmica14.html#Ukkonen95">
+Algorithmica 14(3)
+</a>
+: 249-260(1995)
+<dt>
+[WM92]
+<dd>
+<a name="WuM92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wu:Sun.html">
+Sun Wu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manber:Udi.html">
+Udi Manber
+</a>
+: Fast Text Searching Allowing Errors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#WuM92">
+CACM 35(10)
+</a>
+: 83-91(1992)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/BoassonCGM99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Luc&nbsp;Boasson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Cegielski&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ir{\`e}ne&nbsp;Guessarian&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yuri&nbsp;Matiyasevich},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Window-Accumulated&nbsp;Subsequence&nbsp;Matching&nbsp;Problem&nbsp;is&nbsp;Linear},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{327-336},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

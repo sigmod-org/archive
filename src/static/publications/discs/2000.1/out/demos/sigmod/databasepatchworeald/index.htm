@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<title>SIGMOD 99 Demo: Database Patchwork on the Internet</title>
+<meta name="author" content="Reinhard Braumandl">
+<meta name="description" content="Demo Description: Database Patchwork on the Internet">
+<meta name="keywords" content="Research, Database, Internet, Distributed">
+<meta name="date" content="1999-08-12T14:12:07+02:00">
+<meta name="robots" content="index">
+<meta name="robots" content="nofollow">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+</HEAD>
+
+<BODY bgcolor="white">
+<h1>Database Patchwork on the Internet</h1>
+
+<h2>Overview</h2>
+The core of our system is a distributed query engine, which is capable of 
+incorporating services of three different service providers:
+<ul>
+<li>Data provider,
+<li>Function provider and
+<li>Cycle Provider.
+</ul>
+The integration of data providers means that wrappers for arbitray data sources 
+can be loaded dynamically into a running query processor. Through the use of these
+wrappers, the data sources are also included dynamically.
+
+<p>
+Functionality can be included in several different forms:
+<ul>
+<li>Iterator.
+<li>Aggregate function.
+<li>Transformer function.
+<li>Predicate function.
+</ul>
+As with wrappers the integration is performed dynamically by loading the 
+class files from another server.
+
+<p>
+A cycle provider has to run a Java VM and on it our server program. Since it is
+possible to distribute the operators of a query evaluation plan among arbitrary 
+(known) server processes, queries can exploit the new server at once after the
+registration.
+<p>
+The overall correlations of the different kinds of provider are illustrated in the 
+following picture, which we also used in the form of a poster at the Sigmod 99 conference.
+</p>
+<img src="poster.gif" align="center" width="657" height="449" vspace="30"
+ border="4">
+<h2>Some Example Plans for a Travel Agency</h2>
+
+The following example applications of our system should resemble some activities
+needed for a travel agency. The different queries, which can be initiated for the
+specific application, are further divided in respect to the features of our system
+they exploit, and the way they access the data sources. Since we use mainly normal
+WWW data sources, the access to these data sources can be rather slow when the 
+respective Web server is highly loaded or the network connection to this server 
+is congested. Therefore we have materialized parts of the data of theses sources 
+in our local database and for the majority of our example queries there are two
+versions. One uses the materialized data and the other (with the <em>(online)</em>
+annotation) uses the Web data.<br>
+<strong>Attention:</strong> The pages for the following four links
+contain links, which begin with "Initiate query ..." and  reference
+our online demonstration. By clicking on these links, your browser will contact our
+WWW-server at the university of Passau. 
+
+
+<ul>
+<li><a href="sights.html">Find sights for a specific city</a>
+<li><a href="priceAnalysis.html">Get some statistics about hotel prices</a>
+<li><a href="hotelSeek.html">Seek hotels for a specific city</a>
+<li><a href="BestCities.html">Look for hotels and railway connections to cities with a lot of sights</a>
+</ul>
+
+A <a href="sample.html">sample session</a> shows the interaction with our
+web-based front-end.
+
+</BODY>
+</HTML>

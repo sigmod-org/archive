@@ -1,0 +1,102 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA: the database/cache</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="75"><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Overview:</font>
+<br><font size=+3>the database/cache</font></td>
+
+<td ALIGN=CENTER><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_architecture.html">[Back to Architecture]</a>&nbsp;&nbsp;
+<a href="#cache">[A structured cache]</a>&nbsp;&nbsp; <a href="#fragments">[Fragments]</a></center>
+
+<h1>
+<a NAME="cache"></a><img SRC="symb1.gif" > A structured cache</h1>
+When browsing, Web documents that have been selected are stored in a cache.
+The usual cache does not provide the user with any other access to documents
+than display. AKIRA cache is twofold: a first layer consists of Web documents
+as they have been retrieved from the Web, (2) a second layer is an object
+oriented database whose schema may correspond to either explicit structure
+of documents or to their implicit structure. Objects of the structured
+cache point to <b>fragments</b>, which are pairs consisting of a
+<font color="#A52A2A">file
+name</font> (the name of the Web document in the unstructured layer of
+the cache) and a <font color="#A52A2A">span</font> (position of the extracted
+data in the source document).
+<p>Before asking the first query the whole cache is empty. (The unstructured
+cache is empty. The object oriented database has no predefined schema,
+and no data.) When the user asks the first query, a IR query is sent to
+the Web to retrieve documents. The <font color="#A52A2A">target structure</font>
+is inferred from the user's query and used as a schema for the database.
+Then retrieved documents are processed and the database is populated with
+extracted data. An instance of an object class corresponds to an instance
+of a concept, and to maybe several fragments of maybe several documents.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="fragments"></a><img SRC="symb1.gif" > Fragments</h1>
+Information extraction efficiency can be measured using the notions of
+<font color="#A52A2A">recall</font> and <font color="#A52A2A">precision</font>.
+<font color="#A52A2A">Recall</font> is a measure of the amount of relevant
+information extracted compared to all the relevant information that could
+have been extracted. <font color="#A52A2A">Precision</font> is a measure
+of how much of the extracted information is really relevant.
+<p>On one side, a user may expect the best recall and precision from extracting
+tools in a system. On the other side, since no one can expect 100% recall
+and 100% precision, the fragment representation in AKIRA provides the user
+with an direct access to the measure of quality of extraction.
+<p>Moreover, the fragment representation may be used for further optimization.
+When interested in extracting information about given particular instances
+of concepts (such as <tt>SIGMOD</tt> for concept
+<tt>Conference</tt>),
+why processing the whole underlying understructured cache? Only files that
+mention the given instances should be processed. Each instance of a concept
+is associated to the list of its fragments. It then easy to only process
+files whose name appear in the first component of these fragments. The
+second component (span) of fragments, may also be used by extractors which
+are based on a notion of locality. In this latter case, why should an extractor
+process the whole file when it is only necessary to process a zone around
+a given string of characters, and when this particular string is directly
+accessible in the document with the span? The use of fragments may improve
+the extraction capabilities of the system and thus <a href="optimization.html">optimize</a>
+evaluation of queries.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<p>
+<hr WIDTH=50%>
+<center><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

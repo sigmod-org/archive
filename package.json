@@ -1,0 +1,13 @@
+{
+  "name": "sigmod-archive",
+  "private": true,
+  "type": "module",
+  "description": "ACM SIGMOD Archive: copies of the SIGMOD Anthology, the Digital Symposium Collection (DiSC) and the DBLP DVD mirror",
+  "scripts": {
+    "build": "eleventy --quiet",
+    "serve": "eleventy --serve --port=8084 --quiet"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.2"
+  }
+}

@@ -1,0 +1,76 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Inline Template</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Inline Template</H1> 
+ <P><UL>
+begin template inline (className, refAttrName)
+</UL><UL>
+{
+</UL><UL>
+  refClass = element ( 
+</UL><UL>
+                select a.attrType
+</UL><UL>
+                from MetaAttribute a
+</UL><UL>
+                where a.attrName = $refAttrName
+</UL><UL>
+                and   a.classDefinedIn = $className; )
+</UL><UL>
+   define localAttrs(cName) as
+</UL><UL>
+      select c.localAttrList
+</UL><UL>
+      from MetaClass c
+</UL><UL>
+      where c.metaClassName = cName;
+</UL><UL>
+   for all attrs in localAttrs(refClass)
+</UL><UL>
+      add_attribute ($className, attrs.attrName, 
+</UL><UL>
+                      attrs.attrType, attrs.attrValue);
+</UL><UL>
+   define extents(cName) as
+</UL><UL>
+      select c from cName c;
+</UL><UL>
+   for all obj in extents($className):
+</UL><UL>
+      for all Attr in localAttrs(refClass)
+</UL><UL>
+         obj.set (obj.Attr, valueOf(obj.refAttrName.Attr))
+</UL><UL>
+   delete_attribute ($className, $refAttrName);
+</UL><UL>
+   delete_class($refClass);
+</UL><UL>
+}
+</UL><UL>
+end template
+</UL><UL>
+
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld009.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld011.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld010.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

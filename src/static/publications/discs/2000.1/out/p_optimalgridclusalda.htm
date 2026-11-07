@@ -1,0 +1,495 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Optimal Grid-Clustering: Towards Breaking the Curse of Dimensionality in High-Dimensional Clustering</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_1.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Optimal Grid-Clustering: Towards Breaking the Curse of Dimensionality in High-Dimensional Clustering
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_alexander_hinnebur.htm">Alexander Hinneburg</a> and 
+<a href = "a_daniel_a_keim.htm">Daniel A. Keim</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/optimalgridclusalda.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbhighdimenseries.htm">Return to High-Dimensional Queries</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Many applications require the clustering of large amounts of high-dimensional data. Most clustering algorithms, however, do not work effectively and efficiently in high-dimensional space, which is due to the so-called ``curse of dimensionality''. In addition, the high-dimensional data often contains a significant amount of noise which causes additional effectiveness problems. In this paper, we review and compare the existing algorithms for clustering high-dimensional data and show the impact of the curse of dimensionality on their effectiveness and efficiency. The comparison reveals that condensation-based approaches (such as BIRCH or STING) are the most promising candidates for achieving the necessary efficiency, but it also shows that basically all condension-based approaches have severe weaknesses with respect to their effectiveness in high-dimensional space. To overcome these problems, we develop a new clustering technique called 
+<i>
+OptiGrid
+</i>
+ which is based on constructing an optimal grid-partitioning of the data. The optimal grid-partitioning is determined by calculating the best partitioning hyperplanes for each dimension (if such a partitioning exists) using certain projections of the data. The advantages of our new approach are (1) it has a firm mathematical basis (2) it is by far more effective than existing clustering algorithms for high-dimensional data (3) it is very efficient even for large data sets of high dimensionality. To demonstrate the effectiveness and efficiency of our new approach, we perform a series of experiments on a number of different data sets from CAD and molecular biology. A comparison with one of the best known algorithms (BIRCH) shows the superiority of our new approach.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AGG+98]
+<dd>
+<a name="AgrawalGGR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+: Automatic Subspace Clustering of High Dimensional Data for Data Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#AgrawalGGR98">
+SIGMOD Conference 1998
+</a>
+: 94-105
+<dt>
+[BGRS99]
+<dd>
+<a name="BeyerGRS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beyer:Kevin_S=.html">
+Kevin S. Beyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldstein:Jonathan.html">
+Jonathan Goldstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shaft:Uri.html">
+Uri Shaft
+</a>
+: When Is ''Nearest Neighbor'' Meaningful? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#BeyerGRS99">
+ICDT 1999
+</a>
+: 217-235
+<dt>
+[DJSGM97]
+<dd>
+... 
+<dt>
+[EKSX96]
+<dd>
+<a name="EsterKSX96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#EsterKSX96">
+KDD 1996
+</a>
+: 226-231
+<dt>
+[DJSGM97]
+<dd>
+<a name="EsterKSX97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: Density-Connected Sets and their Application for Trend Detection in Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd97.html#EsterKSX97">
+KDD 1997
+</a>
+: 10-15
+<dt>
+[EKX95]
+<dd>
+<a name="EsterKX95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: Knowledge Discovery in Large Spatial Databases: Focusing Techniques for Efficient Class Identification. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssd/ssd95.html#EsterKX95">
+SSD 1995
+</a>
+: 67-82
+<dt>
+[FL95]
+<dd>
+<a name="FaloutsosL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">
+King-Ip Lin
+</a>
+: FastMap: A Fast Algorithm for Indexing, Data-Mining and Visualization of Traditional and Multimedia Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#FaloutsosL95">
+SIGMOD Conference 1995
+</a>
+: 163-174
+<dt>
+[FH75]
+<dd>
+... 
+<dt>
+[HK98]
+<dd>
+<a name="HinneburgK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hinneburg:Alexander.html">
+Alexander Hinneburg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+: An Efficient Approach to Clustering in Large Multimedia Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#HinneburgK98">
+KDD 1998
+</a>
+: 58-65
+<dt>
+[HK99]
+<dd>
+... 
+<dt>
+[Hub85]
+<dd>
+... 
+<dt>
+[Jag91]
+<dd>
+<a name="Jagadish91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+: A Retrieval Technique for Similar Shapes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#Jagadish91">
+SIGMOD Conference 1991
+</a>
+: 208-217
+<dt>
+[Kuk92]
+<dd>
+<a name="Kukich92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kukich:Karen.html">
+Karen Kukich
+</a>
+: Techniques for Automatically Correcting Words in Text. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur24.html#Kukich92">
+Computing Surveys 24(4)
+</a>
+: 377-439(1992)
+<dt>
+[MG95]
+<dd>
+<a name="MehrotraG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehrotra:Rajiv.html">
+Rajiv Mehrotra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gary:James_E=.html">
+James E. Gary
+</a>
+: Feature-Index-Based Similar Shape Retrieval. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vdb/vdb95.html#Mehrotra95">
+VDB 1995
+</a>
+: 46-65
+<dt>
+[MN89]
+<dd>
+<a name="MehlhornN89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehlhorn:Kurt.html">
+Kurt Mehlhorn
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/N=auml=her:Stefan.html">
+Stefan N&auml;her
+</a>
+: LEDA: A Library of Efficient Data Types and Algorithms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/mfcs/mfcs89.html#MehlhornN89">
+MFCS 1989
+</a>
+: 88-106
+<dt>
+[NH94]
+<dd>
+<a name="NgH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+: Efficient and Effective Clustering Methods for Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 144-155
+<dt>
+[Sch96]
+<dd>
+... 
+<dt>
+[Sco92]
+<dd>
+... 
+<dt>
+[Sil86]
+<dd>
+... 
+<dt>
+[SCZ98]
+<dd>
+<a name="SheikholeslamiCZ98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sheikholeslami:Gholamhosein.html">
+Gholamhosein Sheikholeslami
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chatterjee:Surojit.html">
+Surojit Chatterjee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Aidong.html">
+Aidong Zhang
+</a>
+: WaveCluster: A Multi-Resolution Clustering Approach for Very Large Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 428-439
+<dt>
+[SH94]
+<dd>
+... 
+<dt>
+[WW80]
+<dd>
+... 
+<dt>
+[WYM97]
+<dd>
+<a name="WangYM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Wei.html">
+Wei Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jiong.html">
+Jiong Yang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muntz:Richard_R=.html">
+Richard R. Muntz
+</a>
+: STING: A Statistical Information Grid Approach to Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 186-195
+<dt>
+[XEKS98]
+<dd>
+<a name="XuEKS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+: A Distribution-Based Clustering Algorithm for Mining in Large Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#XuEKS98">
+ICDE 1998
+</a>
+: 324-331
+<dt>
+[ZRL96]
+<dd>
+<a name="ZhangRL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Tian.html">
+Tian Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: BIRCH: An Efficient Data Clustering Method for Very Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ZhangRL96">
+SIGMOD Conf. 1996
+</a>
+: 103-114
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/KeimH99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alexander&nbsp;Hinneburg&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daniel&nbsp;A.&nbsp;Keim},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Optimal&nbsp;Grid-Clustering:&nbsp;Towards&nbsp;Breaking&nbsp;the&nbsp;Curse&nbsp;of&nbsp;Dimensionality<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;High-Dimensional&nbsp;Clustering},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{506-517},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

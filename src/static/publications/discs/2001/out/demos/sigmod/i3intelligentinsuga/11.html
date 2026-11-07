@@ -1,0 +1,35 @@
+For this scenario reconsider the software dataset whose schema was
+introduced <a href="slide2.html">earlier</a>.  We now consider the
+case of a more informed user familiar with most of the detailed data
+except the last year 1994.  The tool has kept track of this fact about
+the user.  Based on the sales along time for each
+Product,Platform,Geography combination the user has formed an
+expectation of values in 1994.  For instance, if for some combination
+there has been a steady increase along time, the user expects to see
+an increase, by the same ratio.  In general, the user can pick any
+time-series forecasting function to specify his expected values in
+1994.  In this example, let us assume that the user expects values in
+1994 to be the average of the values in all the previous years.  Let
+us also assume that the user has viewed the total revenue for 1994.
+This further changes the user's expectation of the values in 1994. In
+particular, he expects them all to sum up to the observed total for
+1994.  With this context about 1994 values suppose the user wants to
+quickly explore the remaining surprises or information in the 1994
+data.  The tool can return a summary of the key surprises in 1994
+constrained to within N rows as specified by the user.  The result is
+shown in the adjacent figure.  In the figure, the last column marked
+``Expected'' shows the values extrapolated from the user's context and
+the column before it shows the actual values.  These are all cases
+that correspond to a significant drop or increase in 1994.  For
+instance the last row shows that, based on prior knowledge the user
+expected the sales in 1994 for (DBMS Engines (Non-Object), Rest of
+World, Multiuser Mainframe IBM) to be 118.8 whereas the actual was
+just 10.99.  The reported answer set also contains cells at the
+aggregate level which are able to present a representative summary of
+their children values.  For instance, the middle row in the figure
+where all but the ``Prod_Grp'' level has a value of ``(All)''
+summarizes all cells under the Prod\_Grp ``SySW''. The last column
+``Ratio'' indicates that for each member of this cell the expected
+value is 135% of the actual value.  This provides the user with a
+compact summary of the violators which cannot be extrapolated based on
+his experience of past data.

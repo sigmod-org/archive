@@ -1,0 +1,216 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.6 [en] (X11; I; SunOS 5.6 sun4u) [Netscape]">
+   <title>ActiveViews Screenshot Presentation</title>
+<link REL=stylesheet HREF="stylesheet-woleft.css" TYPE="text/css">
+</head>
+<body>
+
+<center>
+<h1>
+<font size=+3>ActiveViews Screenshot Presentation</font></h1></center>
+
+<center>
+<h2>
+INRIA-Rocquencourt, France</h2></center>
+
+<center>
+<h2>
+University of Tel Aviv, Israel</h2></center>
+
+<center>
+<h2>
+Ardent Software, USA</h2></center>
+
+<blockquote> <blockquote> <blockquote>This document contains
+screenshots of the demonstration of the ActiveViews System&nbsp; as it
+has been presented at the 25th International Conference on Very Large
+Data Bases, September 7-10, 1999, Edinburgh, Scotland, UK.&nbsp; A
+complete presentation of the ActiveViews System can be found in the
+conference proceedings of the same conference.  <p> (Best quality of
+the presented screenshots can be obtained by increasing the size of
+the browser window) </blockquote> </blockquote> </blockquote>
+
+<h3>
+Active Views: Short Overview</h3>
+Electronic commerce is emerging as a major Web supported application. This
+demonstration shows that database technology can, and should, provide the
+backbone for a wide range of such applications. More precisely, we demonstrate
+the ActiveViews system, which, relying on an extensive use of database
+features including views, active rules (triggers), and enhanced mechanisms
+for notification, access control and logging/tracing of users activities,
+provides the needed basis for electronic commerce.
+<p>Based on the emerging XML standards (DOM, XML query languages, stylesheet
+labguages, etc.), the system offers a novel declarative view specification
+language, describing the relevant data and activities of all actors (e.g.
+vendors and clients) participating in electronic commerce activities. Then,
+acting as an application generator, the system generates an actual, possibly
+customized, Web application that allows users to perform the given set
+of controlled activities and to work interactively on the specified data
+in a standard distributed environment.
+<br>&nbsp;
+<p>The ActiveViews is based on the following technical platform :
+<ul>
+<li>
+XML data is&nbsp; <i>stored</i> in the <font color="#3366FF">Axielle </font>XML
+repository (Ardent Software) based on ODMG (O2 object-oriented DBMS) for
+the storage of XML data and a Java/DOM programming interface for developing
+XML applications.</li>
+
+<li>
+XML data is <i>queried </i>via a the <font color="#FF6666">XOQL </font><font color="#000000">query
+language which has been developed at INRIA as part of this project.</font></li>
+
+<li>
+Active <i>views</i> are implemented as standard Axielle (O2) clients.</li>
+
+<li>
+Active <i>rules</i> are handled by a&nbsp; <font color="#FF6666">rule manager</font><font color="#000000">
+also developed as part of this project.</font></li>
+
+<li>
+<i>Update notifications</i> between clients and the XML repository server
+are managed by a Java version of the standard C++ notification mechanism
+of O2 (Ardent Software) .</li>
+
+<li>
+Application notification are implemented by using JSDT (SUN)</li>
+
+<li>
+<font color="#000000">ActiveViews applications are defined by a d<i>eclarative
+specification language</i>, called </font><font color="#FF6666">AVL </font><font color="#000000">(a
+detailed description of AVL can be found in the proceedings of VLDB'99).</font></li>
+
+<li>
+The ActiveViews system has also been built on top of other <i>standard
+Web technology</i> such as Java/JavaScript, RMI and HTML.</li>
+</ul>
+
+<h3>
+Example: Electronic Store for Musical Equipment</h3>
+The example presented during this demonstration is an electronic commerce
+application for musical equipment. XML data has been provided a French
+online department store and represents a catalogue for musical equipment.
+The application defines two views for <font color="#FF0000">customers</font>
+and <font color="#FF0000">vendors</font>. The following screen shots illustrate
+a session of some customer browsing the catalogue and communicating with
+some vendor.&nbsp; More precisely, customers can :
+<ul>
+<ol>
+<li>
+browse the catalogue</li>
+
+<li>
+contact vendors for some specific category of musical equipment</li>
+
+<li>
+add articles to a caddy within a given budget</li>
+
+<li>
+define a maximal budget</li>
+
+<li>
+verify the remaining budget</li>
+
+<li>
+create and issue an order</li>
+</ol>
+</ul>
+On the other hand, vendors can:
+<ul>
+<ol>
+<li>
+modify the catalogue (price of articles)</li>
+
+<li>
+discuss with clients</li>
+</ol>
+</ul>
+The complete application is described in a declarative <a href="Blacknote.html">AVL
+specification file.</a>
+<h3>
+Demonstration</h3>
+
+<hr SIZE=5 WIDTH="100%">
+<h5>
+Screenshot 1</h5>
+The first screenshot shows the screen of a customer who has entered the
+electronic store and started activity <a href="Blacknote.html#shopping">shopping</a>.&nbsp;
+The displayed HTML page contains all variables and methods defined in activity
+<a href="Blacknote.html#shopping">shopping</a>.
+The frame with title <b><font color="#006600">catalog</font></b> corresponds
+to a variable <a href="Blacknote.html#catalog">catalog</a> which has been
+declared in the ActiveViews declaration file. The value of this variable
+is an XML document obtained by the <a href="Blacknote.html#query">XOQL
+query </a>also specified in the same declaration. Observe the definition
+of the different <a href="Blacknote.html#modes">modes</a> for the elements
+in the query result&nbsp; : the catalogue is read in <i>deferred</i> mode,
+i.e. document nodes are loaded into the view at demand during the browsing
+activity of the customer.&nbsp; The only exceptions are nodes corresponding
+to elements of element type <i>ARTICLE</i> and <i>NAME</i> that are loaded
+immediately with their parent nodes. Displayed buttons correspond to view
+methods also declared in the view specification. For example, button <i>Add
+Article to Caddy</i> corresponds to method&nbsp; <a href="Blacknote.html#add_to_caddy">add_to_caddy</a>.&nbsp;&nbsp;
+Before clicking on this button, the customer must browse the catalog and
+select an article, which becomes the argument of the corresponding method
+call.
+<p><img SRC="custom~0.jpg" ALT="Initial customer screen"  WIDTH="100%">
+<p>
+<hr SIZE=5 WIDTH="100%">
+<h5>
+Screenshot 2</h5>
+The second screenshot shows the customer's screen&nbsp; after having defined
+an initial budget, browsed the catalogue, and added some articles to his
+shopping cart (caddy).&nbsp; Observe that the remaining budget is calculated
+automatically as the difference between the initial budget and the sum
+of the price of the articles in the shopping cart.
+<br>&nbsp;
+<br>&nbsp;
+<p><img SRC="custom~3.jpg" ALT="Customer browses catalog"  WIDTH="100%">
+<h5>
+
+<hr SIZE=5 WIDTH="100%"></h5>
+
+<h5>
+Screenshot 3</h5>
+Suppose the customer has clicked on button <a href="Blacknote.html#contact_vendor">contact_vendor</a>.
+This action has created a notification which fires a <a href="Blacknote.html#on_contact_vendor">rule
+</a>defined
+in the vendor's view specification.&nbsp; Before executing the rule body,
+the rule manager verifies if the vendor is responsible for the corresponding
+category of musical equipment (<i>category=c</i>) and is not already in
+contact with some other customer (customer=null). The rule body will initialize
+the customer variable in the vendor view and execute a method
+<a href="Blacknote.html#accept_contact">accept_contact</a>
+for informing the customer view that the contact request has been accepted.
+We will not go into detail about the complete protocol for establishing
+a contact between the vendor and the client. The following screenshoot
+shows the screen of a customer who has contacted a vendor and asked to
+lower the price of the displayed article.
+<p><img SRC="custom~4.jpg" ALT="Customer contacts vendor"  WIDTH="100%">
+<p>
+<hr SIZE=5 WIDTH="100%">
+<h5>
+Screenshot 4</h5>
+The following screenshot shows the vendor's screen&nbsp; after&nbsp; having
+received the question of the customer (<b><font color="#006600">Discussion:</font></b>
+"Could you lower the price").&nbsp; Observe that the vendor is automatically
+informed about all browsing activities of the customer (frame <b><font color="#006600">customer_view</font></b>).
+The information in this frame is refreshed by an active rule which is fired
+by the customer's browsing steps and creates notifications for the vendor's view.&nbsp;&nbsp; 
+Since the vendor is allowed to change the price of an article (mode <a href="Blacknote.html#write_p">write</a>),
+he will update the price.
+<p><img SRC="vendor7.jpg" ALT="Vendor lowers price"  WIDTH="100%">
+<p>
+<hr SIZE=5 WIDTH="100%">
+<h5>
+Screenshot 5</h5>
+The final screenshot shows the customer's screen after the modification
+of the price by the vendor. Observe the warning besides the <i>PRICE</i> attribute
+. In fact, the price has not been changed yet and the customer simply clicks
+on the corresponding field in order to obtain the new price.
+<p><img SRC="custom~6.jpg" ALT="Price has been changed"  WIDTH="100%">
+</body>
+</html>

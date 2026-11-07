@@ -1,0 +1,535 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Ripple Joins for Online Aggregation</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Ripple Joins for Online Aggregation
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_peter_j_haas.htm">Peter J. Haas</a> and 
+<a href = "a_joseph_m_hellerste.htm">Joseph M. Hellerstein</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/ripplejoinsforopejo.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmoadaptivequation.htm">Return to Adaptive Query Optimization</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We present a new family of join algorithms, called ripple joins, for online processing of multi-table aggregation queries in a relational database management system ( dbms ). Such queries arise naturally in interactive exploratory decision-support applications. Traditional offline join algorithms are designed to minimize the time to completion of the query. In contrast, ripple joins are designed to minimize the time until an acceptably precise estimate of the query result is available, as measured by the length of a confidence interval. Ripple joins are adaptive, adjusting their behavior during processing in accordance with the statistical properties of the data. Ripple joins also permit the user to dynamically trade off the two key performance factors of online aggregation: the time between successive updates of the running aggregate, and the amount by which the confidence-interval length decreases at each update. We show how ripple joins can be implemented in an existing dbms using iterators, and we give an overview of the methods used to compute confidence intervals and to adaptively optimize the ripple join "aspect-ratio" parameters. In experiments with an initial implementation of our algorithms in the POSTGRES DMBS , the time required to produce reasonably precise online estimates was up to two orders of magnitude smaller than the time required for the best offline join algorithms to produce exact answers.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AS72]
+<dd>
+... 
+<dt>
+[Bil86]
+<dd>
+... 
+<dt>
+[CGL83]
+<dd>
+... 
+<dt>
+[DKO+84]
+<dd>
+<a name="DeWittKOSSW84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">
+Randy H. Katz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olken:Frank.html">
+Frank Olken
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">
+Leonard D. Shapiro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wood:David_A=.html">
+David A. Wood
+</a>
+: Implementation Techniques for Main Memory Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1984
+</a>
+: 1-8
+<dt>
+[GG97]
+<dd>
+<a name="GrayG97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: The Five-Minute Rule Ten Years Later, and Other Computer Storage Rules of Thumb. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#GrayG97">
+SIGMOD Record 26(4)
+</a>
+: 63-68(1997)
+<dt>
+[Gra93]
+<dd>
+<a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Query Evaluation Techniques for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">
+Computing Surveys 25(2)
+</a>
+: 73-170(1993)
+<dt>
+[Haa97]
+<dd>
+<a name="Haas97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Large-Sample and Deterministic Confidence Intervals for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm97.html#Haas97">
+SSDBM 1997
+</a>
+: 51-63
+<dt>
+[HAR99]
+<dd>
+... 
+<dt>
+[HH98]
+<dd>
+... 
+<dt>
+[HHW97]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[HN96]
+<dd>
+<a name="HellersteinN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Query Execution Techniques for Caching Expensive Methods. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 423-434
+<dt>
+[HNS94]
+<dd>
+<a name="HaasNS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: On the Relative Cost of Sampling for Join Selectivity Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods94.html#HaasNS94">
+PODS 1994
+</a>
+: 14-24
+<dt>
+[HNSS96]
+<dd>
+<a name="HaasNSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Selectivity and Cost Estimation for Joins Based on Random Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss52.html#HaasNSS96">
+JCSS 52(3)
+</a>
+: 550-569(1996)
+<dt>
+[Hoe48]
+<dd>
+... 
+<dt>
+[HOT88]
+<dd>
+<a name="HouOT88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">
+Baldeo K. Taneja
+</a>
+: Statistical Estimators for Relational Algebra Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods88.html#HouOT88">
+PODS 1988
+</a>
+: 276-287
+<dt>
+[HOT89]
+<dd>
+<a name="HouOT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">
+Baldeo K. Taneja
+</a>
+: Processing Aggregate Relational Queries with Hard Time Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1989
+</a>
+: 68-77
+<dt>
+[IBM97]
+<dd>
+... 
+<dt>
+[Inf97]
+<dd>
+... 
+<dt>
+[ODT+91]
+<dd>
+<a name="OzsoyogluDTHR91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Kaizheng.html">
+Kaizheng Du
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tjahjana:A=.html">
+A. Tjahjana
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rowland:D=_Y=.html">
+D. Y. Rowland
+</a>
+: On Estimating COUNT, SUM, and AVERAGE. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dexa/dexa91.html#OzsoyogluDTHR91">
+DEXA 1991
+</a>
+: 406-412
+<dt>
+[OJ93]
+<dd>
+... 
+<dt>
+[Olk93]
+<dd>
+... 
+<dt>
+[Ora97]
+<dd>
+... 
+<dt>
+[Pos98]
+<dd>
+... 
+<dt>
+[RRH99]
+<dd>
+... 
+<dt>
+[RSS94]
+<dd>
+<a name="RamakrishnanSS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Rule Ordering in Bottom-Up Fixpoint Evaluation of Logic Programs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde6.html#RamakrishnanSS94">
+TKDE 6(4)
+</a>
+: 501-517(1994)
+<dt>
+[WA91]
+<dd>
+<a name="WilschutA91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilschut:Annita_N=.html">
+Annita N. Wilschut
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Apers:Peter_M=_G=.html">
+Peter M. G. Apers
+</a>
+: Dataflow Query Execution in a Parallel Main-Memory Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis91.html#WilschutA91">
+PDIS 1991
+</a>
+: 68-77
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="TanGO99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Kian=Lee.html">
+Kian-Lee Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goh:Cheng_Hian.html">
+Cheng Hian Goh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">
+Beng Chin Ooi
+</a>
+: Online Feedback for Nested Aggregate Queries with Multi-Threading. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#TanGO99">
+VLDB 1999
+</a>
+: 18-29
+<li>
+ 
+<a name="RamanRH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raman:Vijayshankar.html">
+Vijayshankar Raman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raman:Bhaskaran.html">
+Bhaskaran Raman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Online Dynamic Reordering for Interactive Data Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#RamanRH99">
+VLDB 1999
+</a>
+: 709-720
+<li>
+ 
+<a name="Haas99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Techniques for Online Exploration of Large Object-Relational Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm99.html#Haas99">
+SSDBM 1999
+</a>
+: 4-12
+<li>
+ 
+<a name="AlonGMS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alon:Noga.html">
+Noga Alon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Szegedy:Mario.html">
+Mario Szegedy
+</a>
+: Tracking Join and Self-Join Sizes in Limited Storage. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#AlonGMS99">
+PODS 1999
+</a>
+: 10-20
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/HaasH99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Peter&nbsp;J.&nbsp;Haas&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joseph&nbsp;M.&nbsp;Hellerstein},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Ripple&nbsp;Joins&nbsp;for&nbsp;Online&nbsp;Aggregation},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{287-298},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

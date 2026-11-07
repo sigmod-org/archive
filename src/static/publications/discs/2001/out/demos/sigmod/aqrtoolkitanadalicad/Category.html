@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>Category Selection</TITLE>
+</HEAD>
+
+<BODY>
+
+<FORM ACTION="http://jupiter.cc.gatech.edu:10699/servlet/fragment/applet" METHOD="POST" ENCTYPE="application/x-www-form-urlencoded"
+name="installform">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" WIDTH="438">
+	<TR>
+		<TD VALIGN="TOP">
+			<P ALIGN="CENTER"><B><A HREF="Query.html"><FONT SIZE="2" FACE="Arial">Choose Query Type</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="FormQuery.html"><FONT SIZE="2" FACE="Arial">User Query</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Category.html"><FONT SIZE="2" FACE="Arial">Choose category</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Applet.html"><FONT SIZE="2" FACE="Arial">Constructed Query </FONT></A><FONT SIZE="2"
+			FACE="Arial">| </FONT><A HREF="Sources.html"><FONT SIZE="2" FACE="Arial">Known Sources</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route1.html"><FONT SIZE="2" FACE="Arial">Routing Phase One</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route2.html"><FONT SIZE="2" FACE="Arial">Routing Phase Two</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Plan.html"><FONT SIZE="2" FACE="Arial">Plan Generation</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Execution.html"><FONT SIZE="2" FACE="Arial">Execution</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Results.html"><FONT SIZE="2" FACE="Arial">Results</FONT></A></B>
+		</TD>
+	</TR>
+</TABLE>
+</P>
+
+<P><SCRIPT language="JavaScript">
+
+
+
+  <!--
+  
+  function clearList(select,from,num)
+  {
+        var i;
+        //we have to delete from the tail to the head
+        for(i=from+num-1; i>=from; i--) {
+          select.options[i].text = '  ';
+          select.options[i].value = 'va';
+          select.options[i] = null;
+        }
+  }
+
+  function fillAttrList(myselect)
+  {
+        var i,r,colNum,tbIndex;
+        var tempCol= new String("");
+
+        clearList(document.installform.colnames,0,document.installform.colnames.length);
+
+
+        w = 0;
+        for (k = 0; k < myselect.length; k++) { 
+          if (myselect.options[k].selected) {
+            tbIndex = k;
+            colNum = eval("document.installform.tb"+tbIndex.toString()+"_colnum.value");
+            for (i=0; i<colNum; i++) {
+              tempCol = eval("document.installform.tb"+tbIndex.toString()+"_col"+i.toString()+".value");
+              document.installform.colnames.options[w]= new Option(tempCol, tempCol);
+              w++;
+            }
+          }
+        } 
+  }
+
+  //-->
+
+
+
+</SCRIPT>
+
+<TABLE BORDER="0">
+	<TR>
+		<TD VALIGN="TOP" BGCOLOR="#AAE0F0">
+			<TABLE ALIGN="LEFT" BORDER="0" HEIGHT="186">
+				<TR>
+					<TD HEIGHT="56" VALIGN="TOP"><A HREF="http://www.cc.gatech.edu/projects/disl/QR/"> <IMG SRC="images/qrlogo.gif" WIDTH="110" HEIGHT="82" ALIGN="BOTTOM"
+						BORDER="0"></A></TD>
+				</TR>
+				<TR>
+					<TD>&nbsp;</TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/QR/overview.html"> <FONT SIZE="2" FACE="Arial, Helvetica">Project
+						Overview</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://jupiter.cc.gatech.edu:10699/query"> <FONT SIZE="2" FACE="Arial, Helvetica">Query Routing Demo</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD>&nbsp;</TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><B><FONT SIZE="3" FACE="Arial, Helvetica">Related Projects:</FONT></B></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/CQ/" target="_top"> <FONT SIZE="2" FACE="Arial, Helvetica">WebCQ</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="12" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/XWRAPElite" target="_top"> <FONT SIZE="2" FACE="Arial, Helvetica">XWrap
+						Elite</FONT></A></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD>
+			<P ALIGN="CENTER"><IMG SRC="images/qrbanner.jpg" WIDTH="456" HEIGHT="64" ALIGN="BOTTOM" BORDER="0"></P>
+			<P><INPUT TYPE="HIDDEN" NAME="edu.gatech.disl.qr.queryType" SIZE="-1" VALUE="form"> <INPUT TYPE="HIDDEN" NAME="edu.gatech.disl.qr.keywordQuery"
+			SIZE="-1" VALUE="java"> <INPUT TYPE="HIDDEN" NAME="edu.gatech.disl.qr.parameter_url" SIZE="-1"> <INPUT TYPE="HIDDEN"
+			NAME="edu.gatech.disl.qr.parameter_author" SIZE="-1"> <INPUT TYPE="HIDDEN" NAME="edu.gatech.disl.qr.parameter_price"
+			SIZE="-1"> <INPUT TYPE="HIDDEN" NAME="edu.gatech.disl.qr.parameter_title" SIZE="-1"> 
+			<TABLE BORDER="0">
+				<TR>
+					<TD><B>Refinement Categories</B></TD>
+					<TD><B>Subcategories</B></TD>
+				</TR>
+				<TR>
+<input type="hidden" name="tb0_colnum" value="6">
+<input type="hidden" name="tb0_col0" value="Personal Pages">
+<input type="hidden" name="tb0_col1" value="Corporate Pages">
+<input type="hidden" name="tb0_col2" value="Non-Profit Pages">
+<input type="hidden" name="tb0_col3" value="American Pages">
+<input type="hidden" name="tb0_col4" value="Asian Pages">
+<input type="hidden" name="tb0_col5" value="European Pages">
+<input type="hidden" name="tb1_colnum" value="12">
+<input type="hidden" name="tb1_col0" value="Technical">
+<input type="hidden" name="tb1_col1" value="Historical">
+<input type="hidden" name="tb1_col2" value="Classical">
+<input type="hidden" name="tb1_col3" value="Religion">
+<input type="hidden" name="tb1_col4" value="Humor">
+<input type="hidden" name="tb1_col5" value="Sci-Fi">
+<input type="hidden" name="tb1_col6" value="Fantasy">
+<input type="hidden" name="tb1_col7" value="Western">
+<input type="hidden" name="tb1_col8" value="Horror">
+<input type="hidden" name="tb1_col9" value="Mystery">
+<input type="hidden" name="tb1_col10" value="Non-Fiction">
+<input type="hidden" name="tb1_col11" value="Fiction">
+<input type="hidden" name="tb2_colnum" value="15">
+<input type="hidden" name="tb2_col0" value="Non-profit Pages">
+<input type="hidden" name="tb2_col1" value="Corporate Pages">
+<input type="hidden" name="tb2_col2" value="Personal Pages">
+<input type="hidden" name="tb2_col3" value="US Pages">
+<input type="hidden" name="tb2_col4" value="Canadian Pages">
+<input type="hidden" name="tb2_col5" value="European Pages">
+<input type="hidden" name="tb2_col6" value="Asian Pages">
+<input type="hidden" name="tb2_col7" value="English Pages">
+<input type="hidden" name="tb2_col8" value="French Pages">
+<input type="hidden" name="tb2_col9" value="German Pages">
+<input type="hidden" name="tb2_col10" value="Spanish Pages">
+<input type="hidden" name="tb2_col11" value="Portuguese Pages">
+<input type="hidden" name="tb2_col12" value="Chinese Pages">
+<input type="hidden" name="tb2_col13" value="Japanese Pages">
+<input type="hidden" name="tb2_col14" value="Korean Pages">
+<input type="hidden" name="tb3_colnum" value="5">
+<input type="hidden" name="tb3_col0" value="Personal">
+<input type="hidden" name="tb3_col1" value="Automobile">
+<input type="hidden" name="tb3_col2" value="Jobs">
+<input type="hidden" name="tb3_col3" value="Pets">
+<input type="hidden" name="tb3_col4" value="Obituaries">
+<input type="hidden" name="tb4_colnum" value="7">
+<input type="hidden" name="tb4_col0" value="Computer Science">
+<input type="hidden" name="tb4_col1" value="Physics">
+<input type="hidden" name="tb4_col2" value="Chemistry">
+<input type="hidden" name="tb4_col3" value="Biology">
+<input type="hidden" name="tb4_col4" value="Medicine">
+<input type="hidden" name="tb4_col5" value="Sociology">
+<input type="hidden" name="tb4_col6" value="Psycology">
+<input type="hidden" name="tb5_colnum" value="2">
+<input type="hidden" name="tb5_col0" value="Perfume">
+<input type="hidden" name="tb5_col1" value="Cosmetics">
+<input type="hidden" name="tb6_colnum" value="3">
+<input type="hidden" name="tb6_col0" value="Perscriptions">
+<input type="hidden" name="tb6_col1" value="Health Products">
+<input type="hidden" name="tb6_col2" value="Miscellaneous">
+<input type="hidden" name="tb7_colnum" value="3">
+<input type="hidden" name="tb7_col0" value="Knives">
+<input type="hidden" name="tb7_col1" value="Cooks Utensils">
+<input type="hidden" name="tb7_col2" value="Appliances">
+<input type="hidden" name="tb8_colnum" value="5">
+<input type="hidden" name="tb8_col0" value="Pop">
+<input type="hidden" name="tb8_col1" value="Country">
+<input type="hidden" name="tb8_col2" value="Classical">
+<input type="hidden" name="tb8_col3" value="Metal">
+<input type="hidden" name="tb8_col4" value="Folk">
+<input type="hidden" name="tb9_colnum" value="6">
+<input type="hidden" name="tb9_col0" value="Computer">
+<input type="hidden" name="tb9_col1" value="Philosophy">
+<input type="hidden" name="tb9_col2" value="Engineering">
+<input type="hidden" name="tb9_col3" value="Medical">
+<input type="hidden" name="tb9_col4" value="Literary">
+<input type="hidden" name="tb9_col5" value="Sociology">
+<input type="hidden" name="tb10_colnum" value="5">
+<input type="hidden" name="tb10_col0" value="Electronics">
+<input type="hidden" name="tb10_col1" value="Art">
+<input type="hidden" name="tb10_col2" value="Cars">
+<input type="hidden" name="tb10_col3" value="Collectibles">
+<input type="hidden" name="tb10_col4" value="Music">
+<input type="hidden" name="tb11_colnum" value="5">
+<input type="hidden" name="tb11_col0" value="Comedy">
+<input type="hidden" name="tb11_col1" value="Drama">
+<input type="hidden" name="tb11_col2" value="Horror">
+<input type="hidden" name="tb11_col3" value="Sci-Fi">
+<input type="hidden" name="tb11_col4" value="Foriegn">
+<input type="hidden" name="tb12_colnum" value="3">
+<input type="hidden" name="tb12_col0" value="Employees">
+<input type="hidden" name="tb12_col1" value="Government">
+<input type="hidden" name="tb12_col2" value="International">
+<input type="hidden" name="tb13_colnum" value="8">
+<input type="hidden" name="tb13_col0" value="Sports">
+<input type="hidden" name="tb13_col1" value="Trucks">
+<input type="hidden" name="tb13_col2" value="Domestic">
+<input type="hidden" name="tb13_col3" value="Foriegn">
+<input type="hidden" name="tb13_col4" value="Van">
+<input type="hidden" name="tb13_col5" value="Economy">
+<input type="hidden" name="tb13_col6" value="SUV">
+<input type="hidden" name="tb13_col7" value="Sedan">
+<input type="hidden" name="tb14_colnum" value="5">
+<input type="hidden" name="tb14_col0" value="Business">
+<input type="hidden" name="tb14_col1" value="Games">
+<input type="hidden" name="tb14_col2" value="Operating Systems">
+<input type="hidden" name="tb14_col3" value="Financial">
+<input type="hidden" name="tb14_col4" value="Graphic">
+<input type="hidden" name="tb15_colnum" value="4">
+<input type="hidden" name="tb15_col0" value="Printers">
+<input type="hidden" name="tb15_col1" value="Computers">
+<input type="hidden" name="tb15_col2" value="Storage">
+<input type="hidden" name="tb15_col3" value="Consumer Electronics">
+  										<TD>
+						<SELECT NAME="edugatechdislqrcategoryValue" SIZE="10"  MULTIPLE onChange="fillAttrList(this)">
+						<OPTION VALUE="webSearch.xml">General </OPTION>
+						<OPTION VALUE="book.xml" SELECTED>Book </OPTION>
+						<OPTION VALUE="webSearch.xml">Web Search </OPTION>
+						<OPTION VALUE="classified.xml">Classified </OPTION>
+						<OPTION VALUE="paper.xml">Technical Paper </OPTION>
+						<OPTION VALUE="beauty.xml">Beauty Stores </OPTION>
+						<OPTION VALUE="drug.xml">Drug Store </OPTION>
+						<OPTION VALUE="kitchen.xml">Kitchen Stores </OPTION>
+						<OPTION VALUE="music.xml">Music </OPTION>
+						<OPTION VALUE="cfp.xml">Call For Papers </OPTION>
+						<OPTION VALUE="auction.xml">Auction </OPTION>
+						<OPTION VALUE="video.xml">Video/DVD </OPTION>
+						<OPTION VALUE="people.xml">People </OPTION>
+						<OPTION VALUE="auto.xml">Automotive </OPTION>
+						<OPTION VALUE="software.xml">Software </OPTION>
+						<OPTION VALUE="hardware.xml">Hardware </OPTION>
+						</SELECT>
+					</TD>
+					<TD>
+						<SELECT NAME="colnames" SIZE="10"  MULTIPLE>
+						<OPTION>___________________________ </OPTION>
+						</SELECT>
+					</TD>
+				</TR>
+			</TABLE>
+<INPUT TYPE="SUBMIT" NAME="SUBMIT" VALUE="Submit Query"> <SCRIPT language="JavaScript">
+
+ <!--
+fillAttrList(document.installform.edugatechdislqrcategoryValue)
+  //-->
+
+</SCRIPT>
+<HR ALIGN="CENTER">
+
+			<TABLE BORDER="0">
+				<TR>
+					<TD><A HREF="http://www.gatech.edu"> <IMG SRC="images/GTlogosm.gif" WIDTH="238" HEIGHT="80" ALIGN="TOP" BORDER="0"></A></TD>
+					<TD><A HREF="http://www.cc.gatech.edu/"> <IMG SRC="images/CCbanner.gif" WIDTH="368" HEIGHT="37" ALIGN="TOP" BORDER="0"></A></TD>
+					<TD><A HREF="http://www.cc.gatech.edu/projects/disl"> <IMG SRC="images/disllogo.gif" ALIGN="TOP" BORDER="0"></A></TD>
+					<TD><A HREF="http://www.cc.gatech.edu/projects/disl/QR"> <IMG SRC="images/qrlogo.jpg" WIDTH="110" HEIGHT="82" ALIGN="TOP"
+						BORDER="0"></A></TD>
+				</TR>
+			</TABLE>
+
+		</TD>
+	</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE BORDER="0" CELLSPACING="0" WIDTH="438">
+	<TR>
+		<TD VALIGN="TOP">
+			<P ALIGN="CENTER"><B><A HREF="Query.html"><FONT SIZE="2" FACE="Arial">Choose Query Type</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="FormQuery.html"><FONT SIZE="2" FACE="Arial">User Query</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Category.html"><FONT SIZE="2" FACE="Arial">Choose category</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Applet.html"><FONT SIZE="2" FACE="Arial">Constructed Query </FONT></A><FONT SIZE="2"
+			FACE="Arial">| </FONT><A HREF="Sources.html"><FONT SIZE="2" FACE="Arial">Known Sources</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route1.html"><FONT SIZE="2" FACE="Arial">Routing Phase One</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route2.html"><FONT SIZE="2" FACE="Arial">Routing Phase Two</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Plan.html"><FONT SIZE="2" FACE="Arial">Plan Generation</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Execution.html"><FONT SIZE="2" FACE="Arial">Execution</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Results.html"><FONT SIZE="2" FACE="Arial">Results</FONT></A></B>
+		</TD>
+	</TR>
+</TABLE>
+
+</FORM>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,43 @@
+xmm version="1.0" encoding='ISO-8859-1'?
+<!-- normally the first line should begin with "<?xml" but the
+     Internet Explorer 5.0 tries to display the page, although 
+     the link to this file says by a mime type declaration, 
+     that this file should contain "text/plain". -->
+
+<!-- The DTD contains information about the parameters the query takes. -->
+<!DOCTYPE iterator [
+  <!ENTITY % params PUBLIC "PE_Input" "/home/db/braumand/db/dummy.entities">
+  %params;
+  indb-param city # city # The location of the hotel (for example Philadelphia). 
+  # STRING?
+  indb-param currency # currency # The name of the target currency. # ENUMERATION # 
+    JPY # DEM # FRF # USD # GBP?
+  <!-- default values: -->
+  <!ENTITY city "Passau">
+  <!ENTITY currency "USD">
+]>
+
+<!-- The following XML-code contains a description of the 
+     evaluation plan of the query. -->
+<iterator id="map1" code="iterators.Map">
+  <transformer code="CurrencyConverter" 
+               codeBase="http://www.db.fmi.uni-passau.de/~braumand/">
+  <input>price, currency</input>
+  <output>newPrice</output>
+  <BaseCurrency>&currency;</BaseCurrency>
+  </transformer>
+  <transformer code="transformer.StringSubstitution">
+  <input>currency</input>
+  <output>currencyNew</output>
+  <replacement>&currency;</replacement>
+  </transformer>
+
+  <iterator id="w0" code="wrapper.HotelBookWrapper">
+  <city>stadt</city>
+    <iterator id="c0" code="iterators.wrapper.ConstantWrapper">
+      <TypeNames>STRING</TypeNames>
+      <AttributeNames>stadt</AttributeNames>
+      <Element1>&city;</Element1>
+    </iterator>
+  </iterator>
+</iterator>

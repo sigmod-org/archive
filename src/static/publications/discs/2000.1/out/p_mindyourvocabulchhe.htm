@@ -1,0 +1,502 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Mind Your Vocabulary: Query Mapping Across Heterogeneous Information Sources</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Mind Your Vocabulary: Query Mapping Across Heterogeneous Information Sources
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_chen-chuan_k_chang.htm">Chen-Chuan K. Chang</a> and 
+<a href = "a_hector_garcia-moli.htm">Hector Garcia-Molina</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/mindyourvocabulchhe.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmonewdatatyptypes.htm">Return to New Data Types</a><br>
+<br><i><font size=-1>Note: The quality of the PDF contained herein reflects that of the material supplied to the DiSC'00 Production Team.</font></i><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In this paper we present a mechanism for translating constraint queries, i.e., Boolean expressions of constraints, across heterogeneous information sources. Integrating such systems is difficult in part because they use a wide range of constraints as the vocabulary for formulating queries. We describe algorithms that apply user-provided mapping rules to translate query constraints into ones that are understood and supported in another context, e.g.,that use the proper operators and value formats. We show that the translated queries minimally subsume the original ones. Furthermore, the translated queries are also the most compact possible. Unlike other query mapping work, we effectively consider inter-dependencies among constraints, i.e., we handle constraints that cannot be translated independently. Furthermore, when constraints are not fully supported, our framework explores relaxations (semantic rewritings) into the closest supported version. Our most sophisticated algorithm (Algorithm TDQM) does not blindly convert queries to DNF (which would be easier to translate, but expensive); instead it performs a top-down mapping of a query tree, and does local query structure conversion only when necessary.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="Wiederhold92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Mediators in the Architecture of Future Information Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer25.html#Wiederhold92">
+IEEE Computer 25(3)
+</a>
+: 38-49(1992)
+<dt>
+[2]
+<dd>
+<a name="Ullman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Information Integration Using Logical Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Ullman97">
+ICDT 1997
+</a>
+: 19-40
+<dt>
+[3]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Querying Heterogeneous Information Sources Using Source Descriptions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LevyRO96">
+VLDB 1996
+</a>
+: 251-262
+<dt>
+[4]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Query-Answering Algorithms for Information Agents. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/aaai/aaai96-1.html#LevyRO96">
+AAAI/IAAI, Vol. 1 1996
+</a>
+: 40-47
+<dt>
+[5]
+<dd>
+<a name="PapakonstantinouGU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: MedMaker: A Mediation System Based on Declarative Specifications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#PapakonstantinouGU96">
+ICDE 1996
+</a>
+: 132-141
+<dt>
+[6]
+<dd>
+<a name="PapakonstantinouGGU95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: A Query Translation Scheme for Rapid Implementation of Wrappers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dood/dood95.html#PapakonstantinouGGU95">
+DOOD 1995
+</a>
+: 161-186
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+<a name="GeneserethKD97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Genesereth:Michael_R=.html">
+Michael R. Genesereth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Duschka:Oliver_M=.html">
+Oliver M. Duschka
+</a>
+: Infomaster: An Information Integration System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 539-542
+<dt>
+[9]
+<dd>
+<a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">
+Jun Yang
+</a>
+: Optimizing Queries Across Diverse Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HaasKWY97">
+VLDB 1997
+</a>
+: 276-285
+<dt>
+[10]
+<dd>
+<a name="RothS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">
+Mary Tork Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+: Don't Scrap It, Wrap It! A Wrapper Architecture for Legacy Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#RothS97">
+VLDB 1997
+</a>
+: 266-275
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="Garcia-MolinaLY99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Labio:Wilburt.html">
+Wilburt Labio
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yerneni:Ramana.html">
+Ramana Yerneni
+</a>
+: Capability-Sensitive Query Processing on Internet Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#Garcia-MolinaLY99">
+ICDE 1999
+</a>
+: 50-59
+<dt>
+[13]
+<dd>
+<a name="RajaramanSU95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Answering Queries Using Templates with Binding Patterns. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#RajaramanSU95">
+PODS 1995
+</a>
+: 105-112
+<dt>
+[14]
+<dd>
+<a name="LevyRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Answering Queries Using Limited External Processors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#LevyRU96">
+PODS 1996
+</a>
+: 227-237
+<dt>
+[15]
+<dd>
+<a name="ChangGP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Chen=Chuan_K=.html">
+Chen-Chuan K. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paepcke:Andreas.html">
+Andreas Paepcke
+</a>
+: Boolean Query Mapping Across Heterogeneous Information Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#ChangGP96">
+TKDE 8(4)
+</a>
+: 515-521(1996)
+<dt>
+[16]
+<dd>
+... 
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+<a name="Heiler95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heiler:Sandra.html">
+Sandra Heiler
+</a>
+: Sematic Interoperability. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur27.html#Heiler95">
+Computing Surveys 27(2)
+</a>
+: 271-273(1995)
+<dt>
+[19]
+<dd>
+<a name="PapakonstantinouGH96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+: Capabilities-Based Query Rewriting in Mediator Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#PapakonstantinouGH96">
+PDIS 1996
+</a>
+: 170-181
+<dt>
+[20]
+<dd>
+<a name="ChangG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Chen=Chuan_K=.html">
+Chen-Chuan K. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Conjunctive Constraint Mapping for Data Translation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dl/dl98.html#ChangG98">
+ACM DL 1998
+</a>
+: 49-58
+<dt>
+[21]
+<dd>
+<a name="ChangGP99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Chen=Chuan_K=.html">
+Chen-Chuan K. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paepcke:Andreas.html">
+Andreas Paepcke
+</a>
+: Predicate Rewriting for Translating Boolean Queries in a Heterogeneous Information System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tois/tois17.html#ChangGP99">
+TOIS 17(1)
+</a>
+: 1-39(1999)
+<dt>
+[22]
+<dd>
+<a name="AhoHU74" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aho:Alfred_V=.html">
+Alfred V. Aho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hopcroft:John_E=.html">
+John E. Hopcroft
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: The Design and Analysis of Computer Algorithms.  Addison-Wesley 1974, ISBN 0-201-00029-6
+<br>
+ 
+<dt>
+[23]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/ChangG99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Chen-Chuan&nbsp;K.&nbsp;Chang&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hector&nbsp;Garcia-Molina},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Mind&nbsp;Your&nbsp;Vocabulary:&nbsp;Query&nbsp;Mapping&nbsp;Across&nbsp;Heterogeneous&nbsp;Information<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sources},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{335-346},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

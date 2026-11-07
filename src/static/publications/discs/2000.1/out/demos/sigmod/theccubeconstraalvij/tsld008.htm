@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>PPT Slide</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Model and Language</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld007.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld009.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr>Model&nbsp;and&nbsp;Language</nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<b><font FACE="Times New Roman" COLOR="#000000" size="4">
+
+<p></font><font FACE="Times New Roman" COLOR="#000000" size="5">Model and Language</font></b>
+
+<ul>
+  <li><b><font FACE="Times New Roman" COLOR="#000000" size="3">CCUBE model = object-oriented
+    (OO) model + <i>constraint spatio-temporal</i> (CST) objects. </font></b></li>
+  <li><b><font FACE="Times New Roman" COLOR="#000000" size="3">The CCUBE language = iterative
+    query language (monoid comprehensions) + multi-typed constraint algebra.</font></b></li>
+</ul>
+
+<p>The data model for constraint calculus is adapted from constraint spatio-temporal (CST)
+objects, that may hold spatio-temporal constraint data, conceptually represented by
+constraints (i.e. symbolic expressions). In the current version, linear arithmetic
+constraints (i.e. inequalities and equations) over reals are implemented. New CST objects
+are constructed using logical connectives, existential quantifiers and variable renaming,
+within a mutli-typed constraint algebra. The constraint module also provides predicates
+such as for testing satisfiability, implication etc, that are used as selecting conditions
+in hosting monoid comprehension queries.</p>
+
+<p>The general framework of the CCUBE language is the monoid comprehensions language, in
+which CST objects serve as a special data type, and are implemented as a library of
+interrelated C++ classes. The data model for monoid comprehensions is based on the notion
+of monoid, which is a conceptual data type capturing uniformly aggregations, collections,
+and other types over which one can ``iterate''. This includes disjunctions and
+conjunctions of constraints. </p>
+
+<p>The ability to treat disjunctive and conjunctive constraints uniformly as collections
+is a very important feature of CCUBE: it allows to express and implement many constraint
+operations through nested monoid comprehensions, i.e. in the same language as hosting
+queries. For example, the satisfiability test of a disjunction of conjunctions of linear
+inequalities is expressed as a monoid comprehension query that iterates over the disjuncts
+(each being a conjunction), and tests the satisfiability of every conjunction (using the
+simplex algorithm). </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

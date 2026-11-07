@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Tips</H2>
+
+<UL>
+	<LI><A HREF="#General">General tips</A>
+	<LI><A HREF="#Lists">Mining lists</A>
+	<LI><A HREF="#Records">Mining records</A>
+	<LI><A HREF="#Errors">Understanding miner errors</A>
+</UL>
+
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="General"></A>General Tips</H3>
+<P>The most important rule when providing Nodose example document decomposition is to be consistent. Make sure
+that each instance of a structure has its boundaries defined identically. Most problems result from careless selection
+of white space (spaces, carriage returns, etc.). The next two screen shots show an example of inconsistently defining
+the end of a list element. The first element ends before a carriage return by the second element ends after a carriage
+return. Since there is no consistent way to decide whether or not to include the carriage return in the element,
+Nodose will usually fail in this case.</P>
+<P><BR>
+<IMG SRC="Images/tips1.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+<P><IMG SRC="Images/tips2.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+<BR>
+
+<HR ALIGN="CENTER">
+</P>
+<H3><A NAME="Lists"></A>Mining Lists</H3>
+<P>Not all of the elements in a list need to be manually added before successful mining can take place.  If a list
+is partially decomposed, however, all of the missing elements must be after the specified ones.  For example, if
+only the first, second, and fourth elements are identified, mining on the list will fail - the third element must
+also be identified.</P>
+
+<P></P>
+<H3>
+<HR ALIGN="CENTER">
+</H3>
+
+<H3><A NAME="Records"></A>Mining Records</H3>
+<P>When mining a record type, all instances of the type must be either fully specified (all fields identified)
+or fully unspecified.  If some of the records have only some of their fields identified, mining will fail.</P>
+
+<P>
+<HR ALIGN="CENTER">
+</P>
+<H3><A NAME="Errors"></A>Understanding Miner Errors</H3>
+<P>After unsuccessful mining, the &quot;Miner Errors&quot; tab in the bottom pane will list the errors that the
+miner made.  Selecting an error will highlight the associated text in the file window.  Four different types of
+errors can be returned from miners:</P>
+
+<OL>
+	<LI>False positives - The miner predicted a field or list element that must be incorrect.  If the predicted field
+	or element is correct, manually add it and re-mine.
+	<LI>False negatives - The miner failed to predict a field or list element that the user has identified.
+	<LI>Wrong boundaries - The miner incorrectly predicted the start or end position of a field or list element.  This
+	error can be an indication of inconsistent boundary selection as described above.
+	<LI>Field overlap - The miner predicted two fields which overlap eachother.
+</OL>
+
+<P>
+
+</BODY>
+
+</HTML>

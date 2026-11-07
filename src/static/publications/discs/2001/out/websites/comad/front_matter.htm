@@ -1,0 +1,818 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="filelist-2.xml" tppabs="http://www.cse.iitb.ernet.in:8000/proxy/db/~dbms/comad2000/COMAD2KonLineProc/Org_PC_Preface_files/filelist.xml">
+<link rel=Edit-Time-Data href="editdata-1.mso" tppabs="http://www.cse.iitb.ernet.in:8000/proxy/db/~dbms/comad2000/COMAD2KonLineProc/Org_PC_Preface_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>XML and Semi-structured Data</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>vijay</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>vijay</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>15</o:TotalTime>
+  <o:LastPrinted>2000-10-29T12:07:00Z</o:LastPrinted>
+  <o:Created>2000-11-12T11:03:00Z</o:Created>
+  <o:LastSaved>2000-11-12T11:03:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>902</o:Words>
+  <o:Characters>5147</o:Characters>
+  <o:Company>Persistent Systems Pvt. Ltd.</o:Company>
+  <o:Lines>42</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>6320</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;
+	mso-font-alt:\BC14\D0D5;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:129;
+	mso-generic-font-family:auto;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 151388160 16 0 524288 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	font-weight:normal;
+	font-style:italic;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin-right:0in;
+	margin-top:5.0pt;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Tahoma;
+	font-weight:bold;}
+h6
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:16.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:Batang;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	color:#990000;
+	font-weight:bold;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	font-size:16.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.H3, li.H3, div.H3
+	{mso-style-name:H3;
+	mso-style-next:Normal;
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	layout-grid-mode:char;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:0in;
+	mso-footer-margin:0in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:0in;
+	mso-footer-margin:0in;
+	mso-columns:2 not-even 3.0in .5in 3.0in;
+	mso-paper-source:0;}
+div.Section2
+	{page:Section2;}
+@page Section3
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:0in;
+	mso-footer-margin:0in;
+	mso-paper-source:0;}
+div.Section3
+	{page:Section3;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:6295327;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1513830308 -436967698 264824036 -1256955898 1205604402 -1834190688 913841832 1473647746 847302302 110024628;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+
+
+<span style='mso-bookmark:Organizers'></span>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h6 align=center style='text-align:center;line-height:90%'>Tenth International
+Conference on Management of Data <span style='font-weight:normal'><o:p></o:p></span></h6>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='mso-fareast-font-family:Batang'>December 14, 15 and 16, 2000, Pune,
+India</span></i><span style='mso-fareast-font-family:Batang'><o:p></o:p></span></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><b><i><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'>Hosted by Division II and
+Pune Chapter of <a href="http://www.csi-india.org/" >Computer Society of India</a><o:p></o:p></span></i></b></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><b><i><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></i></b></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><b><i><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></i></b></p>
+
+<p align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>General Conference Chair&nbsp;<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>Anand Deshpande, Persistent Systems
+Pvt. Ltd&nbsp;</p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><span
+style="mso-spacerun: yes"> </span></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Program Committee Chairs<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>Krithi Ramamritham,<span
+style="mso-spacerun: yes">  </span>IIT Bombay &amp; UMass, Amherst&nbsp; </p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'>Rakesh Agrawal, IBM Almaden Research Center, USA </p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt;line-height:50%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h3>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Organizing Committee Chairs<o:p></o:p></span></h3>
+
+<p class=H3 style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-weight:normal'>Arun Kadekodi, <span
+style='mso-bidi-font-weight:bold'>Soft Corner, Pune</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Arun Ghaisas,<span
+style='mso-bidi-font-size:10.0pt'> </span>Systime, Pune<span style='mso-bidi-font-size:
+10.0pt'><o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Tutorial Chairs&nbsp;<o:p></o:p></span></h3>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'>S. Sudarshan,<span style="mso-spacerun: yes"> 
+</span>IIT Bombay&nbsp; </p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'>Divesh Srivastava, AT&amp;T Research&nbsp; </p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;line-height:50%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Panel Chairs<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>T.V. Prabhakar,<span
+style="mso-spacerun: yes">  </span>IIT Kanpur&nbsp; </p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'>Surajit Chaudhuri, Microsoft Research</p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'>&nbsp; </p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Industrial Program Chairs&nbsp;<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>V. Govindarajan, Aztec
+Technologies&nbsp; </p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'>S. Seshadri, Lucent Bell Labs.</p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;line-height:50%'>&nbsp; </p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Publication Chair<o:p></o:p></span></h3>
+
+<h3 style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><span style='font-size:12.0pt;mso-bidi-font-size:13.5pt;
+font-weight:normal'>T. M. Vijayaraman, Persistent Systems Pvt. Ltd</span><span
+style='font-size:14.0pt;mso-bidi-font-size:13.5pt;font-weight:normal'>.&nbsp; <o:p></o:p></span></h3>
+
+<h3 style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;line-height:50%'><span style='font-size:14.0pt;
+mso-bidi-font-size:13.5pt;font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h3>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Publicity Chair<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>Vijay Kumar, Univ. of Missouri,
+Kansas City&nbsp;</p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Conference Management<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>R.S. Tavildar, Persistent Systems
+Pvt. Ltd., Pune</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Manoj Tandon,<span
+style='font-size:10.0pt'> </span>IITM, Pune<span style='font-size:10.0pt;
+font-family:Verdana'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:50%'><span
+style='font-family:Verdana'>&nbsp;</span><span style='font-size:10.0pt;
+font-family:Verdana'><o:p></o:p></span></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Finance Committee<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>Ashok Pawar<span style='mso-bidi-font-size:
+10.0pt'>, </span>SBI, Pune<span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><span
+style='font-family:Verdana'>&nbsp;</span><span style='font-size:10.0pt;
+font-family:Verdana'><o:p></o:p></span></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Event Manager<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>C.G. Sahasrabuddhe, Supertech
+Solutions Ltd., Pune<span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><span
+style='font-family:Verdana'>&nbsp;</span><span style='font-size:10.0pt;
+font-family:Verdana'><o:p></o:p></span></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Advisory Committee<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.5in'>A.K. Pathak, Cummins India Ltd.,
+Pune<span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Vrinda Ballal,<span
+style='font-size:10.0pt'> </span>L&amp;T IT, Pune<span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt;line-height:50%'><span
+style='font-family:Verdana'>&nbsp;</span><span style='font-size:10.0pt;
+font-family:Verdana'><o:p></o:p></span></p>
+
+<h3 style='margin:0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:13.5pt'>Host Chapter Chairman<o:p></o:p></span></h3>
+
+<p class=MsoBodyTextIndent>Sharad Joshi, University of Pune<br>
+<br>
+<span style="mso-spacerun: yes"> </span></p>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3 align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><a
+name=ProgramCommittee>PROGRAM COMMITTEE</a></h3>
+
+<span style='mso-bookmark:ProgramCommittee'></span>
+
+<h3 align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h3>
+
+<h3 align=center style='margin:0in;margin-bottom:.0001pt;text-align:center'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h3>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+<span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='page-break-before:auto;
+mso-break-type:section-break'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Divy Agrawal (UC Santa Barbara) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>B.R. Badrinath (Rutgers University) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Alex Buchmann (Tech. University. Darmstadt) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Jan Van den Bussche (U. of Limburg, Belgium) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Mike Carey (Propel Software Corporation) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Panos Chrysanthis (U. of Pittsburgh) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Anindya Datta (Georgia Tech.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Umeshwar Dayal (HP Labs) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Klaus Dittrich (U. of Zuerich) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Christos Faloutsos (CMU) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Christoph Freytag (Humboldt Univ. Berlin) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Sumit Ganguly (IIT Kanpur) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Narain Gehani (Lucent Bell Labs) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Jiawei Han (Simon Fraser Univ. Canada) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Jayant Haritsa (IISc, Bangalore) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Yannis Ioannidis (U. of Athens, Hellas, Greece) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>H. V. Jagadish (U. of Michigan) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Sushil Jajodia (George Mason University) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Anant Jhingran (IBM Almaden) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Leonid Kalinichenko (Russian Acad. of Sc.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Kamal Karlapalem (UST, Hong Kong) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Masaru Kitsuregawa (U. of Tokyo) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Ramamohanarao Kotagiri (U. of Melbourne) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Laks Lakshmanan (Concordia U. &amp;<span
+style="mso-spacerun: yes">  </span>IIT B) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Daniel Lieuwen (Lucent Bell Labs) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Tok Wang Ling (National U. of Singapore) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>David Lomet (Microsoft Research) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Hongjun Lu (UST, Hong Kong) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>S. N. Maheshwari (IIT Delhi) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>A. K. Majumdar (IIT Kharagpur) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>C. Mohan (IBM Almaden) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Richard Muntz (UCLA) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Sham Navathe (Georgia Tech.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Gultekin Ozsoyoglu (Case Western Reserve U.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Kishore Padmanabhan (TCS, India.) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Jan Paredaens (U. of Antwerp, Belgium) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Janaki Ram (IIT Madras) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Raghu Ramakrishnan (U. of Wisconsin) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>C. V. Ravishankar (UC Riverside) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Betty Salzberg (Northeastern University) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Sunita Sarawagi (IIT Bombay) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Hans Schek (ETH, Zurich) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>John Shafer (Propel Software Corporation) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Dennis Shasha (NYU) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Oded Shmueli (Technion, Israel) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Eric Simon (INRIA, France) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Andrzej Skowron (Warsaw University, Poland) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Rick Snodgrass (U. of Arizona) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>S. Sudarshan (IIT Bombay) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Gerhard Weikum (U. of Saarbrucken) <o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'>Kyu Young Whang (KAIST, Korea) <o:p></o:p></span></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:Tahoma;mso-fareast-font-family:"Times New Roman";
+color:#990000;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA'><br clear=all style='page-break-before:auto;mso-break-type:section-break'>
+</span>
+
+<div class=Section3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+style='font-family:Tahoma;color:#990000'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes"> </span></p>
+
+<b><i><span style='font-size:14.0pt;font-family:Arial;mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span></i></b>
+
+<h2 align=center style='text-align:center'><a name=Preface><span
+style='font-size:16.0pt;mso-bidi-font-size:14.0pt;font-family:Verdana;
+mso-bidi-font-family:"Times New Roman";font-style:normal'>Preface<o:p></o:p></span></a></h2>
+
+<span style='mso-bookmark:Preface'></span>
+
+<p class=MsoNormal style='line-height:130%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>We are pleased
+to welcome you to COMAD 2000, the tenth in the COMAD series of international
+database conferences, being held in Pune. This conference focuses on new
+developments in the principles and practices related to data management. This
+edition of COMAD brings together researchers, practitioners, developers, and
+users to present and discuss emerging trends, concepts, techniques,
+technologies, and experiences in data management.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>There are
+several highlights in this year's conference, including the three invited talks
+by </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><span
+style="mso-spacerun: yes">    </span>Dr. Phil Bernstein (Microsoft Corporation,
+USA)<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><span
+style="mso-spacerun: yes">    </span>Dr. Gerhard Weikum (University of Saarbrucken,
+Germany)<span style="mso-spacerun: yes">  </span></p>
+
+<p class=MsoBodyText2 style='line-height:120%'><span style="mso-spacerun:
+yes">    </span>Dr. Sunita Sarawagi (IIT Bombay, India) </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>Six sessions on
+state-of-the-art research results, ranging from cutting edge topics such as
+XML, semi-structured Data management and Mobile, Spatial, and Temporal
+databases to more established areas such as system tuning, query optimization,
+data warehousing and data mining. We are also pleased to present papers that
+address issues raised by the database needs of applications such as
+biodiversity management, image processing, and stock market trend analysis.
+Detailed reviews from the program committee were used to develop this high
+quality program consisting of fifteen full papers and four short papers – their
+authors come from all the continents except Africa! The selections were made
+from around sixty submissions. We would like to thank members of the Program
+Committee for their support of COMAD and for the generous contribution of their
+time towards the review process. We also thank the authors for submitting
+papers for consideration. </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>COMAD 2000 will
+also see six sessions devoted to talks by database practitioners. Database
+advances reflected in recent and future releases of database products will be
+highlighted in these talks and we are sure that the COMAD audience will join us
+in thanking the industry speakers.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText2 style='line-height:120%'>Finally, COMAD 2000 features 5
+tutorials on a range of topics: XML, hypertext mining, e-commerce, information
+integration and mobile databases. These will be presented by researchers who
+have been working in these areas for several years and so their perspective on
+what has been accomplished and what remains to be done will be of great benefit
+to the COMAD audience. </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>We are thankful
+to the organizing committee of COMAD 2000 and Pune Chapter of Computer Society
+of India for hosting this conference. We are also thankful to Persistent
+Systems Private Limited, Pune and IIT Bombay for their support.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>To ensure wide
+visibility of the material published at the conference we have made
+arrangements with ACM SIGMOD for including these proceedings in the SIGMOD
+on-line and CD-ROM archives. We thank Richard Snodgrass and Isabel Cruz for
+making this possible.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>Once again, we
+thank the authors, the tutorial speakers, the speakers from industry and
+academia, the organizing committee, the program committee, and our local hosts
+for making COMAD 2000 a grand success.</p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>Rakesh Agrawal </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>Anand Deshpande </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>Krithi
+Ramamritham </p>
+
+<p class=MsoNormal style='text-align:justify;line-height:120%'>T.M. Vijayaraman<span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

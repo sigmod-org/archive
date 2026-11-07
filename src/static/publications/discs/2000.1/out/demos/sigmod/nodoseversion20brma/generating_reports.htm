@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Generating reports</H2>
+<P>Nodose provides a variety of ways to output data extracted from files:
+
+<UL>
+	<LI><A HREF="#XML">XML</A>
+	<LI><A HREF="#Tabular">Tabular</A>
+	<LI><A HREF="#ODL">ODL</A>
+	<LI><A HREF="#OEM">OEM</A>
+</UL>
+
+<P>Additional formats can be added by writing <A HREF="extensions.htm">custom code</A>.</P>
+
+<P></P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="XML"></A>XML</H3>
+<P>To output the data in XML, choose &quot;XML Export...&quot; from the Results-&gt;Exports menu.  The following
+dialog will appear:</P>
+
+<P><BR>
+<IMG SRC="Images/xml1.gif" WIDTH="379" HEIGHT="250" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+The first two checkboxes control whether the data from only the currently selected file or all files in the document
+class will be output.  If data from multiple files is output, the second checkbox controls whether the data is
+written into a single file or one output file per input file.</P>
+
+<P>The final three checkboxes control the extra attributes Nodose per element.  If &quot;Generate filename attributes&quot;
+is checked, an attribute called &quot;filename&quot; will be generated for each element that is set to the name
+of the file the data was extracted from.  If &quot;Generate offset attributes&quot; is checked, attributes called
+&quot;startOffset&quot; and &quot;endOffset&quot; will be generated for each element that specifies where in the
+input file it came from.  Finally, if &quot;Generate confidence attributes&quot; is checked, an attribute called
+&quot;confidence&quot; will be generated for each element which contains a value between 0 and 1 indicating how
+confident Nodose is in the correctness of the extracted data.</P>
+
+<P></P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="Tabular"></A>Tabular</H3>
+<P>The text exported allows a list of records to be output.  The format of each row can be customized before the
+data is generated.  To output tabular data, select a list of records in a document and then choose &quot;Text Export...&quot;
+from the Results-&gt;Exports menu.  The following dialog will appear:</P>
+
+<P><BR>
+<IMG SRC="Images/Text1.gif" WIDTH="497" HEIGHT="596" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+The tree view shows the record and all of its fields.  Clicking on a field adds it to the row schema.  The default
+format for the output file is comma separated but the separator can be changed by the radio buttons in the bottom
+left of the dialog box.  For more control, the actual format of the line can be edited.  To do so, click the &quot;Edit
+Row Schema&quot; checkbox and then edit the row schema text field.  Any characters can be used in the schema line
+except for '&lt;' and '&gt;' which are used to delimit fields.  If these characters are required in the output
+file, choose&quot;Options&quot; from the &quot;View&quot; menu and change the delimiter characters.</P>
+
+<P>If the &quot;Encapsulate Text&quot; checkbox is checked, the data from text fields will be output surrounded
+by the text qualifier character which defaults to a quote.  The default can be changed by editing the &quot;Text
+Qualifier&quot; field.</P>
+
+<P>To preview the output before it is generated, select &quot;Sample&quot; from the &quot;View&quot; menu.</P>
+
+<P></P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="ODL"></A>ODL</H3>
+<P>To output the types in the document class in ODL, choose &quot;ODL Report&quot; from the Results-&gt;Reports
+menu.  A window will appear with the ODL which can be saved using the File menu.</P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="OEM"></A>OEM</H3>
+<P>To output data in OEM, choose &quot;OEM Report&quot; from the Results-&gt;Reports menu.  The following dialog
+will appear:</P>
+
+<P><IMG SRC="Images/OEM1.gif" WIDTH="402" HEIGHT="363" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+The dialog has two tabs that control whether the data from only the currently selected file or all files in the
+document class will be output.  If all of the files are to be output, the dialog allows all of the output to be
+merged into a single file or output as separate files.  There are also options to control how many and what types
+of entry points are created.  It is also possible to output only the data from the currently selected file.  This
+tab, shown below, contains a subset of the options on the &quot;All Files&quot; tab.</P>
+
+<P><BR>
+<IMG SRC="Images/OEM2.gif" WIDTH="402" HEIGHT="363" ALIGN="BOTTOM" BORDER="0">
+
+</BODY>
+
+</HTML>

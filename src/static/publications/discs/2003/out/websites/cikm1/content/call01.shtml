@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000066" background="image/map106.gif">
+<div align="center"> 
+  <p><font face="Georgia, Times New Roman, Times, serif"><font size="5"><b><font size="+2" color="#0066FF">ACM-GIS 
+    2002</font></b></font></font></p>
+<p><font face="Georgia, Times New Roman, Times, serif" size="+2" color="#0066FF"><b>The 
+10th ACM International Symposium <br>
+on <br>
+Advances in Geographic Information Systems<br>
+</b></font></p>
+  <p><font face="Georgia, Times New Roman, Times, serif" size="+2" color="#0066FF"><b>McLean, 
+    VA (near Washington, DC) <br>
+    November 8-9, 2002</b></font></p>
+  <p><font face="Courier New, Courier, mono" size="+1" color="#000066">http://www.cs.fiu.edu/ACM_GIS2002</font></p>
+  <p>&nbsp;</p>
+  <p>In conjunction with <a href="http://www.cikm.org/2002/">The 11th International 
+    Conference on Information and Knowledge Management (ACM CIKM 2002).</a><br>
+  </p>
+  <p>&nbsp;</p>
+</div>
+<p><font face="Times New Roman, Times, serif"> The <a href="../../../../out/contentRemovedForCopyright.htm" >Call for Papers</a> is available 
+        in PDF format.
+      </font></p>
+
+<p></p>
+<p><font face="Times New Roman, Times, serif">The 10th International Symposium 
+  of ACM GIS will take place in McLean, VA (near Washington, DC) November 8-9 2002. 
+  It is the 10th of a series  of symposia/workshops that started in 1993 with the aim of bringing together 
+  researchers, developers, users, and practitioners carrying out research and 
+  development in novel systems based on geo-spatial data and knowledge, and fostering 
+  interdisciplinary discussions and research in all aspects of geographic information 
+  systems, in all their diversity. The symposium will provide a forum for original 
+  research contributions and practical system design, implementation, and applications 
+  of GIS. ACM GIS 2002 will be held in conjunction with <a href="http://www.cikm.org/2002/">The 11th International 
+  Conference on Information and Knowledge Management (ACM CIKM 2002).</a><br>
+  </font></p>
+<p><font face="Arial, Helvetica, sans-serif" size="+1"><b><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font size="4" face="Georgia, Times New Roman, Times, serif" color="#0066FF">Topics 
+  of interest include but are not limited to the following: </font></b></font> 
+</p>
+<p>- Spatial and spatio-temporal data modeling<br>
+  - Location-based services<br>
+  - Interoperability and standards (including metadata, ontologies)<br>
+  - Spatial, spatio-temporal and multidimensional access methods<br>
+  - Spatial query processing and optimization<br>
+  - Spatial reasoning<br>
+  - Management of raster and vector Data<br>
+  - Multiple representation in spatial databases<br>
+  - Computational geometry<br>
+  - Constraint databases<br>
+  - Geospatial data versioning<br>
+  - Large-scale GIS servers and parallel GIS<br>
+  - Graphical aspects of GIS and Spatial DBMS<br>
+  - Visual query languages<br>
+  - Mobile and distributed geographic information services<br>
+  - Performance evaluation and benchmarking<br>
+  - Real-time spatio-temporal GIS<br>
+  - Spatial data Warehousing and decision support<br>
+  - Spatial and spatio-temporal data mining and knowledge discovery<br>
+  - Spatial data quality<br>
+  - Image retrieval by content<br>
+  - Virtual reality and 3D GIS<br>
+  - Similarity search<br>
+  - GIS and the Internet<br>
+  - Novel applications</p>
+<p></p>
+<p><font size="+1" face="Arial, Helvetica, sans-serif"><b><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font face="Georgia, Times New Roman, Times, serif" color="#0066FF">Instructions 
+  for authors:</font></b></font></p>
+<p>Authors are invited to submit full papers or one-page descriptions of panel proposal. Papers reporting 
+  original and unpublished research results on above and related topics are solicited. 
+  All submitted papers will be refereed for quality, originality and relevance 
+  by the Program Committee. The accept/reject of the papers will be based on the 
+  review results. All questions should be addressed to PC co-chairs.</p>
+<p>An abstract should be submitted by May 13th (Firm). An electronic version (PDF format) of the full paper should be <a href="http://www.cs.fiu.edu/ACM_GIS2002/content/subm01.shtml">
+submitted</a> by May 21, 2002 (Firm deadline) to the website of the symposium. 
+Papers must be prepared in such a way that 
+  ensures they will print anywhere. Thus, you should avoid using special fonts. 
+  Please do not include color figures. </p>
+<p>Manuscripts must be in English and should not exceed 5000 words. 
+Submissions should include the title, author(s), author's affiliation, e-mail address, tel/fax numbers, abstract, and postal address on the first page.
+ In case of multiple authors, please indicate which author is responsible for correspondence and preparing the camera ready paper for the proceedings. 
+</p>
+<p>Panel proposals should be sent by email to the appropriate program co-chairs:
+<p><a href="mailto: chens@cs.fiu.edu"> Dr Shu-Ching Chen (chens@cs.fiu.edu)</a>, or to<br>
+<p><a href="mailto: voisard@inf.fu-berlin.de"> Dr Agnes Voisard (voisard@inf.fu-berlin.de)</a>
+<p><br>If electronic submission is not possible, please send six copies of the paper 
+  to the following postal address:</p>
+<p>Dr. Shu-Ching Chen <br>
+  Florida International University<br>
+  School of Computer Science<br>
+  11200 SW 8th Street, ECS 354<br>
+  Miami, FL 33199, USA<br>
+  tel: 305-348-3480<br>
+  fax: 305-348-3549<br>
+  <a href="mailto: chens@cs.fiu.edu">email: chens@cs.fiu.edu</a></p>
+
+<p>
+  <font face="Arial, Helvetica, sans-serif" size="+1"><b><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font face="Georgia, Times New Roman, Times, serif" color="#0066FF">Journal Special Issue:</font></b></font></p>
+<p>In addition to the symposium proceedings, selected submissions will be chosen by the Program Committee to be submitted as full papers for a special issue of GEOINFORMATICA Journal, Kluwer Publishers. 
+</p>
+
+<p>
+  <font face="Arial, Helvetica, sans-serif" size="+1"><b><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font face="Georgia, Times New Roman, Times, serif" color="#0066FF">Important 
+  Dates:</font></b></font></p>
+<p>Abstraction Submission Deadline: May 13, 2002 (Email in ascii to chens@cs.fiu.edu) (Firm deadline)<br>
+  Full Paper Submission Deadline: May 21, 2002 (PDF format and only black and white) (Firm deadline)<br>
+  Notification of Results: July 10, 2002<br>
+  Camera Ready Copies: September 4th, 2002 (Please send all the materials to the publisher. Please see details at the <a href=http://www.sheridanprinting.com/typedept/gis.htm>publisher web site</a>. 
+<br>
+ Registration Deadline: September 9th, 2002 (Firm Deadline for authors)<br>
+</font></td>
+</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font face="Courier New, Courier, mono" size="+1"><b><font face="Arial, Helvetica, sans-serif"><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font face="Georgia, Times New Roman, Times, serif" color="#0066FF">General 
+  Chairs: </font></font></b></font> </p>
+
+<p><font face="Arial, Helvetica, sans-serif"><b><font face="Times New Roman, Times, serif">Kia Makki</font></b><font face="Times New Roman, Times, serif">, Florida International University, USA</font></font><br>
+<font face="Arial, Helvetica, sans-serif"><font face="Times New Roman, Times, serif"><b>Niki Pissinou</b>, Florida International University, USA</font></font></p>
+
+
+<p><font face="Georgia, Times New Roman, Times, serif" color="#0066FF"><b><font size="+1"> 
+  <img src="image/button_bl2.gif" width="13" height="13"> Program Chairs:</font></b></font></p>
+<p><font face="Arial, Helvetica, sans-serif"><b><font face="Times New Roman, Times, serif">Agnes 
+  Voisard</font></b><font face="Times New Roman, Times, serif">, Freie Universitat Berlin, Germany </font></font><br>
+<font face="Arial, Helvetica, sans-serif"><font face="Times New Roman, Times, serif"><b>Shu-Ching 
+  Chen</b>, Florida International University, USA</font></font></p>
+<p><font face="Courier New, Courier, mono"><b><font size="+1" face="Arial, Helvetica, sans-serif"><img src="image/button_bl2.gif" width="13" height="13"> 
+  <font color="#0066FF" face="Georgia, Times New Roman, Times, serif">Program 
+  Committee:</font></font></b></font></p>
+<p><font face="Times New Roman, Times, serif"><b>Dave Abel</b>, CSIRO, Australia</font><br>
+<font face="Times New Roman, Times, serif"> <b>Walid Aref</b>, Purdue University, 
+  USA</font><br>
+<font face="Times New Roman, Times, serif"> <b>Claudia Bauzer Medeiros</b>, 
+  University of campinas, Brazil</font><br>
+
+
+<font face="Times New Roman, Times, serif"> <b>Stephane Bressan</b>, National University of Singapore</font><br>
+
+
+
+<font face="Times New Roman, Times, serif"><b>Thomas Brinkhoff</b>, Fachhochschule 
+  Oldenburg, Germany</font><br>
+<font face="Times New Roman, Times, serif"><b>Tiziana Catarci</b>, Universita' 
+  degli Studi di Roma &quot;La Sapienza&quot;, Italy</font><br>
+<font face="Times New Roman, Times, serif"><b>Clay Collier</b>, Kivera Inc., 
+  USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Rolf de By</b>, ITC, The Netherlands</font><br>
+<font face="Times New Roman, Times, serif"><b>Leila de Floriani</b>, University 
+  of Genova, Italy </font><br>
+<font face="Times New Roman, Times, serif"><b>Andrew Frank</b>, Technical University of Vienna, Austria 
+</font><br>
+<font face="Times New Roman, Times, serif"><b>Ralf Hartmut Gueting</b>, Fernuniversitaet 
+  Hagen, Germany</font><br>
+<font face="Times New Roman, Times, serif"><b>Klaus Hinrichs</b>, University 
+  of Munster, Germany</font><br>
+<font face="Times New Roman, Times, serif"><b>Erik Hoel</b>, ESRI, USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Arno Jacobsen</b>, University 
+  of Toronto, Canada</font><br>
+<font face="Times New Roman, Times, serif"><b>Robert Jeansoulin</b>, University 
+  of Marseille, France</font><br>
+<font face="Times New Roman, Times, serif"><b>Christian S. Jensen</b>, Aalborg 
+  University, Denmark</font><br>
+<font face="Times New Roman, Times, serif"><b>Peter Ladstaetter</b>, SICAD Geomatics, Munich, Germany</font><br>
+<font face="Times New Roman, Times, serif"><b>Robert Laurini</b>, INSA and University 
+  of Lyon, France</font><br>
+<font face="Times New Roman, Times, serif"><b>Ki-Joune Li</b>, Pusan National 
+  University, South Korea</font><br>
+<font face="Times New Roman, Times, serif"><b>Xuan Liu</b>, IBM T.J. Watson Research Center, USA</font><br>
+<font face="Times New Roman, Times, serif"> <b>Silvia Nittel</b>, NCGIA, USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Dimitris Papadias</b>, Hong Kong 
+  University of Science and Technology, Hong Kong</font><br>
+<font face="Times New Roman, Times, serif"><b>Srinivas Peeta</b>, Purdue University, 
+  USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Ivan Radev</b>, William Paterson University of New Jersey, USA
+</font><br>
+
+
+<font face="Times New Roman, Times, serif"><b>Philippe Rigaux</b>, University 
+  of Paris at Orsay, France</font><br>
+<font face="Times New Roman, Times, serif"><b>Hanan Samet</b>, University of Maryland, USA </font><br>
+<font face="Times New Roman, Times, serif"><b>Michel Scholl</b>, CNAM and INRIA, 
+  France</font><br>
+<font face="Times New Roman, Times, serif"><b>Jayant Sharma</b>, Oracle Corporation, USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Shashi Shekhar</b>, University of Minnesota, USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Mei-Ling Shyu</b>, University 
+  of Miami, USA</font><br>
+<font face="Times New Roman, Times, serif"><b>Nectaria Tryfona</b>, Computer Technology Institute, Athens, Greece</font><br>
+<font face="Times New Roman, Times, serif"><b>Michalis Vazirgiannis</b>, Athens Univ. of Economics & Business, Greece</font><br>
+<font face="Times New Roman, Times, serif"><b>Mike Worboys</b>, NCGIA, Maine, USA
+</font><br>
+</body>
+</html>

@@ -1,0 +1,325 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Indexing Medium-dimensionality Data in Oracle</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_4.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Indexing Medium-dimensionality Data in Oracle
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_kothuri_venkata_ra.htm">Kothuri Venkata Ravi Kanth</a>, 
+<a href = "a_siva_ravada.htm">Siva Ravada</a>, 
+<a href = "a_jayant_sharma.htm">Jayant Sharma</a>, and 
+<a href = "a_jay_banerjee.htm">Jay Banerjee</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/indexingmediumdkosij.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<a href="slides/sigmod/indexingmediumdkosij/index.htm" target=slides/sigmod/indexingmediumdkosij/index.htm>View Slides (HTML)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmoindustrialement.htm">Return to Industrial Session: Database Storage Management</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ With the advent of GIS, multimedia, and warehousing technologies, database systems have started focusing on storage and access of multi-dimensional data such as spatial, OLAP, image, audio, and video attributes. As a step in this direction, Oracle8i launched the interMedia product to support spatial and image data, and Materialized Views (MV) to support warehousing applications. Although 2-dimensional spatial data is effciently indexed using Oracle8i Spatial , and high- dimensional image data using a combination of bitmap indexing and the Visual Information Retrieval (VIR) product, there is still a need for effcient indexing mechanisms for medium-dimensionality data such as OLAP, and CAD/CAM applications. In this paper, we describe the implementation of a new indextype, called the R-tree, to support medium-dimensionality data (i.e., data whose dimensionality is in the range of 3- 10) using the extensible indexing framework [DDSS95] of Oracle8i. This indextype combines some of the best features of existing R-tree variants [Gut84, BKSS90, WJ96, LLE97, RKV95].  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[BKS93]
+<dd>
+<a name="BrinkhoffKS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">
+Thomas Brinkhoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: Efficient Processing of Spatial Joins Using R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 237-246
+<dt>
+[BKSS90]
+<dd>
+<a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">
+Norbert Beckmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 322-331
+<dt>
+[DDSS95]
+<dd>
+<a name="DeFazioDSSCC95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeFazio:Samuel.html">
+Samuel DeFazio
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Daoud:Amjad_M=.html">
+Amjad M. Daoud
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smith:Lisa_Ann.html">
+Lisa Ann Smith
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srinivasan:Jagannathan.html">
+Jagannathan Srinivasan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Croft:W=_Bruce.html">
+W. Bruce Croft
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Callan:James_P=.html">
+James P. Callan
+</a>
+: Integrating IR and RDBMS Using Cooperative Indexing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigir/sigir95.html#DeFazioDSSCC95">
+SIGIR 1995
+</a>
+: 84-92
+<dt>
+[Gut84]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[HJR87]
+<dd>
+<a name="HuangJR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Yun=Wu.html">
+Yun-Wu Huang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jing:Ning.html">
+Ning Jing
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rundensteiner:Elke_A=.html">
+Elke A. Rundensteiner
+</a>
+: Spatial Joins Using R-trees: Breadth-First Traversal with Global Optimizations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HuangJR97">
+VLDB 1997
+</a>
+: 396-405
+<dt>
+[LLE97]
+<dd>
+<a name="LeuteneggerEL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leutenegger:Scott_T=.html">
+Scott T. Leutenegger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Edgington:J=_M=.html">
+J. M. Edgington
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lopez:Mario_A=.html">
+Mario A. Lopez
+</a>
+: STR: A Simple and Efficient Algorithm for R-Tree Packing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#LeuteneggerEL97">
+ICDE 1997
+</a>
+: 497-506
+<dt>
+[RKV95]
+<dd>
+<a name="RoussopoulosKV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:Stephen.html">
+Stephen Kelley
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vincent:Fr=eacute=d=eacute=ic.html">
+Fr&eacute;d&eacute;ic Vincent
+</a>
+: Nearest Neighbor Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 71-79
+<dt>
+[WJ96]
+<dd>
+<a name="WhiteDJ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:David_A=.html">
+David A. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jain:Ramesh.html">
+Ramesh Jain
+</a>
+: Similarity Indexing: Algorithms and Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/spieSR/spieSR96.html#WhiteDJ96">
+Storage and Retrieval for Image and Video Databases (SPIE) 1996
+</a>
+: 62-73
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/KanthRSB99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Kothuri&nbsp;Venkata&nbsp;Ravi&nbsp;Kanth&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Siva&nbsp;Ravada&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jayant&nbsp;Sharma&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jay&nbsp;Banerjee},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Indexing&nbsp;Medium-dimensionality&nbsp;Data&nbsp;in&nbsp;Oracle},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{521-522},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

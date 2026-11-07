@@ -1,0 +1,41 @@
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Concurrency for R-tree updates</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Concurrency for R-tree updates</H1> 
+ <P><UL>
+<H2>Implemented in 2 phases (as in Conc. GiST)
+</H2>
+</UL><UL>
+<LI><H2>Locate phase: identify leaf node to be updated using reads
+</H2>
+</UL><UL>
+<LI><H2>Update phase: update leaf node and propagate up the tree
+</H2>
+<UL>
+<LI>Locking: node-level (for txn duration)
+<LI>Concurrent updates on same node:  serialized
+<LI>Tracing node-splits:  node_id, sibling pointer
+<LI>Tracing root splits (height increase):  root_rowid, root_id </UL></UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld030.htm" tppabs="http://www.cs.washington.edu/homes/pjallen/DiSC/Oracle/tsld030.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld032.htm" tppabs="http://www.cs.washington.edu/homes/pjallen/DiSC/Oracle/tsld032.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm" tppabs="http://www.cs.washington.edu/homes/pjallen/DiSC/Oracle/tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld031.htm" tppabs="http://www.cs.washington.edu/homes/pjallen/DiSC/Oracle/sld031.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

@@ -1,0 +1,42 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Query Rewriting</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Query Rewriting</H1> 
+ <P><UL>
+select c_nationkey, sum(o_totalprice) 
+</UL><UL>
+from oorder, customer 
+</UL><UL>
+where c_custkey = o_custkey 
+</UL><UL>
+group by c_nationkey;</UL></P>
+<P><UL>
+select c_nationkey, 20*sum(o_totalprice),  sumerror(o_totalprice) from bs_oorder, js_customer 
+</UL><UL>
+where (c_custkey = o_custkey)
+</UL><UL>
+group by c_nationkey;
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld007.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld009.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld008.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

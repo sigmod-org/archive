@@ -1,0 +1,483 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000066" background="image/map106.gif">
+<p align="center"> <font size="+2" face="Georgia, Times New Roman, Times, serif"><b>
+ACM GIS 2002 Program </b></font></p>
+<div align="center">
+  <center>
+  <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFFFFF" width="835" height="183" id="AutoNumber1" bgcolor="#000066">
+    <tr>
+      <td width="835" height="39" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <p class="MsoNormal"><font face="Verdana" size="4">
+      <span style="color: #FFFFFF; font-weight:700">
+      November 8, 2002 (Friday)</span></font></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2">9:00 
+      - 9:10</font></span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2">Opening Ceremony</font></span></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2">9:10 
+      - 11:10&nbsp; </font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font size="2" color="#FFFFFF">Session 1: </font> <i>
+      <font size="2" color="#FFFFFF">GIS and the Internet</font></i></span></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Erik Hoel</span>
+ </font> 
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#CCCCCC" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Remote Access to Large Spatial 
+      Databases<br>
+      </b>Egemen Tanin, Frantisek Brabec, Hanan Samet</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#CCCCCC" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font size="2" face="Verdana"><b>Analysis of different approach 
+      alternatives for a spatial query language over GML<br>
+      </b>J. E. Corcoles, P. Gonzalez</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#CCCCCC" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font size="2" face="Verdana"><b>Web Architectures for Scalable Moving 
+      Object Servers<br>
+      </b>Cedric du mouza and Philippe Rigaux</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#CCCCCC" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font size="2" face="Verdana"><b>A WFS-based Mediation System for GIS 
+      Interoperability<br>
+      </b>Omar Boucelma, Mehdi Essid, Zoe Lacroix</font></td>
+    </tr>
+  <tr>
+    <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">11:10 
+    - 11:30 </font> </span></b></td>
+    <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF">
+    <font size="2">Coffee Break </font> </span></b></td>
+  </tr>
+  <tr>
+    <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">11:30 
+    - 12:30</font></span></b><span style="font-family: Verdana; color: #FFFFFF; font-weight:700"><font size="2">&nbsp;
+    </font> </span></td>
+    <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF">
+    <font size="2">Session 2: </font> <i><font size="2">Data clustering</font></i></span></b></td>
+  </tr>
+ <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Walid Aref 
+</span>
+ </font> 
+      </td>
+    </tr>
+
+  <tr>
+    <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+    <p class="MsoNormal"><font face="Verdana" size="2"><b>Gravity Based Spatial Clustering<br>
+    </b>M. Indulska, M.E. Orlowska</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+    <p class="MsoNormal"><font face="Verdana" size="2"><b>Opening the Black Box: Interactive Hierarchical 
+    Clustering for Multivariate Spatial Patterns<br>
+    </b>Diansheng Guo, Donna Peuquet, Mark Gahegan</font></p>
+    </td>
+  </tr>
+    </center>
+</div>
+
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">12:30 - 13:30 </font> </span></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">Lunch Break</font></span><font color="#FFFFFF" size="2"><span style="font-family: Verdana">
+      </span></font></b></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">13:30 - 15:30 </font> </span></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">Session 3: </font> <i><font size="2">Location-based services and mobile computing: Algorithms</font></i></span></td>
+    </tr>
+ <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Shu-Ching Chen
+</span>
+ </font> 
+      </td>
+    </tr>
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Vector Map Compression: A Clustering Approach<br>
+      </b>S. Shekhar, Y. Huang, J. Djugash, C. Zhou</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>A User-Aware Tour Proposal Framework using a Hybrid 
+      Optimization Approach<br>
+      </b>Matthias Joest, Wolfgang Stille</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Prioritized Sequencing for Efficient Query on 
+      Broadcast Geographical Information in Mobile-Computing<br>
+      </b>Jianting Zhang, Le Gruenwald</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>A Road Network Embedding Technique for K-Nearest 
+      Neighbor Search in Moving Object Databases<br>
+      </b>Cyrus Shahabi, Mohammad R. Kolahdouzan, Mehdi 
+      Sharifzadeh</font></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">15:30 </font> </span>
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">-</font></span></b><span style="font-family: Verdana; color: #FFFFFF; font-weight:700"><font size="2"> 16:00 </font> </span></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">Coffee Break</font></span></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">16:00 </font> </span>
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">-</font></span></b><span style="font-family: Verdana; color: #FFFFFF; font-weight:700"><font size="2"> 18:00 </font> </span></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">Session 4: </font> <i><font size="2">Applications</font></i></span></td>
+    </tr>
+ <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Silvia Nittel</span> </font> </td>
+    </tr>
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>ATLAS: A distributed system for the simulation of 
+      large-scale systems<br>
+      </b>Cyril Ray, Christophe Claramunt</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Achieving Interoperability for Integration of 
+      Heterogeneous COTS Geographic<br>
+      </b>Shengru Tu, Liang Xu, Mahdi Abdelguerfi, Jay Ratcliff</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Handling Semantic Heterogeneities using Declarative 
+      Agreements<br>
+      </b>Isabel F. Cruz, Afsheen Rajendran, William  </font>
+      <font face="Verdana" size="2">Sunna, Nancy Wiegand</font></td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Augmenting Reality with Geo-Referenced Information 
+      for Environmental Management<br>
+      </b>Teresa Romco, Nuno Correia, Eduardo Dias, Adelaide Trabuco, Carlos Santos, 
+      Rossana Santos, Edmundo Nobre, Antsnio Cbmara, Josi Danado, Lums Romero</font></td>
+    </tr>
+
+</table>
+<p align="center">&nbsp;</p>
+  <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFFFFF" width="835" height="183" id="AutoNumber1">
+    <tr>
+      <td width="835" height="39" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <p class="MsoNormal"><font face="Verdana" size="4">
+      <span style="color: #FFFFFF; font-weight:700">
+      November 9, 2002 (Saturday)</span></font></td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">9:15 - 10:15</font></span></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; color: #FFFFFF; font-weight:700">
+      <font size="2">Invited Talk -&nbsp; Einstein Room</font></span></td>
+    </tr>
+<tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Agnes Voisard
+</span> </font> </td>
+    </tr>
+
+
+
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><b><font face="Verdana" size="2">Speaker : Dr. Max Egenhofer (University of Maine and 
+      NCGIA)&nbsp;<br> “Toward the Semantic Geospatial Web”</font></b></p>
+      </td>
+    </tr>
+  <tr>
+    <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">10:15 
+    - 10:30 </font> </span></b></td>
+    <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <b><span style="font-family: Verdana; color: #FFFFFF"><font size="2">Break</font></span></b></td>
+  </tr>
+  <tr>
+    <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <font face="Verdana" size="2">
+    <b><span style="color:#FFFFFF">10:30 - 12:00</span></b></font></td>
+    <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+    <p class="MsoNormal"><font face="Verdana" size="2"><b>
+    <span style="color:#FFFFFF">Session 5: <i>
+    Location-based services and mobile computing:&nbsp; Data models</i></span></b></font></p>
+    </td>
+  </tr>
+
+ <tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Robert Laurini
+</span> </font> </td>
+    </tr>
+
+
+  <tr>
+    <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+    <p class="MsoNormal"><font face="Verdana" size="2"><b>Multidimensional data modeling for location-based 
+    services<br>
+    </b>Christian S. Jensen, Augustas Kligys, Torben B. 
+    Pedersen, Igor Timko</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+    <p class="MsoNormal"><b><font face="Verdana" size="2">Design of Field Wrappers for Mobile Field Data 
+    Collection</font></b><span style="font-family: Verdana"><font size="2"><b><br>
+    </b>Peisheng Zhao, 
+    Sarah Nusser, Leslie Miller</font></span></p>
+    </td>
+  </tr>
+    <tr>
+    <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+    <p class="MsoNormal"><font face="Verdana" size="2"><b>Metadata Modeling in a Global Computing Environment<br>
+    </b>Dieter Pfoser, Evaggelia Pitoura, Nectaria Tryfona</font></p>
+    </td>
+    </tr>
+
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">12:00 - 13:30 </font> </span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>
+      <span style="color:#FFFFFF">Lunch Break</span></b></font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">13:30 - 15:30 </font> </span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">Session 6A: </font> <i><font size="2">Spatio-temporal Data Handling</font></i></span></b></td>
+    </tr>
+<tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Philippe Rigaux
+</span> </font> </td>
+    </tr>
+
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>The 2-3TR-tree, A Trajectory-Oriented Index Structure 
+      for Fully Evolving Valid-Time Spatio-Temporal Datasets<br>
+      </b>J. Givaudan, M. Abdelguerfi, K. Shaw, R. Ladner</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Spatio-Temporal Evolution: Querying Patterns of 
+      Change in Spatio-Temporal Databases<br>
+      </b>Nassima Djafri, Alvaro A.A. Fernandes, Norman W. 
+      Paton and Tony Griffiths</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Enhancing GISs for spatio-temporal reasoning<br>
+      </b>A. Raffaeta, C. Renso, F. Turini</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Integration and Comparison of Trajectories<br>
+      </b>Nirvana Meratnia, Rolf A. de By</font></p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">13:30 - 15:30</font></span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">Session 6B: </font> <i><font size="2">User Interfaces</font></i></span></b></td>
+    </tr>
+<tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Leila de Floriani
+
+</span> </font> </td>
+    </tr>
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>A Tabu Search Approach to Automated Map 
+      Generalisation<br>
+      </b>J. M. Ware, I. D. Wilson, J. A. Ware,&nbsp; C. B. Jones</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Interactive 3D Visualization of Vector Data in GIS<br>
+      </b>Oliver Kersting, Jurgen Dollner</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Management and visualization of large, complex and 
+      time-dependent 3D objects in distributed GIS<br>
+      </b>Serge Shumilov, Andreas Thomsen, Armin B. Cremers, 
+      Bjorn Koos</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Designing a Human-Centered, Multimodal GIS Interface 
+      to Support Emergency Management<br>
+      </b>Ingmar Rauschert, Pyush Agrawal, Sven Fuhrmann, Isaac 
+      Brewer, Rajeev Sharma, Guoray Cai, Alan MacEachren</font></p>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">15:30 - 16:00 </font> </span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>
+      <span style="color:#FFFFFF">Coffee Break</span></b></font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">16:00 - 17:30&nbsp; </font> </span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>
+      <span style="color:#FFFFFF">Session 7: <i>Raster data, </i></span></b></font>
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <i><font size="2">Data Structures and Computational Geometry</font></i></span></b></p>
+      </td>
+    </tr>
+
+<tr>
+      <td width="113" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <span style="font-family: Verdana; font-weight:700">
+      <font color="#FFFFFF" size="2"></font> </span></td>
+      <td width="716" height="33" bordercolor="#000000" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+       <span style="font-family: Verdana; font-weight:700"><font size="2" color="#FFFFFF">Session Chair: Ivan Radev
+
+</span> </font> </td>
+    </tr>
+
+
+
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Extraction of Qualitative Information from the 
+      Weighted Walkthroughs<br>
+      </b>Serafino Cicerone and Eliseo Clementini</font></p>
+      </td>
+    </tr>
+       
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Regular and Irregular Multi-Resolution Terrain 
+      Models: a Comparison<br>
+      </b>Leila De Floriani, Paola Magillo</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="835" height="50" colspan="2" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#CCCCCC">
+      <p class="MsoNormal"><font face="Verdana" size="2"><b>Performance of Multi-Dimensional Space-filling Curves<br>
+      </b>Mohamed F. Mokbel, Walid G. Aref, and Ibrahim Kamel</font></p>
+      </td>
+    </tr>
+    <tr>
+      <td width="113" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">17:30 - 17:45&nbsp; </font> </span></b></td>
+      <td width="716" height="33" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" bgcolor="#000066">
+      <b><span style="font-family: Verdana; color: #FFFFFF">
+      <font size="2">Closing Ceremony</font></span></b></td>
+    </tr>
+
+</table>
+<br>
+<hr>
+<font size="2"><i>Last Updated: November 5th, 2002</I></font>
+</body>
+</html>

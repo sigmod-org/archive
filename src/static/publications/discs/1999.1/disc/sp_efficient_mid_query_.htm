@@ -1,0 +1,125 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_6.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Efficient Mid-Query Re-Optimization of Sub-Optimal Query Execution Plans</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_k.htm#Navin Kabra">Navin Kabra</a>, <a href="m_authors_d.htm#David J. DeWitt">David J. DeWitt</a></center></td></tr></table></center><a target="disc_pdf878" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+For a number of reasons, even the best query optimizers can very often produce sub-optimal query execution plans, leading to a significant degradation of performance. This is especially true in databases used for complex decision support queries and/or object-relational databases. In this paper, we describe an algorithm that detects sub-optimality of a query execution plan during query execution and attempts to correct the problem. The basic idea is to collect statistics at key points during the execution of a complex query. These statistics are then used to optimize the execution of the query, either by improving the resource allocation for that query, or by changing the execution plan for the remainder of the query. To ensure that this does not significantly slow down the normal execution of a query, the Query Optimizer carefully chooses what statistics to collect, when to collect them, and the circumstances under which to re-optimize the query. We describe an implementation of this algorithm in the Paradise Database System, and we report on performance studies, which indicate that this can result in significant improvements in the performance of complex queries.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd><a name="AmsalegFTU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Amsaleg:Laurent.html">Laurent Amsaleg</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">Michael J. Franklin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tomasic:Anthony.html">Anthony Tomasic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Urhan:Tolga.html">Tolga Urhan</a>:
+Scrambling Query Plans to Cope With Unexpected Delays.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#AmsalegFTU96">PDIS 1996</a>: 0-<dt>[2]<dd><a name="Antoshenkov93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">Gennady Antoshenkov</a>:
+Dynamic Query Optimization in Rdb/VMS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#Antoshenkov93">ICDE 1993</a>: 538-547<dt>[3]<dd><a name="Antoshenkov96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">Gennady Antoshenkov</a>:
+Dynamic Optimization of Index Scans Restricted by Booleans.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#Antoshenkov96">ICDE 1996</a>: 430-440<dt>[4]<dd><a name="ChenLYY92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">Ming-Syan Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lo:Ming=Ling.html">Ming-Ling Lo</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Young:Honesty_C=.html">Honesty C. Young</a>:
+Using Segmented Right-Deep Trees for the Execution of Pipelined Hash Joins.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#ChenLYY92">VLDB 1992</a>: 15-26<dt>[5]<dd>...
+<dt>[6]<dd><a name="FlajoletM85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flajolet:Philippe.html">Philippe Flajolet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Martin:G=_Nigel.html">G. Nigel Martin</a>:
+Probabilistic Counting Algorithms for Data Base Applications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss31.html#FlajoletM85">JCSS 31(2)</a>: 182-209(1985)<dt>[7]<dd><a name="ColeG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cole:Richard_L=.html">Richard L. Cole</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Optimization of Dynamic Query Evaluation Plans.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ColeG94">SIGMOD Conference 1994</a>: 150-160<dt>[8]<dd><a name="GraefeW89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Ward:Karen.html">Karen Ward</a>:
+Dynamic Query Evaluation Plans.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#GraefeW89">SIGMOD Conference 1989</a>: 358-366<dt>[9]<dd><a name="IoannidisC91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christodoulakis:Stavros.html">Stavros Christodoulakis</a>:
+On the Propagation of Errors in the Size of Join Results.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#IoannidisC91">SIGMOD Conference 1991</a>: 268-277<dt>[10]<dd><a name="IoannidisNSS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">Raymond T. Ng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>:
+Parametric Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#IoannidisNSS92">VLDB 1992</a>: 103-114<dt>[11]<dd><a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Balancing Histogram Optimality and Practicality for Query Result Size Estimation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#IoannidisP95">SIGMOD Conference 1995</a>: 233-244<dt>[12]<dd>...
+<dt>[13]<dd>...
+<dt>[14]<dd><a name="MehtaD93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Dynamic Memory Allocation for Multiple-Query Workloads.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#MehtaD93">VLDB 1993</a>: 354-367<dt>[15]<dd>...
+<dt>[16]<dd><a name="OnoL90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ono:Kiyoshi.html">Kiyoshi Ono</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">Guy M. Lohman</a>:
+Measuring the Complexity of Join Enumeration in Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#OnoL90">VLDB 1990</a>: 314-325<dt>[17]<dd><a name="PatelYKTNBHRLEKGDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">Jignesh M. Patel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Jie=Bing.html">Jie-Bing Yu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kabra:Navin.html">Navin Kabra</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tufte:Kristin.html">Kristin Tufte</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nag:Biswadeep.html">Biswadeep Nag</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Burger:Josef.html">Josef Burger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">Nancy E. Hall</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramasamy:Karthikeyan.html">Karthikeyan Ramasamy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lueder:Roger.html">Roger Lueder</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ellman:Curt.html">Curt Ellman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kupsch:Jim.html">Jim Kupsch</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guo:Shelly.html">Shelly Guo</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+Building a Scaleable Geo-Spatial DBMS: Technology, Implementation, and Evaluation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#PatelYKTNBHRLEKGDN97">SIGMOD Conference 1997</a>: 336-347<dt>[18]<dd>...
+<dt>[19]<dd><a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Histogram-Based Solutions to Diverse Database Estimation Problems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#IoannidisP95">Data Engineering Bulletin 18(3)</a>: 10-18(1995)<dt>[20]<dd><a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>:
+Improved Histograms for Selectivity Estimation of Range Predicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">SIGMOD Conf. 1996</a>: 294-305<dt>[21]<dd>...
+<dt>[22]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34<dt>[23]<dd><a name="StonebrakerAH87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Anton:Jeff.html">Jeff Anton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hirohama:Michael.html">Michael Hirohama</a>:
+Extendability in POSTGRES.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu10.html#StonebrakerAH87">Data Engineering Bulletin 10(2)</a>: 16-23(1987)<dt>[24]<dd><a name="Vitter85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">Jeffrey Scott Vitter</a>:
+Random Sampling with a Reservoir.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/toms/toms11.html#Vitter85">TOMS 11(1)</a>: 37-57(1985)<dt>[25]<dd><a name="WongY76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Eugene.html">Eugene Wong</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Youssefi:Karel.html">Karel Youssefi</a>:
+Decomposition - A Strategy for Query Processing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods1.html#WongY76">TODS 1(3)</a>: 223-241(1976)<dt>[26]<dd><a name="YuC93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cornell:Douglas_W=.html">Douglas W. Cornell</a>:
+Buffer Management Based on Return on Consumption in a Multi-Query Environment.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb2.html#YuC93">VLDB Journal 2(1)</a>: 1-37(1993)<dt>[27]<dd>George Kingsley Zipf:
+Human Behaviour and the Principle of Least Effort: an Introduction to Human Ecology.
+ Addison-Wesley 1949<br>
+</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/KabraD98,<br>  author    = {Navin Kabra and<br>               David J. DeWitt},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Efficient Mid-Query Re-Optimization of Sub-Optimal Query Execution<br>               Plans},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {106-117},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

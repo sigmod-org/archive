@@ -1,0 +1,100 @@
+
+                              CALL FOR PAPERS
+
+                2002 Workshop on Research Issues in Data Mining 
+		      and Knowledge Discovery (DMKD'2002)
+		   ** In cooperation with ACM SIGMOD'2002 **
+
+                              Madison, Wisconsin
+                                June 2, 2002
+
+                    http://www.bell-labs.com/user/minos/DMKD02/
+
+
+  	       ** Sponsored by Microsoft and Lucent Technologies **
+
+
+
+Workshop Scope & Objectives
+
+The Workshop on Research Issues on Data Mining and Knowledge Discovery (DMKD)
+was started six years ago in an effort to foster discussion and exploration
+of data-mining research issues pertinent to large databases and data warehouses.
+During these years, the data-mining research community has evolved and grown at
+an unprecedented rate, and the area has matured significantly as a  scientific
+discipline. 
+
+This year's seventh DMKD workshop aims to bring together data-mining researchers 
+and experienced practitioners with the goal of discussing the next generation of
+data-mining tools.  The workshop will foster an informal atmosphere, where 
+researchers and practitioners can freely interact through short presentations 
+and open discussions on their ongoing work, as well as forward-looking research
+visions/experiences on the next generation of  data-mining applications. 
+
+In addition to research on novel data-mining algorithms and experiences with 
+innovative mining systems, of particular interest in this year's DMKD workshop
+is the broad theme of "Data Mining in Next-Generation Systems and Applications 
+Management".   Topics of interest include (but are certainly not limited to):
+
+ * Mining Techniques for Semi/Un-Structured Databases and the World-Wide Web
+ * Continuous Data Mining over Streaming Data
+ * Knowledge Discovery in Biological Databases and Bioinformatics
+ * Data Mining Applications in Network Management
+ * Mining Tools for Program Analysis and Software Engineering
+ * Industrial Experiences with Data Mining Tools
+ * Research Visions: What are the "killer apps" of the future?
+
+
+
+Registration
+
+Thanks to our corporate sponsors (Microsoft and Lucent Technologies) there is no 
+separate registration for the  DMKD'2002 workshop.  It is offered free of charge 
+for SIGMOD/PODS'2002 attendees. 
+
+
+
+Submission Guidelines
+
+Submitted papers should not exceed 6-8 pages. The workshop accepts only electronic
+submission of papers in ASCII, HTML, PDF, or PostScript format to either of the two
+workshop chairs (vganti@microsoft.com or minos@bell-labs.com). Accepted papers will
+be included in the informal proceedings made available to the workshop attendees and 
+on-line through the workshop's web page.
+
+
+
+Important Dates
+
+  *  Submission deadline: April 8, 2002
+  *  Notification: April 29, 2002
+  *  Camera-Ready Due: May 13, 2002
+  *  Workshop: June 2, 2002
+
+
+
+Workshop Chairs
+
+ Venkatesh Ganti, Microsoft Research (vganti@microsoft.com)
+ Minos Garofalakis, Bell Labs (minos@bell-labs.com)
+
+
+
+Program Committee
+
+ Charu C. Aggarwal, IBM TJ Watson Research Center
+ Gautam Das, Microsoft Research
+ Johannes Gehrke, Cornell University
+ Lise Getoor, University of Maryland
+ Jiawei Han, University of Illinois
+ Daniel Keim, AT&T-Labs Research and Univ. of Konstanz
+ Flip Korn, AT&T-Labs Research 
+ Heikki Mannila, University of Helsinki
+ Balaji Padmanabhan, University of Pennsylvania
+ Rajeev Rastogi, Bell Labs
+ Sunita Sarawagi, IIT Bombay
+ Kyuseok Shim, Seoul National University
+ Shalom Tsur, BEA Systems Inc.
+ Mohammed Zaki, Rensselaer Polytechnic Institute
+
+

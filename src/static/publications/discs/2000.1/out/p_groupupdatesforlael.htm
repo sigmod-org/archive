@@ -1,0 +1,421 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Group Updates for Relaxed Height-Balanced Trees</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_11.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Group Updates for Relaxed Height-Balanced Trees
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_lauri_malmi.htm">Lauri Malmi</a> and 
+<a href = "a_eljas_soisalon-soi.htm">Eljas Soisalon-Soininen</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/groupupdatesforlael.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsindexingexing.htm">Return to Indexing</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ A group update of a search tree means that a set of insertions or deletions are collected into a group in sorted order, and t.his group is brought into the tree as a single transaction. In this paper we present an efficient group-update algorithm for height-balanced binary search trees. The presented algorithm has two steps: First, the operations in the underlying group are performed without any balancing except for subgroups between two consecutive keys in the original tree. In this way the updates are made available as soon as possible without sacrif:ycing the logarithmic search time. In the second step the tree will be balanced, i.e., transformed into a tree satisfying the (local) balance criteria of height-balanced trees. Balancing is designed as a background process allowing the concurrent use of the structure. The balancing time is comparable with earlier results in cases when balancing is strictly connected with individual updates.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="BrownT79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Mark_R=.html">
+Mark R. Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">
+Robert Endre Tarjan
+</a>
+: A Fast Merging Algorithm. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 26(2)
+</a>
+: 211-226(1979)
+<dt>
+[2]
+<dd>
+<a name="BrownT80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Mark_R=.html">
+Mark R. Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">
+Robert Endre Tarjan
+</a>
+: Design and Analysis of a Data Structure for Representing Sorted Lists. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp9.html#BrownT80">
+SIAM J. Comput. 9(3)
+</a>
+: 594-614(1980)
+<dt>
+[3]
+<dd>
+<a name="ChangI84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Hsi.html">
+Hsi Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyengar:S=_Sitharama.html">
+S. Sitharama Iyengar
+</a>
+: Efficient Algorithms to Globally Balance a Binary Search Tree. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm27.html#ChangI84">
+CACM 27(7)
+</a>
+: 695-702(1984)
+<dt>
+[4]
+<dd>
+<a name="Cardenas75" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cardenas:Alfonso_F=.html">
+Alfonso F. Cardenas
+</a>
+: Analysis and Performance of Inverted Data Base Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm18.html#Cardenas75">
+CACM 18(5)
+</a>
+: 253-263(1975)
+<dt>
+[5]
+<dd>
+<a name="Ellis80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ellis:Carla_Schlatter.html">
+Carla Schlatter Ellis
+</a>
+: Concurrent Search and Insertion in AVL Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tc/tc29.html#Ellis80">
+IEEE Transactions on Computers 29(9)
+</a>
+: 811-817(1980)
+<dt>
+[6]
+<dd>
+<a name="FaloutsosC85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christodoulakis:Stavros.html">
+Stavros Christodoulakis
+</a>
+: Design of a Signature File Method that Accounts for Non-Uniform Occurrence and Query Frequencies. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb85.html#FaloutsosC85">
+VLDB 1985
+</a>
+: 165-170
+<dt>
+[7]
+<dd>
+<a name="FaloutsosJ92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+: Hybrid Index Organizations for Text Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt92.html#FaloutsosJ92">
+EDBT 1992
+</a>
+: 310-327
+<dt>
+[8]
+<dd>
+<a name="Knuth73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">
+Donald E. Knuth
+</a>
+: The Art of Computer Programming, Volume III: Sorting and Searching.  Addison-Wesley 1973, ISBN 0-201-03803-X
+<br>
+ 
+<dt>
+[9]
+<dd>
+<a name="LangDJ86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lang:Sheau=Dong.html">
+Sheau-Dong Lang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Driscoll:James_R=.html">
+James R. Driscoll
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jou:Jiann_H=.html">
+Jiann H. Jou
+</a>
+: Batch Insertion for Tree Structured File Organizations - Improving Differential Database Reprensentation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is11.html#LangDJ86">
+IS 11(2)
+</a>
+: 167-175(1986)
+<dt>
+[10]
+<dd>
+<a name="LarsenSW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larsen:Kim_S=.html">
+Kim S. Larsen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soisalon=Soininen:Eljas.html">
+Eljas Soisalon-Soininen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widmayer:Peter.html">
+Peter Widmayer
+</a>
+: Relaxed Balance through Standard Rotations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/wads/wads97.html#LarsenSW97">
+WADS 1997
+</a>
+: 450-461
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+... 
+<dt>
+[13]
+<dd>
+<a name="MohanN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: Algorithms for Creating Indexes for Very Large Tables Without Quiescing Updates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#MohanN92">
+SIGMOD Conference 1992
+</a>
+: 361-370
+<dt>
+[14]
+<dd>
+<a name="NurmiSW87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nurmi:Otto.html">
+Otto Nurmi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soisalon=Soininen:Eljas.html">
+Eljas Soisalon-Soininen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wood:Derick.html">
+Derick Wood
+</a>
+: Concurrency Control in Database Structures with Relaxed Balance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1987
+</a>
+: 170-176
+<dt>
+[15]
+<dd>
+<a name="NurmiS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nurmi:Otto.html">
+Otto Nurmi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soisalon=Soininen:Eljas.html">
+Eljas Soisalon-Soininen
+</a>
+: Chromatic Binary Search Trees. A Structure for Concurrent Rebalancing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acta/acta33.html#NurmiS96">
+Acta Informatica 33(6)
+</a>
+: 547-557(1996)
+<dt>
+[16]
+<dd>
+<a name="Pollari-MalmiSY96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pollari=Malmi:Kerttu.html">
+Kerttu Pollari-Malmi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soisalon=Soininen:Eljas.html">
+Eljas Soisalon-Soininen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yl=ouml=nen:Tatu.html">
+Tatu Yl&ouml;nen
+</a>
+: Concurrency Control in B-Trees with Batch Updates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#Pollari-MalmiSY96">
+TKDE 8(6)
+</a>
+: 975-984(1996)
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="SrinivasanC92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srinivasan:V=.html">
+V. Srinivasan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Performance of On-Line Index Construction Algorithms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt92.html#SrinivasanC92">
+EDBT 1992
+</a>
+: 293-309
+<dt>
+[20]
+<dd>
+... 
+<dt>
+[21]
+<dd>
+<a name="Tsakalidis85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsakalidis:Athanasios_K=.html">
+Athanasios K. Tsakalidis
+</a>
+: AVL-Trees for Localized Search. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Information and Control 67(1-3)
+</a>
+: 173-194(1985)
+<dt>
+[22]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/MalmiS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lauri&nbsp;Malmi&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eljas&nbsp;Soisalon-Soininen},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Group&nbsp;Updates&nbsp;for&nbsp;Relaxed&nbsp;Height-Balanced&nbsp;Trees},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{358-367},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

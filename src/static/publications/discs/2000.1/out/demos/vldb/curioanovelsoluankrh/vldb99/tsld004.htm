@@ -1,0 +1,53 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>PPT Slide</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Indexes for Data Warehouses</H1> 
+ <P><UL>
+Indexes for Data Warehouses</UL></P>
+<P><UL>
+<LI>B+-tree (all systems): 
+<UL>
+<LI>RID-list for each search-key value
+</UL></UL><UL>
+<LI>Bitmapped [O’Neil, 87] (almost all systems): 
+<UL>
+<LI>Bit-vectors instead of RID-lists
+</UL></UL><UL>
+<LI>Projection [O’Neil & Quass, 97] (Sybase IQ): 
+<UL>
+<LI>Mirror copy of column
+</UL></UL><UL>
+<LI>Bit-sliced [O’Neil & Quass, 97] (Sybase IQ):
+<UL>
+<LI>“bit-level” projection index
+</UL></UL><UL>
+<LI>Bitmapped Join Index [O’Neil & Graefe, 95] (Informix):
+<UL>
+<LI>bitmapped index using RIDs to index into joining table
+</UL></UL><UL>
+<LI>
+</UL><UL>
+<LI>These structures are typically very costly in terms of storage requirements</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld003.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld005.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld004.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

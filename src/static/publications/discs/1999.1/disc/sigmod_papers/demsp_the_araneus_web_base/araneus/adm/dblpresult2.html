@@ -1,0 +1,89 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>ARANEUS result</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<br>&nbsp;
+<center>
+<h1>
+<font color="#0000FF">View Example:</font></h1></center>
+
+<center><b><i>"Name, Location and Year of Conferences in which Codd has
+published a paper after 1974"</i></b></center>
+
+<pre>
+<hr>
+<b>DEFINE TABLE</b> ConferencesCoddAfter74&nbsp; (Conference, Location, Year)
+<b>AS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AuthorSearchPage.NameForm.Submit ->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AuthorPage.WorkList.ToRefPage->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ConferencePage
+<b>IN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBLPScheme
+<b>USING</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ConferencePage.Conference,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ConferencePage.Location,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ConferencePage.Year
+<b>WHERE</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AuthorSearchPage.NameForm.Name = 'E. F. Codd',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AuthorPage.WorkList.Year > '1974'
+
+</pre>
+
+<hr>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<h1>
+<font color="#0000A0">Result of Ulixes query</font></h1></center>
+
+<center><table BORDER >
+<caption>
+<h3>
+<font color="#FF0000">ConferencesCodd</font></h3>
+</caption>
+
+<tr>
+<th>Conference</th>
+
+<th>Location</th>
+
+<th>Year</th>
+</tr>
+
+<tr>
+<td>ACM Pacific</td>
+
+<td>San Francisco, California</td>
+
+<td>1975</td>
+</tr>
+
+<tr>
+<td>ICDE</td>
+
+<td>Los Angeles, California</td>
+
+<td>1986</td>
+</tr>
+
+<tr>
+<td>JCDKB</td>
+
+<td>Haifa, Israel</td>
+
+<td>1978</td>
+</tr>
+
+<tr>
+<td>SIGMOD Conference</td>
+
+<td>Boston, Massachusetts</td>
+
+<td>1979</td>
+</tr>
+</table></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

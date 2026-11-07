@@ -1,0 +1,228 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; I) [Netscape]">
+<!-- saved from url=(0022)http://internet.e-mail -->
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EF" vlink="#51188E" alink="#FF0000">
+
+<blockquote>
+<blockquote>
+<center><b><font size=+3>AJAX: an Extensible Data Cleaning Tool</font></b></center>
+</blockquote>
+</blockquote>
+
+<center><b><font size=+1>H. Galhardas, D. Florescu, D. Shasha, E. Simon,</font></b>
+<br><b><font size=+1>J.P. Matsumoto, C.A. Saita</font></b></center>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<center><b><font size=+3>&nbsp;</font><font size=+1>INRIA,&nbsp; France</font></b>
+<p>&nbsp;<a href="http://www-caravel.inria.fr">http://www-caravel.inria.fr</a></center>
+</blockquote>
+</blockquote>
+</blockquote>
+<b><font size=+2>1. Introduction</font></b>
+<p>Ensuring the quality of data in information systems is crucial for decision-support
+and business-oriented applications (e.g., electronic mailing, fraud detection,
+risk analysis, etc). Data quality concerns
+arise in three different contexts: when one wants to correct anomalies
+in a single data source (e.g., duplicate elimination in a file); when
+poorly structured or unstructured data is migrated into structured
+data; or when one wants to integrate data coming from multiple sources
+into a single new data source (e.g., data warehouse construction). The following data quality problems,
+also called as dirty data, are typically encountered:
+<ul>
+<li>
+<b>Object identity problem</b>: data coming from different origins may
+have been created at different times, by different people using different
+conventions to map real world entities into data. For instance, the same
+customer may be referred to in different tables by slightly different but
+correct names, say ``John Smith'', ``Smith John'' or ``J. Smith''. This
+problem is sometimes called the Instance Identification problem, or duplicate
+elimination or record linkage problem in the case of a single source.</li>
+
+<li> The fact that fusioned data is produced and used by different
+entities also enables the existence of <b>missing values</b>. To be
+aware of a client's age, for instance is important for a marketing
+department but not relevant at all for the accounting one.</li>
+
+<li> Data may be written in <b>different formats</b>. Since no standard notation is generally imposed, 
+data fields may embed data of different natures (the so called
+free-form fields). An example is a street field that incorrectly
+contains the zip code and the country name. Abbreviations as well as
+synonyms may be used to refer an object that is represented by their
+full names in another record.
+</li>
+
+<li>
+Data can contain <b>errors,</b> usually due to mistyping, such as ``John
+Smith'' and ``Joh Smith'', even when the same naming conventions are used
+in different databases.</li>
+
+<li>
+&nbsp;Data can have <b>inconsistencies</b>: for instance, two records corresponding
+to the same person may carry two different birth dates.</li>
+</ul>
+In the data warehouse terminology, these problems are often grouped under
+the term <b>data cleaning</b>. We demonstrate a system, called AJAX, whose
+main goal is to facilitate the specification and execution of data cleaning
+programs either for a single source or for integrating multiple data sources.
+<p><b><font size=+2>2. Scenario demonstrated</font></b>
+<p>We&nbsp; use&nbsp; the AJAX system&nbsp; on a well known problem which
+is the translation of a database of dirty citations into a set of clean,
+normalized, redundancy-free relational database tables storing the same
+data. The initial database consists of a set of bibliographical references
+extracted from a large, dirty, citations file, extracted via a wrapper
+from the <a href="http://www.csindex.com/">Computer Science citation Web
+site</a>. Remark that although this site presents already <i>cleaned </i>data,
+the original dirty data are still available. The result database contains
+three tables, respectively storing&nbsp; publication names,&nbsp; author
+names and publication events (i.e., conferences, journals, etc), all&nbsp;
+free of approximate duplicates. The database also contains a fourth table
+storing the correspondences between a publication and its authors, using
+the new foreign keys pointing to the clean records. The typical problems
+handled by this application are: different (wrong) spelling for the same
+article title, author names, and event names, and a wrong list of authors
+or event names.
+<p>The demonstration substantiates the following claimed technical contributions
+of the AJAX system :
+<ul>
+<li>
+the <i>ease of specification</i> and refinement of complex cleaning programs
+via the use of an expressive and declarative specification language;</li>
+
+<li>
+the <i>extensibility </i>of the AJAX framework;</li>
+
+<li>
+the explicit involvment <i>of human experts</i> during the execution of
+the cleaning program;</li>
+
+<li>
+the use of<i> metadata </i>for interactively backtracking within the data
+cleaning process and providing explanation.</li>
+</ul>
+<b><font size=+2>3. Specification of data cleaning programs</font></b>
+<p>AJAX provides a <i>framework</i> wherein the logic of a data cleaning
+program is modeled as a directed graph of data transformations that start
+from some input source data. 
+<p>Four types of data transformations are distinguished. For simplicity,
+we explain their meaning in the case of a single data source. The first
+type of transformation, called <b>mapping</b>, standardizes data formats
+when possible (e.g. date format) or simply produces records with a more
+suitable format by applying operations such as column splitting and merging.
+The second type of transformation, called <b>matching,</b> finds pairs
+of records that most probably refer to the same real object. Records are
+compared using the values of one or several fields via a matching criteria
+that can be arbitrarily complex. A similarity value representing the result
+of the matching criteria is attached to each pair of compared records,
+called a matching pair. However, when the records of a single source are
+compared, matching pairs represent approximate duplicates. A third type
+of transformation, called <b>clustering</b>, groups together matching pairs
+with a high similarity value by applying a given grouping criteria (e.g.
+by transitive closure). Finally, the last type of transformation, called
+<b>merging,
+</b>applies
+to each individual cluster in order to eliminate duplicates or produce
+new records for the resulting integrated data source.
+<p>Thus, each transformation takes as input one or several data flows,
+and produces as output one or several data flows, globally forming a directed
+possibly cyclic graph. A data flow consists either of a set of tuples or
+a set of groups of tuples. The mapping and matching transformations take
+and return sets of tuples; the clustering transformation takes a set of
+tuples and returns a set of groups of tuples as output, while the merging
+converts back a set of groups of tuples into a set of tuples.
+<p>AJAX provides an <b>expressive and declarative language </b>for specifying
+data cleaning programs, which consists of SQL statements enriched with
+a set of specific primitives to express mapping, matching, clustering and
+merging transformations. Each of these primitives corresponds to a transformation
+whose physical implementation takes advantage of existing RDBMS technology.
+The declarative nature of the language provides opportunities for automatic
+optimization and facilitates the maintenance of a data cleaning program.
+<p>Syntactically, each operator specification has a <b>FROM </b>clause
+that indicates the input data flow, a <b>CREATE </b>clause, which names
+the output data flow (for further reference), a <b>SELECT</b> clause specifying
+the format of the output data and a <b>WHERE </b>clause to filter out non
+interesting tuples from the input. An optional <b>LET
+</b>clause describes
+the transformation that has to be applied to each input item (tuple or
+group of tuples) in order to produce output items. This clause contains
+limited imperative primitives: the possibility to define local variables,
+to call external functions or to control their execution via <i>if/then/else
+</i>constructs.
+Finally, the clustering operator includes a <b>BY</b> clause which specifies
+the grouping algorithm to be applied, among the ones existing in the AJAX
+library of algorithms. The specifications of the transformations represented
+on the graph shown earlier are given below.
+
+<p>AJAX is <b>extensible</b> in various ways. Firstly, the predefined transformations
+can invoke externally defined domain specific functions (e.g., a string
+comparison function in the case of the matching transformation) that have
+been previously added to an open library of functions. Secondly, transformations
+can be combined with pure SQL statements in order to formulate more complex
+data cleaning programs. Thirdly,<i> </i>the set of algorithms initially
+provided to implement the clustering transformation can be extended as
+needed.
+<p><b><font size=+2>4. User Interaction</font></b>
+<p>A rich interactive environment is supplied to the user in order to resolve
+errors and inconsistencies that cannot be automatically handles and support
+a stepwise refinement design of data cleaning programs.
+<p>The execution of&nbsp; a AJAX&nbsp; program can raise exceptions (e.g.
+a name has a null value, a name is of type integer, an age is greater than
+200). These execptions can be anticipated in the specification of the data
+cleaning program. For instance, the user-defined function, <i>uniqueString</i>,
+will raise an exception if the list of strings that it receives as argument
+is not an atomic list. This is indicated by the declaration of the function
+within the data cleaning program.
+
+<p>In this case, the data cleaning program can specify two ways of handling
+the exception: a specific piece of code can be invoked, or a special table
+containing all the tuples that caused the exception is automatically generated
+and will presented to the user. The second (default) option is used in
+the merging transformation that produces table <i>mergeCi</i>. For non
+anticipated exceptions (e.g. producing errors on an external function call),
+all tuples that caused the exception are automatically shown to the user.
+<p>When the tuples that caused an exception have been produced in a table,
+the user may first use the functionality of the explainer to select one
+or several tuples and backtrack in the data cleaning process. For instance,
+the explainer will display the tuples of ClusterCi that generated the exceptional
+tuples and the user will be able to edit and modify them. The functionality
+of the explainer is supported by a conceptual <b>metadata repository</b>
+that stores annotations about the execution of data cleaning programs describing
+the transformations with their input/output. AJAX finally enables the construction
+of auxiliary <i>dictionaries of data</i> (e.g. list of abbreviations and
+their expansions) during the iterative processing of a data cleaning program.
+The contents of these dictionaries may be used to reformulate the cleaning
+criteria and thus anticipate the standardization of fields
+<p><b><font size=+2>5. AJAX architecture</font></b>
+<p>The architecture of the AJAX system includes two types of components:
+the <b><i>repositories </i></b>that manage data or fragments of code and
+the <b><i>operational units</i></b> that constitute the execution core.
+<center>
+<p><img SRC="poster.GIF"></center>
+
+<p>There are three repositories in the AJAX system. The <b>relational database
+management system </b>(RDBMS) stores the input dirty data and the output
+cleaned data, and is accessible via JDBC. The system also contains a library
+of functions that can be called within each transformation. It stores
+the code of the functions, as well as a description of their characteristics
+to be exploited by the AJAX query optimizer. Examples of such functions
+are domain-specific functions (e.g. standardization of US addresses) or
+specific string matching functions (e.g. edit-distance). Finally, the system
+contains a library of algorithms that implement the clustering transformation
+(e.g. by transitive closure, by source).
+<p>The core of the AJAX system is implemented by the operational units:
+the <b>analyzer,</b> which parses the cleaning programs; the <b>optimizer</b>,
+which selects an optimal execution plan for executing a cleaning program;
+the&nbsp; <b>execution engine</b>, which schedules the tasks composing
+the selected plan, and the <b>explainer </b>that triggers an audit trail
+mechanism.
+<p>The system is implemented in Java. The RDBMS used is Oracle, version
+8i. The demonstration is shown on a PC with Windows NT.
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,427 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Finding Intensional Knowledge of Distance-Based Outliers</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Finding Intensional Knowledge of Distance-Based Outliers
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_edwin_m_knorr.htm">Edwin M. Knorr</a> and 
+<a href = "a_raymond_t_ng.htm">Raymond T. Ng</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/findingintensioedra.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdataminingction.htm">Return to Data Mining &amp; Pattern Extraction</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Existing studies on outliers focus only on the 
+<i>
+identification
+</i>
+ aspect; none provides any 
+<i>
+intensional knowledge
+</i>
+ of the outliers - by which we mean a 
+<i>
+description
+</i>
+ or an 
+<i>
+explanation
+</i>
+ of why an identified outlier is exceptional. For many applications, a description or explanation is at least as vital to the user as the identification aspect. Specifically, intensional  knowledge helps the user to: (i) evaluate the validity of the identified outliers, and (ii) improve one's understanding of the data. 
+<p>
+ The two main issues addresses in this paper are: 
+<i>
+what kinds
+</i>
+ of intensional knowledge to provide, and 
+<i>
+how to optimize
+</i>
+ the computation of such knowledge. With respect to the first issue, we propose finding 
+<i>
+strongest
+</i>
+ and 
+<i>
+weak
+</i>
+ outliers and their corresponding structural intensional knowledge. With respect to the second issue, we first present a naive and a semi-naive algorithm. Then, by means of what we call 
+<i>
+path
+</i>
+ and 
+<i>
+semi-lattice
+</i>
+ sharing of I/O processing, we develop two optimized approaches. We provide analytic results on their I/O performance, and present experimental results  showing significant reductions in I/O and significant speedups in overall runtime.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AGGR98]
+<dd>
+<a name="AgrawalGGR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+: Automatic Subspace Clustering of High Dimensional Data for Data Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#AgrawalGGR98">
+SIGMOD Conference 1998
+</a>
+: 94-105
+<dt>
+[AGI+92]
+<dd>
+<a name="AgrawalGIIS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghosh:Sakti_P=.html">
+Sakti P. Ghosh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyer:Balakrishna_R=.html">
+Balakrishna R. Iyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: An Interval Classifier for Database Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1992
+</a>
+: 560-573
+<dt>
+[AIS93]
+<dd>
+<a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Mining Association Rules between Sets of Items in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#AgrawalIS93">
+SIGMOD Conference 1993
+</a>
+: 207-216
+<dt>
+[BL94]
+<dd>
+... 
+<dt>
+[BFOS84]
+<dd>
+... 
+<dt>
+[BMS97]
+<dd>
+<a name="BrinMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">
+Craig Silverstein
+</a>
+: Beyond Market Baskets: Generalizing Association Rules to Correlations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BrinMS97">
+SIGMOD Conference 1997
+</a>
+: 265-276
+<dt>
+[HKPT98]
+<dd>
+<a name="HuhtalaKPT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huhtala:Yk=auml=.html">
+Yk&auml; Huhtala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/K=auml=rkk=auml=inen:Juha.html">
+Juha K&auml;rkk&auml;inen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Porkka:Pasi.html">
+Pasi Porkka
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+: Efficient Discovery of Functional and Approximate Dependencies Using Partitions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#HuhtalaKPT98">
+ICDE 1998
+</a>
+: 392-401
+<dt>
+[JKN98]
+<dd>
+<a name="JohnsonKN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:Theodore.html">
+Theodore Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kwok:Ivy.html">
+Ivy Kwok
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+: Fast Computation of 2-Dimensional Depth Contours. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#JohnsonKN98">
+KDD 1998
+</a>
+: 224-228
+<dt>
+[KR90]
+<dd>
+... 
+<dt>
+[KR98]
+<dd>
+<a name="KnorrN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knorr:Edwin_M=.html">
+Edwin M. Knorr
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+: Algorithms for Mining Distance-Based Outliers in Large Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 392-403
+<dt>
+[KN99]
+<dd>
+... 
+<dt>
+[NLHP98]
+<dd>
+<a name="NgLHP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">
+Laks V. S. Lakshmanan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pang:Alex.html">
+Alex Pang
+</a>
+: Exploratory Mining and Pruning Optimizations of Constrained Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#NgLHP98">
+SIGMOD Conference 1998
+</a>
+: 13-24
+<dt>
+[RR96]
+<dd>
+... 
+<dt>
+[SBMU98]
+<dd>
+<a name="SilversteinBMU98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">
+Craig Silverstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Scalable Techniques for Mining Causal Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 594-605
+<dt>
+[TN98]
+<dd>
+... 
+<dt>
+[Tuk77]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/KnorrN99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Edwin&nbsp;M.&nbsp;Knorr&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raymond&nbsp;T.&nbsp;Ng},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Finding&nbsp;Intensional&nbsp;Knowledge&nbsp;of&nbsp;Distance-Based&nbsp;Outliers},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{211-222},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

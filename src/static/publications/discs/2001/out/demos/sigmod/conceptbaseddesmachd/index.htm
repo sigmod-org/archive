@@ -1,0 +1,252 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en">
+<title>Concept Based Design of Data Warehouses: The DWQ Demonstrators</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF"*>
+<table border="1" width="100%" cellpadding="2" bordercolor="#808080" bgcolor="#E0FFFF">
+  <tr>
+    <td width="16%"><font color="#FFFFFF"><a href="index.htm">Overview</a></font></td>
+    <td width="16%"><font color="#FFFFFF"><a href="metadata.htm">The Metadata Repository<br>
+      ConceptBase</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="icom.htm">Source Integration
+      and&nbsp;<br>
+      Conceptual Modelling</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="dare.htm">Data Reconciliation</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="references.htm">References</a></font></td>
+  </tr>
+</table>
+<h1>Concept Based Design of Data Warehouses: <br>
+The DWQ Demonstrators</h1>
+<h3><a href="http://www-i5.informatik.rwth-aachen.de/">M. Jarke</a>, <a href="http://www-i5.informatik.rwth-aachen.de/~quix/">C. Quix</a>,
+<a href="http://www.dis.uniroma1.it/~calvanese">D. Calvanese</a>, <a href="http://www.dis.uniroma1.it/~lenzerin/">M.
+Lenzerini</a>, <a href="http://www.cs.man.ac.uk/~franconi/">E. Franconi</a>, <a href="http://www.dbnet.ece.ntua.gr/">S.
+Ligoudistianos</a>, <a href="http://www.dbnet.ece.ntua.gr/">P. Vassiliadis</a>, <a href="http://www.dbnet.ece.ntua.gr/">Y.
+Vassiliou</a></h3>
+<p>The European ESPRIT Long Term Research Project <a href="http://www.dbnet.ece.ntua.gr/~dwq/">DWQ</a>
+(Foundations of Data Warehouse Quality) has aimed at improving the quality of
+data warehouse design and operation through systematic enrichment of the
+semantic foundations of data warehousing. Logic-based knowledge representation
+and reasoning techniques were developed to control accuracy, consistency, and
+completeness via advanced conceptual modeling techniques for source integration,
+data reconciliation, and multi-dimensional aggregation. This is complemented by
+quantitative optimization techniques for view materialization, optimizing
+timeliness and responsiveness without losing the semantic advantages from the
+conceptual approach. At the operational level, query rewriting and
+materialization refreshment algorithms exploit the knowledge developed at design
+time. The demonstration has shown the interplay of these tools based on an
+example extracted from a real-world application at Telecom Italia.</p>
+<h3>Project Overview and Partners</h3>
+<p><img border="0" src="images/dwq-posters-may2000-1.gif" width="498" height="709"></p>
+<h4>&nbsp;</h4>
+<h4>Project Participants</h4>
+<table bgColor="#e0ffff" border="6" cellPadding="3" cellSpacing="0" width="799">
+  <tbody>
+    <tr align="left" vAlign="center">
+      <td>
+        <dl>
+          <dt><b>Organization Name</b></dt>
+        </dl>
+      </td>
+      <td>
+        <dl>
+          <dt><b>Country</b></dt>
+        </dl>
+      </td>
+      <td align="middle" vAlign="center">
+        <dl>
+          <dt><b>Contact person</b></dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><b>E-mail address</b></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://www.dbnet.ece.ntua.gr/" target="_blank">Knowledge
+            and Databse Systems Laboratory</a>,
+          <dt><a href="http://www.ntua.gr/" target="_blank">National Technical
+            Univ. of Athens</a></dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>Greece</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt>Yannis Vassiliou
+          <dt><a href="http://www.dbnet.ece.ntua.gr/~timos/" target="_blank">Timos
+            Sellis</a></dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:yv@cs.ntua.gr">yv</a>
+          <dt><a href="mailto:timos@cs.ntua.gr">timos</a></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://www.inria.fr/" target="_blank">INRIA</a>
+            Rocquencourt</dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>France</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt>Eric Simon</dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:Eric.Simon@inria.fr">Eric.Simon</a></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://www.dfki.uni-sb.de/" target="_blank">DFKI</a>
+            Saarbrucken</dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>Germany</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt><a href="http://www.dfki.uni-sb.de/~nutt/" target="_blank">Werner
+            Nutt</a></dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:Werner.Nutt@dfki.uni-sb.de">Werner.Nutt</a></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://www-i5.informatik.rwth-aachen.de/lehrstuhl/english-starter.html" target="_blank">Informatik
+            V</a> &amp; <a href="http://www-lti.informatik.rwth-aachen.de/index-en.html" target="_blank">Lehr-
+            und Forschungsgebiet Theoretische Informatik</a> - <a href="http://www.rwth-aachen.de/" target="_blank">RWTH</a>
+            Aachen</dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>Germany</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt>Mathias Jarke
+          <dt>Franz Baader</dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:jarke@informatik.rwth-aachen.de">jarke</a>
+          <dt><a href="mailto:baader@informatik.rwth-aachen.de">baader</a></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://www.dis.uniroma1.it/PUB/AI/AIHome.shtml" target="_blank">AI
+            Research Group</a>,
+          <dt><a href="http://www.uniroma1.it/" target="_blank">Univ. of Rome
+            &quot;La Sapienza&quot;</a></dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>Italy</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt><a href="http://www.dis.uniroma1.it/~lenzerini/" target="_blank">Maurizio
+            Lenzerini</a></dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:lenzerini@dis.uniroma1.it">lenzerini</a></dt>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="411">
+        <dl>
+          <dt><a href="http://mnemosyne.itc.it:1024/" target="_blank">Knowledge
+            Representation and Reasoning Group</a>, <a href="http://www.itc.it/irst/" target="_blank">IRST</a>
+            Povo TN<br>
+            <a href="http://img.cs.man.ac.uk/" target="_blank">Information
+            Management Group</a>, <a href="http://www.man.ac.uk/" target="_blank">University
+            of Manchester</a>, UK</dt>
+        </dl>
+      </td>
+      <td width="75">
+        <dl>
+          <dt>Italy<br>
+            UK</dt>
+        </dl>
+      </td>
+      <td width="153">
+        <dl>
+          <dt><a href="http://www.cs.man.ac.uk/~franconi/" target="_blank">Enrico
+            Franconi</a></dt>
+        </dl>
+      </td>
+      <td width="128">
+        <dl>
+          <dt><a href="mailto:franconi@cs.man.ac.uk">franconi</a></dt>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h3>The DWQ-Methodology for Quality-Oriented Design of Data Warehouses</h3>
+<p><span lang="EN-US" style="layout-grid-mode:line">The demonstration will
+follow roughly the process indicated in the figure below. In this figure, the
+dark-grey boxes indicate logical data objects, such as relations, queries, or
+materialized (possibly multi-dimensional) views.<span style="mso-spacerun: yes">&nbsp;
+</span>The light-grey boxes describe conceptual models; in DWQ, these are
+externally represented as extended Entity-Relationship models, internally
+modeled using Description Logic formalisms from artificial intelligence to allow
+for subsumption reasoning. Steps 1 through 6 represent the extended design
+approach shown in the demo. The two light-grey boxes on the right describe
+related support at the operational level, focusing on the two key problems of
+aggregate query optimization and view refreshment. The whole process is
+administered through a metadata repository which has been implemented using the <a href="http://www-i5.informatik.rwth-aachen.de/CBdoc/">ConceptBase</a>
+system [JGJ+95].<o:p>
+</o:p>
+</span></p>
+<p><img border="0" src="images/dwq-posters-may2000-2.gif" width="498" height="709"></p>
+<p>&nbsp;</p>
+</body>
+
+</html>

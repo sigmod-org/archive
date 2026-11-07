@@ -1,0 +1,56 @@
+<HTML><HEAD>
+<TITLE>DEMO - The Mirror MMDBMS architecture</TITLE>
+<META  name="description" 
+content="demo Mirror architecture">
+<META  name="keywords" content="multimedia database information retrieval
+relevance feedback content-based retrieval">
+<LINK REV="made" HREF="mailto:arjen@acm.org">
+</HEAD>
+<BODY BGCOLOR="AFAFAF" TEXT="000000">
+
+<CENTER>
+<H1>
+MORE ON THE ARCHITECTURE
+</H1>
+</CENTER>
+
+The binary relational query plan is generated from a Moa query at the logical
+level. Moa is an object query algebra, based on the principle of structural
+object-orientation. Moa's unique feature is the support of domain-specific
+structures, which has been exploited in Mirror for the integration of IR in
+all levels of the DBMS architecture.
+<P>
+<IMG SRC="screens/demo6.jpg">
+<P>
+In the current implementation, little time has been spent on providing access
+to the Mirror architecture from the conceptual level. As a result, only
+applications programmers who write Moa queries can use the Mirror DBMS. In the
+small screenshot above, the interaction between the current GUI and the Moa
+level is traced. 
+<P>
+In the future, we will support an OQL-like query language for end users on top
+of Moa and Monet, extended with some special constructs for specification of
+relevance judgements. Until that moment, end users are limited to the
+functionality specified in pre-defined forms, such as the GUI we demonstrated
+in this tour.
+<P>
+<CENTER>
+<TABLE>
+<TR>
+  <TD><A HREF="arch.html">Prev</A></TD>
+  <TD></TD>
+  <TD><A HREF="mirrordemo.html#concl">To conclusions</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<HR>
+<ADDRESS>
+<IMG ALIGN=right SRC="demologo.jpg">
+Home: <A HREF="mirrordemo.html">DEMO - The Mirror MMDBMS architecture</A>
+<P>
+Last updated: December 9, 1999<BR>
+Maintained by: <A HREF="mailto:arjen@acm.org">arjen@acm.org</A>
+</ADDRESS>
+</BODY>
+</HTML>

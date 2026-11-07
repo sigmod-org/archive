@@ -1,0 +1,400 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Substring Selectivity Estimation</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Substring Selectivity Estimation
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_h_v_jagadish.htm">H. V. Jagadish</a>, 
+<a href = "a_raymond_t_ng.htm">Raymond T. Ng</a>, and 
+<a href = "a_divesh_srivastava.htm">Divesh Srivastava</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/substringselecthrad.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsnoveldataldata.htm">Return to Novel Data</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ With the explosion of the Internet, LDAP directories and XML, there is an ever greater need to evaluate queries involving (sub)string matching. Effective query optimization in this context requires good selectivity estimates. In this paper, we use pruned count-suffix trees as the basic framework for substring selectivity estimation. We present a novel technique to obtain a good estimate for a given substring matching query, called MO (for Maximal Overlap), that estimates the selectivity of a query based on all maximal substrings of the query in the pruned count-suffix tree. We show that MO is provably better than the (independence-based) substring se- lectivity estimation technique proposed by Krishnan et al. [6], called KVI, under the natural assumption that strings exhibit the so-called “short memory” property. We complement our analysis with an experiment, using a real AT&T data set, that demonstrates that MO is substantially superior to KVI in the quality of the estimate. Finally, we develop and analyze two selectivity estimation algorithms, MOC and MOLC, based on MO and a constraint-based characterization of all possible completions of a given pruned count-suffix tree. We show that KVI, MO, MOC and MOLC illustrate an interesting tradeoff between estimation accuracy and computational efficiency.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="HernandezS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hern=aacute=ndez:Mauricio_A=.html">
+Mauricio A. Hern&aacute;ndez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stolfo:Salvatore_J=.html">
+Salvatore J. Stolfo
+</a>
+: The Merge/Purge Problem for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#HernandezS95">
+SIGMOD Conference 1995
+</a>
+: 127-138
+<dt>
+[2]
+<dd>
+... 
+<dt>
+[3]
+<dd>
+<a name="Ioannidis93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+: Universality of Serial Histograms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#Ioannidis93">
+VLDB 1993
+</a>
+: 256-267
+<dt>
+[4]
+<dd>
+<a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Balancing Histogram Optimality and Practicality for Query Result Size Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#IoannidisP95">
+SIGMOD Conference 1995
+</a>
+: 233-244
+<dt>
+[5]
+<dd>
+<a name="JagadishKMPSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koudas:Nick.html">
+Nick Koudas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muthukrishnan:S=.html">
+S. Muthukrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sevcik:Kenneth_C=.html">
+Kenneth C. Sevcik
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suel:Torsten.html">
+Torsten Suel
+</a>
+: Optimal Histograms with Quality Guarantees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#JagadishKMPSS98">
+VLDB 1998
+</a>
+: 275-286
+<dt>
+[6]
+<dd>
+<a name="KrishnanVI96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnan:P=.html">
+P. Krishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyer:Balakrishna_R=.html">
+Balakrishna R. Iyer
+</a>
+: Estimating Alphanumeric Selectivity in the Presence of Wildcards. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#KrishnanVI96">
+SIGMOD Conf. 1996
+</a>
+: 282-293
+<dt>
+[7]
+<dd>
+<a name="LiptonN90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Query Size Estimation by Adaptive Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1990
+</a>
+: 40-46
+<dt>
+[8]
+<dd>
+<a name="McCreight76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McCreight:Edward_M=.html">
+Edward M. McCreight
+</a>
+: A Space-Economical Suffix Tree Construction Algorithm. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 23(2)
+</a>
+: 262-272(1976)
+<dt>
+[9]
+<dd>
+<a name="MuralikrishnaD88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muralikrishna:M=.html">
+M. Muralikrishna
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Equi-Depth Histograms For Estimating Selectivity Factors For Multi-Dimensional Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#MuralikrishnaD88">
+SIGMOD Conference 1988
+</a>
+: 28-36
+<dt>
+[10]
+<dd>
+<a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Improved Histograms for Selectivity Estimation of Range Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">
+SIGMOD Conf. 1996
+</a>
+: 294-305
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">
+SIGMOD Conference 1979
+</a>
+: 23-34
+<dt>
+[13]
+<dd>
+... 
+<dt>
+[14]
+<dd>
+... 
+<dt>
+[15]
+<dd>
+<a name="Weiner73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weiner:Peter.html">
+Peter Weiner
+</a>
+: Linear Pattern Matching Algorithms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+FOCS 1973
+</a>
+: 1-11
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="JagadishKNS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kapitskaia:Olga.html">
+Olga Kapitskaia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Multi-Dimensional Substring Selectivity Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#JagadishKNS99">
+VLDB 1999
+</a>
+: 387-398
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/JagadishNS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{H.&nbsp;V.&nbsp;Jagadish&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raymond&nbsp;T.&nbsp;Ng&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Divesh&nbsp;Srivastava},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Substring&nbsp;Selectivity&nbsp;Estimation},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{249-260},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

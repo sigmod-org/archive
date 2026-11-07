@@ -1,0 +1,101 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Schema components</title>
+</head>
+<body bgcolor="#FFE4B5" link="#000080">
+&nbsp;
+<br><font size=+1>AKIRA's available schema components</font>
+<br>
+<hr>
+<ul>
+<li>
+<font color="#FF0000"><font size=+1>Concept classes</font></font></li>
+
+<ul>
+<li>
+class <font color="#008000">Conference</font> { fragment: {Fragments};
+name: string }</li>
+
+<li>
+class <font color="#008000">Date</font> { fragment: {Fragments}; month:
+integer; day: integer; year: integer }</li>
+
+<li>
+class <font color="#008000">Location</font> { fragment: {Fragments} city:
+string; state: string; country: string }</li>
+</ul>
+
+<li>
+<font color="#FF0000"><font size=+1>attributes</font></font></li>
+
+<ul>
+<li>
+<font color="#008000">web_site</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">topic</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">published_proceedings</font> : <font color="#008000">Conference</font>
+--> boolean</li>
+
+<li>
+<font color="#008000">proceedings_series</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">proceedings_publisher</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">submission_journal</font> : <font color="#008000">Conference</font>
+--> boolean</li>
+
+<li>
+<font color="#008000">journal</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">journal_publisher</font> : <font color="#008000">Conference</font>
+--> string</li>
+
+<li>
+<font color="#008000">pc_members</font> : <font color="#008000">Conference</font>
+--> string</li>
+</ul>
+
+<li>
+<font color="#FF0000"><font size=+1>meta-concepts</font></font></li>
+
+<ul>
+<li>
+<font color="#008000">submission_deadline</font> : <font color="#008000">Conference</font>
+--> <font color="#008000">Date</font></li>
+
+<li>
+<font color="#008000">dates</font> : <font color="#008000">Conference</font>
+--> [<font color="#008000">Date</font>,<font color="#008000">Date</font>]</li>
+
+<li>
+<font color="#008000">location</font> : <font color="#008000">Conference</font>
+--> <font color="#008000">Location</font></li>
+</ul>
+</ul>
+
+<center>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<center>
+<p><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

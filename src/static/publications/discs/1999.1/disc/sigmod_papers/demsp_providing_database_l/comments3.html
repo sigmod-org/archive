@@ -1,0 +1,52 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>WHIRL Slides - Commentary
+</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<br><img SRC="wcohen-mugshot.jpg" ALT="William's Face" >
+<center>
+<h4>
+<a href="fgoal.html" target="_top">[Previous slide</a> |
+<a href="idea.html" target="slide">Accompanying
+slide</a> |
+<a href="fdemo.html" target="_top">Next slide]</a></h4></center>
+In WHIRL, these Web information sources are modeled as relations in the
+natural way. (You might want step through the example pages from the <a href="superkid-1.html" target="slide">superkid</a>
+and <a href="publisher-1.html" target="slide">publisher</a> relations to
+get the idea. Notice the eyes, which indicate parts of the demo that you
+can actually follow in this canned version.)
+<p>The <b>key idea</b> in WHIRL is to do "soft matching" on names. Instead
+of joining relations by looking for pairs of tuples with
+<b>identical keys</b>,
+WHIRL joins by finding pairs of tuples with "similar names". The answer
+to a join is a <b>ranked</b> list of pairings, ordered by (in this case)
+the similarity of the names being used as keys.
+<p>The table in the middle of <a href="idea.html" target="slide">the accompanying
+slide</a> shows a traditional a "hard" join on the left. On the right is
+the "soft", similarity-based, version of the join that's supported by WHIRL.
+If you <font color="#FF0000">hit the "submit" button</font>, you'll be
+able to page through <a href="query-1.html" target="slide">WHIRL's output.</a>
+WHIRL starts with matches that it is very confident in, and then, as the
+user requests more data, provides gradually more and more tenuous matches.
+The "Scholastic/Microsoft" and "Microsoft Kids" pairing appears toward
+the bottom of <a href="query-2.html" target="slide">the second screen.</a>
+Note that this pairing is <b>after</b> several incorrect matches, which
+is unfortunate; this means that there's no simple threshold for the degree
+of similarity that catches all the "good" pairings and none of the "bad"
+ones. We'll get back to this point later.
+<p>More generally, a WHERE clause for WHIRL can be a conjunction of "hard"
+conditions (like equality, etc) and "soft" conditions (like similarity
+of pairs of names). As noted in the slide, similarity is based on very
+general heuristics for matching textual items developed in information
+retrieval; if you're interested in the details of how I've made these work
+(and work efficiently) you should look at my long paper in SIGMOD-98.
+<p>Now that you've got some idea of what's going on and why, check out
+some of the&nbsp;<img SRC="look.gif" ><a href="fdemo.html" target="_top">more
+complete demos</a>.&nbsp;<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

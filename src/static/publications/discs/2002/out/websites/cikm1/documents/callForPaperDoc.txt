@@ -1,0 +1,133 @@
+                                     ACM-GIS 2001 
+                        The Ninth ACM International Symposium 
+                                          on 
+                      Advances in Geographic Information Systems 
+                                   Atlanta, GA, USA 
+
+                                  November 9-10, 2001 
+
+                                    Call For Papers
+
+                         http://outlook.cs.purdue.edu/ACM_GIS2001
+
+The ACM International Symposium on Advances in Geographic Information Systems is 
+the ninth of a series of symposia/workshops that started in 1993 with the aim of 
+bringing together researchers, users, and practitioners carrying out research in 
+novel systems based on geo-spatial data and knowledge, and fostering 
+interdisciplinary discussions and research in all aspects of geographic 
+information systems, in all their diversity. ACM GIS 2001 will be held in 
+Atlanta, Georgia, November 9-10, 2001, in conjunction with The Tenth 
+International Conference on Information and Knowledge Management (ACM CIKM 
+2001). Papers covering areas with cross-fertilizations among domains and 
+synergies between several applications are encouraged. Of particular interest 
+are papers which address experiences with concrete applications. The conference
+program will feature paper presentations and interactive panel sessions.
+
+Areas of interest include but are not limited to:
+- Location-based services, and the digital earth 
+- Mobile and distributed GI services 
+- Smart cities and the digital government 
+- Privacy and security 
+- Intelligent transportation systems 
+- Real-time spatio-temporal GIS 
+- Visual query languages and expressiveness 
+- Algebra and ontologies 
+- Interoperability, XML, and standards 
+- Embedded and ubiquitous GIS 
+- Fuzzy spatio-temporal objects 
+- Computer geometry, networking, and approximation algorithms 
+- Large-scale GIS servers and Parallel GIS 
+- User interfaces, visualization techniques, and animation 
+- Multimedia and GIS, and digital libraries 
+- Spatial, spatio-temporal and multidimensional access methods 
+- Query processing and spatial/distance join algorithms 
+- Modeling and multiple representations 
+- Spatial and spatio-temporal aggregation and summaries 
+- Dynamic maps, sensors, and moving object technologies 
+- Novel applications and decision support 
+- Spatial and spatio-temporal data mining 
+- Spatial and spatio-temporal data warehousing 
+- Performance evaluation and benchmarking 
+- Reasoning and spatio-temporal data quality 
+- Online and adaptive wide-area spatial query processing 
+- Spatial mediators and intelligent agents 
+ 
+INSTRUCTIONS FOR AUTHORS:
+Authors are invited to submit full papers or extended abstracts (up to 13 pages 
+long) or one-page descriptions of panel and tutorial proposals by May 11, 
+2001. Selection will be based on originality and contribution to the field.
+Manuscripts must be in English, typed in double spaced format in 12 point font. 
+Each paper/extended abstract should have an extra cover page with name, title, 
+and address (including e-mail address) of the contact author and an abstract of 
+no more than 250 words. Each panel proposal should include a list of proposed 
+panelists. Electronic submissions are STRONGLY encouraged! Submit ONLINE your 
+paper or panel/tutorial proposal by May 11, 2001. Your paper must be in 
+postscipt, or pdf file format. If electronic submission is not possible, please 
+send six copies of the paper or panel/tutorial proposal to the following postal 
+address:
+
+Prof. Walid G. Aref
+Dept. of Computer Sciences
+Purdue University
+West Lafayette, Indiana, USA
+tel:  765-494-1997 
+fax: 765-494-0739 
+email: aref@cs.purdue.edu
+
+JOURNAL SPECIAL ISSUE: 
+In addition to the symposium proceedings, selected submissions will be chosen by 
+the Program Committee to be submitted as full papers of a special issue of a 
+journal (to be announced later). 
+ 
+IMPORTANT DATES: 
+          . May 11, 2001             Paper/Panel submission deadline
+          . July 13, 2001            Notification of results
+          . August 3, 2001           Final version of papers due 
+  
+GENERAL CHAIRS: 
+Kia Makki, Florida International University, U.S.A. 
+Niki Pissinou, Florida International University, U.S.A. 
+
+PROGRAM CHAIR:
+Walid G. Aref, Purdue University, U.S.A. 
+
+PROGRAM COMMITTEE:
+Wael Badawy, University of Calgary, Canada 
+Patrick Bergougnoux, Université Toulouse 3, France 
+Tiziana Catarci, Universita' degli Studi di Roma "La Sapienza", Italy 
+Max J. Egenhofer, NCGIA, University of Maine, U.S.A. 
+Amr El Abbadi, UC Santa Barbara, U.S.A. 
+Paolino Di Felice, University of L'Aquila, Italy 
+Andrew U. Frank, TU Vienna, Austria
+Mark Gahegan, Penn. State, U.S.A. 
+Ralf Hartmut Gueting, Fernuniversitaet Hagen, Germany 
+Christian S. Jensen, Aalborg University, Denmark 
+Ibrahim Kamel, Panasonic Information and Networking Technologies Lab. U.S.A. 
+Hassan Karimi, University of Pittsburgh, U.S.A. 
+Nick Koudas, AT&T Labs Research, U.S.A. 
+Robert Laurini, INSA and University of Lyon, France 
+Scott Leutenegger, University of Denver, U.S.A. 
+Ki-Joune Li Pusan, National University, South Korea 
+Scott Morehouse, ESRI, U.S.A. 
+Beng Chin Ooi, National University of Singapore, Singapore 
+Peter van Oosterom, Delft University of Technology, The Netherlands 
+Dimitris Papadias, Hong Kong University of Science and Technology, Hong Kong 
+Jignesh Patel, University of Michigan, U.S.A. 
+Sunil Prabhakar, Purdue University, U.S.A. 
+Siva Ravada, Oracle Corporation 
+Markus Schneider, FernUniversitaet Hagen, Germany 
+Bernhard Seeger, University of Marburg, Germany 
+Jayant Sharma, Oracle Corporation 
+Shashi Shekhar, University of Minnesota, U.S.A. 
+Emmanuel Stefanakis, Harokopio University, Athens, Greece 
+Vassilis Tsotras, University of California, Riverside 
+Agnes Voisard, Freie Universitaet, Berlin, Germany 
+Ouri Wolfson, University of Illinois at Chicago, U.S.A. 
+
+MORE INFORMATION:
+
+Additional information (hotel reservations, travel arrangements, etc.) will be
+posted at the home page: http://outlook.cs.purdue.edu/ACM_GIS2001.
+
+Call for Papers document available in HTML, PS, PDF, ASCII formats 
+

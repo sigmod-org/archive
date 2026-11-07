@@ -1,0 +1,125 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_4.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Ratio Rules: A New Paradigm for Fast, Quantifiable Data Mining</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_k.htm#Flip Korn">Flip Korn</a>, <a href="m_authors_l.htm#Alexandros Labrinidis">Alexandros Labrinidis</a>, <a href="m_authors_k.htm#Yannis Kotidis">Yannis Kotidis</a>, <a href="m_authors_f.htm#Christos Faloutsos">Christos Faloutsos</a></center></td></tr></table></center><a target="disc_pdfW824" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Association Rule Mining algorithms operate on a data matrix (e.g., customers &times; products) to derive <i>association rules</i> [2, 23].
+We propose a new paradigm, namely, <i>Ratio Rules</i>, which are quantifiable in that we can measure the "goodness" of a set of discovered rules.
+We propose to use the "guessing error" as a measure of the "goodness", that is, the root- mean-square error of the reconstructed values of the cellsof the given matrix, when we pretend that they are unknown.
+Another contribution is a novel method to guess missing/hidden values fromthe Ratio Rules that our method derives.
+For example, if somebody bought $10 of milk and $3 of bread, our rules can"guess" the amount spent on, say, butter.
+Thus, we can perform a variety of important tasks such as forecasting, answering "what-if" scenarios, detecting outliers, and visualizing the data.
+Moreover, we show how to compute Ratio Rules in a <i>single</i> pass over the dataset with small memory requirements (a few small matrices), in contrast to traditional association rule mining methods that require multiple passes and/or large memory.
+Experiments on several real datasets (e.g., basketball and baseball statistics, biological data) demonstrate that the proposed method consistently achieves a "guessing error" of up to 5 times less than the straightforward competitor.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd><a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Database Mining: A Performance Perspective.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#AgrawalIS93">TKDE 5(6)</a>: 914-925(1993)<dt>[2]<dd><a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Mining Association Rules between Sets of Items in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#AgrawalIS93">SIGMOD Conference 1993</a>: 207-216<dt>[3]<dd><a name="AgrawalS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shafer:John_C=.html">John C. Shafer</a>:
+Parallel Mining of Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#AgrawalS96">TKDE 8(6)</a>: 962-969(1996)<dt>[4]<dd><a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>:
+Fast Algorithms for Mining Association Rules in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#AgrawalS94">VLDB 1994</a>: 487-499<dt>[5]<dd><a name="ArningAR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arning:Andreas.html">Andreas Arning</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">Prabhakar Raghavan</a>:
+A Linear Method for Deviation Detection in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#ArningAR96">KDD 1996</a>: 164-169<dt>[6]<dd>...
+<dt>[7]<dd><a name="BrinMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">Sergey Brin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">Rajeev Motwani</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">Craig Silverstein</a>:
+Beyond Market Baskets: Generalizing Association Rules to Correlations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BrinMS97">SIGMOD Conference 1997</a>: 265-276<dt>[8]<dd>...
+<dt>[9]<dd><a name="ChenHY96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">Ming-Syan Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>:
+Data Mining: An Overview from a Database Perspective.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#ChenHY96">TKDE 8(6)</a>: 866-883(1996)<dt>[10]<dd>...
+<dt>[11]<dd><a name="FayyadU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fayyad:Usama_M=.html">Usama M. Fayyad</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Uthurusamy:Ramasamy.html">Ramasamy Uthurusamy</a>:
+Data Mining and Knowledge Discovery in Databases (Introduction to the Special Section).
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm39.html#FayyadU96">CACM 39(11)</a>: 24-26(1996)<dt>[12]<dd><a name="FoltzD92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Foltz:Peter_W=.html">Peter W. Foltz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dumais:Susan_T=.html">Susan T. Dumais</a>:
+Personalized Information Delivery: An Analysis of Information Filtering Methods.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#FoltzD92">CACM 35(12)</a>: 51-60(1992)<dt>[13]<dd><a name="HanF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Yongjian.html">Yongjian Fu</a>:
+Discovery of Multiple-Level Association Rules from Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HanF95">VLDB 1995</a>: 420-431<dt>[14]<dd><a name="Hou96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">Wen-Chi Hou</a>:
+Extraction and Applications of Statistical Relationships in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#Hou96">TKDE 8(6)</a>: 939-945(1996)<dt>[15]<dd>...
+<dt>[16]<dd><a name="ParkCY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Park:Jong_Soo.html">Jong Soo Park</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">Ming-Syan Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>:
+An Effective Hash Based Algorithm for Mining Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#ParkCY95">SIGMOD Conference 1995</a>: 175-186<dt>[17]<dd>William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery:
+Numerical Recipes in C, 2nd Edition.
+ Cambridge University Press 1992<br>
+<a href="http://www.nr.com/">Contents</a><dt>[18]<dd><a name="Quinlan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">J. Ross Quinlan</a>:
+C4.5: Programs for Machine Learning.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1993, ISBN 1-55860-238-0<br>
+<dt>[19]<dd><a name="SaltonG83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salton:Gerard.html">Gerard Salton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McGill:Michael.html">Michael McGill</a>:
+Introduction to Modern Information Retrieval.
+ McGraw-Hill Book Company 1984, ISBN 0-07-054484-0<br>
+<dt>[20]<dd><a name="SavasereON95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Savasere:Ashoka.html">Ashoka Savasere</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Omiecinski:Edward.html">Edward Omiecinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Navathe:Shamkant_B=.html">Shamkant B. Navathe</a>:
+An Efficient Algorithm for Mining Association Rules in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#SavasereON95">VLDB 1995</a>: 432-444<dt>[21]<dd><a name="SilberschatzT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">Abraham Silberschatz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tuzhilin:Alexander.html">Alexander Tuzhilin</a>:
+What Makes Patterns Interesting in Knowledge Discovery Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#SilberschatzT96">TKDE 8(6)</a>: 970-974(1996)<dt>[22]<dd><a name="SrikantA95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>:
+Mining Generalized Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#SrikantA95">VLDB 1995</a>: 407-419<dt>[23]<dd><a name="SrikantA96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>:
+Mining Quantitative Association Rules in Large Relational Tables.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#SrikantA96">SIGMOD Conf. 1996</a>: 1-12</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/KornLKF98,<br>  author    = {Flip Korn and<br>               Alexandros Labrinidis and<br>               Yannis Kotidis and<br>               Christos Faloutsos},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Ratio Rules: A New Paradigm for Fast, Quantifiable Data Mining},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {582-593},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

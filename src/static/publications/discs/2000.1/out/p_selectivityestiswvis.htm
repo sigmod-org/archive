@@ -1,0 +1,604 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Selectivity Estimation in Spatial Databases</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_11.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Selectivity Estimation in Spatial Databases
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_swarup_acharya.htm">Swarup Acharya</a>, 
+<a href = "a_viswanath_poosala.htm">Viswanath Poosala</a>, and 
+<a href = "a_sridhar_ramaswamy.htm">Sridhar Ramaswamy</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/selectivityestiswvis.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmospatialdatbases.htm">Return to Spatial Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Selectivity estimation of queries is an important and well-studied problem in relational database systems. In this paper, we examine selectivity estimation in the context of Geographic Information Systems, which manage spatial data such as points, lines, poly-lines and polygons. In particular, we focus on point and range queries over two-dimensional rectangular data. We propose several techniques based on using spatial indices, histograms, binary space partitionings (BSPs), and the novel notion of spatial skew. Our techniques carefully partition the input rectangles into subsets and approximate each partition accurately. We present a detailed experimental study comparing the proposed techniques and the best known sampling and parametric techniques. We evaluate them using synthetic as well as real-life TIGER datasets. Based on our experiments, we identify a BSP based partitioning that we call Min-Skew which consistently provides the most accurate selectivity estimates for spatial queries. The Min-Skew partitioning can be constructed efficiently, occupies very little space, and provides accurate selectivity estimates over a broad range of spatial queries.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[Ant92]
+<dd>
+<a name="Antoshenkov92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">
+Gennady Antoshenkov
+</a>
+: Random Sampling from Pseudo-Ranked B+ Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#Antoshenkov92">
+VLDB 1992
+</a>
+: 375-382
+<dt>
+[Aok97]
+<dd>
+<a name="Aoki98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aoki:Paul_M=.html">
+Paul M. Aoki
+</a>
+: Generalizing ``Search'' in Generalized Search Trees (Extended Abstract). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#Aoki98">
+ICDE 1998
+</a>
+: 380-389
+<dt>
+[APR99]
+<dd>
+... 
+<dt>
+[ARC93]
+<dd>
+Environmental Systems Research Institute (Ed.): Understanding GIS - The ARC/INFO Method, 3rd Ed.  GeoInformation International / John Wiley 1995, ISBN 1-899761-04-7 and 0-470-24987-0 (USA)
+<br>
+ 
+<dt>
+[BF95]
+<dd>
+<a name="BelussiF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Belussi:Alberto.html">
+Alberto Belussi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Estimating the Selectivity of Spatial Queries Using the `Correlation' Fractal Dimension. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#BelussiF95">
+VLDB 1995
+</a>
+: 299-310
+<dt>
+[BKSS90]
+<dd>
+<a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">
+Norbert Beckmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 322-331
+<dt>
+[CR94]
+<dd>
+<a name="ChenR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Chungmin_Melvin.html">
+Chungmin Melvin Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+: Adaptive Selectivity Estimation Using Query Feedback. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1994
+</a>
+: 161-172
+<dt>
+[DeW94]
+<dd>
+<a name="DeWittKLPY94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kabra:Navin.html">
+Navin Kabra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Luo:Jun.html">
+Jun Luo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">
+Jignesh M. Patel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Jie=Bing.html">
+Jie-Bing Yu
+</a>
+: Client-Server Paradise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#DeWittKLPY94">
+VLDB 1994
+</a>
+: 558-569
+<dt>
+[GG82]
+<dd>
+<a name="GelenbeG82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gelenbe:Erol.html">
+Erol Gelenbe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardy:Dani=egrave=le.html">
+Dani&egrave;le Gardy
+</a>
+: The Size of Projections of Relations Satisfying a Functional Dependency. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb82.html#GelenbeG82">
+VLDB 1982
+</a>
+: 325-333
+<dt>
+[GRSS97]
+<dd>
+<a name="GrumbachRSS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grumbach:St=eacute=phane.html">
+St&eacute;phane Grumbach
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rigaux:Philippe.html">
+Philippe Rigaux
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Michel.html">
+Michel Scholl
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Segoufin:Luc.html">
+Luc Segoufin
+</a>
+: DEDALE, A Spatial Constraint Database. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl97.html#GrumbachRSS97">
+DBPL 1997
+</a>
+: 38-59
+<dt>
+[Gut85]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[HNSS95]
+<dd>
+<a name="HaasNSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stokes:Lynne.html">
+Lynne Stokes
+</a>
+: Sampling-Based Estimation of the Number of Distinct Values of an Attribute. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HaasNSS95">
+VLDB 1995
+</a>
+: 311-322
+<dt>
+[Int97]
+<dd>
+... 
+<dt>
+[KMS97]
+<dd>
+<a name="KhannaMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Khanna:Sanjeev.html">
+Sanjeev Khanna
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muthukrishnan:S=.html">
+S. Muthukrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Skiena:Steven.html">
+Steven Skiena
+</a>
+: Efficient Array Partitioning. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icalp/icalp97.html#KhannaMS97">
+ICALP 1997
+</a>
+: 616-626
+<dt>
+[Koo80]
+<dd>
+<a name="Kooi80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kooi:Robert.html">
+Robert Kooi
+</a>
+: The Optimization of Queries in Relational Databases. Ph.D. thesis,  Case Western Reserve University 1980
+<br>
+ 
+<dt>
+[LNS90]
+<dd>
+<a name="LiptonNS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+: Practical Selectivity Estimation through Adaptive Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 1-11
+<dt>
+[Map98]
+<dd>
+... 
+<dt>
+[MPS99]
+<dd>
+<a name="MuthukrishnanPS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muthukrishnan:S=.html">
+S. Muthukrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suel:Torsten.html">
+Torsten Suel
+</a>
+: On Rectangular Partitionings in Two Dimensions: Algorithms, Complexity, and Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#MuthukrishnanPS99">
+ICDT 1999
+</a>
+: 236-256
+<dt>
+[PI97]
+<dd>
+<a name="PoosalaI97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+: Selectivity Estimation Without the Attribute Value Independence Assumption. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#PoosalaI97">
+VLDB 1997
+</a>
+: 486-495
+<dt>
+[PIHS96]
+<dd>
+<a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Improved Histograms for Selectivity Estimation of Range Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 294-305
+<dt>
+[Poo97]
+<dd>
+<a name="Poosala97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Histogram-Based Estimation Techniques in Database Systems. Ph.D. thesis,  Univ. of Wisconsin-Madison 1997
+<br>
+ 
+<dt>
+[PSC84]
+<dd>
+<a name="Piatetsky-ShapiroC84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">
+Gregory Piatetsky-Shapiro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connell:Charles.html">
+Charles Connell
+</a>
+: Accurate Estimation of the Number of Tuples Satisfying a Condition. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1984
+</a>
+: 256-276
+<dt>
+[SAC+79]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1979
+</a>
+: 23-34
+<dt>
+[Sam89a]
+<dd>
+... 
+<dt>
+[Sam89b]
+<dd>
+<a name="Samet90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Samet:Hanan.html">
+Hanan Samet
+</a>
+: The Design and Analysis of Spatial Data Structures.  Addison-Wesley 1990
+<br>
+ 
+<dt>
+[SFGM93]
+<dd>
+<a name="StonebrakerFGM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Frew:James.html">
+James Frew
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardels:Kenn.html">
+Kenn Gardels
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meredith:Jeff.html">
+Jeff Meredith
+</a>
+: The Sequoia 2000 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 2-11
+<dt>
+[SRF87]
+<dd>
+<a name="SellisRF87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: The R+-Tree: A Dynamic Index for Multi-Dimensional Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#SellisRF87">
+VLDB 1987
+</a>
+: 507-518
+<dt>
+[tig92]
+<dd>
+... 
+<dt>
+[TS96]
+<dd>
+<a name="TheodoridisS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theodoridis:Yannis.html">
+Yannis Theodoridis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+: A Model for the Prediction of R-tree Performance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#TheodoridisS96">
+PODS 1996
+</a>
+: 161-171
+<dt>
+[Ube94]
+<dd>
+<a name="Ubell94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ubell:Michael.html">
+Michael Ubell
+</a>
+: The Montage Extensible DataBlade Achitecture. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1994
+</a>
+: 482
+<dt>
+[Zip49]
+<dd>
+George Kingsley Zipf: Human Behaviour and the Principle of Least Effort: an Introduction to Human Ecology.  Addison-Wesley 1949
+<br>
+ 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/AcharyaPR99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Swarup&nbsp;Acharya&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Viswanath&nbsp;Poosala&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sridhar&nbsp;Ramaswamy},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Selectivity&nbsp;Estimation&nbsp;in&nbsp;Spatial&nbsp;Databases},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{13-24},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

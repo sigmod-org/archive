@@ -1,0 +1,575 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Querying Network Directories</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_7.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Querying Network Directories
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_h_v_jagadish.htm">H. V. Jagadish</a>, 
+<a href = "a_laks_v_s_lakshmana.htm">Laks V. S. Lakshmanan</a>, 
+<a href = "a_tova_milo.htm">Tova Milo</a>, 
+<a href = "a_divesh_srivastava.htm">Divesh Srivastava</a>, and 
+<a href = "a_dimitra_vista.htm">Dimitra Vista</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/queryingnetworkhlat.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmolanguagesaodels.htm">Return to Languages and Models</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Hierarchically structured directories have recently proliferated with the growth of the Internet, and are being used to store not only address books and contact information for people, but also personal profiles, network resource information, and network and service policies. These systems provide a means for managing scale and heterogeneity, while allowing for conceptual unity and autonomy across multiple directory servers in the network, in a way far superior to what conventional relational or object-oriented databases offer. Yet, in deployed systems today, much of the data is modeled in an ad hoc manner, and many of the more sophisticated "queries" involve navigational access. In this paper, we develop the core of a formal data model for network directories, and propose a sequence of efficiently computable query languages with increasing expressive power. The directory data model can naturally represent rich forms of heterogeneity exhibited in the real world. Answers to queries expressible in our query languages can exhibit the same kinds of heterogeneity. We present external memory algorithms for the evaluation of queries posed in our directory query languages, and prove the efficiency of each algorithm in terms of its I/O complexity. Our data model and query languages share the exibility and utility of the recent proposals for semi-structured data models, while at the same time effectively addressing the specific needs of network directory applications, which we demonstrate by means of a representative real-life example.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+... 
+<dt>
+[2]
+<dd>
+<a name="AbiteboulQMWW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">
+Jason McHugh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiener:Janet_L=.html">
+Janet L. Wiener
+</a>
+: The Lorel Query Language for Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jodl/jodl1.html#AbiteboulQMWW97">
+Int. J. on Digital Libraries 1(1)
+</a>
+: 68-88(1997)
+<dt>
+[3]
+<dd>
+... 
+<dt>
+[4]
+<dd>
+... 
+<dt>
+[5]
+<dd>
+<a name="BeeriM99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Schemas for Integration and Translation of Structured and Semi-structured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#BeeriM99">
+ICDT 1999
+</a>
+: 296-313
+<dt>
+[6]
+<dd>
+<a name="BorgidaBMR89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Borgida:Alexander.html">
+Alexander Borgida
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brachman:Ronald_J=.html">
+Ronald J. Brachman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McGuinness:Deborah_L=.html">
+Deborah L. McGuinness
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Resnick:Lori_Alperin.html">
+Lori Alperin Resnick
+</a>
+: CLASSIC: A Structural Data Model for Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1989
+</a>
+: 58-67
+<dt>
+[7]
+<dd>
+<a name="BunemanDFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Adding Structure to Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#BunemanDFS97">
+ICDT 1997
+</a>
+: 336-350
+<dt>
+[8]
+<dd>
+<a name="BunemanDHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hillebrand:Gerd_G=.html">
+Gerd G. Hillebrand
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language and Optimization Techniques for Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 505-516
+<dt>
+[9]
+<dd>
+<a name="CalvaneseGL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Calvanese:Diego.html">
+Diego Calvanese
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Giacomo:Giuseppe_De.html">
+Giuseppe De Giacomo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lenzerini:Maurizio.html">
+Maurizio Lenzerini
+</a>
+: What can Knowledge Representation do for Semi-Structured Data? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/aaai/aaai98.html#CalvaneseGL98">
+AAAI/IAAI 1998
+</a>
+: 205-210
+<dt>
+[10]
+<dd>
+<a name="CardelliW85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cardelli:Luca.html">
+Luca Cardelli
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wegner:Peter.html">
+Peter Wegner
+</a>
+: On Understanding Types, Data Abstraction, and Polymorphism. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur17.html#CardelliW85">
+Computing Surveys 17(4)
+</a>
+: 471-522(1985)
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="ConsensM90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Consens:Mariano_P=.html">
+Mariano P. Consens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: GraphLog: a Visual Formalism for Real Life Recursion. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods90.html#ConsensM90">
+PODS 1990
+</a>
+: 404-416
+<dt>
+[13]
+<dd>
+<a name="ConsensM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Consens:Mariano_P=.html">
+Mariano P. Consens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: Hy+: A Hygraph-based Query and Visualization System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 511-516
+<dt>
+[14]
+<dd>
+<a name="FernandezFLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language for a Web-Site Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#FernandezFLS97">
+SIGMOD Record 26(3)
+</a>
+: 4-11(1997)
+<dt>
+[15]
+<dd>
+<a name="GoldmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: DataGuides: Enabling Query Formulation and Optimization in Semistructured Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GoldmanW97">
+VLDB 1997
+</a>
+: 436-445
+<dt>
+[16]
+<dd>
+... 
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="JacobsonKSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jacobson:Guy.html">
+Guy Jacobson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Balachander.html">
+Balachander Krishnamurthy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Focusing Search in Hierarchical Structures with Directory Sets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm98.html#JacobsonKSS98">
+CIKM 1998
+</a>
+: 1-9
+<dt>
+[20]
+<dd>
+<a name="JagadishJSV98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jones:Mark_A=.html">
+Mark A. Jones
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vista:Dimitra.html">
+Dimitra Vista
+</a>
+: Flexible List Management in a Directory. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm98.html#JagadishJSV98">
+CIKM 1998
+</a>
+: 10-19
+<dt>
+[21]
+<dd>
+<a name="McCreight76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McCreight:Edward_M=.html">
+Edward M. McCreight
+</a>
+: A Space-Economical Suffix Tree Construction Algorithm. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 23(2)
+</a>
+: 262-272(1976)
+<dt>
+[22]
+<dd>
+... 
+<dt>
+[23]
+<dd>
+<a name="NestorovAM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nestorov:Svetlozar.html">
+Svetlozar Nestorov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+: Infering Structure in Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#NestorovAM97">
+SIGMOD Record 26(4)
+</a>
+: 39-43(1997)
+<dt>
+[24]
+<dd>
+<a name="RossSC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">
+Kenneth A. Ross
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chatziantoniou:Damianos.html">
+Damianos Chatziantoniou
+</a>
+: Complex Aggregation at Multiple Granularities. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt98.html#RossSC98">
+EDBT 1998
+</a>
+: 263-277
+<dt>
+[25]
+<dd>
+<a name="Ullman82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Principles of Database Systems, 2nd Edition.  Computer Science Press 1982, ISBN 0-914894-36-6
+<br>
+ 
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+... 
+<dt>
+[28]
+<dd>
+... 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="JagadishLS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">
+Laks V. S. Lakshmanan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: What can Hierarchies do for Data Warehouses? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#JagadishLS99">
+VLDB 1999
+</a>
+: 530-541
+<li>
+ 
+<a name="CluetKS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">
+Sophie Cluet
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kapitskaia:Olga.html">
+Olga Kapitskaia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Using LDAP Directory Caches. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#CluetKS99">
+PODS 1999
+</a>
+: 273-284
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/JagadishLMSV99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{H.&nbsp;V.&nbsp;Jagadish&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laks&nbsp;V.&nbsp;S.&nbsp;Lakshmanan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tova&nbsp;Milo&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Divesh&nbsp;Srivastava&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dimitra&nbsp;Vista},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Querying&nbsp;Network&nbsp;Directories},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{133-144},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

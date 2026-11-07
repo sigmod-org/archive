@@ -1,0 +1,116 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_1.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Caching Multidimensional Queries Using Chunks</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_d.htm#Prasad Deshpande">Prasad Deshpande</a>, <a href="m_authors_r.htm#Karthikeyan Ramasamy">Karthikeyan Ramasamy</a>, <a href="m_authors_s.htm#Amit Shukla">Amit Shukla</a>, <a href="m_authors_n.htm#Jeffrey F. Naughton">Jeffrey F. Naughton</a></center></td></tr></table></center><a target="disc_pdf]66" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><a target="disc_slides81W" href="sigmod_papers/slisp_caching_multidimensi/index.htm"><b><center>Slides (HTML)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+Caching has been proposed (and implemented) by OLAP systems in order to reduce response times for multidimensional queries. Previous work on such caching has considered table level caching and query level caching. Table level caching is more suitable for static schemes. On the other hand, query level caching can be used in dynamic schemes, but is too coarse for "large" query results. Query level caching has the further drawback for small query results in that it is only effective when a new query is subsumed by a previously cached query. In this paper, we propose caching small regions of the multidimensional space called "chunks". Chunk-based caching allows fine granularity caching, and allows queries to partially reuse the results of previous queries with which they overlap. To facilitate the computation of chunks required by a query but missing from the cache, we propose a new organization for relational tables, which we call a "chunked file." Our experiments show that for workloads that exhibit query locality, chunked caching combined with the chunked file organization performs better than query level caching. An unexpected benefit of the chunked file organization is that, due to its multidimensional clustering properties, it can significantly improve the performance of queries that "miss" the cache entirely as compared to traditional file organizations.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AAD+96]<dd><a name="AgarwalADGNRS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agarwal:Sameet.html">Sameet Agarwal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">Sunita Sarawagi</a>:
+On the Computation of Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#AgarwalADGNRS96">VLDB 1996</a>: 506-521<dt>[BPT97]<dd><a name="BaralisPT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">Elena Baralis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paraboschi:Stefano.html">Stefano Paraboschi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Teniente:Ernest.html">Ernest Teniente</a>:
+Materialized Views Selection in a Multidimensional Database.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#BaralisPT97">VLDB 1997</a>: 156-165<dt>[DFJST]<dd><a name="DarFJST96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">Michael J. Franklin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Michael.html">Michael Tan</a>:
+Semantic Data Caching and Replacement.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#DarFJST96">VLDB 1996</a>: 330-341<dt>[DKLP+94]<dd><a name="DeWittKLPY94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kabra:Navin.html">Navin Kabra</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Luo:Jun.html">Jun Luo</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">Jignesh M. Patel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Jie=Bing.html">Jie-Bing Yu</a>:
+Client-Server Paradise.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#DeWittKLPY94">VLDB 1994</a>: 558-569<dt>[Fell57]<dd>...
+<dt>[GBLP96]<dd><a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">Adam Bosworth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">Andrew Layman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">ICDE 1996</a>: 152-159<dt>[GHRU97]<dd><a name="GuptaHRU97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Index Selection for OLAP.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#GuptaHRU97">ICDE 1997</a>: 208-219<dt>[Gupt97]<dd><a name="Gupta97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>:
+Selection of Views to Materialize in a Data Warehouse.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Gupta97">ICDT 1997</a>: 98-112<dt>[HRU96]<dd><a name="HarinarayanRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Implementing Data Cubes Efficiently.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HarinarayanRU96">SIGMOD Conf. 1996</a>: 205-216<dt>[OG95]<dd><a name="ONeilG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Multi-Table Joins Through Bitmapped Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod24.html#ONeilG95">SIGMOD Record 24(3)</a>: 8-11(1995)<dt>[OQ97]<dd><a name="ONeilQ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>:
+Improved Query Performance with Variant Indexes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ONeilQ97">SIGMOD Conference 1997</a>: 38-49<dt>[RJZN97]<dd>...
+<dt>[RK96]<dd>...
+<dt>[SDJL96]<dd><a name="SrivastavaDJL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">Shaul Dar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">Alon Y. Levy</a>:
+Answering Queries with Aggregation Using Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#SrivastavaDJL96">VLDB 1996</a>: 318-329<dt>[SDN]<dd>...
+<dt>[SDNR96]<dd><a name="ShuklaDNR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shukla:Amit.html">Amit Shukla</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramasamy:Karthikeyan.html">Karthikeyan Ramasamy</a>:
+Storage Estimation for Multidimensional Aggregates in the Presence of Hierarchies.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ShuklaDNR96">VLDB 1996</a>: 522-531<dt>[SS94]<dd><a name="SarawagiS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">Sunita Sarawagi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>:
+Efficient Organization of Large Multidimensional Arrays.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#SarawagiS94">ICDE 1994</a>: 328-336<dt>[SSV96]<dd><a name="ScheuermannSV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scheuermann:Peter.html">Peter Scheuermann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Junho.html">Junho Shim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vingralek:Radek.html">Radek Vingralek</a>:
+WATCHMAN : A Data Warehouse Intelligent Cache Manager.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ScheuermannSV96">VLDB 1996</a>: 51-62<dt>[Ull96]<dd><a name="Ullman96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Efficient Implementation of Data Cubes Via Materialized Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#Ullman96">KDD 1996</a>: 386-388<dt>[ZDN97]<dd><a name="ZhaoDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhao:Yihong.html">Yihong Zhao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+An Array-Based Algorithm for Simultaneous Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ZhaoDN97">SIGMOD Conference 1997</a>: 159-170</dl>
+Referenced By:
+<ol>
+<li> <a name="ShuklaDN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shukla:Amit.html">Amit Shukla</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+Materialized View Selection for Multidimensional Datasets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#ShuklaDN98">VLDB 1998</a>: 488-499</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/DeshpandeRSN98,<br>  author    = {Prasad Deshpande and<br>               Karthikeyan Ramasamy and<br>               Amit Shukla and<br>               Jeffrey F. Naughton},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Caching Multidimensional Queries Using Chunks},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {259-270},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

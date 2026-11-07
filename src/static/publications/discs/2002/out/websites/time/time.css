@@ -1,0 +1,39 @@
+/* style sheet per TIME web pages */
+/* Claudio Bettini 1/1/2001 */
+
+/* sfondo pagine web */
+
+BODY { 
+        font-family: 'Gill Sans',Humanist-521,verdana,arial,helvetica,geneva,san
+s-serif;
+        color: black;
+        background: #FFFFD8; 
+        margin: 0;
+        border: 0;
+        padding: 0;
+}
+
+
+A:link /* colore link */ 
+{
+color: #400080;
+background-color: transparent
+}
+
+A:visited /* colore link visitati */
+{ 
+color: #C40000;
+background-color: transparent
+}
+
+
+H2      {font-weight: bold;
+               text-align: left;
+                color: #0000FF;
+                background: transparent;
+                font-family: 'Gill Sans', Arial, sans-serif}
+
+CITE    {font-family: 'Gill Sans', Arial, sans-serif;
+                font-style: italic}
+
+

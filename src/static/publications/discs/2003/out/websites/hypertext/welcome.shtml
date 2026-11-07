@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Hypertext 2002 Welcome Message</title>
+<link rel     = STYLESHEET 
+      href    = "style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<br>
+<br>
+<br>
+<br>
+<font size=+2>Location:</font><br>
+&nbsp;&nbsp;University of Maryland<br>
+&nbsp;&nbsp;College Park, MD 20742<br>
+&nbsp;&nbsp;USA<br>
+<br>
+<font size=+2>Conference dates:</font>
+&nbsp;&nbsp;June 11<sup>th</sup> - 15<sup>th</sup>, 2002<br>
+<br>
+<font size=+2><a href=schedule.shtml>Conference Schedule</a></font>
+<br><br>
+	
+<br><br>
+
+<br>
+
+</body>
+</html>

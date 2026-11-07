@@ -1,0 +1,112 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_2.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Changing the Rules: Transformations for Rule-Based Optimizers</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_c.htm#Mitch Cherniack">Mitch Cherniack</a>, <a href="m_authors_z.htm#Stanley B. Zdonik">Stanley B. Zdonik</a></center></td></tr></table></center><a target="disc_pdf87=" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+Rule-based optimizers are extensible because they consist of modifiable sets of rules. For modification to be straightforward, rules must be easily reasoned about (i.e., understood and verified). At the same time, rules must be expressive and efficient (to fire) for rule-based optimizers to be practical. Production-style rules (as in [15]) are expressed with code and are hard to reason about. Pure rewrite rules (as in [1]) lack code, but cannot atomically express complex transformations (e.g., normalizations). Some systems allow rules to be grouped, but sacrifice efficiency by providing limited control over their firing. Therefore, none of these approaches succeeds in making rules expressive, efficient and understandable.<br><br> We propose a language (COKO) for expressing an alternative form of input to a rule-based optimizer. A COKO transformation consists of a set of declarative (KOLA) rewrite rules and a (firing) algorithm that specifies their firing. It is straightforward to reason about COKO transformations because all query modification is expressed with declarative rewrite rules. Firing is specified algorithmically with an expressive language that provides direct control over how query representations are traversed, and under what conditions rules are fired. Therefore, COKO achieves a delicate balance of understandability, efficiency and expressivity.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd><a name="BeckerG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Becker:Ludger.html">Ludger Becker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=ting:Ralf_Hartmut.html">Ralf Hartmut G&uuml;ting</a>:
+Rule-Based Optimization and Query Processing in an Extensible Geometric Database System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods17.html#BeckerG92">TODS 17(2)</a>: 247-303(1992)<dt>[2]<dd>...
+<dt>[3]<dd>...
+<dt>[4]<dd>...
+<dt>[5]<dd><a name="CherniackZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cherniack:Mitch.html">Mitch Cherniack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">Stanley B. Zdonik</a>:
+Rule Languages and Internal Algebras for Rule-Based Optimizers.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#CherniackZ96">SIGMOD Conf. 1996</a>: 401-412<dt>[6]<dd><a name="FinanceG91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finance:B=eacute=atrice.html">B&eacute;atrice Finance</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">Georges Gardarin</a>:
+A Rule-Based Query Rewriter in an Extensible DBMS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde91.html#FinanceG91">ICDE 1991</a>: 248-256<dt>[7]<dd><a name="FinanceG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finance:B=eacute=atrice.html">B&eacute;atrice Finance</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">Georges Gardarin</a>:
+A Rule-Based Query Optimizer with Multiple Search Strategies.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dke/dke13.html#FinanceG94">DKE 13(1)</a>: 1-29(1994)<dt>[8]<dd><a name="Graefe95a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+The Cascades Framework for Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#Graefe95a">Data Engineering Bulletin 18(3)</a>: 19-29(1995)<dt>[9]<dd><a name="GraefeM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McKenna:William_J=.html">William J. McKenna</a>:
+The Volcano Optimizer Generator: Extensibility and Efficient Search.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#GraefeM93">ICDE 1993</a>: 209-218<dt>[10]<dd>...
+<dt>[11]<dd><a name="Kim82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">Won Kim</a>:
+On Optimizing an SQL-like Nested Query.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#Kim82">TODS 7(3)</a>: 443-469(1982)<dt>[12]<dd>...
+<dt>[13]<dd><a name="MitchellDZ93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitchell:Gail.html">Gail Mitchell</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">Umeshwar Dayal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">Stanley B. Zdonik</a>:
+Control of an Extensible Query Optimizer: A Planning-Based Approach.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#MitchellDZ93">VLDB 1993</a>: 517-528<dt>[14]<dd><a name="MumickFPR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finkelstein:Sheldon_J=.html">Sheldon J. Finkelstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>:
+Magic is Relevant.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#MumickFPR90">SIGMOD Conference 1990</a>: 247-258<dt>[15]<dd><a name="PiraheshHH92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasan:Waqar.html">Waqar Hasan</a>:
+Extensible/Rule Based Query Rewrite Optimization in Starburst.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#PiraheshHH92">SIGMOD Conference 1992</a>: 39-48<dt>[16]<dd>...
+<dt>[17]<dd><a name="ScioreS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sciore:Edward.html">Edward Sciore</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sieg_Jr=:John.html">John Sieg Jr.</a>:
+A Modular Query Optimizer Generator.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde90.html#ScioreS90">ICDE 1990</a>: 146-153<dt>[18]<dd><a name="SeshadriHPLRSSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:Praveen.html">Praveen Seshadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leung:T=_Y=_Cliff.html">T. Y. Cliff Leung</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stuckey:Peter_J=.html">Peter J. Stuckey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">S. Sudarshan</a>:
+Cost-Based Optimization for Magic: Algebra and Implementation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#SeshadriHPLRSSS96">SIGMOD Conf. 1996</a>: 435-446</dl>
+Referenced By:
+<ol>
+<li> <a name="CherniackZ98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cherniack:Mitch.html">Mitch Cherniack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">Stanley B. Zdonik</a>:
+Inferring Function Semantics to Optimize Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#CherniackZ98">VLDB 1998</a>: 239-250<li> <a name="Fegaras98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fegaras:Leonidas.html">Leonidas Fegaras</a>:
+Query Unnesting in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#Fegaras98">SIGMOD Conference 1998</a>: 49-60</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/CherniackZ98,<br>  author    = {Mitch Cherniack and<br>               Stanley B. Zdonik},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Changing the Rules: Transformations for Rule-Based Optimizers},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {61-72},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

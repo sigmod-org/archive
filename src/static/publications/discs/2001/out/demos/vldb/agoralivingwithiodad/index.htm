@@ -1,0 +1,645 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (X11; I; Linux 2.0.33 i586) [Netscape]">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EF" vlink="#51188E" alink="#FF0000">
+
+<h1>
+Agora: Living with XML and Relational</h1>
+
+<h2>
+Ioana Manolescu, Daniela Florescu, Donald Kossmann, Florian Xhumari, Dan
+Olteanu</h2>
+Software Demonstration at VLDB 2000
+<br>&nbsp;
+<p>We demonstrate a data integration system capable of answering XML queries
+over both relational and XML data, by using relational query processing
+techniques.
+<br>&nbsp;
+<p>The query language for XML queries is <a href="http://lists.w3.org/Archives/Member/w3c-archive/2000Oct/0078.html">Quilt</a>;
+we query our relational data sources under an XML representation (the user
+can supply one, or we use a simple default representation).
+<br>&nbsp;
+<h3>
+Query processing outline</h3>
+A Quilt query is taken through the following steps:
+<ul>
+<li>
+Quilt query normalization: during this step, some equivalent rewritings
+are performed to simplify the query.</li>
+
+<li>
+Translation to SQL: we translate the simplified Quilt query to one or several
+SQL queries over virtual the generic relational schema</li>
+
+<li>
+Relational query rewriting: the data sources are described as views over
+the virtual generic relational schema; using these view definitions, we
+apply a relational algorithm for query rewriting. The result is a relational
+query over the real relational tables the query refers to, plus some virtual
+tables exposing the DOM structure of the native XML documents.</li>
+
+<li>
+Relational query optimization</li>
+
+<li>
+Relational query execution, using the relational tables and a relational
+(DOM-based) API for the XML documents</li>
+
+<li>
+Tagging: we structure the resulting tuples into XML elements, following
+the structure described in the query</li>
+</ul>
+The demo <a href="../../../../out/contentRemovedForCopyright.htm" >poster</a> provides a visual representation
+of these steps.
+<br>&nbsp;
+<h2>
+Demonstration scenario</h2>
+We illustrate the whole query processing chain on the following data collections:
+<br>&nbsp;
+<ul>
+<li>
+a relational table with medical information: Medication(generic_name, brand_name,
+class_mechanism, prescription, gen_equivalent, preparation, storage, prescribed_for,
+dosing, interaction, side_effect). The default XML mapping of this table
+has the following DTD:</li>
+
+<p><br>&lt;!DOCTYPE&nbsp; medications -->
+<br>&lt;!ELEMENT table (tuple)*>
+<br>&lt;!ATTLIST table tableName (#PCDATA)>
+<br>&lt;!ELEMENT tuple (generic_name, brand_name, class_mechanism, prescription,
+gen_equivalent, preparation, storage, prescribed_for, dosing, interaction,
+side_effect)>
+<br>&lt;!ELEMENT generic_name (#PCDATA)>
+<br>&lt;!ELEMENT brand_name (#PCDATA)>
+<br>&lt;!ELEMENT class_mechanism (#PCDATA)>
+<br>&lt;!ELEMENT prescription (#PCDATA)>
+<br>&lt;!ELEMENT gen_equivalent (#PCDATA)>
+<br>&lt;!ELEMENT preparation (#PCDATA)>
+<br>&lt;!ELEMENT storage (#PCDATA)>
+<br>&lt;!ELEMENT prescribed_for (#PCDATA)>
+<br>&lt;!ELEMENT dosing (#PCDATA)>
+<br>&lt;!ELEMENT interaction (#PCDATA)>
+<br>&lt;!ELEMENT side_effect (#PCDATA)>
+<br>&lt;!--]>
+<p>As it can be seen, the default representation models the table/tuple/attribute
+structure by a simple three-levels hierarchy.
+<br>&nbsp;
+<li>
+an XML document storing medical information about illnesses; the DTD is
+as follows:</li>
+
+<br>&lt;!DOCTYPE diseases [ -->
+<br>&nbsp;&lt;!ELEMENT diseases (disease)*>
+<br>&nbsp;&lt;!ELEMENT disease (article?, related_terms?, related_med_procedures?,
+related_medications?)>
+<br>&nbsp;&lt;!ATTLIST disease name CDATA #REQUIRED>
+<p>&nbsp;&lt;!ELEMENT article (power_points?, paragraph*)>
+<br>&nbsp;&lt;!ATTLIST article name CDATA #REQUIRED>
+<br>&nbsp;&lt;!ELEMENT power_points (point)+>
+<br>&nbsp;&lt;!ELEMENT point (#PCDATA)>
+<br>&nbsp;&lt;!ELEMENT paragraph (#PCDATA|title)*>
+<br>&nbsp;&lt;!ELEMENT title (#PCDATA)>
+<br>&nbsp;
+<p>&nbsp;&lt;!ELEMENT related_terms (term)+>
+<br>&nbsp;&lt;!ELEMENT term EMPTY>
+<br>&nbsp;&lt;!ATTLIST term name CDATA #REQUIRED>
+<p>&nbsp;&lt;!ELEMENT related_med_procedures (procedure)+>
+<br>&nbsp;&lt;!ELEMENT procedure EMPTY>
+<br>&nbsp;&lt;!ATTLIST procedure name CDATA #REQUIRED>
+<p>&nbsp;&lt;!ELEMENT related_medications (medication)+>
+<br>&nbsp;&lt;!ELEMENT medication EMPTY>
+<br>&nbsp;&lt;!ATTLIST medication name CDATA #REQUIRED>
+<br>&lt;!--]>
+<br>&nbsp;
+<br>&nbsp;</ul>
+
+<h2>
+Quilt query</h2>
+The following query implements a join between two XML documents: the XML
+representation of the table, and the real XML document. For brevity, we
+show directly the simplified form.
+<p>for $d in document("diseases.xml")//diseases,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $a in $d/article,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $p in $a/paragraph,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $r in $d/related_medications/,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $n in $a@name,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $rn in $r/medication,
+<p>&nbsp;&nbsp;&nbsp;&nbsp; $m in document("medication.xml")//tuple,
+<br>&nbsp;&nbsp;&nbsp;&nbsp; $b in $m/brand_name
+<br>where contains($p, "contagious") and content($rn)=content($b)
+<br>return &lt;result>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fullText($d),
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fullText($m)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/result>
+<p>The first block of<b><i> for</i></b> makes the variables iterate over
+elements from the "diseases.xml" document. Thus, $d iterates over all the
+diseases, $a over all articles concerning this disease, $r over the global
+list of medications related to it, while $rn iterates over the actual set
+of medications; $n is bound to the name attribute of the $d disease element.
+The second <b><i>for</i></b> block iterates over all the tuple elements
+and extracts the name of the medications (remember that the relational
+table we consider contains medication information).&nbsp; From the complete
+<b><i>for</i></b>
+block result tuples of bindings for all the variables present inside the
+block.
+<p>The <b><i>where</i></b> condition performs&nbsp; a selection on the
+binding tuples: only those for which $p corresponds to a paragraph containing
+the word "contagious" are kept, the others are pruned out. Also, the join
+condition is explicit in the <b><i>where </i></b>clause: we want only the
+bindings from both sources that refer to the same medications (same text
+content of $rn, which describes the medication in the diseases document,
+and $b, which corresponds to the medication name in the relational table).
+<p>In all, this query asks for all contagious illnesses, and for those
+illnesses whose recommended medication exists in the medication table,
+the disease XML element corresponding to $d and the medication tuple, corresponding
+to the $m variable, are output in a &lt;result> element.
+<h2>
+Translating the Quilt query to SQL on the generic schema</h2>
+
+<h4>
+General framework</h4>
+The translation of the <b><i>for-where</i></b> clause is quite easy, because
+it is conceptually close to SQL: variables iterate over collections, some
+selections on variable tuples are applied, and the result consists of bindings
+of tuples. Translating the <b><i>return</i></b> clause is more ellaborate,
+since we have to construct hierarchical XML structure from binding tuples.
+To do this, we use the <a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/ShanmugasundaramSBCLPR00.html">"sorted
+outer union"</a> approach proposed by a research group from IBM Almaden.
+The idea is the following. To translate a query whose return clause constructsXML
+structure, a single query is issued first, that returns the binding tuples
+produced by the <b><i>for-where</i></b> block; then, a separate query is
+issued to retrieve each piece of information that is needed in the result.
+The tagging module structures the information extracted by these different
+queries into the desired hierarchical result.
+<br>In our case, the return clause needs two distinct pieces of data: the
+full textual representation of the disease element, and the textual representation
+of the medication element.&nbsp; We issue therefore three SQL queries:
+one corresponding to the <b><i>for-where</i></b> block, and one for each
+data item needed in the result.
+<p>Here is the SQL query corresponding to the <b><i>for-where </i></b>clause
+of the original Quilt query:
+<br>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr>
+<td>select</td>
+
+<td><font color="#660000">e0.elID as $d, e1.elID as $a, e2.elID as $p,
+e3.elID as $r, a0.attrID as $n, e4.elID as $rn,</font> <font color="#000099">e5.elID
+as $m, e6.elID as $b,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>null as dText, null as mText</td>
+</tr>
+
+<tr>
+<td>from&nbsp;</td>
+
+<td><font color="#660000">Document d0, URI u0, Value v0, TransClosure tc0,
+Element e0, QName q0, Value v0,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">Child c0, Element e1, QName q1, Value v1, Child
+c1, Element e2, QName q2, Value v2,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">Child c2, Element e3, QName q3, Value v3,&nbsp;
+Attribute a0, Value v4, Value v5,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">Child c3, Element e4, QName q4, Value v6, Child
+c4, Value v7,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">Document d1, URI u1, Value v8, TransClosure tc1,
+Element e5, QName q5, Value v9,</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">Child c5, Element e6, QName q6, Value v10</font><font color="#000066">,</font>
+Contains fn0</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td><font color="#660000">d0.docURIID=u0.uriID and u0.uriValID=v0.valID
+and v0.value="diseases.xml"&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">and d0.docRootID=tc0.parentID and tc0.childID=e0.elID
+and e0.elQNameID=q0.qNameID and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">q0.qnLocalID="disease" and e0.elID=c0.parentID
+and c0.childID=e1.elID and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">e1.elQNameID=q1.qNameID and q1.qnLocalID=v1.valID
+and v1.value="article" and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">e1.elID=c1.parentID and c1.childID=e2.elID and
+e2.elQNameID=q2.qNameID and q2.qnLocalID=v2.valID and</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">v2.value="paragraph" and e0.elID=c2.parentID
+and c2.childID=e3.elID and e3.elQNameID=q3.qNameID and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">q3.qnLocalID=v3.valID and v3.value="related_medications"
+and a0.attrElID=e3.elID and a0.attrNameID=v4.valID and</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">v4.value="name" and a0.attrValID=v5.valID and
+e3.elID=c3.parentID and c3.childID=e4.elID and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#660000">e4.elQNameID=q4.qNameID and q4.qnLocalID=v6.valID
+and v6.value="medication" and</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">d1.docURIID=u1.uriID and u1.uriValID=v8.valID
+and v8.value="medication.xml" and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">d1.docRootID=tc1.parentID and tc1.childID=e5.elID
+and e5.elQNameID=q5.qNameID and&nbsp;</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">q5.qnLocalID=v9.valID and v9.value="tuple" and
+c5.parentID=e5.elID and c5.childID=e6.elID and</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><font color="#000099">e6.elQNameID=q6.qNameID and q6.qnLocalID=v10.valID
+and v10.value="brand_name" and</font></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>fn0.in0=e2.elID and fn0.in1="contagious" and fn0.out=true and 
+<font color="#660000">c4.parentID=e3.elID
+and c4.childValID=v7.valID</font> and <b><font color="#009900">v7.value=v5.value</font></b></td>
+</tr>
+</table>
+
+<p>In this query, the red tables and conditions correspond to elements,
+attributes, and parent-child relationships in the "diseases.xml" document;
+the blue part of the query comes from the query fragment describing elements
+of the "medication.xml" document. We left in black the function Contains,
+which does not belong to any data source; on the last line, the actual
+join predicate is shown in green.
+<p><b>How is this query constructed ? </b>We use a generic schema (described
+in the demo paper) that reflects the structure of an XML document and provides
+natural support for translating XML path expressions. For example, there
+is a relation Document(docID, docRootID, docURIID), a relation Element(elID,
+elQNameID) etc. To represent filiation in the original XML documents, joins
+on foreign keys are used throughout the query. Note that text content (direct
+#PCDATA&nbsp;children of one node) is represented by&nbsp; Element-Child-Value
+joins, as it is the case with e3, c4, and v7.
+<p><b>Constructing the remaining two queries </b>Let us denote the query
+above as "select<font color="#000000"> e0.elID as&nbsp; $d, e1.elID as
+$a, e2.elID as $p, e3.elID as $r, a0.attrID as $n, e4.elID as $rn, e5.elID
+as $m, e6.elID as $b from F0 where W0". We construct the two other queries
+simply by adding the extra joins that are needed to connect the binding
+tuples with the data items needed in the result:</font>
+<br><font color="#000000"></font>&nbsp;
+<br><font color="#000000"></font>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td NOSAVE>select</td>
+
+<td><font color="#000000">&nbsp;e0.elID as&nbsp; $d, e1.elID as $a, e2.elID
+as $p, e3.elID as $r, a0.attrIDas $n, e4.elID as $rn, e5.elID&nbsp;as $m,
+e6.elID as $b, fn1.out as dText, null as mText&nbsp;</font></td>
+</tr>
+
+<tr>
+<td>from</td>
+
+<td>F0, FullText fn1</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td>fn1.in1=e0.elID</td>
+</tr>
+</table>
+<font color="#000000"></font>
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td NOSAVE>select</td>
+
+<td><font color="#000000">&nbsp;e0.elID as&nbsp; $d, e1.elID as $a, e2.elID
+as $p, e3.elID as $r, a0.attrIDas $n, e4.elID as $rn, e5.elID as $m, e6.elID
+as $b, null as dText, fn2.out as mText</font></td>
+</tr>
+
+<tr>
+<td>from</td>
+
+<td>F0, FullText fn2</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td>fn2.in1=e5.elID</td>
+</tr>
+</table>
+
+<p>Having established these translations, the Quilt query is transformed
+in the union of these three SQL queries on the generic schema: the query
+corresponding to the for-where part, and one query per (non-constant) data
+item needed in the result.
+<br>&nbsp;
+<h2>
+Rewriting the query on the generic schema to real data sources</h2>
+At this stage, we use standard relational query rewriting algorithms (for
+bag semantics).&nbsp;We therefore need to show how are the data sources
+defined as SQL views over the generic schema.
+<h4>
+View definition for the real relational table</h4>
+We show below the view definition for the Medication table presented above.&nbsp;For
+brevity, we show the view definition corresponding to the table having
+just two columns, "generic_name" and "prescribed_for":
+<br>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr>
+<td>select</td>
+
+<td>e1.elID&nbsp;as $m, v4.value as generic_name, v5.value as prescribed_for</td>
+</tr>
+
+<tr>
+<td>from</td>
+
+<td>Document d0, URI u0, Value v0, Child c0, Element e0, QName q0, Value
+v1, Child c1, Element e1, QName q1, Value v2,</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>Child c2, Element e2, QName q2, Value v3, Child c3, Value v4, Child
+c4, Value v5</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td>d0.docURIID=u0.uriID&nbsp;and u0.uriValID=v0.valID&nbsp;and v0.value="medication.xml"
+and d0.docRootID=e0.elID and</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>e0.elQNameID=q0.qNameID and q0.qnLocalID=v1.valID and v1.value="table"
+and c0.parentID=e0.elID and&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>c0.childID=e1.elID and e1.elQNameID=q1.qNameID and q1.qnLocalID=v2.valID
+and v2.value="tuple" and&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>c1.parentID=e1.elID&nbsp;and c1.childID=e2.elID and e2.elQNameID=q2.qNameID
+and q2.qnLocalID=v3.valID and&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>v3.value="generic_name" and c2.parentID=e1.elID and c2.childID=e3.elID
+and e3.elQNameID=q3.qNameID and&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>q3.qnLocalID=v3.valID and v3.value="prescribed_for" and c3.parentID=e2.elID
+and c3.childValID=v4.valID&nbsp;and</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>c4.parentID=e3.elID&nbsp;and c4.childValID=v5.valID</td>
+</tr>
+</table>
+
+<h4>
+View definitions for the XML data sources</h4>
+An XML document is accessed via the DOM&nbsp;API; once parsed, it becomes
+an in-memory object on which DOM&nbsp;calls can be made to retrieve, say,
+the attributes of a given element, or all its descendents having a specific
+tag etc.&nbsp; We model each of these calls as a table, in which certain
+attributes have to be supplied (by joins or selections) in order to obtain
+values for the other attributes.&nbsp; For example, here is the view definition
+for the call
+<p>x.getElementByName(z)
+<p>which returns all the descendents of element x having the tag z.
+<br>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr>
+<td>select</td>
+
+<td>tc0.parentID as x, e1.elID as y, v0.value as z</td>
+</tr>
+
+<tr>
+<td>from</td>
+
+<td>TransClosure tc0, Element e1, QName q0, Value v0</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td>tc0.childID=e1.elID and e1.elQNameID=q0.qNameID and q0.qnLocalID=v0.valID</td>
+</tr>
+</table>
+
+<p>A similar view definition exists for all the DOM API calls, and the
+view definitions are used to rewrite the query resulted from the translation
+of the Quilt query.
+<h4>
+Rewritten Quilt query</h4>
+To rewrite the union of SQL&nbsp;terms, each term is rewritten in isolation
+and the union of the rewritings is then taken.&nbsp; For illustration,
+here is the rewriting of the last union term resulting from the translated
+query, as described above:
+<br>&nbsp;
+<table BORDER WIDTH="100%" NOSAVE >
+<tr>
+<td>select</td>
+
+<td>c0.parent as $d, t0.element as $a, t1.element as $p, t2.element as
+$r, t3.element as $rn, null as dText, FnText(med) as mText</td>
+</tr>
+
+<tr>
+<td>from</td>
+
+<td>Medication med, Document d0, ElementByName ebn0, Children c0, Tag t0,
+Children c1,&nbsp; Tag t1, Children c2,&nbsp; Tag t2, Attribute a0,</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>Children c3,&nbsp; Tag t3,&nbsp; Contains fn0,&nbsp; Children c4</td>
+</tr>
+
+<tr>
+<td>where</td>
+
+<td>d0.docName="diseases.xml" and d0.docRoot=ebn0.ancestor and ebn0.tag="disease"
+and ebn0.descendent=c0.parent and</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>c0.child=t0.element and t0.tag="article" and c0.parent=c1.parent and
+c1.child=t1.element and t1.tag="paragraph" and</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>c0.parent=c2.parent and c2.child=t2.element and t2.tag="related_medications"
+and&nbsp; c1.parent=a0.attrElem and&nbsp;</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>a0.attrName="name" and c3.parent=c2.child and c3.child=t3.element and
+t3.tag="medication" and</td>
+</tr>
+
+<tr>
+<td></td>
+
+<td>fn0.in0=t1.element and fn0.in1="contagious" and fn0.out=true and c4.parent=t2.element
+and c4.childVal=med.brand_name</td>
+</tr>
+</table>
+
+<p>Notice that the elements from the "medication.xml" document have disappeared,
+and have been replaced with an occurence of the Medication table.&nbsp;Also,
+the FnText() function replaces the generic FullText() function: if FullText()
+operates at the level of the virtual schema on any XML&nbsp;document (and
+constructs its full textual representation), MedText() has to be implemented
+directly at the level of the DBMS&nbsp;storing the Medication table, since
+its implementation has to be aware of the actual storage of the data.
+<br>&nbsp;
+<h2>
+Query Optimization and execution</h2>
+At this stage we apply an optimization algorithm based on dynamic programming,
+searching in the space of bushy trees.&nbsp;A particularity of our optimization
+algorithm is that it has to take into consideration access restrictions,
+like the one encountered for the ElementByName table: a scan of this table
+is not possible, rather, the ancestor and tag attributes have to be specified
+in order to get bindings for the descendents.
+<br>The relational query execution follows the regular iterator model.
+<br>&nbsp;
+<h2>
+Tagging the result</h2>
+The execution of the three relational queries (resulting from the rewriting
+phase) yields three streams of tuples.&nbsp;The first stream contains all
+tuple bindings resulting from the <b><i>for-where </i></b>clause. The second
+stream contains those binding tuples that could be extended with&nbsp;
+FullText($m); in our case, this extension was possible for every binding
+of $d, so all binding tuples from the first union term are present in the
+second.&nbsp;In the general case, however, the second term introduces extra
+joins that may erase some binding combinations from the first term. Similarly,
+the third union term contains binding tuples extended with the textual
+representation of $m.
+<br>These tuples coming from different streams contain different informations;
+to be able to distinguish among them, we introduce a numerical constant
+column, called "label", which has the value 0 for all tuples coming from
+the first term, 1 for the tuples coming from the next one etc.
+<p>For a given ($d, $p, $a, $rn, $r) combination, the dText field is contained
+in tuples from the second union term, and the mText field is contained
+in tuples from the third union term.&nbsp;To group together these items,
+and to be able to output them together in a single &lt;result> element,
+we perform a sort on the ($d, $p, $a, $rn, $r, label) fields of all tuples
+in the union.&nbsp;After the sort, using the techniques described <a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/ShanmugasundaramSBCLPR00.html">here</a>,
+the information contained in the tuples is assembled together to produce
+the desided result.
+<br>&nbsp;
+<p>For a more up-to-date description of the demo scenario, please visit
+the <a href="http://www-caravel.inria.fr/~ioana/AGORA/index.html">demo
+page</a>.
+<br>&nbsp;
+</body>
+</html>

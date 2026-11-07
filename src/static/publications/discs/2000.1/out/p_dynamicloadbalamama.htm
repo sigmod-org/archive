@@ -1,0 +1,473 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Dynamic Load Balancing for Parallel Association Rule Mining on Heterogenous PC Cluster Systems</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_11.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Dynamic Load Balancing for Parallel Association Rule Mining on Heterogenous PC Cluster Systems
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_masahisa_tamura.htm">Masahisa Tamura</a> and 
+<a href = "a_masaru_kitsuregawa.htm">Masaru Kitsuregawa</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/dynamicloadbalamama.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdataminingithms.htm">Return to Data Mining Algorithms</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  The dynamic load balancing strategies for parallel association rule mining are proposed under heterogeneous PC cluster environment. PC cluster is recently regarded as one of the most promising platforms for heavy data intensive applications, such as decision support query processing and data mining. The development period of PC hardware is becoming extremely short, which results in heterogeneous system, where the clock cycle of CPU, the performance/capacity of disk drives, etc are different among component PC's. Heterogeneity is inevitable. Basically, current algorithms assume the homogeneity. Thus if we naively apply them to heterogeneous system, its performance is far below expectation. We need some new methodologies to handle heterogeneity. In this paper, we propose the new dynamic load balancing methods for association rule mining, which works under heterogeneous system. Two strategies, called candidate migration and transaction migration are proposed. Initially  first one is invoked. When the load imbalance cannot be resolved with the first method, the second one is employed, which is costly but more effective for strong imbalance. We have implemented them on the PC cluster system with two different types of PCs: one with Pentium Pro, the other one with Pentium II. The experimental results confirm that the proposed approach can very effectively balance the workload among heterogeneous PCs.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+: Fast Algorithms for Mining Association Rules in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 487-499
+<dt>
+[2]
+<dd>
+<a name="AgrawalS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shafer:John_C=.html">
+John C. Shafer
+</a>
+: Parallel Mining of Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#AgrawalS96">
+TKDE 8(6)
+</a>
+: 962-969(1996)
+<dt>
+[3]
+<dd>
+Beowulf Project at CESDIS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+http://beowulf.gsfc.nasa.gov/beowulf.html
+</a>
+<dt>
+[4]
+<dd>
+<a name="CheungHNFF96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheung:David_Wai=Lok.html">
+David Wai-Lok Cheung
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Vincent.html">
+Vincent Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Ada_Wai=Chee.html">
+Ada Wai-Chee Fu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Yongjian.html">
+Yongjian Fu
+</a>
+: A Fast Distributed Algorithm for Mining Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#CheungHNFF96">
+PDIS 1996
+</a>
+: 31-42
+<dt>
+[5]
+<dd>
+<a name="DewanHMS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dewan:Hasanat_M=.html">
+Hasanat M. Dewan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hern=aacute=ndez:Mauricio_A=.html">
+Mauricio A. Hern&aacute;ndez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mok:Kui_W=.html">
+Kui W. Mok
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stolfo:Salvatore_J=.html">
+Salvatore J. Stolfo
+</a>
+: Predictive Dynamic Load Balancing of Parallel Hash-Joins Over Heterogeneous Processors in the Presence of Data Skew. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis94.html#DewanHMS94">
+PDIS 1994
+</a>
+: 40-49
+<dt>
+[6]
+<dd>
+<a name="DeWittG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+: Parallel Database Systems: The Future of High Performance Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#DeWittG92">
+CACM 35(6)
+</a>
+: 85-98(1992)
+<dt>
+[7]
+<dd>
+<a name="HanKK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Eui=Hong.html">
+Eui-Hong Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Karypis:George.html">
+George Karypis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kumar:Vipin.html">
+Vipin Kumar
+</a>
+: Scalable Parallel Data Mining for Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HanKK97">
+SIGMOD Conference 1997
+</a>
+: 277-288
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+<a name="ParkCY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Park:Jong_Soo.html">
+Jong Soo Park
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">
+Ming-Syan Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">
+Philip S. Yu
+</a>
+: Efficient Parallel and Data Mining for Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm95.html#ParkCY95">
+CIKM 1995
+</a>
+: 31-36
+<dt>
+[10]
+<dd>
+<a name="ParthasarathyZL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Parthasarathy:Srinivasan.html">
+Srinivasan Parthasarathy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaki:Mohammed_Javeed.html">
+Mohammed Javeed Zaki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Wei.html">
+Wei Li
+</a>
+: Memory Placement Techniques for Parallel Association Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#ParthasarathyZL98">
+KDD 1998
+</a>
+: 304-308
+<dt>
+[11]
+<dd>
+<a name="ShintaniK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shintani:Takahiko.html">
+Takahiko Shintani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">
+Masaru Kitsuregawa
+</a>
+: Hash Based Parallel Algorithms for Mining Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#ShintaniK96">
+PDIS 1996
+</a>
+: 19-30
+<dt>
+[12]
+<dd>
+<a name="ShintaniK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shintani:Takahiko.html">
+Takahiko Shintani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">
+Masaru Kitsuregawa
+</a>
+: Parallel Mining Algorithms for Generalized Association Rules with Classification Hierarchy. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#ShintaniK98">
+SIGMOD Conference 1998
+</a>
+: 25-36
+<dt>
+[13]
+<dd>
+... 
+<dt>
+[14]
+<dd>
+<a name="CheungX98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheung:David_Wai=Lok.html">
+David Wai-Lok Cheung
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xiao:Yongqiao.html">
+Yongqiao Xiao
+</a>
+: Effect of Data Skewness in Parallel Mining of Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pakdd/pakdd98.html#CheungX98">
+PAKDD 1998
+</a>
+: 48-60
+<dt>
+[15]
+<dd>
+<a name="ZakiPOL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaki:Mohammed_Javeed.html">
+Mohammed Javeed Zaki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Parthasarathy:Srinivasan.html">
+Srinivasan Parthasarathy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ogihara:Mitsunori.html">
+Mitsunori Ogihara
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Wei.html">
+Wei Li
+</a>
+: New Algorithms for Fast Discovery of Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd97.html#ZakiPOL97">
+KDD 1997
+</a>
+: 283-286
+<dt>
+[16]
+<dd>
+<a name="BernsteinBCDFGGHHJLMNPSU98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brodie:Michael_L=.html">
+Michael L. Brodie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Held:Gerald.html">
+Gerald Held
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lesk:Michael.html">
+Michael Lesk
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: The Asilomar Report on Database Research. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod27.html#BernsteinBCDFGGHHJLMNPSU98">
+SIGMOD Record 27(4)
+</a>
+: 74-80(1998)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/TamuraK99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Masahisa&nbsp;Tamura&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masaru&nbsp;Kitsuregawa},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Dynamic&nbsp;Load&nbsp;Balancing&nbsp;for&nbsp;Parallel&nbsp;Association&nbsp;Rule&nbsp;Mining&nbsp;on<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Heterogenous&nbsp;PC&nbsp;Cluster&nbsp;Systems},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{162-173},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

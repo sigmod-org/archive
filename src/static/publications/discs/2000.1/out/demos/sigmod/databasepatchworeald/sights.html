@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<title>SIGMOD 99 Demo: Database Patchwork on the Internet</title>
+<meta name="author" content="Reinhard Braumandl">
+<meta name="description" content="Demo Description: Database Patchwork on the Internet">
+<meta name="keywords" content="Research, Database, Internet, Distributed">
+<meta name="date" content="1999-08-12T14:12:07+02:00">
+<meta name="robots" content="noindex">
+<meta name="robots" content="nofollow">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+</HEAD>
+
+<BODY bgcolor="white">
+<h1>Find sights for a specific city</h1>
+
+<h2>Data Transformation</h2>
+Here we demonstrate the potential of dynamic function loading in
+the scope of data transformation. 
+<ul>
+<li>The first query gets information about sights at a specific
+city in Germany. A picture of the respective sight is embedded in the query
+result. 
+<br>
+The according SQL query:
+<pre>
+select city, sight, picture
+from   sights
+where  city = :cityParam;
+</pre>
+<br>
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/sightsOfCities.xml">Initiate
+query</a>, 
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/sightsOfCitiesOnline.xml">Initiate
+query (online)</a>
+<p>
+<li>The second query computes the same result but the images can be scaled.
+<br>
+The according (notional) SQL query:
+<pre>
+select city, sight, <font color="red">scale</font>(picture)
+from   sights
+where  city = :cityParam;
+</pre>
+<br>
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/SightsSizedPicture.xml">Initiate Query</a>, 
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/SightsSizedPictureOnline.xml">Initiate Query (online)</a>, 
+</ul>
+<h2>Move Functions to the Data</h2>
+New functions can be incorporated at any cycle provider. This can lead to
+a reduction of network traffic. Unfortunately we do not have access to a
+server with a better network connection to the data source than our servers
+in Passau have. During the SIGMOD demonstration we had an additional server
+at the conference site and used a server in Passau to access the data 
+source in a faster way.
+
+<ul>
+<li>This query gets information about sights at a specific
+city. A picture of the respective sight is embedded in the query
+result. The wrapper can be executed at different sites (preferably near by the data source).
+<br>
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/sightsOfCitiesDistributed.xml">Initiate
+query (online)</a>
+<p>
+<li>The second query computes the same result but the images can be scaled. The
+scaling function and the wrapper can be executed at different sites (preferably 
+near by the data source).
+<br>
+<a href="http://www.db.fmi.uni-passau.de/servlets/DataServlet?action=parameter&plan=/home/db/braumand/public_html/demo/SightsSizedPictureDistributed.xml">Initiate Query (online)</a>
+</ul>
+
+
+</BODY>
+</HTML>

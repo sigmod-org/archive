@@ -1,0 +1,20 @@
+A {
+  text-decoration: none;  //no underlines
+}
+
+A:link {
+  color:  yellow;
+}
+
+A:visited {
+  color:  yellow;
+}
+
+A:active, A:hover {
+  color:  red;
+}
+
+div.disabled {
+  color:  gray;
+}
+

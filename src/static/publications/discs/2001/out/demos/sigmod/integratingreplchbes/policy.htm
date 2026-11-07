@@ -1,0 +1,207 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Title_files/filelist.xml">
+<link rel=Edit-Time-Data href="./Title_files/editdata.mso">
+<link rel=OLE-Object-Data href="./Title_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Programming the Buffer Replacement Policies with StorM</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Goh Chong Leng</o:Author>
+  <o:LastAuthor>Goh Chong Leng</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>119</o:TotalTime>
+  <o:LastPrinted>2000-05-11T06:47:00Z</o:LastPrinted>
+  <o:Created>2001-02-01T02:55:00Z</o:Created>
+  <o:LastSaved>2001-02-01T02:55:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>382</o:Words>
+  <o:Characters>2182</o:Characters>
+  <o:Company>NUS</o:Company>
+  <o:Lines>18</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2679</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Garamond;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=Section1>
+
+  <p class=MsoNormal><b><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'><font face="Arial, Helvetica, sans-serif">LRU Scheme<br style='mso-special-character:line-break'>
+    <br style='mso-special-character:line-break'>
+    <o:p></o:p></font></span></b></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>LRU - Least recently used.<span style="mso-spacerun: yes">  </span>It 
+    uses a global counter to assign priority value to a slot during assigning 
+    and updating of slot’s priority value when the slot is being accessed.<span style="mso-spacerun: yes">  
+    </span>During replacement, the slot with the smallest priority value will 
+    be selected as the victim.<br>
+    <br>
+    <b>MRU Scheme</b><o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>MRU – Most recently used.<span style="mso-spacerun: yes">  </span>The 
+    scheme is similar to the LRU Scheme.<span style="mso-spacerun:
+yes">  </span>Unlike LRU, MRU selected the slot with the largest priority value 
+    as victim.<br>
+    <br>
+    <b>LRD Scheme<o:p></o:p></b></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>LRD – Least Recent Density.<span style="mso-spacerun: yes">  </span>The 
+    scheme is derived from LFU (Least Frequently Used).<span
+style="mso-spacerun: yes">  </span>In LFU, the slot with the least frequently 
+    used is being selected as the victim.<span style="mso-spacerun: yes">  </span>In 
+    LRD, instead of just replacing the least frequently used slot, an aging of 
+    the slot is being introduced to the selection process.<span
+style="mso-spacerun: yes">  </span><o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>Frequent Count is the number of time the page is being accessed while 
+    it is in the buffer.<span style="mso-spacerun: yes">  </span>Reference Count 
+    is the time stamp in which is first accessed and Current Count is the value 
+    of the global counter at that specified time.<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>Priority Value of each slot is computed as followed.<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>If (Current Count – Reference Count &gt; 0)<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'><span style="mso-spacerun: yes">  </span>Frequent Count / (Current 
+    Count – Reference Count)<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>Else<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'><span style="mso-spacerun: yes">  </span>0<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>The slot with the smallest priority value will be replaced.<o:p></o:p></span></font></p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:black'>&nbsp;<o:p></o:p></span></font></p>
+  <h1><font face="Arial, Helvetica, sans-serif">LRU-2 Scheme<span style='font-weight:normal'><o:p></o:p></span></font></h1>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif">&nbsp;<o:p></o:p></font></p>
+  <p class=MsoBodyText2><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The 
+    LRU-2 algorithm uses the Backward 2-distance to decide the replacement page.<span style="mso-spacerun: yes">  
+    </span>The Backward 2-distance is defined as follows.<span style="mso-spacerun: yes">  
+    </span>Given a reference string known up to the time t, r(1), r(2), r(3), 
+    ......, r(t), the backward 2-distance B(t) (p,2) is the distance backward 
+    to the 2th most recent reference to the page p:<o:p><br>
+    <br>
+    </o:p></span></font></p>
+  <p class=MsoBodyText2><font face="Arial, Helvetica, sans-serif"><span style='font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></font></p>
+  <p class=MsoBodyText2><font face="Arial, Helvetica, sans-serif">B(t) (p,2) = 
+    x if r(t-x) has the value of p and there have been exactly 1 other values 
+    i with t-x &lt; i &lt;= t where r(i) = p</font></p>
+  <p class=MsoBodyText2><font face="Arial, Helvetica, sans-serif">Otherwise, B(t) 
+    (p,2) = infinity if p does not appear at least 1 time in r(1), r(2), r(3), 
+    ......, r(t)</font></p>
+  <p class=MsoBodyText2>&nbsp;</p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"> The LRU-2 selects 
+    the replacement page whose backward 2-distance is the maximum of all pages 
+    in buffer. The only time the choice is ambiguous is when more than one page 
+    B(t) (p,2) = infinty. In this case, a subsidiary policy may be used to select 
+    the replacement victim among pages with infinite Backward 2-distance.</font></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif"><b>Level Random 
+    Scheme</b></font></p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif">The level random 
+    scheme is based on the B+ Tree Demo. The scheme will give higher priority 
+    over the internal node of the B+ Tree then the leaf node. When all the slots 
+    in the buffer are internal node of the B+ Tree, the scheme will randomly selected 
+    a replacement victim.</font></p>
+  <h2>&nbsp;</h2>
+  <h2><font face="Arial, Helvetica, sans-serif">Level LRU Scheme</font></h2>
+  <h2>&nbsp;</h2>
+  <p class=MsoNormal><font face="Arial, Helvetica, sans-serif">Exactly the same 
+    as the Level Random Scheme with the only exception of using a LRU scheme to 
+    select the replacement victim instead of selecting them randomly.</font></p>
+</div>
+
+</body>
+
+</html>

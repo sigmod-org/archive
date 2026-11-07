@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Demonstration of Hyper-Programming in Java</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Demonstration of Hyper-Programming in Java</H1>
+
+<H2>Hyper-Programming</H2>
+
+<P>A demonstration of a Java <A
+HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/">hyper-programming</A>
+system was given in the <A
+HREF="http://www.dcs.napier.ac.uk/%7Evldb99/cfa/Demos.html">Demonstrations</A>
+track of <A HREF="http://www.dcs.napier.ac.uk/%7Evldb99/">VLDB'99</A> in
+Edinburgh, September 1999. This is an overview of the demonstration.</P>
+
+<P>The demonstration starts with retrieval of some persistent data. The
+<B>Persistent Roots</B> window contains the names of the available
+persistent roots; selecting one of these results in the corresponding
+data being displayed in a <B>Browser</B> window.</P>
+
+<CENTER>
+<IMG SRC="demo/demo01.GIF" WIDTH="200" HEIGHT="113" ALT="Persistent Roots">
+</CENTER>
+
+<P>Here the array <B>PERSONS</B> has been chosen and the first element,
+an instance of class <TT><A
+HREF="demo/docs/Person.html">Person</A></TT>, selected. The
+<B>Instance</B> pane on the left of the <B>Browser</B> window displays
+instance-specific information (field values), while the <B>Class</B>
+pane on the right displays class details (field types, method
+signatures, constructors, interfaces, superclass).</P>
+
+<CENTER>
+<IMG SRC="demo/demo02.GIF" WIDTH="411" HEIGHT="325" ALT="Person Instance">
+</CENTER>
+
+<P>Since the system is implemented entirely in Java, it is not possible
+to display the values of non-public fields such as <B>ID</B> or
+<B>icon</B>. These fields are private, as indicated by the red boxes
+next to the field names. Other modifiers are also colour coded,
+summarised in the <B>Modifiers</B> pane:</P>
+
+<CENTER>
+<IMG SRC="demo/demo03.GIF" WIDTH="100" HEIGHT="167" ALT="Modifiers">
+</CENTER>
+
+<P>The values of accessible object fields in the <B>Instance</B> pane
+are denoted by links. The default appearance is a box containing the
+name of the object's class, as with the <TT><A
+HREF="demo/docs/Person.html#address">address</A></TT> link. The
+appearance of links may be customised, as will be described later. Two
+classes, <TT><A
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/lang/String.html">java.lang.String</A></TT>
+and <TT><A
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/javax/swing/ImageIcon.html">javax.swing.ImageIcon</A></TT>,
+have pre-defined customisations that cause links to be displayed as the
+string value and the image respectively. This can be seen with the
+<TT><A HREF="demo/docs/Person.html#name">name</A></TT> and <TT><A
+HREF="demo/docs/Person.html#picture">picture</A></TT> links above.</P>
+
+<P>Clicking on a link causes the corresponding object to be displayed in
+the same <B>Browser</B> window. The result of clicking on the <TT><A
+HREF="demo/docs/Person.html#address">address</A></TT> link is shown
+below.</P>
+
+<CENTER>
+<IMG SRC="demo/demo04.GIF" WIDTH="467" HEIGHT="293" ALT="Address Instance">
+</CENTER>
+
+<P>A link can be displayed in a new <B>Browser</B> window by clicking
+the <B>Pin</B> checkbox before clicking on the link:</P>
+
+<CENTER>
+<IMG SRC="demo/demo04a.GIF" WIDTH="451" HEIGHT="385" ALT="Pinned Windows">
+</CENTER>
+
+<P>Clicking on a class link, as with the <TT><A
+HREF="demo/docs/Address.html#city">city</A></TT> class field above,
+displays the details of that class with an empty <B>Instance</B>
+pane:</P>
+
+<CENTER>
+<IMG SRC="demo/demo05.GIF" WIDTH="441" HEIGHT="343" ALT="Class String">
+</CENTER>
+
+<P>Inherited class members can be shown or hidden using the class slider
+at the bottom of the window. The default display shows only those
+members defined in the current class. For example, the <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> instances above showed only
+the fields and methods defined in <TT><A
+HREF="demo/docs/Person.html">Person</A></TT>, while those inherited from
+<TT><A HREF="demo/docs/Animal.html">Animal</A></TT> and <TT><A
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/lang/Object.html">Object</A></TT>
+were hidden. The two red controls on the class slider determine the
+upper and lower limits of visibility. Thus in the example below, all
+members defined in classes <TT><A
+HREF="http://java.sun.com/products/jdk/1.2/docs/api/java/lang/Object.html">Object</A></TT>,
+<TT><A HREF="demo/docs/Animal.html">Animal</A></TT> and <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> are visible.</P>
+
+<CENTER>
+<IMG SRC="demo/demo06.GIF" WIDTH="437" HEIGHT="351" ALT="Class Slider">
+</CENTER>
+
+<P>A hyper-program may be constructed by inserting links to persistent
+objects and classes in a hyper-program <B>Editor</B> window. There are
+several ways to insert a link:</P>
+
+<UL>
+	<LI>clicking the right mouse button over a link in the
+	<B>Browser</B> window inserts a corresponding link in the
+	<B>Editor</B> window;
+
+	<LI>clicking on the <B>Insert Link</B> button in the <B>Editor</B>
+	window inserts a link to the currently displayed object in the
+	<B>Browser</B> window;
+
+	<LI>a link in the <B>Browser</B> window may be dragged into the
+	<B>Editor</B> window.
+</UL>
+
+<P>The example below shows the definition of a class <B>MarryExample</B>
+with links to the static method <TT><A
+HREF="demo/docs/Person.html#marry(Person, Person)">Person.marry</A></TT>
+(in blue) and to two instances of class <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> (in red). These links are
+direct references to the corresponding classes and objects. Once the
+links are established, the system guarantees that they will remain valid
+for as long as the hyper-program is accessible, regardless of how the
+original access paths to the objects may change.</P>
+
+<CENTER>
+<IMG SRC="demo/demo07.GIF" WIDTH="272" HEIGHT="191" ALT="Hyper-Program">
+</CENTER>
+
+<P>Links in the hyper-program editor may be manipulated in the same way
+as text, e.g. copied, pasted, dragged etc. Clicking on a link causes the
+corresponding object or class to be displayed in the <B>Browser</B>
+window.</P>
+
+<P>The label displayed on a link is provided only for convenience: it
+does not affect the meaning of the link in the hyper-program. The
+appearance of links may be customised by the user, either on a per-link
+basis or for all instances of a given class. A customisation for class
+<TT><A HREF="demo/docs/Person.html">Person</A></TT> is shown below. This
+specifies fragments of code that return images to be displayed when
+instances of the class appear as links in the <B>Browser</B> or
+<B>Editor</B> window. Where the instance appears in the <B>Browser</B>
+window the image returned by the <TT><A
+HREF="demo/docs/Person.html#getPicture()">getPicture</A></TT> method is
+displayed, and where it appears in the <B>Editor</B> window a smaller
+image returned by the <TT><A
+HREF="demo/docs/Person.html#getIcon()">getIcon</A></TT> method is
+displayed.</P>
+
+<CENTER>
+<IMG SRC="demo/demo08.GIF" WIDTH="323" HEIGHT="142" ALT="Customisation">
+</CENTER>
+
+<P>The resulting customised display of an instance of class <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> in the <B>Browser</B>
+window is shown below:</P>
+
+<CENTER>
+<IMG SRC="demo/demo09.GIF" WIDTH="299" HEIGHT="324" ALT="Customised Browser">
+</CENTER>
+
+<P>The customised display of a hyper-program is shown below:</P>
+
+<CENTER>
+<IMG SRC="demo/demo10.GIF" WIDTH="272" HEIGHT="203" ALT="Customised Editor">
+</CENTER>
+
+<P>The example above shows a complete class definition used to invoke a
+single method. It is also possible to invoke methods and constructors
+directly by clicking on their names in the <B>Browser</B> window. The
+user is then prompted to supply a fragment of code for each required
+parameter. The example below shows invocation of the <TT><A
+HREF="demo/docs/Person.html#Person(java.lang.String,
+javax.swing.ImageIcon)">Person(String,ImageIcon)</A></TT> constructor.
+Each parameter field is itself a hyper-program editor, as illustrated by
+the link to an image dragged into the second field. Clicking on the
+<B>Invoke</B> button invokes the constructor and the new object is
+displayed in the <B>Browser</B> window.</P>
+
+<CENTER>
+<IMG SRC="demo/demo11.GIF" WIDTH="197" HEIGHT="286" ALT="Constructor Invocation">
+</CENTER>
+
+<P>
+
+<HR>
+
+<H2>Hyper-Code</H2>
+
+<P>The <A
+HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/">hyper-code</A>
+system provides a single unified representation, and manipulation tool,
+for code and data. The example below shows the persistent roots, each
+represented initially as a single link. One of the links is about to be
+<B>exploded</B> to show more detail.</P>
+
+<CENTER>
+<IMG SRC="demo/demo12.GIF" WIDTH="245" HEIGHT="169" ALT="Hyper-Code Persistent Roots">
+</CENTER>
+
+<P>Here the persistent root labelled <B>PERSONS</B> is an array of
+<TT><A HREF="demo/docs/Person.html">Person</A></TT> instances. The array
+is represented within the exploded link as hyper-code, in this case a
+call to a method to construct an array, with links to the <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> instances as parameters. By
+default links to objects are displayed in red, and links to classes in
+blue.</P>
+
+<CENTER>
+<IMG SRC="demo/demo13.GIF" WIDTH="325" HEIGHT="169" ALT="Exploded Link">
+</CENTER>
+
+<P>The example below shows the result of dragging one of the <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> links from the
+<B>Persistent Roots</B> window into a new hyper-code <B>Editor</B>
+window, then exploding both the <TT><A
+HREF="demo/docs/Person.html">Person</A></TT> link and the <TT><A
+HREF="demo/docs/Address.html">Address</A></TT> link within it. Exploded
+hyper-code links can thus be arbitrarily nested. Note how this view of
+the <TT><A HREF="demo/docs/Person.html">Person</A></TT> instance, as
+hyper-code, contrasts with the non-code-based view provided by the
+<B>Browser</B> in the hyper-programming system.</P>
+
+<CENTER>
+<IMG SRC="demo/demo14.GIF" WIDTH="471" HEIGHT="200" ALT="Exploded Person Instance">
+</CENTER>
+
+<P>Representations of code, i.e. classes, are displayed in the same way.
+The example below shows the result of exploding a link to the class
+<TT><A HREF="demo/docs/Person.html">Person</A></TT>, followed by
+exploding links to <TT><A HREF="demo/docs/Animal.html">Animal</A></TT>
+and <TT><A HREF="demo/docs/Address.html">Address</A></TT> in turn.</P>
+
+<CENTER>
+<IMG SRC="demo/demo15.GIF" WIDTH="557" HEIGHT="483" ALT="Exploded Class">
+</CENTER>
+
+<P>The example below shows the composition of a new class definition
+containing links to both an existing class and an existing object:</P>
+
+<CENTER>
+<IMG SRC="demo/demo16.GIF" WIDTH="221" HEIGHT="219" ALT="Hyper-Code Example">
+</CENTER>
+
+<P>When evaluated this returns a link to the new class, which when
+exploded shows the original source code:</P>
+
+<CENTER>
+<IMG SRC="demo/demo17.GIF" WIDTH="215" HEIGHT="219" ALT="Resulting Hyper-Code">
+</CENTER>
+
+<P>Whereas the unit of evaluation in the hyper-programming system was
+the complete class definition, any valid fragment of hyper-code may be
+evaluated. The example below shows the call to the <TT><A
+HREF="demo/docs/Person.html#marry(Person, Person)">Person.marry</A></TT>
+method as before:</P>
+
+<CENTER>
+<IMG SRC="demo/demo18.GIF" WIDTH="215" HEIGHT="140" ALT="Hyper-Code Example">
+</CENTER>
+
+<P>The style in which links are displayed may be customised in a similar
+way to the hyper-programming system, as illustrated in the example
+below:</P>
+
+<CENTER>
+<IMG SRC="demo/demo19.GIF" WIDTH="531" HEIGHT="187" ALT="Customised Hyper-Code">
+</CENTER>
+
+<P>
+
+<HR>
+
+<H2>Further Information</H2>
+
+<P>The hyper-programming and hyper-code prototypes are freely available via the links below.<P>
+
+<TABLE BORDER="0" CELLSPACING="2" CELLPADDING="1">
+	<TR>
+		<TD><B>St Andrews Group</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/">
+			http://www-ppg.dcs.st-and.ac.uk/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>Hyper-Programming</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD ALIGN="right"><B>(Java system)</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/Java/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/Java/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>Hyper-Code</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD ALIGN="right"><B>(Java system)</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/Java/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/Java/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>PJama</B>:</TD>
+		<TD><TT><A HREF="http://www.dcs.gla.ac.uk/pjama/">
+			http://www.dcs.gla.ac.uk/pjama/</A></TT></TD>
+	</TR>
+</TABLE>
+
+<P><B>Email</B>: <TT>{<A HREF="mailto:vangelis@dcs.st-and.ac.uk">vangelis</A>,
+                      <A HREF="mailto:graham@dcs.st-and.ac.uk">graham</A>,
+                      <A HREF="mailto:ron@dcs.st-and.ac.uk">ron</A>}@dcs.st-and.ac.uk</TT></P>
+
+<HR>
+        
+<ADDRESS><FONT SIZE=2>
+Last Updated: 3-Dec-1999 by 
+<A HREF="mailto:graham@dcs.st-and.ac.uk">Graham Kirby</A>
+</FONT></ADDRESS>
+
+</BODY>
+</HTML>

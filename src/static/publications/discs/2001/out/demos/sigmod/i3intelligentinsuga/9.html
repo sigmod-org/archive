@@ -1,0 +1,28 @@
+The user starts with zero knowledge about the cube. Instead of
+exploring this data on his own, he can use the inform operator to
+guide his search. He starts by first invoking the "Informative View"
+macro that returns the most informative views of the cube in the
+neighborhood of the current view. 
+
+Starting from the top-level view, shown as the first screen-shot in
+the adjacent figure he can ask for the most informative values to
+drill-down further.  From the current view there are five drill-down
+paths along each of the five dimensions.  Of these the most
+informative view returned to him is the Gender dimension.  This shows
+that the fraction of males is 0.9 which is significantly higher than
+the average value of 0.5. The next surprising path is along the
+Category dimension which shows that the fraction of students in each
+category is also highly skewed.  The members are sorted based on their
+information content.  The most informative member is the Indian
+category that shows that the total number of Indians is 8223 --- that
+is 82\% of the total of 10083. This significantly departs from the
+expectation of having equal number of students in each of the nine
+categories.  This cell is informative not only because it tells us
+that the fraction of Indians is high but also because it brings us
+closer to the actual values of the other members. When coupled with
+the knowledge in the first view that the sum of all values is 10083,
+we expect all other members to have a value of (10083-8223)/8 = 223
+which is closer to their actual values.  The next most informative
+dimension is the ProgCat dimension followed by the Year and finally
+the Dept dimension.
+

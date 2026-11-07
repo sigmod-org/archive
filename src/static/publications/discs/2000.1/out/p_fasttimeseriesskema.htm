@@ -1,0 +1,569 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Fast Time-Series Searching with Scaling and Shifting</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_12.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Fast Time-Series Searching with Scaling and Shifting
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_kelvin_kam_wing_ch.htm">Kelvin Kam Wing Chu</a> and 
+<a href = "a_man_hon_wong.htm">Man Hon Wong</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/fasttimeseriesskema.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsnoveldataldata.htm">Return to Novel Data</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Recently, it has been found that the technique of searching for similar patterns among time series data is very important in a wide range of scientific and business applications. In this paper, we first propose a definition of similarity based on scaling and shifting transformations. Sequence A is defined to be similar to sequence B if suitable scaling and shifting transformations can be found to transform A to B. Then, we present a geometrical view of the problem so that the scaling factor and the shifting offset can be determined. Moreover, sequence searching based on tree-based indexing structure can be performed. Finally, some technical aspects are discussed and some experiments are performed on real data (stock price movement) to measure the performance of our algorithm.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AgrawalFS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Efficient Similarity Search In Sequence Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/fodo/fodo93.html#AgrawalFS93">
+FODO 1993
+</a>
+: 69-84
+<dt>
+[2]
+<dd>
+<a name="FaloutsosRM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ranganathan:M=.html">
+M. Ranganathan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">
+Yannis Manolopoulos
+</a>
+: Fast Subsequence Matching in Time-Series Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#FaloutsosRM94">
+SIGMOD Conference 1994
+</a>
+: 419-429
+<dt>
+[3]
+<dd>
+<a name="AgrawalLSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">
+King-Ip Lin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sawhney:Harpreet_S=.html">
+Harpreet S. Sawhney
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: Fast Similarity Search in the Presence of Noise, Scaling, and Translation in Time-Series Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#AgrawalLSS95">
+VLDB 1995
+</a>
+: 490-501
+<dt>
+[4]
+<dd>
+<a name="JagadishMM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Similarity-Based Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1995
+</a>
+: 36-45
+<dt>
+[5]
+<dd>
+<a name="RafieiM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafiei:Davood.html">
+Davood Rafiei
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: Similarity-Based Queries for Time Series Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#RafieiM97">
+SIGMOD Conference 1997
+</a>
+: 13-25
+<dt>
+[6]
+<dd>
+<a name="GoldinK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldin:Dina_Q=.html">
+Dina Q. Goldin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanellakis:Paris_C=.html">
+Paris C. Kanellakis
+</a>
+: On Similarity Queries for Time-Series Data: Constraint Specification and Implementation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cp/cp95.html#GoldinK95">
+CP 1995
+</a>
+: 137-153
+<dt>
+[7]
+<dd>
+<a name="ShatkayZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shatkay:Hagit.html">
+Hagit Shatkay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Approximate Queries and Representations for Large Data Sequences. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#ShatkayZ96">
+ICDE 1996
+</a>
+: 536-545
+<dt>
+[8]
+<dd>
+<a name="LiYC96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Chung=Sheng.html">
+Chung-Sheng Li
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">
+Philip S. Yu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Castelli:Vittorio.html">
+Vittorio Castelli
+</a>
+: HierarchyScan: A Hierarchical Similarity Search Algorithm for Databases of Long Sequences. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#LiYC96">
+ICDE 1996
+</a>
+: 546-553
+<dt>
+[9]
+<dd>
+<a name="BozkayaYO97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bozkaya:Tolga.html">
+Tolga Bozkaya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yazdani:Nasser.html">
+Nasser Yazdani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Z=_Meral.html">
+Z. Meral &Ouml;zsoyoglu
+</a>
+: Matching and Indexing Sequences of Different Lengths. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm97.html#BozkayaYO97">
+CIKM 1997
+</a>
+: 128-135
+<dt>
+[10]
+<dd>
+<a name="YiJF98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yi:Byoung=Kee.html">
+Byoung-Kee Yi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Efficient Retrieval of Similar Time Sequences Under Time Warping. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#YiJF98">
+ICDE 1998
+</a>
+: 201-208
+<dt>
+[11]
+<dd>
+<a name="LamW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lam:Sze_Kin.html">
+Sze Kin Lam
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Man_Hon.html">
+Man Hon Wong
+</a>
+: A Fast Signature Algorithm for Sequence Data Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ngits/ngits97.html#LamW97">
+NGITS 1997
+</a>
+: 0-
+<dt>
+[12]
+<dd>
+<a name="LamW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lam:Sze_Kin.html">
+Sze Kin Lam
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Man_Hon.html">
+Man Hon Wong
+</a>
+: A Fast Projection Algorithm for Sequence Data Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dke/dke28.html#LamW98">
+DKE 28(3)
+</a>
+: 321-339(1998)
+<dt>
+[13]
+<dd>
+<a name="ChuLW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chu:Kelvin_Kam_Wing.html">
+Kelvin Kam Wing Chu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lam:Sze_Kin.html">
+Sze Kin Lam
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Man_Hon.html">
+Man Hon Wong
+</a>
+: An Efficient Hash-Based Algorithm for Sequence Data Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cj/cj41.html#ChuLW98">
+The Computer Journal 41(6)
+</a>
+: 402-415(1998)
+<dt>
+[14]
+<dd>
+<a name="ChanF99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chan:Kin=pong.html">
+Kin-pong Chan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Ada_Wai=Chee.html">
+Ada Wai-Chee Fu
+</a>
+: Efficient Time Series Matching by Wavelets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#ChanF99">
+ICDE 1999
+</a>
+: 126-133
+<dt>
+[15]
+<dd>
+<a name="BollobasDGM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bollob=aacute=s:B=eacute=la.html">
+B&eacute;la Bollob&aacute;s
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Das:Gautam.html">
+Gautam Das
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: Time-Series Similarity Problems and Well-Separated Geometric Sets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/compgeom/compgeom97.html#BollobasDGM97">
+Symposium on Computational Geometry 1997
+</a>
+: 454-456
+<dt>
+[16]
+<dd>
+<a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">
+Norbert Beckmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">
+SIGMOD Conference 1990
+</a>
+: 322-331
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+<a name="SellisRF87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: The R+-Tree: A Dynamic Index for Multi-Dimensional Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#SellisRF87">
+VLDB 1987
+</a>
+: 507-518
+<dt>
+[19]
+<dd>
+<a name="DasGM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Das:Gautam.html">
+Gautam Das
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: Finding Similar Time Series. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pkdd/pkdd97.html#DasGM97">
+PKDD 1997
+</a>
+: 88-100
+<dt>
+[20]
+<dd>
+<a name="KanthAS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanth:Kothuri_Venkata_Ravi.html">
+Kothuri Venkata Ravi Kanth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">
+Divyakant Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Singh:Ambuj_K=.html">
+Ambuj K. Singh
+</a>
+: Dimensionality Reduction for Similarity Searching in Dynamic Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#KanthAS98">
+SIGMOD Conference 1998
+</a>
+: 166-176
+<dt>
+[21]
+<dd>
+... 
+<dt>
+[22]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[23]
+<dd>
+<a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The X-tree : An Index Structure for High-Dimensional Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">
+VLDB 1996
+</a>
+: 28-39
+<dt>
+[24]
+<dd>
+... 
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26]
+<dd>
+<a name="KatayamaS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katayama:Norio.html">
+Norio Katayama
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Satoh:Shin=ichi.html">
+Shin'ichi Satoh
+</a>
+: The SR-tree: An Index Structure for High-Dimensional Nearest Neighbor Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KatayamaS97">
+SIGMOD Conference 1997
+</a>
+: 369-380
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/ChuW99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Kelvin&nbsp;Kam&nbsp;Wing&nbsp;Chu&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Man&nbsp;Hon&nbsp;Wong},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Fast&nbsp;Time-Series&nbsp;Searching&nbsp;with&nbsp;Scaling&nbsp;and&nbsp;Shifting},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{237-248},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_9.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Buffering and Read-Ahead Strategies for External Mergesort</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_z.htm#Weiye Zhang">Weiye Zhang</a>, <a href="m_authors_l.htm#Per-Ake Larson">Per-Ake Larson</a></center></td></tr></table></center><a target="disc_pdf76*" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+The elapsed time for external mergesort is normally dominated by I/O time.
+This paper is focused on reducing I/O time during the merge phase.
+Three new buffering and read- ahead strategies are proposed, called equal buffering, extended forecasting and clustering.
+They exploit the fact that virtually all modern disks perform caching and sequential read- ahead.
+The latter two also collect information during run formation (the last keyof each run block) which is then used to preplan reading.
+For random input data, extended forecasting and clustering were found to reduce merge time by 30% compared with traditional double buffering.
+Clustering exploits any temporal skew in input runs to further reduce the number of seeks.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Cor97]<dd>...
+<dt>[ECW94]<dd><a name="Estivill-CastroW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Estivill=Castro:Vladimir.html">Vladimir Estivill-Castro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wood:Derick.html">Derick Wood</a>:
+Foundations for Faster External Sorting (Extended Abstract).
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/fsttcs/fsttcs94.html#Estivill-CastroW94">FSTTCS 1994</a>: 414-425<dt>[Gra93]<dd><a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Query Evaluation Techniques for Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">Computing Surveys 25(2)</a>: 73-170(1993)<dt>[IBM95]<dd>...
+<dt>[Knu73]<dd><a name="Knuth73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">Donald E. Knuth</a>:
+The Art of Computer Programming, Volume III: Sorting and Searching.
+ Addison-Wesley 1973, ISBN 0-201-03803-X<br>
+<dt>[Sal89]<dd><a name="Salzberg89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">Betty Salzberg</a>:
+Merging Sorted Runs Using Large Main Memory.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acta/acta27.html#Salzberg89">Acta Informatica 27(3)</a>: 195-215(1989)<dt>[Zha97]<dd>...
+<dt>[Zhe92]<dd>...
+<dt>[ZL96]<dd><a name="ZhengL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zheng:LuoQuan.html">LuoQuan Zheng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>:
+Speeding up External Mergesort.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#ZhengL96">TKDE 8(2)</a>: 322-332(1996)<dt>[ZL97]<dd><a name="ZhangL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Weiye.html">Weiye Zhang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>:
+Dynamic Memory Adjustment for External Mergesort.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#ZhangL97">VLDB 1997</a>: 376-385</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/ZhangL98,<br>  author    = {Weiye Zhang and<br>               Per-{\AA}ke Larson},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Buffering and Read-Ahead Strategies for External Mergesort},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {523-533},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

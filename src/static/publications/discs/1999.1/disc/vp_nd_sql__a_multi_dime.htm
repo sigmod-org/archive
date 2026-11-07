@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_4.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+nD-SQL: A Multi-Dimensional Language for Interoperability and OLAP</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_g.htm#Frederic Gingras">Frederic Gingras</a>, <a href="m_authors_l.htm#Laks V. S. Lakshmanan">Laks V. S. Lakshmanan</a></center></td></tr></table></center><a target="disc_pdf068I" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+We propose a multi-dimensional language called <i>n</i>D-SQL with the following features:
+(i) <i>n</i>D-SQL supports queries that interoperate amongst multiple relational sources with heterogeneous schemas, including RDBMS and relational data marts, overcoming the mismatch between data and schema;
+(ii) it supports complex forms of restructuring that permit the visualization of <i>n</i>- dimensional data using the three physical dimensions of the relational model, viz., row, column, and relation;
+(iii) it captures sophisticated aggregations involving multiple granularities, to an arbitrary degree of resolution compared to CUBE, ROLLUP, and DRILLDOWN.
+We propose a formal model for a federation of relational sources and illustrate <i>n</i>D-SQL against it.
+We propose an extension to relational algebra, called restructuring relational algebra (RRA), capable of restructuring and aggregation.
+We propose an architecture for the implementation of an <i>n</i>D-SQL server, based on translating <i>n</i>D-SQL queries into equivalent RRA expressions, which are then optimized.
+We are currently implementing an <i>n</i>D-SQL server on the PC platform based on these ideas.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Agar+96]<dd><a name="AgarwalADGNRS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agarwal:Sameet.html">Sameet Agarwal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">Sunita Sarawagi</a>:
+On the Computation of Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#AgarwalADGNRS96">VLDB 1996</a>: 506-521<dt>[ASD+91]<dd><a name="AhmedSDKKLRS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ahmed:Rafi.html">Rafi Ahmed</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smedt:Philippe_De.html">Philippe De Smedt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Weimin.html">Weimin Du</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kent:William.html">William Kent</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Ketabchi:Mohammad_A=.html">Mohammad A. Ketabchi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">Witold Litwin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rafii:Abbas.html">Abbas Rafii</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">Ming-Chien Shan</a>:
+The Pegasus Heterogeneous Multidatabase System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer24.html#AhmedSDKKLRS91">IEEE Computer 24(12)</a>: 19-27(1991)<dt>[Bee93]<dd><a name="Beech93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beech:David.html">David Beech</a>:
+Collections of Objects in SQL3.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#Beech93">VLDB 1993</a>: 244-255<dt>[Cat96]<dd><a name="Cattell96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cattell:R=_G=_G=.html">R. G. G. Cattell</a>:
+The Object Database Standard: ODMG-93 (Release 1.2).
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1996<br>
+<dt>[CD97]<dd><a name="ChaudhuriD97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">Umeshwar Dayal</a>:
+An Overview of Data Warehousing and OLAP Technology.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#ChaudhuriD97">SIGMOD Record 26(1)</a>: 65-74(1997)<dt>[CL93]<dd><a name="ChomickiL92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chomicki:Jan.html">Jan Chomicki</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">Witold Litwin</a>:
+Declarative Definition of Object-Oriented Multidatabase Mappings.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oodbs/oodbs92.html#ChomickiL92">IWDOM 1992</a>: 375-392<dt>[DB296]<dd>...
+<dt>[DKS92]<dd><a name="DuKS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Weimin.html">Weimin Du</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">Ming-Chien Shan</a>:
+Query Optimization in a Heterogeneous DBMS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#DuKS92">VLDB 1992</a>: 277-291<dt>[Flo95]<dd><a name="FlorescuRV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">Daniela Florescu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rachid:Louiqa.html">Louiqa Rachid</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Using Heterogeneous Equivalences for Query Rewriting in Multidatabase Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/coopis/coopis95.html#FlorescuRV95">CoopIS 1995</a>: 158-169<dt>[GL97]<dd><a name="GyssensL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">Marc Gyssens</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">Laks V. S. Lakshmanan</a>:
+A Foundation for Multi-dimensional Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GyssensL97">VLDB 1997</a>: 106-115<dt>[GL98]<dd>...
+<dt>[GLRS93]<dd><a name="GrantLRS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grant:John.html">John Grant</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">Witold Litwin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>:
+Query Languages for Relational Multidatabases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb2.html#GrantLRS93">VLDB Journal 2(2)</a>: 153-171(1993)<dt>[GLS96]<dd><a name="GyssensLS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">Marc Gyssens</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">Laks V. S. Lakshmanan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Iyer_N=.html">Iyer N. Subramanian</a>:
+Tables as a Paradigm for Querying and Restructuring.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#GyssensLS96">PODS 1996</a>: 93-103<dt>[GLS+97]<dd><a name="GingrasLSPS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gingras:Fr=eacute=d=eacute=ric.html">Fr&eacute;d&eacute;ric Gingras</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">Laks V. S. Lakshmanan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Iyer_N=.html">Iyer N. Subramanian</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papoulis:Despina.html">Despina Papoulis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shiri:Nematollaah.html">Nematollaah Shiri</a>:
+Languages for Multi-database Interoperability.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#GingrasLSPS97">SIGMOD Conference 1997</a>: 536-538<dt>[Gray+96]<dd><a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">Adam Bosworth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">Andrew Layman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">ICDE 1996</a>: 152-159<dt>[Haa97]<dd><a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">Edward L. Wimmers</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">Jun Yang</a>:
+Optimizing Queries Across Diverse Data Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HaasKWY97">VLDB 1997</a>: 276-285<dt>[KGK+95]<dd><a name="KelleyGKRG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:William.html">William Kelley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gala:Sunit_K=.html">Sunit K. Gala</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">Won Kim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reyes:Tom_C=.html">Tom C. Reyes</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graham:Bruce.html">Bruce Graham</a>:
+Schema Architecture of the UniSQL/M Multidatabase System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/kim95.html#KelleyGKRG95">Modern Database Systems: The Object Model, Interoperability, and Beyond. 1995</a>: 621-648<dt>[KLK91]<dd><a name="KrishnamurthyLK91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Litwin:Witold.html">Witold Litwin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kent:William.html">William Kent</a>:
+Language Features for Interoperability of Databases with Schematic Discrepancies.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#KrishnamurthyLK91">SIGMOD Conference 1991</a>: 40-49<dt>[KKS92]<dd><a name="KiferKS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kifer:Michael.html">Michael Kifer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">Won Kim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">Yehoshua Sagiv</a>:
+Querying Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#KiferKS92">SIGMOD Conference 1992</a>: 393-402<dt>[Lit89]<dd>...
+<dt>[LSS96]<dd><a name="LakshmananSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">Laks V. S. Lakshmanan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sadri:Fereidoon.html">Fereidoon Sadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Iyer_N=.html">Iyer N. Subramanian</a>:
+SchemaSQL - A Language for Interoperability in Relational Multi-Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LakshmananSS96">VLDB 1996</a>: 239-250<dt>[MR95]<dd><a name="MissierR95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Missier:Paolo.html">Paolo Missier</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rusinkiewicz:Marek.html">Marek Rusinkiewicz</a>:
+Extending a Multidatabase Manipulation Language to Resolve Schema and Data Conflicts.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ds/ds95.html#MissierR95">DS-6 1995</a>: 93-115<dt>[ORA]<dd>...
+<dt>[Qia96]<dd><a name="Qian96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Qian:Xiaolei.html">Xiaolei Qian</a>:
+Query Folding.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#Qian96">ICDE 1996</a>: 48-55<dt>[Ros92]<dd><a name="Ross92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">Kenneth A. Ross</a>:
+Relations with Relation Names as Arguments: Algebra and Calculus.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods92.html#Ross92">PODS 1992</a>: 346-353<dt>[SRC97]<dd><a name="RossSC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">Kenneth A. Ross</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chatziantoniou:Damianos.html">Damianos Chatziantoniou</a>:
+Complex Aggregation at Multiple Granularities.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt98.html#RossSC98">EDBT 1998</a>: 263-277<dt>[SQL96]<dd>...
+<dt>[SSR94]<dd><a name="ScioreSR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sciore:Edward.html">Edward Sciore</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Siegel:Michael.html">Michael Siegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenthal:Arnon.html">Arnon Rosenthal</a>:
+Using Semantic Values to Falilitate Interoperability Among Heterogeneous Information Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods19.html#ScioreSR94">TODS 19(2)</a>: 254-290(1994)<dt>[ZDN97]<dd><a name="ZhaoDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhao:Yihong.html">Yihong Zhao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+An Array-Based Algorithm for Simultaneous Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ZhaoDN97">SIGMOD Conference 1997</a>: 159-170</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/GingrasL98,<br>  author    = {Fr{\'e}d{\'e}ric Gingras and<br>               Laks V. S. Lakshmanan},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {nD-SQL: A Multi-Dimensional Language for Interoperability and<br>               OLAP},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {134-145},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

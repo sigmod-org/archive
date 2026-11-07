@@ -1,0 +1,534 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - OPTICS: Ordering Points To Identify the Clustering Structure</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_4.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+OPTICS: Ordering Points To Identify the Clustering Structure
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_mihael_ankerst.htm">Mihael Ankerst</a>, 
+<a href = "a_markus_m_breunig.htm">Markus M. Breunig</a>, 
+<a href = "a_hans-peter_kriegel.htm">Hans-Peter Kriegel</a>, and 
+<a href = "a_joumlrg_sander.htm">J&ouml;rg Sander</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/opticsorderingpmimah.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmoclusteringering.htm">Return to Clustering</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Cluster analysis is a primary method for database mining. It is either used as a stand-alone tool to get insight into the distribution of a data set, e.g. to focus further analysis and data processing, or as a preprocessing step for other algorithms operating on the detected clusters. Almost all of the well-known clustering algorithms require input parameters which are hard to determine but have a significant influence on the clustering result. Furthermore, for many real-data sets there does not even exist a global parameter setting for which the result of the clustering algorithm describes the intrinsic clustering structure accurately. We introduce a new algorithm for the purpose of cluster analysis which does not produce a clustering of a data set explicitly; but instead creates an augmented ordering of the database representing its density-based clustering structure. This cluster-ordering contains information which is equivalent to the density-based clusterings corresponding to a broad range of parameter settings. It is a versatile basis for both automatic and interactive cluster analysis. We show how to automatically and efficiently extract not only ‘traditional’ clustering information (e.g. representative points, arbitrary shaped clusters), but also the intrinsic clustering structure. For medium sized data sets, the cluster-ordering can be represented graphically and for very large data sets, we introduce an appropriate visualization technique. Both are suitable for interactive exploration of the intrinsic clustering structure offering additional insights into the distribution and correlation of the data.   
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AGG+98]
+<dd>
+<a name="AgrawalGGR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+: Automatic Subspace Clustering of High Dimensional Data for Data Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 94-105
+<dt>
+[AKK 96]
+<dd>
+... 
+<dt>
+[BKK 96]
+<dd>
+<a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The X-tree : An Index Structure for High-Dimensional Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">
+VLDB 1996
+</a>
+: 28-39
+<dt>
+[BKSS 90]
+<dd>
+<a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">
+Norbert Beckmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1990
+</a>
+: 322-331
+<dt>
+[CPZ 97]
+<dd>
+<a name="CiacciaPZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ciaccia:Paolo.html">
+Paolo Ciaccia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patella:Marco.html">
+Marco Patella
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zezula:Pavel.html">
+Pavel Zezula
+</a>
+: M-tree: An Efficient Access Method for Similarity Search in Metric Spaces. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#CiacciaPZ97">
+VLDB 1997
+</a>
+: 426-435
+<dt>
+[EKSX 96]
+<dd>
+<a name="EsterKSX96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#EsterKSX96">
+KDD 1996
+</a>
+: 226-231
+<dt>
+[EKS+ 98]
+<dd>
+<a name="EsterKSWX98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmer:Michael.html">
+Michael Wimmer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: Incremental Clustering for Mining in a Data Warehousing Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#EsterKSWX98">
+VLDB 1998
+</a>
+: 323-333
+<dt>
+[EKX 95]
+<dd>
+<a name="EsterKX95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: Knowledge Discovery in Large Spatial Databases: Focusing Techniques for Efficient Class Identification. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssd/ssd95.html#EsterKX95">
+SSD 1995
+</a>
+: 67-82
+<dt>
+[GM 85]
+<dd>
+... 
+<dt>
+[GRS 98]
+<dd>
+<a name="GuhaRS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guha:Sudipto.html">
+Sudipto Guha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: CURE: An Efficient Clustering Algorithm for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 73-84
+<dt>
+[HK 98]
+<dd>
+<a name="HinneburgK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hinneburg:Alexander.html">
+Alexander Hinneburg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+: An Efficient Approach to Clustering in Large Multimedia Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#HinneburgK98">
+KDD 1998
+</a>
+: 58-65
+<dt>
+[HT 93]
+<dd>
+... 
+<dt>
+[Hua 97]
+<dd>
+<a name="Huang97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Zhexue.html">
+Zhexue Huang
+</a>
+: A Fast Clustering Algorithm to Cluster Very Large Categorical Data Sets in Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dmkd/dmkd97.html#Huang97">
+DMKD 1997
+</a>
+: 0-
+<dt>
+[JD 88]
+<dd>
+<a name="JainD88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jain:Anil_K=.html">
+Anil K. Jain
+</a>
+, Richard C. Dubes: Algorithms for Clustering Data.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/ph.html">
+Prentice-Hall
+</a>
+ 1988
+<br>
+ 
+<dt>
+[Kei 96a]
+<dd>
+<a name="Keim96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+: Pixel-oriented Database Visualizations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod25.html#Keim96">
+SIGMOD Record 25(4)
+</a>
+: 35-39(1996)
+<dt>
+[Kei 96b]
+<dd>
+<a name="Keim96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+: Databases and Visualization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 543
+<dt>
+[KN 96]
+<dd>
+<a name="KnorrN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knorr:Edwin_M=.html">
+Edwin M. Knorr
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+: Finding Aggregate Proximity Relationships and Commonalities in Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#KnorrN96">
+TKDE 8(6)
+</a>
+: 884-897(1996)
+<dt>
+[KR 90]
+<dd>
+L. Kaufman, P. J. Rousseeuw: Finding Groups in Data: An Introduction to Cluster Analysis.  John Wiley 1990
+<br>
+ 
+<dt>
+[Mac 67]
+<dd>
+... 
+<dt>
+[NH 94]
+<dd>
+<a name="NgH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+: Efficient and Effective Clustering Methods for Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#NgH94">
+VLDB 1994
+</a>
+: 144-155
+<dt>
+[PTVF 92]
+<dd>
+William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery: Numerical Recipes in C, 2nd Edition.  Cambridge University Press 1992
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Contents
+</a>
+<dt>
+[Ric 83]
+<dd>
+... 
+<dt>
+[Sch 96]
+<dd>
+... 
+<dt>
+[SE 97]
+<dd>
+<a name="SchikutaE97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schikuta:Erich.html">
+Erich Schikuta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Erhart:Martin.html">
+Martin Erhart
+</a>
+: The BANG-Clustering System: Grid-Based Data Analysis. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ida/ida97.html#SchikutaE97">
+IDA 1997
+</a>
+: 513-524
+<dt>
+[SCZ 98]
+<dd>
+<a name="SheikholeslamiCZ98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sheikholeslami:Gholamhosein.html">
+Gholamhosein Sheikholeslami
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chatterjee:Surojit.html">
+Surojit Chatterjee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Aidong.html">
+Aidong Zhang
+</a>
+: WaveCluster: A Multi-Resolution Clustering Approach for Very Large Spatial Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#SheikholeslamiCZ98">
+VLDB 1998
+</a>
+: 428-439
+<dt>
+[Sib 73]
+<dd>
+<a name="Sibson73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sibson:R=.html">
+R. Sibson
+</a>
+: SLINK: An Optimally Efficient Algorithm for the Single-Link Cluster Method. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cj/cj16.html#Sibson73">
+The Computer Journal 16(1)
+</a>
+: 30-34(1973)
+<dt>
+[ZRL 96]
+<dd>
+<a name="ZhangRL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Tian.html">
+Tian Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: BIRCH: An Efficient Data Clustering Method for Very Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 103-114
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/AnkerstBKS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Mihael&nbsp;Ankerst&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Markus&nbsp;M.&nbsp;Breunig&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hans-Peter&nbsp;Kriegel&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J{\"o}rg&nbsp;Sander},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{OPTICS:&nbsp;Ordering&nbsp;Points&nbsp;To&nbsp;Identify&nbsp;the&nbsp;Clustering&nbsp;Structure},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{49-60},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

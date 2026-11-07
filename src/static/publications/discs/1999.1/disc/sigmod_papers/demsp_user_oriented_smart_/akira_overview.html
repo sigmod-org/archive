@@ -1,0 +1,257 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA's Overview</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#000000" vlink="#008000" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="75"><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Overview</font></td>
+
+<td ALIGN=CENTER><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_home.html">[HOME]</a></center>
+
+<p>The <font color="#0000FF">A</font>gentive <font color="#0000FF">K</font>nowledge-based
+and <font color="#0000FF">I</font>nformation <font color="#0000FF">R</font>etrieval
+<font color="#0000FF">A</font>rchitecture
+(<font color="#0000FF">AKIRA</font>) project wishes to combine together
+various techniques from database technology and information processing
+to provide the user with a powerful tool to query the Web.
+<br>&nbsp;
+<p><br>
+<center>
+<p>[<a href="#story">AKIRA's story</a>]&nbsp;&nbsp; [<a href="#benefits">AKIRA's
+benefits</a>]&nbsp;&nbsp; [<a href="#features">AKIRA's features</a>]&nbsp;&nbsp;
+[<a href="akira_architecture.html">Architecture</a>]&nbsp;&nbsp; [<a href="#future">Future
+work</a>]</center>
+<a NAME="story"></a>
+<h1>
+<img SRC="symb1.gif" > AKIRA's story</h1>
+
+<h2>
+Three Characters</h2>
+Our <font color="#A52A2A">user</font> wants to query the Web in a flexible
+and transparent way. He thus expects the system to provide information
+retrieval, information extraction and data manipulation. The <font color="#A52A2A">Web</font>,
+the most heterogeneous network one may think of, consists of <i>highly
+structured</i> sources (databases), providing a query language (wrapper),
+as well as <i>poorly structured</i> sources (HTML pages). The system <font color="#A52A2A">AKIRA</font>
+is user-oriented, agent-based and Web-aware.
+<h2>
+The plot</h2>
+Our user wants information about upcoming conferences such as query
+<b>Q1:</b><i>``Conferences
+with a submission deadline after July 31, 1998?''</i> or query <b>Q2:</b>
+<i>``Conferences located in the USA?''</i>
+<h2>
+A sad story...</h2>
+With usual tools, our user will browse ``by hand'' all pages (or send the
+query
+<i>``Call for papers''</i> to a search engine such as Altavista in
+order to have a list of thousands of potentially relevant webpages about
+conferences), read them and extract, still ``by hand'', the relevant information
+in the content.
+<h2>
+... with a happy ending</h2>
+In AKIRA, the <i>target structure</i> consisting of the classes and attributes
+invoked in the query is extracted and sent to the View Factory. The target
+structure is first analyzed to determine a suitable schema to represent
+information in the smart-cache. The system is user-oriented in the sense
+that the cache is structured with respect to the given target structure,
+and optionally completed by several classes in order to call the right
+Information Extraction (IE) tools to populate the database. The <i><a href="viewfactory.html">View
+Factory</a></i> sends three queries: (1) a view definition creates the
+new classes and attributes, (2) an Information Retrieval (IR) query is
+sent to the IR component in order to retrieve data from the Web, and (3)
+a query is sent to the database in order to populate it.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+<a NAME="benefits"></a>
+<h1>
+<img SRC="symb1.gif" > AKIRA's benefits</h1>
+
+<h2>
+A unified framework for IR, IE and data-manipulation</h2>
+AKIRA is an attempt to offer a unified interface for <i>information retrieval</i>
+(IR), <i>information extraction</i> (IE) and <i>data manipulation</i>.
+<p>&nbsp;Most Web services today only provide information retrieval. The
+user has to express a boolean expression of keywords which have to be explicitly
+mentioned in the document he interested in. The output of a query to a
+search engine is a list of URLs, corresponding to documents satifying the
+criteria. The user has to load and read returned documents to extract information.
+Further data manipulation also has to be done by hand.
+<p>In AKIRA, the user expresses a query (today a OQL-like query, tomorrow
+a NL query). The evaluation of the query consists in retrieving relevant
+documents from the Web and extracting and storing information in an object-oriented
+database (<i><a href="database.html">smart-cache</a></i>) which substitutes
+for the usual unstructured cache. The tasks of information processing (IR
+and IE) and data manipulation are thus automatically performed in a transparent
+way for the user.
+<h2>
+A user-oriented approach</h2>
+The organisation of extracted data should not be seen as a constraint the
+system imposes on the user. AKIRA's smart-cache must be structured according
+to the user's understanding. The AKIRA system does not provide a rigid
+global schema, but small <i><a href="pool.html">schema components</a></i>
+representing its extraction capabilities and that can be combined together
+to match the structure expressed by the <a href="user.html">user</a>.
+<p>&nbsp;When the user sends a query, the system first computes the <i>target
+structure</i> (i.e. the schema that is expressed by the user in his query)
+and uses it as a schema for the cache. Of course, there is no magic, and
+the system is able to answer a query when the structure expressed by the
+user matches its extraction capabilities. However, the system allows flexibility
+with a <i>fuzzy-matching</i> module in charge of mapping the user's vocabulary
+to its own.
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+Possible future extensions</h2>
+A <font color="#008000">Natural Language (NL) interface</font> allowing
+the user to express himself with an approximate knowledge of the available
+<a href="thepool.html">schema
+components</a>, and thus express fuzzy queries that will be translated
+into OQL query with general path expressions.
+<p>&nbsp;The query evaluation can be <font color="#008000">optimized </font>with
+query rewriting. First, the last step of AKIRA query evaluation can be
+optimized at the level of the database system: when the cache is populated.
+The latter corresponds to usual query optimization based on query rewriting.
+But AKIRA offers several other interesting ways that should be investigated
+for <i><a href="optimization.html">optimization</a></i>.
+<p>Tomorrow the system should be able to mimic <font color="#008000">human
+browsing</font> when processing documents. To perform such a task, IE tools
+should be first extended to HTML (and upcomming XML) syntax, then to the
+hyperstructure of Web documents (as opposed to the linear structure of
+usual documents). Browsing is a <i>non-deterministic</i> process that can
+be seen as a loop from (1) type a URL (or click) to (2) analyse the retrieved
+document, and back to (1). Heuristics that mimic human being should take
+advantage of
+<i>explicit structure</i> such as the tags or the structure
+of URLs, as well as <i>implicit structure</i> extracted from raw data.
+<p>&nbsp;The conceptual representation of extracted information is <font color="#008000">format
+and medium independant</font>. AKIRA's architecture makes it easy to plug
+in tools that process other formats or media and extract information from
+documents.
+<p>&nbsp;<font color="#008000">Quality of service</font> could be improved
+with providing information about <i>recall</i> and <i>precision</i> as
+a measure of confidence together with the extracted information.
+<p>&nbsp;Lastly, the user should be able to define the <font color="#008000">output
+format</font> of the result. AKIRA could be combined with a HTML (or XML)
+restructuring tool.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+<a NAME="features"></a>
+<h1>
+<img SRC="symb1.gif" > AKIRA's features</h1>
+
+<h2>
+Mutliplatform</h2>
+The AKIRA system has been fully written in Perl and Java and can run on
+any platform supporting these languages.
+<h2>
+Small foot-print</h2>
+AKIRA's cache has been implemented using PSE embedded database from ObjectStore
+and requires very little memory. The detail is as follows:
+<pre>OQL parser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp;&nbsp; 30kb
+AKIRA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp;&nbsp; 50kb
+PSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp; 400kb
+Regular Exp&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp; 100kb
+JGL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp; 560kb (*) we are only using a limited set of classes
+------------------------
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ 1200kb</pre>
+
+<h2>
+Modular and extensible</h2>
+AKIRA is modular. Services can be directly plugged-in into the system.
+<br>Since each component inside the system follows the same interface,
+the system knows how to build complex classes out of their sub-components.
+<p>&nbsp;AKIRA provides a template to write new services. Most services
+are composed of a Perl script (used for extraction) and its corresponding
+Java wrapper (used for object construction and database storage). The system
+offers some generic tools for extraction as well as object construction.
+<p>&nbsp;As an illustration, here are some pieces of the Java and Perl
+programs for the component "Date of Submission".
+<center><i><tt>Java program</tt></i></center>
+<tt>class SubmissionDate extends DateComponent { public SubmissionDate(String
+confName) throws Exception { try { <font color="#FF7F24">// create the
+system call</font> String[] cmd = buildScript(confName); <font color="#FF7F24">//
+launch the call and process the result</font> process(confName, getProcStream(cmd),
+getCorefTable()); } catch(Exception e) { this.date = new BuggyDate(); }
+} private void process(String conf, InputStream is, CoreferenceTable corefTable)
+throws Exception { BufferedReader br = new BufferedReader(new InputStreamReader(is));
+this.date = parseDate(br.readLine()); // date value br.readLine(); // empty
+line String str = br.readLine(); while (str!=null) { Span span = extractSpan(str);
+// doc&nbsp;<space>start&nbsp;<space>end corefTable.addSpan(conf, span.doc,
+span); str = br.readLine(); // date br.readLine(); // empty line str =
+br.readLine(); } return; } }</tt>
+<center><i><tt>Perl program</tt></i></center>
+<tt>#!/usr/bin/perl sub initFilter { print "Building filter...\n" if ($DEBUG);
+return sub { my $line = shift; my $context = " (subm .*? | paper .*? (due|rece)
+.*?) "; my $pattern1 = $context . $Date::dateFilter; my $pattern2 = $Date::dateFilter
+. $context; return ( ( ($line =~ /$pattern1/oxi) || ($line =~ /$pattern2/oxi)
+) &amp;&amp; ($line !~ /camera|abstract/oxi)) }; }</tt>
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+<a NAME="future"></a>
+<h1>
+<img SRC="symb1.gif" > Future Work</h1>
+Future work will probably include the following topics:
+<ul>
+<li>
+cross-optimization between IR, IE and database query execution</li>
+
+<li>
+improving system performance</li>
+
+<ul>
+<li>
+moving from CGI to Corba/ILU</li>
+
+<li>
+looking at mobile agent technology</li>
+</ul>
+
+<li>
+applying AKIRA to a different area than "Call for Papers" to check its
+genericity</li>
+
+<li>
+looking at visual interfaces to help the user formulate her query</li>
+</ul>
+
+<center><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+
+<p><br>
+<br>
+<p>
+<hr WIDTH=50%>
+<center><font size=-2>Copyright AKIRA Project1998, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

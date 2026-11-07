@@ -1,0 +1,426 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Least Expected Cost Query Optimization: An Exercise in Utility</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Least Expected Cost Query Optimization: An Exercise in Utility
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_francis_chu.htm">Francis Chu</a>, 
+<a href = "a_joseph_y_halpern.htm">Joseph Y. Halpern</a>, and 
+<a href = "a_praveen_seshadri.htm">Praveen Seshadri</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/leastexpectedcofrjop.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsdatabasethmpler.htm">Return to Database Theory Sampler</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ We identify two unreasonable, though standard, assumptions made by database query optimizers that can adversely affect the quality of t,he chosen evaluation plans. One assumption is that it is adequate to optimize for the expected case-that is, the case where various parameters (like available memory) take on their expected value. The other assumption is that the parameters are constant throughout the execution of the query. We present an algorithm based on the ‘System R”-s@ile query optimization algorithm that does not rely on these assumptions. The algorithm we propose chooses the plan of the least expected cost instead of the plan of least cost given expected values of the parameters. In execution environments that exhibit a high degree of variability, our techniques should result in better performance.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[Ant93]
+<dd>
+<a name="Antoshenkov93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">
+Gennady Antoshenkov
+</a>
+: Dynamic Query Optimization in Rdb/VMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#Antoshenkov93">
+ICDE 1993
+</a>
+: 538-547
+<dt>
+[GC94]
+<dd>
+<a name="ColeG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cole:Richard_L=.html">
+Richard L. Cole
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Optimization of Dynamic Query Evaluation Plans. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ColeG94">
+SIGMOD Conference 1994
+</a>
+: 150-160
+<dt>
+[Gra93]
+<dd>
+<a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Query Evaluation Techniques for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">
+Computing Surveys 25(2)
+</a>
+: 73-170(1993)
+<dt>
+[IK90]
+<dd>
+<a name="IoannidisK90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kang:Younkyung_Cha.html">
+Younkyung Cha Kang
+</a>
+: Randomized Algorithms for Optimizing Large Join Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#IoannidisK90">
+SIGMOD Conference 1990
+</a>
+: 312-321
+<dt>
+[Ill94]
+<dd>
+... 
+<dt>
+[INSS92]
+<dd>
+<a name="IoannidisNSS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+: Parametric Query Optimization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#IoannidisNSS92">
+VLDB 1992
+</a>
+: 103-114
+<dt>
+[KD98]
+<dd>
+<a name="KabraD98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kabra:Navin.html">
+Navin Kabra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Efficient Mid-Query Re-Optimization of Sub-Optimal Query Execution Plans. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#KabraD98">
+SIGMOD Conference 1998
+</a>
+: 106-117
+<dt>
+[LNSS93]
+<dd>
+<a name="LiptonNSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+: Efficient Sampling Strategies for Relational Database Operations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs116.html#LiptonNSS93">
+TCS 116(1&amp;2)
+</a>
+: 195-226(1993)
+<dt>
+[Loh98]
+<dd>
+... 
+<dt>
+[Pea88]
+<dd>
+... 
+<dt>
+[PHH92]
+<dd>
+<a name="PiraheshHH92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasan:Waqar.html">
+Waqar Hasan
+</a>
+: Extensible/Rule Based Query Rewrite Optimization in Starburst. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#PiraheshHH92">
+SIGMOD Conference 1992
+</a>
+: 39-48
+<dt>
+[PIHS96]
+<dd>
+<a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Improved Histograms for Selectivity Estimation of Range Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">
+SIGMOD Conf. 1996
+</a>
+: 294-305
+<dt>
+[Res87]
+<dd>
+... 
+<dt>
+[Sac+79]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">
+SIGMOD Conference 1979
+</a>
+: 23-34
+<dt>
+[SBM93]
+<dd>
+... 
+<dt>
+[Sha86]
+<dd>
+<a name="Shapiro86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">
+Leonard D. Shapiro
+</a>
+: Join Processing in Database Systems with Large Main Memories. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods11.html#Shapiro86">
+TODS 11(3)
+</a>
+: 239-264(1986)
+<dt>
+[Swa89]
+<dd>
+<a name="Swami89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Optimization of Large Join Queries: Combining Heuristic and Combinatorial Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#Swami89">
+SIGMOD Conference 1989
+</a>
+: 367-376
+<dt>
+[UFA98]
+<dd>
+<a name="UrhanFA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Urhan:Tolga.html">
+Tolga Urhan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Amsaleg:Laurent.html">
+Laurent Amsaleg
+</a>
+: Cost Based Query Scrambling for Initial Delays. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#UrhanFA98">
+SIGMOD Conference 1998
+</a>
+: 130-141
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="DonjerkovicR99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Donjerkovic:Donko.html">
+Donko Donjerkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+: Probabilistic Optimization of Top N Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#DonjerkovicR99">
+VLDB 1999
+</a>
+: 411-422
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/ChuHS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Francis&nbsp;Chu&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joseph&nbsp;Y.&nbsp;Halpern&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Praveen&nbsp;Seshadri},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Least&nbsp;Expected&nbsp;Cost&nbsp;Query&nbsp;Optimization:&nbsp;An&nbsp;Exercise&nbsp;in&nbsp;Utility},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{138-147},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

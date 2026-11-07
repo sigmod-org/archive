@@ -1,0 +1,586 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - O-O, What Have They Done to DB2?</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+O-O, What Have They Done to DB2?
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_michael_j_carey.htm">Michael J. Carey</a>, 
+<a href = "a_donald_d_chamberli.htm">Donald D. Chamberlin</a>, 
+<a href = "a_srinivasa_narayana.htm">Srinivasa Narayanan</a>, 
+<a href = "a_bennet_vance.htm">Bennet Vance</a>, 
+<a href = "a_doug_doole.htm">Doug Doole</a>, 
+<a href = "a_serge_rielau.htm">Serge Rielau</a>, 
+<a href = "a_richard_swagerman.htm">Richard Swagerman</a>, and 
+<a href = "a_nelson_mendonccedi.htm">Nelson Mendon&ccedil;a Mattos</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/oowhathavetheydmidos.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbextendingstypes.htm">Return to Extending SQL with User Defined Types</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In this paper, we describe our recent experiences in adding a number of object-relational extensions to the DB2 Universal Database (UDB) system as part of a research and development project at the IBM Almaden Research Center. In particular, we have enhanced DB2 UDB with support for structured types and tables of these types, type and table hierarchies, references, path expressions, and object views. In doing so, we have taken care to design and implement the extensions in such a way as to retain DB2's ability to fully optimize queries and (in our next step) to support business rules and procedures through the provision of constraints and triggers. We describe each of the SQL language extensions that we have made, discuss the key performance tradeoffs related to the design and implementation of these features, and explain the approach that we ended up choosing (and why). Most of the features described here are currently shipping as part of Version 5.2 of the DB2 UDB product. We end this paper with a summary of the current status of our work and a discussion of what we plan to tackle next.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="CareyD96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Of Objects and Databases: A Decade of Turmoil. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 3-14
+<dt>
+[2]
+<dd>
+<a name="CareyDNAGS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Asgarian:Mohammad.html">
+Mohammad Asgarian
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Paul.html">
+Paul Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shah:Dhaval.html">
+Dhaval Shah
+</a>
+: The BUCKY Object-Relational Benchmark (Experience Paper). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyDNAGS97">
+SIGMOD Conference 1997
+</a>
+: 135-146
+<dt>
+[3]
+<dd>
+<a name="CareyDV88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vandenberg:Scott_L=.html">
+Scott L. Vandenberg
+</a>
+: A Data Model and Query Language for EXODUS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#CareyDV88">
+SIGMOD Conference 1988
+</a>
+: 413-423
+<dt>
+[4]
+<dd>
+<a name="CareyHSACFFLNPTWW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arya:Manish.html">
+Manish Arya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cody:William_F=.html">
+William F. Cody
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">
+Myron Flickner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Luniewski:Allen.html">
+Allen Luniewski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">
+Wayne Niblack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">
+Dragutin Petkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thomas_II:Joachim.html">
+Joachim Thomas II
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Williams:John_H=.html">
+John H. Williams
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+: Towards Heterogeneous Multimedia Information Systems: The Garlic Approach. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride95.html#CareyHSACFFLNPTWW95">
+RIDE-DOM 1995
+</a>
+: 124-131
+<dt>
+[5]
+<dd>
+<a name="Cattell97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cattell:R=_G=_G=.html">
+R. G. G. Cattell
+</a>
+ (Ed.): The Object Database Standard: ODMG 2.0.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1997
+<br>
+ 
+<dt>
+[6]
+<dd>
+<a name="Codd70" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Codd:E=_F=.html">
+E. F. Codd
+</a>
+: A Relational Model of Data for Large Shared Data Banks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm13.html#Codd70">
+CACM 13(6)
+</a>
+: 377-387(1970)
+<dt>
+[7]
+<dd>
+<a name="DeWittG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+: Parallel Database Systems: The Future of High Performance Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#DeWittG92">
+CACM 35(6)
+</a>
+: 85-98(1992)
+<dt>
+[8]
+<dd>
+<a name="HaasCLMWLLPCS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Walter.html">
+Walter Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">
+Guy M. Lohman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McPherson:John.html">
+John McPherson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilms:Paul_F=.html">
+Paul F. Wilms
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lapis:George.html">
+George Lapis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Starburst Mid-Flight: As the Dust Clears. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#HaasCLMWLLPCS90">
+TKDE 2(1)
+</a>
+: 143-160(1990)
+<dt>
+[9]
+<dd>
+<a name="HeilerZ90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heiler:Sandra.html">
+Sandra Heiler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Object Views: Extending the Vision. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde90.html#HeilerZ90">
+ICDE 1990
+</a>
+: 86-93
+<dt>
+[10]
+<dd>
+<a name="Kim93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">
+Won Kim
+</a>
+: Object-Oriented Database Systems: Promises, Reality, and Future. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1993
+</a>
+: 676-687
+<dt>
+[11]
+<dd>
+<a name="NixonCLBMS87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nixon:Brian_A=.html">
+Brian A. Nixon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chung:Lawrence.html">
+Lawrence Chung
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lauzon:David.html">
+David Lauzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Borgida:Alexander.html">
+Alexander Borgida
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mylopoulos:John.html">
+John Mylopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stanley:Martin.html">
+Martin Stanley
+</a>
+: Implementation of a Compiler for a Semantic Data Model: Experiences with Taxis. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#NixonCLBMS87">
+SIGMOD Conference 1987
+</a>
+: 118-131
+<dt>
+[12]
+<dd>
+<a name="Ramakrishnan98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+: Database Management Systems.  WCB/McGraw-Hill 1998, ISBN 0-07-050775-9
+<br>
+ 
+<dt>
+[13]
+<dd>
+<a name="Stonebraker96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, Dorothy Moore: Object-Relational DBMSs: The Next Great Wave.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1996, ISBN 1-55860-397-2
+<br>
+ 
+<dt>
+[14]
+<dd>
+<a name="StonebrakerRLGCBBB90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rowe:Lawrence_A=.html">
+Lawrence A. Rowe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brodie:Michael_L=.html">
+Michael L. Brodie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beech:David.html">
+David Beech
+</a>
+: Third-Generation Database System Manifesto - The Committee for Advanced DBMS Function. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod19.html#StonebrakerRLGCBBB90">
+SIGMOD Record 19(3)
+</a>
+: 31-44(1990)
+<dt>
+[15]
+<dd>
+<a name="TsurZ84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsur:Shalom.html">
+Shalom Tsur
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaniolo:Carlo.html">
+Carlo Zaniolo
+</a>
+: An Implementation of GEM - Supporting a Semantic Data Model on a Relational Back-End. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#TsurZ84">
+SIGMOD Conference 1984
+</a>
+: 286-295
+<dt>
+[16]
+<dd>
+<a name="Zaniolo83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zaniolo:Carlo.html">
+Carlo Zaniolo
+</a>
+: The Database Language GEM. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod83.html#Zaniolo83">
+SIGMOD Conference 1983
+</a>
+: 207-218
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="FuhDCMTLDRM99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fuh:You=Chin.html">
+You-Chin Fuh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/De=szlig=loch:Stefan.html">
+Stefan De&szlig;loch
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Weidong.html">
+Weidong Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mattos:Nelson_Mendon=ccedil=a.html">
+Nelson Mendon&ccedil;a Mattos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tran:Brian_T=.html">
+Brian T. Tran
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeMichel:Linda.html">
+Linda DeMichel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rielau:Serge.html">
+Serge Rielau
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannhaupt:Danko.html">
+Danko Mannhaupt
+</a>
+: Implementation of SQL3 Structured Types with Inheritance and Value Substitutability. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1999
+</a>
+: 565-574
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/CareyCNVDRSM99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Michael&nbsp;J.&nbsp;Carey&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donald&nbsp;D.&nbsp;Chamberlin&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Srinivasa&nbsp;Narayanan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bennet&nbsp;Vance&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doug&nbsp;Doole&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Serge&nbsp;Rielau&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Richard&nbsp;Swagerman&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nelson&nbsp;Mendon\c{c}a&nbsp;Mattos},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{O-O,&nbsp;What&nbsp;Have&nbsp;They&nbsp;Done&nbsp;to&nbsp;DB2?},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{542-553},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

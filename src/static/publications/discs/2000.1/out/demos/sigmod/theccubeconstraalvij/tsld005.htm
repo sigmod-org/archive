@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>PPT Slide</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Query by Example</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld004.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld006.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr>Query&nbsp;by&nbsp;Example</nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<h1><font size="5">Query by Example ( cont. )</font></h1>
+
+<p>To illustrate the notion of CST object, consider an example of a two-dimensional desk <tt>&quot;my-desk&quot;</tt>
+depicted in the figure below as the larger rectangle.</p>
+
+<p><img src="deskps.gif" alt="deskps.gif (2197 bytes)" WIDTH="406" HEIGHT="292"></p>
+
+<p>The smaller rectangle depicts the desk's drawer, which may open, i.e. move relatively
+to the desk. Similarly, the desk may be moved in the room. In the figure, the extent of <tt>my-desk</tt>
+is the set of points { (w,z) <font face="symbol">|</font> (-4 <font face="symbol">£</font>
+w <font face="symbol">£</font> 4) <font face="symbol">Ù</font>(-2 <font face="symbol">£</font>
+z <font face="symbol">£</font> 2) } which is captured as the CST object (-4 <font face="symbol">£</font> w <font face="symbol">£</font> 4) <font face="symbol">Ù</font>(-2
+<font face="symbol">£</font> z <font face="symbol">£</font> 2) in free variables w,z,
+i.e., of the class CST(w,z). Note that, conceptually, CST objects are viewed in CCUBE as
+symbolic constraint expressions. Thus, the names of (free) variables are meaningful and
+are part of CST objects.</p>
+
+<p>Similarly to the desk's extent, the extent of the desk's drawer in the drawer's
+coordinates can be described by the CST object (-1 <font face="symbol">£</font> w1 <font face="symbol">£</font> 1) <font face="symbol">Ù</font>(-1 <font face="symbol">£</font>
+z1 <font face="symbol">£</font> 1). The possible locations (p,q) of the drawer's center
+in the desk's coordinates can be described by p = -2 <font face="symbol">Ù</font>-3 <font face="symbol">£</font> q <font face="symbol">£</font> -1; note that the horizontal
+component of the center, p, equals to a constant since the drawer in the example cannot
+move left or right; note also that the vertical component, q, is between -3, when the
+drawer is fully open, and -1 when it is closed. Also, the translation between the desk's
+w,z and the room's u,v systems of coordinates can be captured by the constraint u = x + w <font face="symbol">Ù</font>v = y + z, meaning that if the desk's center is at (x,y), then a
+point (w,z) in desk's coordinates is (u,v) in the global room's coordinates.</p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

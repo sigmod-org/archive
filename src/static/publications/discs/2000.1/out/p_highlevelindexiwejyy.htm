@@ -1,0 +1,577 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - High Level Indexing of User-Defined Types</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+High Level Indexing of User-Defined Types
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_weidong_chen.htm">Weidong Chen</a>, 
+<a href = "a_jyh-herng_chow.htm">Jyh-Herng Chow</a>, 
+<a href = "a_you-chin_fuh.htm">You-Chin Fuh</a>, 
+<a href = "a_jean_grandbois.htm">Jean Grandbois</a>, 
+<a href = "a_michelle_jou.htm">Michelle Jou</a>, 
+<a href = "a_nelson_mendonccedi.htm">Nelson Mendon&ccedil;a Mattos</a>, 
+<a href = "a_brian_t_tran.htm">Brian T. Tran</a>, and 
+<a href = "a_yun_wang.htm">Yun Wang</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/highlevelindexiwejyy.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbextendingstypes.htm">Return to Extending SQL with User Defined Types</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  To support emerging database applications, object-relational databases leverage the mature relational database technology and allow users to introduce application-specific types and methods. Tables in a database may now contain such objects as geographical shapes, images, and text documents. To realize the full potential of object-relational databases, efficient querying and searching of user-defined objects must be supported. This paper presents a high level framework for indexing of user-defined types with user-defined predicates. It is orthogonal to the low level access methods that are supported. It is unique in providing direct user control over the transformation from a user-defined type into an abstract domain of index values, the generation of search keys of a user-defined predicate with bound search arguments, and the execution of a user-defined predicate. The high level framework has been implemented in IBM DB2 Universal Database. Its generality, usability, and performance have been demonstrated in different application domains, where indices on user-defined objects can be fully integrated with SQL queries and exploited by the query compiler.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="Aoki98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aoki:Paul_M=.html">
+Paul M. Aoki
+</a>
+: Generalizing ``Search'' in Generalized Search Trees (Extended Abstract). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#Aoki98">
+ICDE 1998
+</a>
+: 380-389
+<dt>
+[2]
+<dd>
+<a name="Bayer97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bayer:Rudolf.html">
+Rudolf Bayer
+</a>
+: The Universal B-Tree for Multidimensional Indexing: general Concepts. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/wwca/wwca97.html#Bayer97">
+WWCA 1997
+</a>
+: 198-209
+<dt>
+[3]
+<dd>
+<a name="BayerM72" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bayer:Rudolf.html">
+Rudolf Bayer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McCreight:Edward_M=.html">
+Edward M. McCreight
+</a>
+: Organization and Maintenance of Large Ordered Indices. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acta/acta1.html#BayerM72">
+Acta Informatica 1
+</a>
+: 173-189(1972)
+<dt>
+[4]
+<dd>
+<a name="BerchtoldBK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">
+Christian B&ouml;hm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The Pyramid-Tree: Breaking the Curse of Dimensionality. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#BerchtoldBK98">
+SIGMOD Conference 1998
+</a>
+: 142-153
+<dt>
+[5]
+<dd>
+<a name="BrinkhoffKS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">
+Thomas Brinkhoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+: Comparison of Approximations of Complex Objects Used for Approximation-based Query Processing in Spatial Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#BrinkhoffKS93">
+ICDE 1993
+</a>
+: 40-49
+<dt>
+[6]
+<dd>
+<a name="BrinkhoffKSS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">
+Thomas Brinkhoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">
+Ralf Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">
+Bernhard Seeger
+</a>
+: Multi-Step Processing of Spatial Joins. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#BrinkhoffKSS94">
+SIGMOD Conference 1994
+</a>
+: 197-208
+<dt>
+[7]
+<dd>
+<a name="ChaudhuriS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: Optimization of Queries with User-defined Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 87-98
+<dt>
+[8]
+<dd>
+<a name="ChowCCX99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chow:Jyh=Herng.html">
+Jyh-Herng Chow
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Josephine_M=.html">
+Josephine M. Cheng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Daniel_T=.html">
+Daniel T. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Jane.html">
+Jane Xu
+</a>
+: Index Design for Structured Documents Based on Abstraction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dasfaa/dasfaa99.html#ChowCCX99">
+DASFAA 1999
+</a>
+: 89-96
+<dt>
+[9]
+<dd>
+<a name="Comer79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Comer:Douglas.html">
+Douglas Comer
+</a>
+: The Ubiquitous B-Tree. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur11.html#Comer79">
+Computing Surveys 11(2)
+</a>
+: 121-137(1979)
+<dt>
+[10]
+<dd>
+... 
+<dt>
+[11]
+<dd>
+<a name="FaloutsosBFHNPE94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">
+Ron Barber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">
+Myron Flickner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">
+Jim Hafner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">
+Wayne Niblack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">
+Dragutin Petkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">
+William Equitz
+</a>
+: Efficient and Effective Querying by Image Content. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis3.html#FaloutsosBFHNPE94">
+JIIS 3(3/4)
+</a>
+: 231-262(1994)
+<dt>
+[12]
+<dd>
+<a name="FaloutsosRM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ranganathan:M=.html">
+M. Ranganathan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">
+Yannis Manolopoulos
+</a>
+: Fast Subsequence Matching in Time-Series Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#FaloutsosRM94">
+SIGMOD Conference 1994
+</a>
+: 419-429
+<dt>
+[13]
+<dd>
+<a name="GaedeG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gaede:Volker.html">
+Volker Gaede
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=nther:Oliver.html">
+Oliver G&uuml;nther
+</a>
+: Multidimensional Access Methods. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur30.html#GaedeG98">
+Computing Surveys 30(2)
+</a>
+: 170-231(1998)
+<dt>
+[14]
+<dd>
+<a name="GoldmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: DataGuides: Enabling Query Formulation and Optimization in Semistructured Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 436-445
+<dt>
+[15]
+<dd>
+<a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">
+Antonin Guttman
+</a>
+: R-Trees: A Dynamic Index Structure for Spatial Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">
+SIGMOD Conference 1984
+</a>
+: 47-57
+<dt>
+[16]
+<dd>
+<a name="HellersteinNP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pfeffer:Avi.html">
+Avi Pfeffer
+</a>
+: Generalized Search Trees for Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1995
+</a>
+: 562-573
+<dt>
+[17]
+<dd>
+<a name="HellersteinS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: Predicate Migration: Optimizing Queries with Expensive Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#HellersteinS93">
+SIGMOD Conference 1993
+</a>
+: 267-276
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="Jagadish90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+: Linear Clustering of Objects with Multiple Atributes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#Jagadish90">
+SIGMOD Conference 1990
+</a>
+: 332-342
+<dt>
+[20]
+<dd>
+<a name="LynchS88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lynch:Clifford_A=.html">
+Clifford A. Lynch
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: Extended User-Defined Indexing with Application to Textual Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1988
+</a>
+: 306-317
+<dt>
+[21]
+<dd>
+<a name="OrensteinM88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manola:Frank.html">
+Frank Manola
+</a>
+: PROBE Spatial Data Modeling and Query Processing in an Image Database Application. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse14.html#OrensteinM88">
+TSE 14(5)
+</a>
+: 611-629(1988)
+<dt>
+[22]
+<dd>
+<a name="RoussopoulosKV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:Stephen.html">
+Stephen Kelley
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vincent:Fr=eacute=d=eacute=ic.html">
+Fr&eacute;d&eacute;ic Vincent
+</a>
+: Nearest Neighbor Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#RoussopoulosKV95">
+SIGMOD Conference 1995
+</a>
+: 71-79
+<dt>
+[23]
+<dd>
+<a name="ShivakumarGC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shivakumar:Narayanan.html">
+Narayanan Shivakumar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chekuri:Chandra.html">
+Chandra Chekuri
+</a>
+: Filtering with Approximate Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 263-274
+<dt>
+[24]
+<dd>
+<a name="Stonebraker86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: Inclusion of New Types in Relational Data Base Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde86.html#Stonebraker86">
+ICDE 1986
+</a>
+: 262-269
+<dt>
+[25]
+<dd>
+<a name="StonebrakerBM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Paul.html">
+Paul Brown
+</a>
+, Dorothy Moore: Object-Relational DBMSs, Second Edition.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1998, ISBN 1-55860-452-9
+<br>
+ 
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/ChenCFGJMTW99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Weidong&nbsp;Chen&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jyh-Herng&nbsp;Chow&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You-Chin&nbsp;Fuh&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jean&nbsp;Grandbois&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michelle&nbsp;Jou&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nelson&nbsp;Mendon\c{c}a&nbsp;Mattos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brian&nbsp;T.&nbsp;Tran&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yun&nbsp;Wang},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{High&nbsp;Level&nbsp;Indexing&nbsp;of&nbsp;User-Defined&nbsp;Types},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{554-564},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

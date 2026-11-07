@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Type Manager</H2>
+<P>The Type Manager is a tool for creating or modifying a type hierarchy. It can be used to define or delete types,
+create or modify a type hierarchy, set characteristics of a type and view statistics about a type.<BR>
+<BR>
+<IMG SRC="Images/TypeManager.gif" WIDTH="824" HEIGHT="546" ALIGN="BOTTOM" BORDER="0">
+<H2><BR>
+<A NAME="TypeList"></A>Type List</H2>
+<P>This list shows all of the types currently within the hierarchy, in alphabetical order. When the user selects
+a type in the list, the <A HREF="#Toolbar">toolbar</A>, <A HREF="#AncestorList">ancestor list</A>, <A HREF="#ChildList">child
+list</A> and <A HREF="#Statistics">statistics</A> are updated to be specific to the selected type.
+<H2><A NAME="Toolbar"></A>Toolbar</H2>
+
+<BLOCKQUOTE>
+	<H3><IMG SRC="Images/new.gif" WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"> Add a type</H3>
+	<P>Create a new type. The user will be prompted to enter a new name for the type, select its major and atomic type
+	(where applicable), and whether it is a semi-structured type. It is then added to the type list at the left, and
+	is now available for use anywhere within Nodose.
+</BLOCKQUOTE>
+
+
+<BLOCKQUOTE>
+	<H3><IMG SRC="Images/Delete.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> Delete a type</H3>
+	<P>Delete the selected type. The type will be removed from the list at the left, and is no longer available for
+	use within Nodose. The user is only able to delete a type if there are no existing nodes of that type, and it has
+	no child types within the type hierarchy.
+</BLOCKQUOTE>
+
+
+<BLOCKQUOTE>
+	<H3><IMG SRC="Images/typename.gif" WIDTH="226" HEIGHT="33" ALIGN="BOTTOM" BORDER="0"> Change a type name</H3>
+	<P>Edit the name of a type. The type will be modified in the list at left and throughout Nodose.
+</BLOCKQUOTE>
+
+
+<BLOCKQUOTE>
+	<H3><IMG SRC="Images/TypeChange.gif" WIDTH="148" HEIGHT="36" ALIGN="BOTTOM" BORDER="0"> Change the major or atomic
+	type</H3>
+	<P>Change the major or atomic type of a type. The user is only able to change a type if it has no child types within
+	the type hierarchy.
+	<H3><A NAME="CreateNewRecord"></A><IMG SRC="Images/TypeNewField.gif" WIDTH="97" HEIGHT="36" ALIGN="BOTTOM" BORDER="0">
+	Create a new record field or list element</H3>
+	<P>Add a field or element to a record or list. In the case of a list, the user will select the type of the elements.
+	In the case of a record, the user will select the type of the field, enter a field name (or use the default) and
+	mark whether the field is required.
+</BLOCKQUOTE>
+
+<P>
+<H2><A NAME="AncestorList"></A>Ancestor List</H2>
+<P>The ancestor list shows a list of all types that the <A HREF="#TypeList">currently selected type</A> is an element
+of. The user can select any of the ancestor types, and that type will be selected in the <A HREF="#TypeList">type
+list</A>.
+<H2><A NAME="ChildList"></A>Child List</H2>
+<P>The child list shows a list of all types that the <A HREF="#TypeList">currently selected type</A> is the parent
+type of. This can be fields within a record, or elements within a list. The user can select any of the child types,
+and that type will be selected in the <A HREF="#TypeList">type list</A>. The user can also <A HREF="#CreateNewRecord">add
+fields or elements</A> to the currently selected type. In the case of a record, the user can also edit the field
+name or mark a field as required.
+<H2><A NAME="Statistics"></A>Statistics</H2>
+<P>The statistics sections shows a number of statistics, specific to the <A HREF="#TypeList">currently selected
+type</A> and its associated instances. This allows the user to gain further information on a type, and look for
+anomylies or problems within their type system.
+
+</BODY>
+
+</HTML>

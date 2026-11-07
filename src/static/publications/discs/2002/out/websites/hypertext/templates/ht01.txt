@@ -1,0 +1,183 @@
+HT & DL '01 Proceedings Format
+
+
+
+David Durand
+Dynamic Diagrams, USA
+E-mail: david@dynamicdiagrams.com
+
+Hugh Davis
+University of Southampton, UK
+E-mail: hcd@ecs.soton.ac.uk
+
+
+
+
+
+
+ABSTRACT 
+A brief abstract.
+KEYWORDS: Guides, instructions, conference proceedings
+INTRODUCTION
+HT'01 require paper submissions to be in "final format.". 
+The printed conference proceeding represents the final 
+archival record of the conference. We are striving to give 
+the book a single, high quality appearance. To do this, 
+authors must follow some simple guidelines. In essence, we 
+ask you to make your paper look exactly like this 
+document. The easiest way to do this is to simply remove 
+the "instructional" content in one of the templates and add 
+your own text.
+We have templates for FrameMaker, MS Word, and 
+LaTeX. These templates have styles defined that will aid 
+you in conforming to these formatting instructions.
+WHAT TO SUBMIT AND WHERE
+For initial submissions, authors are asked to submit either a 
+PDF (preferred) or Postscript version of their document. 
+When submitting a Postscript submission, be sure to embed 
+all fonts needed to view the document.
+HT'01 will accept electronic submissions only. Instructions 
+for sending submissions are located on the conference 
+website: HT'01 http://www.ht01.org/. If you have questions 
+or concerns about your ability to follow these instructions, 
+contact the proceedings chair: David Durand 
+(david@dynamicdiagrams.com). Alternatively, you can 
+contact the program chairs: Hugh Davis 
+(hcd@ecs.soton.ac.uk) or Yellowlees Douglas 
+(jdouglas@nwe.ufl.edu) using the information above.
+
+
+TITLE AND AUTHORS
+The title, author's names and affiliations run across the full 
+width of the page — one column that is 5.9 cm long and 
+17.8 cm wide. We also recommend phone number and e-
+mail address, if available. (See the top of this page for two 
+names with different addresses; note that the 
+names/addresses should be formatted side by side. If only 
+one address is needed, center all text in the page; if three 
+addresses are needed, modify this section style to include 3 
+columns.)
+ABOUT THE ABSTRACT 
+Every submission should begin with an abstract, followed 
+by a set of keywords; the abstract and keywords should be 
+placed the left column of the first page under the left half of 
+the title. The abstract should be a concise statement of the 
+problem, approach and findings of the work reported.
+SUBSEQUENT PAGES
+For pages other than the first, start at the top of the layout 
+sheets, as indicated, and continue in double-column format.
+SECTIONS
+The title of a section should be in Helvetica 9 point bold in 
+all capitals. Notice that the sections are not numbered!
+Subsections
+The title of subsections should be in Helvetica 9 point bold 
+with only the initial letters capitalized. (Note: Words like 
+"the" and "a" are not capitalized.)
+Subsubsections. The heading for subsubsections should be 
+in Helvetica 9 point italics with initial letters capitalized. 
+(Note: Words like "the" and "a" are not capitalized.) The 
+heading ends with a period and is not followed by a return.
+TYPESET TEXT
+Submissions should be prepared on a typesetter or word 
+processor. Please do not use your favorite obscure font. We 
+want to produce a book that looks like a book, not like many 
+dissimilar papers thrown together. Please use a 10 point 
+Times Roman font, or other Roman font with serifs, as close 
+as possible in appearance to Times Roman in which these 
+guidelines have been set. The target is to have a 10 point 
+type set on an 11 point line, as you see here. Do not use a 
+sans-serif font (e.g., Helvetica) except for emphasis, 
+headings, figure text, and the title. The headings should be 
+set, as they are here, in Helvetica 9-point bold and the title in 
+Helvetica 18-point bold. The Press 10 point font available to 
+users of Script is a most acceptable substitute for Times 
+Roman. If actual Times Roman is not available, users might 
+try font Computer Modern Roman. Macintosh users should 
+use the font named Times.
+To ensure consistency, the right margin should be justified, 
+not ragged. Spelling may follow any consistent dialect of 
+English (e.g., British, Canadian or American). Hyphenation 
+is at your own discretion.
+FIGURES
+Figures must be inserted at the appropriate point in your 
+text. Figures can extend over the two columns up to 17.8 cm 
+(7").
+ 
+Figure 1: Who knows what this is?
+Figure text is to be centered under the figure in 9 point 
+Helvetica bold type. (As in the above example.)
+REFERENCES AND CITATIONS
+Use the standard CACM format for references, i.e., a 
+numbered list at the end of the article, ordered alphabetically 
+by first author, and referenced by number in brackets [2]. 
+(see the examples of citations at the end of this document).
+References should be materials accessible to the public (i.e., 
+articles in standard journals and open conference 
+proceedings.) Internal technical reports should be avoided 
+unless easily accessible (i.e. you can give the address to 
+obtain it). Private communications should be acknowledged, 
+not referenced.
+PAGE LIMIT
+We expect long papers to fit in 8 pages in this format, but 
+you may take up to ten pages without getting special 
+permission. Short papers should fit into 2 pages. If your 
+paper does not fit in the page limit, contact Ken Anderson 
+(kena@cs.colorado.edu) for HT'01 or Phil Doty 
+(pdoty@gslis.utexas.edu) for DL'01.
+PAGE NUMBERING, HEADERS AND FOOTERS
+Do not include headers, footers (e.g., author name, title) or 
+page numbers in your submission. Page numbers will be 
+added when the proceedings are assembled.
+LANGUAGE AND WRITING STYLE
+The written and spoken language of these conferences is 
+English as appropriate for presentation to an international 
+audience.
+*	Write in a straight-forward style; use simple 
+sentence structure.
+*	Use common and basic vocabulary (e.g., using 
+"unusual" rather than "arcane").
+*	Briefly define or explain all technical terms.
+*	Explain all acronyms (e.g., User Interface 
+Management System (UIMS)).
+*	Avoid local references (e.g., not everyone knows all 
+city names). If the local context is important to the 
+material, describe it fully.
+*	Avoid "insider" comments. Ensure that your whole 
+audience understands any reference whose meaning 
+you do not describe (e.g., do not assume that 
+everyone has used a Macintosh or a particular 
+application.)
+*	Avoid using "plays on words" and puns. 
+Understanding phrases such as "red herring" 
+requires a cultural knowledge of English.
+*	Use unambiguous forms for representing such 
+culturally localized things as times, dates, personal 
+names, currencies, and numbers.
+*	Be clear when you are using humor. Irony, in 
+particular, can be hard to detect if you are a non-
+native English speaker.
+*	Avoid the use of gender-specific pronouns ("he," 
+"she") and other words ("chairman," "manpower"). 
+Use inclusive language (e.g., "she or he," "they," 
+"chair," "staff") that is gender-neutral.
+
+INFORMATION AND QUESTIONS
+If you have any questions concerning formatting or initial 
+submissions contact David Durand 
+(david@dynamicdiagrams.com).
+ACKNOWLEDGMENTS
+The template provided here was adapted from the template 
+prepared for HT'00, and before that CHI `95 and PDC `94. 
+REFERENCES
+1.  Cole, William G. Understanding Bayesian Reasoning Via 
+Graphical Displays, in Proc. CHI'89 Human Factors in 
+Computing Systems (Austin, April 30-May 4,1989), 
+ACM Press, pp. 381-386.
+2.  Gary, M.R. Optimal binary identification procedures. 
+SIAM J. Appl. Math. 23, 2 (Feb. 1972), 173-186.
+3. Gary, M.R. and Johnson, D.S. Computers and 
+Intractability: A Guide to the Theory of NP-
+Completeness. Freeman, San Francisco, 1979.
+
+
+

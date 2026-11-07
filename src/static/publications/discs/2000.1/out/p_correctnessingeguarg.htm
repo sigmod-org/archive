@@ -1,0 +1,338 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Correctness in General Configurations of Transactional Components</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_3.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Correctness in General Configurations of Transactional Components
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_gustavo_alonso.htm">Gustavo Alonso</a>, 
+<a href = "a_armin_fessler.htm">Armin Fessler</a>, 
+<a href = "a_guy_pardon.htm">Guy Pardon</a>, and 
+<a href = "a_hans-joumlrg_schek.htm">Hans-J&ouml;rg Schek</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/correctnessingeguarg.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podstransactiotions.htm">Return to Transactions</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ From a transactional point of view, composite systems are component based applications in which each component has its own transaction management logic. These systems are highly relevant in practice since they are likely to be the standard architecture for many future distributed applications. Unfortunately, there is no appropriate conceptual framework in which to reason about such systems. Following up on existing work that addressed special cases of composite systems, in this paper we tackle the problem of general composite systems, i.e., those with arbitrary configurations. We propose a correctness criterion, develop a new proof technique that allows us to address arbitrary configurations, and discuss several important issues related to concurrency control in distributed systems.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[ABFS97]
+<dd>
+<a name="AlonsoBFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blott:Stephen.html">
+Stephen Blott
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fessler:Armin.html">
+Armin Fessler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+: Correctness and Parallelism of Composite Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 197-208
+<dt>
+[AFPS99]
+<dd>
+<a name="AlonsoFPS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fessler:Armin.html">
+Armin Fessler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pardon:Guy.html">
+Guy Pardon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+: Transactions in Stack, Fork, and Join Composite Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#AlonsoFPS99">
+ICDT 1999
+</a>
+: 150-168
+<dt>
+[BBG89]
+<dd>
+<a name="BeeriBG89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: A Model for Concurrency in Nested Transactions Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 36(2)
+</a>
+: 230-269(1989)
+<dt>
+[BHG87]
+<dd>
+<a name="BernsteinHG87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hadzilacos:Vassos.html">
+Vassos Hadzilacos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Concurrency Control and Recovery in Database Systems.  Addison-Wesley 1987, ISBN 0-201-10715-5
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/bernstein87.html">
+Contents
+</a>
+<dt>
+[BSW88]
+<dd>
+<a name="BeeriSW88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+: Multi-Level Transaction Management, Theoretical Art or Practical Need ? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt88.html#BeeriSW88">
+EDBT 1988
+</a>
+: 134-154
+<dt>
+[GR93]
+<dd>
+<a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Transaction Processing: Concepts and Techniques.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-190-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">
+Contents
+</a>
+<dt>
+[Mos85]
+<dd>
+... 
+<dt>
+[PA]
+<dd>
+... 
+<dt>
+[Sch96]
+<dd>
+<a name="Schaad96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schaad:Werner.html">
+Werner Schaad
+</a>
+: Trabsaktionsverwaltung in heterogenen, f&ouml;derierten Datenbanksystemen. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/series/disdbis/index.html">
+DISDBIS
+</a>
+ Vol. 12 Infix Verlag, St. Augustin, Germany 1996, ISBN 3-89601-412-9
+<br>
+ 
+<dt>
+[SWS91]
+<dd>
+<a name="SchekWS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">
+Hans-J&ouml;rg Schek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schaad:Werner.html">
+Werner Schaad
+</a>
+: A Multi-Level Transaction Approach to Federated DBMS Transaction Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride91.html#SchekWS91">
+RIDE-IMS 1991
+</a>
+: 0-
+<dt>
+[Wei91]
+<dd>
+<a name="Weikum91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weikum:Gerhard.html">
+Gerhard Weikum
+</a>
+: Principles and Realization Strategies of Multilevel Transaction Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods16.html#Weikum91">
+TODS 16(1)
+</a>
+: 132-180(1991)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/AlonsoFPS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Gustavo&nbsp;Alonso&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Armin&nbsp;Fessler&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Guy&nbsp;Pardon&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hans-J{\"o}rg&nbsp;Schek},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Correctness&nbsp;in&nbsp;General&nbsp;Configurations&nbsp;of&nbsp;Transactional&nbsp;Components},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{285-293},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

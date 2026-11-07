@@ -1,0 +1,48 @@
+BODY { 
+  margin-left:  2%;
+  background-color:  #26547C;
+}
+
+
+BODY, EM, STRONG, EM STRONG, STRONG EM, H1, H2, H3, H4, H5, H6, H7, COL, COLGROUP, TABLE, TBODY, TD, TR, TH, DL, DD, DT, A:link, A:visited, A:active, A:hover, A:offsite, LI, UL, OL  {	
+  color:  #F5F5F5;
+  background-color:  #26547C;
+}	
+
+H1, H2, H3, H4, H5, H6, H7, H8, H9 { 
+  color:  #FFFFFF;
+}
+
+H1, H2 { 
+  text-transform: uppercase;
+ }
+
+DIV {   
+  font-family:  Verdana, Myriad Web, Syntax, sans-serif;
+  font-size:  0.75em;
+  font-size-adjust:  0.58;
+  padding-bottom: 5px;
+}
+
+A:link {
+  color:  #E7D600;
+}
+
+A:visited, A:offsite { 
+  color:  #BD63FF;
+}
+
+A:active, A:hover { 
+  color:  #FF1800;
+}
+
+BODY { 
+  margin-top: 50px; 
+  background: url(pic/ht01LogoRight.gif) fixed no-repeat;
+  background-position: 0px 0px;
+  background-color:  #26547C;
+}
+
+P, EM, STRONG, EM STRONG, STRONG EM, H1, H2, H3, H4, H5, H6, H7, COL, COLGROUP, TABLE, TBODY, TD, TR, TH, DL, DD, DT, A:link, A:visited, A:active, A:hover, A:offsite, LI, UL, OL  { 
+  background-color: transparent;
+}

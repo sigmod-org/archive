@@ -1,0 +1,158 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_4.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+TOPAZ: a Cost-Based, Rule-Driven, Multi-Phase Parallelizer</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_n.htm#Clara Nippl">Clara Nippl</a>, <a href="m_authors_m.htm#Bernhard Mitschang">Bernhard Mitschang</a></center></td></tr></table></center><a target="disc_pdf)79(" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Currently the key problems of query optimization are extensibility imposedby object-relational technology, as well as query complexity caused by forthcoming applications, such as OLAP.
+We propose a generic approach to parallelization, called TOPAZ.
+Different forms of parallelism are exploited to obtain maximum speedup combined with lowest resource consumption.
+The necessary abstractions w.r.t. operator characteristics and system architecture are provided by rules that are used by a cost-based, top-down search engine.
+A multi-phase pruning based on a global analysis of the plan efficiently guides the search process, thus considerably reducing complexity and achieving optimization performance.
+Since TOPAZ solely relies on the widespread concepts of iterators and datarivers common to (parallel) execution models, it fits as an enabling technology into most state-of-the-art (object-) relational systems.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[BJ+96]<dd><a name="BozasJLMRZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bozas:Giannis.html">Giannis Bozas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jaedicke:Michael.html">Michael Jaedicke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Listl:Andreas.html">Andreas Listl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">Bernhard Mitschang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reiser:Angelika.html">Angelika Reiser</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zimmermann:Stephan.html">Stephan Zimmermann</a>:
+On Transforming a Sequential SQL-DBMS into a Parallel One: First Results and Experiences of the MIDAS Project.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/europar/europar96-2.html#BozasJLMRZ96">Euro-Par, Vol. II 1996</a>: 881-886<dt>[BF+95]<dd><a name="BaruFGHJPCW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baru:Chaitanya_K=.html">Chaitanya K. Baru</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fecteau:Gilles.html">Gilles Fecteau</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goyal:Ambuj.html">Ambuj Goyal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hsiao:Hui=I.html">Hui-I Hsiao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jhingran:Anant.html">Anant Jhingran</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Padmanabhan:Sriram.html">Sriram Padmanabhan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Copeland:George_P=.html">George P. Copeland</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilson:Walter_G=.html">Walter G. Wilson</a>:
+DB2 Parallel Edition.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj34.html#BaruFGHJPCW95">IBM Systems Journal 34(2)</a>: 292-322(1995)<dt>[BF97]<dd><a name="BallingerF97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Ballinger:Carrie.html">Carrie Ballinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fryer:Ron.html">Ron Fryer</a>:
+Born To Be Parallel: Why Parallel Origins Give Teradata an Enduring Performance Edge.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#BallingerF97">Data Engineering Bulletin 20(2)</a>: 3-12(1997)<dt>[BFV96]<dd><a name="BouganimFV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bouganim:Luc.html">Luc Bouganim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">Daniela Florescu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Dynamic Load Balancing in Hierarchical Parallel Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BouganimFV96">VLDB 1996</a>: 436-447<dt>[Ce96]<dd><a name="Celis96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Celis:Pedro.html">Pedro Celis</a>:
+The Query Optimizer in Tandem's new ServerWare SQL Product.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#Celis96">VLDB 1996</a>: 592<dt>[CJ97]<dd><a name="ClausnitzerJMNRZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clausnitzer:Alexander.html">Alexander Clausnitzer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jaedicke:Michael.html">Michael Jaedicke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">Bernhard Mitschang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nippl:Clara.html">Clara Nippl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reiser:Angelika.html">Angelika Reiser</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zimmermann:Stephan.html">Stephan Zimmermann</a>:
+On the Application of Parallel Database Technology for Large Scale Document Management Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ideas/ideas97.html#ClausnitzerJMNRZ97">IDEAS 1997</a>: 388-396<dt>[De+90]<dd><a name="DeWittGSBHR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghandeharizadeh:Shahram.html">Shahram Ghandeharizadeh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bricker:Allan.html">Allan Bricker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hsiao:Hui=I.html">Hui-I Hsiao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rasmussen:Rick.html">Rick Rasmussen</a>:
+The Gamma Database Machine Project.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#DeWittGSBHR90">TKDE 2(1)</a>: 44-62(1990)<dt>[DG92]<dd><a name="DeWittG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>:
+Parallel Database Systems: The Future of High Performance Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#DeWittG92">CACM 35(6)</a>: 85-98(1992)<dt>[GHK92]<dd><a name="GangulyHK92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganguly:Sumit.html">Sumit Ganguly</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasan:Waqar.html">Waqar Hasan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>:
+Query Optimization for Parallel Execution.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#GangulyHK92">SIGMOD Conference 1992</a>: 9-18<dt>[GI97]<dd><a name="GarofalakisI97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garofalakis:Minos_N=.html">Minos N. Garofalakis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>:
+Parallel Query Scheduling and Optimization with Time- and Space-Shared Resources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GarofalakisI97">VLDB 1997</a>: 296-305<dt>[Gra94]<dd><a name="Graefe94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Volcano - An Extensible and Parallel Query Evaluation System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde6.html#Graefe94">TKDE 6(1)</a>: 120-135(1994)<dt>[Gra95]<dd><a name="Graefe95a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+The Cascades Framework for Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#Graefe95a">Data Engineering Bulletin 18(3)</a>: 19-29(1995)<dt>[Gra96]<dd><a name="Graefe96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Relational Engine and Query Processing in Microsoft SQL Server.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#Graefe96">ICDE 1996</a>: 160-161<dt>[Gr95]<dd>...
+<dt>[GB+96]<dd><a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">Adam Bosworth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">Andrew Layman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">ICDE 1996</a>: 152-159<dt>[GGS96]<dd><a name="GangulyGS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganguly:Sumit.html">Sumit Ganguly</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goel:Akshay.html">Akshay Goel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">Abraham Silberschatz</a>:
+Efficient and Acurate Cost Models for Parallel Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#GangulyGS96">PODS 1996</a>: 172-181<dt>[Ha95]<dd>...
+<dt>[HK+97]<dd><a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">Edward L. Wimmers</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">Jun Yang</a>:
+Optimizing Queries Across Diverse Data Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HaasKWY97">VLDB 1997</a>: 276-285<dt>[HS93]<dd><a name="HongS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hong:Wei.html">Wei Hong</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>:
+Optimization of Parallel Query Execution Plans in XPRS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd1.html#HongS93">Distributed and Parallel Databases 1(1)</a>: 9-32(1993)<dt>[JMP97]<dd><a name="JhingranMP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jhingran:Anant.html">Anant Jhingran</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Malkemus:Timothy.html">Timothy Malkemus</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Padmanabhan:Sriram.html">Sriram Padmanabhan</a>:
+Query Optimization in DB2 Parallel Edition.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#JhingranMP97">Data Engineering Bulletin 20(2)</a>: 27-34(1997)<dt>[JM98]<dd><a name="JaedickeM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jaedicke:Michael.html">Michael Jaedicke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">Bernhard Mitschang</a>:
+On Parallel Processing of Aggregate and Scalar Functions in Object-Relational DBMS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#JaedickeM98">SIGMOD Conference 1998</a>: 379-389<dt>[KD96]<dd>...
+<dt>[Lo88]<dd><a name="Lohman88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">Guy M. Lohman</a>:
+Grammar-like Functional Rules for Representing Query Optimization Alternatives.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#Lohman88">SIGMOD Conference 1988</a>: 18-27<dt>[LC+93]<dd><a name="LoCRY93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lo:Ming=Ling.html">Ming-Ling Lo</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">Ming-Syan Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ravishankar:Chinya_V=.html">Chinya V. Ravishankar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>:
+On Optimal Processor Allocation to Support Pipelined Hash Joins.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#LoCRY93">SIGMOD Conference 1993</a>: 69-78<dt>[LST91]<dd><a name="LuST91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lu:Hongjun.html">Hongjun Lu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">Ming-Chien Shan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Kian=Lee.html">Kian-Lee Tan</a>:
+Optimization of Multi-Way Join Queries for Parallel Execution.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb91.html#LuST91">VLDB 1991</a>: 549-560<dt>[LVZ93]<dd><a name="LanzelotteVZ93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lanzelotte:Rosana_S=_G=.html">Rosana S. G. Lanzelotte</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Za=iuml=t:Mohamed.html">Mohamed Za&iuml;t</a>:
+On the Effectiveness of Optimization Search Strategies for Parallel Execution Spaces.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#LanzelotteVZ93">VLDB 1993</a>: 493-504<dt>[MB+96]<dd><a name="McKennaBHT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McKenna:William_J=.html">William J. McKenna</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Burger:Louis.html">Louis Burger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hoang:Chi.html">Chi Hoang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Truong:Melissa.html">Melissa Truong</a>:
+EROC: A Toolkit for Building NEATO Query Optimizers.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#McKennaBHT96">VLDB 1996</a>: 111-121<dt>[MD95]<dd><a name="MehtaD95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Managing Intra-operator Parallelism in Parallel Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#MehtaD95">VLDB 1995</a>: 382-394<dt>[NJM97]<dd>...
+<dt>[NM98]<dd>...
+<dt>[Or98]<dd>...
+<dt>[OL90]<dd><a name="OnoL90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ono:Kiyoshi.html">Kiyoshi Ono</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">Guy M. Lohman</a>:
+Measuring the Complexity of Join Enumeration in Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#OnoL90">VLDB 1990</a>: 314-325<dt>[ON+95]<dd><a name="OzcanNKAD95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ozcan:Fatma.html">Fatma Ozcan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nural:Sena.html">Sena Nural</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koksal:Pinar.html">Pinar Koksal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Altinel:Mehmet.html">Mehmet Altinel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dogac:Asuman.html">Asuman Dogac</a>:
+A Region Based Query Optimizer Through Cascades Query Optimizer Framework.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#OzcanNKAD95">Data Engineering Bulletin 18(3)</a>: 30-40(1995)<dt>[PGK97]<dd><a name="PellenkoftLK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pellenkoft:Arjan.html">Arjan Pellenkoft</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Galindo=Legaria:C=eacute=sar_A=.html">C&eacute;sar A. Galindo-Legaria</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kersten:Martin_L=.html">Martin L. Kersten</a>:
+The Complexity of Transformation-Based Join Enumeration.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#PellenkoftLK97">VLDB 1997</a>: 306-315<dt>[Sch97]<dd>...
+<dt>[SD90]<dd><a name="SchneiderD90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Tradeoffs in Processing Complex Join Queries via Hashing in Multiprocessor Database Machines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#SchneiderD90">VLDB 1990</a>: 469-480<dt>[SM+98]<dd>...
+<dt>[STY93]<dd><a name="ShekitaYT93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Young:Honesty_C=.html">Honesty C. Young</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Kian=Lee.html">Kian-Lee Tan</a>:
+Multi-Join Optimization for Symmetric Multiprocessors.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#ShekitaYT93">VLDB 1993</a>: 479-492<dt>[SM96]<dd><a name="Stonebraker96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>, Dorothy Moore:
+Object-Relational DBMSs: The Next Great Wave.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1996, ISBN 1-55860-397-2<br>
+<dt>[TD93]<dd><a name="ThomasD93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thomas:Joachim.html">Joachim Thomas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/De=szlig=loch:Stefan.html">Stefan De&szlig;loch</a>:
+A Plan-Operator Concept for Client-Based Knowledge Progressing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#ThomasD93">VLDB 1993</a>: 555-566<dt>[TPC95]<dd>...
+<dt>[WFA95]<dd><a name="WilschutFA95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilschut:Annita_N=.html">Annita N. Wilschut</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flokstra:Jan.html">Jan Flokstra</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Apers:Peter_M=_G=.html">Peter M. G. Apers</a>:
+Parallel Evaluation of Multi-Join Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#WilschutFA95">SIGMOD Conference 1995</a>: 115-126<dt>[Zou97]<dd><a name="Zou97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zou:Chendong.html">Chendong Zou</a>:
+XPS: A High Performance Parallel Database Server.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#Zou97">Data Engineering Bulletin 20(2)</a>: 21-26(1997)<dt>[ZZS93]<dd><a name="ZianeZB93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Ziane:Mikal.html">Mikal Ziane</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Za=iuml=t:Mohamed.html">Mohamed Za&iuml;t</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Borla=Salamet:P=.html">P. Borla-Salamet</a>:
+Parallel Query Processing with Zigzag Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb2.html#ZianeZB93">VLDB Journal 2(3)</a>: 277-301(1993)</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/NipplM98,<br>  author    = {Clara Nippl and<br>               Bernhard Mitschang},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {TOPAZ: a Cost-Based, Rule-Driven, Multi-Phase Parallelizer},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {251-262},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

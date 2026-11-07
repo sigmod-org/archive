@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Newsletter</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Generator" CONTENT="Microsoft Word 97">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; SunOS 5.6 sun4u) [Netscape]">
+</HEAD>
+<BODY BGCOLOR="#FFCC00" LINK="#0000FF" VLINK="#800080">
+
+<CENTER><P><IMG SRC="wfscenar.gif" HEIGHT=45 WIDTH=451></P></CENTER>
+
+<CENTER><P><B>A. Bouguettaya, B. Benatallah, L. Hendra, J. Beard, K. Smith,
+M. Ouzzani</B> </P></CENTER>
+
+<CENTER><P><B><FONT SIZE=-1><A HREF="http://www.icis.qut.edu.au/WebFindit">http://www.icis.qut.edu.au/WebFindit</A></FONT></B>
+<BR>
+&nbsp; </P></CENTER>
+
+<H4>When you start the system, you are presented with the Royal Brisbane
+Hospital (RBH) database?s information space (i.e. coalitions and service
+links).</H4>
+
+<P>&nbsp; </P>
+
+<OL>
+<LI><B><FONT FACE="Arial"><FONT COLOR="#008000"><FONT SIZE=+4>Querying
+the Meta-Data</FONT></FONT></FONT></B></LI>
+</OL>
+
+<UL>
+<LI><B>Click on the Medical coalition?s drop-down icon, and then click
+on the TheatreEquipment coalition?s drop-down icon</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display two sub-coalitions of the coalition
+Medical.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the Medical coalition</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display the instances of the coalition, including
+those of the two sub-coalitions.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the instance Royal_Brisbane_Hospital_Management_System</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>Notice that the right hand panel is now enabled and
+it has three different tabs. This does three functions:</FONT></B></P>
+</DIR>
+
+<OL>
+<OL>
+<LI><B><FONT SIZE=-1>Display documentation types.</FONT></B></LI>
+
+<LI><B><FONT SIZE=-1>Display attributes (characteristics) of the database.</FONT></B></LI>
+
+<LI><B><FONT SIZE=-1>Display the exported schema of the database.</FONT></B></LI>
+</OL>
+</OL>
+
+<DIR>
+<P><IMG SRC="FIG1.GIF" HEIGHT=403 WIDTH=802></P>
+</DIR>
+
+<UL>
+<LI><B>Click on any documentation types</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display the documentation for the chosen
+documentation type.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the TheatreEquipment and the SurgicalAppliances sub-coalitions</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display those instances belonging only to
+those sub-coalitions</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Use the Textual Query box and type: Display Instances Of Coalition
+Insurance, then press enter</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display all instances of the coalition Insurance.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the Coalition to Database service link type</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display all service instances for that service
+link type.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>On the Textual Query box, type: Display Attributes Of Instance Coalition_Insurance&gt;Medicare_Database
+Service Coalition_ToDatabase</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will give you the attributes of Medicare_Database.
+Replacing Display Attributes with Display DocumentationTypes will give
+you the documentation types for the database.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Double-click on the service link Coalition_Insurance&gt;Medicare_Database</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will direct you to the Medicare database.</FONT></B></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the Medicare_Database</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will show the SQL Query tab. You can click on
+the tab to look at the database schema and query it.</FONT></B> </P>
+
+<P><IMG SRC="FIG2.GIF" HEIGHT=603 WIDTH=904></P>
+</DIR>
+
+<UL>
+<LI><B>Click on the service link Medicare_Database&gt;ATO_Database, and
+click on any documentation types</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will display the documentation of ATO_Database.</FONT></B>
+</P>
+
+<P><IMG SRC="FIG3.GIF" HEIGHT=418 WIDTH=630></P>
+</DIR>
+
+<UL>
+<LI><B>Use the Textual Query box to type: Follow Service Service_Database_ToDatabase:Medicare_Database&gt;ATO_Database,
+and press enter</B></LI>
+</UL>
+
+<DIR>
+<P><B><FONT SIZE=-1>This will take you to the ATO database.</FONT></B>
+<BR>
+&nbsp;</P>
+</DIR>
+
+<OL START=2>
+<LI><B><FONT FACE="Arial"><FONT COLOR="#008000"><FONT SIZE=+1>Querying
+the Actual Data</FONT></FONT></FONT></B></LI>
+</OL>
+
+<UL>
+<LI><B>Click on the ATO_Database instance or type in the Textual Query
+box: Display Interface Of Instance ATO_Database</B></LI>
+</UL>
+
+<UL>
+<LI><B>Then click on the SQL Query tab on the most right panel, and type
+in the SQL Query text area: Select * from taxPayer</B></LI>
+</UL>
+
+<DIR>
+<P><IMG SRC="FIG4.GIF" HEIGHT=605 WIDTH=904></P>
+</DIR>
+
+<P><A HREF="bigposte.htm"><IMG SRC="back.gif" BORDER=0 HEIGHT=20 WIDTH=20></A></P>
+
+<P><A HREF="bigposte.htm">Back to the WebFINDIT page</A></P>
+
+</BODY>
+</HTML>

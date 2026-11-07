@@ -1,0 +1,557 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Online Dynamic Reordering for Interactive Data Processing</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Online Dynamic Reordering for Interactive Data Processing
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_vijayshankar_raman.htm">Vijayshankar Raman</a>, 
+<a href = "a_bhaskaran_raman.htm">Bhaskaran Raman</a>, and 
+<a href = "a_joseph_m_hellerste.htm">Joseph M. Hellerstein</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/onlinedynamicrevibhj.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbquerysystestems.htm">Return to Query Systems</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We present a pipelining, dynamically user-controllable reorder operator, for use in data-intensive applications. Allowing the user to reorder the data delivery on the fly increases the interactivity in several contexts such as online aggregation and large-scale spreadsheets; it allows the user to control the processing of data by dynamically specifying preferences for different data items based on prior feedback, so that data of interest is prioritized for early processing. We describe an efficient, non-blocking mechanism for reordering, which can be used over arbitrary data streams from files, indexes, and continuous data feeds. We also investigate several policies for the reordering based on the performance goals of various typical applications. We present results from an implementation used in Online Aggregation in the Informix Dynamic Server with Universal Data Option, and in sorting and scrolling in a large-scale spreadsheet. Our experiments demonstrate that for a variety of data distributions and applications, reordering is responsive to dynamic preference changes, imposes minimal overheads in overall completion time, and provides dramatic improvements in the quality of the feedback over time. Surprisingly, preliminary experiments indicate that online reordering can also be useful in traditional batch query processing, because it can serve as a form of pipelined, approximate sorting.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[A+96]
+<dd>
+<a name="AikenCSW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aiken:Alexander.html">
+Alexander Aiken
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Jolly.html">
+Jolly Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Woodruff:Allison.html">
+Allison Woodruff
+</a>
+: Tioga-2: A Direct Manipulation Database Visualization Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#AikenCSW96">
+ICDE 1996
+</a>
+: 208-217
+<dt>
+[A+97]
+<dd>
+<a name="AcharyaFZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Balancing Push and Pull for Data Broadcast. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#AcharyaFZ97">
+SIGMOD Conference 1997
+</a>
+: 183-194
+<dt>
+[AZ96]
+<dd>
+<a name="AntoshenkovZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">
+Gennady Antoshenkov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Ziauddin:Mohamed.html">
+Mohamed Ziauddin
+</a>
+: Query Processing and Optimization in Oracle Rdb. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#AntoshenkovZ96">
+VLDB Journal 5(4)
+</a>
+: 229-237(1996)
+<dt>
+[Bat79]
+<dd>
+... 
+<dt>
+[Bat90]
+<dd>
+... 
+<dt>
+[BM85]
+<dd>
+<a name="BlairM85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blair:David_C=.html">
+David C. Blair
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maron:M=_E=.html">
+M. E. Maron
+</a>
+: An Evaluation of Retrieval Effectiveness for a Full-Text Document-Retrieval System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm28.html#BlairM85">
+CACM 28(3)
+</a>
+: 289-299(1985)
+<dt>
+[C+98]
+<dd>
+<a name="ChaudhuriMN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narasayya:Vivek_R=.html">
+Vivek R. Narasayya
+</a>
+: Random Sampling for Histogram Construction: How much is enough? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#ChaudhuriMN98">
+SIGMOD Conference 1998
+</a>
+: 436-447
+<dt>
+[CD97]
+<dd>
+<a name="ChaudhuriD97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: Data Warehousing and OLAP for Decision Support (Tutorial). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ChaudhuriD97">
+SIGMOD Conference 1997
+</a>
+: 507-508
+<dt>
+[CK97]
+<dd>
+<a name="CareyK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: On Saying "Enough Already!" in SQL. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyK97">
+SIGMOD Conference 1997
+</a>
+: 219-230
+<dt>
+[Exc]
+<dd>
+... 
+<dt>
+[G+96]
+<dd>
+<a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">
+Adam Bosworth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">
+Andrew Layman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+: Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">
+ICDE 1996
+</a>
+: 152-159
+<dt>
+[GM98]
+<dd>
+<a name="GibbonsM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+: New Sampling-Based Summary Statistics for Improving Approximate Query Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#GibbonsM98">
+SIGMOD Conference 1998
+</a>
+: 331-342
+<dt>
+[Gra93]
+<dd>
+<a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+: Query Evaluation Techniques for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">
+Computing Surveys 25(2)
+</a>
+: 73-170(1993)
+<dt>
+[H+]
+<dd>
+... 
+<dt>
+[Haa97]
+<dd>
+<a name="Haas97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Large-Sample and Deterministic Confidence Intervals for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm97.html#Haas97">
+SSDBM 1997
+</a>
+: 51-63
+<dt>
+[HH99]
+<dd>
+<a name="HaasH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Ripple Joins for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#HaasH99">
+SIGMOD Conference 1999
+</a>
+: 287-298
+<dt>
+[H+97]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HellersteinHW97">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[H+98]
+<dd>
+<a name="HellersteinACHORRH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Avnur:Ron.html">
+Ron Avnur
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chou:Andy.html">
+Andy Chou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hidber:Christian.html">
+Christian Hidber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olston:Chris.html">
+Chris Olston
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raman:Vijayshankar.html">
+Vijayshankar Raman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Tali.html">
+Tali Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Interactive data Analysis: The Control Project. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer32.html#HellersteinACHORRH99">
+IEEE Computer 32(8)
+</a>
+: 51-59(1999)
+<dt>
+[HN96]
+<dd>
+<a name="HellersteinN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Query Execution Techniques for Caching Expensive Methods. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HellersteinN96">
+SIGMOD Conf. 1996
+</a>
+: 423-434
+<dt>
+[OJ93]
+<dd>
+... 
+<dt>
+[S+96]
+<dd>
+<a name="SeshadriHPLRSSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:Praveen.html">
+Praveen Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leung:T=_Y=_Cliff.html">
+T. Y. Cliff Leung
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stuckey:Peter_J=.html">
+Peter J. Stuckey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Cost-Based Optimization for Magic: Algebra and Implementation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#SeshadriHPLRSSS96">
+SIGMOD Conf. 1996
+</a>
+: 435-446
+<dt>
+[SS]
+<dd>
+... 
+<dt>
+[Sto89]
+<dd>
+<a name="Stonebraker89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: The Case for Partial Indexes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod18.html#Stonebraker89">
+SIGMOD Record 18(4)
+</a>
+: 4-11(1989)
+<dt>
+[vR75]
+<dd>
+<a name="Rijsbergen79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rijsbergen:C=_J=_van.html">
+C. J. van Rijsbergen
+</a>
+: Information Retrieval.  Butterworth 1979, ISBN 0-408-70929-4
+<br>
+ 
+<dt>
+[Z+]
+<dd>
+<a name="ZhaoDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhao:Yihong.html">
+Yihong Zhao
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">
+Prasad Deshpande
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: An Array-Based Algorithm for Simultaneous Multidimensional Aggregates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ZhaoDN97">
+SIGMOD Conference 1997
+</a>
+: 159-170
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Haas99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Techniques for Online Exploration of Large Object-Relational Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm99.html#Haas99">
+SSDBM 1999
+</a>
+: 4-12
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/RamanRH99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Vijayshankar&nbsp;Raman&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bhaskaran&nbsp;Raman&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Joseph&nbsp;M.&nbsp;Hellerstein},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Online&nbsp;Dynamic&nbsp;Reordering&nbsp;for&nbsp;Interactive&nbsp;Data&nbsp;Processing},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{709-720},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

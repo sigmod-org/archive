@@ -1,0 +1,796 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The MLPQ/GIS Constraint Database System</TITLE>
+<META NAME="description" CONTENT="The MLPQ/GIS Constraint Database System">
+<META NAME="keywords" CONTENT="specification">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="specification.css">
+</HEAD>
+<BODY LANG="EN">
+<P>
+<H1 ALIGN=CENTER><B>The MLPQ/GIS Constraint Database System</B></H1>
+<P ALIGN=CENTER><STRONG>P. Revesz, R. Chen, P. Kanjamala, Y. Li, Y. Liu, Y. Wang</STRONG></P><P>
+<P ALIGN=CENTER><STRONG></STRONG></P><P>
+<P>
+The current version of the MLPQ/PReSTO system merges the MLPQ/GIS and
+the PReSTO constraint database systems, which were both built at the
+University of Nebraska-Lincoln partially funded by the USA NSF under
+grants IRI-9625055 and IRI-9632871. The executable file of the
+MLPQ/PReSTO system, running Microsoft 2000, and all the sample text
+files listed in the appendix are available free as down-loadable files
+from the webpage: <TT>http://www.cse.unl.edu/&nbsp;revesz</TT>, which also
+contains a list of publications related to both the MLPQ/GIS and the
+PReSTO systems.  The present HTML document gives a brief introduction
+to the MLPQ/PReSTO system, based on the demo given by the authors at
+SIGMOD'2000 and extended with recent work on the PReSTO system by
+M. Cai, D. Keshwani, and P. Revesz.
+<P>
+<H1><A NAME="SECTION00010000000000000000">1 Syntax</A></H1>
+<P>
+MLPQ/PReSTO accepts as input a ``<TT>.txt</TT>'' file. The input file can
+be opened by going to the {File} menu, and selecting the {Open}
+dialog.  The syntax of the input is almost the same as that of
+traditional Datalog, with the following restrictions:
+<P>
+In the MLPQ/PReSTO system each input file is a set of rules bracketed
+by the keywords <TT>begin</TT> and <TT>end</TT>. It has the following
+structure:<BR>
+<P>
+<TT> begin %moduleName%<BR> 
+           <IMG WIDTH=10 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline588" SRC="img1.gif"  > <BR> 
+           <IMG WIDTH=10 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline590" SRC="img2.gif"  > <BR> 
+          <BR> 
+           <IMG WIDTH=12 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline592" SRC="img3.gif"  > <BR> 
+    end %moduleName%<BR> 
+</TT>
+<P>
+where each  <IMG WIDTH=8 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline594" SRC="img4.gif"  >  is a rule or a constraint tuple, and <TT>moduleName</TT>
+is a string.  The module name should be the following.
+<P>
+``<TT>MLPQ</TT>'' - when each rule is as described in Section&nbsp;<A HREF="specification.html#mlpq">1.1</A>
+and the program in the input file is non-recursive.
+<P>
+``<TT>RECURSIVE</TT>'' - when each rule is as described in Section&nbsp;<A HREF="specification.html#mlpq">1.1</A>
+and the program in the input file is recursive.
+<P>
+``<TT>GIS</TT>'' - when each rule is as described in Section&nbsp;<A HREF="specification.html#gis">1.2</A>.
+<P>
+``<TT>STDB</TT>'' - when each rule is as described in Section&nbsp;<A HREF="specification.html#presto">1.3</A>.
+<P>
+<H2><A NAME="SECTION00011000000000000000">1.1 MLPQ Syntax</A></H2>
+<P>
+<A NAME="mlpq">&#160;</A>
+<P>
+MLPQ <EM>linear constraint</EM> rules may be specified in the form of
+equation (4.1) in the textbook, or as in Chapter 5 with the following
+differences.
+<P>
+First, each linear constraint must have the form
+<P> <IMG WIDTH=364 HEIGHT=17 ALIGN=BOTTOM ALT="displaymath596" SRC="img5.gif"  > <P>
+where each  <IMG WIDTH=12 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline598" SRC="img6.gif"  >  is a constant and each  <IMG WIDTH=14 HEIGHT=18 ALIGN=MIDDLE ALT="tex2html_wrap_inline600" SRC="img7.gif"  >  is a variable, and
+ <IMG WIDTH=11 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline602" SRC="img8.gif"  >  is a relational operator of the form =, &lt;, &gt;, &lt;=,
+&gt;=.
+<P>
+Second, the optional aggregate operator has the form <I>OP</I>(<I>f</I>) where OP
+is one of the aggregate operators <I>max</I>, <I>min</I>, <I>MAX</I>, <I>MIN</I>,
+ <IMG WIDTH=77 HEIGHT=9 ALIGN=BOTTOM ALT="tex2html_wrap_inline624" SRC="img9.gif"  >  or  <IMG WIDTH=75 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline626" SRC="img10.gif"  > , and <I>f</I> is a linear function of the
+variables in the rule. The aggregate operators have the following
+meanings.
+<P>
+<EM>max</EM> - gets maximum value for each constraint tuple.
+<P>
+<EM>sum_max</EM> - finds the sum of the values returned by <EM>max</EM>.
+<P>
+<EM>MAX</EM> - finds the maximum of the values returned by <EM>max</EM>.
+<P>
+<EM>min, MIN</EM> and <EM>sum_min</EM> are defined similarly to the above.
+<P>
+Third, for negation the symbol ! is used instead of <EM>not</EM>.
+<P>
+<H2><A NAME="SECTION00012000000000000000">1.2 GIS Syntax</A></H2>
+<P>
+<A NAME="gis">&#160;</A>
+<P>
+We sometimes restrict the head of the rules to be one of the following:
+<I>r</I>(<I>id</I>,<I>x</I>,<I>y</I>), or <I>r</I>(<I>id</I>,<I>x</I>,<I>y</I>,<I>t</I>) or <I>r</I>(<I>id</I>,<I>x</I>,<I>y</I>,<I>z</I>) where <I>id</I> is the
+identification number of an object, and <I>x</I>,<I>y</I> are two spatial
+variables, which could be augmented by a temporal variable <I>t</I> or a
+third spatial variable <I>z</I>.  These cases of linear constraint
+databases allow us to do some extra operations that are special to GIS
+objects.
+<P>
+<H2><A NAME="SECTION00013000000000000000">1.3 PReSTO Syntax</A></H2>
+<P>
+<A NAME="presto">&#160;</A>
+<P>
+<OL><LI>    
+<B>PReSTO Relation</B>: A relation R in PReSTO is defined as follows:<BR>
+<P>
+<P> <IMG WIDTH=447 HEIGHT=158 ALIGN=BOTTOM ALT="tabular117" SRC="img11.gif"  > <P>
+<BR> 
+  where <BR>
+<P>
+  <P> <IMG WIDTH=459 HEIGHT=176 ALIGN=BOTTOM ALT="tabular125" SRC="img12.gif"  > <P>
+<BR>
+<P>
+  <B>Note</B>: For non-periodic relations,  <IMG WIDTH=62 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline692" SRC="img13.gif"  > ,  <IMG WIDTH=62 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline694" SRC="img14.gif"  > .  The attributes
+  <I>id</I>, <I>x</I>1, <I>y</I>1, <I>x</I>2, <I>y</I>2, <I>t</I>, <I>p</I>, <I>s</I> are default attributes.<LI> 
+<B>PReSTO Database</B>: The PReSTO database must use ``STDB'' as the module
+name; that is, the input file must have the structure: <BR>
+<P>
+<P> <IMG WIDTH=133 HEIGHT=140 ALIGN=BOTTOM ALT="tabular139" SRC="img15.gif"  > <P>
+<BR><LI>
+<B>PReSTO Query</B>:
+<P>
+  <OL><LI> Define a relation with non-default attributes.
+<P>
+  Example: Define the cloud relation with the attribute humidity.
+<P>
+  <PRE>    clouds(h) :- i=1,
+                 x1 - t = 105, 
+                 y1 - 0.5t = 200,
+                 x2 - t = 111, 
+                 y2 - 0.6t = 205,
+                 t &gt;=0, t&lt;=300,
+                 p = -1, s = 0,
+                 h = 0.</PRE><LI> <EM>Selection</EM>:  <IMG WIDTH=500 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline720" SRC="img16.gif"  > .
+<P>
+  Example: Find the cool area in Nebraska.
+<P>
+  <PRE>  begin %STDB%
+    Nebraska(temp) :- i=1, x1=4, y1=4.5, x2=19.5, y2=14.5,
+                      t&gt;=1,t&lt;=15, p=-1,temp=30.
+    Nebraska(temp) :- i=2, x1=20, y1=4.5, x2=35, y2=14.5,
+                      t&gt;=1,t&lt;=15, p=-1,temp=90.
+    Nebraska(temp) :- i=3, x1=35.5, y1=5, x2=46, y2=14.5,
+                      t&gt;=1,t&lt;=15, p=-1,temp=60.
+
+    cool_area(temp):- $(temp&gt;=50,temp&lt;=80)nebraska(temp).
+  end %STDB%</PRE><LI> <EM>Projection</EM>:  <IMG WIDTH=435 HEIGHT=31 ALIGN=MIDDLE ALT="tex2html_wrap_inline722" SRC="img17.gif"  > <LI> <EM>Intersection</EM>: <I>Relation</I>1 * <I>Relation</I>2.
+<P>
+  Example: Find if the ship and the torpedo will meet with each other.
+<P>
+  <PRE>  begin %STDB%
+    ship() :-     i=1,
+                  x1-t=20,y1=20,
+                  x2-t=30,y2=25,
+                  t&gt;=0,t&lt;=25,
+                  p=-1,s=-1.
+
+    torpedo() :-  i=1,
+                  x1=45,y1+t=45,
+                  x2=48,y2+t=51,
+                  t&gt;=0,t&lt;=25,
+                  p=-1,s=-1.
+
+    hit() :-      ship() * torpedo().
+  end %STDB%</PRE>
+<P>
+  </OL></OL><H1><A NAME="SECTION00020000000000000000">2 Operators</A></H1>
+<P>
+The MLPQ/PReSTO graphical user interface shown in Figure&nbsp;<A HREF="specification.html#figgui">1</A>
+contains a list of iconic queries.
+<P>
+<P><A NAME="159">&#160;</A><A NAME="figgui">&#160;</A> <IMG WIDTH=531 HEIGHT=192 ALIGN=BOTTOM ALT="figure155" SRC="img18.gif"  > <BR>
+<STRONG>Figure 1:</STRONG> MLPQ Graphical User Interface<BR>
+<P><H2><A NAME="SECTION00021000000000000000">2.1 MLPQ Operators</A></H2>
+<P>
+<P>
+<P>
+<B>Section 1:</B> The <B>[Query (Q)]</B> Operator and <B>[Buffer]</B> Operator
+<P>
+<P><A NAME="170">&#160;</A><A NAME="buffer">&#160;</A> <IMG WIDTH=542 HEIGHT=299 ALIGN=BOTTOM ALT="figure166" SRC="img19.gif"  > <BR>
+<STRONG>Figure 2:</STRONG>   Buffer Example <BR>
+<P>
+<P>
+<OL><LI> 
+Consider Figure&nbsp;<A HREF="specification.html#buffer">2</A> which shows a map of interstate highway I-80,
+the location of hotels, the locations of exits form the highway, and
+the current location of a car traveling from west to east on the
+highway.
+<P>
+<B><EM>Query</EM></B>: Find a convenient hotel to stay for the night.
+This is done by finding the nearest exit east of the current location
+of the car and then find the hotel within 50 miles from that exit.
+<P>
+<OL><LI> Click [Q], input the query to get the nearest exit on the
+  east.<BR>
+<P>
+<P> <IMG WIDTH=571 HEIGHT=39 ALIGN=BOTTOM ALT="tabular177" SRC="img20.gif"  > <P>
+<BR><LI> Select ``Nearest'' Relation, click [Buffer].<LI> Input name ``Buf_Nearest'', and the Distance ``50''.<LI> Click [Q], input the query to get the convenient hotel away
+  from at most 50 miles.
+<P>
+  <P> <IMG WIDTH=512 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath728" SRC="img21.gif"  > <P></OL></OL>
+<P>
+<P>
+<P>
+<B>Section 2:</B> The <B>[Line]</B> Operator, <B>[Rectangle]</B> Operator and <B>[Polygon]</B> Operator
+<P>
+<OL><LI>
+<B>Drawing Line</B>:
+<P>
+  <OL><LI> Open a non-empty database (i.e., a database that already 
+  contains at least one relation);<LI> Left click the right window;<LI> Left click [Line];<LI> Left click the mouse to get one point, move mouse, then left
+  click the mouse to get another point;<LI> Input the relation name ``Line1'' (any string) to get the line
+  relation ``Line1''.
+<P>
+  </OL><LI>
+<B>Drawing Rectangle</B>:
+<P>
+  <OL><LI> Open a non-empty database (i.e., a database that already 
+  contains at least one relation);<LI> Left click the right window;<LI> Left click [Rectangle];<LI> Left click the mouse to get one point, move mouse, then left click
+  the mouse to get another point;<LI> Input the relation name ``Rectangle1'' (any string) to get the
+  rectangle relation ``Rectangle1''.
+<P>
+  </OL><LI> 
+<B>Drawing Polygon</B>:
+<P>
+  <OL><LI> Open a non-empty database (i.e., a database that already
+  contain at least one relation);<LI> Left click the right window;<LI> Left click [Polygon];<LI> Left click the mouse to get one point, continue to left click
+  the mouse to get other points;<LI> Double click to finish the drawing.<LI> Input the relation name ``Polygon1'' (any string), and the
+  Object ID ``1'' (any integer number) to get the polygon relation
+  ``Polygon1''.
+<P>
+  </OL><LI>
+<B>Show Constraints</B>: After operation 2, left click the relation
+``New_relation'' in the left window, to get the dialog which shows the
+constraints of this relation.
+</OL>
+<P>
+<P>
+<P>
+<B>Section 3:</B> The <B>[Zoom Out]</B> Operator and <B>[Zoom In]</B> Operator
+<P>
+<OL><LI> 
+To enlarge or shrink the displayed object, click [Zoom In] or [Zoom
+Out].<LI>
+Left push down the mouse, include the object, then release the
+button. The selected object will be enlarged.
+</OL>
+<P>
+<P>
+<P>
+<B>Section 4:</B> The <B>[Area]</B> Operator
+<P>
+<OL><LI> 
+<B>Area</B>: Calculate the area of relation ``Buf_Nearest''.
+<P>
+  <OL><LI> Select the Generated relation ``Buf_Nearest'' in the left
+  window.<LI> Click [Area].<LI> Input the MinX, MaxX, and Step Size of the area to be
+  calculated. By referring the coordinates of the window, input the
+  number for MinX ``0'', and MaxX ``400'', and the Step Size ``400'', then
+  get the total area of the relation since it is in the region
+  totally.<LI> Input the area relation name ``Buf_Nearest_Area'', left click it
+  to show the area in constraints.
+<P>
+  </OL>
+<P>
+  <B>Note</B>: The step size is to get various aggregate information
+  for different bands of the object.<LI>
+<B>Bands Area</B>: Calculate the area of relation ``Buf_Nearest'' with bands.
+<P>
+  <OL><LI> Select the Generated relation ``Buf_Nearest'' in the left
+  window.<LI> Click [Area].<LI> Input the MinX ``0'', the MaxX ``400'', the Step Size ``200''.<LI> Input the relation name ``Buf_Nearest_Area'', left click it to
+  show the areas of these two bands from 0 to 200 and 200 to 400 in
+  constraints.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 5:</B> The <B>[Intersection ( <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > )]</B> Operator and <B>[Union ( <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline754" SRC="img23.gif"  > )]</B> Operator
+<P>
+<OL><LI> 
+<B>Intersection</B>: Calculate the intersection of two relations.
+<P>
+  <OL><LI> Select two relations from the left window which have the same
+  attributes.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ].<LI> Input relation name ``Intersect'' which is the intersection of
+  these two relations.
+<P>
+  </OL>
+<P>
+  <B>Note</B>: For intersection, the system also matches the ids of the
+  objects. So if two objects have the different ids, then the
+  intersection would be empty.
+<P>
+  <B>Hint</B>: To make two relations <I>R</I>1(<I>id</I>, <I>x</I>, <I>y</I>) and <I>R</I>2(<I>id</I>, <I>x</I>, <I>y</I>) have
+  the same id, insert the following Datalog query (``New_R1'' and
+  ``New_R2'' will have the same id ``1''):
+<P>
+	<P> <IMG WIDTH=378 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath729" SRC="img24.gif"  > <P>
+	<P> <IMG WIDTH=378 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath730" SRC="img25.gif"  > <P><LI>
+<B>Union</B>: Calculate the union of two relations.
+<P>
+  <OL><LI> Select two relations from the left window.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline754" SRC="img23.gif"  > ].<LI> Input the relation name ``Union'' which is the union of these
+  two relations.  </OL>
+<P>
+  <B>Note</B>: for union, these two relations need not to have the same
+  id since they are still in the output even they have different ids.
+</OL>
+<P>
+<P>
+<P>
+<B>Section 6:</B> The <B>[Max]</B> Operator and <B>[Min]</B> Operator
+<P>
+<OL><LI>
+<B>Max</B>: Calculate the maximum value for a given evaluation function.
+<P>
+  <OL><LI> <B>crops.txt</B>: Calculate the maximum profit for the
+  evaluation function: 300corn + 250rye + 100sunflower + 150wheat.
+<P>
+    <OL><LI> Select the relation ``crops'' from the left window.<LI> Click [Max].<LI> Input new relation name ``max_profit'', the evaluation
+    function ``300corn+250rye+100sunflower+150wheat'', and the
+    constant value for the evaluation function is ``0''.<LI> Right click the relation ``max_profit'' to show the maximum
+    profit.
+<P>
+    </OL></OL><LI>
+<B>Min</B>: Calculate the minimum value for a given evaluation function.
+<P>
+  <OL><LI> Select one relation from the left window.<LI> Click [Min].<LI> Input new relation name ``min_rel'', the evaluation function,
+  and the constant value for the evaluation function.<LI> Right click the relation ``min_rel'' to show the minimum value.
+<P>
+  </OL>
+<P>
+  <B>Note</B>: The [Max] and [Min] operators only work for the
+  evaluation function which will return the positive maximum/minimum
+  value.
+<P>
+</OL>
+<P>
+<P>
+<P>
+<B>Section 7:</B> The 2D Animation
+<P>
+<OL><LI> 
+<B>sface.txt</B>: select relations one by one, then click [Play], then see
+the face becomes smiling.
+<P>
+<P><A NAME="254">&#160;</A><A NAME="gullsnaps">&#160;</A> <IMG WIDTH=563 HEIGHT=256 ALIGN=BOTTOM ALT="figure246" SRC="img26.gif"  > <BR>
+<STRONG>Figure 3:</STRONG> Two Snapshots of a Video on California Gull Ranges<BR>
+<P><LI>
+Consider Figure&nbsp;<A HREF="specification.html#gullsnaps">3</A> which shows two snapshots of the
+habitat range of the California Gull birds. The data is available in
+file <B>sgull.txt</B>. Select all except Gull, then select ``Gull''
+relation, then click [Play], then see the gull changing.
+<P>
+<B><EM>Query 1</EM></B>: How much did the area of the California Gull 
+change from 1970 to 1990?
+<P>
+<OL><LI> Click [Q] to insert the query to get the Gull snapshot at
+  1970:
+<P>
+<P> <IMG WIDTH=376 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath731" SRC="img27.gif"  > <P><LI> Click [Q] to insert the query to get the Gull snapshot at
+  1990:
+<P>
+<P> <IMG WIDTH=385 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath732" SRC="img28.gif"  > <P><LI> Click the relation ``Gull0'', then click [Area] to get the area
+  of the Gull at 1970.  Input the MinX=0, MaxX=500 and Step=500.  Give
+  the name of the area of the relation ``Gull0'' as ``Gull0_Area''.<LI> Click the relation ``Gull60'', then click [Area] to get the area
+  of the Gull at 1990.  Input the MinX=0, MaxX=500 and Step=500.  Give
+  the name of the area of the relation ``Gull60'' as ``Gull60_Area''.<LI> Click [Q] to insert the query to get the area difference of
+  the California Gull t between 1970 and 1990: <BR>
+<P>
+<P> <IMG WIDTH=564 HEIGHT=40 ALIGN=BOTTOM ALT="tabular261" SRC="img29.gif"  > <P>
+<BR><LI> Right Click the relation ``CA_Gull_Area_Diff'' to show the
+  constraints and the area difference.
+<P>
+</OL>
+<P>
+<B><EM>Query 2</EM></B>: How much did the area of the California Gull 
+change from 1970 to 1990 in the state of California?
+<P>
+<OL><LI> Click [Q] to insert the query to get the Gull snapshot at 1970:
+<P>
+<P> <IMG WIDTH=382 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath733" SRC="img30.gif"  > <P><LI> Click [Q] to insert the query to get the Gull snapshot at 1990:
+<P>
+<P> <IMG WIDTH=387 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath734" SRC="img31.gif"  > <P><LI> Select the relation ``Gull70'' and ``CA'', then click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ] to get
+  the area of the Gull at 1970 in the state of California.  Input the
+  relation name ``CA_Gull70''.<LI> Click the relation ``Gull90'' and ``CA'', then click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ] to get
+  the area of the Gull at 1990 in the state of California.  Input the
+  relation name ``CA_Gull90''.<LI> Click the relation ``CA_Gull70'', then click [Area] to get the
+  area of the Gull at 1970 in the state of California.  Input the
+  MinX=0, MaxX=500 and Step=500.  Give the name of the area of the
+  relation ``CA_Gull70'' as ``Gull70_Area''.<LI> Click the relation ``CA_Gull90'', then click [Area] to get the
+  area of the Gull at 1990 in the state of California.  Input the
+  MinX=0, MaxX=500 and Step=500.  Give the name of the area of the
+  relation ``CA_Gull90'' as ``Gull90_Area''.<LI> Click [Q] to insert the query to get the area difference of
+  the California Gull t between 1970 and 1990 in the state of
+  California:<BR>
+<P>
+<P> <IMG WIDTH=609 HEIGHT=40 ALIGN=BOTTOM ALT="tabular267" SRC="img32.gif"  > <P>
+<BR><LI> Right Click the relation ``CA_Gull_Area_Diff'' to show the
+  constraints and the area difference.
+<P>
+</OL><LI>
+Consider the file <B>slincoln.txt</B>. Select ``City'' relation, then click 
+[Play], then see the Lincoln, Nebraska city area changing.
+</OL>
+<P>
+<P>
+<P>
+<B>Section 8:</B> The Exponential 2D Animation
+<P>
+<OL><LI> 
+<B>mulcolony.txt</B>:
+<P>
+<OL><LI> Select the relation from the left window.<LI> Click [(Animation (A)] then click ``Yes'' for observing the
+      exponential animation.
+<P>
+</OL>
+<P>
+<B>Note</B>: If click [A] then click ``No'', then execute the linear
+animation.<LI> 
+<B>sincolony.txt</B>: Click [(Animation (A)] then click ``Yes'' for
+observing the exponential animation.<LI> 
+<B>sinirreg.txt</B>: Click [(Animation (A)] then click ``Yes'' for
+observing the exponential animation.<LI> 
+<B>threecolony.txt</B>: Click [(Animation (A)] then click ``Yes'' for
+observing the exponential animation.
+<P>
+</OL>
+<P>
+<P>
+<P>
+<B>Section 9:</B> Recursive Queries
+<P>
+<OL><LI> 
+<B>houses.txt</B>: the relation ``can_build'' is created by recursive
+Datalog query. See the constraint tuples of the relation.<LI>
+<B>pollution.txt</B>: the relation ``oktobuy'' is created by recursive
+Datalog query. See the constraint tuples of the relation, not the
+display result.<LI>
+<B>powernew.txt</B>: the relation ``can_build'' is created by
+recursive Datalog query. See the constraint tuples of the relation,
+not the display result.
+<P>
+<B>Note</B>: For [Q] Operator, the recursive query only can be inserted
+into recursive database, that is, the new recursive query could be
+inserted only when the current database is recursive.
+</OL>
+<P>
+<P>
+<P>
+<B>Section 10:</B> The Transformation from the TIN to Constraint Database
+<P>
+<OL><LI> 
+<B>tin_ia.net</B>: Transform the TIN of Iowa to constraint database.
+<P>
+  <OL><LI> Click menu {New}, then click submenu {File}, click {Import
+  File}, then click {Elevation File}.<LI> Choose the file ``tin_ia.net''.<LI> Input the relation name ``tin_ia'', then input ``tin_ia_ascii'' in
+  the third filed, click ok button to Generate the constraint file
+  ``tin_ia.txt''.<LI> Use Notepad to open the file ``tin_ia.txt'' to see the
+  transformed constraints.
+<P>
+  </OL>
+<P>
+  <B>Note</B>: The file ``tin_ia.net'' is the TIN structure of Iowa State
+  with the longitude, latitude and elevation for each point. The file
+  ``tin_ia_ascii'' includes the slope and aspect of each point.<LI>
+<B>tin_ne.net</B>: Transform the TIN of Nebraska to constraint database.
+<P>
+  <OL><LI> Click menu {New}, then click submenu {File}, click {Import
+  File}, then click {Elevation File}.<LI> Choose the file ``tin_ne.net''.<LI> Input the relation name ``tin_ne'', then input ``tin_ne_ascii'' in
+  the third filed, click ok button to generate the constraint file
+  ``tin_ne.txt''.<LI> Use Notepad to open the file ``tin_ne.txt'' to see the
+  transformed constraints.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 11:</B> The Transformation from Polygon File to Constraint Database
+<P>
+<OL><LI> 
+<B>veg90.pol</B>: Transform polygon file to constraint database.
+<P>
+  <OL><LI> Click menu {New}, then click submenu {File}, click {Import
+  File}, then click {Elevation File}.<LI> Choose the file ``veg90.pol''.<LI> Input the relation name ``vege''.<LI> Click the ``vege'' relation in the left window, you will see the
+  constraint tuples of these polygons.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 12:</B> The <B>[Similarity (S)]</B> Operator for Similarity Queries
+<P>
+<OL><LI> 
+<B>db.lin</B>: Query similarities among the lines.
+<P>
+  <OL><LI> Click menu {New}, then click submenu {File}, then click
+  {Import File}, then click {Import Line}.<LI> Select the file ``db.lin''.<LI> Input the relation name ``lines''.<LI> Then select any one relation, then click [S], then the
+  relations are ordered as the similarity order from the specified
+  one.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 13:</B> Querying Maps
+<P>
+<OL><LI> 
+<B>usmap_info.txt</B>:
+<P>
+  <OL><LI> Select all of the relations, then see the U.S. map with 50
+  states.<LI> The scale of this map is shown by clicking the constraints of
+  the relation ``Scale'', the unit is kilometer.<LI> The ``Capital'' relation is the capital cities of the states.
+<P>
+  </OL>
+<P>
+<B><EM>Query 1</EM></B>: Find the capital city of Nebraska:
+<P>
+  <OL><LI> Click [Q], then input
+<P>
+  <P> <IMG WIDTH=472 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath735" SRC="img33.gif"  > <P><LI> Right click the relation ``NE_capital'' to see the capital city
+  of Nebraska State.
+<P>
+  </OL>
+<P>
+<B><EM>Query 2</EM></B>: Find the area of the state of Nebraska in MST zone.
+<P>
+  <OL><LI> Click [Q], then input
+<P>
+  <P> <IMG WIDTH=440 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath736" SRC="img34.gif"  > <P><LI> Select the relation ``NE_MST'', then click [Area].<LI> Input MinX=0, MaxX=500 and Step=500.<LI> Input the name of the area relation as ``NE_MST_Area''.<LI> Then right click the relation ``NE_MST_Area'' to see the area of
+  the state of Nebraska in MST zone.
+<P>
+  </OL></OL><H2><A NAME="SECTION00022000000000000000">2.2 GIS Operators</A></H2>
+<P>
+<P>
+<P>
+<B>Section 1:</B> The <B>[Set]</B> Operator and <B>[Color Relation]</B> Operator for Color Bands Display
+<P>
+<OL><LI> 
+<B>Color_Circle.txt</B>:
+<P>
+  <OL><LI> Select ``Circle'' relation, see the monochromatic circle.<LI> Select ``NEW_Circle'' relation, then click [Color Relation].<LI> Select the new Generated ``Color_NEW_Circle'' relation, see the
+  color circle (if not, click the {View} Menu, uncheck {Same Relation
+  Color} Option).
+<P>
+  </OL><LI>
+<B>tin.txt</B>:
+<P>
+  <OL><LI> Select ``tin'' relation, click [Color Relation].<LI> Select the Generated ``Color_tin'' relation, then see the color
+  Nebraska (different colors stand for different heights of those
+  places).
+<P>
+  </OL><LI>
+<B>tiniowa_final.txt</B>:
+<P>
+  <OL><LI> Select ``tiniowa_final'' relation, then click [Set], then click
+  add button in the dialog, then input ``1000'', ``5000'' and select ``red''
+  color. Then click the ok button.<LI> Then click [Color Relation], then select the new Generated
+  ``Color_tiniowa_final'' relation, then see the red partial Iowa state
+  (only the heights between 1000 and 5000 are displayed). (If it's not
+  red, then select {View} menu, then uncheck {Same Relation Color}.)
+<P>
+  </OL><LI>
+<B>tinne_final.txt</B>:
+<P>
+  <OL><LI> Select ``tinne_final'' relation, then click [Set], then click
+  add button, then input ``1000'', ``3000'' and select ``blue'' color. Then
+  click ok button.<LI> Then click [Color Relation], then select ``Color_tinne_final''
+  relation, then see the blue partial Nebraska state (only the heights
+  between 1000 and 3000 are displayed).  (If it's not blue, then
+  select {View} menu, then uncheck {Same Relation Color}.)
+<P>
+  </OL><LI>
+<B>tinresult.txt</B>: Monochromatic map display.  Select ``tin''
+relation, then see the Nebraska state map, also shown in
+Figure&nbsp;<A HREF="specification.html#figmaat">4</A>.
+</OL>
+<P>
+<P><A NAME="457">&#160;</A> <IMG WIDTH=460 HEIGHT=276 ALIGN=BOTTOM ALT="figure345" SRC="img35.gif"  > <BR>
+<STRONG>Figure 4:</STRONG> <A NAME="figmaat">&#160;</A> Mean Annual Air Temperature<BR>
+<P><H2><A NAME="SECTION00023000000000000000">2.3 PReSTO Operators</A></H2>
+<P>
+<P>
+<P>
+<B>Section 1:</B> The <B>[Intersection ( <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > )]</B> Operator and <B>[Union ( <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline754" SRC="img23.gif"  > )]</B> Operator
+<P>
+<OL><LI> 
+<B>weather.txt</B>:
+<P>
+   <B><EM>Query 1</EM></B>: Find which region is likely to get rain.
+<P>
+  <OL><LI> Select the relation ``cool_area'' and ``wet_cloud'' from the left
+  window.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ].<LI> Input a relation name ``get_rain'' which is the intersection of
+  these two relations.
+<P>
+  </OL>
+<P>
+  <B><EM>Query 2</EM></B>: Find which region is likely to get snow.
+<P>
+  <OL><LI> Select the relation ``cold_area'' and ``wet_cloud'' from the left
+  window.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ].<LI> Input a relation name ``get_snow'' which is the intersection of
+  these two relations.
+<P>
+  </OL>
+<P>
+  <B><EM>Query 3</EM></B>: Find which region is likely to get rain or get snow.
+<P>
+  <OL><LI> Select the relation ``get_rain'' and ``get_snow'' from the left
+  window.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline754" SRC="img23.gif"  > ].<LI> Input a relation name ``get_rain_snow'' which is the union of
+  these two relations.
+<P>
+  </OL><LI>
+<B>flight.txt</B>:
+<P>
+  <B><EM>Query</EM></B>: Will the plane hit the fleet?
+<P>
+  <OL><LI> Select the relation ``plane'' and ``fleet'' from the left window.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline752" SRC="img22.gif"  > ].<LI> Input a relation name ``hit_fleet'' which is the intersection of
+  these two relations.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 2:</B> The <B>[Area]</B> Operator
+<P>
+<OL><LI> 
+<B>cloudmap.txt</B>:
+<P>
+  <B><EM>Query</EM></B>: Find the area of the clouds at time 10.
+<P>
+  <OL><LI> Select the relation ``clouds'' from the left window.<LI> Click [Area].<LI> Input the time of the clouds ``10''.<LI> A dialog box pop up to give the area of the clouds at time
+  ``10''.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 3:</B> The <B>[Difference (-)]</B> Operator
+<P>
+<OL><LI> 
+<B>cloudmap.txt</B>:
+<P>
+  <OL><LI> Select the relation ``california'' and ``clouds'' from the left
+  window.<LI> Click [<B>-</B>].<LI> Input the relation time ``diff''.<LI> Click the relation ``diff'' which shows the difference between
+  California and the clouds at time ``0''.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 4:</B> The <B>[Complement (C)]</B> Operator
+<P>
+<OL><LI> 
+<B>cloudmap.txt</B>:
+<P>
+  <OL><LI> Select the relation ``clouds'' from the left window.<LI> Click [C].<LI> Input the relation time ``comp''.<LI> Click the relation ``comp'' which shows the complement of clouds
+  at time ``0''.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 5:</B> The <B>[Query (Q)]</B> Operator
+<P>
+<OL><LI> 
+<B>weather.txt</B>:
+<P>
+  <OL><LI> Click [Q].<LI> To get the area where the temperature between 50 and 80, input
+  the query:
+<P>
+  <P> <IMG WIDTH=492 HEIGHT=20 ALIGN=BOTTOM ALT="displaymath788" SRC="img36.gif"  > <P><LI> Click the relation ``cool'' which shows the interested area.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 6:</B> The <B>[Collide (X)]</B> Operator
+<P>
+<OL><LI> 
+<B>collide.txt</B>:
+<P>
+  <OL><LI> Select all relations, then click [Play], then see both are
+  moving.<LI> Click [Collide], input the relation name ``collide''.<LI> Then select the new generated relation ``collide'', then click
+  [Play], then see them collide then bounce back from each other.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 7:</B> The <B>[Block (B)]</B> Operator
+<P>
+<OL><LI> 
+<B>yellowstone.txt</B>: Foam blocks the fire.
+<P>
+  <OL><LI> Select the relation ``lake'' and the relation ``foam1''.<LI> Click [ <IMG WIDTH=11 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline754" SRC="img23.gif"  > ], give the relation name ``blocks''.<LI> Select the relation ``blocks'' and the relation ``fire''.<LI> Click [Block], input the relation name ``blockfire'' and set
+  time ``10''.<LI> Click [Forward] button 10 times till t = 10. Then see the
+  snapshot of the blocked fire at that time.
+<P>
+  </OL></OL>
+<P>
+<P>
+<P>
+<B>Section 8:</B> The 2D Animation
+<P>
+<OL><LI> 
+<B>halley.txt</B>: select all relations, then click [Play], then see Halley
+hit some stars.<LI>
+<B>comet3.txt</B>: select all relations, then click [Play], then see they
+are moving.<LI>
+<B>flight.txt</B>: select all relations, then click [Play], then see the
+planes hit the targets.<LI>
+<B>shuttle.txt</B>: select all relations, then click [Play], then see the
+bus is moving.<LI>
+<B>torpedo.txt</B>: select all relations, then click [Play], then see the
+torpedo is moving.<LI>
+<B>weather.txt</B>: select all relations, then click [Play], then see the
+result.<LI>
+<B>cloudmap.txt</B>:
+<P>
+  <OL><LI> Select all relations except ``clouds'' relation, then select
+  ``clouds'' relation, click [Play], then see the cloud is moving.
+   Two snapshots of the animation are shown in Figure&nbsp;<A HREF="specification.html#animationfig">5</A>.
+<P>
+<P><A NAME="465">&#160;</A> <IMG WIDTH=537 HEIGHT=161 ALIGN=BOTTOM ALT="figure426" SRC="img37.gif"  > <BR>
+<STRONG>Figure 5:</STRONG> <A NAME="animationfig">&#160;</A> Cloud at <I>t</I>=25 (left) and 
+<I>t</I>=182 (right) in the PReSTO system<BR>
+<P><LI> Click [Animation], change the speed to ``95'', then the
+  animation speed will be slower than it was ``100''.
+<P>
+  </OL></OL>
+<P>
+<B>APPENDIX:</B> Input Databases
+<P>
+<OL><LI> 
+<B>MLPQ Databases</B>: The files in database/MLPQ are as follows:
+<P>
+<PRE>Color_Circle.RNG
+Color_Circle.txt
+buffer.txt
+cost.dat
+Crops.txt
+db.lin
+houses.txt
+linear.txt
+mulcolony.txt
+pollution.txt
+powernew.txt
+sface.txt
+sgull.txt
+sincolony.txt
+sinirreg.txt
+slincoln.txt
+threecolony.txt
+tin.RNG
+tin.txt
+tin_ia.net
+tin_ia_ascii
+tin_ia_data
+tin_ne.net
+tin_ne_ascii
+tin_ne_data
+tiniowa_final.txt
+tinne_final.txt
+tinresult.RNG
+tinresult.txt
+usmap_info.txt
+veg90.pol
+vege.ldb
+vege.mdb
+vege_db</PRE><LI>
+<B>PReSTO Database</B>: The files in database/PReSTO are as follows:
+<P>
+<PRE>cloudmap.txt
+collide.txt
+comet3.txt
+fight.txt
+halley.txt
+torpedo.txt
+weather.txt
+yellowstone.txt</PRE>
+<P>
+</OL><H1><A NAME="SECTION00030000000000000000">  About this document ... </A></H1>
+<P>
+ <STRONG><B>The MLPQ/GIS Constraint Database System</B></STRONG><P>
+This document was generated using the <A HREF="http://www-dsed.llnl.gov/files/programs/unix/latex2html/manual/"><STRONG>LaTeX</STRONG>2<tt>HTML</tt></A> translator Version 96.1 (Feb 5, 1996) Copyright &#169; 1993, 1994, 1995, 1996,  <A HREF="http://cbl.leeds.ac.uk/nikos/personal.html">Nikos Drakos</A>, Computer Based Learning Unit, University of Leeds. <P> The command line arguments were: <BR>
+<STRONG>latex2html</STRONG> <tt>-split 0 -show_section_numbers specification.tex</tt>. <P>The translation was initiated by Peter Revesz on Sun Feb  4 11:33:25 CST 2001<BR> <HR>
+<P><ADDRESS>
+<I>Peter Revesz <BR>
+Sun Feb  4 11:33:25 CST 2001</I>
+</ADDRESS>
+</BODY>
+</HTML>

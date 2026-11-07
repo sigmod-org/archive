@@ -1,0 +1,79 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA step by step</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br>&nbsp;
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Step by Step</font></td>
+
+<td ALIGN=CENTER><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_prototype.html">[Back to the demo]</a>&nbsp;&nbsp; <a href="akira_architecture.html">[Architecture]</a></center>
+
+<h1>
+<font color="#FF0000">Step 1:</font> The query</h1>
+The user asks an <i>OQL-like</i> query. <i>OQL</i> stands for Object Query
+Language, <i>like</i> because the <a href="user.html">user</a> expresses
+himself with his vocabulary and with the shortcuts corresponding to his
+understanding (or his laziness).
+<br>The query is sent to the <a href="dispatcher.html">Dispatcher</a>.
+<h1>
+<font color="#FF0000">Step 2:</font> Query processing</h1>
+The query is parsed and (1) relevant constants are extracted and (2) the
+target structure inferred from the query.
+<h1>
+<font color="#FF0000">Step 3:</font> IR query</h1>
+Relevant constants (such as a topic "Web", a country "USA", etc.) are extracted
+from the user's query and used as parameters for a IR query sent to a search-engine.
+<h1>
+<font color="#FF0000">Step 4:</font> Target Structure</h1>
+It consists of the structure explicitly expressed by the user in his query.
+All classes and attributes are extracted from the query and completed.
+<h1>
+<font color="#FF0000">Step 5:</font> View definition</h1>
+When it is the first query, the the view definition consists in using the
+<b>target
+structure</b> as schema for the cache. In case of a refinement, the view
+definition consists of creation of new classes or specialization of already
+existing ones in order to extend the current schema to the <b>target structure</b>.
+<h1>
+<font color="#FF0000">Step 6:</font> Extraction</h1>
+To populate the cache, retrieved documents (Calls for papers) are processed
+and expected data (such as "dates", "conferences names", "topic", etc.)
+is extracted.
+<h1>
+<font color="#FF0000">Step 7:</font> Output</h1>
+The OQL query is now asked against the resulting database and the output
+(maybe formatted) is returned to the user.
+<center>
+<p><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

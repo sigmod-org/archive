@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Proceedings Template - WORD</TITLE>
+</HEAD>
+<BODY>
+
+<B><FONT FACE="HELVETICA" SIZE=5><P ALIGN="CENTER">Petabyte Databases</P>
+</B></FONT><FONT FACE="HELVETICA"><P ALIGN="CENTER"></P>
+</FONT><FONT FACE="HELVETICA" SIZE=1><P ALIGN="CENTER"><BR>
+ <BR>
+ <BR>
+</P>
+</FONT><FONT FACE="HELVETICA"><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+<P ALIGN="CENTER">Dirk D&uuml;llmann</P>
+</FONT><FONT FACE="HELVETICA" SIZE=1><P ALIGN="CENTER">CERN IT/ASD &amp; RD45<BR>
+Geneva<BR>
+ <BR>
++41 22 767 4937</P>
+</FONT><FONT FACE="HELVETICA"><P ALIGN="CENTER">Dirk.Duellmann@cern.ch</P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+</FONT><FONT FACE="HELVETICA" SIZE=1><P ALIGN="CENTER"><BR>
+ <BR>
+ <BR>
+</P>
+</FONT><FONT FACE="HELVETICA"><P ALIGN="CENTER"></P>
+<P ALIGN="CENTER">&nbsp;</P>
+</FONT><B><P ALIGN="JUSTIFY">ABSTRACT</P>
+</B><FONT SIZE=1><P>this paper describes the use of Object-Database Management Systems (ODBMS) for the storage of .  </P>
+</FONT><B><P ALIGN="JUSTIFY">Keywords</P>
+</B><FONT SIZE=1><P ALIGN="JUSTIFY">Object-Databases, Very Large Databases, High Energy Physics</P>
+<OL>
+
+</FONT><B><LI>INTRODUCTION</LI>
+</B><FONT SIZE=1><P ALIGN="JUSTIFY">The new experiments at the Large Hadron Collider (LHC) at CERN will gather an unprecedented amount of data. Starting from 2005 each of the four LHC experiments ALICE, ATLAS, CMS and LHCb will measure of the order of 1 Peta Byte (10<SUP>15</SUP> Bytes) per year. All together the experiments will store and repeatedly analyse some 100 PB of data during their lifetimes. Such an enormous task can only be accomplished by large international collaborations. Thousands of physicists from hundreds of institutes world-wide will participate. This also implies that nearly any available hardware platform will be used resulting in a truly heterogeneous and distributed system. </P>
+<P ALIGN="JUSTIFY">The computing technical proposals of LHC experiments do not only require access to the data from remote sites but in addition ask for distribution of the data store itself to several regional centers.</P>
+<P ALIGN="JUSTIFY"></P></FONT>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 BORDERCOLOR="#000000" CELLPADDING=7 WIDTH=339>
+<TR><TD WIDTH="22%" VALIGN="MIDDLE" HEIGHT=29>
+<B><FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">Experiment</B></FONT></TD>
+<TD WIDTH="23%" VALIGN="MIDDLE" HEIGHT=29>
+<B><FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">Data Rate</B></FONT></TD>
+<TD WIDTH="55%" VALIGN="MIDDLE" HEIGHT=29>
+<B><FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">Data Volume</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="22%" VALIGN="MIDDLE" HEIGHT=112>
+<B><FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">ALICE</P>
+<P ALIGN="JUSTIFY">ATLAS</P>
+<P ALIGN="JUSTIFY">CMS</P>
+<P ALIGN="JUSTIFY">LHCb</B></FONT></TD>
+<TD WIDTH="23%" VALIGN="MIDDLE" HEIGHT=112>
+<FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">1.5 GB/sec</P>
+<P ALIGN="JUSTIFY">100 MB/sec</P>
+<P ALIGN="JUSTIFY">100 MB/sec</P>
+<P ALIGN="JUSTIFY"></FONT></TD>
+<TD WIDTH="55%" VALIGN="MIDDLE" HEIGHT=112>
+<FONT FACE="TIMES" SIZE=1><P ALIGN="JUSTIFY">1 PB/month (1 month per year)</P>
+<P ALIGN="JUSTIFY">1 PB/year</P>
+<P ALIGN="JUSTIFY">1 PB/year</P>
+<P ALIGN="JUSTIFY">400 TB/year </FONT></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<B><FONT FACE="TIMES" SIZE=1><P ALIGN="CENTER">Table 1: Expected Data Rates and Volumes at LHC</P>
+</FONT><LI>Physics Data Models</LI>
+</B><FONT SIZE=1><P ALIGN="JUSTIFY">Data Models in High Energy Physics (HEP) are typically very complex. The number of different data types needed to describe the event data of a large HEP experiment reaches several hundreds. A single measurement (event) contains up to millions of interrelated objects. </P>
+<P ALIGN="JUSTIFY">Since the object model of is shared between multiple subsystems (e.g. data acquisition, event reconstruction and physics analysis) with very different access patterns, it is often difficult to fulfil all flexibility and performance requirements in a single design.</P>
+<P ALIGN="JUSTIFY">All LHC experiments exploit Object Oriented (OO) technology to implement and maintain their very large software systems. Today most software development is done in C++ with a growing interest in Java. The data store therefore has to support the main concepts of these OO languages such as abstraction, inheritance, polymorphism and parameterised types.</P>
+</FONT><B><LI>CONCLUSION </LI>
+</B><FONT SIZE=1><P ALIGN="JUSTIFY">HEP data stores based on Object Database Management Systems (ODBMS) provide a number of important advantages in comparison to traditional systems. This approach provides the user with in a coherent logical view of complex HEP object models and allows a tight integration with multiple of today’s OO languages such as C++ and JAVA. </P>
+<P ALIGN="JUSTIFY">The clear separation of logical and physical data model introduced by object databases allows for transparent support of physical clustering and re-clustering which is expected to be an important tool to optimise the overall system performance. </P>
+<P ALIGN="JUSTIFY">The ODBMS implementation of Objectivity/DB in particular show scaling up to multi-PB distributed data stores and provides a seamless integration with Mass Storage Systems (MSS) like HPSS. Already today a significant number of HEP experiments in or close to production adopted an ODBMS based approach</P>
+</FONT><B><LI>REFERENCES</LI></OL>
+
+<OL>
+
+</B><FONT SIZE=1><P ALIGN="JUSTIFY"><LI>RD45 - A Persistent Object Manager for HEP, LCB Status Report, March 1998, CERN/LHCC 98-x </LI></P>
+<P ALIGN="JUSTIFY"><LI>Using an Object Database and Mass Storage System for Physics Production, March 1998, CERN/LHCC 98-x </LI></P>
+<P ALIGN="JUSTIFY"><LI>RD45 - A Persistent Object Manager for HEP, LCB Status Report, March 1997, CERN/LHCC 97-6 </LI></P>
+<P ALIGN="JUSTIFY"><LI>Object Databases and their Impact on Storage-Related Aspects of HEP Computing, the RD45 collaboration </LI></P>
+<P ALIGN="JUSTIFY"><LI>Using and Object Database and Mass Storage System for Physics Analysis, the RD45 collaboration </LI></P>
+<P ALIGN="JUSTIFY"><LI>RD45 - A Persistent Object Manager for HEP, LCRB Status Report, March 1996, CERN/LHCC 96-15 </LI></P>
+<P ALIGN="JUSTIFY"><LI>Object Databases and Mass Storage Systems: The Prognosis, the RD45 collaboration, CERN/LHCC 96-17 </LI></P>
+<P ALIGN="JUSTIFY"><LI>The Object Database Standard, ODMG-93, Edited by R.G.G.Cattell, ISBN 1-55860-302-6, Morgan Kaufmann. </LI></P>
+<P ALIGN="JUSTIFY"><LI>ATLAS Computing Technical Proposal, CERN/LHCC 96-43 </LI></P>
+<P ALIGN="JUSTIFY"><LI>CMS Computing Technical Proposal, CERN/LHCC 96-45</LI></P></OL>
+
+</FONT><B><FONT FACE="HELVETICA" SIZE=5><P ALIGN="CENTER"></P></B></FONT></BODY>
+</HTML>

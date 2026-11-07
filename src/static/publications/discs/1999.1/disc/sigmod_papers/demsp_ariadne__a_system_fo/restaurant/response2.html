@@ -1,0 +1,375 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Response</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<br>&nbsp;
+<center><table BORDER >
+<tr>
+<td COLSPAN="2" BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>You requested the following:</font></font></center>
+</td>
+</tr>
+
+<tr BGCOLOR="#775577">
+<td><i><font color="#FFFFFF">Attribute</font></i></td>
+
+<td><i><font color="#FFFFFF">Constraint</font></i></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">City</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= FLEX</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Cuisine</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= FLEXIBLE</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Food</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= Excellent</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Service</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= Excellent</font></tt></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#336666"><b><font color="#FFFFFF">Decor</font></b></td>
+
+<td BGCOLOR="#339999"><tt><font color="#FFFF00">= FLEX</font></tt></td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<tr>
+<td BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>This corresponds to the ATTRIBUTE
+query</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td WIDTH="50" BGCOLOR="#336666">
+<pre WIDTH="50"><font color="#00FF00">(SIMS-RETRIEVE (?REST-NAME ?STREET ?CITY ?STATE ?FOOD ?SERVICE ?DECOR ?RLAT ?RLON&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?URL)
+&nbsp; (:AND (RESTAURANT ?R)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CITY ?R ?CITY)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CUISINE ?R ?CUISINE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= ?CUISINE "FLEXIBLE")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (FOOD ?R ?FOOD)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MEMBER ?FOOD ("29" "28" "27" "26" "25" "24"))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (SERVICE ?R ?SERVICE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MEMBER ?SERVICE ("29" "28" "27" "26" "25" "24"))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (DECOR ?R ?DECOR)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (REST-NAME ?R ?REST-NAME)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (STREET ?R ?STREET)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (STATE ?R ?STATE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (= ?STATE "CA")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RLON ?R ?RLON)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RLAT ?R ?RLAT)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (URL ?R ?URL)))</font></pre>
+</td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<caption>
+<center><ALIGN ALIGN="TOP"></ALIGN></center>
+</caption>
+
+<tr>
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rest-Name</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Street</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">City</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">State</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Food</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Service</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Decor</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rlat</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Rlon</font></th>
+
+<th BGCOLOR="#333399"><font color="#FFFFFF">Url</font></th>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Bernard</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">515 S. Olive St.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Los Angeles</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">27</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.2521</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.04924</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2188&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Campanile</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">624 S. La Brea Ave.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Los Angeles</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">22</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.34297</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.0641</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2193&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Diaghilev</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">1020 N. San Vicente Blvd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">W. Hollywood</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">27</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">28</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">27</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.3846</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.08957</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2197&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Fenix at the Argyle</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">8358 Sunset Blvd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">W. Hollywood</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.3708</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.09556</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2198&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Granita</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">23725 W. Malibu Rd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Malibu</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">22</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.6907</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.0337</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2199&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">L Orangerie</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">903 N. La Cienega Blvd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">W. Hollywood</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">27</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">28</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.37565</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.0875</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2209&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Patina</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">5955 Melrose Ave.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Los Angeles</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">28</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.32926</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.0835</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2215&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Pinot Bistro</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">12969 Ventura Blvd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Studio City</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.41393</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.14539</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2216&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Rex Il Ristorante</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">617 S. Olive St.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Los Angeles</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">26</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">28</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.2535</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.04779</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2217&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Valentino</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">3115 Pico Blvd.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Santa Monica</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">27</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.45633</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.0258</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2223&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+
+<tr>
+<td BGCOLOR="#339999"><font color="#FFFF00">Water Grill</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">544 S. Grand Ave.</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">Los Angeles</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">CA</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">25</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">24</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">22</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">-118.25349</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">34.04939</font></td>
+
+<td BGCOLOR="#339999"><font color="#FFFF00">http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2224&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display</font></td>
+</tr>
+</table></center>
+
+<center><table BORDER >
+<tr>
+<td BGCOLOR="#333399">
+<center><font color="#FFFFFF"><font size=-2>Which becomes the MAP query</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td WIDTH="50" BGCOLOR="#336666">
+<pre WIDTH="50"><font color="#00FF00">(SIMS-RETRIEVE (?URL)
+&nbsp; (:AND (TIGER_OUT ?T)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (PLACES_LIST ?T "((Bernard^515 S. Olive St.^Los Angeles^CA^25^27^25^-118.2521^34.04924^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2188&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Campanile^624 S. La Brea Ave.^Los Angeles^CA^26^24^22^-118.34297^34.0641^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2193&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Diaghilev^1020 N. San Vicente Blvd.^W. Hollywood^CA^27^28^27^-118.3846^34.08957^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2197&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Fenix at the Argyle^8358 Sunset Blvd.^W. Hollywood^CA^26^26^24^-118.3708^34.09556^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2198&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Granita^23725 W. Malibu Rd.^Malibu^CA^25^25^22^-118.6907^34.0337^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2199&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (L Orangerie^903 N. La Cienega Blvd.^W. Hollywood^CA^27^28^26^-118.37565^34.0875^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2209&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Patina^5955 Melrose Ave.^Los Angeles^CA^28^24^26^-118.32926^34.0835^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2215&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Pinot Bistro^12969 Ventura Blvd.^Studio City^CA^26^24^24^-118.41393^34.14539^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2216&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Rex Il Ristorante^617 S. Olive St.^Los Angeles^CA^26^28^25^-118.2535^34.04779^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2217&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Valentino^3115 Pico Blvd.^Santa Monica^CA^27^24^25^-118.45633^34.0258^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2223&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^) (Water Grill^544 S. Grand Ave.^Los Angeles^CA^25^24^22^-118.25349^34.04939^http://cgi.pathfinder.com/cgi-bin/zagat/search?oid=2224&amp;location=Los_Angeles&amp;search_type=alpha&amp;use=display^))")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (MAP_URL ?T ?URL)))</font></pre>
+</td>
+</tr>
+</table></center>
+
+</body>
+</html>

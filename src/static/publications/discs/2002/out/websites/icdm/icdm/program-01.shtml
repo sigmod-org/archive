@@ -1,0 +1,2562 @@
+<html>
+
+<head>
+
+<title>ICDM '01 Advance Program</title>
+
+<BODY bgcolor="#ffffee">
+
+<!--
+<body lang=EN-US link="#000088" vlink=purple style='tab-interval:.5in'>
+-->
+
+<table width="100%"><tr>
+<td><img width=180 align=left src="ieee-cs.gif">
+</td>
+<td align=center><H1><FONT COLOR="#FF0000">ICDM '01</FONT><br>
+<FONT color=#0055ff>The 2001 IEEE International Conference
+on <NOBR>Data Mining</NOBR></FONT></H1>
+<H2>Sponsored by the IEEE Computer Society</H2>
+<H3>Doubletree Hotel, San Jose, California, USA<br>
+November 29 - December 2, 2001</H3></td>
+</tr>
+</table>
+
+</CENTER>
+
+<center>
+<h2><a href="http://kais.mines.edu/~xwu/icdm/icdm-01.html">ICDM
+2001</a> Program</h2>
+
+<b>Notes for poster paper authors:</b>
+
+<ol>
+
+<li> Each poster review on November 30 in the afternoon has a 10 min
+presentation.
+
+<li> At the Posters and Software Demos session (November 30 6:30pm -
+9:00pm), each poster paper can have around 12 sheets (A4 or similar
+size) for posting. The conference will provide a set of white foam
+paper for each poster paper.
+
+</ol>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=818 colspan=4 valign=center style='width:490.5pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>November 29</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Tutorials (Montery Room)</p>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Workshop (Carmel Room)</p>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Workshop (Santa Clara Room)<u><span style='color:blue'><o:p></o:p></span></u></p>
+  </td>
+ </tr>
+ <tr style='height:57.0pt'>
+  <td width=92 valign=center style='width:55.1pt;border-top:none;border-left:solid windowtext .5pt;
+  border-bottom:none;border-right:solid windowtext .5pt;mso-border-top-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  <p class=MsoNormal>9:00</p>
+  </td>
+  <td width=200 valign=center style='width:119.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  <u><span style='color:blue'><a
+href="http://www-csli.stanford.edu/~schuetze/ieeetutorial.html">Text Mining for Bioinformatics</a></span></u>
+<br>by Hinrich Schuetze <u><span style='color:navy'></span></u>
+  </td>
+  <td width=213 rowspan=2 valign=center style='width:127.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  <u><span style='color:blue'><a href="http://www.cui.unige.ch/~hilario/icdm-01/cfp.html"
+target=_top>Integrating Data Mining and
+  Knowledge Management</a></span></u>
+  </td>
+  <td width=224 rowspan=2 valign=center style='width:134.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  <u><span style='color:blue'><a href="http://www-ai.ijs.si/DunjaMladenic/TextDM01/"
+target=_top>Text Mining (TextDM '2001)</a></span></u>
+  </td>
+ </tr>
+ <tr style='height:57.0pt'>
+  <td width=92 valign=center style='width:55.1pt;border:solid windowtext .5pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  2:00
+  </td>
+  <td width=200 valign=center style='width:119.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:57.0pt'>
+  <u><span style='color:blue'><a
+href="http://www.cs.purdue.edu/homes/clifton/icdm01_tutorials/Keogh/">Mining Time Series Data</a></span></u><br>by
+  Eamonn Keogh 
+  </td>
+ </tr>
+ <tr>
+  <td width=818 colspan=4 valign=center style='width:490.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <b>November 30</b>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  8:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Opening/Awards (Cascade Sierra Room)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  9:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <b>Keynote</b>: <u><span style='color:blue'><A href="http://research.microsoft.com/~gray">Jim Gray,</a></span></u>
+  Microsoft Research, USA (The 1999 Turing Award Winner).<br>
+  <u><span style='color:blue'><A
+href="invited-gray.shtml">The World Wide Telescope:
+  Mining the Sky</a></span></u>
+<br>Cascade Sierra Room
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  10:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  10:30
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1A: <u><span style='color:navy'></span></u>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2A: 
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3A
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  1
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S115</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>G
+  Richards,</span>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>V J
+  Rayward-Smith</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Discovery
+  of Association Rules in Tabular Data</span><u><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span></u>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S321</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Jose
+  Balcazar, Yang Dai, Osamu Watanabe</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Provably
+  Fast Training Algorithms for Support Vector Machines</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S305</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Steven
+  Noel, Vijay Raghavan, C.-H. Henry Chu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Visualizing
+  Association Mining Results through Hierarchical Clusters</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  2
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span
+  style='color:#FF6600'>S451</span></u>
+  <br><span
+  style='mso-bidi-font-size:8.0pt;color:red'>Masakazu Seno, George Karypis</span>
+  <br><span
+  style='mso-fareast-font-family:"MS Mincho"'>LPMiner: An Algorithm for Finding
+  Frequent Itemsets Using Length-Decreasing Support Constraint</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText style='page-break-after:avoid;mso-outline-level:3'><u><span
+  style='color:#FF6600'>S424</span></u>
+  <br><span
+  style='mso-bidi-font-size:8.0pt;color:red'>David Maxwell Chickering,
+  Christopher Meek, Robert Rounthwaite</span>
+  <br><span
+  style='mso-fareast-font-family:"MS Mincho"'>Efficient Determination of
+  Dynamic Split Points in a Decision Tree</span><span style='mso-bidi-font-size:
+  8.0pt;color:olive'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='color:red;'><u>S541</u></span><br></span>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Beitao
+  Li, Wei-Cheng Lai, Edward Chang, Kwang-Ting Cheng</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Image Features for Efficient Query Processing</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  3
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S426</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Floris
+  Geerts, Bart Goethals, Jan Van den Bussche</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>A Tight
+  Upper Bound on the Number of Candidate Patterns</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='color:#FF6600'><u>S475</u></span></span><br>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Tom
+  Fawcett</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Using
+  Rule Sets to Maximize ROC Performance</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S348</u></span><br></span><u><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Jong-Sheng
+  Cherng, Mei-Jung Lo</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>A
+  Hypergraph Based Clustering Algorithm for Spatial Data Sets</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  12:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Lunch (ICDM Steering Committee Meeting with ICDM '02 Organizers)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  1:30
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1B:
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2B:
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3B
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  4
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S458</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Chang-Shing
+  Perng, Haixun Wang, Sheng Ma, Joself L. Hellerstein</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>FARM: A
+  Framework for Exploring Mining Spaces with Multiple Attributes</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S402</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Maria
+  Halkidi, Michalis Vazirgiannis</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Clustering
+  Validity Assessment: Finding the Optimal Partitioning of Set</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span><span style='mso-bidi-font-size:
+  8.0pt;color:olive'></span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S377</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Ming-Chuan
+  Hung, Don-Lin Yang</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>An
+  Efficient Fuzzy C-Means Clustering Algorithm</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  5
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><u><span style='mso-bidi-font-size:8.0pt;color:#FF6600'>S488</span></u><br>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Karam
+  Gouda, Mohammed J. Zaki</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Efficiently
+  Mining Maximal Frequent Itemsets</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S304</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Manoranjan
+  Dash, Kian Lee Tan, Huan Liu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Efficient
+  Yet Accurate Clustering</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S349</u></span><br></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Richard J
+  Bolton, David J Hand</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Significance
+  Tests for Patterns in Continuous Data</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  6
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S551</u></span><br></span><u><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span></u>
+  <span class=MsoHyperlink><span style='font-size:12.0pt;
+  mso-bidi-font-size:8.0pt;color:red'>&nbsp;</span></span><span
+  style='mso-fareast-font-family:"MS Mincho";color:red'>J. Li, H. Shen, and R.
+  Topor </span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  the Smallest Association Rule Set for Predictions</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S273</u></span><br><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Valerie
+  Guralnik, George Karypis</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>A
+  Scalable Algorithm for Clustering Sequential Data</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S457</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Wei Wang,
+  Jiong Yang, Philip Yu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Meta-Patterns:
+  Revealing Hidden Periodic Patterns</span><u><span style='color:navy'></span></u>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  7
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S179</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Bing Liu,
+  Yiming Ma, and R. Lee</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Analyzing
+  the Interestingness of Association Rules from the Temporal Dimension</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><u><span style='mso-bidi-font-size:8.0pt;color:#FF6600'>S404</span></u><br>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Konstantinos
+  Kalpakis, Dhiral Gada, Vasundhara Puttagunta</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Distance
+  Measures for Effective Clustering of ARIMA Time-Series</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S306</span></u>
+<br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Wai-Ho
+  Au, Keith C.C. Chan</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Classification
+  with Degree of Membership: A Fuzzy Approach</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  8
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><u><span style='mso-bidi-font-size:8.0pt;color:#FF6600'>S522</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Chang-Hung
+  Lee, Cheng-Ru Lin, Ming-Syan Chen</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>On Mining
+  General Temporal Assocation Rules in a Publication Database</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><u><span style='mso-bidi-font-size:8.0pt;color:#FF6600'>S398</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Hichem
+  Frigui, Mohamed Ben Hadj Rhouma</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>A
+  Synchronization Based Algorithm for Discovering Ellipsoidal Clusters in</span><span
+  style='mso-bidi-font-size:8.0pt'> Large Datasets<span style='color:red'></span></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S176</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Tzung-Pei
+  Hong, Yeong-Chyi Lee</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Coverage-Based Fuzzy Rules by Evolutional Computation</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  4:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  4:30
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <a
+href="#1C">Cascade Room<br>Research Track 1C</a><br>
+  Poster Previews<br>
+  (See below)
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <a
+href="#2C">Sierra Room<br>Research Track 2C</a><br>
+  Poster Previews<br>
+  (See below)
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <a
+href="#3C">Siskiyou Room<br>Research Track 3C</a><br>
+  Poster Previews<br>
+  (See below)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  5:45
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Break
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  6:30 - 9:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Posters and Software Demos (Donner Room)
+  </td>
+ </tr>
+ <tr>
+  <td width=818 colspan=4 valign=center style='width:490.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <b>December 1</b>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  8:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <b>Keynote</b>: <u><span style='color:blue'><A href="http://www-stat.stanford.edu/~jhf/">Jerome H. Friedman,</a></span></u>
+  Stanford University, USA.<br>
+<u><span style='color:blue'><A
+href="invited-friedman.shtml">Predictive Data Mining with Multiple Additive Regression Trees</a></span></u>
+<br>Cascade Sierra Room
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  9:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  10:00
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1D: <u><span style='color:navy'></span></u>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2D:<u><span style='color:navy'></span></u>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3D:<u><span style='color:navy'></span></u>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  9
+  </td>
+
+  <td width=201 valign=center style='width:120.6pt;
+border-top:none;border-left:none;
+border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S442</u></span></span><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Marzena
+  Kryszkiewicz</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Concise
+  Representation of Frequent Patterns Based on Disjunction-Free Generators</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+<!--
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S478</u></span></span><u><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Francois
+  Velin, Pascale Kuntz, Henri Briand</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Web
+  Cartography for Online State Promotion: An Algorithm for Clustering Web
+  Resources</span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+-->
+
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext
+ .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S418</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Haixun
+  Wang, Philip S. Yu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>SSDT: A
+  Scalable Subspace-Splitting Classifier for Biased Data</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S491</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Hisao
+  Ishibuchi, Takashi Yamamoto, Tomoharu Nakashima</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Fuzzy
+  Data Mining: Effect of Fuzzy Discretization</span><u><span style='color:navy'></span></u>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  10
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S408</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Christopher
+  Jermaine</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>The
+  Computational Complexity of High-Dimensional Correlation Search</span><u><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span></u>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S568</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Shoji
+  Hirano, Shusaku Tsumoto</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Indiscernability
+  Degress of Objects for Evaluating Simplicity of Knowledge in the Clustering
+  Procedure</span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S527</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Paul
+  Munteanu, Mohamed Bendou</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>The EQ
+  Framework for Learning Equivalence Classes of Bayesian Networks</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  11
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S512</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Wenmin
+  Li, Jiawei Han, Jian Pei</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>CMAR: Accurate
+  and Efficient Classification Based on Multiple Class-Association Rules</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S311</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>SungYoung
+  Jung, Taek-Soo Kim</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>An
+  Agglomerative Hierarchical Clustering Using partial Maximum Array and
+  Incremental Similarity Computation Method</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S396</u></span></span><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Lior
+  Rokach, Oded Maimon</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Theory
+  and Applications of Attribute Decomposition</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  12
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><br><span style='mso-bidi-font-size:8.0pt;color:red'>S423</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Sheng Ma,
+  Joseph L. Hellerstein</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Mutually Dependent Patterns</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S409</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Tapio
+  Elomaa, Juho Rousu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Preprocessing
+  Opportunities in Optimal Numerical Range Partitioning</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S519</u></span></span><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Rong
+  Chen, Krishnamoorthy Sivakumar, Hillol Kargupta</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Distributed
+  Web Mining Using Bayesian Networks from Multiple Data Streams</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  12:00
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style="mso-spacerun: yes"> </span>Lunch
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  1:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <b>Keynote</b>: <u><span style='color:blue'><A href="http://www.isle.org/~langley">Pat Langley,</A></span></u>
+  Institute for the Study of Learning and Expertise, USA.<br>
+  <u><span style='color:blue'><A
+href="invited-langley.shtml">Knowledge and Data in Computational Scientific Discovery</A></span></u>
+<br>Cascade Sierra Room
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  2:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  3:00
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1 E:
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2 E:
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3 E:
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  13
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S310</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Sigal
+  Sahar</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Interestingness
+  PreProcessing</span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'><u>S486</u></span><br>
+<span style='color:red'>Mahesh V. Joshi, Vipin Kumar,
+  Ramesh Agarwal</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Evaluating
+  Boosting Algorithms to Classify Rare Classes: Comparison and Improvements</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'><u>S469</u></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Joaquim
+  Silva, Agra Coelho, Gabriel Lopes</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Document
+  Clustering and Cluster Topic Extraction in Multilingual Corpora</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  14
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S160</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Xiaohua
+  Tony Hu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Using
+  Rough Sets Theory and Database Operations to Construct a Good Ensemble of
+  Classifiers for Data Mining Applications</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S430</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Wei Fan,
+  Matthew Miller, Salvatore J. Stolfo, Wenke Lee, and P. Chan</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Using
+  Artificial Anomalies to Detect Unknown and Known Network Intrusions</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S238</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Henry E.
+  Kyburg, Jr.</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Statistical
+  Considerations in Learning from Data</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  15
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S283</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Ying Sai,
+  Yiyu Yao, Ning Zhong</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Data
+  Analysis and Mining in Ordered Information Tables</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S242</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Ning
+  Zhong, Y.Y. Yao, Muneaki Ohshima, Setsuo Ohsuga</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Interestingness,
+  Peculiarity, and Multi-database Mining</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S393</u></span></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Johan
+  Himberg, Kalle Korpiaho, Heikki Mannila, Johanna Tikanmäki, and Toivonen</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Time
+  Series Segmentation for Context Recognition in Mobile Devices</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  16
+  </td>
+
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S372</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Thomas
+  Knight, Jon Timmis</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>AINE: An
+  Immunological Approach to Data Mining</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S570</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Suhail
+  Ansari, Ron Kohavi, Llew Mason, Zijian Zheng</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Integrating
+  E-Commerce and Data Mining: Architecture and Challenges</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S132</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Charu
+  Aggarwal, Philip Yu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>On Effective
+  Conceptual Indexing and Similarity Search in Text Data</span><span
+  style='mso-bidi-font-size:8.0pt'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  5:00
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Break
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  6:30 – 8:30
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Banquette (Cascade Sierra Room)
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <![if !supportEmptyParas]>&nbsp;<![endif]>
+  </td>
+ </tr>
+ <tr>
+  <td width=818 colspan=4 valign=center style='width:490.5pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <b>December 2</b>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  8:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <b>Keynote</b>:<u><span style='color:blue'><A href="http://manip.crhc.uiuc.edu/">Benjamin W. Wah,</A></span></u>
+  University of Illinois, Urbana-Champaign, USA (President, IEEE
+  Computer Society).<br>
+  <u><span style='color:blue'><A href="invited-wah.shtml">Intelligent Mining for Time
+  Series Predictions</A></span></u>
+<br>Cascade Sierra Room
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  9:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  10:00
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1G: <u><span style='color:navy'></span></u>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2G:<u><span style='color:navy'></span></u>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3G:<u><span style='color:navy'></span></u>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  17
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S515</u></span><br>
+  <span style='mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+  "MS Mincho"; color:#FF6600'>C. Ordonez, E. Omiecinski, L. de Braal, C. Santana, N. Ezquerra,
+  J. Taboada, D. Cooke, E. Krawczynska, and E. Garcia</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Constrained Association Rules to Predict Heart Disease</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S516</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Gary R.
+  Livingston, John M. Rosenberg, Bruce G. Buchanan</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Closing
+  the Loop: An Agenda- and Justification-Based Framework for Selecting the Next
+  Discovery Task to Perform</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S362</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Henner
+  Graubitz, Myra Spiliopoulou, Karsten Winkler</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>The
+  DIAsDEM Framework for Converting Domain-Specific Texts into XML Documents
+  with Data Mining Techniques</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  18
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S422</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Jian Pei,
+  Jiawei Han, Hongjun Lu, Shojiro Nishio, S. Tang, and D. Yang</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>H-Mine:
+  Hyper-Structure Mining of Frequent Patterns in Large Databases</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S545</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Gary
+  Livingston, John M. Rosenberg, Bruce G. Buchanan</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Closing
+  the Loop: Heuristics for Autonomous Discovery</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S250</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Wen-Hsiang
+  Lu, Lee-Feng Chien, Hsi-Jian Lee</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Anchor
+  Text Mining for Translation of Web Queries</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  19
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S386</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Kimmo
+  Raivio, Olli Simula, Jaana Laiho</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Neural
+  Analysis of Mobile Radio Access Network</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S504</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Ching-Yao
+  Wang, Tzung-Pei Hong, Shian-Shyong Tseng</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Maintenance
+  of Sequential Patterns for Record Deletion</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='color:#FF6600;font-style:
+  normal'><u>S530</u></span></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Catherine Blake,
+  Wanda Pratt</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Better
+  Rules, Few Features: A Semantic Approach to Selecting Features from Text</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  20
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S390</span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Hillol
+  Kargupta, Byung-Hoon Park</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Decision Trees from Data Streams in a Mobile Environment</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S370</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Pierre-Yves
+  ROLLAND</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>FlExPat:
+  Flexible Extraction of Sequential Patterns</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S463</u></span></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Zarrin
+  Langari, Frank Wm. Tompa</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Subject
+  Classification in the Oxford English Dictionary</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  12:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style="mso-spacerun: yes"> </span>Lunch
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  1:30
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Cascade Room<br>Research Track 1H:
+  </td>
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Sierra Room<br>Research Track 2H:
+  </td>
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Siskiyou Room<br>Research Track 3H:
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  21
+  </td>
+
+<!-- 272 -->
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:77.95pt 235.15pt 379.15pt'><u><span
+  style='mso-bidi-font-size:8.0pt;color:red'>S253</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'> </span></u>
+<span
+  style='mso-bidi-font-size:8.0pt;color:red'>AIXIN SUN, EE-PENG LIM </span><span
+  style='mso-fareast-font-family:"MS Mincho"'>Hierarchical Text Classification
+  and Evaluation</span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S161</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Eamonn
+  Keogh, Selina Chu, David Hart, Michael Pazzani</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>An
+  Online Algorithm for Segmenting Time Series</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+<!-- 253 -->
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:77.95pt 235.15pt 379.15pt'><u><span
+  style='mso-bidi-font-size:8.0pt;color:red'>S272</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span></u>
+<span
+  style='mso-bidi-font-size:8.0pt;color:red'>Xiaofeng He, Chris Ding, Hongyuan
+  Zha, Horst Simon </span><br><span style='mso-fareast-font-family:"MS Mincho"'>Automatic
+  Topic Identification Using Webpage Clustering</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  22
+  </td>
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S410</span></u><br><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Joao Gama</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Functional
+  Trees for Classification</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S144</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Michael
+  Anderson</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Knowledge
+  Discovery from Diagrammatically Represented Data</span><span
+  style='mso-bidi-font-size:8.0pt'> </span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+<span style='mso-bidi-font-size:8.0pt;color:red'><u>S164</u></span>
+<br>
+<span
+  style='mso-bidi-font-size:8.0pt;color:red'>Krishna Bharat, Bay-Wei Chang,
+  Monika Henzinger, Matthias Ruhl</span></span><br>
+<span style='mso-fareast-font-family:
+  "MS Mincho"'>Who Links to Whom: Mining Linkage between Web Sites</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  23
+  </td>
+
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S561</u></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Aijun An,
+  Yuanyuan Wang</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Comparisons
+  of Classification Methods for Screening Potential Compounds</span><span
+  style='mso-bidi-font-size:8.0pt'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S531</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Chris
+  Ding, Xiaofeng He, Hongyuan Zha, Ming Gu, and H.Simon</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>A
+  Min-Max Cut Algorithm for Graph Partitioning and Data Clustering</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+<!--
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S418</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Haixun
+  Wang, Philip S. Yu</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>SSDT: A
+  Scalable Subspace-Splitting Classifier for Biased Data</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+-->
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:77.95pt 235.15pt 379.15pt'><span
+  style='mso-bidi-font-size:8.0pt;color:red'><u>S322</u></span>
+<br><span
+  style='mso-bidi-font-size:8.0pt;color:red'>Jung-Won Lee, Kiho Lee, Won Kim </span>
+<br><span
+  style='mso-fareast-font-family:"MS Mincho"'>Preparations for Semantics-Based
+  XML Mining </span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt' align=center>
+  24
+  </td>
+
+  <td width=201 valign=center style='width:120.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'><u>S316</u></span></span>
+<span
+  style='mso-bidi-font-size:8.0pt;color:#FF6600'></span>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Virginia
+  Wheway</span></span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Using
+  Boosting to Simplify Classification Models</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+
+  <td width=241 valign=center style='width:144.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span class=MsoHyperlinkFollowed><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'><u>S498</u></span></span><u><span style='mso-bidi-font-size:
+  8.0pt;color:#FF6600'></span></u>
+  <br><span style='mso-bidi-font-size:8.0pt;color:red'>Michihiro
+  Kuramochi, George Karypis</span>
+  <br><span style='mso-fareast-font-family:"MS Mincho"'>Frequent
+  Subgraph Discovery</span><br><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+
+  <td width=267 valign=center style='width:160.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='tab-stops:77.95pt 235.15pt 379.15pt'><span
+  style='mso-bidi-font-size:8.0pt;color:red'>&nbsp;</span>
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  3:30
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  Catered Break (Bayshore Foyer)
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  4:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <a href="panel-01.shtml"><b>Panel</b>:<span style="mso-spacerun: yes">  </span>Data
+  Mining: How Research Meets Practical Development?</a><br>
+Cascade Sierra Room<br>
+
+  <b>Chair</b>: Rao Kotagiri, University of Melbourne, Australia. 
+<p>
+<b>Panel Members:</b>
+<ul>
+<li> Pat Langley, Institute for the Study of Learning and
+Expertise, USA. 
+<li> Gregory Piatetsky-Shapiro, KDnuggets, USA. 
+<li> Philip Yu, IBM T.J. Watson Research Center, USA. 
+<li> Benjamin W. Wah, University of Illinois, Urbana-Champaign,
+  USA.
+</ul> 
+  </td>
+ </tr>
+ <tr>
+  <td width=108 valign=center style='width:.9in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  5:00
+  </td>
+  <td width=710 colspan=3 valign=center style='width:425.7pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style="mso-spacerun: yes"> </span>Adjourn
+  </td>
+ </tr>
+</table>
+
+<p>
+
+<a name="1C">
+
+<b>Cascade Room<br>Research Track 1C</b>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:-.25pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S474</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Osmar R.
+  Zaiane, Mohammad El-Hajj, Paul Lu</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Fast
+  Parallel Association Rule Mining without Candidacy Generation</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S467</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Wolfgang
+  Gaul, Lars Schmidt-Thieme</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Mining Generalized
+  Association Rules for Sequential and Path Data</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S567</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Honghua
+  Dai</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Inexact
+  Field Learning: An Approach to Induce High Quality Rules from </span><span
+  style='mso-bidi-font-size:8.0pt;color:red'><span style="mso-spacerun:
+  yes"> </span></span><span style='mso-bidi-font-size:8.0pt;color:#333300'>Low
+  Quality Data</span><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S445</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Viviane
+  Crestana Jensen, Nandit Soparkar</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Heuristic
+  Optimization for Decentralized Frequent Itemset Counting</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S371</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Viet
+  Phan-Luong</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>The
+  Representative Basis for Association Rules</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S162</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Fan-Chen
+  Tseng, Ching-Chi Hsu, H. Chen</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  Frequent Closed Itemsets with the Frequent Pattern List</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S308</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Hasan M.
+  Jamil</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Ad Hoc
+  Association Rule Mining as SQL3 Queries</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S257</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Show-Jane
+  Yen, Yue-Shi Lee</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-family:"Times New Roman";mso-fareast-font-family:
+  "MS Mincho"'>An Efficient Data Mining Technique for Discovering Interesting
+  Sequential Patterns</span><span style='mso-bidi-font-size:8.0pt;font-family:
+  "Times New Roman";color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S485</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Carlotta
+  Domeniconi, Dimitrios Gunopulos</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Incremental
+  Support Vector Machine Construction</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S464</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Sherri K.
+  Harms, Jitender Deogun, Jamil Saquer, Tsegaye Tadesse</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Discovering
+  Representative Episodal Association Rules from Event Sequences Using Frequent
+  Closed Episode Sets and Event Constraints</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+
+</table>
+
+
+<!--
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+-->
+<p>
+
+<a name="2C">
+
+<b>Sierra Room<br>Research Track 2C</b>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:-.25pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S361</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Jie Chen,
+  Haiying Li, Shiwei Tang</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Association
+  Rules Enhanced Classification of Underwater Acoustic Signal</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S401</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Samuel
+  Steingold, Richard Wherry, Gregory Piatetsky-Shapiro</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Measuring
+  Real-Time Predictive Models</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'> </span>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S278</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Pascal
+  Soucy, Guy W. Mineau</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>A Simple
+  KNN Algorithm for Text Categorization</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S513</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Carlos
+  Ordonez, Edward Omiecinski,  N. Ezquerra</span><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>A Fast
+  Algorithm to Cluster High Dimensional Basket Data</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S130</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>D. Zhang,
+  Q. Ha, M. Lu</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Mining California
+  Vital Statistics Data</span><span style='mso-bidi-font-size:8.0pt;color:red'>
+  </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S336</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Fernando
+  Alonso, ,Juan P. Caraça-Valente, Loïc Martínez, Cesar Montes</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-family:"Times New Roman";mso-fareast-font-family:
+  "MS Mincho"'>Discovering Similar Patterns for Characterizing Time Series in a
+  Medical Domain</span><span style='mso-bidi-font-size:8.0pt;font-family:"Times New Roman";
+  color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S332</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Tadashi
+  Nomoto, Yuji Matsumoto</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>An Experimental
+  Comparison of Supervised and Unsupervised Approaches to Text Summarization</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S338</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Daniel
+  Gillblad, Anders Holst</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Dependency
+  Derivation in Industrial Process Data</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S240</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Xiong
+  Wang</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;font-family:Symbol;
+  mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+  mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+  symbol;mso-symbol-font-family:Symbol'>a</span></span><span style='mso-fareast-font-family:
+  "MS Mincho"'>-Surface and Its Application to Mining Protein Data</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S260</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Petri
+  Myllymaki, Tomi Silander, Henry Tirri, Pekka Uronen</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Bayesian
+  Data Mining on the Web with B-Course</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S347</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Bernard
+  Zenko, Ljupco Todorovski, Saso Dzeroski</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>A
+  Comparison of Stacking with Meta Decision Trees to Bagging, Boosting, and Stacking
+  with other Methods</span><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+</table>
+
+<!--
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+-->
+
+<p>
+
+<a name="3C">
+
+<b>Siskiyou Room<br>Research Track 3C</b>
+
+<table border=1 cellspacing=0 cellpadding=0 style='margin-left:-.25pt;
+ border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S505</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>X. Liang,
+  and Y. Liang</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Applications
+  of Data Mining in Hydrology</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S202</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Tobias
+  Scheffer, Christian Decomain, Stefan Wrobel</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Mining
+  the Web with Active Hidden Markov Models</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S181</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Gang LI,
+  Fu Tong, Honghua Dai</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoPlainText><span style='font-family:"Times New Roman";mso-fareast-font-family:
+  "MS Mincho"'>Evolutionary Structure Learning Algorithm for Bayesian Network
+  and Penalized Mutual Information Metric</span><span style='mso-bidi-font-size:
+  8.0pt;font-family:"Times New Roman";color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S206</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>June-Suh
+  Cho, Nabil R. Adam</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Efficient
+  Splitting Rules Based on the Probabilities of Pre-assigned Intervals</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S258</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Andreas
+  Hotho, Alexander Maedche, Steffen Staab</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Text
+  Clustering Based on Good Aggregations</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S224</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>J. Paetz</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Metric
+  Rule Generation with Septic Shock Patient Data</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S403</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Stefan
+  Ruping</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Incremental
+  Learning with Support Vector Machines</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S191</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Zhiyong
+  Liu, , Lei<span style="mso-spacerun: yes">  </span>Xu</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>RPCL-Based
+  Local PCA Algorithm</span><span style='mso-bidi-font-size:8.0pt;color:red'> </span>
+  </td>
+ </tr>
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S449</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Rayid
+  Ghani</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Combining
+  Labeled and Unlabeled Data for Text Classification with a Large Number of
+  Categories</span><span style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+<!--
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S425</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Guillermo
+  Sanchez-Diaz, Jose Ruiz-Shulcloper</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>A Clustering
+  Method for Very Large Mixed Data Sets</span><span style='mso-bidi-font-size:
+  8.0pt;color:red'></span>
+  </td>
+ </tr>
+-->
+<!--
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S147</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Fengzhan
+  Tian, Hongwei<span style="mso-spacerun: yes">  </span>Zhong, Yuchang Lu,
+  Chuny Shi </span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Incremental
+  Learning of Bayesian Networks with Hidden Variables</span><span
+  style='mso-bidi-font-size:8.0pt;color:red'></span>
+  </td>
+ </tr>
+-->
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S291</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Nitesh
+  Chawla, Steven Eschrich, Lawrence O. Hall</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Creating
+  Ensembles of Classifiers</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+ </tr>
+
+<!--
+ <tr style='height:46.75pt'>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;
+  height:46.75pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S344</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:46.75pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Manolis
+  Maragoudakis, Katia Kermanidis, Nikos Fakotakis, George Kokkinakis</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:46.75pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Learning
+  Automatic Acquisition of Subcategorization Frames Using Bayesian Inference
+  and Support Vector Machines</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'> </span>
+  </td>
+ </tr>
+-->
+<!--
+ <tr>
+  <td width=60 valign=center style='width:.5in;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <u><span style='mso-bidi-font-size:8.0pt;color:red'>S199</span></u><u><span
+  style='mso-bidi-font-size:8.0pt;color:blue'></span></u>
+  </td>
+  <td width=180 valign=center style='width:1.5in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-bidi-font-size:8.0pt;color:red'>Hui Wang,
+  Ivo Duntsch, David Bell, Dayou Liu</span>
+  </td>
+  <td width=360 valign=center style='width:3.0in;border-top:none;border-left:none;
+  border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <span style='mso-fareast-font-family:"MS Mincho"'>Classification
+  through Maximizing Density</span><span style='mso-bidi-font-size:8.0pt;
+  color:red'></span>
+  </td>
+ </tr>
+-->
+</table>
+
+<!--
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+
+<span style='color:red'><![if !supportEmptyParas]>&nbsp;<![endif]></span>
+
+<![if !supportEmptyParas]>&nbsp;<![endif]>
+-->
+
+</div>
+
+</center>
+
+<p>
+
+<center>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-01-program.dat"
+align=absmiddle> times since October 11, 2001.<br>
+Last modified:
+
+November 21, 2001.<br>
+
+</center>
+
+</body>
+
+</html>

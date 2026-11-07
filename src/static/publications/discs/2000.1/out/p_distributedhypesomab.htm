@@ -1,0 +1,657 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Distributed Hypertext Resource Discovery Through Examples</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_2.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Distributed Hypertext Resource Discovery Through Examples
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_soumen_chakrabarti.htm">Soumen Chakrabarti</a>, 
+<a href = "a_martin_van_den_ber.htm">Martin van den Berg</a>, and 
+<a href = "a_byron_dom.htm">Byron Dom</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/distributedhypesomab.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdocumentclieval.htm">Return to Document Classification and Information Retrieval</a><br>
+<br><i><font size=-1>Note: The quality of the PDF contained herein reflects that of the material supplied to the DiSC'00 Production Team.</font></i><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We describe the architecture of a hypertext resource discovery system using a relational database. Such a system can answer questions that combine page contents, meta-data, and hyperlink structure in powerful ways, such as "find the number of links from an environmental protection page to a page about oil and natural gas over the last year." A key problem in populating the database in such a system is to discover web resources related to the topics involved in such queries. We argue that a keyword-based "find similar" search based on a giant all-purpose crawler is neither necessary nor adequate for resource discovery. Instead we exploit the properties that pages tend to cite pages with related topics, and given that a page 
+<i>
+u
+</i>
+ cites a page about a desired topic, it is very likely that 
+<i>
+u
+</i>
+ cites additional desirable pages. We exploit these properties by using a crawler controlled by two hypertext mining programs: (1) a classifier that evaluates the relevance of a region of the web to the user's interest (2) a distiller that evaluates a page as an access point for a large neighborhood of relevant pages. Our implementation uses IBM's Universal Database, not only for robust data storage, but also for integrating the computations of the classifier and distiller into the database. This results in significant increase in I/O efficiency: a factor of ten for the classifier and a factor of three for the distiller. In addition, ad-hoc SQL queries can be used to monitor the crawler, and dynamically change crawling strategies. We report on experiments to establish that our system is efficient, effective, and robust.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="ApteDW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Apt=eacute=:Chidanand.html">
+Chidanand Apt&eacute;
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Damerau:Fred.html">
+Fred Damerau
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weiss:Sholom_M=.html">
+Sholom M. Weiss
+</a>
+: Automated Learning of Decision Rules for Text Categorization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tois/tois12.html#ApteDW94">
+TOIS 12(3)
+</a>
+: 233-251(1994)
+<dt>
+[2]
+<dd>
+... 
+<dt>
+[3]
+<dd>
+<a name="BharatB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bharat:Krishna.html">
+Krishna Bharat
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Broder:Andrei_Z=.html">
+Andrei Z. Broder
+</a>
+: A Technique for Measuring the Relative Size and Overlap of Public Web Search Engines. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn30.html#BharatB98">
+WWW7 / Computer Networks 30(1-7)
+</a>
+: 379-388(1998)
+<dt>
+[4]
+<dd>
+<a name="BharatH98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bharat:Krishna.html">
+Krishna Bharat
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Henzinger:Monika_Rauch.html">
+Monika Rauch Henzinger
+</a>
+: Improved Algorithms for Topic Distillation in a Hyperlinked Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigir/sigir98.html#BharatH98">
+SIGIR 1998
+</a>
+: 104-111
+<dt>
+[5]
+<dd>
+<a name="BrinP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Page:Lawrence.html">
+Lawrence Page
+</a>
+: The Anatomy of a Large-Scale Hypertextual Web Search Engine. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn30.html#BrinP98">
+WWW7 / Computer Networks 30(1-7)
+</a>
+: 107-117(1998)
+<dt>
+[6]
+<dd>
+<a name="ChakrabartiDAR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chakrabarti:Soumen.html">
+Soumen Chakrabarti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">
+Byron Dom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+: Scalable Feature Selection, Classification and Signature Generation for Organizing Large Text Databases into Hierarchical Topic Taxonomies. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb7.html#ChakrabartiDAR98">
+VLDB Journal 7(3)
+</a>
+: 163-178(1998)
+<dt>
+[7]
+<dd>
+<a name="ChakrabartiDRRGK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chakrabarti:Soumen.html">
+Soumen Chakrabarti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">
+Byron Dom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajagopalan:Sridhar.html">
+Sridhar Rajagopalan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibson:David.html">
+David Gibson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kleinberg:Jon_M=.html">
+Jon M. Kleinberg
+</a>
+: Automatic Resource Compilation by Analyzing Hyperlink Structure and Associated Text. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn30.html#ChakrabartiDRRGK98">
+WWW7 / Computer Networks 30(1-7)
+</a>
+: 65-74(1998)
+<dt>
+[8]
+<dd>
+<a name="ChakrabartiDI98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chakrabarti:Soumen.html">
+Soumen Chakrabarti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">
+Byron Dom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Indyk:Piotr.html">
+Piotr Indyk
+</a>
+: Enhanced Hypertext Categorization Using Hyperlinks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#ChakrabartiDI98">
+SIGMOD Conference 1998
+</a>
+: 307-318
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+... 
+<dt>
+[11]
+<dd>
+<a name="Chamberlin98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+: A Complete Guide to DB2 Universal Database.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1998, ISBN 1-55860-482-0
+<br>
+ 
+<dt>
+[12]
+<dd>
+... 
+<dt>
+[13]
+<dd>
+<a name="ChoGP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cho:Junghoo.html">
+Junghoo Cho
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Page:Lawrence.html">
+Lawrence Page
+</a>
+: Efficient Crawling Through URL Ordering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn30.html#ChoGP98">
+WWW7 / Computer Networks 30(1-7)
+</a>
+: 161-172(1998)
+<dt>
+[14]
+<dd>
+<a name="Cohen95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cohen:William_W=.html">
+William W. Cohen
+</a>
+: Fast Effective Rule Induction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icml/icml1995.html#Cohen95">
+ICML 1995
+</a>
+: 115-123
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="BraP94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bra:P=_De.html">
+P. De Bra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Post:R=_D=_J=.html">
+R. D. J. Post
+</a>
+: Information Retrieval in the World-Wide Web: Making Client-Based Searching Feasible. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn27.html#BraP94">
+Computer Networks and ISDN Systems 27(2)
+</a>
+: 183-192(1994)
+<dt>
+[17]
+<dd>
+<a name="DumaisPHS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dumais:Susan_T=.html">
+Susan T. Dumais
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Platt:John.html">
+John Platt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hecherman:David.html">
+David Hecherman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sahami:Mehran.html">
+Mehran Sahami
+</a>
+: Inductive Learning Algorithms and Representations for Text Categorization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm98.html#DumaisPHS98">
+CIKM 1998
+</a>
+: 148-155
+<dt>
+[18]
+<dd>
+<a name="GoldmanSVG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shivakumar:Narayanan.html">
+Narayanan Shivakumar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Venkatasubramanian:Suresh.html">
+Suresh Venkatasubramanian
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Proximity Search in Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 26-37
+<dt>
+[19]
+<dd>
+<a name="HammerGIPUW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hammer:Joachim.html">
+Joachim Hammer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ireland:Kelly.html">
+Kelly Ireland
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Information Translation, Mediation, and Mosaic-Based Browsing in the TSIMMIS System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#HammerGIPUW95">
+SIGMOD Conference 1995
+</a>
+: 483
+<dt>
+[20]
+<dd>
+<a name="JoachimsFM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Joachims:Thorsten.html">
+Thorsten Joachims
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freitag:Dayne.html">
+Dayne Freitag
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitchell:Tom_M=.html">
+Tom M. Mitchell
+</a>
+: Web Watcher: A Tour Guide for the World Wide Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ijcai/ijcai97.html#JoachimsFM97">
+IJCAI (1) 1997
+</a>
+: 770-777
+<dt>
+[21]
+<dd>
+... 
+<dt>
+[22]
+<dd>
+<a name="KistlerM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kistler:Thomas.html">
+Thomas Kistler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Marais:Hannes.html">
+Hannes Marais
+</a>
+: WebL - A Programming Language for the Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cn/cn30.html#KistlerM98">
+WWW7 / Computer Networks 30(1-7)
+</a>
+: 259-270(1998)
+<dt>
+[23]
+<dd>
+<a name="Kleinberg98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kleinberg:Jon_M=.html">
+Jon M. Kleinberg
+</a>
+: Authoritative Sources in a Hyperlinked Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/soda/soda98.html#Kleinberg98">
+SODA 1998
+</a>
+: 668-677
+<dt>
+[24]
+<dd>
+<a name="KonopnickiS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Konopnicki:David.html">
+David Konopnicki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shmueli:Oded.html">
+Oded Shmueli
+</a>
+: Information Gathering in the World-Wide Web: The W3QL Query Language and the W3QS System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods23.html#KonopnickiS98">
+TODS 23(4)
+</a>
+: 369-410(1998)
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26/27]
+<dd>
+<a name="MendelzonM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Formal Models of Web Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#MendelzonM97">
+PODS 1997
+</a>
+: 134-143
+<dt>
+[28]
+<dd>
+... 
+<dt>
+[29]
+<dd>
+<a name="NiblackZHBPPFUNSDYSZP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">
+Wayne Niblack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhu:Xiaoming.html">
+Xiaoming Zhu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:James_L=.html">
+James L. Hafner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Breuel:Tom.html">
+Tom Breuel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Ponceleon:Dulce_B=.html">
+Dulce B. Ponceleon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">
+Dragutin Petkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">
+Myron Flickner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Upfal:Eli.html">
+Eli Upfal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nin:Sigfredo_I=.html">
+Sigfredo I. Nin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sull:Sanghoon.html">
+Sanghoon Sull
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">
+Byron Dom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yeo:Boon=Lock.html">
+Boon-Lock Yeo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srinivasan:Savitha.html">
+Savitha Srinivasan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zivkovic:Dan.html">
+Dan Zivkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Penner:Mike.html">
+Mike Penner
+</a>
+: Srinivasan, Savitha; Zivkovic, Dan; Updates to the QBIC System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/spieSR/spieSR98.html#NiblackZHBPPFUNSDYSZP98">
+Storage and Retrieval for Image and Video Databases (SPIE) 1998
+</a>
+: 150-161
+<dt>
+[30]
+<dd>
+... 
+<dt>
+[31]
+<dd>
+<a name="Savoy96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Savoy:Jacques.html">
+Jacques Savoy
+</a>
+: An Extended Vector-Processing Scheme for Searching Information in Hypertext Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipm/ipm32.html#Savoy96">
+Information Processing and Management 32(2)
+</a>
+: 155-170(1996)
+<dt>
+[32]
+<dd>
+<a name="TerveenH98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Terveen:Loren_G=.html">
+Loren G. Terveen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hill:William_C=.html">
+William C. Hill
+</a>
+: Finding and Visualizing Inter-Site Clan Graphs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/chi/chi98.html#TerveenH98">
+CHI 1998
+</a>
+: 448-455
+<dt>
+[33]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/ChakrabartiBD99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Soumen&nbsp;Chakrabarti&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Martin&nbsp;van&nbsp;den&nbsp;Berg&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byron&nbsp;Dom},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Distributed&nbsp;Hypertext&nbsp;Resource&nbsp;Discovery&nbsp;Through&nbsp;Examples},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{375-386},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

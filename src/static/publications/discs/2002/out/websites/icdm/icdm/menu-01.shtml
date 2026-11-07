@@ -1,0 +1,210 @@
+<title> ICDM '01 Home Page: Menu </title>
+
+<!-- <BODY bgcolor="#ffffcc"> -->
+
+<BODY bgcolor="#CCCC00">
+
+<font face="arial, helvetica">
+
+<center>
+
+<TABLE BORDER=0 cellpadding=0 width=100%>
+
+<TR ALIGN=right>
+<TH>
+
+<TABLE BORDER=1 cellpadding=0 width=100%>
+<TR ALIGN=right>
+<TH>
+<a href="home-01.shtml"
+TARGET="MAIN">Home Page</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="program-01.shtml" 
+target=_top>Advance Program</a><br>
+</TH>
+</TR>
+<!-- <TR ALIGN=right>
+<TH>
+<a href="cfp-01.shtml" 
+TARGET="MAIN">Call for Papers</a><br>
+</TH>
+</TR>
+-->
+<TR ALIGN=right>
+<TH>
+<a href="Invited-01.shtml" 
+TARGET="MAIN">Invited Talks</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="pics.shtml" TARGET="MAIN">Pictures</a>
+</TH>
+</TR>
+<!--
+<TR ALIGN=right>
+<TH>
+<a href="Dates-01.shtml"
+TARGET="MAIN">Important Dates</a><br>
+</TH>
+</TR>
+-->
+<TR ALIGN=right>
+<TH>
+<a href="Submission-01.shtml"
+TARGET="MAIN">Submission Info</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="reg-01.html"
+TARGET="_top">Registration Info</a>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="hotel-01.shtml"
+TARGET="_top">Hotel Info</a>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="org-01.shtml" 
+TARGET="MAIN">Conference Committee</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="PC-01.shtml" 
+TARGET="MAIN">Program Committee</a><br>
+</TH>
+</TR>
+</TABLE>
+
+</TH>
+</TR>
+ 
+<TR ALIGN=right>
+<TH>
+
+<TABLE BORDER=1 cellpadding=0 width=100%>
+<TR ALIGN=right>
+<TH>
+<a href="workshops-01.shtml"
+TARGET="MAIN">Workshops</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="tutorials-01.shtml"
+TARGET="MAIN">Tutorials</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="panel-01.shtml" TARGET="MAIN">Panels</a><br>
+</TH>
+</TR>
+</TABLE>
+
+</TH>
+</TR>
+ 
+<TR ALIGN=right>
+<TH>
+
+<TABLE BORDER=1 cellpadding=0 width=100%>
+<TR ALIGN=right>
+<TH>
+<a href="http://www.cs.uvm.edu/~xwu/icdm.html" TARGET="_top">ICDM Home Page</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="Sponsors.shtml" TARGET="MAIN">Sponsors</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="benefits.shtml" TARGET="MAIN">Sponsor Benefits</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="Guide.shtml" TARGET="MAIN">Organizers Guide</a><br>
+</TH>
+</TR>
+<TR ALIGN=right>
+<TH>
+<a href="Steering.shtml" TARGET="MAIN">Steering Committee</a><br>
+</TH>
+</TR>
+
+<TR ALIGN=right>
+<TH>
+<a href="Topics.shtml" TARGET="MAIN">Topics</a><br>
+</TH>
+</TR>
+
+<TR ALIGN=right>
+<TH>
+<a href="Publication.shtml" TARGET="MAIN">Publications</a><br>
+</TH>
+</TR>
+
+<TR ALIGN=right>
+<TH>
+<a href="http://www.cs.uvm.edu/~xwu/kais.html"
+TARGET="_top">KAIS Journal</a><br>
+</TH>
+</TR>
+
+<TR ALIGN=right>
+<TH>
+<a href="Awards.shtml" TARGET="MAIN">ICDM Awards</a><br>
+</TH>
+</TR>
+
+</TABLE>
+
+<TR ALIGN=right>
+<TH>
+
+<TABLE BORDER=1 cellpadding=0 width=100%>
+<TR ALIGN=right>
+<TH>
+<a href="http://www.cs.uvm.edu/~xwu/KDD/Links.shtml" 
+TARGET="MAIN">Data Mining Links</a><br>
+</TH>
+</TR>
+</TABLE>
+
+</TH>
+</TR>
+
+</TH>
+</TR>
+ 
+<TR ALIGN=right>
+<TH>
+
+<TABLE BORDER=0 cellpadding=0 width=100%>
+
+<TR ALIGN=right>
+<TH>
+<a href="mailto:xindong@computer.org">
+<img align=bottom border=0
+src="http://www.cs.uvm.edu/~xwu/pictures/e_mail.gif"><br>
+E-mail the Conference Chair</a><br>
+
+</TH></TR>
+</TABLE>
+
+</TH></TR>
+</TABLE>
+
+</center>
+</font>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: Worklist Strategies</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_engine.htm"> Previous Step</a></td>
+<td><a href="demo_activities.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>Worklist Management</b></font></p>
+<p>Application dependent facilities like worklist management are implemented in Mentor-lite on top of the engine as state and activity charts [1]. Thus, they are interpreted by the workflow engine just like any other workflow specification. This allows us to use the functionality of the Mentor-lite workflow engine through a single interface, namely the state and activity chart interpreter. The activities used in these subworkflows store worklist data and history data in an Oracle database.</p>
+<table>
+	<tr><td align="center"><a href="worklist2.gif"><img src="worklist2_tn.gif"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>Worklist management is a key component of workflow management systems that execute complex workflows involving a large number of actors. The major task of worklist management is to assign work items to actors based on a specific assignment strategy, also known as "role resolution". A simple example strategy might be:</p>
+<ul><li><i>For a given work item, find all actors who are capable of performing the role, have the necessary permissions, and are currently available (e.g., logged in to the system as opposed to being on vacation).</i></li></ul>
+<p>Usually, strategies are more complex and implement specific business requirements such as principle of dual control. If a dual control strategy for signing a document is used, it must be guaranteed that two different actors are chosen for two signatures.</p>
+<p>It is impossible to model all conceivable assignment strategies in advance. In an enterprise there may exist as many different strategies as workflow types. As we model the assignment strategies as workflows, different strategies can easily be implemented in Mentor-lite. The strategies may depend on various parameters such as workflow type, the organizational structure of the enterprise, the actors' expertise, the actors' load etc.. In Mentor-lite, a library of basic assignment strategies is made available to the workflow designer. By combining basic strategies, complex ones can be implemented. Even building specific strategies from scratch is conveniently supported, as a single specification language for both workflow specifications and assignment strategies is used.</p>
+<p>The worklist uses the ubiquitous browser technology as the user's frontend, and so do all <b><a href="demo_activities.htm">interactive activities</a></b> ...
+<p>&nbsp;</p>
+<p><b>References</b></p>
+<p>[1]	J. Weissenfels, P. Muth, G.Weikum: <i><a href="http://www-dbs.cs.uni-sb.de/papers/EDBT-Workshop98.ps">Flexible Worklist Management in a Light-Weight Workflow Management System</a></i>, in Proceedings of EDBT Workshop on Workflow Management Systems, Valencia, Spain, 1998.</p>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_engine.htm"> Previous Step</a></td>
+<td><a href="demo_activities.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+</dd>
+</dl>
+</body>
+</html>

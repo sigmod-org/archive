@@ -1,0 +1,126 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_1.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+R-Tree Based Indexing of Now-Relative Bitemporal Data</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_b.htm#Rasa Bliujute">Rasa Bliujute</a>, <a href="m_authors_j.htm#Christian S. Jensen">Christian S. Jensen</a>, <a href="m_authors_s.htm#Simonas Saltenis">Simonas Saltenis</a>, <a href="m_authors_s.htm#Giedrius Slivinskas">Giedrius Slivinskas</a></center></td></tr></table></center><a target="disc_pdf86N" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+The databases of a wide range of applications, e.g., in data warehousing, store multiple states of time-evolving data.
+These databases contain a substantial part of now-relative data: data thatbecame valid at some past time and remains valid until the current time.
+More specifically, two temporal aspects of data are frequently of interest, namely valid time, when data is true, and transaction time, when data iscurrent in the database, leading to bitemporal data.
+Only little work, based mostly on R-trees, has addressed the indexing of bitemporal data.
+No indices exist that contend well with now-relative data, which leads to temporal data regions that are continuous functions of time.
+The paper proposes two extended R*-trees that permit the indexing of data regions that grow continuously over time, by also letting the internal bounding regions grow.
+Internal bounding regions may be triangular as well as rectangular.
+New heuristics for the algorithms that govern the index structure are provided.
+As a result, dead space and overlap, now also functions of time, are reduced.
+Performance studies indicate that the best extended index is typically 3-5times faster than the existing R-tree based indices.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Bec90]<dd><a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">Norbert Beckmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>:
+The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">SIGMOD Conference 1990</a>: 322-331<dt>[Ber97]<dd>...
+<dt>[Cli97]<dd><a name="CliffordDIJS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clifford:James.html">James Clifford</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dyreson:Curtis_E=.html">Curtis E. Dyreson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Isakowitz:Tom=aacute=s.html">Tom&aacute;s Isakowitz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jensen:Christian_S=.html">Christian S. Jensen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>:
+On the Semantics of ``Now'' in Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods22.html#CliffordDIJS97">TODS 22(2)</a>: 171-214(1997)<dt>[Dri89]<dd><a name="DriscollSST89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Driscoll:James_R=.html">James R. Driscoll</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarnak:Neil.html">Neil Sarnak</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sleator:Daniel_Dominic.html">Daniel Dominic Sleator</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">Robert Endre Tarjan</a>:
+Making Data Structures Persistent.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss38.html#DriscollSST89">JCSS 38(1)</a>: 86-124(1989)<dt>[Gut84]<dd><a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">Antonin Guttman</a>:
+R-Trees: A Dynamic Index Structure for Spatial Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">SIGMOD Conference 1984</a>: 47-57<dt>[HNP95]<dd><a name="HellersteinNP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pfeffer:Avi.html">Avi Pfeffer</a>:
+Generalized Search Trees for Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HellersteinNP95">VLDB 1995</a>: 562-573<dt>[Jag90]<dd><a name="Jagadish90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>:
+Linear Clustering of Objects with Multiple Atributes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#Jagadish90">SIGMOD Conference 1990</a>: 332-342<dt>[JS96]<dd><a name="JensenS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jensen:Christian_S=.html">Christian S. Jensen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>:
+Semantics of Time-Varying Information.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is21.html#JensenS96">IS 21(4)</a>: 311-352(1996)<dt>[KF94]<dd><a name="KamelF94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamel:Ibrahim.html">Ibrahim Kamel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+Hilbert R-tree: An Improved R-tree using Fractals.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#KamelF94">VLDB 1994</a>: 500-509<dt>[KTF95]<dd><a name="KumarTF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kumar:Anil.html">Anil Kumar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsotras:Vassilis_J=.html">Vassilis J. Tsotras</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+Access Methods for Bi-Temporal Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/tdb/tdb95.html#KumarTF95">Temporal Databases 1995</a>: 235-254<dt>[KTF97]<dd><a name="KumarTF98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kumar:Anil.html">Anil Kumar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsotras:Vassilis_J=.html">Vassilis J. Tsotras</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+Designing Access Methods for Bitemporal Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde10.html#KumarTF98">TKDE 10(1)</a>: 1-20(1998)<dt>[LL98]<dd><a name="LeuteneggerL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leutenegger:Scott_T=.html">Scott T. Leutenegger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lopez:Mario_A=.html">Mario A. Lopez</a>:
+The Effect of Buffering on the Performance of R-Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#LeuteneggerL98">ICDE 1998</a>: 164-171<dt>[NDE96]<dd><a name="NascimentoDE96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nascimento:Mario_A=.html">Mario A. Nascimento</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dunham:Margaret_H=.html">Margaret H. Dunham</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmasri:Ramez.html">Ramez Elmasri</a>:
+M-IVTT: An Index for Bitemporal Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dexa/dexa96.html#NascimentoDE96">DEXA 1996</a>: 779-790<dt>[SA85]<dd><a name="SnodgrassA85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ahn:Ilsoo.html">Ilsoo Ahn</a>:
+A Taxonomy of Time in Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod85.html#SnodgrassA85">SIGMOD Conference 1985</a>: 236-246<dt>[Sam90]<dd><a name="Samet90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Samet:Hanan.html">Hanan Samet</a>:
+The Design and Analysis of Spatial Data Structures.
+ Addison-Wesley 1990<br>
+<dt>[Sno86]<dd><a name="SnodgrassA86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ahn:Ilsoo.html">Ilsoo Ahn</a>:
+Temporal Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer19.html#SnodgrassA86">IEEE Computer 19(9)</a>: 35-42(1986)<dt>[Sno87]<dd><a name="Snodgrass87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a>:
+The Temporal Query Language TQuel.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#Snodgrass87">TODS 12(2)</a>: 247-298(1987)<dt>[Sno95]<dd><a name="Snodgrass95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">Richard T. Snodgrass</a> (Ed.):
+The TSQL2 Temporal Query Language.
+ Kluwer 1995, ISBN 0-7923-9614-6<br>
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/snodgrass95.html">Contents</a><dt>[Sno96]<dd>...
+<dt>[Sno96]<dd>...
+<dt>[SRF87]<dd><a name="SellisRF87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+The R+-Tree: A Dynamic Index for Multi-Dimensional Objects.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#SellisRF87">VLDB 1987</a>: 507-518<dt>[SRF97]<dd><a name="SellisRF97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+Multidimensional Access Methods: Trees Have Grown Everywhere.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#SellisRF97">VLDB 1997</a>: 13-14<dt>[ST97]<dd>...
+</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/BliujuteJSS98,<br>  author    = {Rasa Bliujute and<br>               Christian S. Jensen and<br>               Simonas Saltenis and<br>               Giedrius Slivinskas},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {R-Tree Based Indexing of Now-Relative Bitemporal Data},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {345-356},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_8.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Incremental Maintenance for Materialized Views over Semistructured Data</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_a.htm#Serge Abiteboul">Serge Abiteboul</a>, <a href="m_authors_m.htm#Jason McHugh">Jason McHugh</a>, <a href="m_authors_r.htm#Michael Rys">Michael Rys</a>, <a href="m_authors_v.htm#Vasilis Vassalos">Vasilis Vassalos</a>, <a href="m_authors_w.htm#Janet L. Wiener">Janet L. Wiener</a></center></td></tr></table></center><a target="disc_pdfE64a" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Semistructured data is not strictly typed like relational or object-oriented data and may be irregular or incomplete.
+It often arises in practice, e.g., when heterogeneous data sources are integrated or data is taken from the World Wide Web.
+Views over semistructured data can be used to filter the data and to restructure (or provide structure to) it.
+To achieve fast query response time, these views are often materialized.
+This paper proposes an incremental maintenance algorithm for materialized views over semistructured data.
+We use the graph-based data model OEM and the query language Lorel, developed at Stanford, as the framework for our work.
+Our algorithm produces a set of queries that compute the updates to the view based upon an update of the source.
+We develop an analytic cost model and compare the cost of executing our incremental maintenance algorithm to that of recomputing the view.
+We show that for nearly all types of database updates, it is more efficient to apply our incremental maintenance algorithm to the view than to recompute the view from the database, even when there are thousands of updates.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd><a name="Abiteboul97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>:
+Querying Semi-Structured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Abiteboul97">ICDT 1997</a>: 1-18<dt>[2]<dd><a name="AbiteboulB91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bonner:Anthony_J=.html">Anthony J. Bonner</a>:
+Objects and Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#AbiteboulB91">SIGMOD Conference 1991</a>: 238-247<dt>[3]<dd>...
+<dt>[4]<dd>...
+<dt>[5]<dd><a name="AbiteboulQMWW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">Jason McHugh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiener:Janet_L=.html">Janet L. Wiener</a>:
+The Lorel Query Language for Semistructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jodl/jodl1.html#AbiteboulQMWW97">Int. J. on Digital Libraries 1(1)</a>: 68-88(1997)<dt>[6]<dd><a name="BeeriK90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">Catriel Beeri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kornatzky:Yoram.html">Yoram Kornatzky</a>:
+A Logical Query Language for Hypertext Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/echt/echt90.html#BeeriK90">ECHT 1990</a>: 67-80<dt>[7]<dd><a name="Bertino92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bertino:Elisa.html">Elisa Bertino</a>:
+A View Mechanism for Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt92.html#Bertino92">EDBT 1992</a>: 136-151<dt>[8]<dd><a name="Bertino97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bertino:Elisa.html">Elisa Bertino</a>:
+On Modeling Cost Functions for Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde9.html#Bertino97">TKDE 9(3)</a>: 500-508(1997)<dt>[9]<dd><a name="BlakeleyLT86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blakeley:Jos=eacute=_A=.html">Jos&eacute; A. Blakeley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">Per-&Aring;ke Larson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tompa:Frank_Wm=.html">Frank Wm. Tompa</a>:
+Efficiently Updating Materialized Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod86.html#BlakeleyLT86">SIGMOD Conference 1986</a>: 61-71<dt>[10]<dd><a name="Buneman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">Peter Buneman</a>:
+Semistructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#Buneman97">PODS 1997</a>: 117-121<dt>[11]<dd><a name="BunemanDFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">Peter Buneman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">Susan B. Davidson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">Mary F. Fernandez</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">Dan Suciu</a>:
+Adding Structure to Unstructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#BunemanDFS97">ICDT 1997</a>: 336-350<dt>[12]<dd><a name="BunemanDS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">Peter Buneman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">Susan B. Davidson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">Dan Suciu</a>:
+Programming Constructs for Unstructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl95.html#BunemanDS95">DBPL 1995</a>: 12<dt>[13]<dd>...
+<dt>[14]<dd><a name="Cattell94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cattell:R=_G=_G=.html">R. G. G. Cattell</a>:
+The Object Database Standard: ODMG-93 (Release 1.1).
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1994<br>
+<dt>[15]<dd><a name="ChristophidesACS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christophides:Vassilis.html">Vassilis Christophides</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">Sophie Cluet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Michel.html">Michel Scholl</a>:
+From Structured Documents to Novel Query Facilities.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ChristophidesACS94">SIGMOD Conference 1994</a>: 313-324<dt>[16]<dd><a name="ChristophidesCM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christophides:Vassilis.html">Vassilis Christophides</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">Sophie Cluet</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moerkotte:Guido.html">Guido Moerkotte</a>:
+Evaluating Queries with Generalized Path Expressions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ChristophidesCM96">SIGMOD Conf. 1996</a>: 413-422<dt>[17]<dd><a name="ColbyGLMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Colby:Latha_S=.html">Latha S. Colby</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Griffin:Timothy.html">Timothy Griffin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">Leonid Libkin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Trickey:Howard.html">Howard Trickey</a>:
+Algorithms for Deferred View Maintenance.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ColbyGLMT96">SIGMOD Conf. 1996</a>: 469-480<dt>[18]<dd><a name="FernandezS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">Mary F. Fernandez</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">Dan Suciu</a>:
+Optimizing Regular Path Expressions Using Graph Schemas.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#FernandezS98">ICDE 1998</a>: 14-23<dt>[19]<dd><a name="GardarinGT95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">Georges Gardarin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruser:Jean=Robert.html">Jean-Robert Gruser</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tang:Zhao=Hui.html">Zhao-Hui Tang</a>:
+A Cost Model for Clustered Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#GardarinGT95">VLDB 1995</a>: 323-334<dt>[20]<dd><a name="GlucheGMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gluche:Dieter.html">Dieter Gluche</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grust:Torsten.html">Torsten Grust</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mainberger:Christof.html">Christof Mainberger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Marc_H=.html">Marc H. Scholl</a>:
+Incremental Updates for Materialized OQL Views.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dood/dood97.html#GlucheGMS97">DOOD 1997</a>: 52-66<dt>[21]<dd><a name="GoldmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">Roy Goldman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+DataGuides: Enabling Query Formulation and Optimization in Semistructured Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GoldmanW97">VLDB 1997</a>: 436-445<dt>[22]<dd><a name="GriffinL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Griffin:Timothy.html">Timothy Griffin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">Leonid Libkin</a>:
+Incremental Maintenance of Views with Duplicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#GriffinL95">SIGMOD Conference 1995</a>: 328-339<dt>[23]<dd><a name="GuptaM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>:
+Maintenance of Materialized Views: Problems, Techniques, and Applications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#GuptaM95">Data Engineering Bulletin 18(2)</a>: 3-18(1995)<dt>[24]<dd><a name="GuptaMS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">V. S. Subrahmanian</a>:
+Maintaining Views Incrementally.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#GuptaMS93">SIGMOD Conference 1993</a>: 157-166<dt>[25]<dd><a name="Hanson87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hanson:Eric_N=.html">Eric N. Hanson</a>:
+A Performance Analysis of View Materialization Strategies.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#Hanson87">SIGMOD Conference 1987</a>: 440-453<dt>[26]<dd><a name="KawaguchiLMR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kawaguchi:Akira.html">Akira Kawaguchi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lieuwen:Daniel_F=.html">Daniel F. Lieuwen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">Kenneth A. Ross</a>:
+Implementing Incremental View Maintenance in Nested Data Models.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl97.html#KawaguchiLMR97">DBPL 1997</a>: 202-221<dt>[27]<dd><a name="KonopnickiS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Konopnicki:David.html">David Konopnicki</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shmueli:Oded.html">Oded Shmueli</a>:
+W3QS: A Query System for the World-Wide Web.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#KonopnickiS95">VLDB 1995</a>: 54-65<dt>[28]<dd><a name="LindsayHM86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">Bruce G. Lindsay</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">C. Mohan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilms:Paul_F=.html">Paul F. Wilms</a>:
+A Snapshot Differential Refresh Algorithm.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod86.html#LindsayHM86">SIGMOD Conference 1986</a>: 53-60<dt>[29]<dd><a name="McHughAGQW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">Jason McHugh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">Roy Goldman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Lore: A Database Management System for Semistructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#McHughAGQW97">SIGMOD Record 26(3)</a>: 54-66(1997)<dt>[30]<dd>...
+<dt>[31]<dd><a name="MendelzonMM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">Alberto O. Mendelzon</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mihaila:George_A=.html">George A. Mihaila</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">Tova Milo</a>:
+Querying the World Wide Web.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#MendelzonMM96">PDIS 1996</a>: 80-91<dt>[32]<dd>...
+<dt>[33]<dd><a name="NestorovUWC97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nestorov:Svetlozar.html">Svetlozar Nestorov</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiener:Janet_L=.html">Janet L. Wiener</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">Sudarshan S. Chawathe</a>:
+Representative Objects: Concise Representations of Semistructured, Hierarchial Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#NestorovUWC97">ICDE 1997</a>: 79-90<dt>[34]<dd><a name="PapakonstantinouGU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+MedMaker: A Mediation System Based on Declarative Specifications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#PapakonstantinouGU96">ICDE 1996</a>: 132-141<dt>[35]<dd><a name="PapakonstantinouGW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+Object Exchange Across Heterogeneous Information Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#PapakonstantinouGW95">ICDE 1995</a>: 251-260<dt>[36]<dd>...
+<dt>[37]<dd>...
+<dt>[38]<dd><a name="RoussopoulosCKDP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Chungmin_Melvin.html">Chungmin Melvin Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:Stephen.html">Stephen Kelley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Delis:Alex.html">Alex Delis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>:
+The ADMS Project: View R Us.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#RoussopoulosCKDP95">Data Engineering Bulletin 18(2)</a>: 19-28(1995)<dt>[39]<dd><a name="Rundensteiner92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rundensteiner:Elke_A=.html">Elke A. Rundensteiner</a>:
+Multiview: A Methodology for Supporting Multiple Views in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#Rundensteiner92">VLDB 1992</a>: 187-198<dt>[40]<dd><a name="RysNS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rys:Michael.html">Michael Rys</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Norrie:Moira_C=.html">Moira C. Norrie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">Hans-J&ouml;rg Schek</a>:
+Intra-Transaction Parallelism in the Mapping of an Object Model to a Relational Multi-Processor System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#RysNS96">VLDB 1996</a>: 460-471<dt>[41]<dd><a name="SchollLT91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Marc_H=.html">Marc H. Scholl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Laasch:Christian.html">Christian Laasch</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tresch:Markus.html">Markus Tresch</a>:
+Updatable Views in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dood/dood91.html#SchollLT91">DOOD 1991</a>: 189-207<dt>[42]<dd><a name="SantosAD94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Santos:Cassio_Souza_dos.html">Cassio Souza dos Santos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">Serge Abiteboul</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Delobel:Claude.html">Claude Delobel</a>:
+Virtual Schemas and Bases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#SantosAD94">EDBT 1994</a>: 81-94<dt>[43]<dd><a name="Suciu96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">Dan Suciu</a>:
+Query Decomposition and View Maintenance for Query Languages for Unstructured Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#Suciu96">VLDB 1996</a>: 227-238<dt>[44]<dd><a name="UllmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">Jennifer Widom</a>:
+A First Course in Database Systems.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/ph.html">Prentice-Hall</a> 1997, ISBN 1-13-861337-0<br>
+<dt>[45]<dd><a name="ZhugeG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhuge:Yue.html">Yue Zhuge</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>:
+Graph Structured Views and Their Incremental Maintenance.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#ZhugeG98">ICDE 1998</a>: 116-125</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/AbiteboulMRVW98,<br>  author    = {Serge Abiteboul and<br>               Jason McHugh and<br>               Michael Rys and<br>               Vasilis Vassalos and<br>               Janet L. Wiener},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Incremental Maintenance for Materialized Views over Semistructured<br>               Data},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {38-49},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

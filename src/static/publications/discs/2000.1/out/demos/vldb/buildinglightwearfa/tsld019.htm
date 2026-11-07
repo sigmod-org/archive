@@ -1,0 +1,90 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>XML Templates </TITLE> 
+</HEAD>
+
+<BODY BGCOLOR=white     >
+
+ <H1>XML Templates </H1> 
+ <P><UL>
+<H2>Leaf Templates
+</H2>
+</UL><UL>
+<LI><H2> .Ticker
+</H2>
+<UL>
+<LI>&#060!ELEMENT Ticker #PCDATA&#062
+<LI>&#060Ticker&#062IBM&#060/Ticker&#062
+</UL></UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2> .Ticker ( .Symbol^ # `stuff )
+</H2>
+<UL>
+<LI>&#060!ELEMENT Ticker `stuff&#062&#060!ATTLIST Symbol CDATA #IMPLIED&#062
+<LI>&#060Ticker Symbol=“IBM”&#062`stuff&#060/Ticker&#062
+</UL></UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<LI><H2> .Ticker!Symbol
+</H2>
+<UL>
+<LI>&#060!ELEMENT Ticker EMPTY&#062&#060!ATTLIST Symbol CDATA #IMPLIED&#062
+<LI>&#060Ticker Symbol=“IBM”/&#062 </UL></UL></P>
+<P><UL>
+<H2>List Templates
+</H2>
+</UL><UL>
+<LI><H2> .Portfolio*.templ
+</H2>
+<UL>
+<LI>&#060!ELEMENT Portfolio templ*&#062
+<LI>&#060Portfolio&#062	&#060templ&#062…&#060/templ&#062	&#060templ&#062…&#060/templ&#062&#060/Portfolio&#062
+</UL></UL><UL>
+<LI><H2>
+</H2>
+</UL><UL>
+<H2>Record Templates
+</H2>
+</UL><UL>
+<LI><H2> .Stock ( T1 # … # Tn )
+</H2>
+<UL>
+<LI>&#060!ELEMENT Stock (T1,…,Tn)&#062
+<LI>&#060Stock&#062	&#060T1&#062…&#060/T1&#062…	&#060Tn&#062…&#060/Tn&#062
+</UL></UL></P>
+<P><UL>
+Template	:= Leaf | Record | List
+</UL><UL>
+Leaf	:= . Tag | . Tag ^ | . Tag ! Tag
+</UL><UL>
+List	:= . Tag Flatten Template
+</UL><UL>
+Record	:= . Tag ( TemplList )
+</UL><UL>
+Flatten	:= * | * Flatten
+</UL><UL>
+TemplList	:= Template | Template # TemplList
+</UL><UL>
+Tag 	:= string</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld018.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld020.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld019.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

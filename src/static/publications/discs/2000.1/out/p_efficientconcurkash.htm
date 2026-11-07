@@ -1,0 +1,505 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Efficient Concurrency Control in Multidimensional Access Methods</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Efficient Concurrency Control in Multidimensional Access Methods
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_kaushik_chakrabart.htm">Kaushik Chakrabarti</a> and 
+<a href = "a_sharad_mehrotra.htm">Sharad Mehrotra</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/efficientconcurkash.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmospatialdatbases.htm">Return to Spatial Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ The importance of multidimensional index structures to numerous emerging database applications is well established. However, before these index structures can be supported as access methods (AMs) in a “commercial-strength” database management system (DBMS), efficient techniques to provide transactional access to data via the index structure must be developed. Concurrent accesses to data via index structures introduce the problem of protecting ranges specified in the retrieval from phantom insertions and deletions (the phantom problem). This paper presents a dynamic granular locking approach to phantom protection in Generalized Search Trees (GiSTs), an index structure supporting an extensible set of queries and data types. The granular locking technique offers a high degree of concurrency and has a low lock overhead. Our experiments show that the granular locking technique (1) scales well under various system loads and (2) similar to the B-tree case, provides a significantly more efficient implementation compared to predicate locking for multidimensional AMs as well. Since a wide variety of multidimensional index structures can be implemented using GiST, the developed algorithms provide a general solution to concurrency control in multidimensional AMs. To the best of our knowledge, this paper provides the first such solution based on granular locking.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AgrawalCL85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: Models for Studying Concurrency Control Performance: Alternatives and Implications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1985
+</a>
+: 108-121
+<dt>
+[2]
+<dd>
+... 
+<dt>
+[3]
+<dd>
+<a name="BerchtoldBKK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">
+Christian B&ouml;hm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: A Cost Model For Nearest Neighbor Search in High-Dimensional Data Space. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#BerchtoldBKK97">
+PODS 1997
+</a>
+: 78-86
+<dt>
+[4]
+<dd>
+<a name="ChakrabartiM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chakrabarti:Kaushik.html">
+Kaushik Chakrabarti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehrotra:Sharad.html">
+Sharad Mehrotra
+</a>
+: Dynamic Granular Locking Approach to Phantom Protection in R-Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#ChakrabartiM98">
+ICDE 1998
+</a>
+: 446-454
+<dt>
+[5]
+<dd>
+... 
+<dt>
+[6]
+<dd>
+<a name="ChakrabartiM99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chakrabarti:Kaushik.html">
+Kaushik Chakrabarti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehrotra:Sharad.html">
+Sharad Mehrotra
+</a>
+: The Hybrid Tree: An Index Structure for High Dimensional Feature Spaces. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#ChakrabartiM99">
+ICDE 1999
+</a>
+: 440-447
+<dt>
+[7]
+<dd>
+<a name="FaloutsosBFHNPE94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">
+Ron Barber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">
+Myron Flickner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">
+Jim Hafner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">
+Wayne Niblack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">
+Dragutin Petkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">
+William Equitz
+</a>
+: Efficient and Effective Querying by Image Content. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis3.html#FaloutsosBFHNPE94">
+JIIS 3(3/4)
+</a>
+: 231-262(1994)
+<dt>
+[8]
+<dd>
+<a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Transaction Processing: Concepts and Techniques.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-190-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">
+Contents
+</a>
+<dt>
+[9]
+<dd>
+<a name="HellersteinNP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pfeffer:Avi.html">
+Avi Pfeffer
+</a>
+: Generalized Search Trees for Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HellersteinNP95">
+VLDB 1995
+</a>
+: 562-573
+<dt>
+[10]
+<dd>
+<a name="KornackerMH97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kornacker:Marcel.html">
+Marcel Kornacker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Concurrency and Recovery in Generalized Search Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 62-72
+<dt>
+[11]
+<dd>
+<a name="Lomet93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+: Key Range Locking Strategies for Improved Concurrency. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#Lomet93">
+VLDB 1993
+</a>
+: 655-664
+<dt>
+[12]
+<dd>
+<a name="MeltonS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Melton:Jim.html">
+Jim Melton
+</a>
+, Alan R. Simon: Understanding the New SQL: A Complete Guide.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-245-3
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/melton93.html">
+Contents
+</a>
+<dt>
+[13]
+<dd>
+<a name="Mohan90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: ARIES/KVL: A Key-Value Locking Method for Concurrency Control of Multiaction Transactions Operating on B-Tree Indexes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#Mohan90">
+VLDB 1990
+</a>
+: 392-405
+<dt>
+[14]
+<dd>
+<a name="MohanHLPS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haderle:Donald_J=.html">
+Donald J. Haderle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter.html">
+Peter Schwarz
+</a>
+: ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods17.html#MohanHLPS92">
+TODS 17(1)
+</a>
+: 94-162(1992)
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="OrensteinM84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merrett:T=_H=.html">
+T. H. Merrett
+</a>
+: A Class of Data Structures for Associative Searching. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods84.html#OrensteinM84">
+PODS 1984
+</a>
+: 181-190
+<dt>
+[17]
+<dd>
+<a name="BernsteinHG87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hadzilacos:Vassos.html">
+Vassos Hadzilacos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Concurrency Control and Recovery in Database Systems.  Addison-Wesley 1987, ISBN 0-201-10715-5
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/bernstein87.html">
+Contents
+</a>
+<dt>
+[18]
+<dd>
+<a name="Papadimitriou86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadimitriou:Christos_H=.html">
+Christos H. Papadimitriou
+</a>
+: The Theory of Database Concurrency Control.  Computer Science Press 1986, ISBN 0-88175-027-1
+<br>
+ 
+<dt>
+[19]
+<dd>
+<a name="SellisRF87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">
+Timos K. Sellis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: The R+-Tree: A Dynamic Index for Multi-Dimensional Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#SellisRF87">
+VLDB 1987
+</a>
+: 507-518
+<dt>
+[20]
+<dd>
+<a name="StonebrakerFGM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Frew:James.html">
+James Frew
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardels:Kenn.html">
+Kenn Gardels
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meredith:Jeff.html">
+Jeff Meredith
+</a>
+: The Sequoia 2000 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 2-11
+<dt>
+[21]
+<dd>
+<a name="Stonebraker96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, Dorothy Moore: Object-Relational DBMSs: The Next Great Wave.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1996, ISBN 1-55860-397-2
+<br>
+ 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/ChakrabartiM99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Kaushik&nbsp;Chakrabarti&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sharad&nbsp;Mehrotra},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Efficient&nbsp;Concurrency&nbsp;Control&nbsp;in&nbsp;Multidimensional&nbsp;Access&nbsp;Methods},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{25-36},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,232 @@
+<HTML>
+<HEAD><TITLE>WHIRL Slides - Commentary
+</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+<IMG SRC="wcohen-mugshot.jpg" alt="William's Face"><br>
+
+<h4 align=center>
+<a target=_top href="fidea.html">[Previous slide</a> |
+<a target=slide href="demos.html">Accompanying slide]</a>
+</h4>
+
+<p>The coolest thing about WHIRL is that, by coming up with a clean,
+general, solution to the name matching problem, WHIRL makes it
+possible to integrate really substantial amounts of information
+easily.  To demonstrate this, I put together three largish demos,
+together using dozens of sites.  Of course, you can only see a few
+sample queries from each of these in this "canned" demo.  I'll "talk"
+you through a few queries in a couple of domains, pointing out what I
+think is interesting.
+
+<h3>Computer Games
+<a target=slide href="demos.html"><small>[See accomanying slide]</small></a>
+</h3>
+
+<p>The <a target=slide href="game-demo/index.html">game demo</a> shows
+WHIRL working in a domain that is extremely hard; computer games seem
+to be named in a very inconsistent manner across different Web sites.
+To get an idea of the variation, examine 
+<a target=slide href="game-demo/disney.html">
+this whirl output</a>, which is result of looking for reviews of games
+named "disney". Consider how difficult it would be to automatically
+construct keys for these names.  How can one determine, for instance,
+that "Walt Disney World Explorer - Disney Interactive" and "The Walt
+Disney World Explorer" are the same, but "Disney's Ready to Read with
+Pooh" and "Disney's Ready for Math with Pooh" are different?
+
+<p>In spite of the messiness of the names, performance on this domain
+is good, as shown by the <a target=slide
+href="game-demo/index.html">two sample queries.</a> The <a
+target=slide href="game-demo/index.html#q1">first query</a> is a
+three-way join that involves matching publisher names from different
+sources, and also matching game names from different sources.  (Hit
+the "go" button on the form to see <a target=slide
+href="game-demo/query3.html">the answer</a>.)  Interestingly, the game
+names from one of these sources are not completely extracted from the
+surrounding text - to make it easier to write the wrapper, I left in a
+bunch of noise words around each name (e.g., <code>SKU 141137
+----------> $19.95</code>).  This doesn't seem to degrade performance
+much, another benefit using "soft" matching on names.  Scroll down to
+the bottom of the first 40 answers (around ranks 25-35) to see results
+that depend on soft matching of both publisher names and game names.
+
+<p>Now, a few quick points about 
+<a target=slide
+href="game-demo/query3.html"> the interface you're looking at.</a>
+<ul>
+
+<li>The pages you see are stored on disk; in the demo, they're
+computed on the fly.  This usually happens <b>very quickly</b>, as
+indicated by the runtime near the top of each page. (This is time to
+compute the query by WHIRL, and ignores time to format the HTML and
+transfer the data to the browser.)
+
+<li> In the real demo, you can page through the answers provided by
+Whirl, in much the same way you might interact with a search engine
+like Altavista.  It's also possible to click on a column header; this
+groups the table by the items in that column.  You can also 
+<a target=slide href="game-demo/query3.html#modquery">
+"refine"</a> a query by asking that a column match (be similar to)
+some text you provide.
+
+<li>Finally, the items in square brackets indicate the site from which
+the accompanying text was extracted.  In the actual system, you can
+click on these to take you back to the page that was the "original
+source" of the text.
+</ul>
+
+<p> Note that the first query is relatively non-selective, so it's
+easy to find answers using only very good matches of publisher names.
+The <a target=slide href="game-demo/index.html#q2">second query</a> in
+this domain shows why it's important not to just threshold the degree
+to which names match.  Finding <b>any</b> 
+<a target=slide href="game-demo/query2.html">
+tuples that might answer this highly selective query</a> requires
+really stretching in matching the publisher names.  In particular, it
+requires using matches that a simple thresholding scheme would
+probably reject as being unlikely. (If you recall, the match for
+"Microsoft/Scholastic" and "Microsoft Kids" was ranked <a target=slide
+href="query-2.html">behind several incorrect matches</a>.)
+
+<h3>Birding
+<a target=slide href="demos.html"><small>[See accomanying slide]</small></a>
+</h3>
+
+<p>The <a target=slide href="bird-demo/index.html">birding demo</a>
+shows the same sort of action in a different domain.  This domain is
+somewhat larger; the core of it is (at last count) about 7500
+information "resources" of various sorts (pictures, sound files, maps,
+etc), each indexed by the name of bird species.  
+
+<h4>Browsing and quick search</h4>
+
+The interface for this domain is a bit more developed than for the
+game demo.  <p>One feature of this demo is <a target=slide
+href="bird-demo/index.html#browse">browsing</a>. Follow the eyeballs
+from the <font color=red>order</font> or <font color=red>state</font>
+links to see how you can drill down into the resource database -
+either <a target=slide href="bird-demo/by-state.html">
+geographically</a>, or <a target=slide
+href="bird-demo/by-order.html">by taxonomy</a>.  You can do this for
+<b>all</b> resources, regardless of how the original information was
+organized; this is done, with a cascaded series of WHIRL queries,
+ending in a query that does a "soft" match of a bird name (from a
+state or bird-family listing) against the bird names in the resource
+list.
+
+<p>The point here is that <font color=red>systems that integrate
+information can be useful, even <b>without</b> complex user
+queries.</font> The <a target=slide
+href="bird-demo/index.html#quick">quick search</a> feature of this
+demo also illustrates this point. Note that <a target=slide
+href="bird-demo/quicksearch-robin.html">the list of answers</a> for
+"robin" includes resources tagged only with the <b>scientific</b> name
+for a robin. This happens because WHIRL uses a big list of
+<b>complete</b> bird names (i.e., common and scientific names) to
+expand the user's search string.  The query executed "behind the
+scenes" here is something like:
+
+<center>
+<table>
+<tr><td>SELECT</td><td>biglist.*,resource.*
+<tr><td>FROM</td><td>biglist,resource
+<tr><td>WHERE</td><td>similar(biglist.name,resource.name) and 
+<tr><td>     </td><td>similar(biglist.name,"robin")
+</table>
+</center>
+
+
+<h4>Handling Free Text</h4>
+
+<p>I've also indexed several hundred "birding hotlines"; some examples
+are shown here (<a target=slide href="bird-demo/b8091101.htm">1</a>,
+<a target=slide href="bird-demo/b8091602.htm">2</a>, <a target=slide
+href="bird-demo/b8091704.htm">3</a>, <a target=slide
+href="bird-demo/b8092213.htm">4</a>).  These free-text sources were
+loaded into WHIRL like this: for each hotline, I created a relation
+containing all the <em>short phrases</em> in the document (where a
+phrase is a sequence of consecutive words).  <a target=slide
+href="bird-demo/index.html#browse">Browsing</a> the <a target=slide
+href="bird-demo/by-hotline.html">hotlines</a> grounds out in a query
+that <a target=slide href="bird-demo/ab-hotlist.html">joins the
+phrases from a hotline with a list of known bird names</a>.  As you
+can see, this works pretty well; so WHIRL is also a neat way of
+searching for names in a free-text document.
+
+<p>In fact, WHIRL can do much more with free-text.  For instance, you
+could take the <a target=slide href="bird-demo/ab-hotlist.html">table
+of bird names mentioned in a hotline</a> and, using the standard
+interface, <a target=slide href="bird-demo/ab-hotlist.html#modquery">
+refine the query</a> to find, say, just phrases about birds in <a
+target=slide href="bird-demo/ab-ducks.html">one order</a>.  In fact,
+queries dealing with free text in this way can be arbitrarily complex,
+as indicated by <a target=slide href="bird-demo/index.html#q3">
+this sample query</a>.
+
+<h4>More sample queries</h4>
+
+<p>The <a target=slide href="bird-demo/index.html">birding demo</a>
+also has a <a target=slide href="bird-demo/index.html#advanced">
+structured query interface</a>, like the one for the game domain.
+I've included two sample queries here, and, just for fun, turned on
+some "debug" output so you can see the underlying WHIRL query.  <a
+target=slide href="bird-demo/index.html#q1">The first query</a> is
+pretty selective, so you see a lot of difficult matches in 
+<a target=slide href="bird-demo/query-1.html">
+the
+output</a>. <a target=slide href="bird-demo/index.html#q2">The second
+query</a> is much less selective.  I've included a lot of 
+<a target=slide href="bird-demo/query-2.html">
+output</a> (the first 80 answers), but only a few of the tuples
+returned include any even marginally unlikely matches.  Note that the
+query here (roughly, "find pictures of swans geese and ducks") could
+be posed to a simple word-based IR search engine; but in that case
+you'd be unlikely to get back pictures labeled "bufflehead" and
+"oldsquaw".
+
+<h3>Experiments
+<a target=slide href="demos.html"><small>[See accomanying slide]</small></a>
+</h3>
+
+<p>Finally, I've also done some <a target=slide
+href="expt/index.html">controlled experiments </a> with WHIRL.  These
+were done on simple two-way joins on problems for which I knew the
+answer - that is, where there is some secondary evidence, other than
+the names, to tell me if a pairing proposed by WHIRL is correct.
+Follow the <IMG SRC="look1.gif"> red dots (so, I got tired of
+eyeballs, ok?) to see how WHIRL fares in matching names for other
+domains.  On each of the WHIRL outputs
+<ul>
+
+<li>the first two columns are the names used in the similarity join
+
+<li>the last two columns are the keys used to check "correctness" of a pairing
+
+<li>the score is rendered in <font color=green>green</font> if the
+pairing for that row is correct, and <font color=red>red</font>
+otherwise.
+
+</ul>
+If this is overwhelming, my personal favorites are the <a target=slide
+href="expt/inter-park.html">park name</a> and <a target=slide
+href="expt/inter-rest1.html">restaurant name</a> matches.  The
+performance on joining <a target=slide
+href="expt/join-demo2.html">game names to paragraphs of free text</a>
+is also pretty striking.
+
+<p>The point of all this is to convince you that WHIRL is robust
+across domains, and that it's possible to quantify performance for
+"soft" database systems like WHIRL.
+
+<img src="game-demo/teacher1.gif" alt="just for fun" align=right>
+<p>Thanks for slogging through this demo with me, and 
+I hope you enjoyed it!<br clear=right><br>
+
+<p align=right>
+<em>- William Cohen</em><br>
+<a href="mailto:wcohen@reseach.att.com">wcohen@reseach.att.com</a><br>
+<a target=_top href="http://www.research.att.com/~wcohen">http://www.research.att.com/~wcohen</a>
+</p>
+
+</BODY>
+</HTML>

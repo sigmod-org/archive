@@ -1,0 +1,428 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Online Feedback for Nested Aggregate Queries with Multi-Threading</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Online Feedback for Nested Aggregate Queries with Multi-Threading
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_kian-lee_tan.htm">Kian-Lee Tan</a>, 
+<a href = "a_cheng_hian_goh.htm">Cheng Hian Goh</a>, and 
+<a href = "a_beng_chin_ooi.htm">Beng Chin Ooi</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/onlinefeedbackfkichb.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbaggregatioation.htm">Return to Aggregation, Approximation &amp; Explanation</a><br>
+<br><i><font size=-1>Note: The quality of the PDF contained herein reflects that of the material supplied to the DiSC'00 Production Team.</font></i><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In the paper, we study the progressive evaluation of nested queries with aggregates (i.e., the inner query block is an aggregate query), where users are provided progressively with (approximate) answers as the inner block is evaluated. We propose an incremental evaluation strategy to present answers that are certainly in the final answer space first, before presenting those whose validity may be affected as the inner query aggregates are refined. We also propose a 
+<i>
+multithreaded model
+</i>
+ in evaluating such queries: the outer query is assigned to a thread, and the inner query is assigned to another thread. The time-sliced across the two subqueries is 
+<i>
+nondeterministic
+</i>
+ in the sense that the user controls the relative rate at which these subqueries are being evaluated. We implemented a prototype system using JAVA, and evaluated our system. Our results show the effectiveness of the proposed mechanisms in providing online feedback that reduce the initial waiting time of users significantly without sacrificing on the quality of the answers.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="BayardoM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bayardo_Jr=:Roberto_J=.html">
+Roberto J. Bayardo Jr.
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miranker:Daniel_P=.html">
+Daniel P. Miranker
+</a>
+: Processing Queries for First Few Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm96.html#BayardoM96">
+CIKM 1996
+</a>
+: 45-52
+<dt>
+[2]
+<dd>
+<a name="Dayal87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: Of Nests and Trees: A Unified Approach to Processing Queries That Contain Nested Subqueries, Aggregates, and Quantifiers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1987
+</a>
+: 197-208
+<dt>
+[3]
+<dd>
+<a name="GanskiW87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganski:Richard_A=.html">
+Richard A. Ganski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Harry_K=_T=.html">
+Harry K. T. Wong
+</a>
+: Optimization of Nested SQL Queries Revisited. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#GanskiW87">
+SIGMOD Conference 1987
+</a>
+: 23-33
+<dt>
+[4]
+<dd>
+<a name="Haas97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+: Large-Sample and Deterministic Confidence Intervals for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssdbm/ssdbm97.html#Haas97">
+SSDBM 1997
+</a>
+: 51-63
+<dt>
+[5]
+<dd>
+<a name="HaasH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Ripple Joins for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#HaasH99">
+SIGMOD Conference 1999
+</a>
+: 287-298
+<dt>
+[6]
+<dd>
+<a name="HaasNSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Selectivity and Cost Estimation for Joins Based on Random Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss52.html#HaasNSS96">
+JCSS 52(3)
+</a>
+: 550-569(1996)
+<dt>
+[7]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HellersteinHW97">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[8]
+<dd>
+<a name="HouOT88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">
+Baldeo K. Taneja
+</a>
+: Statistical Estimators for Relational Algebra Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods88.html#HouOT88">
+PODS 1988
+</a>
+: 276-287
+<dt>
+[9]
+<dd>
+<a name="HouOT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">
+Baldeo K. Taneja
+</a>
+: Processing Aggregate Relational Queries with Hard Time Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#HouOT89">
+SIGMOD Conference 1989
+</a>
+: 68-77
+<dt>
+[10]
+<dd>
+<a name="Kim82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">
+Won Kim
+</a>
+: On Optimizing an SQL-like Nested Query. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#Kim82">
+TODS 7(3)
+</a>
+: 443-469(1982)
+<dt>
+[11]
+<dd>
+<a name="LiptonNSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+: Efficient Sampling Strategies for Relational Database Operations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs116.html#LiptonNSS93">
+TCS 116(1&amp;2)
+</a>
+: 195-226(1993)
+<dt>
+[12]
+<dd>
+<a name="LohmanDHKS84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">
+Guy M. Lohman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Daniels:Dean.html">
+Dean Daniels
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kistler:Ruth.html">
+Ruth Kistler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+: Optimization of Nested Queries in a Distributed Relational Database. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1984
+</a>
+: 403-415
+<dt>
+[13]
+<dd>
+<a name="Olken93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olken:Frank.html">
+Frank Olken
+</a>
+: Random Sampling from Databases. Ph.D. thesis,  University of California at Berkeley LBL Technical Report 1993
+<br>
+ 
+<dt>
+[14]
+<dd>
+<a name="TanGO99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Kian=Lee.html">
+Kian-Lee Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goh:Cheng_Hian.html">
+Cheng Hian Goh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">
+Beng Chin Ooi
+</a>
+: On Getting Some Answers Quickly, and Perhaps More Later. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#TanGO99">
+ICDE 1999
+</a>
+: 32-39
+<dt>
+[15]
+<dd>
+<a name="WilschutA91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilschut:Annita_N=.html">
+Annita N. Wilschut
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Apers:Peter_M=_G=.html">
+Peter M. G. Apers
+</a>
+: Dataflow Query Execution in a Parallel Main-Memory Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis91.html#WilschutA91">
+PDIS 1991
+</a>
+: 68-77
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/TanGO99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Kian-Lee&nbsp;Tan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cheng&nbsp;Hian&nbsp;Goh&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beng&nbsp;Chin&nbsp;Ooi},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Online&nbsp;Feedback&nbsp;for&nbsp;Nested&nbsp;Aggregate&nbsp;Queries&nbsp;with&nbsp;Multi-Threading},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{18-29},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

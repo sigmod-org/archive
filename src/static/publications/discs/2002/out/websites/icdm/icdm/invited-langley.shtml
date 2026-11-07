@@ -1,0 +1,41 @@
+<BODY bgcolor="#ffffee">
+
+<h2>Knowledge and Data in Computational Scientific Discovery</h2>
+<h3>by Pat Langley</h3>
+
+Institute for the Study of Learning and Expertise<br>
+                       Palo Alto, California<br>
+                   http://www.isle.org/~langley/<br>
+<p>
+
+Most research on data mining, with its focus on commercial domains, 
+emphasizes the role of data and relies on AI representations like 
+rules and decision trees. In this talk, I review work in an older
+paradigm - computational scientific discovery - that often draws on 
+domain knowledge to constrain search and that relies on formalisms
+invented by the scientific community like equations, structural models, 
+and reaction pathways. In addition, I report on two efforts that adopt
+this approach to knowledge discovery in scientific domains. One project
+aims to improve an existing process model of the Earth's ecosystem
+using environmental data from satellites and ground stations. The
+other focuses on constructing regulatory models for photosynthesis
+using temporal data from DNA microarrays. In both cases, knowledge
+interacts with data to constrain the search process and the resulting 
+models are cast in notations familiar to domain scientists. I claim
+that this paradigm holds great potential for adding to our scientific 
+knowledge and I encourage other researchers to take this approach. 
+<p>
+
+This talk describes joint work with Vanessa Brooks, Steve Klooster, 
+Andrew Pohorille, Chris Potter, Kazumi Saito, Mark Schwabacher, Jeff 
+Shrager, and Alicia Torregrosa.
+
+<p>
+
+<hr>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=invited-langley.dat"
+align=absmiddle> times since October 8, 2001.
+
+</BODY>

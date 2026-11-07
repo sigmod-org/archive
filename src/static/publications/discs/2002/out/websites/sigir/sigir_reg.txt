@@ -1,0 +1,106 @@
+REGISTRATION FORM FOR ACM SIGIR'01
+24th International ACM SIGIR Conference
+on Research and Development in Information Retrieval
+September 9-13, 2001     New Orleans, LA USA
+Supported by AICA-GIR (Italy), ASIST (USA), BCS-IRSG (UK), or GI (Germany)
+
+First Name for Badge :____________________________________________________________________________________
+
+Name (first, middle, last):__________________________________________________________________________________
+
+Affiliation (for badge): ____________________________________________________________________________________
+
+Title/Job Function: _______________________________________________________________________________________
+
+Address: _______________________________________________________________________________________________
+
+City: ______________________________   State: ___________________________   Postal Code: _______________________
+
+Country:  ______________________________   Email: __________________________________________________________
+
+Phone: (____)__________________________________ Fax: (_____)_______________________________________________
+
+Sponsor and Member ID: ____________________________________________   Student ID: ___________________________
+
+Special Needs:_______________________________________   Special Meal Requirements:    Vegetarian       Kosher        Vegan
+ ___   Do not include me in the conference attendee list
+
+PLEASE NOTE: Tutorial registration fee includes tutorial notes. Conference registration fee includes one copy of the conference proceedings, admission to the Reception, Poster Session and Demos on Monday evening and a Banquet ticket for Tuesday evening. One day registration includes a copy of the proceedings.  Workshops include a box lunch and are open to accepted participants ONLY, unless otherwise indicated on the workshop web page.
+
+REGISTRATION FEES (Please circle appropriate fees)
+The cut off date for preregistration is August 31, 2001.  After this date you must register on-site.
+______________________________________________________________________________________
+                              	                  Registration before                                        Registration after 
+	                     Or on 8/19/01  	             	            8/19/01 or on-site
+______________________________________________________________________________________
+	 Member	Non-Member   Student	Member	 Non-Member	Student
+Full Day Tutorials	   $ 225	    $ 245 	  $   75	  $ 275	    $ 295 	 $ 100
+Half Day Tutorials	   $ 125	    $ 135	  $   50	  $ 150	    $ 160	 $   75
+Workshop	   $   70	    $   80	  $   70	  $   90	    $ 100	 $   90
+2nd Day Workshop*	   $   70	    $   80	  $   70	  $   90	    $ 100	 $   90
+SIGIR Conference	   $ 375	    $ 450	  $ 125	  $ 440	    $ 480	 $ 150
+One Day Registration 	   $ 150	    $ 175	  $   50	  $ 200	    $ 225	 $   75 	
+         Please Circle Day:   Monday   Tuesday  Wednesday
+______________________________________________________________________________________
+
+Tutorial Choice(s) - Please check choice below
+Morning (September 9, 2001)
+____ Introduction to Information Retrieval (Mark Sanderson)
+____ Web Information Retrieval (Krishna Bharat & David Hawking)
+____ Multilingual Information Access (Carol Peters & Paraic Sheridan)
+____ Text Summarization (Radev)
+
+Afternoon (September 9, 2001)
+____ Combining Text- and Link-Based Information Retrieval on the Web (Andrei Broder & Prabhakar Raghavan)
+____ Text Classification and Text Mining in vivo (David Lewis)
+____ Designing Information Architectures for Search (Marti Hearst)	
+____ Practical Digital Libraries Overview (Ed Fox)
+
+
+Workshop Choices - are open to accepted participants ONLY, unless otherwise indicated on the workshop web page.
+Please check choice below
+September 13, 2001
+____ Open Archives:  Communities, Interoperability, and Services (Ed Fox)
+____ Mathematical/Formal Methods in IR (Sandor Dominich, Mounia Lalmas, & Keith  van Rijsbergen)
+____ IR Techniques for Speech Applications (Anni Coden, Savitha  Srinivasan, & Eric  Brown)
+____ Operational Text Classification (David  Lewis, Susan  Dumais,  Ronen Feldman, & Fabrizio Sebastiani)
+____ Recommender Systems (John  Herlocker, Joaquin Delgado, David MacDonald,  Douglas Oard, & Ian Soboroff)
+
+September 13 - 14, 2001* optional second day - please see description for more information
+____ Text Summarization (Donna Harman & Danie Marcu) 
+     ____  Optional Second Day
+
+
+Extra Guest Tickets
+Extra Tuesday Banquet Ticket:  $ 70       x ____ = _____
+
+Membership:
+SIGIR Membership                   $ 20             Student SIGIR Membership            $ 10          
+ACM Membership                    $ 98             ACM Student Membership              $ 40              
+Please check the ACM website for other options including proceedings packages and digital library.
+
+Total Fees: US $_________________________(Make checks payable to ACM/SIGIR'01 Conference)
+
+Payment included (circle one):        American Express         Master Card           Visa         Check
+
+Credit Card Number:  __________________________________ Expiration Date: __________________
+
+Name as it appears on Credit Card: ________________________________________________________
+
+Signature: ____________________________________________________________________________
+
+For Registration by Fax:  
+1-212-944-1318, Attention: ACM/SIGIR '01 Conference
+For Registration by Mail (include check and registration form):
+	Attention: ACM/SIGIR '01 Conference Registration
+	ACM Member Services
+	P.O. Box 11405
+	New York, NY  10286-1405, USA
+
+For questions (8:30 AM - 4:30 PM EST), Email: acmhelp@acm.org
+Telephone: (US and Canada) 1-800-342-6626, (outside US) 1-212-626-0500
+
+Cancellation Information:  Cancellations must be received in writing by contacting the ACM Member Services Department at least 24 hours prior to the start of the conference. A US $50 cancellation fee will be charged.
+
+
+You should receive e-mail confirmation within 3 business days.  If you do not please contact our member services department at the above contact information. 

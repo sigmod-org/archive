@@ -1,0 +1,108 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint">
+ <p:presentation notessizex="4248" notessizey="6240" omittitleplace="t">
+  <p:master id="4" type="main" href="master04.htm" xmlhref="master04.xml"
+   template="ar-md" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#0066CC,#FFFFFF,#000000,#CBCBCB,#009999,#FF9933,#330099,#CBCBCB"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#868686,#000000,#3366FF,#009900,#FF0033,#CCCCCC"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#868686,#000000,#EAEAEA,#5F5F5F,#969696,#CBCBCB"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="5" type="title" href="master05.htm" xmlhref="master05.xml"
+   layout="title_subtitle"
+   slots="centerTitle,subTitle,dateTime,footer,slideNumber"/>
+  <p:master id="1" type="notes" href="master01.htm" layout="notes"
+   slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:master id="2" type="handout" href="master02.htm" layout="handout"
+   slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="37" href="slide0037.htm" masterhref="master05.htm"
+   layout="title_subtitle" slots="centerTitle,subTitle"/>
+  <p:slide id="49" href="slide0049.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Outline" noheader="t"/>
+  </p:slide>
+  <p:slide id="55" href="slide0055.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="38" href="slide0038.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="54" href="slide0054.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="57" href="slide0057.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="56" href="slide0056.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="11" href="slide0011.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="58" href="slide0058.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="62" href="slide0062.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Outline" noheader="t"/>
+  </p:slide>
+  <p:slide id="52" href="slide0052.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="87" href="slide0087.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="88" href="slide0088.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="89" href="slide0089.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="90" href="slide0090.htm"/>
+  <p:slide id="91" href="slide0091.htm" layout="title_only" slots="title"/>
+  <p:slide id="92" href="slide0092.htm"/>
+  <p:slide id="93" href="slide0093.htm"/>
+  <p:slide id="61" href="slide0061.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Outline" noheader="t"/>
+  </p:slide>
+  <p:slide id="64" href="slide0064.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="System" noheader="t"/>
+  </p:slide>
+  <p:slide id="15" href="slide0015.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="System" noheader="t"/>
+  </p:slide>
+  <p:slide id="16" href="slide0016.htm" layout="title_only" slots="title">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="System" noheader="t"/>
+  </p:slide>
+  <p:slide id="66" href="slide0066.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="71" href="slide0071.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Outline" noheader="t"/>
+  </p:slide>
+  <p:slide id="72" href="slide0072.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="94" href="slide0094.htm"/>
+  <p:slide id="96" href="slide0096.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="97" href="slide0097.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="98" href="slide0098.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="99" href="slide0099.htm"/>
+  <p:slide id="100" href="slide0100.htm"/>
+  <p:slide id="84" href="slide0084.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Outline" noheader="t"/>
+  </p:slide>
+  <p:slide id="85" href="slide0085.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="86" href="slide0086.htm" layout="title_body" slots="title,body">
+   <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+    footerstr="Future Work" noheader="t"/>
+  </p:slide>
+  <p:viewstate type="slideView" sorterdraft="t" sorterscale="33"/>
+  <p:kinsoku language="Japanese" level="levelOne"/>
+  <p:font name="Times New Roman" charset="0" type="4" family="18"/>
+  <p:font name="Wingdings" charset="2" type="4" family="2"/>
+  <p:font name="SimSun" charset="134" type="4" family="2"/>
+  <p:font name="Symbol" charset="2" type="4" family="18"/>
+  <p:font name="Garamond" charset="0" type="4" family="18"/>
+  <p:headersfooters slidenumber="t" userdatestr="April 12, 2000"
+   footerstr="Introduction" noheader="t"/>
+  <p:headersfooters notes="t" slidenumber="t"/>
+  <p:pptdocumentsettings framecolors="PresentationSchemeTextColor"/>
+  <p:htmlpublishsettings browsersupport="dual"
+   href="C:\Documents and Settings\Administrator\My Documents\My Work\Research\Paper\Fact_SIGMOD_VLDB_camera\poster_fact.htm"
+   hidespeakernote="t" noloadinbrowser="t"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="123906" style='v-text-anchor:middle'
+  fillcolor="#cfc" strokecolor="#09f">
+  <v:fill color="#cfc"/>
+  <v:stroke color="#09f"/>
+  <v:textbox inset="7.25pt,46038emu,7.25pt,46038emu"/>
+  <o:colormru v:ext="edit" colors="#360,yellow,#ff6,#ccf,#fcc,#cfc,#9cf,red"/>
+  <o:colormenu v:ext="edit" fillcolor="none" strokecolor="none" shadowcolor="none"/>
+ </o:shapedefaults></xml>

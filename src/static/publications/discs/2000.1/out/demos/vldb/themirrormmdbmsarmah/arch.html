@@ -1,0 +1,56 @@
+<HTML><HEAD>
+<TITLE>DEMO - The Mirror MMDBMS architecture</TITLE>
+<META  name="description" 
+content="demo Mirror architecture">
+<META  name="keywords" content="multimedia database information retrieval
+relevance feedback content-based retrieval">
+<LINK REV="made" HREF="mailto:arjen@acm.org">
+</HEAD>
+<BODY BGCOLOR="AFAFAF" TEXT="000000">
+
+<CENTER>
+<H1>
+ARCHITECTURE
+</H1>
+</CENTER>
+
+Recall that the reasoning model about the relevance feedback and the thesauri
+are performed through (set-oriented) queries executed in the database system.
+The Mirror DBMS provides the primitives for managing the images and their meta
+data, as well as the probabilistic inference required during the interaction
+with the user. New feature models, different clustering algorithms, or
+different query modification techniques, can easily be added or
+modified. Hence, a variety of multimedia retrieval systems can be
+implemented <EM>by simply changing the sequence of queries issued in the
+DBMS</EM>.
+<P>
+The three windows in the background of the 
+<A HREF="screens/demoA.jpg">first screenshot</A> of this demo correspond to
+the conceptual, the logical, and the physical level of the multimedia DBMS.
+The physical layer is provided by the <A HREF="http://www.cwi.nl/~monet">Monet
+DBMS</A>. Monet is a main-memory DBMS, that uses the binary relational
+model. Below, you see a little snapshot (taken from the wrapper logs) of
+intermediate results computed in the previous session:
+<P>
+<IMG SRC="screens/demo5.jpg">
+<P>
+<CENTER>
+<TABLE>
+<TR>
+  <TD><A HREF="mirrordemo.html#tours">Prev</A></TD>
+  <TD></TD>
+  <TD><A HREF="arch2.html">Next</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<HR>
+<ADDRESS>
+<IMG ALIGN=right SRC="demologo.jpg">
+Home: <A HREF="mirrordemo.html">DEMO - The Mirror MMDBMS architecture</A>
+<P>
+Last updated: December 9, 1999<BR>
+Maintained by: <A HREF="mailto:arjen@acm.org">arjen@acm.org</A>
+</ADDRESS>
+</BODY>
+</HTML>

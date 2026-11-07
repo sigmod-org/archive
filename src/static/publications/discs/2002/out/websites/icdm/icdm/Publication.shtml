@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>IEEE Conference on Data Mining</TITLE>
+<STYLE>
+
+<!--
+
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+
+<H1><FONT color=#0055ff>ICDM Publications</FONT></H1>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif" WIDTH=100%><br>
+
+<P class=body>
+
+ICDM proceedings are expected to be published by the IEEE Computer
+Society Press.  A selected number of ICDM accepted papers will be
+expanded and revised for possible inclusion in the KAIS journal (<A
+href="http://www.cs.uvm.edu/~xwu/kais.html">Knowledge and Information
+Systems</A>, by Springer-Verlag) each year. This will be mentioned in
+all calls for papers of the ICDM conference.  KAIS will publish the
+calls for papers of the ICDM conferences once a year to publicize the
+mutual support for the success of ICDM and KAIS.
+
+
+<P>
+
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-pub.dat"
+align=absmiddle> times since June 18, 2000.<br>
+Last modified: June 18, 2000.
+
+<!--
+
+February 03, 2002.
+-->
+</BODY>
+</HTML>

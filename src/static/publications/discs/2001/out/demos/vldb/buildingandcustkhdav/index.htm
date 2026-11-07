@@ -1,0 +1,406 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Weave System">
+   <meta name="keywords" content="poster">
+   <meta name="resource-type" content="document">
+   <meta name="distribution" content="global">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (X11; U; Linux 2.2.14-5.0 i686) [Netscape]">
+   <title>Caching Strategies for Data-Intensive  Web Sites</title>
+<!--Converted with LaTeX2HTML 98.1 release (February 19th, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<!--link REL="STYLESHEET" HREF="poster.css"-->
+<link REL="next" HREF="node1.html">
+</head>
+<body bgcolor="#FFFFFF">
+
+<center>
+<h3>
+<font face="Arial,Helvetica"><font color="#3366FF"><font size=+2>Building
+and Customizing Data-Intensive Web Sites using Weave</font></font></font></h3></center>
+
+<center><b><font face="Arial,Helvetica"><font color="#3366FF">Khaled Yagoub,&nbsp;
+Daniela Florescu,&nbsp; Valerie Issarny, Cezar Cristian Andrei</font></font></b>
+<p><b><font face="Arial,Helvetica"><font color="#FF0000">&nbsp;<a href="http://www-caravel.inria.fr/">http://www-caravel.inria.fr/</a></font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<p><b><font face="Arial,Helvetica"><font size=+2>1. Overview</font></font></b>
+<p><font face="Arial,Helvetica">Performance problems may arise when a Web
+site provides access to large numbers of pages that are dynamically built
+from a database. In this context, producing a Web page may require costly
+interaction with the database system mainly, for connection and querying.
+The database cost adds up to the already non-negligeable base cost of Web
+page delivery. A solution for reducing the client waiting time relies on
+caching HTML pages. Despite good performance, this solution has several
+major drawbacks. It incurs significant space overhead, propagating updates
+from the database to the cached data is made more difficult, and the caching
+granularity is not always appropriate. For instance, different fragments
+in a page can have different update frequencies, and caching at the page
+level imposes the recomputation of the entire page, even if some parts
+of the page did not change.</font>
+<p><font face="Arial,Helvetica">To overcome these problems, we propose
+a Web site management system, called <b>Weave</b>, supporting <b>customized
+cache management</b> and
+<b>automatic generation</b> of runtime policies
+from declarative specification of Web sites.</font>
+<br><font face="Arial,Helvetica">Weave provides three main capabilities:</font>
+<ul>
+<li>
+<font face="Arial,Helvetica">A <b>declarative specification </b>of the
+Web site through an XML graph data model that captures the structure and
+the content of the site. A site schema then represents an XML view definition
+over a relational database. This enables managing the Web site at three
+levels: <b>database</b>, <b>XML fragments</b>, and
+<b>HTML files</b>. Weave
+provides a declarative language called <b>WeaveL</b> to specify Web sites'
+schemas.</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">A <b>three-level cache architecture</b> composed
+of DB, XML, and HTML caches. The DB cache manager controls caching and
+lookahead computation within the database system. It interfaces with the
+system, and offers additional capabilities such as pooling of database
+connections. Compared to the HTML cache, which caches HTML files on disk,
+the XML cache has the advantage of storing less data and allows for carefully
+controlling the granularity of the cached data, ranging from the entire
+page to fragments of the page.</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">A <b>customized runtime policy,</b> which
+controls the runtime behavior of a Web site, so as to make optimal usage
+of the caches according to behavioral information such as the users' access
+patterns. A runtime policy specifies which kind of data to cache (HTML
+pages, XML fragments, relational tables, or any combination of those),
+which particular items to cache (e.g. particular HTML pages), and which
+actions to execute under different events like page requests and data updates.
+Runtime policies are explicitly specified using a <b>high level language</b>,
+based on the declarative specification of the XML site schema. The runtime
+policy language is called <b>WeaveRPL</b>.</font></li>
+</ul>
+<font face="Arial,Helvetica">&nbsp;<a href="talk/sld001.htm">Here</a>
+you will find a short presentation of Weave.</font>
+<br>&nbsp;
+<p><b><font face="Arial,Helvetica"><font size=+2>2. Architecture of the
+system</font></font></b>
+<center>
+<p><a href="gif/weavearchi.gif"><img SRC="gif/weavearchi.gif" ALT="Weave architecture" BORDER=1></a>
+<p><font face="Arial,Helvetica">Figure 1: Architecture of the Weave system.</font></center>
+
+<p><br>
+<br>
+<p><font face="Arial,Helvetica">The Weave architecture, depicted in Figure
+1, is based on the following main components:</font>
+<ul>
+<li>
+<font face="Arial,Helvetica">The <b>scheduler</b> has the task of interpreting
+the runtime policy, and coordinating the behavior of the other components.&nbsp;
+It receives HTTP requests and redirects them to the <b>cache manager</b>
+components out of which data relating to a given page may be retrieved.</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">The individual <b>cache</b> <b>managers</b>
+enforce the runtime policy by handling data requests as forwarded by the
+scheduler.&nbsp; They further undertake appropriate actions regarding environmental
+constraints (e.g. management of data replacement and of data consistency).&nbsp;
+Environmental constraints are handled through the signal of associated
+events (e.g. time set for a timer has elapsed, maximum size set for a data
+container is reached).</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">The individual <b>caches</b> (or <i>repositories</i>),
+which actually store the data and with which the cache managers interact.
+Notice that there may be various caches related to a given manager, e.g.,
+for scalability purpose.</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">The <b>XML</b> <b>generator</b> holds the
+Web site schema generated after analyzing the declarative specification.
+It is in charge of issuing queries to the DBMS (including the DB cache)
+and producing XML fragments that encode the requested Web pages.</font></li>
+</ul>
+
+<ul>
+<li>
+<font face="Arial,Helvetica">The <b>HTML</b> <b>generator</b> delivers
+Web pages constructed from the generated XML fragments and XSLT style sheets.
+The present architecture of the HTML generator includes a XSLT style sheet
+cache. The style sheets are reused across instances of the same site class.
+Therefore, the output of the the style sheet parsing can be retained in
+main memory so to avoid subsequent parsing.</font></li>
+</ul>
+
+<ul><font face="Arial,Helvetica">The <b>statistics</b> <b>manager</b> is
+in charge of generating, storing and summarizing the data describing the
+Web site's runtime behavior. These data include: statistics about the Web
+site's traces and access patterns, statistics about the response times
+of the various Weave components (e.g. database access, XML generation,
+HTML generation, etc.), and statistics describing Weave caches usage (e.g.
+hit ratios, maximum size).</font></ul>
+
+<p><br><b><font face="Arial,Helvetica"><font size=+2>3. Scenario of the
+demo</font></font></b>
+<br><font face="Arial,Helvetica">The demonstration starts by showing how
+to specify a Web site using the WeaveL language and a set of XSL style
+sheets. Then, we will show how to specify a runtime policy using the WeaveRPL
+language.</font><font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The figure bellow shows the HTML interface
+of the system.&nbsp; This interface allows the Web administrator to start
+and tune the system from any Web browser.&nbsp; It displays the architecture
+of the system as a clickable image map. Clicking on different parts of
+the image takes to different pages. This allows the administrator to interact
+with a specific component of the system&nbsp; without altering the others.</font><font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The first time the system is started up
+with a set of default parameters (e.g., database URL, JDBC driver, username,
+password, default runtime policy, etc) specified in a configuration file.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w1.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">In the following we run the system using
+a WeaveL program called "newdynamic.rtp". The program contains the declarative
+specification of a&nbsp; Web site derived from the TPCD benchmark. The
+database is loaded into the Oracle8 DBMS. It contains information about
+products, customers, supplier parts and client orders.</font>
+<br><font face="Arial,Helvetica">As described bellow, the program is chosen
+from&nbsp; a list of predefined programs and runtime policies. This list
+is obtained by clicking of the scheduler component in the previous figure.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w2.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">Button "Run" allows to run the system using
+the specified program or runtime policy. By clicking on button "Show" we
+can show the content of the selected program.</font>
+<br><font face="Arial,Helvetica">A fragment of&nbsp; the "newdynamic.rtp"
+program is presented bellow. It produces pages of customers, where each
+customer page contains the customer name, his address,&nbsp; a set of links
+to his suppliers' pages, and a set of links to his orders' pages.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w3.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The next figure shows the state of the
+system after running the system using the "newdynamic.rtp" program. The
+scheduler parses the program, keeps for itself the information it needs
+to handle the client requests and passes the rest of the parsed program
+to the concerned components of the system. In this case, the XML Generator
+receives the schema description of the desired Web site.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w1.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">By clicking on the scheduler (or on white
+paper) we can see the part of information it keeps. This information tells
+it to redirect all the client requests to the XML Generator which has the
+task to maintain the site schema, interact with the database to execute
+the SQL queries and build intermediate XML fragments.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w3b.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">By clicking on the XML Generator component,
+we can see a graphical representation of the site schema as shown in the
+figure bellow.&nbsp; The schema provides the&nbsp; following organization
+of the data.&nbsp; There is&nbsp; a Root page with two links to suppliers
+(the node labeled (Suppliers)) and customers (Customers).&nbsp; Both suppliers
+and customers are grouped by geographical region (e.g., Supplierreg(RK)),
+and inside each region by nationality (e.g., Suppliernat(NK)). Suppliers
+and customers have further links to detailed information about parts, orders,
+etc.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/graph.gif" height=619 width=761>
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">This figure shows the list of XSL style
+sheets used in the system for the graphical presentation of the site pages.&nbsp;
+This list is obtained by clicking on the HTML Generator&nbsp; component.&nbsp;
+The right frame shows the content of the selected XSL style sheet on the
+left frame.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w6.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The "show" button on the figure displaying
+the system architecture allows to browse the resulting Web site. As no
+caching is specified, all the Web pages are generated on the fly. The chosen
+pages are:&nbsp; the Root page with two links to suppliers and customers
+pages, a pages with links to five regions (Africa, America, Asia, etc)
+and a page with links to nations of "Africa".</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w7.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The following figure shows the configuration
+page of the system statistic generation.&nbsp; This page is obtained by
+clicking on the Statistic Manager component.&nbsp; Using this page, the
+Web administrator can select the statistics he wants to generate and display
+in the execution report when the system in run in <b>trace</b> mode.&nbsp;
+Button "Update" save the selected options and the "Show" button allows
+to display the content of the current execution report.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w9.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">This is an example of an execution report
+generated by the system after browsing the site.&nbsp; The statistics are
+grouped by pages. For each page, the report shows the response time (resptime),
+the SQL query execution time, the XML generation time, the HTML generation
+time, and the number of time a page has been selected. All the times are
+in milliseconds.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w10.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">By clicking on a page name (in the first
+column), we can see, for each page, the execution time for each SQL query
+used in the evaluation of the selected page. This allows the administrator,&nbsp;
+for example in the case where the query execution time is the dominate
+cost, to see which particular query causes the bottleneck.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w11.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">Now, we show how to specify a runtime policy
+using the WeaveRPL language.&nbsp; From the list of predefined runtime
+policies, we choose an example of a runtime policy specifying an XML caching.
+The runtime policy is called "newxml.rtp"</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w12b.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The content of the chosen runtime policy
+is displayed bellow.&nbsp; In this runtime policy, the XML cache is specified
+as a single container called "xmlcont1".&nbsp; This container is configured
+to cache pages of classes Root, Customernat, and Customer. The container
+is used to cache complete instances of the two first classes and only some
+fragments of class Customer. These fragments correspond to the name, address
+and a list of links to suppliers pages of a particular Customer.&nbsp;
+In this example, we assume that these fragments are not frequently updated
+and worth being cached and the other fragment, which corresponds to the
+list of links to a customer's order pages, changes a lot over the time
+and should be computed on demand. Besides, all the items in the container
+must have a size greater than 2k. This is specified as a global constraint
+over the container content.</font>
+<br><font face="Arial,Helvetica">The <b>onInit</b> event&nbsp; tells the
+XML cache manager to compute all the instances of the classes specified
+in the container definition and to feed the container by the ones which
+respect the specified constraints. The cache content is refreshed every
+10 minutes by recomputing the Customernat instances. Finally, when the
+cache is full (<b>onFull</b> event), a traditional LRU algorithm is applied&nbsp;
+for the replacement of the instances.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w12.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">This figure shows the state of the system
+after the execution of the "newxml.rtp" runtime policy. As for a WeaveL
+program, the scheduler parses the runtime policy, keeps for itself the
+information it needs to handle the client HTTP requests and distributes
+the rest of the runtime policy to the concerned component in the system
+(the XML Cache Manager in this case).&nbsp; The XML Generator still maintains
+the schema of the Web site.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w13.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The part of the runtime policy kept by
+the scheduler is given bellow.&nbsp; It dictates the scheduler to redirect
+all the requests for classes "Customernat", "Root", and "Customer" to the
+XML cache manager and all the rest of requests to the XML Generator. It
+also tells the scheduler about incomplete fragments, like here for fragments
+of class "Customer". In this case, the scheduler has to ask the XML Generator
+for the missing fragments (orders, in this case) and than merge all the
+fragments together before to send them the HML Generator in order</font>
+<br><font face="Arial,Helvetica">to produce the requested HTML page.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w14.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">By clicking on the XML Cache Manager component,
+we can see the part of the runtime policy used by this component to control
+its cache content.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w15.gif" height=761 width=761>
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">After browsing the site,&nbsp; the administrator
+can display the content of the XML repository by clicking on the corresponding
+component in the architecture. The right frame shows the content of the
+selected XML fragment on the left frame.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w16.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">Now, in the same way, we run the system
+with a new caching strategy using the HTML cache only.&nbsp; The caching
+strategy is described in a runtime policy called "newhtml.rtp".</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w17.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The HTML cache is configured as a single
+container called "htmlcont1". This container is used to cache instances
+of classes "Root" and "Customer". When initialized, the <b>onInit </b>rule
+is used to feed the container with all the instances specified in the container
+definition.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w18.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">After parsing and distributing the runtime
+policy, the system state is as follow</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w19.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">This figure shows the scheduler runtime
+policy.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w20.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">The HTML cache manager runtime policy is
+given bellow.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w21.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;<font face="Arial,Helvetica"></font>
+<p><font face="Arial,Helvetica">Finally, after browsing the site, the content
+of the HTML repository is displayed when clicking on the corresponding
+component in the page of the system architecture.</font>
+<br><font face="Arial,Helvetica">The right frame shows the content of the
+HTML page selected on the left frame.</font><font face="Arial,Helvetica"></font>
+<p><img SRC="gif/w22.gif">
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br><font face="Arial,Helvetica"></font>&nbsp;
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Optimization</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Optimization</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld016.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld018.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr>Optimization</nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font size="5"><b>Optimization by Approximation-based Filtering and Indexing (cont.)</b></font></p>
+
+<p>Consider <tt>All_trajectories</tt>, which is a variable of type <tt>SET&lt;DC_LIN*&gt;</tt>,
+i.e., a set of references to trajectories. The Fairfax county is assumed to be represented
+as a polygon, i.e., as a <tt>C_LIN</tt> CST object <tt>Fairfax_area</tt> in variables x
+and y. The above query can be directly expressed in CCUBE as </p>
+
+<pre>
+   <strong>SELECT traj         
+   INTO {Set&lt;DC_LIN*&gt;} result
+   FROM All_Trajectories AS {DC_LIN*} traj
+   WHERE  MUT_SAT(*traj, Fairfax_area )             // Note: MUT_SAT 
+                                                    //   on DC_LIN
+</strong></pre>
+
+<p>or, if <tt>MUT_SAT</tt> is expressed, in turn, as an iterative query: </p>
+
+<pre>
+   <strong>SELECT traj          
+   INTO {Set&lt;DEC_LIN*&gt;} result
+   FROM All_Trajectories AS {DC_LIN*} traj
+   WHERE SELECT MUT_SAT(*segment,Fairfax_area)  // Note: MUT_SAT 
+         INTO {Some}                            //   on C_LIN
+         FROM *traj AS {C_LIN*} segment         // SELECT returns
+                                                //  True of False    </strong>   
+</pre>
+
+<p>which is an expensive query if evaluated directly, because it iterates over all
+trajectories, and for each trajectory it iterates over its linear pieces, performing a SAT
+test for each. </p>
+
+<p>To exemplify the use of the CCUBE built-in index structures called <strong><em>inverse
+grouping</em></strong> and <strong><em>indexed approximation grouping</em></strong>, we
+show an example of how the given query can be re-written to run much more efficiently. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

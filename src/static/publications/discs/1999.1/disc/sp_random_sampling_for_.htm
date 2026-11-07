@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_2.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Random Sampling for Histogram Construction: How much is enough?</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_c.htm#Surajit Chaudhuri">Surajit Chaudhuri</a>, <a href="m_authors_m.htm#Rajeev Motwani">Rajeev Motwani</a>, <a href="m_authors_n.htm#Vivek R. Narasayya">Vivek R. Narasayya</a></center></td></tr></table></center><a target="disc_pdfT78U" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><a target="disc_slides72J" href="sigmod_papers/slisp_random_sampling_for_/index.htm"><b><center>Slides (HTML)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+Random sampling is a standard technique for constructing (approximate) histograms for query optimization. However, any real implementation in commercial products requires solving the hard problem of determining "How much sampling is enough?" We address this critical question in the context of equi-height histograms used in many commercial products, including Microsoft SQL Server. We introduce a conservative error metric capturing the intuition that for an approximate histogram to have low error, the error must be small in all regions of the histogram. We then present a result establishing an optimal bound on the amount of sampling required for pre-specified error bounds. We also describe an adaptive page sampling algorithm which achieves greater efficiency by using all values in a sampled page but adjusts the amount of sampling depending on clustering of values in pages. Next, we establish that the problem of estimating the number of distinct values is provably difficult , but propose a new error metric which has a reliable estimator and can still be exploited by query optimizers to influence the choice of execution plans. <br><br> The algorithm for histogram construction was prototyped on Microsoft SQL Server 7.0 and we present experimental results showing that the adaptive algorithm accurately approximates the true histogram over different data distributions.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[1]<dd>...
+<dt>[2]<dd>...
+<dt>[3]<dd>...
+<dt>[4]<dd>...
+<dt>[5]<dd>...
+<dt>[6]<dd><a name="ChaudhuriN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narasayya:Vivek_R=.html">Vivek R. Narasayya</a>:
+An Efficient Cost-Driven Index Selection Tool for Microsoft SQL Server.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#ChaudhuriN97">VLDB 1997</a>: 146-155<dt>[7]<dd><a name="FinkelsteinST88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Finkelstein:Sheldon_J=.html">Sheldon J. Finkelstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schkolnick:Mario.html">Mario Schkolnick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tiberio:Paolo.html">Paolo Tiberio</a>:
+Physical Database Design for Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods13.html#FinkelsteinST88">TODS 13(1)</a>: 91-128(1988)<dt>[8]<dd><a name="GibbonsMP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">Phillip B. Gibbons</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">Yossi Matias</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Fast Incremental Maintenance of Approximate Histograms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GibbonsMP97">VLDB 1997</a>: 466-475<dt>[9]<dd>...
+<dt>[10]<dd><a name="HaasNSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stokes:Lynne.html">Lynne Stokes</a>:
+Sampling-Based Estimation of the Number of Distinct Values of an Attribute.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HaasNSS95">VLDB 1995</a>: 311-322<dt>[11]<dd><a name="HaasS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Sequential Sampling Procedures for Query Size Estimation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#HaasS92">SIGMOD Conference 1992</a>: 341-350<dt>[12]<dd><a name="HouOD91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">Wen-Chi Hou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">Gultekin &Ouml;zsoyoglu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dogdu:Erdogan.html">Erdogan Dogdu</a>:
+Error-Constraint COUNT Query Evaluation in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#HouOD91">SIGMOD Conference 1991</a>: 278-287<dt>[13]<dd><a name="HouOT88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">Wen-Chi Hou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">Gultekin &Ouml;zsoyoglu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">Baldeo K. Taneja</a>:
+Statistical Estimators for Relational Algebra Expressions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods88.html#HouOT88">PODS 1988</a>: 276-287<dt>[14]<dd><a name="HouOT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">Wen-Chi Hou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">Gultekin &Ouml;zsoyoglu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">Baldeo K. Taneja</a>:
+Processing Aggregate Relational Queries with Hard Time Constraints.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#HouOT89">SIGMOD Conference 1989</a>: 68-77<dt>[15]<dd><a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Balancing Histogram Optimality and Practicality for Query Result Size Estimation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#IoannidisP95">SIGMOD Conference 1995</a>: 233-244<dt>[16]<dd><a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Histogram-Based Solutions to Diverse Database Estimation Problems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#IoannidisP95">Data Engineering Bulletin 18(3)</a>: 10-18(1995)<dt>[17]<dd><a name="LingS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ling:Yibei.html">Yibei Ling</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sun:Wei.html">Wei Sun</a>:
+An Evaluation of Sampling-Based Size Estimation Methods for Selections in Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#LingS95">ICDE 1995</a>: 532-539<dt>[18]<dd><a name="LiptonN90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">Richard J. Lipton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+Query Size Estimation by Adaptive Sampling.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods90.html#LiptonN90">PODS 1990</a>: 40-46<dt>[19]<dd><a name="LiptonNS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">Richard J. Lipton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+Practical Selectivity Estimation through Adaptive Sampling.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#LiptonNS90">SIGMOD Conference 1990</a>: 1-11<dt>[20]<dd><a name="LiptonNSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">Richard J. Lipton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>:
+Efficient Sampling Strategies for Relational Database Operations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs116.html#LiptonNSS93">TCS 116(1&amp;2)</a>: 195-226(1993)<dt>[21]<dd><a name="MotwaniR95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">Rajeev Motwani</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">Prabhakar Raghavan</a>:
+Randomized Algorithms.
+ Cambridge University Press 1995, ISBN 0-521-47465-5<br>
+<dt>[22]<dd><a name="NaughtonS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>:
+On Estimating the Size of Projections.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt90.html#NaughtonS90">ICDT 1990</a>: 499-513<dt>[23]<dd>...
+<dt>[24]<dd>...
+<dt>[25]<dd><a name="OzsoyogluDTHR91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">Gultekin &Ouml;zsoyoglu</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Kaizheng.html">Kaizheng Du</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tjahjana:A=.html">A. Tjahjana</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">Wen-Chi Hou</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rowland:D=_Y=.html">D. Y. Rowland</a>:
+On Estimating COUNT, SUM, and AVERAGE.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dexa/dexa91.html#OzsoyogluDTHR91">DEXA 1991</a>: 406-412<dt>[26]<dd><a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>:
+Improved Histograms for Selectivity Estimation of Range Predicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PoosalaIHS96">SIGMOD Conf. 1996</a>: 294-305<dt>[27]<dd><a name="Piatetsky-ShapiroC84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">Gregory Piatetsky-Shapiro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Connell:Charles.html">Charles Connell</a>:
+Accurate Estimation of the Number of Tuples Satisfying a Condition.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Piatetsky-ShapiroC84">SIGMOD Conference 1984</a>: 256-276<dt>[28]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34<dt>[29]<dd>George Kingsley Zipf:
+Human Behaviour and the Principle of Least Effort: an Introduction to Human Ecology.
+ Addison-Wesley 1949<br>
+</dl>
+Referenced By:
+<ol>
+<li> <a name="ChaudhuriN98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narasayya:Vivek_R=.html">Vivek R. Narasayya</a>:
+AutoAdmin 'What-if' Index Analysis Utility.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#ChaudhuriN98">SIGMOD Conference 1998</a>: 367-378<li> <a name="Chaudhuri98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>:
+An Overview of Query Optimization in Relational Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods98.html#Chaudhuri98">PODS 1998</a>: 34-43</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/ChaudhuriMN98,<br>  author    = {Surajit Chaudhuri and<br>               Rajeev Motwani and<br>               Vivek R. Narasayya},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Random Sampling for Histogram Construction: How much is enough?},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {436-447},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

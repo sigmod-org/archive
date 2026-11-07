@@ -1,0 +1,82 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo D2</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="dims1.html">Prev</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+Arbitrary dimensions, continued</h3>
+For demonstrating 3D objects we chose a tomogram scan with the domain [0:255,
+0:255, 0:153]. Since a computer screen is a 2D object, visualising data
+with more than 2 dimensions calls for projections. In this example RasDaView
+downloaded the entire 3D datacube and then displayed its contents using
+simple orthogonal projections which would be described as
+<tt>[<i>dom_1</i>,
+<i>dom_2</i>, <i>dom_3</i>]</tt> using RasDL's trimming operator, where
+exactly one of the <i><tt>dom_i</tt></i> is a single number which determines
+the position of the plane to project to and the other two domain descriptors
+are "*:*".
+<p>Here are thumbnails of three projections along different axes of the
+data cube. The leftmost image was created using RasDaView's equivalent
+of the
+<tt>[*:*, *:*, 75]</tt> operator, the middle image using the equivalent
+of <tt>[*:*, 90, *:*]</tt> and the rightmost one using the equivalent of
+<tt>[128, *:*, *:*]</tt>. Click on each image to download the full-sized
+version.
+<center><table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=CENTER VALIGN=CENTER><a href="tomo1.gif"><img SRC="sm_tomo1.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER><a href="tomo2.gif"><img SRC="sm_tomo2.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER><a href="tomo3.gif"><img SRC="sm_tomo3.gif" BORDER=0 ></a></td>
+</tr>
+</table></center>
+
+<p><!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="dims1.html">Prev</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>04-Mar-1998</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

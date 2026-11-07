@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<div class="page-head">
+  <div class="wrap">
+    {%- if page.url != "/" %}<p class="crumbs"><a href="/">Archive</a><span>/</span>{{ title }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+  </div>
+</div>
+<div class="wrap page-grid no-side">
+  <article class="prose">
+    {{ content | safe }}
+    <footer class="page-meta">
+      {%- if updated %}<span>Last updated {{ updated | date }}</span>{% endif %}
+      <a href="{{ site.editBase }}{{ page.inputPath | replace('./', '') }}">Suggest an edit on GitHub</a>
+    </footer>
+  </article>
+</div>

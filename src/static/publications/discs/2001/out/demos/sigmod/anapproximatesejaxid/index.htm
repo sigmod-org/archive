@@ -1,0 +1,117 @@
+<HTML><HEAD><TITLE>SIGMOD'00 Poster</TITLE>
+<BODY aLink=blue bgColor=white link=teal text=black vLink=lightseagreen>
+<CENTER>
+<H2>An Approximate Search Engine for Structural Databases</H2>
+</CENTER>
+<TABLE align=center width=400>
+<TBODY>
+<TR>
+   <TD>
+   Jason T. L. Wang (New Jersey Institute of Technology)<BR>
+   Xiong Wang (California State University, Fullerton)<BR>
+   Dennis Shasha (Courant Institute, New York University)<BR>
+   Bruce A. Shapiro (National Cancer Institute)<BR>
+   Kaizhong Zhang (University of Western Ontario)<BR>
+   Qicheng Ma (Novartis Pharmaceuticals Corporation)<BR>
+   Zasha Weinberg (University of Washington)<BR>
+   </TD>
+</TR></TBODY></TABLE>
+<P>
+<TABLE align=center width=600>
+<TBODY>
+<TR>
+   <TD>
+<B>Goal: Make queries on structure as fast as queries on words.</B>
+<P>
+Structural databases contain data objects including 
+trees, graphs, or a set of interrelated
+labeled points in two, three, or higher dimensional space.
+<P>
+Example data objects:
+<!--
+<OL TYPE=I>
+-->
+<UL>
+<LI> protein secondary and tertiary structure,
+<LI> phylogenetic trees,
+<LI> neuroanatomical networks,
+<LI> parse trees,
+<LI> molecular diagrams,
+<LI> XML documents.
+<!--
+</OL>
+-->
+</UL>
+<P align=justify>
+This demo shows a search engine capable of answering
+the following two types of queries on structural database <I>D</I>
+containing graphs:
+<P>
+<UL>
+<LI>
+[nearest-neighbor query]
+<DD>Given a query object <I>o</I>, which items <I>o'</I> in <I>D</I>
+are closest to <I>o</I>?</DD>
+<LI>
+[discovery query]
+<DD>Which substructures approximately occur in the
+items in <I>D</I>?</DD>
+</UL>
+<P>
+<B>Some screen shots illustrating the discovery query:</B>
+<P>
+1. A database of four chemical compounds (graphs).
+<P>
+<CENTER>
+<IMG SRC="http://www.cis.njit.edu/~jason/SIGMOD/snap1_2000.gif" align=center>
+</CENTER>
+<P>
+<BR>
+2. A substructure, found by our algorithm, that approximately occurs
+in the chemical compounds in the database.
+<P>
+<CENTER>
+<IMG SRC="http://www.cis.njit.edu/~jason/SIGMOD/snap2_2000.gif" align=center>
+</CENTER>
+<P>
+<BR>
+3. An alignment between the found substructure and 
+one of the chemical compounds in the database.
+<P>
+<CENTER>
+<IMG SRC="http://www.cis.njit.edu/~jason/SIGMOD/snap3_2000.gif" align=center>
+</CENTER>
+<P>
+<B>Underlying techniques:</B>
+<UL>
+<LI> A technique based on topological relationships
+  (heuristics for subgraph isomorphism).
+
+<LI> A technique based on physical position
+  (geometric hashing).
+
+<LI> Heuristic related to simulated annealing.
+
+<LI> Algorithm runs in time proportional to the number of edges,
+  though the constant of proportionality depends on the 
+  length of time spent doing the simulated annealing.
+</UL>
+<P>
+<B>Related URLs:</B>
+<P>
+<A HREF="http://www.cis.njit.edu/~jason/sigmod.html">
+http://www.cis.njit.edu/~jason/sigmod.html</A>
+<P>
+<A HREF="http://www.ecs.fullerton.edu/~wang/sigmod.html">
+http://www.ecs.fullerton.edu/~wang/sigmod.html</A>
+<P>
+<A HREF="http://cs.nyu.edu/cs/faculty/shasha/papers/agm.html">
+http://cs.nyu.edu/cs/faculty/shasha/papers/agm.html</A>
+<P>
+<A HREF="http://cs.nyu.edu/cs/faculty/shasha/papers/tree.html">
+http://cs.nyu.edu/cs/faculty/shasha/papers/tree.html</A>
+   </TD>
+</TR></TBODY></TABLE>
+
+
+</BODY></HTML>

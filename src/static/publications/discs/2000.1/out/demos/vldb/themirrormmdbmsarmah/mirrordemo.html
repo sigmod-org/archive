@@ -1,0 +1,173 @@
+<HTML><HEAD>
+<TITLE>DEMO - The Mirror MMDBMS architecture</TITLE>
+<META  name="description" 
+content="demo Mirror architecture">
+<META  name="keywords" content="multimedia database information retrieval
+relevance feedback content-based retrieval">
+<LINK REV="made" HREF="mailto:arjen@acm.org">
+</HEAD>
+<BODY BGCOLOR="AFAFAF" TEXT="000000">
+
+<CENTER>
+<H1>
+The Mirror MMDBMS architecture
+</H1>
+<IMG SRC="poster_kl.jpg">
+<P>
+<EM>Screenshots accompanying the 
+<A HREF="http://www.cs.utwente.nl/~arjen/mmdb/abstracts.html#vldb99">
+technical demo</A> and <A HREF="poster.jpg">poster</A> presented at VLDB 99.
+</EM>
+</CENTER>
+<HR>
+
+Index: 
+<A HREF="#intro">Overview</A>,
+<A HREF="#rfb">Relevance feedback</A>,
+<A HREF="#thes">Thesauri</A>,
+<A HREF="#changes">Another example</A>,
+<A HREF="#arch">Architecture</A>,
+<A HREF="#concl">Concluding remarks</A>.
+
+<HR>
+<H2><A NAME="intro">OVERVIEW</A></H2>
+
+This demo introduces the Mirror architecture for multimedia database
+  management systems. Like any DBMS, a MMDBMS is a general-purpose
+software system that supports various applications; however, the support is
+targeted to applications in the specific domain of digital libraries. Three
+new requirements are identified for this domain: 1) multimedia objects are
+active objects, 2) querying is an interaction process, and 3) query
+processing uses multiple representations. Mirror's design therefore provides
+basic functionality for the management of both the content structure and the
+logical structure of multimedia objects. The inference network retrieval
+model, the basis of a well-known IR system, is adapted for multimedia
+retrieval. Other characteristics of the Mirror architecture are the support
+for distribution of both data and operations, and extensibility of data
+types and operations.
+<HR>
+<H2><A NAME="tours">SCREENSHOTS</A></H2>
+
+In these pages, we take a tour along an image retrieval application that has
+been constructed using the Mirror architecture.
+The system architecture and design rationale are further discussed in the paper
+published in the VLDB Proceedings, as well as various other papers, all linked
+from the  
+<A HREF="http://www.cs.utwente.nl/~arjen/mmdb.html">Mirror web pages</A>.
+
+<H3><A NAME="rfb">Relevance feedback</A></H3>
+
+Interaction with users in a multimedia retrieval task is tricky, 
+because the users cannot tell us precisely what their multimedia information
+needs are. This problem may be addressed by using relevance feedback
+given by the user.
+<P>
+<CENTER><A HREF="rfb.html">Short-term learning tour</A></CENTER>
+
+<H3><A NAME="thes">Thesauri</A></H3>
+
+Relying completely on short-term interaction is not sufficient for
+multimedia information retrieval. As a solution, thesauri model background
+knowledge, which helps to 1) bootstrap the iterative process and 2) obtain
+quicker convergence.
+<P>
+<CENTER><A HREF="thes.html">Long-term learning tour</A></CENTER>
+
+<H3><A NAME="changes">Another example</A></H3>
+
+While searching or browsing, you may suddenly decide to look for
+something else. In this situation, querying will be completely driven by
+examples.
+<P>
+<CENTER><A HREF="changes.html">Changing your mind</A></CENTER>
+
+<H3><A NAME="arch">Architecture</A></H3>
+
+Before we finish the tours, let's take a brief look at the underlying
+system architecture.
+<P>
+<CENTER><A HREF="arch.html">How it works</A></CENTER>
+
+<HR>
+<H2><A NAME="concl">CONCLUDING REMARKS</A></H2>
+
+As illustrated in the screenshots above, the current implementation of the
+Mirror DBMS supports sufficient functionality to create a state-of-the-art
+image retrieval system. In preliminary experiments, we have applied the same
+functionality to music fragments as well. And, the same queries have been used
+to participate in the evaluation of text retrieval systems at TREC-8.
+<P>
+Expressing the retrieval problem as a small number of declarative queries
+enables the reuse of code, allows the combination of IR querying (as above)
+with traditional database queries, and allows the system to optimize during
+query processing. 
+<P>
+In our future work, we will continue the development of the Mirror DBMS,
+focusing on the following two aspects:
+<UL>
+<LI><EM>efficiency and scalability</EM>;
+<LI><EM>retrieval models and learning</EM>.
+</UL>
+
+The first aspects requires more attention to help us increase the size of the
+collections that can be handled. We believe that the declarative query
+specifications are extremely useful to gain understanding in how to distribute
+and parallellize query processing. The second aspect is necessary to improve
+our - still rather limited - understanding of interaction between user and
+retrieval system. 
+
+<HR>
+Index: 
+<A HREF="#intro">Overview</A>,
+<A HREF="#rfb">Relevance feedback</A>,
+<A HREF="#thes">Thesauri</A>,
+<A HREF="#changes">Another example</A>,
+<A HREF="#arch">Architecture</A>,
+<A HREF="#concl">Concluding remarks</A>.
+<P>
+Home:
+<A HREF="http://www.cs.utwente.nl/~arjen/mmdb.html">MIRROR</A>.
+<HR>
+<CENTER>
+<SMALL>
+<PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Left blank on purpose)
+</PRE>
+</SMALL>
+</CENTER>
+
+<HR>
+<ADDRESS>
+<IMG ALIGN=right SRC="demologo.jpg">
+Last updated: December 9, 1999<BR>
+Maintained by: <A HREF="mailto:arjen@acm.org">arjen@acm.org</A>
+</ADDRESS>
+</BODY>
+</HTML>

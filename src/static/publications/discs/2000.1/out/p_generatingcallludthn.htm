@@ -1,0 +1,426 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Generating Call-Level Interfaces for Advanced Database Application Programming</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_2.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Generating Call-Level Interfaces for Advanced Database Application Programming
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_udo_nink.htm">Udo Nink</a>, 
+<a href = "a_theo_haumlrder.htm">Theo H&auml;rder</a>, and 
+<a href = "a_norbert_ritter.htm">Norbert Ritter</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/generatingcallludthn.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbhighperforpport.htm">Return to High-performance Application Support</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  It has always been a hard problem to provide application programming interfaces (API) for database systems without sacrificing some advantages of either the database management system or of the programming languages. Various approaches have been proposed. We discuss APIs with respect to SQL3 and its object-relational extensions as well as to object-oriented programming languages. We argue that generated call-level interfaces (CLI) are better suited than classical CLIs and language embeddings to couple database languages to object-oriented programming languages. Profiting from code generation and early binding of type information, generated CLIs improve the pros of embeddings while obviating the cons of classical CLIs. We propose an architecture for generated CLIs consisting of a cache module, a generated run-time system, and a compiler that generates parts of the (generated) CLI. The partial generation is specified using a configuration language to describe application-specific early binding of type information corresponding to data models, schemas, and queries. With this approach, we can control the sharing of database type information for application programs as well as the deferrable adaptation of applications to different needs by extending interfaces and by replacing implementations.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="ArnoldG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arnold:Ken.html">
+Ken Arnold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gosling:James.html">
+James Gosling
+</a>
+: The Java Programming Language.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/aw.html">
+Addison-Wesley
+</a>
+ 1996, ISBN 0-201-63455-4
+<br>
+ 
+<dt>
+[2]
+<dd>
+<a name="AtkinsonM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atkinson:Malcolm_P=.html">
+Malcolm P. Atkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morrison:Ronald.html">
+Ronald Morrison
+</a>
+: Orthogonally Persistent Object Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb4.html#AtkinsonM95">
+VLDB Journal 4(3)
+</a>
+: 319-401(1995)
+<dt>
+[3]
+<dd>
+<a name="ChengMCD94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Josephine_M=.html">
+Josephine M. Cheng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mattos:Nelson_Mendon=ccedil=a.html">
+Nelson Mendon&ccedil;a Mattos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeMichiel:Linda_G=.html">
+Linda G. DeMichiel
+</a>
+: Extending Relational Database Technology for New Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj33.html#ChengMCD94">
+IBM Systems Journal 33(2)
+</a>
+: 264-279(1994)
+<dt>
+[4]
+<dd>
+<a name="CareyDN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: The 007 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CareyDN93">
+SIGMOD Conference 1993
+</a>
+: 12-21
+<dt>
+[5]
+<dd>
+Kyle Geiger: Inside ODBC.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/ms.html">
+Microsoft Press
+</a>
+ 1995, ISBN 1-55615-815-7
+<br>
+ 
+<dt>
+[6]
+<dd>
+... 
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+<a name="HarderMMS87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meyer=Wegener:Klaus.html">
+Klaus Meyer-Wegener
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">
+Bernhard Mitschang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sikeler:Andrea.html">
+Andrea Sikeler
+</a>
+: PRIMA - a DBMS Prototype Supporting Engineering Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1987
+</a>
+: 433-442
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="HarderR99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rahm:Erhard.html">
+Erhard Rahm
+</a>
+: Datenbanksysteme: Konzepte und Techniken der Implementierung.  Springer 1999, ISBN 3-540-65040-7
+<br>
+ 
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="KemperK93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: Adaptable Pointer Swizzling Strategies in Object Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#KemperK93">
+ICDE 1993
+</a>
+: 155-162
+<dt>
+[13]
+<dd>
+<a name="LacroixP83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lacroix:Michel.html">
+Michel Lacroix
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirotte:Alain.html">
+Alain Pirotte
+</a>
+: Comparsing of database intervaces for application programming. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is8.html#LacroixP83">
+IS 8(3)
+</a>
+: 217-229(1983)
+<dt>
+[14]
+<dd>
+... 
+<dt>
+[15]
+<dd>
+<a name="Neumann92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Neumann:Karl.html">
+Karl Neumann
+</a>
+: Kopplungsarten von Programmiersprachen und Datenbanksprachen. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/insk/insk15.html#Neumann92">
+Informatik Spektrum 15(4)
+</a>
+: 185-194(1992)
+<dt>
+[16]
+<dd>
+... 
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+<a name="NinkR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nink:Udo.html">
+Udo Nink
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ritter:Norbert.html">
+Norbert Ritter
+</a>
+: Database Application Programming with Versioned Complex Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/btw/btw97.html#NinkR97">
+BTW 1997
+</a>
+: 172-191
+<dt>
+[19]
+<dd>
+... 
+<dt>
+[20]
+<dd>
+... 
+<dt>
+[21]
+<dd>
+<a name="Stroustrup91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stroustrup:Bjarne.html">
+Bjarne Stroustrup
+</a>
+: The C++ Programming Language, Second Edition.  Addison-Wesley 1991, ISBN 0-201-53992-6
+<br>
+ 
+<dt>
+[22]
+<dd>
+<a name="SuzukiKT94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suzuki:Shinji.html">
+Shinji Suzuki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">
+Masaru Kitsuregawa
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Takagi:Mikio.html">
+Mikio Takagi
+</a>
+: An Efficient Pointer Swizzling Method for Navigation Intensive Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pos/pos94.html#SuzukiKT94">
+POS 1994
+</a>
+: 79-95
+<dt>
+[23]
+<dd>
+<a name="StonebrakerBM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Paul.html">
+Paul Brown
+</a>
+, Dorothy Moore: Object-Relational DBMSs, Second Edition.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1998, ISBN 1-55860-452-9
+<br>
+ 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/NinkHR99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Udo&nbsp;Nink&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Theo&nbsp;H{\"a}rder&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Norbert&nbsp;Ritter},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Generating&nbsp;Call-Level&nbsp;Interfaces&nbsp;for&nbsp;Advanced&nbsp;Database&nbsp;Application<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{575-586},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

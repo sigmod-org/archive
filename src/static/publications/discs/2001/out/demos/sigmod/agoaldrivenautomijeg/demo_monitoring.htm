@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: Monitoring Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_activities.htm"> Previous Step</a></td>
+<td><a href="demo_config.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>Monitoring Tool</b></font></p>
+<p>The monitoring tool for Mentor-lite (coined "MoM") collects information
+about currently executed workflows. Apart from gathering information about the current
+system status ("which workflows are executed currently?"), we can
+collect information about an individual workflow which is running in the system. This information includes the current state of the workflow, the path through earlier visited states (the "trace"), and the time spent in the different states.</p>
+<p>In order to aquire this information, MoM connects to a database that holds all
+relevant information about currently running workflow instances. For the graphical output, MoM reads the state charts from the workflow specifications.</p>
+<p>MoM is entirely written in Java which makes it platform independent. It uses the standard JDBC interface which makes it independent from the
+underlying database. The ability to connect remotely to a database
+and to read the workflow specification via http connection allows monitoring the WFMS remotely.</p>
+<table>
+	<tr><td align="center"><a href="monitoring1.gif"><img src="monitoring1.gif" width="500" height="350"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>When MoM is started, it shows the main window. On the left hand side there is a list
+of all currently active workflow instances. This list is continuously updated. The lower text area gives some information about the database connection. All errors that may occur during the
+connection are shown here. The two buttons on the right hand side allow the user to trigger an immediate update of the list of active workflows or to quit the monitoring tool.</p>
+<p>For viewing an individual workflow, the user can select it
+by double-clicking on the appropriate list item.</p>
+<table>
+	<tr><td align="center"><a href="monitoring2.gif"><img src="monitoring2.gif" width="500" height="350"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>After choosing an item from the list of active workflows, a new window is opened
+that shows the workflow specification as a graph. In the upper part of the window, we
+see the name, the id of the type, and the id of the instance of the workflow. These ids are the unique identification of the workflow instance.</p>
+<p>The main area of the new window contains the graphical specification of the workflow. The states
+of the workflow are shown as
+buttons in the case of "normal" states, or as frames if the state contains subworkflows which are executed in parallel. For a state that corresponds to just one subworkflow, its name is shown
+in parentheses. The transitions are shown as arrows between the states,
+with a small circle denoting the target of the transition. The previously traversed path
+through the workflow is marked in blue, the currently active state is marked in red. The small
+numbers at the transitions indicate how often they have been traversed so far. This way we provide information about loop iterations. The graphical presentation is updated continuously.</p>
+<p>Four buttons at the top of the window serve to configure the graphical presentation. By pressing the "Show Conditions" button the user obtains information about the current values of the workflow's conditions. The "Show/Hide ECA-Rules" button allows us to show or hide the EC/A
+(Event-Conditon-Action) rules of the transitions for
+a clearer view of large workflows. The "Start/Suspend
+Update" button serves to start or suspend the automatic update of the window.
+With this button, the user can freeze the monitoring when she
+wants to evaluate the current state or produce screenshots. When the
+"Update Now" button is pressed, the window is immediately updated. The "Close" button closes
+the window.</p>
+<p>Subworkflows can by monitored by clicking on the corresponding state in the workflow graph.</p>
+<table>
+	<tr><td align="center"><a href="monitoring3.gif"><img src="monitoring3.gif" width="500" height="350"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>By clicking on the button that represents a "normal" state of the workflow, a new
+window is opened, showing information about the selected state. This information
+includes the name of the state's corresponding activity and the time of the last visit.</p>
+<p>At the end of our demo, we have a look at the <b><a href="demo_config.htm">configuration tool</a></b> of Mentor-lite ...
+<p>&nbsp;</p>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_activities.htm"> Previous Step</a></td>
+<td><a href="demo_config.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+</dd>
+</dl>
+</body>
+</html>

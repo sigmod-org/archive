@@ -1,0 +1,97 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_0.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Design and Analysis of Parametric Query Optimization Algorithms</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_g.htm#Sumit Ganguly">Sumit Ganguly</a></center></td></tr></table></center><a target="disc_pdf<65" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Query optimizers normally compile queries into one optimal plan by assuming complete knowledge of all cost parameters such as selectivity and resource availability.
+The execution of such plans could be sub-optimal when cost parameters are either unknown at compile time or change significantly between compile time and runtime [Loh89, GrW89].
+Parametric query optimization [INS+92, CG94, GK94] optimizes a query into a number of candidate plans, each optimal for some region of the parameterspace.
+In this paper, we present parametric query optimization algorithms.
+Our approach is based on the property that for linear cost functions, eachparametric optimal plan is optimal in a convex polyhedral region of the parameter space.
+This property is used to optimize linear and non-linear cost functions.
+We also analyze the expected sizes of the parametric optimal set of plans and the number of plans produced by the Cole and Graefe algorithm [CG94].
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Ant93]<dd><a name="Antoshenkov93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Antoshenkov:Gennady.html">Gennady Antoshenkov</a>:
+Dynamic Query Optimization in Rdb/VMS.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#Antoshenkov93">ICDE 1993</a>: 538-547<dt>[BKS+78]<dd><a name="BentleyKST78" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bentley:Jon_Louis.html">Jon Louis Bentley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kung:H=_T=.html">H. T. Kung</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schkolnick:Mario.html">Mario Schkolnick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thompson:C=_D=.html">C. D. Thompson</a>:
+On the Average Number of Maxima in a Set of Vectors and Applications.
+<a href="http://theory.lcs.mit.edu/~jacm/jacm78.html">JACM 25(4)</a>: 536-543(1978)<dt>[CG94]<dd><a name="ColeG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cole:Richard_L=.html">Richard L. Cole</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Optimization of Dynamic Query Evaluation Plans.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#ColeG94">SIGMOD Conference 1994</a>: 150-160<dt>[GrW89]<dd><a name="GraefeW89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Ward:Karen.html">Karen Ward</a>:
+Dynamic Query Evaluation Plans.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#GraefeW89">SIGMOD Conference 1989</a>: 358-366<dt>[GK94]<dd><a name="GangulyK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganguly:Sumit.html">Sumit Ganguly</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>:
+Parametric Distributed Query Optimization based on Load Conditions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/comad/comad94.html#GangulyK94">COMAD 1994</a>: 0-<dt>[Gan98]<dd>...
+<dt>[INS+92]<dd><a name="IoannidisNSS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">Raymond T. Ng</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>:
+Parametric Query Optimization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#IoannidisNSS92">VLDB 1992</a>: 103-114<dt>[Loh89]<dd>...
+<dt>[Ray70]<dd>...
+<dt>[RS63]<dd>...
+<dt>[SAC+79]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/Ganguly98,<br>  author    = {Sumit Ganguly},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Design and Analysis of Parametric Query Optimization Algorithms},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {228-238},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

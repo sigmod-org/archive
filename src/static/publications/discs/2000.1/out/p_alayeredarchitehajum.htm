@@ -1,0 +1,744 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - A Layered Architecture for Querying Dynamic Web Content</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_1.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+A Layered Architecture for Querying Dynamic Web Content
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_hasan_davulcu.htm">Hasan Davulcu</a>, 
+<a href = "a_juliana_freire.htm">Juliana Freire</a>, 
+<a href = "a_michael_kifer.htm">Michael Kifer</a>, and 
+<a href = "a_i_v_ramakrishnan.htm">I. V. Ramakrishnan</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/alayeredarchitehajum.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmotextandwebbases.htm">Return to Text and Web Databases</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ The design of webbases, database systems for supporting Web-based applications, is currently an active area of research. In this paper, we propose a 3-layer architecture for designing and implementing webbases for querying dynamic Web content (i.e., data that can only be extracted by filling out multiple forms). The lowest layer, virtual physical layer, provides navigation independence by shielding the user from the complexities associated with retrieving data from raw Web sources. Next, the traditional logical layer supports site independence. The top layer is analogous to the external schema layer in traditional databases. Within this architectural framework we address two problems unique to webbases — retrieving dynamic Web content in the virtual physical layer and querying of the external schema by the end user. The layered architecture makes it possible to automate data extraction to a much greater degree than in existing proposals. Wrappers for the virtual physical schema can be created semi-automatically, by asking the webbase designer to navigate through the sites of interest — we call this approach mapping by example. Thus, the webbase designer need not have expertise in the language that maps the physical schema to the raw Web (this should be contrasted to other approaches, which require expertise in various Web-enabled flavors of SQL). For the external schema layer, we propose a semantic extension of the universal relation interface. This interface provides powerful, yet reasonably simple, ad hoc querying capabilities for the end user compared to the currently prevailing “canned” form-based interfaces on the one hand or complex Web-enabling extensions of SQL on the other. Finally, we discuss the implementation of the proposed architecture.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AdaliCPS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adali:Sibel.html">
+Sibel Adali
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Candan:K=_Sel=ccedil=uk.html">
+K. Sel&ccedil;uk Candan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">
+V. S. Subrahmanian
+</a>
+: Query Caching and Optimization in Distributed Mediator Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 137-148
+<dt>
+[2]
+<dd>
+<a name="AmbiteABKMMMPT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ambite:Jos=eacute=_Luis.html">
+Jos&eacute; Luis Ambite
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ashish:Naveen.html">
+Naveen Ashish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barish:Greg.html">
+Greg Barish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knoblock:Craig_A=.html">
+Craig A. Knoblock
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Minton:Steven.html">
+Steven Minton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Modi:Pragnesh_J=.html">
+Pragnesh J. Modi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muslea:Ion.html">
+Ion Muslea
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Philpot:Andrew.html">
+Andrew Philpot
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tejada:Sheila.html">
+Sheila Tejada
+</a>
+: ARIADNE: A System for Constructing Mediators for Internet Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 561-563
+<dt>
+[3]
+<dd>
+... 
+<dt>
+[4]
+<dd>
+<a name="AtzeniMM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atzeni:Paolo.html">
+Paolo Atzeni
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mecca:Giansalvatore.html">
+Giansalvatore Mecca
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merialdo:Paolo.html">
+Paolo Merialdo
+</a>
+: Semistructured und Structured Data in the Web: Going Back and Forth. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#AtzeniMM97">
+SIGMOD Record 26(4)
+</a>
+: 16-23(1997)
+<dt>
+[5]
+<dd>
+<a name="AtzeniMM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atzeni:Paolo.html">
+Paolo Atzeni
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mecca:Giansalvatore.html">
+Giansalvatore Mecca
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merialdo:Paolo.html">
+Paolo Merialdo
+</a>
+: To Weave the Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#AtzeniMM97">
+VLDB 1997
+</a>
+: 206-215
+<dt>
+[6]
+<dd>
+<a name="BonnerK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bonner:Anthony_J=.html">
+Anthony J. Bonner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kifer:Michael.html">
+Michael Kifer
+</a>
+: An Overview of Transaction Logic. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs133.html#BonnerK94">
+TCS 133(2)
+</a>
+: 205-265(1994)
+<dt>
+[7]
+<dd>
+<a name="DuschkaL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Duschka:Olivier_M=.html">
+Olivier M. Duschka
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Recursive Plans for Information Gathering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ijcai/ijcai97.html#DuschkaL97">
+IJCAI (1) 1997
+</a>
+: 778-784
+<dt>
+[8]
+<dd>
+<a name="FlorescuLM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: Database Techniques for the World-Wide Web: A Survey. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod27.html#FlorescuLM98">
+SIGMOD Record 27(3)
+</a>
+: 59-74(1998)
+<dt>
+[9]
+<dd>
+<a name="FrohnHKLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Frohn:J=uuml=rgen.html">
+J&uuml;rgen Frohn
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Himmer=ouml=der:Rainer.html">
+Rainer Himmer&ouml;der
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kandzia:Paul=Thomas.html">
+Paul-Thomas Kandzia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lausen:Georg.html">
+Georg Lausen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schlepphorst:Christian.html">
+Christian Schlepphorst
+</a>
+: FLORID - Ein Prototyp fuer F-Logik. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/btw/btw97.html#FrohnHKLS97">
+BTW 1997
+</a>
+: 100-117
+<dt>
+[10]
+<dd>
+<a name="Garcia-MolinaPQRSUVW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vassalos:Vasilis.html">
+Vasilis Vassalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: The TSIMMIS Approach to Mediation: Data Models and Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis8.html#Garcia-MolinaPQRSUVW97">
+JIIS 8(2)
+</a>
+: 117-132(1997)
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="Kifer95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kifer:Michael.html">
+Michael Kifer
+</a>
+: Deductive and Object Data Languages: A Quest for Integration. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dood/dood95.html#Kifer95">
+DOOD 1995
+</a>
+: 187-212
+<dt>
+[13]
+<dd>
+<a name="KiferKS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kifer:Michael.html">
+Michael Kifer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">
+Won Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+: Querying Object-Oriented Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1992
+</a>
+: 393-402
+<dt>
+[14]
+<dd>
+<a name="KiferLW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kifer:Michael.html">
+Michael Kifer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lausen:Georg.html">
+Georg Lausen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wu:James.html">
+James Wu
+</a>
+: Logical Foundations of Object-Oriented and Frame-Based Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm42.html#KiferLW95">
+JACM 42(4)
+</a>
+: 741-843(1995)
+<dt>
+[15]
+<dd>
+<a name="KnoblockMAAMMPT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knoblock:Craig_A=.html">
+Craig A. Knoblock
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Minton:Steven.html">
+Steven Minton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ambite:Jos=eacute=_Luis.html">
+Jos&eacute; Luis Ambite
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ashish:Naveen.html">
+Naveen Ashish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Modi:Pragnesh_J=.html">
+Pragnesh J. Modi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muslea:Ion.html">
+Ion Muslea
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Philpot:Andrew.html">
+Andrew Philpot
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tejada:Sheila.html">
+Sheila Tejada
+</a>
+: Modeling Web Sources for Information Integration. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/aaai/aaai98.html#KnoblockMAAMMPT98">
+AAAI/IAAI 1998
+</a>
+: 211-218
+<dt>
+[16]
+<dd>
+<a name="KonopnickiS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Konopnicki:David.html">
+David Konopnicki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shmueli:Oded.html">
+Oded Shmueli
+</a>
+: W3QS: A Query System for the World-Wide Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#KonopnickiS95">
+VLDB 1995
+</a>
+: 54-65
+<dt>
+[17]
+<dd>
+<a name="LakshmananSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">
+Laks V. S. Lakshmanan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sadri:Fereidoon.html">
+Fereidoon Sadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subramanian:Iyer_N=.html">
+Iyer N. Subramanian
+</a>
+: A Declarative Language for Querying and Restructuring the WEB. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride96.html#LakshmananSS96">
+RIDE-NDS 1996
+</a>
+: 12-21
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Query-Answering Algorithms for Information Agents. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/aaai/aaai96-1.html#LevyRO96">
+AAAI/IAAI, Vol. 1 1996
+</a>
+: 40-47
+<dt>
+[20]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Querying Heterogeneous Information Sources Using Source Descriptions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LevyRO96">
+VLDB 1996
+</a>
+: 251-262
+<dt>
+[21]
+<dd>
+<a name="Maier83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+: The Theory of Relational Databases.  Computer Science Press 1983, ISBN 0-914894-42-0
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Maier83.html">
+Contents
+</a>
+<dt>
+[22]
+<dd>
+<a name="MaierRW83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rozenshtein:David.html">
+David Rozenshtein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Warren:David_Scott.html">
+David Scott Warren
+</a>
+: Windows on the World. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1983
+</a>
+: 68-78
+<dt>
+[23]
+<dd>
+<a name="MaierU83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Maximal Objects and the Semantics of Universal Relation Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods8.html#MaierU83">
+TODS 8(1)
+</a>
+: 1-14(1983)
+<dt>
+[24]
+<dd>
+<a name="MaierUV84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: On the Foundations of the Universal Relation Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods9.html#MaierUV84">
+TODS 9(2)
+</a>
+: 283-308(1984)
+<dt>
+[25]
+<dd>
+<a name="MeccaAMMS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mecca:Giansalvatore.html">
+Giansalvatore Mecca
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Atzeni:Paolo.html">
+Paolo Atzeni
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Masci:Alessandro.html">
+Alessandro Masci
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merialdo:Paolo.html">
+Paolo Merialdo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sindoni:Giuseppe.html">
+Giuseppe Sindoni
+</a>
+: The Araneus Web-Base Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 544-546
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+<a name="MendelzonMM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mihaila:George_A=.html">
+George A. Mihaila
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Querying the World Wide Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jodl/jodl1.html#MendelzonMM97">
+Int. J. on Digital Libraries 1(1)
+</a>
+: 54-67(1997)
+<dt>
+[28]
+<dd>
+... 
+<dt>
+[29]
+<dd>
+<a name="RajaramanSU95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Answering Queries Using Templates with Binding Patterns. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#RajaramanSU95">
+PODS 1995
+</a>
+: 105-112
+<dt>
+[30]
+<dd>
+<a name="RothAHCCFSTW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">
+Mary Tork Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arya:Manish.html">
+Manish Arya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cody:William_F=.html">
+William F. Cody
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thomas_II:Joachim.html">
+Joachim Thomas II
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+: The Garlic Project. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 557
+<dt>
+[31]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/DavulcuFKR99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Hasan&nbsp;Davulcu&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Juliana&nbsp;Freire&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;Kifer&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I.&nbsp;V.&nbsp;Ramakrishnan},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{A&nbsp;Layered&nbsp;Architecture&nbsp;for&nbsp;Querying&nbsp;Dynamic&nbsp;Web&nbsp;Content},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{491-502},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

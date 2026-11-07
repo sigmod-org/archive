@@ -1,0 +1,92 @@
+xml version="1.0" encoding="Cp1252"?
+
+<FLOW_DIAGRAM>
+    <BEAN>
+      <Location X="25" Y="50" />
+      <FB name="Sequential File_2" class="DQNG.Extension.Source.SeqFileSource" />
+      <DataManager numChains="0" />
+      <Properties file="/DQNG/Data/Comuni_500.txt" separator="null" />
+    </BEAN>
+    <BEAN>
+      <Location X="25" Y="250" />
+      <FB name="Sequential File_3" class="DQNG.Extension.Source.SeqFileSource" />
+      <DataManager numChains="0" />
+      <Properties file="/DQNG/Data/AA_500.txt" separator="null" />
+    </BEAN>
+    <BEAN>
+      <Location X="150" Y="250" />
+      <FB name="Filter_2" class="DQNG.Extension.Function.Filter" />
+      <DataManager numChains="7">
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain>
+	  <DAI class="FindReplace" paramClass="[Ljava.lang.String;" Find0="VIALE" Replace0="" Find1="VIA" Replace1="" Find2="V LE" Replace2="" Find3="PIAZZA" Replace3="" Find4="PZ." Replace4="" Find5="CORSO" Replace5="CSO" Find6="VLE" Replace6="" Find7="VL." Replace7="" Find8="." Replace8=" " Find9="," Replace9=" " Find10="/" Replace10=" " />
+	</DAIChain>
+	<DAIChain />
+      </DataManager>
+      <Properties />
+    </BEAN>
+    <BEAN>
+      <Location X="150" Y="50" />
+      <FB name="Filter_3" class="DQNG.Extension.Function.Filter" />
+      <DataManager numChains="7">
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain />
+	<DAIChain>
+	  <DAI class="FindReplace" paramClass="[Ljava.lang.String;" Find0="VIALE" Replace0="" Find1="VIA" Replace1="" Find2="V LE" Replace2="" Find3="PIAZZA" Replace3="" Find4="PZ." Replace4="" Find5="CORSO" Replace5="CSO" Find6="VLE" Replace6="" Find7="VL." Replace7="" Find8="." Replace8=" " Find9="," Replace9=" " Find10="/" Replace10=" " />
+	</DAIChain>
+	<DAIChain />
+      </DataManager>
+      <Properties />
+    </BEAN>
+    <BEAN>
+      <Location X="275" Y="63" />
+      <FB name="Pairwise_2" class="DQNG.Extension.Cluster.Pairwise" />
+      <DataManager numChains="0" />
+      <Properties />
+    </BEAN>
+    <BEAN>
+      <Location X="400" Y="63" />
+      <FB name="Addr Distance_1" class="DQNG.Extension.Function.AddrDistance" />
+      <DataManager numChains="0" />
+      <Properties par1="5" par2="12" />
+    </BEAN>
+    <BEAN>
+      <Location X="525" Y="63" />
+      <FB name="Classifier_1" class="DQNG.Extension.Function.Classifier" numOuts="3" />
+      <DataManager numChains="0" />
+      <DataManager numChains="0" />
+      <DataManager numChains="0" />
+      <Properties Condition0="Less" Field0="14" Value0="4" Condition1="Equal" Field1="14" Value1="5" Condition2="Greater" Field2="14" Value2="6" />
+    </BEAN>
+    <BEAN>
+      <Location X="700" Y="63" />
+      <FB name="Seq Print Data_3" class="DQNG.Extension.Destination.SeqDataSave" />
+      <Properties file="/DQNG/Data/a1.txt"/>
+    </BEAN>
+    <BEAN>
+      <Location X="675" Y="150" />
+      <FB name="Seq Print Data_4" class="DQNG.Extension.Destination.SeqDataSave" />
+      <Properties file="/DQNG/Data/a2.txt"/>
+    </BEAN>
+    <BEAN>
+      <Location X="650" Y="250" />
+      <FB name="Seq Print Data_5" class="DQNG.Extension.Destination.SeqDataSave" />
+      <Properties file="/DQNG/Data/a3.txt"/>
+    </BEAN>
+    <Connection from="Sequential File_3" output="0" to="Filter_2" input="0" />
+    <Connection from="Sequential File_2" output="0" to="Filter_3" input="0" />
+    <Connection from="Filter_3" output="0" to="Pairwise_2" input="0" />
+    <Connection from="Filter_2" output="0" to="Pairwise_2" input="1" />
+    <Connection from="Pairwise_2" output="0" to="Addr Distance_1" input="0" />
+    <Connection from="Addr Distance_1" output="0" to="Classifier_1" input="0" />
+    <Connection from="Classifier_1" output="0" to="Seq Print Data_3" input="0" />
+    <Connection from="Classifier_1" output="1" to="Seq Print Data_4" input="0" />
+    <Connection from="Classifier_1" output="2" to="Seq Print Data_5" input="0" />
+  </FLOW_DIAGRAM>

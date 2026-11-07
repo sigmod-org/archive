@@ -1,0 +1,177 @@
+<HEAD>
+<title>ICDM '01 Home Page</title>
+</HEAD>
+
+<BODY bgcolor="#ffffee">
+</pre>
+
+<CENTER>
+
+<table width="100%"><tr>
+<td><img width=180 align=left src="ieee-cs.gif">
+</td>
+<td align=center><H1><FONT COLOR="#FF0000"><U>ICDM '01</U></FONT><br>
+<FONT color=#0055ff>The 2001 IEEE International Conference
+on <NOBR>Data Mining</NOBR></FONT></H1>
+<H2>Sponsored by the IEEE Computer Society</H2>
+<H4>Doubletree Hotel, San Jose, California, USA<br>
+November 29 - December 2, 2001</H4></td>
+</tr>
+</table>
+
+</CENTER>
+
+<p>
+<TABLE WIDTH="100%" BORDER=0 CELLSPACING=10>
+
+<TR valign=middle>
+<TD WIDTH="50%">
+<ul>
+
+<li> <a href="http://www.cs.uvm.edu/~xwu/icdm/program-01.shtml"
+target=_top>ICDM '01 Program</a><br>
+
+<!--
+<li> <img src="http://www.cs.uvm.edu/~xwu/WWW/pictures/newred.gif">
+<a
+href="http://www.cs.uvm.edu/~xwu/icdm/icdm-01-papers.shtml">ICDM '01
+Accepted Papers</a><br>
+-->
+
+<li> <a href="cfp-01.shtml">Call for Papers</a><br>
+
+<li> <a href="Invited-01.shtml">Invited Speakers</a><br>
+
+<!--
+<li> <a href="Dates-01.shtml">Important Dates</a><br>
+-->
+
+<!--
+<li> <a href="Submission-01.shtml">Paper Submission
+Instructions</a><br>
+-->
+
+<li> 
+<a href="workshops-01.shtml">ICDM '01 Workshops</a><br>
+<a href="workshops-01-cfp.shtml">(Call for Workshop Proposals)</a><br>
+
+
+<li>
+<a href="tutorials-01.shtml">ICDM '01 Tutorials</a><br>
+<a href="tutorials-01-cfp.shtml">(Call for Tutorials)</a><br>
+
+<li>
+<a href="panel-01.shtml">ICDM '01 Panels</a><br>
+
+<li> <a href="org-01.shtml">Conference Committee</a><br>
+
+<li> <a href="PC-01.shtml">Program Committee</a><br>
+
+<li> 
+<a
+href="reg-01.html" TARGET="_top">Registration Information</a><br>
+
+<li> 
+<a
+href="hotel-01.shtml" TARGET="_top">Hotel Information</a><br>
+
+<li> <img src="http://www.cs.uvm.edu/~xwu/WWW/pictures/newred.gif"> 
+<a href="pics.shtml" TARGET="MAIN">ICDM 2001 Pictures</a><br> 
+
+</ul>
+
+<TD WIDTH="50%">
+
+<ul>
+
+<li> <a href="http://www.cs.uvm.edu/~xwu/icdm.html" TARGET="_top">ICDM
+Home Page</a><br>
+
+<li> <img src="http://www.cs.uvm.edu/~xwu/WWW/pictures/newred.gif"> 
+<a href="Awards.shtml" TARGET="MAIN">ICDM Awards</a><br> 
+
+<li> <a href="Sponsors.shtml">Sponsors</a><br>
+
+<li> <a href="benefits.shtml">Possible Benefits for ICDM Corporate
+Sponsors</a><br>
+
+<li> <a href="Guide.shtml">Guidelines for ICDM
+Conference Organizers</a><br>
+
+<li> <a href="Steering.shtml">Steering Committee</a><br>
+
+<li> <a href="Topics.shtml">Topics of Interest</a><br>
+
+<li> <a href="http://www.cs.uvm.edu/~kais.html"
+TARGET="_top">KAIS Journal</a><br>
+
+<li> <a href="http://www.cs.uvm.edu/~xwu/KDD/Links.shtml">Data Mining
+Links</a><br>
+
+</ul>
+</TABLE>
+
+<CENTER>
+
+<h4>Important Dates</h4>
+
+<center><table BORDER=2 CELLSPACING=3 >
+<tr>
+<td>June 15, 2001</td>
+
+<td>Paper submissions.&nbsp;<BR>
+Workshop proposals.</td>
+</tr>
+
+<tr>
+<td>June 30, 2001</td>
+
+<td>Tutorial submissions.</td>
+</tr>
+
+<tr>
+<td>August 7, 2001</td>
+
+<td>Paper acceptance notices.</td>
+</tr>
+
+<tr>
+<td>November 29 - December 2, 2001</td>
+
+<td>Conference.</td>
+</tr>
+</table></center>
+
+<h4><FONT color=#0055ff>Corporate Sponsors</FONT></h4>
+
+<!-- <a href="http://www.bluemartini.com/" TARGET="_top"><img align=middle
+border=0
+src="logos/bluemartini_white_logo.gif"></a>
+-->
+<a href="http://www.insightful.com/" TARGET="_top">
+<img align=middle
+border=0
+src="logos/insightful.gif"></a>
+<a href="http://research.microsoft.com/" TARGET="_top">
+<img align=middle
+border=0
+src="logos/MSresearch.gif"></a>
+<a href="http://narex.com/" TARGET="_top"><img align=middle
+border=0
+src="logos/NAREX.gif"></a>
+<a href="http://www.springer-ny.com/compsci/" TARGET="_top"><img align=middle
+width=180 border=0
+src="logos/Springer.gif"></a>
+<a href="http://statsoft.com/" TARGET="_top"><img align=middle
+border=0
+src="logos/StatSoft.gif"></a>
+
+<p>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif" WIDTH=100%><br>
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-01.dat"
+align=absmiddle> times since June 29, 2000.<br>
+
+</CENTER>
+

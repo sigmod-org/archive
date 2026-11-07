@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Importing DTDs</H2>
+<P>New types can be added to Nodose by importing an existing XML DTD. There must also be an associated XML file
+that references the DTD. To import a DTD, select &quot;Import DTD&quot; from the Tools menu and identify the XML
+file that uses the DTD using the open file dialog. The importer will create new types in Nodose that correspond
+to the elements in the DTD. All atomic types (#PCDATA) will be assumed to be strings. To specify that an atomic
+type is an integer or a float, define an attribute named &quot;integer&quot; or &quot;float&quot;.</P>
+
+<P><BR>
+As an example, consider the following fragment of a DTD:</P>
+
+<P>&lt;!ELEMENT roster (name,age)* &gt;<BR>
+&lt;!ELEMENT name (#PCDATA) &gt;<BR>
+&lt;!ELEMENT age (#PCDATA) &gt;<BR>
+&lt;!ATTLIST age INTEGER CDATA #IMPLIED &gt;<BR>
+<BR>
+The DTD importer will create the new atomic types &quot;name&quot; (string) and &quot;age&quot; (integer). It will
+also create a type that represents a single roster entry and a list of entries called &quot;roster&quot;.</P>
+
+<P><BR>
+
+<HR ALIGN="CENTER">
+The current implementation of the DTD importer uses the IBM Java Parser.
+
+</BODY>
+
+</HTML>

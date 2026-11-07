@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>2001 IEEE Conference on Data Mining: Tutorials</TITLE>
+<STYLE>
+
+<!--
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+<CENTER>
+
+<H1><FONT COLOR="#FF0000"><U>ICDM '01</U></FONT><br>
+<FONT color=#0055ff>The 2001 IEEE International Conference
+on <NOBR>Data Mining</NOBR></FONT><br>
+Sponsored by the IEEE Computer Society</H1>
+
+<H2>San Jose, California, USA<BR>
+November 29 - December 2, 2001</H2>
+
+<H3>Home Page: <a
+href="http://www.cs.uvm.edu/~xwu/icdm-01.html">http://www.cs.uvm.edu/~xwu/icdm-01.html</a></H3>
+
+</CENTER>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif"
+WIDTH=100%><br>
+
+<CENTER>
+<H3>ICDM 2001 Tutorials</H3>
+</CENTER>
+
+<UL>
+
+<LI> November 29 Morning: <a
+href="http://www-csli.stanford.edu/~schuetze/ieeetutorial.html">Text
+Mining for Bioinformatics</a> by Hinrich Schuetze
+(hs@hinrichschuetze.com)
+
+<LI> November 29 Afternoon: <a
+href="http://www.cs.purdue.edu/homes/clifton/icdm01_tutorials/Keogh/">Mining
+Time Series Data</a> by Eamonn Keogh
+(eamonn@ics.uci.edu)
+</UL>
+
+<HR>
+
+Questions and comments to: <a
+href="mailto:clifton@computer.org">clifton@computer.org</a>.<br>
+Last modified:
+
+September 22, 2001.<br>
+
+</BODY>
+</HTML>

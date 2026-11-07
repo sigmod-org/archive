@@ -1,0 +1,591 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Semantic Compression and Pattern Extraction with Fascicles</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Semantic Compression and Pattern Extraction with Fascicles
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_h_v_jagadish.htm">H. V. Jagadish</a>, 
+<a href = "a_j_madar.htm">J. Madar</a>, and 
+<a href = "a_raymond_t_ng.htm">Raymond T. Ng</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/semanticcompreshjr.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdataminingithms.htm">Return to Data Mining Algorithms</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Often many recoords in a database share similar values for several attributes. If one is able to identify and group together records that share similar values for some - even if not all - attributes, one can both obtain a more parsimonious representation of the data, and gain useful insight into the data from a mining perspective. 
+<p>
+ In this paper, we introduce the notion of 
+<i>
+fascicles
+</i>
+. A fascicle 
+<i>
+F(k,t)
+</i>
+ is a subset of records that have 
+<i>
+k
+</i>
+ compact attributes. An attribute 
+<i>
+A
+</i>
+ of a collection 
+<i>
+F
+</i>
+ of records is 
+<i>
+compact
+</i>
+ if the width of the range of 
+<i>
+A
+</i>
+-values (for numeric attributes) or the number of distinct 
+<i>
+A
+</i>
+-values (for categorial attributes) of all the records in 
+<i>
+F
+</i>
+ does not exceed 
+<i>
+t
+</i>
+. We introduce and study two problems related to fascicles. First, we consider how to find fascicles such that the total storage of the relation is minimized. Second, we study how best to extract fascicles whose sizes exceed a given minimum threshold (i.e., support) and that represent patterns of maximal quality, where quality is measured by the pair 
+<i>
+(k,t)
+</i>
+. We develop algorithms to attack both of the above problems. We show that these two problems are very hard to solve optimally. But we demonstrate empirically that good solutions can be obtained using our algorithms.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AgrawalGGR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gunopulos:Dimitrios.html">
+Dimitrios Gunopulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raghavan:Prabhakar.html">
+Prabhakar Raghavan
+</a>
+: Automatic Subspace Clustering of High Dimensional Data for Data Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#AgrawalGGR98">
+SIGMOD Conference 1998
+</a>
+: 94-105
+<dt>
+[2]
+<dd>
+<a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Mining Association Rules between Sets of Items in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#AgrawalIS93">
+SIGMOD Conference 1993
+</a>
+: 207-216
+<dt>
+[3]
+<dd>
+<a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+: Fast Algorithms for Mining Association Rules in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 487-499
+<dt>
+[4]
+<dd>
+<a name="BarbaraDFHHIJJNPRS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barbar=aacute=:Daniel.html">
+Daniel Barbar&aacute;
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DuMouchel:William.html">
+William DuMouchel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:Theodore.html">
+Theodore Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">
+Kenneth A. Ross
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sevcik:Kenneth_C=.html">
+Kenneth C. Sevcik
+</a>
+: The New Jersey Data Reduction Report. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#BarbaraDFHHIJJNPRS97">
+Data Engineering Bulletin 20(4)
+</a>
+: 3-45(1997)
+<dt>
+[5]
+<dd>
+<a name="BrinMUT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsur:Shalom.html">
+Shalom Tsur
+</a>
+: Dynamic Itemset Counting and Implication Rules for Market Basket Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BrinMUT97">
+SIGMOD Conference 1997
+</a>
+: 255-264
+<dt>
+[6]
+<dd>
+<a name="EsterKSX96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#EsterKSX96">
+KDD 1996
+</a>
+: 226-231
+<dt>
+[7]
+<dd>
+<a name="FaloutsosL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">
+King-Ip Lin
+</a>
+: FastMap: A Fast Algorithm for Indexing, Data-Mining and Visualization of Traditional and Multimedia Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#FaloutsosL95">
+SIGMOD Conference 1995
+</a>
+: 163-174
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="GuhaRS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guha:Sudipto.html">
+Sudipto Guha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: CURE: An Efficient Clustering Algorithm for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#GuhaRS98">
+SIGMOD Conference 1998
+</a>
+: 73-84
+<dt>
+[11]
+<dd>
+<a name="JohnsonD98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:Theodore.html">
+Theodore Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dasu:Tamraparni.html">
+Tamraparni Dasu
+</a>
+: Comparing Massive High-Dimensional Data Sets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#JohnsonD98">
+KDD 1998
+</a>
+: 229-233
+<dt>
+[12]
+<dd>
+... 
+<dt>
+[13]
+<dd>
+<a name="KlemettinenMRTV94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Klemettinen:Mika.html">
+Mika Klemettinen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ronkainen:Pirjo.html">
+Pirjo Ronkainen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Verkamo:A=_Inkeri.html">
+A. Inkeri Verkamo
+</a>
+: Finding Interesting Rules from Large Sets of Discovered Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm94.html#KlemettinenMRTV94">
+CIKM 1994
+</a>
+: 401-407
+<dt>
+[14]
+<dd>
+<a name="KornJF97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Korn:Flip.html">
+Flip Korn
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Efficiently Supporting Ad Hoc Queries in Large Datasets of Time Sequences. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KornJF97">
+SIGMOD Conference 1997
+</a>
+: 289-300
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="MannilaT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+: Levelwise Search and Borders of Theories in Knowledge Discovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/datamine/datamine1.html#MannilaT97">
+Data Mining and Knowledge Discovery 1(3)
+</a>
+: 241-258(1997)
+<dt>
+[17]
+<dd>
+<a name="NgH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+: Efficient and Effective Clustering Methods for Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 144-155
+<dt>
+[18]
+<dd>
+<a name="NgR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Wee_Keong.html">
+Wee Keong Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ravishankar:Chinya_V=.html">
+Chinya V. Ravishankar
+</a>
+: Block-Oriented Compression Techniques for Large Statistical Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde9.html#NgR97">
+TKDE 9(2)
+</a>
+: 314-328(1997)
+<dt>
+[19]
+<dd>
+<a name="OlkenR86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olken:Frank.html">
+Frank Olken
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rotem:Doron.html">
+Doron Rotem
+</a>
+: Rearranging Data to Maximize the Efficiency of Compression. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods86.html#OlkenR86">
+PODS 1986
+</a>
+: 78-90
+<dt>
+[20]
+<dd>
+<a name="Smyth78" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smyth:Michael_B=.html">
+Michael B. Smyth
+</a>
+: Power Domains. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss16.html#Smyth78">
+JCSS 16(1)
+</a>
+: 23-36(1978)
+<dt>
+[21]
+<dd>
+<a name="ZhangRL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Tian.html">
+Tian Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: BIRCH: An Efficient Data Clustering Method for Very Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#ZhangRL96">
+SIGMOD Conf. 1996
+</a>
+: 103-114
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Snodgrass99a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">
+Richard T. Snodgrass
+</a>
+: Review - Semantic Compression and Pattern Extraction with Fascicles. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dr/dr1.html#Snodgrass99a">
+ACM SIGMOD Digital Review 1
+</a>
+: (1999)
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/JagadishMN99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{H.&nbsp;V.&nbsp;Jagadish&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J.&nbsp;Madar&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raymond&nbsp;T.&nbsp;Ng},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Semantic&nbsp;Compression&nbsp;and&nbsp;Pattern&nbsp;Extraction&nbsp;with&nbsp;Fascicles},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{186-198},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

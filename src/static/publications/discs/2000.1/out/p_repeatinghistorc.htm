@@ -1,0 +1,1400 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Repeating History Beyond ARIES</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_4.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Repeating History Beyond ARIES
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_c_mohan.htm">C. Mohan</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/repeatinghistorc.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="slides/vldb/repeatinghistorc/index.pdf" >View Slides (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldb10yearawardtalk.htm">Return to 10 Year Award Talk</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In this paper, I describe first the background behind the development of the original ARIES recovery method, and its significant impact on the commercial world and the research community. Next, I provide a brief introduction to the various concurrency control and recovery methods in the ARIES family of algorithms. Subsequently, I discuss some of the recent developments affecting the transaction management area and what these mean for the future. In ARIES, the concept of 
+<i>
+repeating history
+</i>
+ turned out to be an important paradigm. As I examine where transaction management is headed in the world of the internet, I observe history repeating itself in the sense of requirements that used to be considered significant in the mainframe world (e.g., performance, availability and reliability) now becoming important requirements of the broader information technology community as well.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[BaRa87]
+<dd>
+<a name="BadrinathR87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Badrinath:B=_R=.html">
+B. R. Badrinath
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamritham:Krithi.html">
+Krithi Ramamritham
+</a>
+: Semantics-Based Concurrency Control: Beyond Commutativity. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde87.html#BadrinathR87">
+ICDE 1987
+</a>
+: 304-311
+<dt>
+[BeHG87]
+<dd>
+<a name="BernsteinHG87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hadzilacos:Vassos.html">
+Vassos Hadzilacos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Concurrency Control and Recovery in Database Systems.  Addison-Wesley 1987, ISBN 0-201-10715-5
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/bernstein87.html">
+Contents
+</a>
+<dt>
+[BeNe97]
+<dd>
+<a name="BernsteinN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, Eric Newcomer: Principles of Transaction Processing for Systems Professionals.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1996, ISBN 1-55860-415-4
+<br>
+ 
+<dt>
+[BGHJ92]
+<dd>
+<a name="BhideGHJ92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bhide:Anupam.html">
+Anupam Bhide
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goyal:Ambuj.html">
+Ambuj Goyal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hsiao:Hui=I.html">
+Hui-I Hsiao
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jhingran:Anant.html">
+Anant Jhingran
+</a>
+: An Efficient Scheme for Providing High Availability. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#BhideGHJ92">
+SIGMOD Conference 1992
+</a>
+: 236-245
+<dt>
+[Billa96]
+<dd>
+... 
+<dt>
+[Boss84]
+<dd>
+<a name="Borr84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Borr:Andrea_J=.html">
+Andrea J. Borr
+</a>
+: Robustness to Crash in a Distributed Database: A Non Shared-memory Multi-Processor Approach. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1984
+</a>
+: 445-453
+<dt>
+[CABGK81]
+<dd>
+<a name="ChamberlinABGKLLMPPSSSTWY81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blasgen:Mike_W=.html">
+Mike W. Blasgen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/King:W=_Frank.html">
+W. Frank King
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehl:James_W=.html">
+James W. Mehl
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Putzolu:Gianfranco_R=.html">
+Gianfranco R. Putzolu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schkolnick:Mario.html">
+Mario Schkolnick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Slutz:Donald_R=.html">
+Donald R. Slutz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Traiger:Irving_L=.html">
+Irving L. Traiger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wade:Bradford_W=.html">
+Bradford W. Wade
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yost:Robert_A=.html">
+Robert A. Yost
+</a>
+: A History and Evaluation of System R. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm24.html#ChamberlinABGKLLMPPSSSTWY81">
+CACM 24(10)
+</a>
+: 632-646(1981)
+<dt>
+[CaRH95]
+<dd>
+<a name="CabreraRH95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cabrera:Luis=Felipe.html">
+Luis-Felipe Cabrera
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rees:Robert.html">
+Robert Rees
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hineman:Wayne.html">
+Wayne Hineman
+</a>
+: Applying Database Technology in the ADSM Mass Storage System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1995
+</a>
+: 597-605
+<dt>
+[CDFHM94]
+<dd>
+<a name="CareyDFHMNSSTTWZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">
+Nancy E. Hall
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McAuliffe:Mark_L=.html">
+Mark L. McAuliffe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schuh:Daniel_T=.html">
+Daniel T. Schuh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Solomon:Marvin_H=.html">
+Marvin H. Solomon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">
+C. K. Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsatalos:Odysseas_G=.html">
+Odysseas G. Tsatalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">
+Seth J. White
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">
+Michael J. Zwilling
+</a>
+: Shoring Up Persistent Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyDFHMNSSTTWZ94">
+SIGMOD Conference 1994
+</a>
+: 383-394
+<dt>
+[ChGY81]
+<dd>
+<a name="ChamberlinGY81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gilbert:A=_M=.html">
+A. M. Gilbert
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yost:Robert_A=.html">
+Robert A. Yost
+</a>
+: A History of System R and SQL/Data System (Invited Paper). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1981
+</a>
+: 456-464
+<dt>
+[ChMo96]
+<dd>
+... 
+<dt>
+[ChMy88]
+<dd>
+<a name="ChangM88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Philip_Y=.html">
+Philip Y. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Myre:William_W=.html">
+William W. Myre
+</a>
+: OS/2 EE Database Manager Overview and Technical Highlights. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj27.html#ChangM88">
+IBM Systems Journal 27(2)
+</a>
+: 105-118(1988)
+<dt>
+[ClCo89]
+<dd>
+<a name="ClarkC89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clark:Brian_E=.html">
+Brian E. Clark
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Corrigan:Michael_J=.html">
+Michael J. Corrigan
+</a>
+: Application System/400 Performance Characteristics. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj28.html#ClarkC89">
+IBM Systems Journal 28(3)
+</a>
+: 407-423(1989)
+<dt>
+[CMSW93]
+<dd>
+<a name="CabreraMSW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cabrera:Luis=Felipe.html">
+Luis-Felipe Cabrera
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McPherson:John.html">
+John McPherson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wyllie:James_C=.html">
+James C. Wyllie
+</a>
+: Implementing Atomicity in Two Systems: Techniques, Tradeoffs, and Experience. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse19.html#CabreraMSW93">
+TSE 19(10)
+</a>
+: 950-961(1993)
+<dt>
+[Crus84]
+<dd>
+<a name="Crus84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Crus:Richard_A=.html">
+Richard A. Crus
+</a>
+: Data Recovery in IBM Database 2. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj23.html#Crus84">
+IBM Systems Journal 23(2)
+</a>
+: 178-188(1984)
+<dt>
+[DGSBH90]
+<dd>
+<a name="DeWittGSBHR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghandeharizadeh:Shahram.html">
+Shahram Ghandeharizadeh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bricker:Allan.html">
+Allan Bricker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hsiao:Hui=I.html">
+Hui-I Hsiao
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rasmussen:Rick.html">
+Rick Rasmussen
+</a>
+: The Gamma Database Machine Project. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#DeWittGSBHR90">
+TKDE 2(1)
+</a>
+: 44-62(1990)
+<dt>
+[Dombr95]
+<dd>
+<a name="Dombrowska95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dombrowska:Henrietta.html">
+Henrietta Dombrowska
+</a>
+: ARIES/NT Modified for Advanced Transactions Support. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/adbis/adbis95.html#Dombrowska95">
+ADBIS 1995
+</a>
+: 43-51
+<dt>
+[EGLT76]
+<dd>
+<a name="EswarranGLT76" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eswaran:Kapali_P=.html">
+Kapali P. Eswaran
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Traiger:Irving_L=.html">
+Irving L. Traiger
+</a>
+: The Notions of Consistency and Predicate Locks in a Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm19.html#EswarranGLT76">
+CACM 19(11)
+</a>
+: 624-633(1976)
+<dt>
+[Elmag92]
+<dd>
+<a name="Elmagarmid92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmagarmid:Ahmed_K=.html">
+Ahmed K. Elmagarmid
+</a>
+ (Ed.): Database Transaction Models for Advanced Applications.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1992, ISBN 1-55860-214-3
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/transaction92.html">
+Contents
+</a>
+<dt>
+[FZTCD92]
+<dd>
+<a name="FranklinZTCD92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">
+Michael J. Zwilling
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">
+C. K. Tan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+: Crash Recovery in Client-Server EXODUS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#FranklinZTCD92">
+SIGMOD Conference 1992
+</a>
+: 165-174
+<dt>
+[GaKi85]
+<dd>
+<a name="GawlickK85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gawlick:Dieter.html">
+Dieter Gawlick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kinkade:David.html">
+David Kinkade
+</a>
+: Varieties of Concurrency Control in IMS/VS Fast Path. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu8.html#GawlickK85">
+Database Engineering Bulletin 8(2)
+</a>
+: 3-10(1985)
+<dt>
+[GMBLL81]
+<dd>
+<a name="GrayMBLLPPT81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McJones:Paul_R=.html">
+Paul R. McJones
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blasgen:Mike_W=.html">
+Mike W. Blasgen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Putzolu:Gianfranco_R=.html">
+Gianfranco R. Putzolu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Traiger:Irving_L=.html">
+Irving L. Traiger
+</a>
+: The Recovery Manager of the System R Database Manager. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur13.html#GrayMBLLPPT81">
+Computing Surveys 13(2)
+</a>
+: 223-243(1981)
+<dt>
+[GrRe93]
+<dd>
+<a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Transaction Processing: Concepts and Techniques.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-190-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">
+Contents
+</a>
+<dt>
+[HaJa84]
+<dd>
+<a name="HaderleJ84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haderle:Donald_J=.html">
+Donald J. Haderle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jackson:Robert_D=.html">
+Robert D. Jackson
+</a>
+: IBM Database 2 Overview. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj23.html#HaderleJ84">
+IBM Systems Journal 23(2)
+</a>
+: 112-125(1984)
+<dt>
+[HaRe83]
+<dd>
+<a name="HarderR83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Principles of Transaction-Oriented Database Recovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur15.html#HarderR83">
+Computing Surveys 15(4)
+</a>
+: 287-317(1983)
+<dt>
+[HaRo87]
+<dd>
+<a name="HarderR87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rothermel:Kurt.html">
+Kurt Rothermel
+</a>
+: Concepts for Transaction Recovery in Nested Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#HarderR87">
+SIGMOD Conference 1987
+</a>
+: 239-248
+<dt>
+[HaRo93]
+<dd>
+<a name="HarderR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rothermel:Kurt.html">
+Kurt Rothermel
+</a>
+: Concurrency Control Issues in Nested Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb2.html#HarderR93">
+VLDB Journal 2(1)
+</a>
+: 39-74(1993)
+<dt>
+[HCLMW90]
+<dd>
+<a name="HaasCLMWLLPCS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Walter.html">
+Walter Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">
+Guy M. Lohman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McPherson:John.html">
+John McPherson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilms:Paul_F=.html">
+Paul F. Wilms
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lapis:George.html">
+George Lapis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Starburst Mid-Flight: As the Dust Clears. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#HaasCLMWLLPCS90">
+TKDE 2(1)
+</a>
+: 143-160(1990)
+<dt>
+[HLMPS94]
+<dd>
+... 
+<dt>
+[IBM97]
+<dd>
+... 
+<dt>
+[JaKe97]
+<dd>
+<a name="JajodiaK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jajodia:Sushil.html">
+Sushil Jajodia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kerschberg:Larry.html">
+Larry Kerschberg
+</a>
+ (Eds.): Advanced Transaction Models and Architectures.  Kluwer 1997, ISBN 0-7923-9880-7
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/JajodiaK97.html">
+Contents
+</a>
+<dt>
+[JhKh92]
+<dd>
+<a name="JhingranK92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jhingran:Anant.html">
+Anant Jhingran
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Khedkar:Pratap.html">
+Pratap Khedkar
+</a>
+: Analysis of Recovery in a Database System Using a Write-Ahead Log Protocol. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#JhingranK92">
+SIGMOD Conference 1992
+</a>
+: 175-184
+<dt>
+[JMNT97]
+<dd>
+<a name="JostenMNT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Josten:Jeffrey_W=.html">
+Jeffrey W. Josten
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Teng:James_Z=.html">
+James Z. Teng
+</a>
+: DB2's Use of the Coupling Facility for Data Sharing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj36.html#JostenMNT97">
+IBM Systems Journal 36(2)
+</a>
+: 327-351(1997)
+<dt>
+[KoMH97]
+<dd>
+<a name="KornackerMH97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kornacker:Marcel.html">
+Marcel Kornacker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Concurrency and Recovery in Generalized Search Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#KornackerMH97">
+SIGMOD Conference 1997
+</a>
+: 62-72
+<dt>
+[KuHs98]
+<dd>
+... 
+<dt>
+[Kumar95]
+<dd>
+... 
+<dt>
+[Kuo96]
+<dd>
+<a name="Kuo96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kuo:Dean.html">
+Dean Kuo
+</a>
+: Model and Verification of a Data Manager Based on ARIES. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods21.html#Kuo96">
+TODS 21(4)
+</a>
+: 427-479(1996)
+<dt>
+[Lars88]
+<dd>
+<a name="Larson88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">
+Per-&Aring;ke Larson
+</a>
+: Linear Hashing with Separators - A Dynamic Hashing Scheme Achieving One-Access Retrieval. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods13.html#Larson88">
+TODS 13(3)
+</a>
+: 366-388(1988)
+<dt>
+[Lomet92]
+<dd>
+<a name="Lomet92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+: MLR: A Recovery Method for Multi-level Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#Lomet92">
+SIGMOD Conference 1992
+</a>
+: 185-194
+<dt>
+[LoSa92]
+<dd>
+<a name="LometS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salzberg:Betty.html">
+Betty Salzberg
+</a>
+: Access Method Concurrency with Recovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#LometS92">
+SIGMOD Conference 1992
+</a>
+: 351-360
+<dt>
+[LoTu95]
+<dd>
+<a name="LometT95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tuttle:Mark_R=.html">
+Mark R. Tuttle
+</a>
+: Redo Recovery after System Crashes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1995
+</a>
+: 457-468
+<dt>
+[MaRe97]
+<dd>
+<a name="MartinR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Martin:Cris_Pedregal.html">
+Cris Pedregal Martin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamritham:Krithi.html">
+Krithi Ramamritham
+</a>
+: Toward Formalizing Recovery of (Advanced) Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/JajodiaK97.html#MartinR97">
+Advanced Transaction Models and Architectures 1997
+</a>
+: 0-
+<dt>
+[MHLPS92]
+<dd>
+<a name="MohanHLPS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haderle:Donald_J=.html">
+Donald J. Haderle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter.html">
+Peter Schwarz
+</a>
+: ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods17.html#MohanHLPS92">
+TODS 17(1)
+</a>
+: 94-162(1992)
+<dt>
+[MHWC90]
+<dd>
+<a name="MohanHWC90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haderle:Donald_J=.html">
+Donald J. Haderle
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Yun.html">
+Yun Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Josephine_M=.html">
+Josephine M. Cheng
+</a>
+: Single Table Access Using Multiple Indexes: Optimization, Execution, and Concurrency Control Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt90.html#MohanHWC90">
+EDBT 1990
+</a>
+: 29-43
+<dt>
+[MoDi94]
+<dd>
+<a name="MohanD94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dievendorff:Dick.html">
+Dick Dievendorff
+</a>
+: Recent Work on Distributed Commit Protocolls, and Recoverable Messaging and Queuing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu17.html#MohanD94">
+Data Engineering Bulletin 17(1)
+</a>
+: 22-28(1994)
+<dt>
+[MoHa94]
+<dd>
+<a name="MohanH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haderle:Donald_J=.html">
+Donald J. Haderle
+</a>
+: Algorithms for Flexible Space Management in Transaction Systems Supporting Fine-Granularity Locking. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#MohanH94">
+EDBT 1994
+</a>
+: 131-144
+<dt>
+[Mohan90a]
+<dd>
+<a name="Mohan90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: ARIES/KVL: A Key-Value Locking Method for Concurrency Control of Multiaction Transactions Operating on B-Tree Indexes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1990
+</a>
+: 392-405
+<dt>
+[Mohan90b]
+<dd>
+<a name="Mohan90a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: Commit_LSN: A Novel and Simple Method for Reducing Locking and Latching in Transaction Processing Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1990
+</a>
+: 406-418
+<dt>
+[Mohan92a]
+<dd>
+<a name="Mohan92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: Interactions Between Query Optimization and Concurrency Control. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride92.html#Mohan92">
+RIDE-TQP 1992
+</a>
+: 26-35
+<dt>
+[Mohan92b]
+<dd>
+<a name="Mohan92a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: Less Optimism About Optimistic Concurrency Control. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride92.html#Mohan92a">
+RIDE-TQP 1992
+</a>
+: 199-204
+<dt>
+[Mohan93a]
+<dd>
+<a name="Mohan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: ARIES/LHS: A Concurrency Control and Recovery Method Using Write-Ahead Logging for Linear Hashing with Separators. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#Mohan93">
+ICDE 1993
+</a>
+: 243-252
+<dt>
+[Mohan93b]
+<dd>
+<a name="Mohan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: IBM's Relational DBMS Products: Features and Technologies. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#Mohan93">
+SIGMOD Conference 1993
+</a>
+: 445-448
+<dt>
+[Mohan93c]
+<dd>
+<a name="Mohan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: A Cost-Effective Method for Providing Improved Data Availability During DBMS Restart Recovery After a Failure. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1993
+</a>
+: 368-379
+<dt>
+[Mohan93d]
+<dd>
+<a name="Mohan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: A Survey of DBMS Research Issues in Supporting Very Large Tables. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/fodo/fodo93.html#Mohan93">
+FODO 1993
+</a>
+: 279-300
+<dt>
+[Mohan95a]
+<dd>
+<a name="Mohan95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: Disk Read-Write Optimizations and Data Integrity in Transaction Systems Using Write-Ahead Logging. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#Mohan95">
+ICDE 1995
+</a>
+: 324-331
+<dt>
+[Mohan95b]
+<dd>
+... 
+<dt>
+[Mohan99]
+<dd>
+<a name="Mohan99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: A Database Perspective on Lotus Domino/Notes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#Mohan99">
+SIGMOD Conference 1999
+</a>
+: 507
+<dt>
+[MoLe92]
+<dd>
+<a name="MohanL92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levine:Frank.html">
+Frank Levine
+</a>
+: ARIES/IM: An Efficient and High Concurrency Index Management Method Using Write-Ahead Logging. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#MohanL92">
+SIGMOD Conference 1992
+</a>
+: 371-380
+<dt>
+[MoLO86]
+<dd>
+<a name="MohanLO86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Obermarck:Ron.html">
+Ron Obermarck
+</a>
+: Transaction Management in the  R* Distributed Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods11.html#MohanLO86">
+TODS 11(4)
+</a>
+: 378-396(1986)
+<dt>
+[MoNa91]
+<dd>
+<a name="MohanN91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: Recovery and Coherency-Control Protocols for Fast Intersystem Page Transfer and Fine-Granularity Locking in a Shared Disks Transaction Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1991
+</a>
+: 193-207
+<dt>
+[MoNa92a]
+<dd>
+<a name="MohanN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: Efficient Locking and Caching of Data in the Multisystem Shard Disks Transaction Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt92.html#MohanN92">
+EDBT 1992
+</a>
+: 453-468
+<dt>
+[MoNa92b]
+<dd>
+<a name="MohanN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: Data Base Recovery in Shared Disks and Client-Server Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs92.html#MohanN92">
+ICDCS 1992
+</a>
+: 310-317
+<dt>
+[MoNa92c]
+<dd>
+<a name="MohanN92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: Algorithms for Creating Indexes for Very Large Tables Without Quiescing Updates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#MohanN92">
+SIGMOD Conference 1992
+</a>
+: 361-370
+<dt>
+[MoNa93]
+<dd>
+<a name="MohanN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: An Efficient and Flexible Method for Archiving a Data Base. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#MohanN93">
+SIGMOD Conference 1993
+</a>
+: 139-146
+<dt>
+[MoNa94]
+<dd>
+<a name="MohanN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Narang:Inderpal.html">
+Inderpal Narang
+</a>
+: ARIES/CSA: A Method for Database Recovery in Client-Server Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#MohanN94">
+SIGMOD Conference 1994
+</a>
+: 55-66
+<dt>
+[MoNP90]
+<dd>
+... 
+<dt>
+[MoPi91]
+<dd>
+<a name="Mohan91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+: ARIES-RRH: Restricted Repeating of History in the ARIES Transaction Recovery Method. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde91.html#Mohan91">
+ICDE 1991
+</a>
+: 718-727
+<dt>
+[MoPL92]
+<dd>
+<a name="MohanPL92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+: Efficient and Flexible Methods for Transient Versioning of Records to Avoid Locking by Read-Only Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#MohanPL92">
+SIGMOD Conference 1992
+</a>
+: 124-133
+<dt>
+[MoTO93]
+<dd>
+<a name="MohanTO93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Treiber:Kent.html">
+Kent Treiber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Obermarck:Ron.html">
+Ron Obermarck
+</a>
+: Algorithms for the Management of Remote Backup Data Bases for Disaster Recovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#MohanTO93">
+ICDE 1993
+</a>
+: 511-518
+<dt>
+[Ober80]
+<dd>
+... 
+<dt>
+[Ober98a]
+<dd>
+... 
+<dt>
+[Ober98b]
+<dd>
+... 
+<dt>
+[PeSt83]
+<dd>
+<a name="PetersonS83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Peterson:R=_J=.html">
+R. J. Peterson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Strickland:Jimmy_P=.html">
+Jimmy P. Strickland
+</a>
+: LOG Write-Ahead Protocols and IMS/VS Logging. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods83.html#PetersonS83">
+PODS 1983
+</a>
+: 216-243
+<dt>
+[RaCh96]
+<dd>
+... 
+<dt>
+[Ramak98]
+<dd>
+<a name="Ramakrishnan98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+: Database Management Systems.  WCB/McGraw-Hill 1998, ISBN 0-07-050775-9
+<br>
+ 
+<dt>
+[RoMo89]
+<dd>
+<a name="RothermelM89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rothermel:Kurt.html">
+Kurt Rothermel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mohan:C=.html">
+C. Mohan
+</a>
+: ARIES/NT: A Recovery Method Based on Write-Ahead Logging for Nested Transactions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1989
+</a>
+: 337-346
+<dt>
+[StNC91]
+<dd>
+<a name="StoneNC91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stone:Richard_L=.html">
+Richard L. Stone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nettleship:T=_Scott.html">
+T. Scott Nettleship
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Curtiss:Jay.html">
+Jay Curtiss
+</a>
+: VM/ESA CMS Shared File System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ibmsj/ibmsj30.html#StoneNC91">
+IBM Systems Journal 30(1)
+</a>
+: 52-(1991)
+<dt>
+[VuDo90]
+<dd>
+... 
+<dt>
+[Weihl95]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/Mohan99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{C.&nbsp;Mohan},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Repeating&nbsp;History&nbsp;Beyond&nbsp;ARIES},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-17},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

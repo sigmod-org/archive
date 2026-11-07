@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>Router Trace Applet</TITLE>
+</HEAD>
+
+<BODY>
+
+<P>
+<TABLE BORDER="0" CELLSPACING="0" WIDTH="438">
+	<TR>
+		<TD VALIGN="TOP">
+			<P ALIGN="CENTER"><B><A HREF="Query.html"><FONT SIZE="2" FACE="Arial">Choose Query Type</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="FormQuery.html"><FONT SIZE="2" FACE="Arial">User Query</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Category.html"><FONT SIZE="2" FACE="Arial">Choose category</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Applet.html"><FONT SIZE="2" FACE="Arial">Constructed Query </FONT></A><FONT SIZE="2"
+			FACE="Arial">| </FONT><A HREF="Sources.html"><FONT SIZE="2" FACE="Arial">Known Sources</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route1.html"><FONT SIZE="2" FACE="Arial">Routing Phase One</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route2.html"><FONT SIZE="2" FACE="Arial">Routing Phase Two</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Plan.html"><FONT SIZE="2" FACE="Arial">Plan Generation</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Execution.html"><FONT SIZE="2" FACE="Arial">Execution</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Results.html"><FONT SIZE="2" FACE="Arial">Results</FONT></A></B>
+		</TD>
+	</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE BORDER="0">
+	<TR>
+		<TD VALIGN="TOP" BGCOLOR="#AAE0F0">
+			<TABLE ALIGN="LEFT" BORDER="0" HEIGHT="186">
+				<TR>
+					<TD HEIGHT="56" VALIGN="TOP"><A HREF="http://www.cc.gatech.edu/projects/disl/QR/"> <IMG SRC="images/qrlogo.gif" WIDTH="110" HEIGHT="82" ALIGN="BOTTOM"
+						BORDER="0"></A></TD>
+				</TR>
+				<TR>
+					<TD>&nbsp;</TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/QR/overview.html"> <FONT SIZE="2" FACE="Arial, Helvetica">Project
+						Overview</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://jupiter.cc.gatech.edu:10699/query"> <FONT SIZE="2" FACE="Arial, Helvetica">Query Routing Demo</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD>&nbsp;</TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><B><FONT SIZE="3" FACE="Arial, Helvetica">Related Projects:</FONT></B></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="18" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/CQ/" target="_top"> <FONT SIZE="2" FACE="Arial, Helvetica">WebCQ</FONT></A></TD>
+				</TR>
+				<TR>
+					<TD HEIGHT="12" VALIGN="TOP" HEITHT="30"><A HREF="http://www.cc.gatech.edu/projects/disl/XWRAPElite" target="_top"> <FONT SIZE="2" FACE="Arial, Helvetica">XWrap
+						Elite</FONT></A></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD>
+			<P ALIGN="CENTER"><IMG SRC="images/qrbanner.jpg" WIDTH="456" HEIGHT="64" ALIGN="BOTTOM" BORDER="0"> <!--  <h2>
+  <Font color=BLUE> Generated User Query   </font>
+  </h2>
+  -->
+			<H2><FONT COLOR="blue">Getting client information</FONT></H2>
+			<P>Client HOST Name: <I>lua.cc.gatech.edu (130.207.97.120)</I> <BR>
+			<BR>
+			<B><FONT COLOR="blue">User Query</FONT></B> <BR>
+			<B>EXTRACT </B>&lt;author&gt;, &lt;title&gt;, &lt;price&gt;, &lt;url&gt; <BR>
+			<B>FROM</B> &lt;book&gt; @http://www.cc.gatech.edu/projects/disl/QR <BR>
+			<B>CONDITION</B> &lt;keyword&gt; contains 'java' <BR>
+			<B>CONSTRUCT</B> <BR>
+			&lt;book &gt;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;price&gt;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;url&gt;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;*&gt;<BR>
+			&lt;/book&gt;<BR>
+			
+			<H2><FONT COLOR="blue">Entering Query Routing phase one...</FONT></H2>
+			<P><BR>
+			<!--
+<APPLET  CODEBASE = http://jupiter.cc.gatech.edu:10699/QueryRouter CODE = edu.gatech.disl.qr.gui.RouterQueryApplet.class WIDTH = 300 HEIGHT = 50>
+<PARAM NAME = edu.gatech.disl.qr.ip VALUE ="130.207.97.11">
+<PARAM NAME = edu.gatech.disl.qr.query.from VALUE ="book">
+<PARAM NAME = edu.gatech.disl.qr.image.treeLeaf VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/treeLeaf.gif">
+<PARAM NAME = edu.gatech.disl.qr.image.treeOpen VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/treeLeaf.gif">
+<PARAM NAME = edu.gatech.disl.qr.keywordQuery VALUE ="java">
+<PARAM NAME = edu.gatech.disl.qr.query.category VALUE ="book.xml">
+<PARAM NAME = edu.gatech.disl.qr.servlet.sort VALUE ="http://jupiter.cc.gatech.edu:10699/servlet/fragment/sort">
+<PARAM NAME = edu.gatech.disl.qr.query.select VALUE ="book.author_, book.title_, book.price_, book.url_">
+<PARAM NAME = edu.gatech.disl.qr.image.queryIcon VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/queryIcon.gif">
+<PARAM NAME = edu.gatech.disl.qr.image.treeClosed VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/treeLeaf.gif">
+<PARAM NAME = edu.gatech.disl.qr.query.where VALUE ="">
+<PARAM NAME = edu.gatech.disl.qr.image.wrapperIcon VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/wrapper.gif">
+<PARAM NAME = edu.gatech.disl.qr.rmiport VALUE ="10690">
+<PARAM NAME = edu.gatech.disl.qr.image.urlIcon VALUE ="http://www.cc.gatech.edu/projects/disl/QR/images/url.gif"></APPLET>
+-->
+			<!--"END_CONVERTED_APPLET"-->
+		</TD>
+	</TR>
+</TABLE>
+<BR>
+<BR>
+
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0">
+	<TR>
+		<TD><A HREF="http://www.gatech.edu"> <IMG SRC="images/GTlogosm.gif" WIDTH="238" HEIGHT="80" ALIGN="TOP" BORDER="0"></A></TD>
+		<TD><A HREF="http://www.cc.gatech.edu/"> <IMG SRC="images/CCbanner.gif" WIDTH="368" HEIGHT="37" ALIGN="TOP" BORDER="0"></A></TD>
+		<TD><A HREF="http://www.cc.gatech.edu/projects/disl"> <IMG SRC="images/disllogo.gif" ALIGN="TOP" BORDER="0"></A></TD>
+		<TD><A HREF="http://www.cc.gatech.edu/projects/disl/QR"> <IMG SRC="images/qrlogo.jpg" WIDTH="110" HEIGHT="82" ALIGN="TOP"
+			BORDER="0"></A></TD>
+	</TR>
+</TABLE>
+<BR>
+
+<TABLE BORDER="0" CELLSPACING="0" WIDTH="438">
+	<TR>
+		<TD VALIGN="TOP">
+			<P ALIGN="CENTER"><B><A HREF="Query.html"><FONT SIZE="2" FACE="Arial">Choose Query Type</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="FormQuery.html"><FONT SIZE="2" FACE="Arial">User Query</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Category.html"><FONT SIZE="2" FACE="Arial">Choose category</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Applet.html"><FONT SIZE="2" FACE="Arial">Constructed Query </FONT></A><FONT SIZE="2"
+			FACE="Arial">| </FONT><A HREF="Sources.html"><FONT SIZE="2" FACE="Arial">Known Sources</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route1.html"><FONT SIZE="2" FACE="Arial">Routing Phase One</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Route2.html"><FONT SIZE="2" FACE="Arial">Routing Phase Two</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Plan.html"><FONT SIZE="2" FACE="Arial">Plan Generation</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Execution.html"><FONT SIZE="2" FACE="Arial">Execution</FONT></A><FONT SIZE="2"
+			FACE="Arial"> | </FONT><A HREF="Results.html"><FONT SIZE="2" FACE="Arial">Results</FONT></A></B>
+		</TD>
+	</TR>
+</TABLE>
+
+
+</BODY>
+
+</HTML>

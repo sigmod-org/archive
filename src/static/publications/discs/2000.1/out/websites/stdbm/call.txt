@@ -1,0 +1,151 @@
+NEW DEADLINE
+Due to the number od people who asked for an extension,the new deadline is now the 23rd of April.
+
+WORKSHOP ON SPATIO-TEMPORAL DATABASE MANAGEMENT
+STDBM'99
+Edinburgh, Scotland - September 10-11, 1999
+URL: timelab.co.umist.ac.uk/events/stdbm99
+co-located with VLDB'99 and supported by the Chorochronos network
+The Workshop on Spatio-Temporal Database Management will bring
+together leading researchers and developers in the area of spatio-
+temporal databases to discuss the state-of-the-art in spatio-temporal
+research and applications, and to start setting future research
+directions. The workshop is intended to serve as a forum for
+disseminating research and experience in this emerging and rapidly
+advancing area. Since the workshop immediately follows VLDB'99 in
+Edinburgh, the participants will be able to maximize their interchange
+of experiences and knowledge.
+SCOPE
+-----
+The primary focus of the workshop is twofold. Focus is on new and
+original research results in the areas of theoretical foundations,
+design, implementation, and applications of spatio-temporal database
+technology; and focus is on experience reports from the user and
+commercial communities that describe lessons learned in the
+development, operation, and maintenance of actual spatio-temporal
+databases in practical and innovative applications. The goal is to
+exchange research ideas and results which will not only contribute to
+the academic arena, but will also benefit the user and commercial
+communities in the near future and encourage a dialog between
+practitioners and researchers. Suggested topics include, but are not
+limited to, the following as they relate to spatio-temporal databases.
+o Spatio-Temporal Taxonomies
+o Ontologies for Spatio-Temporal Data
+o Spatio-Temporal Data Models
+o Spatio-Temporal Query Languages
+o Spatio-Temporal Conceptual Modeling
+o Spatio-Temporal Database Design
+o Imprecise Spatio-Temporal Information
+o Spatial Real-Time Databases
+o Reasoning with Spatio-Temporal Information
+o Spatio-Temporal Query Processing
+o Spatio-Temporal Indexing
+o Query Optimization Techniques
+o Distributed Spatio-Temporal Databases
+o Systems Architectures
+o Integration with Existing Commercial Products
+o Critical Evaluation of Standards Proposals
+o Use of Spatio-Temporal Data for Simulation
+o Benchmarking
+o Use of Spatio-Temporal Data for Decision Support
+o Knowledge Discovery in Spatio-Temporal Data
+o Visual Interfaces and Visualization
+o Novel and Challenging Applications
+o Requirements Analysis for Applications
+o Reports on Experience with Real Applications
+WORKSHOP FORMAT
+---------------
+The workshop will be organized in a manner designed to maximize the
+opportunity for interaction and exchange among the participants. It
+will consist mainly of paper presentations on recent developments and
+emerging trends, but time will also be allocated for informal
+discussions among the participants. This format should provide a
+forum for collaborations to develop among members of the international
+community of spatio-temporal database researchers and practitioners.
+SUBMISSION
+----------
+Authors are invited to electronically submit original research
+contributions or experience reports in English. Papers should be
+double-spaced and no longer than 8,000 words (roughly twenty pages).
+Submissions should include each author's full name, affiliation,
+complete address where you can be reached the week of June 4, 1999,
+telephone number, internet address, and, if available, fax
+number. Notification and reviews will be communicated via email.
+Submitters should indicate in a cover letter their willingness to
+attend the workshop and present their paper.
+Submitted papers will be refereed by at least three reviewers for
+quality, correctness, originality, and relevance. In addition, papers
+will be rated based on the degree to which they integrate spatial and
+temporal aspects, and this criterion will be considered during paper
+selection. Accepted papers will be presented at the workshop and
+included in the proceedings, which will be published by
+Springer-Verlag in their LNCS series, and will be available at the
+workshop.
+Proposals for panels that examine emerging, innovative, or otherwise
+provocative spatio-temporal database issues are encouraged as
+well. Panel proposals should include a 1-2 page summary of the topic
+and the names and affiliations of 3-4 panelists who have made a
+commitment to participate. A mix of industry and academic panel
+members is recommended.
+A fully electronic review process is being planned. Papers and panel
+proposals should be submitted electronically in postscript or pdf
+format by Friday, April 23, 1999, following the procedure described on
+the workshop's submission page, at
+<www.cs.auc.dk/stdbm99/submit.htm>.
+For enquiries regarding the technical program, contact the Program
+Chairs, at <csj@cs.auc.dk> or <Michel.Scholl@inria.fr>.
+IMPORTANT DATES
+---------------
+Paper and proposal submission: April 23, 1999 (NEW deadline)
+Notification of acceptance: June 4, 1999
+Camera-ready copy due: July 2, 1999
+Workshop: September 10-11, 1999
+For further information or in case of questions not related to the
+technical program, please contact the General Chair, Babis
+Theodoulidis, at <babis@sna.co.umist.ac.uk>.
+General Chair:
+Babis Theodoulidis, UMIST
+Program Chairs:
+Christian S. Jensen, Aalborg University
+Michel Scholl, CNAM and INRIA
+Program Committee:
+Lars Arge, Duke University
+Elisa Bertino, Universita di Milano
+Jan Chomicki, Monmouth University
+Max Egenhofer, University of Maine
+Andrew U. Frank, Technical Univ. Vienna
+St?phane Grumbach, INRIA
+Oliver Gunther, Humboldt Univ. Berlin
+Ralf H. Guting, FernUniversitdt Hagen
+Manolis Koubarakis, UMIST
+Nikos Lorentzos, Agri. Univ. Athens
+Yannis Manolopoulos, Aris. Univ. Thesaloniki
+Enrico Nardelli, Universita di L'Aquila
+Mario Nascimento, Unicamp
+Barbara Pernici, Politecnico di Milano
+Philippe Rigaux, CNAM Paris
+John Roddick, Univ. South Australia
+Hans-Jfrg Schek, ETH Zurich
+Timos Sellis, NTUA
+Stefano Spaccapietra, EPFL Lausanne
+Yannis Theodoridis, NTUA
+Babis Theodoulidis, UMIST
+Nectaria Tryfona, Aalborg University
+Vassilis Tsotras, UC Riverside
+Ouri Wolfson, Univ. of Illinois
+Michael Worboys, Keele University
+Finance:Yannis Kakoudakis, UMIST
+Organization coordination:Ilias Petrounias, UMIST
+Publications:Michael H. Bfhlen, Aalborg University
+Publicity:Alex Vakaloudis, UMIST
+Registration:Joann Slater, UMIST
+Technical coordination:Giedrius Slivinskas, Aalborg University
+
+VENUE
+The workshop immediately follows VLDB'99 in Edinburgh and it will be hosted in the Stakis Edinburgh Grosvenor Hotel which is located in the city centre (see map) and 5 minute walk from the Edinburgh International Conference Centre where VLDB’99 is hosted.
+
+
+
+
+ 
+

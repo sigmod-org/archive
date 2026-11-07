@@ -1,0 +1,575 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Loading a Cache with Query Results</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Loading a Cache with Query Results
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_laura_m_haas.htm">Laura M. Haas</a>, 
+<a href = "a_donald_kossmann.htm">Donald Kossmann</a>, and 
+<a href = "a_ioana_ursu.htm">Ioana Ursu</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/loadingacachewiladoi.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbcachingteciques.htm">Return to Caching Techniques</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Data intensive applications today usually run in either a client-server or a middleware environment. In either case, they must efficiently handle both database queries, which process large numbers of data objects, and application logic, which involves fine-grained object accesses (e.g., method calls). We propose a wholistic approach to speeding up such applications: we load the cache of a system with relevant objects as a by-product of query processing. This can potentially improve the performance of the application, by eliminating the need to fault in objects. However, it can also increase the cost of queries by forcing them to handle more data, thus potentially reducing the performance of the application. In this paper, we examine both heuristic and cost-based strategies for deciding what to cache, and when to do so. We show how these strategies can be integrated into the query optimizer of an existing system, and how the caching architecture is affected. We present the results of experiments using the Garlic database middleware system; the experiments demonstrate the usefulness of loading a cache with query results and illustrate the tradeoffs between the cost-based and heuristic optimization methods.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[ASU89]
+<dd>
+... 
+<dt>
+[BEG96]
+<dd>
+... 
+<dt>
+[CDN+97]
+<dd>
+<a name="CareyDNAGS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Asgarian:Mohammad.html">
+Mohammad Asgarian
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Paul.html">
+Paul Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shah:Dhaval.html">
+Dhaval Shah
+</a>
+: The BUCKY Object-Relational Benchmark (Experience Paper). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyDNAGS97">
+SIGMOD Conference 1997
+</a>
+: 135-146
+<dt>
+[CK97]
+<dd>
+<a name="CareyK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: On Saying "Enough Already!" in SQL. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyK97">
+SIGMOD Conference 1997
+</a>
+: 219-230
+<dt>
+[CKV93]
+<dd>
+<a name="CurewitzKV93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Curewitz:Kenneth_M=.html">
+Kenneth M. Curewitz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnan:P=.html">
+P. Krishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+: Practical Prefetching via Data Compression. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CurewitzKV93">
+SIGMOD Conference 1993
+</a>
+: 257-266
+<dt>
+[D+90]
+<dd>
+<a name="Deux90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deux:O=.html">
+O. Deux
+</a>
+: The Story of O2. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde2.html#Deux90">
+TKDE 2(1)
+</a>
+: 91-108(1990)
+<dt>
+[DFJ+96]
+<dd>
+<a name="DarFJST96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dar:Shaul.html">
+Shaul Dar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">
+Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:Michael.html">
+Michael Tan
+</a>
+: Semantic Data Caching and Replacement. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 330-341
+<dt>
+[DHM+98]
+<dd>
+<a name="DesslochHMMT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/De=szlig=loch:Stefan.html">
+Stefan De&szlig;loch
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mattos:Nelson_Mendon=ccedil=a.html">
+Nelson Mendon&ccedil;a Mattos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">
+Bernhard Mitschang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thomas:Joachim.html">
+Joachim Thomas
+</a>
+: Advanced Data Processing in KRISYS: Modeling Concepts, Implementation Techniques, and Client/Server Issues. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb7.html#DesslochHMMT98">
+VLDB Journal 7(2)
+</a>
+: 79-95(1998)
+<dt>
+[FJK96]
+<dd>
+<a name="FranklinJK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/J=oacute=nsson:Bj=ouml=rn_=THORN==oacute=r.html">
+Bj&ouml;rn &THORN;&oacute;r J&oacute;nsson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: Performance Tradeoffs for Client-Server Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#FranklinJK96">
+SIGMOD Conf. 1996
+</a>
+: 149-160
+<dt>
+[FK97]
+<dd>
+... 
+<dt>
+[GK94]
+<dd>
+<a name="GerlhofK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerlhof:Carsten_Andreas.html">
+Carsten Andreas Gerlhof
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+: A Multi-Threaded Architecture for Prefetching in Object Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#GerlhofK94">
+EDBT 1994
+</a>
+: 351-364
+<dt>
+[HKU99]
+<dd>
+... 
+<dt>
+[HKWY97]
+<dd>
+<a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">
+Jun Yang
+</a>
+: Optimizing Queries Across Diverse Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 276-285
+<dt>
+[HMNR95]
+<dd>
+<a name="HarderMNR95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/H=auml=rder:Theo.html">
+Theo H&auml;rder
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">
+Bernhard Mitschang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nink:Udo.html">
+Udo Nink
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ritter:Norbert.html">
+Norbert Ritter
+</a>
+: Workstation/Server-Architekturen f&uuml;r datenbankbasierte Ingenieuranwendungen. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ife/ife10.html#HarderMNR95">
+Informatik Forsch. Entw. 10(2)
+</a>
+: 55-72(1995)
+<dt>
+[KB94]
+<dd>
+<a name="KellerB94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Basu:Julie.html">
+Julie Basu
+</a>
+: A Predicate-based Caching Scheme for Client-Server Database Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis94.html#KellerB94">
+PDIS 1994
+</a>
+: 229-238
+<dt>
+[KJA93]
+<dd>
+<a name="KellerJA93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jensen:Richard.html">
+Richard Jensen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Shailesh.html">
+Shailesh Agrawal
+</a>
+: Persistence Software: Bridging Object-Oriented Programming and Relational Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#KellerJA93">
+SIGMOD Conference 1993
+</a>
+: 523-528
+<dt>
+[KK95]
+<dd>
+<a name="KemperK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+: Adaptable Pointer Swizzling Strategies in Object Bases: Design, Realization, and Quantitative Analysis. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb4.html#KemperK95">
+VLDB Journal 4(3)
+</a>
+: 519-566(1995)
+<dt>
+[KKM98]
+<dd>
+<a name="KemperKM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">
+Alfons Kemper
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matthes:Florian.html">
+Florian Matthes
+</a>
+: SAP R/3: A Database Application System (Tutorial). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#KemperKM98">
+SIGMOD Conference 1998
+</a>
+: 499
+<dt>
+[Loh98]
+<dd>
+<a name="Lohman88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">
+Guy M. Lohman
+</a>
+: Grammar-like Functional Rules for Representing Query Optimization Alternatives. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#Lohman88">
+SIGMOD Conference 1988
+</a>
+: 18-27
+<dt>
+[Mos92]
+<dd>
+<a name="Moss92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moss:J=_Eliot_B=.html">
+J. Eliot B. Moss
+</a>
+: Working with Persisten Objects: To Swizzle or Not to Swizzle. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse18.html#Moss92">
+TSE 18(8)
+</a>
+: 657-673(1992)
+<dt>
+[PZ91]
+<dd>
+<a name="PalmerZ91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Palmer:Mark.html">
+Mark Palmer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Fido: A Cache That Learns to Fetch. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1991
+</a>
+: 255-264
+<dt>
+[ROH98]
+<dd>
+<a name="RothOH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">
+Mary Tork Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ozcan:Fatma.html">
+Fatma Ozcan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+: Cost Models DO Matter: Providing Cost Information for Diverse Data Sources in a Federated System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1999
+</a>
+: 599-610
+<dt>
+[Rou91]
+<dd>
+<a name="Roussopoulos91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+: An Incremental Access Method for ViewCache: Concept, Algorithms, and Cost Analysis. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods16.html#Roussopoulos91">
+TODS 16(3)
+</a>
+: 535-563(1991)
+<dt>
+[RS97]
+<dd>
+<a name="RothS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">
+Mary Tork Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+: Don't Scrap It, Wrap It! A Wrapper Architecture for Legacy Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 266-275
+<dt>
+[SAC+79]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">
+SIGMOD Conference 1979
+</a>
+: 23-34
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/HaasKU99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Laura&nbsp;M.&nbsp;Haas&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donald&nbsp;Kossmann&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ioana&nbsp;Ursu},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Loading&nbsp;a&nbsp;Cache&nbsp;with&nbsp;Query&nbsp;Results},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{351-362},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+Biography of Calton Pu
+
+Calton Pu was born in Taiwan, but grew up in Brazil.  He received his
+PhD from University of Washington in 1986 and served on the faculty of
+Columbia University and Oregon Graduate Institute.  Currently, he is holding
+the position of Professor and John P. Imlay, Jr. Chair in Software at the
+College of Computing, Georgia Institute of Technology.  He is leading the
+Infosphere project, part of the DARPA Information Technology Expedition
+program.   Infosphere is a joint project between Georgia Tech and OGI, plus
+a number of other collaborators.  Infosphere builds on his previous and
+ongoing research interests.  First, he has been working on next-generation
+operating system kernels to achieve high performance, adaptiveness,
+security, and modularity, using program specialization, software feedback,
+and domain-specific languages.  This area has included projects such as
+Synthetix, Immunix, Microlanguages, and Microfeedback, applied to
+distributed multimedia and system survivability.  Second, he has been
+working on new data and transaction management by extending database
+technology.  This area has included projects such as Epsilon
+Serializability, Reflective Transaction Framework, and Continual Queries
+over the Internet.  His collaborations include applications of these
+techniques in scientific research on macromolecular structure data, weather
+data, and environmental data, as well as in industrial settings.  He has
+published more than 25 journal papers, 90 conference and refereed workshop
+papers, and served on more than 40 program committees, including the co-PC
+chair of SRDS'95, co-general chair of ICDE'97, and co-PC chair of ICDE'99.
+He is currently an associate editor of IEEE TKDE, DAPD, and IJODL.  His
+research is currently funded by NSF, DARPA, Intel, and other sources.

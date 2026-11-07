@@ -1,0 +1,119 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_6.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+An Alternative Storage Organization for ROLAP Aggregate Views Based on Cubetrees</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_k.htm#Yannis Kotidis">Yannis Kotidis</a>, <a href="m_authors_r.htm#Nick Roussopoulos">Nick Roussopoulos</a></center></td></tr></table></center><a target="disc_pdf68)" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+The Relational On-Line Analytical Processing (ROLAP) is emerging as the dominant approach in data warehousing with decision support applications. In order to enhance query performance, the ROLAP approach relies on selecting and materializing in summary tables appropriate subsets of aggregate views which are then engaged in speeding up OLAP queries. However, a straight forward relational storage implementation of materialized ROLAP views is immensely wasteful on storage and incredibly inadequate on query performance and incremental update speed. In this paper we propose the use of Cubetrees, a collection of packed and compressed R-trees, as an alternative storage and index organization for ROLAP views and provide an efficient algorithm for mapping an arbitrary set of OLAP views to a collection of Cubetrees that achieve excellent performance. Compared to a conventional (relational) storage organization of materialized OLAP views, Cubetrees offer at least a 2-1 storage reduction, a 10-1 better OLAP query performance, and a 100-1 faster updates. We compare the two alternative approaches with data generated from the TPC-D benchmark and stored in the Informix Universal Server (IUS). The straight forward implementation materializes the ROLAP views using IUS tables and conventional B-tree indexing. The Cubetree implementation materializes the same ROLAP views using a Cubetree Datablade developed for IUS. The experiments demonstrate that the Cubetree storage organization is superior in storage, query performance and update speed.  </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AAD+96]<dd><a name="AgarwalADGNRS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agarwal:Sameet.html">Sameet Agarwal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">Sunita Sarawagi</a>:
+On the Computation of Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#AgarwalADGNRS96">VLDB 1996</a>: 506-521<dt>[ACT97]<dd>...
+<dt>[BPT97]<dd><a name="BaralisPT97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">Elena Baralis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paraboschi:Stefano.html">Stefano Paraboschi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Teniente:Ernest.html">Ernest Teniente</a>:
+Materialized Views Selection in a Multidimensional Database.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#BaralisPT97">VLDB 1997</a>: 156-165<dt>[FR89]<dd><a name="FaloutsosR89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roseman:Shari.html">Shari Roseman</a>:
+Fractals for Secondary Key Retrieval.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods89.html#FaloutsosR89">PODS 1989</a>: 247-252<dt>[GBLP96]<dd><a name="GrayBLP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bosworth:Adam.html">Adam Bosworth</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Layman:Andrew.html">Andrew Layman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>:
+Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Total.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#GrayBLP96">ICDE 1996</a>: 152-159<dt>[GHRU97]<dd><a name="GuptaHRU97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Index Selection for OLAP.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#GuptaHRU97">ICDE 1997</a>: 208-219<dt>[GL95]<dd><a name="GriffinL95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Griffin:Timothy.html">Timothy Griffin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Libkin:Leonid.html">Leonid Libkin</a>:
+Incremental Maintenance of Views with Duplicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#GriffinL95">SIGMOD Conference 1995</a>: 328-339<dt>[GMS93]<dd><a name="GuptaMS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">Ashish Gupta</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">V. S. Subrahmanian</a>:
+Maintaining Views Incrementally.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#GuptaMS93">SIGMOD Conference 1993</a>: 157-166<dt>[Gup97]<dd><a name="Gupta97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Himanshu.html">Himanshu Gupta</a>:
+Selection of Views to Materialize in a Data Warehouse.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Gupta97">ICDT 1997</a>: 98-112<dt>[Gut84]<dd><a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">Antonin Guttman</a>:
+R-Trees: A Dynamic Index Structure for Spatial Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">SIGMOD Conference 1984</a>: 47-57<dt>[HRU96]<dd><a name="HarinarayanRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harinarayan:Venky.html">Venky Harinarayan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">Anand Rajaraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Implementing Data Cubes Efficiently.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HarinarayanRU96">SIGMOD Conf. 1996</a>: 205-216<dt>[JMS95]<dd><a name="JagadishMS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">Abraham Silberschatz</a>:
+View Maintenance Issues for the Chronicle Data Model.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#JagadishMS95">PODS 1995</a>: 113-124<dt>[Kim96]<dd>...
+<dt>[KR97]<dd>...
+<dt>[MQM97]<dd><a name="MumickQM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">Inderpal Singh Mumick</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Barinderpal_Singh.html">Barinderpal Singh Mumick</a>:
+Maintenance of Data Cubes and Summary Tables in a Warehouse.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#MumickQM97">SIGMOD Conference 1997</a>: 100-111<dt>[OG95]<dd><a name="ONeilG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Multi-Table Joins Through Bitmapped Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod24.html#ONeilG95">SIGMOD Record 24(3)</a>: 8-11(1995)<dt>[OQ97]<dd><a name="ONeilQ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">Patrick E. O'Neil</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">Dallan Quass</a>:
+Improved Query Performance with Variant Indexes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ONeilQ97">SIGMOD Conference 1997</a>: 38-49<dt>[RKR97]<dd><a name="RoussopoulosKR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kotidis:Yannis.html">Yannis Kotidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Mema.html">Mema Roussopoulos</a>:
+Cubetree: Organization of and Bulk Updates on the Data Cube.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#RoussopoulosKR97">SIGMOD Conference 1997</a>: 89-99<dt>[RL85]<dd><a name="RoussopoulosL85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leifker:Daniel.html">Daniel Leifker</a>:
+Direct Spatial Search on Pictorial Databases Using Packed R-Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod85.html#RoussopoulosL85">SIGMOD Conference 1985</a>: 17-31<dt>[Rou82]<dd><a name="Roussopoulos82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>:
+View Indexing in Relational Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#Roussopoulos82">TODS 7(2)</a>: 258-290(1982)<dt>[Sar97]<dd><a name="Sarawagi97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">Sunita Sarawagi</a>:
+Indexing OLAP Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#Sarawagi97">Data Engineering Bulletin 20(1)</a>: 36-43(1997)<dt>[Val87]<dd><a name="Valduriez87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#Valduriez87">TODS 12(2)</a>: 218-246(1987)<dt>[ZDN97]<dd><a name="ZhaoDN97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhao:Yihong.html">Yihong Zhao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deshpande:Prasad.html">Prasad Deshpande</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+An Array-Based Algorithm for Simultaneous Multidimensional Aggregates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#ZhaoDN97">SIGMOD Conference 1997</a>: 159-170</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/KotidisR98,<br>  author    = {Yannis Kotidis and<br>               Nick Roussopoulos},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {An Alternative Storage Organization for ROLAP Aggregate Views<br>               Based on Cubetrees},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {249-258},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_5.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Improving Adaptable Similarity Query Processing by Using Approximations</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_a.htm#Mihael Ankerst">Mihael Ankerst</a>, <a href="m_authors_b.htm#Bernhard Braunmuller">Bernhard Braunmuller</a>, <a href="m_authors_k.htm#Hans-Peter Kriegel">Hans-Peter Kriegel</a>, <a href="m_authors_s.htm#Thomas Seidl">Thomas Seidl</a></center></td></tr></table></center><a target="disc_pdfM80#" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Similarity search and content-based retrieval are becoming more and more important for an increasing number of applications including multimedia, medical imaging, 3D molecular and CAD database systems.
+As a general similarity model that is particularly adaptable to user preferences and, therefore, fits the subjective character of similarity, quadratic form distance functions have been successfully employed, e.g. for color histograms as well as for 2D and 3D shape histograms.
+Although efficient algorithms for processing adaptable similarity queries using multidimensional index structures are available, the quadratic nature of the distance function strongly affects the CPU time which in turn represents a high percentage of the overall runtime.
+The basic idea of our approach is to reduce the number of exact distance computations by adapting conservative approximation techniques to similarity range query processing and, in addition, to extend the concepts to <i>k</i>-nearest neighbor search.
+As part of a detailed analysis, we show that our methods guarantee no false drops.
+Experiments on synthetic data as well as on a large image database containing 112,000 color images demonstrate a significant performance gain, and the CPU time is improved by a factor of up to 6.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AFS93]<dd><a name="AgrawalFS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Efficient Similarity Search In Sequence Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/fodo/fodo93.html#AgrawalFS93">FODO 1993</a>: 69-84<dt>[AKS98]<dd>...
+<dt>[ALSS95]<dd><a name="AgrawalLSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lin:King=Ip.html">King-Ip Lin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sawhney:Harpreet_S=.html">Harpreet S. Sawhney</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>:
+Fast Similarity Search in the Presence of Noise, Scaling, and Translation in Time-Series Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#AgrawalLSS95">VLDB 1995</a>: 490-501<dt>[BBKK97]<dd><a name="BerchtoldBKK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">Christian B&ouml;hm</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+A Cost Model For Nearest Neighbor Search in High-Dimensional Data Space.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#BerchtoldBKK97">PODS 1997</a>: 78-86<dt>[Ber+97]<dd><a name="BerchtoldBBKK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">Christian B&ouml;hm</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Braunm=uuml=ller:Bernhard.html">Bernhard Braunm&uuml;ller</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+Fast Similarity Search in Multimedia Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BerchtoldBBKK97">SIGMOD Conference 1997</a>: 1-12<dt>[BKK96]<dd><a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+The X-tree : An Index Structure for High-Dimensional Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">VLDB 1996</a>: 28-39<dt>[BK94]<dd><a name="BrinkhoffK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">Thomas Brinkhoff</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+Approximations for a Multi-Step Processing of Spatial Joins.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/igis/igis94.html#BrinkhoffK94">IGIS 1994</a>: 25-34<dt>[BK97]<dd><a name="BerchtoldK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+S3: Similarity Search in CAD Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BerchtoldK97">SIGMOD Conference 1997</a>: 564-567<dt>[BKS93]<dd><a name="BrinkhoffKS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brinkhoff:Thomas.html">Thomas Brinkhoff</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>:
+Comparison of Approximations of Complex Objects Used for Approximation-based Query Processing in Spatial Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#BrinkhoffKS93">ICDE 1993</a>: 40-49<dt>[BKSS90]<dd><a name="BeckmannKSS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beckmann:Norbert.html">Norbert Beckmann</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Ralf.html">Ralf Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seeger:Bernhard.html">Bernhard Seeger</a>:
+The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#BeckmannKSS90">SIGMOD Conference 1990</a>: 322-331<dt>[Bri94]<dd>...
+<dt>[Fal+94]<dd><a name="FaloutsosBFHNPE94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">Ron Barber</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">Jim Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">Wayne Niblack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">William Equitz</a>:
+Efficient and Effective Querying by Image Content.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis3.html#FaloutsosBFHNPE94">JIIS 3(3/4)</a>: 231-262(1994)<dt>[FRM94]<dd><a name="FaloutsosRM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ranganathan:M=.html">M. Ranganathan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manolopoulos:Yannis.html">Yannis Manolopoulos</a>:
+Fast Subsequence Matching in Time-Series Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#FaloutsosRM94">SIGMOD Conference 1994</a>: 419-429<dt>[GG97]<dd><a name="GaedeG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gaede:Volker.html">Volker Gaede</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/G=uuml=nther:Oliver.html">Oliver G&uuml;nther</a>:
+Multidimensional Access Methods.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur30.html#GaedeG98">Computing Surveys 30(2)</a>: 170-231(1998)<dt>[GM93]<dd><a name="GaryM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gary:James_E=.html">James E. Gary</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehrotra:Rajiv.html">Rajiv Mehrotra</a>:
+Similar shape retrieval using a structural feature index.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is18.html#GaryM93">IS 18(7)</a>: 525-537(1993)<dt>[Gut84]<dd><a name="Guttman84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guttman:Antonin.html">Antonin Guttman</a>:
+R-Trees: A Dynamic Index Structure for Spatial Searching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#Guttman84">SIGMOD Conference 1984</a>: 47-57<dt>[Haf+95]<dd><a name="HafnerSEFN95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:James_L=.html">James L. Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sawhney:Harpreet_S=.html">Harpreet S. Sawhney</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">William Equitz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">Wayne Niblack</a>:
+Efficient Color Histogram Indexing for Quadratic Form Distance Functions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/pami/pami17.html#HafnerSEFN95">TPAMI 17(7)</a>: 729-736(1995)<dt>[Hen94]<dd>...
+<dt>[HS95]<dd><a name="HjaltasonS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hjaltason:Gisli_R=.html">Gisli R. Hjaltason</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Samet:Hanan.html">Hanan Samet</a>:
+Ranking in Spatial Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssd/ssd95.html#HjaltasonS95">SSD 1995</a>: 83-95<dt>[Jag91]<dd><a name="Jagadish91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">H. V. Jagadish</a>:
+A Retrieval Technique for Similar Shapes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod91.html#Jagadish91">SIGMOD Conference 1991</a>: 208-217<dt>[Kor+96]<dd><a name="KornSFSP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Korn:Flip.html">Flip Korn</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sidiropoulos:Nikolaos.html">Nikolaos Sidiropoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Siegel:Eliot.html">Eliot Siegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Protopapas:Zenon.html">Zenon Protopapas</a>:
+Fast Nearest Neighbor Search in Medical Image Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#KornSFSP96">VLDB 1996</a>: 215-226<dt>[KS98]<dd>...
+<dt>[KSB93]<dd>...
+<dt>[KSS97]<dd><a name="KriegelSS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schmidt:Thomas.html">Thomas Schmidt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seidl:Thomas.html">Thomas Seidl</a>:
+3D Similarity Search by Shape Approximation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ssd/ssd97.html#KriegelSS97">SSD 1997</a>: 11-28<dt>[PTVF92]<dd>William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery:
+Numerical Recipes in C, 2nd Edition.
+ Cambridge University Press 1992<br>
+<a href="http://www.nr.com/">Contents</a><dt>[RKV95]<dd><a name="RoussopoulosKV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kelley:Stephen.html">Stephen Kelley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vincent:Fr=eacute=d=eacute=ic.html">Fr&eacute;d&eacute;ic Vincent</a>:
+Nearest Neighbor Queries.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#RoussopoulosKV95">SIGMOD Conference 1995</a>: 71-79<dt>[Sei90]<dd>...
+<dt>[Sei97]<dd>...
+<dt>[SK97]<dd><a name="SeidlK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seidl:Thomas.html">Thomas Seidl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+Efficient User-Adaptable Similarity Search in Large Multimedia Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#SeidlK97">VLDB 1997</a>: 506-515<dt>[SK98]<dd><a name="SeidlK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seidl:Thomas.html">Thomas Seidl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+Optimal Multi-Step k-Nearest Neighbor Search.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#SeidlK98">SIGMOD Conference 1998</a>: 154-165<dt>[SRF87]<dd><a name="SellisRF87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sellis:Timos_K=.html">Timos K. Sellis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">Nick Roussopoulos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>:
+The R+-Tree: A Dynamic Index for Multi-Dimensional Objects.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#SellisRF87">VLDB 1987</a>: 507-518</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/AnkerstBKS98,<br>  author    = {Mihael Ankerst and<br>               Bernhard Braunm{\"u}ller and<br>               Hans-Peter Kriegel and<br>               Thomas Seidl},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Improving Adaptable Similarity Query Processing by Using Approximations},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {206-217},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

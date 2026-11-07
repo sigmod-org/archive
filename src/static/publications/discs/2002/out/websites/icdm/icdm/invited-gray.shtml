@@ -1,0 +1,28 @@
+<BODY bgcolor="#ffffee">
+
+<h2>The World Wide Telescope: Mining the Sky</h2>
+<h3>by Jim Gray, Microsoft Research, USA</h3>
+
+All astronomy data and literature will soon be online and accessible
+via the Internet.  The community is building the Virtual Observatory,
+an organization of this worldwide data into a coherent whole that can
+be accessed by anyone from anywhere. The resulting system will
+dramatically improve astronomer's ability to do multi-spectral and
+temporal studies integrating data from multiple instruments.  The
+virtual observatory data also provides a wonderful base for teaching
+astronomy, scientific discovery, and computational science. This talk
+outlines the challenges and benefits of federating the world's
+astronomy archives.  It explains why the World Wide Telescope will
+likely be a proving ground and poster child for grid-computing, for
+web services, and for data mining and visualization.  One nice thing
+about this data is that it is accessible today to data mining
+researchers.
+<p>
+
+<hr>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=invited-gray.dat"
+align=absmiddle> times since September 9, 2001.
+
+</BODY>

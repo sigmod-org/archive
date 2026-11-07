@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Querying Salient Objects</TITLE>
+<META NAME="description" CONTENT="Querying Salient Objects">
+<META NAME="keywords" CONTENT="disima">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="disima.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html103"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html101"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html95"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html104"
+ HREF="node8.html">Similarity Queries</A>
+<B> Up:</B> <A NAME="tex2html102"
+ HREF="node6.html">VisualMOQL Queries</A>
+<B> Previous:</B> <A NAME="tex2html96"
+ HREF="node6.html">VisualMOQL Queries</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00031000000000000000">
+Querying Salient Objects</A>
+</H2>
+Let us express the query <EM>Q</EM>: ``find images with 2 people next to each
+other without any building, or images with buildings without people, or
+images with animals'' in VisualMOQL. This query is in fact a combination
+of three queries:
+
+<UL>
+<LI><EM>Qa</EM>: images with 2 people next to each other without any building</LI>
+<LI><EM>Qb</EM>: images with buildings without people</LI>
+<LI><EM>Qc</EM>: images with animals</LI>
+</UL>
+The final expression of the query is given in Figure&nbsp;<A
+HREF="gif/LongQuery.gif"><IMG ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+SRC="gif/cross_ref_motif.gif"></A>. <EM>Qa</EM> is expressed in MOQL
+by <EM> (Query1 AND NOT Query2)</EM> where <EM> Query1</EM> is a
+sub-query expressing images with two people one to the west of the
+other (see the working canvas of Figure&nbsp;<A
+HREF="gif/LongQuery.gif"><IMG ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+SRC="gif/cross_ref_motif.gif"></A>) and <EM> Query2</EM> expresses
+images with buildings. <EM>Qb</EM> is expressed in MOQL by <EM>
+(Query3 AND NOT Query4)</EM> where <EM> Query3</EM> expresses images
+with buildings and <EM> Query4</EM> expresses images with
+people. <EM>Qc</EM> is expressed by the sub-query <EM> Query5</EM> and
+expresses images with animals. The final expression is obtained by
+combining the sub-queries using the <EM> OR</EM> connective.
+
+<P>
+The VisualMOQL expression is translated into MOQL
+(Figure&nbsp;<A
+HREF="gif/LongQueryTrans.gif"><IMG ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+SRC="gif/cross_ref_motif.gif"></A>) before being submitted to the query processor.
+Part of the query result can be seen in
+Figure&nbsp;<A
+HREF="gif/LongQueryRes.gif"><IMG ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+SRC="gif/cross_ref_motif.gif"></A>. An image in a query result can be an input of a similarity query. This is done by clicking on the check box above the image thumbnail.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html103"
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html101"
+ HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html95"
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html104"
+ HREF="node8.html">Similarity Queries</A>
+<B> Up:</B> <A NAME="tex2html102"
+ HREF="node6.html">VisualMOQL Queries</A>
+<B> Previous:</B> <A NAME="tex2html96"
+ HREF="node6.html">VisualMOQL Queries</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Vincent Oria</I>
+<BR><I>2001-01-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,20 @@
+Constraint Databases and Temporal Reasoning
+
+Peter Revesz
+
+Department of Computer Science and Engineering
+University of Nebraska-Lincoln
+
+Constraint databases provide a general approach to express and solve
+constraint problems.  Temporal constraint problems are an important
+subclass of applications.  We review constraint databases and
+constraint query languages and show that several well-known temporal
+and spatio-temporal databases and query languages can be viewed as
+subcases.  We also describe the relationship of timed automata and
+constraint databases.  Several constraint database systems that can
+handle spatio-temporal data will be described, in particular, their
+graphical user interface, special built-in operators for data
+visualization and animation, indexing, query optimization, and
+performance.  The issue of data interoperability among several models
+will be also covered.  Finally, we also discuss briefly the trade-off
+of greater expressive power and computational complexity.

@@ -1,0 +1,11 @@
+Biografia Daniela Florescu
+
+Daniela Florescu received her Ph.D. in 1996, on "Search Spaces for 
+Object Oriented Query Optimization". She is now a researcher at INRIA 
+Rocquencourt, in the Caravel project. Dr. Florescu is among the 
+authors of the XML-QL query language and the main designer of 
+the Strudel web-site management system. Her current research interests 
+include XML technologies (query languages, storage, query optimization), 
+static query optimization, data-intensive web site management, 
+and data cleaning. Daniela Florescu is also a member of the W3C 
+working group on new proposal submitted to the W3C working group.

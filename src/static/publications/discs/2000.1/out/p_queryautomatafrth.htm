@@ -1,0 +1,429 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Query Automata</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_2.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Query Automata
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_frank_neven.htm">Frank Neven</a> and 
+<a href = "a_thomas_schwentick.htm">Thomas Schwentick</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/queryautomatafrth.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podssemistructddata.htm">Return to Semistructured Data</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ It is common to model structured document databases by context-free and extended context-free grammars. A crucial difference is that the derivation trees of the former are ranked, while those of the latter are not. A main task in document transformation and information retrieval is locating subtrees satisfying some pattern. Therefore, unary queries, i.e., queries that map a tree to a set of its nodes, play an important role in the context of structured document databases. We want to understand how the natural and well-studied computation model of tree automata can be used to express such queries. We define a query automaton (QA) as a deterministic two-way finite automaton over trees that has the ability to select nodes depending on the state and the label at those nodes. We study QAs over ranked as well as over unranked trees. More precisely, we characterize the expressiveness of the different formalisms by linking them to monadic second-order logic, and we establish the complexity of their non-emptiness and equivalence problem.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AbiteboulCM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">
+Sophie Cluet
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: A Logical View of Structured Files. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb7.html#AbiteboulCM98">
+VLDB Journal 7(2)
+</a>
+: 96-114(1998)
+<dt>
+[2]
+<dd>
+... 
+<dt>
+[3]
+<dd>
+<a name="Baeza-YatesN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baeza=Yates:Ricardo_A=.html">
+Ricardo A. Baeza-Yates
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Navarro:Gonzalo.html">
+Gonzalo Navarro
+</a>
+: Integrating Contents and Structure in Text Retrieval. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod25.html#Baeza-YatesN96">
+SIGMOD Record 25(1)
+</a>
+: 67-79(1996)
+<dt>
+[4]
+<dd>
+<a name="BeeriM99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Schemas for Integration and Translation of Structured and Semi-structured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#BeeriM99">
+ICDT 1999
+</a>
+: 296-313
+<dt>
+[5]
+<dd>
+... 
+<dt>
+[6]
+<dd>
+... 
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+... 
+<dt>
+[11]
+<dd>
+<a name="GlobermanH96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Globerman:Noa.html">
+Noa Globerman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harel:David.html">
+David Harel
+</a>
+: Complexity Results for Two-Way and Multi-Pebble Automata and their Logics. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs169.html#GlobermanH96">
+TCS 169(2)
+</a>
+: 161-184(1996)
+<dt>
+[12]
+<dd>
+<a name="GonnetT87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gonnet:Gaston_H=.html">
+Gaston H. Gonnet
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tompa:Frank_Wm=.html">
+Frank Wm. Tompa
+</a>
+: Mind Your Grammar: a New Approach to Modelling Text. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#GonnetT87">
+VLDB 1987
+</a>
+: 339-346
+<dt>
+[13]
+<dd>
+<a name="GyssensPG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">
+Marc Gyssens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paredaens:Jan.html">
+Jan Paredaens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gucht:Dirk_Van.html">
+Dirk Van Gucht
+</a>
+: A Grammar-Based Approach Towards Unifying Hierarchical Data Models. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp23.html#GyssensPG94">
+SIAM J. Comput. 23(6)
+</a>
+: 1093-1137(1994)
+<dt>
+[14]
+<dd>
+... 
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="KilpelainenM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kilpel=auml=inen:Pekka.html">
+Pekka Kilpel&auml;inen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: Retrieval from Hierarchical Texts by Partial Patterns. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigir/sigir93.html#KilpelainenM93">
+SIGIR 1993
+</a>
+: 214-222
+<dt>
+[17]
+<dd>
+<a name="KilpelainenM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kilpel=auml=inen:Pekka.html">
+Pekka Kilpel&auml;inen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: Query Primitives for Tree-Structured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cpm/cpm94.html#KilpelainenM94">
+CPM 1994
+</a>
+: 213-225
+<dt>
+[18]
+<dd>
+<a name="Moriya94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moriya:Etsuro.html">
+Etsuro Moriya
+</a>
+: On Two-Way Tree Automata. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl50.html#Moriya94">
+IPL 50(3)
+</a>
+: 117-121(1994)
+<dt>
+[19]
+<dd>
+... 
+<dt>
+[20]
+<dd>
+... 
+<dt>
+[21]
+<dd>
+<a name="NeumannS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Neumann:Andreas.html">
+Andreas Neumann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seidl:Helmut.html">
+Helmut Seidl
+</a>
+: Locating Matches of Tree Patterns in Forests. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/fsttcs/fsttcs98.html#NeumannS98">
+FSTTCS 1998
+</a>
+: 134-145
+<dt>
+[22]
+<dd>
+... 
+<dt>
+[23]
+<dd>
+<a name="NevenB98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Neven:Frank.html">
+Frank Neven
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bussche:Jan_Van_den.html">
+Jan Van den Bussche
+</a>
+: Expressiveness of Structured Document Query Languages Based on Attribute Grammars. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 11-17
+<dt>
+[24]
+<dd>
+<a name="PairQ68" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pair:C=.html">
+C. Pair
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quere:A=.html">
+A. Quere
+</a>
+: D&eacute;finition et Etude des Bilangages R&eacute;guliers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Information and Control 13(6)
+</a>
+: 565-593(1968)
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26]
+<dd>
+<a name="Takahashi75" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Takahashi:Masako.html">
+Masako Takahashi
+</a>
+: Generalizations of Regular Sets and Their Applicatin to a Study of Context-Free Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+Information and Control 27(1)
+</a>
+: 1-36(1975)
+<dt>
+[27]
+<dd>
+... 
+<dt>
+[28]
+<dd>
+... 
+<dt>
+[29]
+<dd>
+<a name="Vardi89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Automata Theory for Database Theoreticans. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1989
+</a>
+: 83-92
+<dt>
+[30]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/NevenS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Frank&nbsp;Neven&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thomas&nbsp;Schwentick},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Query&nbsp;Automata},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{205-214},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

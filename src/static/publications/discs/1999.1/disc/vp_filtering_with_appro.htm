@@ -1,0 +1,125 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_3.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Filtering with Approximate Predicates</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_s.htm#Narayanan Shivakumar">Narayanan Shivakumar</a>, <a href="m_authors_g.htm#Hector Garcia-Molina">Hector Garcia-Molina</a>, <a href="m_authors_c.htm#Chandra Chekuri">Chandra Chekuri</a></center></td></tr></table></center><a target="disc_pdf,75C" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Approximate predicates can be used to reduce the number of comparisons made by expensive, complex predicates.
+For example, to check if a point is within a region (expensive predicate) we can first check if the point is within a bounding rectangle (approximate predicate).
+In general, approximate predicates may have false positive and false negative errors.
+In this paper we study the problem of selecting and structuring approximate predicates in order to reduce the cost of processing a user query, whilekeeping errors within user-specified bounds.
+We model different types of approximate predicates and their dependencies,we derive expressions for the errors of compound predicates, and we develop query optimization strategies.
+We also study the complexity of our optimization strategies under various scenarios, and we present an experimental case study that illustrates the potential gains achieved by optimizing queries with approximate predicates.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Aro96]<dd>...
+<dt>[CGK89]<dd><a name="ChimentiGK89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chimenti:Danette.html">Danette Chimenti</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gamboa:Ruben.html">Ruben Gamboa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">Ravi Krishnamurthy</a>:
+Towards on Open Architecture for LDL.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb89.html#ChimentiGK89">VLDB 1989</a>: 195-203<dt>[CGMP96]<dd><a name="ChangGP96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Chen=Chuan_K=.html">Chen-Chuan K. Chang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paepcke:Andreas.html">Andreas Paepcke</a>:
+Boolean Query Mapping Across Heterogeneous Information Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#ChangGP96">TKDE 8(4)</a>: 515-521(1996)<dt>[CK94]<dd><a name="ChaudhuriK94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kolaitis:Phokion_G=.html">Phokion G. Kolaitis</a>:
+Can Datalog be Approximated?
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods94.html#ChaudhuriK94">PODS 1994</a>: 86-96<dt>[CS93]<dd><a name="ChaudhuriS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>:
+Query Optimization in the Presence of Foreign Functions.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#ChaudhuriS93">VLDB 1993</a>: 529-542<dt>[CS96]<dd><a name="ChaudhuriS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">Surajit Chaudhuri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">Kyuseok Shim</a>:
+Optimization of Queries with User-defined Predicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ChaudhuriS96">VLDB 1996</a>: 87-98<dt>[CS97]<dd>...
+<dt>[ea95]<dd><a name="FlicknerSAHDGHLPSY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sawhney:Harpreet_S=.html">Harpreet S. Sawhney</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ashley:Jonathan.html">Jonathan Ashley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Qian.html">Qian Huang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">Byron Dom</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gorkani:Monika.html">Monika Gorkani</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">Jim Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Denis.html">Denis Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Steele:David.html">David Steele</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yanker:Peter.html">Peter Yanker</a>:
+Query by Image and Video Content: The QBIC System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer28.html#FlicknerSAHDGHLPSY95">IEEE Computer 28(9)</a>: 23-32(1995)<dt>[GJ79]<dd><a name="GareyJ79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garey:M=_R=.html">M. R. Garey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:David_S=.html">David S. Johnson</a>:
+Computer and Intractability: A Guide to NP-Completeness.
+ W. H. Freeman 1979, ISBN 0-7167-1044-7<br>
+<dt>[HNSS96]<dd><a name="HaasNSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">Peter J. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">S. Seshadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Selectivity and Cost Estimation for Joins Based on Random Sampling.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss52.html#HaasNSS96">JCSS 52(3)</a>: 550-569(1996)<dt>[HS93]<dd><a name="HellersteinS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>:
+Predicate Migration: Optimizing Queries with Expensive Predicates.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#HellersteinS93">SIGMOD Conference 1993</a>: 267-276<dt>[IM97]<dd>...
+<dt>[LYGM98]<dd>...
+<dt>[ME97]<dd><a name="MongeE97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Monge:Alvaro_E=.html">Alvaro E. Monge</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elkan:Charles.html">Charles Elkan</a>:
+An Efficient Domain-Independent Algorithm for Detecting Approximately Duplicate Database Records.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dmkd/dmkd97.html#MongeE97">DMKD 1997</a>: 0-<dt>[PD96]<dd><a name="PatelD96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">Jignesh M. Patel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Partition Based Spatial-Merge Join.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#PatelD96">SIGMOD Conf. 1996</a>: 259-270<dt>[Ros96]<dd>...
+<dt>[SAC+79]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34<dt>[SB88]<dd><a name="SaltonB88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salton:Gerard.html">Gerard Salton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buckley:Chris.html">Chris Buckley</a>:
+Term-Weighting Approaches in Automatic Text Retrieval.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipm/ipm24.html#SaltonB88">Information Processing and Management 24(5)</a>: 513-523(1988)<dt>[Sea96]<dd><a name="SeshadriHPLRSSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:Praveen.html">Praveen Seshadri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">Hamid Pirahesh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leung:T=_Y=_Cliff.html">T. Y. Cliff Leung</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">Divesh Srivastava</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stuckey:Peter_J=.html">Peter J. Stuckey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">S. Sudarshan</a>:
+Cost-Based Optimization for Magic: Algebra and Implementation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#SeshadriHPLRSSS96">SIGMOD Conf. 1996</a>: 435-446<dt>[SGM95]<dd><a name="ShivakumarG95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shivakumar:Narayanan.html">Narayanan Shivakumar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>:
+SCAM: A Copy Detection Mechanism for Digital Documents.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dl/dl95.html#ShivakumarG95">DL 1995</a>: 0-<dt>[SGM96]<dd><a name="ShivakumarG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shivakumar:Narayanan.html">Narayanan Shivakumar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">Hector Garcia-Molina</a>:
+Building a Scalable and Accurate Copy Detection Mechanism.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dl/dl96.html#ShivakumarG96">Digital Libraries 1996</a>: 160-168<dt>[SGMC98]<dd>...
+<dt>[Ull88]<dd><a name="Ullman88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">Jeffrey D. Ullman</a>:
+Principles of Database  and Knowledge-Base Systems, Volume I.
+ Computer Science Press 1988, ISBN 0-7167-8158-1<br>
+<dt>[Vas98]<dd>...
+<dt>[VP97]<dd><a name="VassalosP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vassalos:Vasilis.html">Vasilis Vassalos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">Yannis Papakonstantinou</a>:
+Describing and Using Query Capabilities of Heterogeneous Sources.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#VassalosP97">VLDB 1997</a>: 256-265<dt>[YI95]<dd><a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">Yannis E. Ioannidis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">Viswanath Poosala</a>:
+Histogram-Based Solutions to Diverse Database Estimation Problems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu18.html#IoannidisP95">Data Engineering Bulletin 18(3)</a>: 10-18(1995)</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/ShivakumarGC98,<br>  author    = {Narayanan Shivakumar and<br>               Hector Garcia-Molina and<br>               Chandra Chekuri},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Filtering with Approximate Predicates},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {263-274},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

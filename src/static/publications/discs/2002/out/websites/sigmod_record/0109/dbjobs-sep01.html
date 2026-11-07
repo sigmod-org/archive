@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html -->
+<HTML><HEAD><TITLE>Career-Enhancing Services at SIGMOD Online</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="Career-Enhancing Services at SIGMOD Online" name=description>
+<META content="MSHTML 5.50.4916.2300" name=GENERATOR></HEAD>
+<BODY bgColor=white>
+<P>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle><SMALL>This article appears in the September 2001 Issue 
+      of <A target=_blank 
+      href="http://www.acm.org/sigmod/record/issues/0109">SIGMOD Record</A> 
+      (Volume 30, Number 3) </SMALL></TD></TR>
+  <TR>
+    <TD align=middle><SMALL>The article is also available in the following 
+      formats: &nbsp; <A 
+      href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.pdf">PDF</A> 
+      (53KB) and gzipped <A 
+      href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.ps.gz">postscript</A> 
+      (19KB). </SMALL></TD></TR></TBODY></TABLE>
+<P> 
+<P>
+<H1 align=center><STRONG>Career-Enhancing Services at SIGMOD 
+Online</STRONG></H1>
+<P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=middle><STRONG><A target=_blank 
+      href="http://www.cs.umd.edu/~labrinid/">Alexandros 
+      Labrinidis</A></STRONG><BR>Department of Computer Science<BR>University of 
+      Maryland<BR><CITE><U>labrinid@cs.umd.edu</U></CITE> </TD>
+    <TD>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+    <TD align=middle><STRONG><A target=_blank 
+      href="http://www.cs.toronto.edu/~mendel/">Alberto O. 
+      Mendelzon</A></STRONG><BR>Department of Computer Science<BR>University of 
+      Toronto<BR><CITE><U>mendelzon@cs.toronto.edu</U></CITE> 
+</TD></TR></TBODY></TABLE>
+<P>
+<H2><A target=_blank 
+href="http://www.dbjobs.org/">http://www.dbjobs.org/</A></H2></CENTER>
+<P>
+<H3>Abstract</H3>This article serves three purposes. First of all, to introduce 
+<CITE>dbjobs</CITE>, the database of database jobs, and also describe its 
+functionality and architecture. Secondly, to present statistics for the dbgrads 
+system, after 18 months of continuous operation. Finally, to describe exciting 
+future projects for SIGMOD Online. 
+<P><!-- SECTION 1 -->
+<H2>1. Introduction to dbjobs</H2>As the name implies, dbjobs is the searchable, 
+online database of database jobs. It is moderated, specializing in 
+database-related job vacancies worldwide. 
+<P>The idea for a job posting database originated in the <A target=_blank 
+href="http://www.dbjunior.org/">DB Junior</A> mailing list<A 
+href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#footnote1"><SUP>1</SUP></A> 
+in the summer of 2000. Since the SIGMOD database of graduating students, 
+<CITE>dbgrads</CITE>, was already operational, dbjobs was created as a joint 
+effort between ACM SIGMOD and DB Junior. Under the current implementation, the 
+two databases share a common user base and cater both active and passive job 
+seekers with database expertise from all over the world. 
+<P>Although generic job sites boast hundreds of thousands of job postings, in 
+comparing dbjobs to them, one needs to remember only two numbers: 100% and zero. 
+
+<UL>
+  <LI><B>100%</B> is the percentage of jobs in the dbjobs database that are 
+  <CITE>database-related</CITE>. All postings must be approved by a moderator 
+  and thus only database-related vacancies will be listed. This approach is 
+  better than the keyword-based searching used at generic job sites, because we 
+  give the term <CITE>database-related</CITE> broader semantics that include for 
+  example data mining, knowledge bases, data warehousing, geographic information 
+  systems, etc. 
+  <P></P>
+  <LI><B>zero</B> is the cost to post a job vacancy in the dbjobs database and 
+  is also the cost to search the database. DB&nbsp;Jobs is a free service to the 
+  database community from ACM SIGMOD and DB&nbsp;Junior, and is currently being 
+  hosted at the University of Maryland, College Park. Commercial job sites 
+  usually allow free searching, but charge for posting job advertisements. This 
+  typically prohibits universities, research labs and small companies from 
+  advertising their job openings. </LI></UL>
+<P>The rest of the paper is organized as follows. In the next section we 
+describe the functionality of dbjobs in more detail. In Section&nbsp;3 we 
+summarize the architecture behind the dbjobs system. Section&nbsp;4 has an 
+overview of new services at SIGMOD Online. Finally, we conclude in 
+Section&nbsp;5. 
+<P><!-- SECTION 2 -->
+<H2>2. Using the dbjobs System</H2>
+<P><STRONG>Free Registration</STRONG> &nbsp; In order to avoid misuse of the 
+dbjobs system, all users need to register first. Registration is short and 
+simple: only the user's name, email address and a password are required. The 
+email address will be used as the account name and has to be verified. For this 
+reason, an email is sent to the new user's address and he/she has to respond 
+back or visit a pre-specified URL in order to activate the account. 
+<P><STRONG>Job Classification</STRONG> &nbsp; Job vacancies posted in dbjobs are 
+always database-related. However, to help job-seekers narrow down their query 
+results, we have implemented a unique classification system based on three 
+characteristics: 
+<OL>
+  <LI>The type of the employer: academia, government, industry, research lab, 
+  start-up, or other. 
+  <LI>The employment type: permanent, temporary, contract, post-doc, or 
+  internship. 
+  <LI>The type of the position, i.e. whether its duties involve development, 
+  management, research, and/or teaching. All that apply for the advertised 
+  position must be selected. </LI></OL>
+<P><STRONG>Searching the Jobs Database</STRONG> &nbsp; The dbjobs system aims at 
+the global job market, so except for the job classification, users can search 
+the jobs database by country, and also by state for searches within the US. 
+Additional search parameters include the minimum academic degree required for 
+the job and whether any experience is required. Finally, the job start date can 
+be used to limit the search results. 
+<P><STRONG>Additional Job Information</STRONG> &nbsp; Except for the searchable 
+attributes for each job vacancy, there is additional information that is mostly 
+textual and thus non-searchable. It includes the name of the employer, the job 
+title, a textual job description, contact information, and URL pointers to the 
+employer's home page and/or to additional information for the advertised job. 
+<P><STRONG>Submitting a Job Vacancy</STRONG> &nbsp; Any registered user can 
+submit a job vacancy. However, in order to guarantee the accuracy of the posted 
+advertisements, the email address of the user posting the job vacancy must match 
+the domain of the employer's URL. In other words, one will need to have an 
+ibm.com email address to post a job for IBM. Note, however, that there are no 
+restrictions for the email address listed as the contact information, which can 
+be different from the poster's registered email address. After a job 
+advertisement is submitted, it needs to be approved by the moderator, before 
+being published in the jobs database. After publication, a notification message 
+is emailed to the user who submitted the job posting. 
+<P><STRONG>Personalization</STRONG> &nbsp; Every registered user must login 
+before accessing the dbjobs system. Except for preventing misuse, limiting 
+access to registered users will allow us to support personalization in the 
+future. Personalization plans include storing previous queries for each user and 
+employing ``triggers'' for new entries that match a pre-specified profile. Using 
+cookies, we allow automatic logins for the same user from the same machine for 
+up to ten days. 
+<P><STRONG>Advertising</STRONG> &nbsp; Currently, dbjobs does not accept paid 
+advertisements. However, there are two non-paid forms of advertising on the 
+dbjobs home page. The <CITE>job vacancy showcase</CITE> is a randomly selected 
+job advertisement that is displayed on the dbjobs home page for about a week. 
+Furthermore, all employers that have posted a job vacancy in dbjobs are listed 
+in the <CITE>featured employers list</CITE>, which also appears in the dbjobs 
+home page. 
+<P><!-- SECTION 3 -->
+<H2>3. dbjobs System Architecture</H2>
+<P>The driving force in the design and implementation of the dbjobs system was 
+its integration with dbgrads, the SIGMOD database of graduating database 
+students (<A target=_blank 
+href="http://www.dbgrads.org/">http://www.dbgrads.org/</A>). Specifically, we 
+wanted to re-use as much of the dbgrads code as possible and also enable the 
+dbjobs system to share the registered user database with the dbgrads system. 
+Fortunately, modifying the dbgrads code was not a problem, since both systems 
+were implemented by the same person<A 
+href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#footnote2"><SUP>2</SUP></A>. 
+
+<P>We kept the original software setup from dbgrads in the combined 
+dbjobs/dbgrads system; we used the Apache web server with mod_perl, MySQL for 
+the back-end DBMS, and CGI.pm/Perl for HTML generation and form parsing. 
+Labrinidis and Roussopoulos&nbsp;[<A 
+href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#labrinidis00modperl">LR00</A>] 
+give a detailed description of the original dbgrads system. 
+<P>We identified common tasks from both systems and packaged them as separate 
+modules. Examples of common tasks are performing user authorization, sending 
+email, and printing HTML headers and footers. For this to work properly, we 
+needed to have different initializations for certain attributes, which we 
+formalized by implementing our own Perl <CITE>template</CITE> library. The 
+current dbjobs/dbgrads implementation uses templates heavily, which greatly 
+simplifies the code and also facilitates the creation of ``clone'' services. For 
+example, <CITE>PE&nbsp;grads</CITE>, the database of graduating students in 
+performance evaluation (<A target=_blank 
+href="http://www.pegrads.org/">http://www.pegrads.org/</A>), is a direct clone 
+of dbgrads. 
+<P>Both dbjobs and dbgrads, as well as their ``clones,'' share a unified 
+database of registered users, which greatly simplifies user management for these 
+services. Finally, in addition to making it easier for people to join, the 
+shared database will enable future personalized services. 
+<P><!-- SECTION 4 -->
+<H2>4. Online Services at SIGMOD</H2>
+<P>SIGMOD Online, at <A target=_blank 
+href="http://www.acm.org/">http://www.acm.org/</A>, is the web site for the ACM 
+Special Interest Group on Management of Data. It contains, among other 
+resources, information about SIGMOD activities, officers, and awards, a free 
+database software catalog, a calendar of database-related events, advance copies 
+of the proceedings of the SIGMOD and PODS conferences, online versions of (parts 
+of) the SIGMOD Anthology and Digital Symposium Collection, the web pages for the 
+SIGMOD Record, and a mirror of Michael Ley's DBLP bibliography. In this article 
+we highlight SIGMOD Online career-related services of the past, present, and 
+future. 
+<P><!-- SECTION 4.1 -->
+<H3>4.1 Past: dbgrads</H3>The dbgrads system is the searchable, online database 
+of graduating database students from all over the world. It is a free service to 
+the database community by ACM SIGMOD, and is currently being hosted at the 
+University of Maryland. Students can list themselves in <CITE>dbgrads</CITE>, 
+specifying their qualifications and their job preferences, including when they 
+will be available and what type of job they are looking for. Employers can query 
+the database in order to locate talented candidates for their job vacancies, 
+which can include summer internships. 
+<P>The dbgrads system went online in December 1999 and has operated continuously 
+for the past 18 months. 1195 people have registered for the service as of July 
+10, 2001. Table&nbsp;1 has the (user-provided) location distribution for all 
+registered dbgrads users. Clearly, dbgrads has a world-wide audience. More than 
+half of the registered users live outside North America, with the biggest 
+concentrations in Europe (27%) and Asia (15%). 
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>continent </TH>
+    <TH colSpan=2>users </TH></TR>
+  <TR>
+    <TD align=left>not specified </TD>
+    <TD align=right>10 </TD>
+    <TD align=right>1% </TD></TR>
+  <TR>
+    <TD align=left>Africa </TD>
+    <TD align=right>12 </TD>
+    <TD align=right>1% </TD></TR>
+  <TR>
+    <TD align=left>North America </TD>
+    <TD align=right>571 </TD>
+    <TD align=right>48% </TD></TR>
+  <TR>
+    <TD align=left>South America </TD>
+    <TD align=right>38 </TD>
+    <TD align=right>3% </TD></TR>
+  <TR>
+    <TD align=left>Asia </TD>
+    <TD align=right>179 </TD>
+    <TD align=right>15% </TD></TR>
+  <TR>
+    <TD align=left>Europe </TD>
+    <TD align=right>324 </TD>
+    <TD align=right>27% </TD></TR>
+  <TR>
+    <TD align=left>Oceania </TD>
+    <TD align=right>61 </TD>
+    <TD align=right>5% </TD></TR></TBODY></TABLE><STRONG>Table 1:</STRONG> Location 
+distribution for dbgrads users </CENTER>
+<P>Out of the 1195 registered dbgrads users, 451 (38%) also submitted their 
+entry to the graduating student database. Out of the 451 dbgrads students, 91 
+(20%) will be graduating (or graduated) with a Bachelors degree, 198 (44%) with 
+a Masters degree, and 151 (34%) with a PhD. 
+<P>Students who added their entry to the dbgrads database had the option of 
+specifying a preference for a type of employer: industry, research lab, or 
+academia. If they had more than one preference (e.g. research lab and academia), 
+they were instructed to declare ``no preference.'' Table&nbsp;2 has the 
+distribution for these preferences, grouped by year of graduation. Although 
+these numbers are aggregated over students from all over the world, we suspect 
+we can see the results of the recent high-tech slowdown: only 18% of students 
+prefer working in the industry in 2001, compared to 31% last year. 
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>job type</TH>
+    <TH colSpan=2>2000 </TH>
+    <TH colSpan=2>2001 </TH></TR>
+  <TR>
+    <TD align=left>not specified </TD>
+    <TD align=right>147 </TD>
+    <TD align=right>51% </TD>
+    <TD align=right>90 </TD>
+    <TD align=right>58% </TD></TR>
+  <TR>
+    <TD align=left>industry </TD>
+    <TD align=right>91 </TD>
+    <TD align=right>31% </TD>
+    <TD align=right>28 </TD>
+    <TD align=right>18% </TD></TR>
+  <TR>
+    <TD align=left>research lab </TD>
+    <TD align=right>32 </TD>
+    <TD align=right>11% </TD>
+    <TD align=right>23 </TD>
+    <TD align=right>15% </TD></TR>
+  <TR>
+    <TD align=left>research lab </TD>
+    <TD align=right>19 </TD>
+    <TD align=right>7% </TD>
+    <TD align=right>13 </TD>
+    <TD align=right>9% </TD></TR></TBODY></TABLE><STRONG>Table 2:</STRONG> 
+Preference for type of employer </CENTER>
+<P>Graduating students were also able to declare preference for the type of 
+position they were interested in, and were similarly instructed to declare no 
+preference if they were interested in more than one type. Out of 451 students, 
+169 (37%) declared no preference, 231 (52%) were interested in a permanent 
+position, 36 (8%) in an internship, and 15 (3%) in a post-doc position. 
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>keyword </TH>
+    <TH>occurrences </TH></TR>
+  <TR>
+    <TD align=left>database/s </TD>
+    <TD align=right>216 </TD></TR>
+  <TR>
+    <TD align=left>data </TD>
+    <TD align=right>160 </TD></TR>
+  <TR>
+    <TD align=left>web/internet/www </TD>
+    <TD align=right>96 </TD></TR>
+  <TR>
+    <TD align=left>mining (data) </TD>
+    <TD align=right>88 </TD></TR>
+  <TR>
+    <TD align=left>system/s </TD>
+    <TD align=right>77 </TD></TR>
+  <TR>
+    <TD align=left>information </TD>
+    <TD align=right>51 </TD></TR>
+  <TR>
+    <TD align=left>warehouse/-ing/olap </TD>
+    <TD align=right>40 </TD></TR>
+  <TR>
+    <TD align=left>java </TD>
+    <TD align=right>33 </TD></TR>
+  <TR>
+    <TD align=left>development </TD>
+    <TD align=right>33 </TD></TR>
+  <TR>
+    <TD align=left>distributed </TD>
+    <TD align=right>30 </TD></TR>
+  <TR>
+    <TD align=left>XML </TD>
+    <TD align=right>27 </TD></TR>
+  <TR>
+    <TD align=left>query </TD>
+    <TD align=right>26 </TD></TR></TBODY></TABLE><STRONG>Table 3:</STRONG> Frequency 
+of keywords in interests list </CENTER>
+<P>Finally, in Table&nbsp;3 we present the frequencies of keywords in the 
+interests field for dbgrads students. 401 out of 451 students (89%) supplied a 
+list of interests. The word ``database'' or ``databases'' occurred 216 times 
+(48%). Other popular words were data, web/internet/www and data mining. 
+<P><!-- SECTION 4.2 -->
+<H3>4.2 Present: dbjobs</H3>As described above, dbjobs is the moderated, 
+searchable, online database of database-related jobs. It is a joint effort 
+between ACM SIGMOD and DB&nbsp;Junior. After rigorous testing, the dbjobs system 
+(<A target=_blank href="http://www.dbjobs.org/">http://www.dbjobs.org/</A>) went 
+live in May 2001. So far, in addition to the 1195 registered dbgrads users, 87 
+new users registered through dbjobs, bringing the total to 1282. 
+<P>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD><BR></TD>
+    <TH>active </TH>
+    <TH>passive </TH></TR>
+  <TR>
+    <TD>employers </TD>
+    <TD align=middle>dbgrads </TD>
+    <TD align=middle>dbjobs </TD></TR>
+  <TR>
+    <TD>job-seekers </TD>
+    <TD align=middle>dbjobs </TD>
+    <TD align=middle>dbgrads </TD></TR></TBODY></TABLE><STRONG>Table 4:</STRONG> 
+Applicability of dbgrads/dbjobs </CENTER>
+<P>Combined, dbgrads and dbjobs fulfill the needs of both employers and 
+job-seekers, whether they are active or passive in their search for talented 
+applicants or job vacancies (Table&nbsp;4). 
+<P><!-- SECTION 4.3 -->
+<H3>4.3 Future: napster-type paper search</H3>Here is a sketch of a future 
+SIGMOD Online service that would be of use not only to those of you starting 
+your careers, but to the community as a whole. Simply put, it's a 
+Napster&nbsp;[<A target=_blank 
+href="http://www.napster.com/">http://www.napster.com/</A>] for papers. We 
+include it in this article because some of you may be interested in 
+contributing, and this is at the moment an idea in search of champions to carry 
+it forward. 
+<P>A bit of background: a couple of years ago, when one of us took over as 
+SIGMOD Information Director, we had the idea of building a repository of 
+(pointers to) online database papers. However, two parallel developments made 
+the task seem less urgent: the establishment of CoRR, the Computing Research 
+Repository&nbsp;[<A target=_blank 
+href="http://www.acm.org/repository/">www.acm.org/repository/</A>], and the 
+expansion of the SIGMOD Anthology and DiSC. CoRR has not grown as hoped; we can 
+only speculate as to the reasons, but we suspect that by the time CoRR was set 
+up, the existence of a fairly convenient mechanism for paper sharing-the 
+Web-weakened the need for a central repository. The Anthology and DiSC have been 
+extremely successful, but they contain, for the most part, already published 
+material. 
+<P>There is still the need for easy dissemination of things like full versions 
+of conference papers, early descriptions of work in progress, graduate theses, 
+etc.; exactly the kind of publications that used to go by the name of technical 
+reports and were distributed by physical mail in the distant past that most of 
+you are too young to remember. Of course such a mechanism could also be used for 
+already published papers, subject to whatever intellectual property constraints 
+apply. It is probably obvious to every reader of this bulletin that having 
+papers freely available online is A Good Thing; objective evidence for this is 
+given by Lawrence&nbsp;[<A 
+href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#lawrence01online_or_invisible">Law01</A>], 
+who reports strong correlation between free online availability and number of 
+citations. 
+<P><STRONG>Requirements</STRONG> &nbsp; So, we are proposing a service that 
+supports registering and searching for research papers that may be stored 
+anywhere on the Web. What should such a service be like? 
+<P>First, it should be easy to get one's papers registered. We can envision a 
+graded system where the more information an author supplies, the better the 
+service provided. The minimum level of information is a pointer to a bunch of 
+papers. The author can supply this in the form of a URL, or, as in Napster, by 
+placing the papers in a certain directory, or in some other equally simple way. 
+A higher level of information is a set of XML descriptions of each paper (using, 
+e.g. the standard bibtex XML encoding described by Hendrikse&nbsp;[<A 
+href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#bibteXML01">Hen01</A>]). 
+
+<P>Second, the data should be fresh. Broken or obsolete links will quickly 
+discourage users. Of course, some of the responsibility for freshness rests with 
+the data providers-the authors. 
+<P>Third, search should be fast and effective. The more information an author 
+has supplied, the smarter the search should be. 
+<P><STRONG>Technical Challenges</STRONG> &nbsp; There are some interesting 
+questions posed by the design and implementation of such a system. 
+<UL>
+  <LI>Is there a centralized index like in traditional Web search engines or 
+  Napster? Distributed index? Replicated index? No index, a la Gnutella&nbsp;[<A 
+  target=_blank href="http://gnutella.wego.com/">gnutella.wego.com/</A>]? 
+  Gribble <CITE>et al. </CITE>&nbsp;[<A 
+  href="http://www.acm.org/sigmod/record/issues/0109/dbjobs-sep01.html#gribble01p2p_db">GHI+01</A>] 
+  give an overview of problems related to peer-to-peer databases. 
+  <LI>Given the minimum author-supplied information, a URL, what exactly is 
+  indexed? Are pages pointed to by this URL crawled? How far? 
+  <LI>If an index is built, how is its freshness ensured? Do authors provide 
+  updates, or are they automatically detected? (Or both?) 
+  <LI>Who gets to ``publish'' their papers? Is there any sort of access control? 
+
+  <LI>How do we ensure there are no copyright violations? (Or that, if there 
+  are, they are the authors' responsibility, not SIGMOD's). 
+  <LI>What is the mechanism for participating as an author? Filling out a Web 
+  form? Sending an email? Downloading a program? Being ``nominated'' by someone 
+  else? 
+  <LI>What is the data model? The query language? How is query processing done? 
+  </LI></UL>
+<P><!-- SECTION 5 -->
+<H2>5. Conclusions</H2>
+<P>We have surveyed the past, present and future of some SIGMOD Online services. 
+We would like to emphasize that SIGMOD is a volunteer-driven organization and 
+that people at the start of their careers tend to make great volunteers, so 
+please get involved by sending mail to either one of us. Many of the services 
+that we take for granted now, such as the DB&nbsp;World mailing list, the DBLP, 
+the SIGMOD Anthology, and the DiSC collection, exist because of the hard work of 
+many volunteers. 
+<P><!-- REFERENCES -->
+<H2>References</H2>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top><A name=gribble01p2p_db><STRONG>[GHI+01]</STRONG></A> </TD>
+    <TD>Steven Gribble, Alon Halevy, Zachary Ives, Maya Rodrig, and Dan Suciu. 
+      ``What Can Peer-to-Peer Do for Databases, and Vice Versa?''. In 
+      <CITE>Proceedings of the Fourth International Workshop on the Web and 
+      Databases (WebDB'2001)</CITE>, Santa Barbara, California, USA, May 
+  2001.</TD></TR>
+  <TR>
+    <TD><BR></TD></TR>
+  <TR>
+    <TD vAlign=top><A name=bibteXML01><STRONG>[Hen01]</STRONG></A> </TD>
+    <TD>Zeger Hendrikse. ``An XML equivalent of BibTeX: bibteXML''. Available 
+      at <A target=_blank 
+      href="http://xml.coverpages.org/bibteXML.html">xml.coverpages.org/bibteXML.html</A>, 
+      June 2001.</TD></TR>
+  <TR>
+    <TD><BR></TD></TR>
+  <TR>
+    <TD vAlign=top><A 
+      name=lawrence01online_or_invisible><STRONG>[Law01]</STRONG></A> </TD>
+    <TD>Steve Lawrence. ``Online or Invisible?''. <CITE>Nature</CITE>, 
+      411(6837):521, 2001.</TD></TR>
+  <TR>
+    <TD><BR></TD></TR>
+  <TR>
+    <TD vAlign=top><A name=labrinidis00modperl><STRONG>[LR00]</STRONG></A> </TD>
+    <TD>Alexandros Labrinidis and Nick Roussopoulos. ``<A target=_blank 
+      href="http://www.cs.umd.edu/~labrinid/papers/2000/modperl.html">Generating 
+      dynamic content at database-backed web servers: cgi-bin vs mod_perl</A>''. 
+      <CITE>SIGMOD Record</CITE>, 29(1), March 2000.</TD></TR></TBODY></TABLE>
+<P><!-- FOOTNOTES -->
+<H2>Footnotes </H2>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top><A name=footnote1>1.</A> </TD>
+    <TD>DB&nbsp;Junior is the international organization of junior database 
+      researchers. DB&nbsp;Junior was founded in May 1999 during the EDBT Summer 
+      School. For more information please visit <A 
+      href="http://www.dbjunior.org/">http://www.dbjunior.org/</A>. </TD></TR>
+  <TR>
+    <TD vAlign=top><A name=footnote2>2.</A> </TD>
+    <TD>Alexandros Labrinidis did the implemention of dbgrads and dbjobs. For 
+      a list of the many people who provided valuable feedback please visit <A 
+      target=_blank 
+      href="http://www.dbjobs.org/credits.html">www.dbjobs.org/credits.html</A></TD></TR></TBODY></TABLE>
+<P><!-- BIOSKETCHES -->
+<H2>About the Authors</H2><STRONG>Alexandros Labrinidis</STRONG> &nbsp; is a PhD 
+candidate at the Department of Computer Science of the University of Maryland, 
+College Park. He is currently the Associate Editor for the Career Forum column 
+and the webmaster for SIGMOD Record. His research interests include scalable 
+database-backed web servers, Quality of Service, Quality of Data, and data 
+warehousing. 
+<P><STRONG>Alberto O. Mendelzon</STRONG> &nbsp; is a professor at the Department 
+of Computer Science of the University of Toronto. He received his PhD degree in 
+Electrical Engineering and Computer Science from Princeton University. He is 
+currently the ACM SIGMOD Information Director and the webmaster for SIGMOD 
+Online, as well as Associate Editor for ACM TODS and the VLDB Journal. His 
+research interests include OLAP and data warehousing, semistructured data, and 
+web databases. 
+<P> 
+<P>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" bgColor=#cccccc border=0>
+  <TBODY>
+  <TR>
+    <TD align=left><SMALL>Back to the <A 
+      href="http://www.acm.org/sigmod/record/issues/0109/index.html">Table of 
+      Contents</A></SMALL> </TD>
+    <TD align=right><SMALL>03 August 2001 
+</SMALL></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

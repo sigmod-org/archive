@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+    <head>
+        <title>VLDB 2001: The Specificity Factor</title>
+        <META NAME="description" CONTENT="27th International Conference on Very Large Databases">
+        <META NAME="description" CONTENT="VLDB 2001">
+        <META NAME="description" CONTENT="The Specificity Factor">
+    </head>
+    <body bgcolor="#FFFFFF"
+          text="#000000" link="#0000FF" vlink="#800080" alink="#0000FF">
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+
+                <td valign="top">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="left">
+					<a href="index.html"><img border="0" src="img/l-head.gif" alt="VLDB 2001 Logo"></a>
+                    </td>
+                    <td align="right">
+                      <img src="img/r-head.gif" alt="VLDB 2001 Logo">
+                    </td>
+                   </tr>
+                   <tr>
+                    <td colspan="2" align="left">
+                        <p Align="right">
+                            <font face="Arial, helvetica" size="+3" Color="#900030">
+                                <br>
+                                The Specificity Factor (Spf)
+                            </font>
+                        </p>
+                        <center>
+                            <font size="+1">
+                                 VLDB'2001 Program Committee Chairs and General Chair<br>
+                            </font>
+                                 (Stefano Ceri, Peter Apers, Kotagiri Ramamohanarao, Richard Snodgrass,
+                                 and Paolo Atzeni)<br>
+                                <br>August, 2000
+                    </center>
+                    <p align="justify">
+                    Many have noted that the papers appearing in recent database conferences
+                    such as VLDB and SIGMOD are getting more and more specific. Ten years ago,
+                    there were papers introducing new data models, query languages, and
+                    conceptual notations; one encounters few such papers today. This is in some
+                    way inevitable, as the field matures and as a literature and set of
+                    accepted concepts and paradigms becomes prevalent. Therein also lies the
+                    danger that the field is becoming ossified, that papers counter to the
+                    prevailing wisdom are rejected in favor of thorough studies of narrow topics
+                    of interest to only a few people.
+                    </p>
+                    <p align="justify">
+                    The <a href="http://www.acm.org/sigmod/record/issues/9812/asilomar.html">
+                    Asilomar report</a> labels these latter papers "delta-X" papers, and
+                    recommends a radical approach of going to poster sessions and invited papers
+                    for conferences. We do not agree with such a disruptive strategy, preferring
+                    instead a more evolutionary approach that encourages broader papers.
+                    </p>
+                    <p align="justify">
+                    The Spf is a rating that is a single digit, with a larger Spf indicating
+                    the paper is more specific, and thus appeals to a smaller portion of the
+                    community. While more specific papers should not be rejected out of hand,
+                    they need to be particularly compelling to be selected over less specific
+                    alternative papers.
+                    </p>
+                    <p align="justify">
+                    The Spf is designed to be determined quickly, from a paper's title and
+                    abstract. Studies will be needed to determine whether the Spf is a
+                    well-defined metric; for this reason, we will not include it in the overall
+                    ranking computed for each paper, but will instead just have it available
+                    as one of the many considerations kept in mind when the paper is evaluated,
+                    both by the individual program committee members and during the final
+                    discussion at the program committee meeting.
+                    </p>
+                    <p align="justify">
+                    Very generally, 1 (one) is added to the Spf for each significant reduction
+                    in the paper's domain of applicability. To provide an absolute scale, we
+                    list some rough guidelines. The guidelines are incomplete, and are intended
+                    only to be illustrative. Each successive level assumes everything in the
+                    previous levels  fixed and  known.
+                    </p>
+                    <p align="justify">
+                    <b>Spf Discussion</b><br>
+                    <table>
+                        <tr valign="top">
+                            <td>0.</td>
+                            <td>The paper introduces a new benefit to humanity (after all, that
+                                is ultimately why we are in this business).
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>1.</td>
+                            <td>The paper introduces a new means to effect a known benefit to
+                                humanity.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>2.</td>
+                            <td>The paper introduces a new class of software to implement a known
+                                means to help humanity. This software manages data in some way, but
+                                the paper itself is not particular to a data model or query language.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>3.</td>
+                            <td>The paper introduces a new or altered data model to support an
+                                existing class of software.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>4.</td>
+                            <td>The paper introduces a new or improved query language or design
+                                notation or conceptual modeling technique for an existing data model.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>5.</td>
+                            <td>The paper introduces a new or improved query optimization or evaluation
+                                technique to support an existing query language, or a new construct
+                                for an existing conceptual modeling technique.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>6.</td>
+                            <td>The paper introduces a new or improved input to an existing query
+                                optimization or evaluation technique, or a new or improved way to
+                                determine the configuration of an existing conceptual modeling
+                                construct.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>7.</td>
+                            <td>The paper introduces a new or improved way to calculate or estimate
+                                or tune an existing input to an existing query optimization technique.
+                            </td>
+                        </tr>
+                    </table>
+                    <p Align="justify">
+                    One determines the Spf by first identifying where the paper falls vis-a-vis
+                    this range from 0 to 7, then adding one unit for each significant
+                    restriction on applicability (such as a paper applying to only one or a few
+                    operators of a query language) or not including a major part of the space
+                    (such as working only on select-project-join queries).<br>
+
+                    As examples, here are nonsensical (we hope!) titles at some of the Spf levels.
+                    </p>
+                    <table>
+                        <tr valign="top">
+                            <td>3 </td>
+                            <td>
+                                <i>The "Hysterical" Data Model to Support Time-varying but Space-constant Data</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>4 </td>
+                            <td>
+                                <i>The Hyperbolical Query Language to Support the Hysterical Data Model</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>5 </td>
+                            <td>
+                                <i>New Space-constant Optimizations for the Hyperbolical Query Language</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>6 </td>
+                            <td>
+                                <i>Circular Histograms for Use in Space-constant Optimizers</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>7 </td>
+                            <td>
+                                <i>Fast Reconstruction of Circular Histograms</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>5+1=6 </td>
+                            <td>
+                                <i>New Space-constant Optimizations for Aggregates in the Hyperbolical
+                            Query Language</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>5+1+1=7 </td>
+                            <td>
+                                <i>New Space-constant Optimizations for Correlated Subqueries in the
+                            Hyperbolical Query Language on Shared-Nothing Multiprocessors</i>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td>7+1+1=9  </td>
+                            <td>
+                                <i>Tuning Circular Histograms for Use with Non-Materialized Views in a
+                            Low-Memory Environment</i>
+                            </td>
+                        </tr>
+                    </table>
+                    <p align="justify">
+                    This last paper has the following significant restrictions in its domain of
+                    applicability:
+                    </p>
+                    <ul>
+                        <li>Applies only to applications managing time-varying but space-constant data
+                        </li>
+                        <li>Assumes the hysterical data model used for such applications; unclear
+                      whether it would apply to other data models
+                        </li>
+                        <li>Assumes the hyperbolical query language for that data model
+                        </li>
+                        <li>Assumes space-constant optimizers for this language; unclear whether it
+                      would apply to other optimizer approaches for this language
+                        </li>
+                        <li>Assumes circular histograms for such optimizers
+                        </li>
+                        <li>Considers only the tuning of such histograms
+                        </li>
+                        <li>Considers reconstruction only for use with non-materialized views
+                        </li>
+                        <li>Applies only in a low-memory environment; unclear whether it would apply
+                      when memory was prevalent
+                    </ul>
+
+                    <p align="justify">
+                    Given that this paper has a quite high Spf, it had better be pretty exciting
+                    to be preferred over, say a paper introducing new optimizations for the
+                    hyperbolical query language. The reason that Spf is only a single digit is
+                    that it is difficult to imagine a paper with a multi-digit Spf that anyone
+                    would want to read, though we're sure we'll be proven wrong some day.
+                    </p>
+                    <p align="justify">
+                    Note also that the number of possible papers goes up exponentially with Spf.
+                    There are probably only a few dozen papers legitimately at Spf 2, and
+                    perhaps a few hundred papers at Spf 3. But at Spf 7, the number of possible
+                    papers, most of which are uninteresting, is mind-boggling.
+                    </p>
+                    <p align="justify">
+                    Our informal experience with papers submitted to previous VLDB's (and
+                    SIGMOD's) is that most papers have an Spf between 4 and 7, with the
+                    particular ones at 7 quite narrow.  Also, the title often doesn't reveal
+                    major restrictions to the applicability, but the abstract generally does
+                    (and should). Sometimes, the Spf increased by a unit when reading the paper,
+                    as a major restriction became apparent that wasn't mentioned in the title or
+                    abstract, indicating that the abstract and perhaps the title should be
+                    changed to make the restriction more explicit.
+                    </p>
+                    <p align="justify">
+                    Our experience also is that many papers with a high Spf are excellent
+                    papers according to the accepted criteria. Their proposed approach is often
+                    fully described, the empirical studies quite thorough, with a large range of
+                    parameters that are varied. This makes sense, as it is easier to be thorough
+                    in a narrow domain than in one that is broader and more varied. This is one
+                    of the reasons that prototypical papers in VLDB and other high quality
+                    conferences have over time evolved into detailed studies of highly specific
+                    and well-defined questions, of interest to only a few people.
+                    </p>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td Colspan="2">
+                        <img src="img/pixel_trans.gif" width="30" height="15" alt="">
+                    </td>
+                   </tr>
+                   <tr>
+                      <td colspan="2" align="center">
+                     <img src="img/pixel_trans.gif" width="60" height="60" alt="">
+                      </td>
+                   </tr>
+                   <tr>
+                      <td width="50%" align="left">
+                        <font size="-1"><a href="index.html">VLDB 2001 - Home Page</a><br>
+                        </font>
+                      </td>
+                      <td width="50%" align="right">
+                        <font size="-1"><a href="mailto:vldb2001@dia.uniroma3.it">The WebMaster</a><br>
+                        <I>Last update: September 5, 2000</I></font>
+                      </td>
+                   </tr>
+                </table>
+              </td>
+            </tr>
+       </table>
+    </body>
+</html>

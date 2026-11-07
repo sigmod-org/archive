@@ -1,0 +1,539 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Tracking Join and Self-Join Sizes in Limited Storage</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_11.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Tracking Join and Self-Join Sizes in Limited Storage
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_noga_alon.htm">Noga Alon</a>, 
+<a href = "a_phillip_b_gibbons.htm">Phillip B. Gibbons</a>, 
+<a href = "a_yossi_matias.htm">Yossi Matias</a>, and 
+<a href = "a_mario_szegedy.htm">Mario Szegedy</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/trackingjoinandnophy.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsqueryoptimation.htm">Return to Query Optimization</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Query optimizers rely on fast, high-quality estimates of result sizes in order to select between various join plans. Self-join sizes of relations provide bounds on the join size of any pairs of such relations. It also indicates the degree of skew in the data, and has been advocated for several estimation procedures. Exact computation of the self-join size requires storage proportional to, the number of distinct attribute values, which may be prohibitively large. In this paper, we study algorithms for tracking (approximate) self-join sizes in limited storage in the presence of insertions and deletions to the relations. Such algorithms detect changes in the degree of skew without an expensive recomputation from the base data. We show that an algorithm based on a tug-ofwar approach provides a more accurate estimation than one based on a sample-and-count approach which is in turn more accurate than a sampling-only approach. Next, we study algorithms for tracking (approximate) join sizes in limited storage; the goal is to maintain a small signature of each relation such that join sizes can be accurately estimated between any pairs of relations. We show that taking random samples for join signatures can lead to inaccurate estimation unless the sample size is quite large; moreover, by a lower bound we show, no other signature scheme can significantly improve upon sampling without further assumptions. These negative results are shown to hold even in the presence of sanity bounds. On the other hand, we present a join signature scheme based on tug-of-war signatures that probvides guarantees on join size estimation as a function of the self-join sizes of the joining relations; this scheme can significantly improve upon the sampling scheme.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AGP99]
+<dd>
+... 
+<dt>
+[AGPR99]
+<dd>
+<a name="AcharyaGPR99a" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramaswamy:Sridhar.html">
+Sridhar Ramaswamy
+</a>
+: Join Synopses for Approximate Query Answering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#AcharyaGPR99a">
+SIGMOD Conference 1999
+</a>
+: 275-286
+<dt>
+[AMS96]
+<dd>
+<a name="AlonMS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alon:Noga.html">
+Noga Alon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Szegedy:Mario.html">
+Mario Szegedy
+</a>
+: The Space Complexity of Approximating the Frequency Moments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/stoc/stoc1996.html#AlonMS96">
+STOC 1996
+</a>
+: 20-29
+<dt>
+[BDF+97]
+<dd>
+<a name="BarbaraDFHHIJJNPRS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barbar=aacute=:Daniel.html">
+Daniel Barbar&aacute;
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DuMouchel:William.html">
+William DuMouchel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:Theodore.html">
+Theodore Johnson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ross:Kenneth_A=.html">
+Kenneth A. Ross
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sevcik:Kenneth_C=.html">
+Kenneth C. Sevcik
+</a>
+: The New Jersey Data Reduction Report. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu20.html#BarbaraDFHHIJJNPRS97">
+Data Engineering Bulletin 20(4)
+</a>
+: 3-45(1997)
+<dt>
+[GGMS96]
+<dd>
+<a name="GangulyGMS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganguly:Sumit.html">
+Sumit Ganguly
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+: Bifocal Sampling for Skew-Resistant Join Size Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#GangulyGMS96">
+SIGMOD Conf. 1996
+</a>
+: 271-281
+<dt>
+[GM98a]
+<dd>
+<a name="GibbonsM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+: New Sampling-Based Summary Statistics for Improving Approximate Query Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#GibbonsM98">
+SIGMOD Conference 1998
+</a>
+: 331-342
+<dt>
+[GM98b]
+<dd>
+... 
+<dt>
+[GMP97a]
+<dd>
+... 
+<dt>
+[GMP97b]
+<dd>
+<a name="GibbonsMP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibbons:Phillip_B=.html">
+Phillip B. Gibbons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matias:Yossi.html">
+Yossi Matias
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Fast Incremental Maintenance of Approximate Histograms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GibbonsMP97">
+VLDB 1997
+</a>
+: 466-475
+<dt>
+[Goo89]
+<dd>
+... 
+<dt>
+[HH99]
+<dd>
+<a name="HaasH99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Ripple Joins for Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod99.html#HaasH99">
+SIGMOD Conference 1999
+</a>
+: 287-298
+<dt>
+[HHW97]
+<dd>
+<a name="HellersteinHW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Helen.html">
+Helen Wang
+</a>
+: Online Aggregation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#HellersteinHW97">
+SIGMOD Conference 1997
+</a>
+: 171-182
+<dt>
+[HNSS93]
+<dd>
+<a name="HaasNSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Fixed-Precision Estimation of Join Selectivity. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1993
+</a>
+: 190-201
+<dt>
+[HNSS95]
+<dd>
+<a name="HaasNSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stokes:Lynne.html">
+Lynne Stokes
+</a>
+: Sampling-Based Estimation of the Number of Distinct Values of an Attribute. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HaasNSS95">
+VLDB 1995
+</a>
+: 311-322
+<dt>
+[HÖT88]
+<dd>
+<a name="HouOT88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hou:Wen=Chi.html">
+Wen-Chi Hou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsoyoglu:Gultekin.html">
+Gultekin &Ouml;zsoyoglu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taneja:Baldeo_K=.html">
+Baldeo K. Taneja
+</a>
+: Statistical Estimators for Relational Algebra Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1988
+</a>
+: 276-287
+<dt>
+[IP95]
+<dd>
+<a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Balancing Histogram Optimality and Practicality for Query Result Size Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#IoannidisP95">
+SIGMOD Conference 1995
+</a>
+: 233-244
+<dt>
+[LN95]
+<dd>
+<a name="LiptonN95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Query Size Estimation by Adaptive Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss51.html#LiptonN95">
+JCSS 51(1)
+</a>
+: 18-25(1995)
+<dt>
+[LNS90]
+<dd>
+<a name="LiptonNS90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipton:Richard_J=.html">
+Richard J. Lipton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">
+Donovan A. Schneider
+</a>
+: Practical Selectivity Estimation through Adaptive Sampling. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#LiptonNS90">
+SIGMOD Conference 1990
+</a>
+: 1-11
+<dt>
+[MRL98]
+<dd>
+<a name="RajagopalanML98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Manku:Gurmeet_Singh.html">
+Gurmeet Singh Manku
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajagopalan:Sridhar.html">
+Sridhar Rajagopalan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+: Approximate Medians and other Quantiles in One Pass and with Limited Memory. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#RajagopalanML98">
+SIGMOD Conference 1998
+</a>
+: 426-435
+<dt>
+[MS99]
+<dd>
+... 
+<dt>
+[Poo97]
+<dd>
+<a name="Poosala97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Histogram-Based Estimation Techniques in Database Systems. Ph.D. thesis,  Univ. of Wisconsin-Madison 1997
+<br>
+ 
+<dt>
+[Vit85]
+<dd>
+<a name="Vitter85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+: Random Sampling with a Reservoir. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/toms/toms11.html#Vitter85">
+TOMS 11(1)
+</a>
+: 37-57(1985)
+<dt>
+[VL93]
+<dd>
+<a name="VrbskyL93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vrbsky:Susan_V=.html">
+Susan V. Vrbsky
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Liu:Jane_W==S=.html">
+Jane W.-S. Liu
+</a>
+: APPROXIMATE - A Query Processor that Produces Monotonically Improving Approximate Answers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#VrbskyL93">
+TKDE 5(6)
+</a>
+: 1056-1068(1993)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/AlonGMS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Noga&nbsp;Alon&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phillip&nbsp;B.&nbsp;Gibbons&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yossi&nbsp;Matias&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mario&nbsp;Szegedy},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Tracking&nbsp;Join&nbsp;and&nbsp;Self-Join&nbsp;Sizes&nbsp;in&nbsp;Limited&nbsp;Storage},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{10-20},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

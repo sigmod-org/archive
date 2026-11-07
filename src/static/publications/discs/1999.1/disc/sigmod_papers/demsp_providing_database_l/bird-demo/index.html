@@ -1,0 +1,536 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>WHIRL E-Birds: Birds of North America
+</title>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<br>
+<hr>
+<center><table spacing="40" >
+<tr VALIGN=CENTER>
+<td><img SRC="cranet.gif" ALT="Crane" height=133 width=150></td>
+
+<td>
+<center>
+<h1>
+WHIRL E-Birds:<br>
+Birds of<br>
+North America</h1></center>
+</td>
+
+<td><img SRC="n_amer_1.gif" ALT="N. America" height=150 width=130><img SRC="small-geese.gif" ALT="Canadian geese" height=68 width=87 align=TOP></td>
+</tr>
+</table></center>
+
+<hr><font size=-1>[ <a href="#about">About</a> | <a href="#browse">Browse</a>
+| <a href="#quick">Quick</a> or <a href="#advanced">Advanced</a> Search</font>
+| <a href="#acknowledgements">Acknowledgements</a> ]
+<br>
+<hr><a NAME="about"></a>To demonstrate the search engine WHIRL, I've indexed
+many of the <a href="#acknowledgements">largest sites on the Web</a> containing
+information about North American Birds. Currently the database contains
+more than 6700 Web pages containing images, soundfiles, factsheets, and
+abundancy information, and also more than 500 bird checklists for various
+regions, parks, and wildlife refuges. Many of the <a href="http://www.nbhc.com">NBHC
+birding hotlines</a> are also indexed. This is far more information than
+is collected in any one site on the Web, and a substantial fraction of
+the information about North American birds that's freely available on the
+Web.
+<table>
+<tr VALIGN=CENTER>
+<td>WHIRL is a research project. The main focus of this project is bring
+all this information together, and provide a simple, uniform way of accessing
+it. For example, <i>every</i> Web page for a bird can be searched for by
+common name, scientific name, order or family, whether or not it was originally
+organized in this fashion. Similarly, <i>all</i> the bird resources can
+be searched for by geographical distribution.</td>
+
+<td><img SRC="eskimcur.gif" ALT="Eskimo Curlew" height=72 width=121></td>
+</tr>
+</table>
+
+<hr><a NAME="browse"></a>
+<h3>
+Browsing<img SRC="new01.gif" ALT="new&quot;" ></h3>
+
+<table valign="top" >
+<tr>
+<td><img SRC="flicker.gif" ALT="Flicker" height=150 width=48></td>
+
+<td>You can browse the entire database by
+<ul>
+<li>
+Scientific&nbsp;<img SRC="look.gif" ><a href="by-order.html">order</a>
+or <a href="offtour.html">family</a>.&nbsp;</li>
+
+<li>
+<img SRC="look.gif" ><a href="by-state.html">State or province</a>, using
+checklists from
+<a href="http://www.mbr.nbs.gov/">USGS's Patuxent Wildlife
+Research Center</a>.&nbsp;</li>
+
+<li>
+<a href="offtour.html">Park name</a>, using checklists from
+<a href="http://endeavor.des.ucdavis.edu/nps/">The
+Information Center for the Environment</a>.&nbsp;</li>
+
+<li>
+<a href="offtour.html">Wildlife refuge name</a>, using checklists from
+<a href="http://www.npsc.nbs.gov">The
+Northern Prairie Wildlife Research Center</a>. This listing also includes
+some checklists for national parks and state.&nbsp;</li>
+</ul>
+You can also browse for information on birds mentioned in the&nbsp;<img SRC="look.gif" ><a href="by-hotline.html">NBHC
+birding hotlines.</a></td>
+</tr>
+</table>
+
+<hr><a NAME="quick"></a>
+<h3>
+Quick Search<img SRC="new01.gif" ALT="new&quot;" ></h3>
+
+<table>
+<tr>
+<td><form method=get action="quicksearch-robin.html"><img SRC="look.gif" >You
+can look for information by bird name:&nbsp;<input type=text name=ord.name value="robin"><input type=submit value=Go><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</font></form></td>
+
+<td><img SRC="looninwater-small.jpg" ALT="Loon" height=76 width=137></td>
+</tr>
+</table>
+
+<hr><a NAME="advanced"></a><img SRC="small-crane-flying.gif" ALT="Crane" valign="center" height=101 width=200 align=RIGHT>
+<h3>
+<img SRC="look.gif" >Advanced Search</h3>
+You can use the form below to ask a question. All fields are optional.
+<br><form method=get action="query-1.html"><input type=hidden name=op value=search><input type=hidden name=bgcolor value="#FFFFFF"><input type=hidden name=title value="Results of Advanced Search"><input type=hidden name=whirl 
+ value="from bird_order as ord"><input type=hidden name=whirl 
+ value="select ord.order as Order|select ord.name as Name_from_Taxonomy"><a NAME="q1"></a><font color="#FF0000">First
+sample query: Help me find pictures of shorebirds that have been sighted
+in New Jersey and are endangered or threatened.</font>
+<br>Help me find<select name=whirl><option value="">the names of<option selected 
+ value="from img|where img.name sim ord.name|select img.name as Name_from_Image|select img.href as Image_URL">pictures
+of<option 
+ value="from factsheet as f|where f.name sim ord.name|select f.name as Name_from_Factsheet|select f.href as Factsheet_URL">factsheets
+on<option 
+ value="from ident as id|where id.name sim ord.name|select id.name as Name_from_IDTip|select id.href as ID_TIP_URL">identification
+tips for<option 
+ value="from call as c|where c.name sim ord.name|select c.name as Name_from_Call|select c.href as Call_URL">calls
+of<option 
+ value="from summermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+summer range of<option 
+ value="from wintermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+winter range of<option 
+ value="from breedmap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+breeding range of<option 
+ value="from resource as res|where res.name sim ord.name|select res.name as Name_from_Resource|select res.type as Resource_Type|select res.href as URL">any
+information on&nbsp;</select>birds
+<ul>
+<li>
+named&nbsp;<input type=text name=ord.name value=""></li>
+
+<li>
+in the order<select name=ord.order><option value="">- any order -&nbsp;<option value="Gaviiformes">Loons:
+Gaviiformes<option value="Podicipediformes">Grebes: Podicipediformes&nbsp;<option value="Procellariiformes">Albatrosses,
+etc: Procellariiformes<option value="Pelecaniformes">Tropicbirds, Pelicans,
+etc: Pelecaniformes<option value="Ciconiiformes">Herons, Ibis &amp; New
+World Vultures: Ciconiiformes<option value="Phoenicopteriformes">Flamingo:
+Phoenicopteriformes<option value="Anseriformes">Swans, Geese &amp; Ducks:
+Anseriformes<option value="Falconiformes">Eagles, Kites, Falcons &amp;
+Hawks: Falconiformes<option value="Galliformes">Grouse, Turkey &amp; Quail:
+Galliformes<option value="Gruiformes">Rails, Limpkin &amp; Cranes: Gruiformes<option selected value="Charadriiformes">Shorebirds:
+Charadriiformes<option value="Columbiformes">Doves: Columbiformes<option value="Cuculiformes">Cuckoos,
+Roadrunner &amp; Anis: Cuculiformes<option value="Strigiformes">Owls: Strigiformes<option value="Caprimulgiformes">Goatsuckers:
+Caprimulgiformes<option value="Apodiformes">Swifts &amp; Hummingbirds:
+Apodiformes<option value="Trogoniformes">Trogon: Trogoniformes<option value="Coraciiformes">Kingfishers:
+Coraciiformes<option value="Piciformes">Woodpeckers: Piciformes&nbsp;<option value="Passeriformes">Perching
+birds: Passeriformes</select></li>
+
+<li>
+in the family<input type=text name=ordfam.family><input name=rule type=hidden 
+ value="ordfam.family-:from ordfam|where ordfam.name sim ord.name|select ordfam.family as  Family"><img SRC="new01.gif" ALT="new&quot;" ></li>
+
+<li>
+that live in&nbsp;<select name=whirl><option selected value="">-any habitat-<option 
+ value="from urbanhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Urban_Bird_Name">urban
+areas<option 
+ value="from prairiehab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Prarie_Bird_Name">prairies<option 
+ value="from wetlandhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Marsh_Bird_Name">marshes<option 
+ value="from foresthab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Forest_Bird_Name">temperate
+hardwood forests</select></li>
+
+<li>
+that have been sighted in&nbsp;<select name="statebase.name"><option value="">-any
+state or province-<option value="Alaska">Alaska<option value="Alabama ">Alabama&nbsp;<option value="Alberta ">Alberta&nbsp;<option value="Arizona ">Arizona&nbsp;<option value="Arkansas ">Arkansas&nbsp;<option value="British Columbia ">British
+Columbia&nbsp;<option value="California ">California&nbsp;<option value="Colorado ">Colorado&nbsp;<option value="Connecticut ">Connecticut&nbsp;<option value="Delaware ">Delaware&nbsp;<option value="Florida ">Florida&nbsp;<option value="Georgia ">Georgia&nbsp;<option value="Idaho ">Idaho&nbsp;<option value="Illinois ">Illinois&nbsp;<option value="Indiana ">Indiana&nbsp;<option value="Iowa ">Iowa&nbsp;<option value="Kansas ">Kansas&nbsp;<option value="Kentucky ">Kentucky&nbsp;<option value="Louisiana ">Louisiana&nbsp;<option value="Maine ">Maine&nbsp;<option value="Manitoba ">Manitoba&nbsp;<option value="Maryland ">Maryland&nbsp;<option value="Massachusetts ">Massachusetts&nbsp;<option value="Michigan ">Michigan&nbsp;<option value="Minnesota ">Minnesota&nbsp;<option value="Mississippi ">Mississippi&nbsp;<option value="Missouri ">Missouri&nbsp;<option value="Montana ">Montana&nbsp;<option value="Nebraska ">Nebraska&nbsp;<option value="Nevada ">Nevada&nbsp;<option value="New Brunswick ">New
+Brunswick&nbsp;<option value="Newfoundland ">Newfoundland&nbsp;<option value="New Hampshire ">New
+Hampshire&nbsp;<option selected value="New Jersey ">New Jersey&nbsp;<option value="New Mexico ">New
+Mexico&nbsp;<option value="New York ">New York&nbsp;<option value="North Carolina ">North
+Carolina&nbsp;<option value="North Dakota ">North Dakota&nbsp;<option value="Nova Scotia ">Nova
+Scotia&nbsp;<option value="Ohio ">Ohio&nbsp;<option value="Oklahoma ">Oklahoma&nbsp;<option value="Ontario ">Ontario&nbsp;<option value="Oregon ">Oregon&nbsp;<option value="Pennsylvania ">Pennsylvania&nbsp;<option value="Prince Edward Island ">Prince
+Edward Island&nbsp;<option value="Quebec ">Quebec&nbsp;<option value="Rhode Island ">Rhode
+Island&nbsp;<option value="Saskatchewan ">Saskatchewan&nbsp;<option value="South Carolina ">South
+Carolina&nbsp;<option value="South Dakota ">South Dakota&nbsp;<option value="Tennessee ">Tennessee&nbsp;<option value="Texas ">Texas&nbsp;<option value="Utah ">Utah&nbsp;<option value="Vermont ">Vermont&nbsp;<option value="Virginia ">Virginia&nbsp;<option value="Washington ">Washington&nbsp;<option value="West Virginia ">West
+Virginia&nbsp;<option value="Wisconsin ">Wisconsin&nbsp;<option value="Wyoming ">Wyoming&nbsp;<option value="Yukon ">Yukon&nbsp;</select><input name="rule" type=hidden 
+ value="statebase.name-:from statebase|and statebird as sb|where statebase.href equal sb.base|and sb.name sim ord.name|select sb.name as Name_from_State_Birdlist"></li>
+
+<li>
+that have been sighted in the US National Park named<input type=text name="npsname.name"><input name="rule" type=hidden
+ value="npsname.name-:from npsname|and npsbird|where npsname.birdlistref equal npsbird.base|select npsname.name as NP_Name|and npsbird.name as NP_Bird_Name|where npsbird.name sim ord.name"></li>
+
+<li>
+that have been sighted in the US National Wildlife Refuge named<input type=text name="nwrname.name"><img SRC="new01.gif" ALT="new&quot;" ><input name="rule" type=hidden
+ value="nwrname.name-:from nwrname|and nwrbird|where nwrname.href equal nwrbird.base|select nwrname.name as NWR_Name|and nwrbird.name as NWR_Bird_Name|where nwrbird.name sim ord.name"></li>
+
+<li>
+that<select name=whirl><option value="">-may or may not be endangered or
+threatened-<option selected
+ value="from endangered as es|where es.name sim ord.name|select es.name as Name_from_Endangered_Species_List|select es.href as Endangered_Species_Status">are
+endangered or threatened<option 
+ value="from watchlist as es|where es.name sim ord.name|select es.name as Name_from_Watchlist">are
+on the Audubon Society's watchlist</select></li>
+
+<li>
+that were recently mentioned in the <a href="Javascript¦document.qhotline1.submit()">birding
+hotline<img SRC="new01.gif" ALT="new&quot;" ></a> named&nbsp;<input type=text name=hotlist.name>from
+the state<option hidden name=simrel value=supset><select name="hotlist.name"><option selected value="">-
+any state or province -<option value="AL">Alabama&nbsp;<option value="AB">Alberta<option value="AZ">Arizona&nbsp;<option value="CA">California&nbsp;<option value="CO">Colorado&nbsp;<option value="CT">Connecticut&nbsp;<option value="DC">D.C.
+Area<option value="DE">Delaware&nbsp;<option value="FL">Florida&nbsp;<option value="GA">Georgia&nbsp;<option value="ID">Idaho&nbsp;<option value="IA">Iowa&nbsp;<option value="IN">Indiana&nbsp;<option value="IL">Illinois&nbsp;<option value="KS">Kansas&nbsp;<option value="KY">Kentucky&nbsp;<option value="MA">Maryland<option value="ME">Maine<option value="MI">Michigan&nbsp;<option value="MN">Minnesota&nbsp;<option value="MO">Missouri&nbsp;<option value="NB">New
+Brunswick<option value="NH">New Hampshire&nbsp;<option value="NJ">New Jersey&nbsp;<option value="NM">New
+Mexico&nbsp;<option value="NY">New York&nbsp;<option value="NV">Nevada<option value="ND">North
+Dakota&nbsp;<option value="OH">Ohio&nbsp;<option value="OK">Oklahoma&nbsp;<option value="Ottawa">Ottawa<option value="PA">Pennsylvania<option value="RI">Rhode
+Island&nbsp;<option value="SC">South Carolina&nbsp;<option value="SD">South
+Dakota&nbsp;<option value="TN">Tennesee<option value="TX">Texas&nbsp;<option value="UT">Utah&nbsp;<option value="VT">Vermont&nbsp;<option value="WA">Washington&nbsp;<option value="WV">West
+Virginia&nbsp;<option value="WI">Wisconsin&nbsp;</select><input name="rule" type=hidden
+ value="hotlist.name-:from hotlist|and hotbird|where hotlist.href equal hotbird.base|select hotlist.name as Hotline_Name|and hotlist.href as Hotline_URL|and hotbird.name as Hotline_Bird_Name|where hotbird.name sim ord.name"><option hidden name=simrel value=sim></li>
+</ul>
+
+<p><br><input type=submit value=Go><input type=reset value=Reset><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</font>
+<br>Debugging<select name="debug"><option value="">off<option selected value="1">on<option value="2">full</select></form>
+<hr><form method=get action="query-2.html"><input type=hidden name=op value=search><input type=hidden name=bgcolor value="#FFFFFF"><input type=hidden name=title value="Results of Advanced Search"><input type=hidden name=whirl 
+ value="from bird_order as ord"><input type=hidden name=whirl 
+ value="select ord.order as Order|select ord.name as Name_from_Taxonomy"><a NAME="q2"></a><font color="#FF0000">Second
+sample query: help me find pictures of birds in the order Anseriformes
+(Swans, Geese and Ducks).</font>
+<br>Help me find<select name=whirl><option value="">the names of<option selected
+ value="from img|where img.name sim ord.name|select img.name as Name_from_Image|select img.href as Image_URL">pictures
+of<option 
+ value="from factsheet as f|where f.name sim ord.name|select f.name as Name_from_Factsheet|select f.href as Factsheet_URL">factsheets
+on<option 
+ value="from ident as id|where id.name sim ord.name|select id.name as Name_from_IDTip|select id.href as ID_TIP_URL">identification
+tips for<option 
+ value="from call as c|where c.name sim ord.name|select c.name as Name_from_Call|select c.href as Call_URL">calls
+of<option 
+ value="from summermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+summer range of<option 
+ value="from wintermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+winter range of<option 
+ value="from breedmap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+breeding range of<option 
+ value="from resource as res|where res.name sim ord.name|select res.name as Name_from_Resource|select res.type as Resource_Type|select res.href as URL">any
+information on&nbsp;</select>birds
+<ul>
+<li>
+named&nbsp;<input type=text name=ord.name value=""></li>
+
+<li>
+in the order<select name=ord.order><option value="">- any order -&nbsp;<option value="Gaviiformes">Loons:
+Gaviiformes<option value="Podicipediformes">Grebes: Podicipediformes&nbsp;<option value="Procellariiformes">Albatrosses,
+etc: Procellariiformes<option value="Pelecaniformes">Tropicbirds, Pelicans,
+etc: Pelecaniformes<option value="Ciconiiformes">Herons, Ibis &amp; New
+World Vultures: Ciconiiformes<option value="Phoenicopteriformes">Flamingo:
+Phoenicopteriformes<option selected value="Anseriformes">Swans, Geese &amp;
+Ducks: Anseriformes<option value="Falconiformes">Eagles, Kites, Falcons
+&amp; Hawks: Falconiformes<option value="Galliformes">Grouse, Turkey &amp;
+Quail: Galliformes<option value="Gruiformes">Rails, Limpkin &amp; Cranes:
+Gruiformes<option value="Charadriiformes">Shorebirds: Charadriiformes<option value="Columbiformes">Doves:
+Columbiformes<option value="Cuculiformes">Cuckoos, Roadrunner &amp; Anis:
+Cuculiformes<option value="Strigiformes">Owls: Strigiformes<option value="Caprimulgiformes">Goatsuckers:
+Caprimulgiformes<option value="Apodiformes">Swifts &amp; Hummingbirds:
+Apodiformes<option value="Trogoniformes">Trogon: Trogoniformes<option value="Coraciiformes">Kingfishers:
+Coraciiformes<option value="Piciformes">Woodpeckers: Piciformes&nbsp;<option value="Passeriformes">Perching
+birds: Passeriformes</select></li>
+
+<li>
+in the family<input type=text name=ordfam.family><input name=rule type=hidden 
+ value="ordfam.family-:from ordfam|where ordfam.name sim ord.name|select ordfam.family as  Family"><img SRC="new01.gif" ALT="new&quot;" ></li>
+
+<li>
+that live in&nbsp;<select name=whirl><option selected value="">-any habitat-<option 
+ value="from urbanhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Urban_Bird_Name">urban
+areas<option 
+ value="from prairiehab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Prarie_Bird_Name">prairies<option 
+ value="from wetlandhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Marsh_Bird_Name">marshes<option 
+ value="from foresthab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Forest_Bird_Name">temperate
+hardwood forests</select></li>
+
+<li>
+that have been sited in&nbsp;<select name="statebase.name"><option selected value="">-any
+state or province-<option value="Alaska">Alaska<option value="Alabama ">Alabama&nbsp;<option value="Alberta ">Alberta&nbsp;<option value="Arizona ">Arizona&nbsp;<option value="Arkansas ">Arkansas&nbsp;<option value="British Columbia ">British
+Columbia&nbsp;<option value="California ">California&nbsp;<option value="Colorado ">Colorado&nbsp;<option value="Connecticut ">Connecticut&nbsp;<option value="Delaware ">Delaware&nbsp;<option value="Florida ">Florida&nbsp;<option value="Georgia ">Georgia&nbsp;<option value="Idaho ">Idaho&nbsp;<option value="Illinois ">Illinois&nbsp;<option value="Indiana ">Indiana&nbsp;<option value="Iowa ">Iowa&nbsp;<option value="Kansas ">Kansas&nbsp;<option value="Kentucky ">Kentucky&nbsp;<option value="Louisiana ">Louisiana&nbsp;<option value="Maine ">Maine&nbsp;<option value="Manitoba ">Manitoba&nbsp;<option value="Maryland ">Maryland&nbsp;<option value="Massachusetts ">Massachusetts&nbsp;<option value="Michigan ">Michigan&nbsp;<option value="Minnesota ">Minnesota&nbsp;<option value="Mississippi ">Mississippi&nbsp;<option value="Missouri ">Missouri&nbsp;<option value="Montana ">Montana&nbsp;<option value="Nebraska ">Nebraska&nbsp;<option value="Nevada ">Nevada&nbsp;<option value="New Brunswick ">New
+Brunswick&nbsp;<option value="Newfoundland ">Newfoundland&nbsp;<option value="New Hampshire ">New
+Hampshire&nbsp;<option value="New Jersey ">New Jersey&nbsp;<option value="New Mexico ">New
+Mexico&nbsp;<option value="New York ">New York&nbsp;<option value="North Carolina ">North
+Carolina&nbsp;<option value="North Dakota ">North Dakota&nbsp;<option value="Nova Scotia ">Nova
+Scotia&nbsp;<option value="Ohio ">Ohio&nbsp;<option value="Oklahoma ">Oklahoma&nbsp;<option value="Ontario ">Ontario&nbsp;<option value="Oregon ">Oregon&nbsp;<option value="Pennsylvania ">Pennsylvania&nbsp;<option value="Prince Edward Island ">Prince
+Edward Island&nbsp;<option value="Quebec ">Quebec&nbsp;<option value="Rhode Island ">Rhode
+Island&nbsp;<option value="Saskatchewan ">Saskatchewan&nbsp;<option value="South Carolina ">South
+Carolina&nbsp;<option value="South Dakota ">South Dakota&nbsp;<option value="Tennessee ">Tennessee&nbsp;<option value="Texas ">Texas&nbsp;<option value="Utah ">Utah&nbsp;<option value="Vermont ">Vermont&nbsp;<option value="Virginia ">Virginia&nbsp;<option value="Washington ">Washington&nbsp;<option value="West Virginia ">West
+Virginia&nbsp;<option value="Wisconsin ">Wisconsin&nbsp;<option value="Wyoming ">Wyoming&nbsp;<option value="Yukon ">Yukon&nbsp;</select><input name="rule" type=hidden 
+ value="statebase.name-:from statebase|and statebird as sb|where statebase.href equal sb.base|and sb.name sim ord.name|select sb.name as Name_from_State_Birdlist"></li>
+
+<li>
+that have been sighted in the US National Park named<input type=text name="npsname.name"><input name="rule" type=hidden
+ value="npsname.name-:from npsname|and npsbird|where npsname.birdlistref equal npsbird.base|select npsname.name as NP_Name|and npsbird.name as NP_Bird_Name|where npsbird.name sim ord.name"></li>
+
+<li>
+that have been sighted in the US National Wildlife Refuge named<input type=text name="nwrname.name"><img SRC="new01.gif" ALT="new&quot;" ><input name="rule" type=hidden
+ value="nwrname.name-:from nwrname|and nwrbird|where nwrname.href equal nwrbird.base|select nwrname.name as NWR_Name|and nwrbird.name as NWR_Bird_Name|where nwrbird.name sim ord.name"></li>
+
+<li>
+that<select name=whirl><option selected value="">-may or may not be endangered
+or threatened-<option 
+ value="from endangered as es|where es.name sim ord.name|select es.name as Name_from_Endangered_Species_List|select es.href as Endangered_Species_Status">are
+endangered or threatened<option 
+ value="from watchlist as es|where es.name sim ord.name|select es.name as Name_from_Watchlist">are
+on the Audubon Society's watchlist</select></li>
+
+<li>
+that were recently mentioned in the <a href="Javascript¦document.qhotline1.submit()">birding
+hotline<img SRC="new01.gif" ALT="new&quot;" ></a> named&nbsp;<input type=text name=hotlist.name>from
+the state<option hidden name=simrel value=supset><select name="hotlist.name"><option selected value="">-
+any state or province -<option value="AL">Alabama&nbsp;<option value="AB">Alberta<option value="AZ">Arizona&nbsp;<option value="CA">California&nbsp;<option value="CO">Colorado&nbsp;<option value="CT">Connecticut&nbsp;<option value="DC">D.C.
+Area<option value="DE">Delaware&nbsp;<option value="FL">Florida&nbsp;<option value="GA">Georgia&nbsp;<option value="ID">Idaho&nbsp;<option value="IA">Iowa&nbsp;<option value="IN">Indiana&nbsp;<option value="IL">Illinois&nbsp;<option value="KS">Kansas&nbsp;<option value="KY">Kentucky&nbsp;<option value="MA">Maryland<option value="ME">Maine<option value="MI">Michigan&nbsp;<option value="MN">Minnesota&nbsp;<option value="MO">Missouri&nbsp;<option value="NB">New
+Brunswick<option value="NH">New Hampshire&nbsp;<option value="NJ">New Jersey&nbsp;<option value="NM">New
+Mexico&nbsp;<option value="NY">New York&nbsp;<option value="NV">Nevada<option value="ND">North
+Dakota&nbsp;<option value="OH">Ohio&nbsp;<option value="OK">Oklahoma&nbsp;<option value="Ottawa">Ottawa<option value="PA">Pennsylvania<option value="RI">Rhode
+Island&nbsp;<option value="SC">South Carolina&nbsp;<option value="SD">South
+Dakota&nbsp;<option value="TN">Tennesee<option value="TX">Texas&nbsp;<option value="UT">Utah&nbsp;<option value="VT">Vermont&nbsp;<option value="WA">Washington&nbsp;<option value="WV">West
+Virginia&nbsp;<option value="WI">Wisconsin&nbsp;</select><input name="rule" type=hidden
+ value="hotlist.name-:from hotlist|and hotbird|where hotlist.href equal hotbird.base|select hotlist.name as Hotline_Name|and hotlist.href as Hotline_URL|and hotbird.name as Hotline_Bird_Name|where hotbird.name sim ord.name"><option hidden name=simrel value=sim></li>
+</ul>
+
+<p><br><input type=submit value=Go><input type=reset value=Reset><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</font>
+<br>Debugging<select name="debug"><option value="">off<option selected value="1">on<option value="2">full</select></form>
+<hr><form method=get action="query-3.html"><input type=hidden name=op value=search><input type=hidden name=bgcolor value="#FFFFFF"><input type=hidden name=title value="Results of Advanced Search"><input type=hidden name=whirl 
+ value="from bird_order as ord"><input type=hidden name=whirl 
+ value="select ord.order as Order|select ord.name as Name_from_Taxonomy"><a NAME="q3"></a><font color="#FF0000">Third
+sample query: help me find identification tips for birds in the order Falconiformes
+that were recently mentioned in a hotline from the state New Jersey.</font>
+<br>Help me find<select name=whirl><option selected value="">the names
+of<option 
+ value="from img|where img.name sim ord.name|select img.name as Name_from_Image|select img.href as Image_URL">pictures
+of<option 
+ value="from factsheet as f|where f.name sim ord.name|select f.name as Name_from_Factsheet|select f.href as Factsheet_URL">factsheets
+on<option 
+ value="from ident as id|where id.name sim ord.name|select id.name as Name_from_IDTip|select id.href as ID_TIP_URL">identification
+tips for<option 
+ value="from call as c|where c.name sim ord.name|select c.name as Name_from_Call|select c.href as Call_URL">calls
+of<option 
+ value="from summermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+summer range of<option 
+ value="from wintermap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+winter range of<option 
+ value="from breedmap as m|where m.name sim ord.name|select m.name as Name_from_Map|select m.href as Map_URL">the
+breeding range of<option 
+ value="from resource as res|where res.name sim ord.name|select res.name as Name_from_Resource|select res.type as Resource_Type|select res.href as URL">any
+information on&nbsp;</select>birds
+<ul>
+<li>
+named&nbsp;<input type=text name=ord.name value=""></li>
+
+<li>
+in the order<select name=ord.order><option value="">- any order -&nbsp;<option value="Gaviiformes">Loons:
+Gaviiformes<option value="Podicipediformes">Grebes: Podicipediformes&nbsp;<option value="Procellariiformes">Albatrosses,
+etc: Procellariiformes<option value="Pelecaniformes">Tropicbirds, Pelicans,
+etc: Pelecaniformes<option value="Ciconiiformes">Herons, Ibis &amp; New
+World Vultures: Ciconiiformes<option value="Phoenicopteriformes">Flamingo:
+Phoenicopteriformes<option value="Anseriformes">Swans, Geese &amp; Ducks:
+Anseriformes<option selected value="Falconiformes">Eagles, Kites, Falcons
+&amp; Hawks: Falconiformes<option value="Galliformes">Grouse, Turkey &amp;
+Quail: Galliformes<option value="Gruiformes">Rails, Limpkin &amp; Cranes:
+Gruiformes<option value="Charadriiformes">Shorebirds: Charadriiformes<option value="Columbiformes">Doves:
+Columbiformes<option value="Cuculiformes">Cuckoos, Roadrunner &amp; Anis:
+Cuculiformes<option value="Strigiformes">Owls: Strigiformes<option value="Caprimulgiformes">Goatsuckers:
+Caprimulgiformes<option value="Apodiformes">Swifts &amp; Hummingbirds:
+Apodiformes<option value="Trogoniformes">Trogon: Trogoniformes<option value="Coraciiformes">Kingfishers:
+Coraciiformes<option value="Piciformes">Woodpeckers: Piciformes&nbsp;<option value="Passeriformes">Perching
+birds: Passeriformes</select></li>
+
+<li>
+in the family<input type=text name=ordfam.family><input name=rule type=hidden 
+ value="ordfam.family-:from ordfam|where ordfam.name sim ord.name|select ordfam.family as  Family"><img SRC="new01.gif" ALT="new&quot;" ></li>
+
+<li>
+that live in&nbsp;<select name=whirl><option selected value="">-any habitat-<option 
+ value="from urbanhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Urban_Bird_Name">urban
+areas<option 
+ value="from prairiehab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Prarie_Bird_Name">prairies<option 
+ value="from wetlandhab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Marsh_Bird_Name">marshes<option 
+ value="from foresthab as hdoc|and habitat as h|where h.which supset hdoc|and h.name sim ord.name|select h.name as Forest_Bird_Name">temperate
+hardwood forests</select></li>
+
+<li>
+that have been sited in&nbsp;<select name="statebase.name"><option selected value="">-any
+state or province-<option value="Alaska">Alaska<option value="Alabama ">Alabama&nbsp;<option value="Alberta ">Alberta&nbsp;<option value="Arizona ">Arizona&nbsp;<option value="Arkansas ">Arkansas&nbsp;<option value="British Columbia ">British
+Columbia&nbsp;<option value="California ">California&nbsp;<option value="Colorado ">Colorado&nbsp;<option value="Connecticut ">Connecticut&nbsp;<option value="Delaware ">Delaware&nbsp;<option value="Florida ">Florida&nbsp;<option value="Georgia ">Georgia&nbsp;<option value="Idaho ">Idaho&nbsp;<option value="Illinois ">Illinois&nbsp;<option value="Indiana ">Indiana&nbsp;<option value="Iowa ">Iowa&nbsp;<option value="Kansas ">Kansas&nbsp;<option value="Kentucky ">Kentucky&nbsp;<option value="Louisiana ">Louisiana&nbsp;<option value="Maine ">Maine&nbsp;<option value="Manitoba ">Manitoba&nbsp;<option value="Maryland ">Maryland&nbsp;<option value="Massachusetts ">Massachusetts&nbsp;<option value="Michigan ">Michigan&nbsp;<option value="Minnesota ">Minnesota&nbsp;<option value="Mississippi ">Mississippi&nbsp;<option value="Missouri ">Missouri&nbsp;<option value="Montana ">Montana&nbsp;<option value="Nebraska ">Nebraska&nbsp;<option value="Nevada ">Nevada&nbsp;<option value="New Brunswick ">New
+Brunswick&nbsp;<option value="Newfoundland ">Newfoundland&nbsp;<option value="New Hampshire ">New
+Hampshire&nbsp;<option value="New Jersey ">New Jersey&nbsp;<option value="New Mexico ">New
+Mexico&nbsp;<option value="New York ">New York&nbsp;<option value="North Carolina ">North
+Carolina&nbsp;<option value="North Dakota ">North Dakota&nbsp;<option value="Nova Scotia ">Nova
+Scotia&nbsp;<option value="Ohio ">Ohio&nbsp;<option value="Oklahoma ">Oklahoma&nbsp;<option value="Ontario ">Ontario&nbsp;<option value="Oregon ">Oregon&nbsp;<option value="Pennsylvania ">Pennsylvania&nbsp;<option value="Prince Edward Island ">Prince
+Edward Island&nbsp;<option value="Quebec ">Quebec&nbsp;<option value="Rhode Island ">Rhode
+Island&nbsp;<option value="Saskatchewan ">Saskatchewan&nbsp;<option value="South Carolina ">South
+Carolina&nbsp;<option value="South Dakota ">South Dakota&nbsp;<option value="Tennessee ">Tennessee&nbsp;<option value="Texas ">Texas&nbsp;<option value="Utah ">Utah&nbsp;<option value="Vermont ">Vermont&nbsp;<option value="Virginia ">Virginia&nbsp;<option value="Washington ">Washington&nbsp;<option value="West Virginia ">West
+Virginia&nbsp;<option value="Wisconsin ">Wisconsin&nbsp;<option value="Wyoming ">Wyoming&nbsp;<option value="Yukon ">Yukon&nbsp;</select><input name="rule" type=hidden 
+ value="statebase.name-:from statebase|and statebird as sb|where statebase.href equal sb.base|and sb.name sim ord.name|select sb.name as Name_from_State_Birdlist"></li>
+
+<li>
+that have been sighted in the US National Park named<input type=text name="npsname.name"><input name="rule" type=hidden
+ value="npsname.name-:from npsname|and npsbird|where npsname.birdlistref equal npsbird.base|select npsname.name as NP_Name|and npsbird.name as NP_Bird_Name|where npsbird.name sim ord.name"></li>
+
+<li>
+that have been sighted in the US National Wildlife Refuge named<input type=text name="nwrname.name"><img SRC="new01.gif" ALT="new&quot;" ><input name="rule" type=hidden
+ value="nwrname.name-:from nwrname|and nwrbird|where nwrname.href equal nwrbird.base|select nwrname.name as NWR_Name|and nwrbird.name as NWR_Bird_Name|where nwrbird.name sim ord.name"></li>
+
+<li>
+that<select name=whirl><option selected value="">-may or may not be endangered
+or threatened-<option 
+ value="from endangered as es|where es.name sim ord.name|select es.name as Name_from_Endangered_Species_List|select es.href as Endangered_Species_Status">are
+endangered or threatened<option 
+ value="from watchlist as es|where es.name sim ord.name|select es.name as Name_from_Watchlist">are
+on the Audubon Society's watchlist</select></li>
+
+<li>
+that were recently mentioned in the <a href="Javascript¦document.qhotline1.submit()">birding
+hotline<img SRC="new01.gif" ALT="new&quot;" ></a> named&nbsp;<input type=text name=hotlist.name>from
+the state<option hidden name=simrel value=supset><select name="hotlist.name"><option value="">-
+any state or province -<option value="AL">Alabama&nbsp;<option value="AB">Alberta<option value="AZ">Arizona&nbsp;<option value="CA">California&nbsp;<option value="CO">Colorado&nbsp;<option value="CT">Connecticut&nbsp;<option value="DC">D.C.
+Area<option value="DE">Delaware&nbsp;<option value="FL">Florida&nbsp;<option value="GA">Georgia&nbsp;<option value="ID">Idaho&nbsp;<option value="IA">Iowa&nbsp;<option value="IN">Indiana&nbsp;<option value="IL">Illinois&nbsp;<option value="KS">Kansas&nbsp;<option value="KY">Kentucky&nbsp;<option value="MA">Maryland<option value="ME">Maine<option value="MI">Michigan&nbsp;<option value="MN">Minnesota&nbsp;<option value="MO">Missouri&nbsp;<option value="NB">New
+Brunswick<option value="NH">New Hampshire&nbsp;<option selected value="NJ">New
+Jersey&nbsp;<option value="NM">New Mexico&nbsp;<option value="NY">New York&nbsp;<option value="NV">Nevada<option value="ND">North
+Dakota&nbsp;<option value="OH">Ohio&nbsp;<option value="OK">Oklahoma&nbsp;<option value="Ottawa">Ottawa<option value="PA">Pennsylvania<option value="RI">Rhode
+Island&nbsp;<option value="SC">South Carolina&nbsp;<option value="SD">South
+Dakota&nbsp;<option value="TN">Tennesee<option value="TX">Texas&nbsp;<option value="UT">Utah&nbsp;<option value="VT">Vermont&nbsp;<option value="WA">Washington&nbsp;<option value="WV">West
+Virginia&nbsp;<option value="WI">Wisconsin&nbsp;</select><input name="rule" type=hidden
+ value="hotlist.name-:from hotlist|and hotbird|where hotlist.href equal hotbird.base|select hotlist.name as Hotline_Name|and hotlist.href as Hotline_URL|and hotbird.name as Hotline_Bird_Name|where hotbird.name sim ord.name"><option hidden name=simrel value=sim></li>
+</ul>
+
+<p><br><input type=submit value=Go><input type=reset value=Reset><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</font>
+<br>Debugging<select name="debug"><option value="">off<option selected value="1">on<option value="2">full</select></form><a NAME="acknowledgements"></a>
+<table spacing="60" >
+<tr VALIGN=TOP>
+<td>
+<hr>
+<h3>
+Acknowledgements</h3>
+WHIRL indexes Web pages found at many sites, some of which are summarized
+below. This listing is <i>not</i> comprehensive. However, a complete, up-to-date
+listing of
+<a href="offtour.html">all indexed sites</a> is available from
+the search engine.</td>
+
+<td><img SRC="small-owl.gif" ALT="Owl" height=102 width=261></td>
+</tr>
+</table>
+
+<table spacing="60" >
+<tr VALIGN=CENTER>
+<td><img SRC="red_head.gif" ALT="Red-headed Woodpecker" height=150 width=75></td>
+
+<td>
+<ul>
+<li>
+<b>Images:</b> <a href="http://www.nmnh.si.edu/BIRDNET/mainindex.html">BirdNET</a>,
+the <a href="http://bioinfo.kordic.re.kr/animal/">Bioinfo Animal Pictures
+Archive</a>, The <a href="http://www.uga.edu/">University of Georgia</a>'s
+<a href="http://museum.nhm.uga.edu/">Museum
+of Natural History</a>,
+<a href="http://pw1.netcom.com/~djhoff/sbimage.html">The
+International Shorebird Gallery</a>,
+<a href="http://automation.valmet.com/kyyroju/birds.htm">The
+Virtual Bird</a>,
+<a href="http://www.mbr.nbs.gov/">USGS's Patuxent Wildlife
+Research Center</a>, ...</li>
+
+<li>
+<b>Bird calls:</b> Tony Philip's
+<a href="http://www2.math.sunysb.edu/~tony/birds/">Bird
+Songs of NY State</a>,
+<a href="http://ourworld.compuserve.com/homepages/G_Kunkel/homepage.htm">Greg
+Kunkel's Bird Songs</a>,
+<a href="http://automation.valmet.com/kyyroju/birds.htm">The
+Virtual Bird</a>,
+<a href="http://www.mbr.nbs.gov/">USGS's Patuxent Wildlife
+Research Center</a>, ...&nbsp;</li>
+
+<li>
+<b>Taxonomic information:</b> The <a href="http://www.bcpl.lib.md.us/~tross/baltbird.html">Baltimore
+Bird Club</a>,
+<a href="http://www.birding.com">Birding.com</a>, ...&nbsp;</li>
+
+<li>
+<b>Information on endangered and threatened species:</b><a href="http://www.fws.gov">The
+US Fish and Wildlife Service</a>,
+<a href="http://www.audubon.org">The
+Audubon Society</a>, ...&nbsp;</li>
+
+<li>
+<b>Factsheets and identification tips:</b><a href="http://www.fws.gov">The
+US Fish and Wildlife Service</a>,
+<a href="http://www.fs.fed.us/">The USDA
+Forest Service</a>,
+<a href="http://www.petersononline.com">Peterson's
+Online</a>,
+<a href="http://www.birdsofna.org">Birds of North America</a>,
+<a href="http://www.npsc.nbs.gov">The
+Northern Prairie Wildlife Research Center</a>,
+<a href="http://www.mbr.nbs.gov/">USGS's
+Patuxent Wildlife Research Center</a>, ...&nbsp;</li>
+
+<li>
+<b>Abundance maps:</b><a href="http://www.npsc.nbs.gov">The Northern Prairie
+Wildlife Research Center</a>,
+<a href="http://www.mbr.nbs.gov/">USGS's
+Patuxent Wildlife Research Center</a>, ...&nbsp;</li>
+
+<li>
+<b>NBHC birding hotlines:</b><a href="http://www.petersononline.com">Peterson's
+Online</a>, ...&nbsp;</li>
+
+<li>
+<b>Local and regional checklists:</b> The <a href="http://endeavor.des.ucdavis.edu/nps/">Information
+Center for the Environment</a> (for US national parks),
+<a href="http://www.npsc.nbs.gov">The
+Northern Prairie Wildlife Research Center</a> (for US wildlife refuges),
+<a href="http://www.mbr.nbs.gov/">USGS's
+Patuxent Wildlife Research Center</a> (for US states), ...</li>
+</ul>
+</td>
+</tr>
+</table>
+The images appearing on this page are from a <a href="http://birding.miningco.com/library/blclipindex.htm">clip-art
+collection</a> assembled by <a href="http://www.miningco.com/">The Mining
+Company.</a>
+<table>
+<tr VALIGN=BOTTOM>
+<td>WHIRL E-Birds is "powered by" WHIRL, a new type of internet search
+engine. Compared to search engines like <a href="http://www.altavista.digital.com">Altavista</a>,
+WHIRL indexes a relatively small number of sites, but understands much
+more about what it indexes. More information is available on the <a href="http://whirl.research.att.com">WHIRL
+home page</a>.
+<hr><i>Comments to: <a href="mailto:wcohen@research.att.com">wcohen@research.att.com</a></i></td>
+
+<td><img SRC="heron-in-marsh.gif" ALT="Heron in a marsh" height=140 width=400 align=RIGHT></td>
+</tr>
+</table>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Data Warehouse Update Issue</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Data Warehouse Update Issue</H1> 
+ <P><UL>
+time:</UL></P>
+<P><UL>
+process:</UL></P>
+<P><UL>
+DU:</UL></P>
+<P><UL>
+DU1 from IS1</UL></P>
+<P><UL>
+DU2 from IS2</UL></P>
+<P><UL>
+QR from IS2</UL></P>
+<P><UL>
+<LI>Middle Layer received two data updates in a specific order ( DU1 &#060 DU2 )
+</UL><UL>
+<LI>The commit order of processing these two data updates is different ? Conflict Problem</UL></P>
+<P><UL>
+<LI>Idea: Counter allows negative value, and system removes the tuple when its counter is 0.
+</UL><UL>
+<LI>When: Tuple to be deleted doesn’t exist in extent.
+</UL><UL>
+<LI>Reason: Negative Counter will keep the tuples that should be deleted in the future.
+</UL><UL>
+<LI>Lemma: Negative counters will only temporarily appear in DW when commit order is varied.</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld004.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld006.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld005.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

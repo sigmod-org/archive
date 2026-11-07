@@ -1,0 +1,142 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA: optimization</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER HEIGHT="75"><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>Overview:</font>
+<br><font size=+3>optimization</font></td>
+
+<td ALIGN=CENTER><img SRC="symb1.gif" ALT=""  align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_overview.html">[Back to Overview]</a>&nbsp;&nbsp; <a href="#db">[Query
+rewriting]</a>&nbsp;&nbsp; <a href="#ir">[Combining IR]</a>&nbsp;&nbsp;
+<a href="#view">[Object View]</a>&nbsp;&nbsp; <a href="#ie">[Combining
+IE]</a></center>
+
+<h1>
+<a NAME="db"></a><img SRC="symb1.gif" > Query rewriting</h1>
+Standard techniques in optimization are based on query rewriting. It consists
+in associating a logical equivalent expression to a given query expression
+that is less costly to evaluate. In the AKIRA approach, the query expression
+given by the user is used to (1) retrieve documents from the Web, (2) build
+the structured cache (database) and (3) query the database. Optimization
+can be done at each of these steps. The last one, would only consists in
+using standard optimization techniques for OQL queries.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="ir"></a><img SRC="symb1.gif" > Combining with IR</h1>
+Many directions should be investigated in order to optimize query evaluation
+in the AKIRA approach at the level of the retrieval of information from
+the Web.
+<p>A <i>"populating class"</i> is extracted from the user's query. With
+the restricted pool of schema components available today in AKIRA system,
+the only
+<i>"populating class"</i> is the class <tt>Conference</tt>. To
+each
+<i>"populating class"</i> is associated a parameterized IR query.
+<p>A IR query access relevant Web services (search engine, database...)
+to retrieve information. Today, the only IR query attached to the class
+<tt>Conference</tt>
+is a query that retrieve Calls for Papers, since the information about
+conferences available in the conceptual representation (dates, location,
+PC members, URL, etc.) is extractable from Calls for Papers. Tomorrow,
+the system could be extended to other information about conferences, such
+as <tt>registration_fee</tt>, <tt>program</tt>, etc. extractable from Calls
+for Participation. In order to do so, the IR query associated to the class
+<tt>Conference</tt> should also retrieve Calls for Participation. The IR
+query sent to the Web will depend on the user's query the following way.
+The Dispatcher will have to find for each attribute of the target structure
+the right source of documents its associated IE tool is able to extract
+information from. For instance, the dates of the conference can be extracted
+from both the Call for Papers and Call for Participation (with the same
+IE tool) when the deadline for submissions can only be extracted from the
+Call for Papers, and the registration fee from the call for Participation.
+The evaluation of the query is a little bit more complicated since several
+sources of documents may be retrieved respectively processed by IE tools
+to extract information necessary to populate a single structured cache.
+<p>The IR component addresses several issues in optimization. First the
+right service has to be chosen to retrieve information from the Web. Should
+it be decided once? Should the system allow some flexibility and access
+several competitive services and thus deal with redundant information with
+different format (warehouse)? Then for each of these services the right
+query has to be asked. What is the best combination of keywords to obtain
+good recall and precision with this search engine? What are the relevant
+parameters that should be added in order to better filter the retrieval
+step according to the user's need?
+<br>&nbsp;
+<p><br>
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="view"></a><img SRC="symb1.gif" > Defining the Object View</h1>
+The second use of the user's query consists in defining the object view
+itself. The interface allows the user to express oneself with fuzzyness,
+path expressions. When processing the query, several equivalent (with respect
+to the user's query) target structure may be used to answer the query.
+The system should choose the the less expensive one in terms of recall/precission
+(choose the classes for which IR queries are good), with respect to the
+data already available in the current cache, with respect to the costs
+of IE tools, etc.
+<br>&nbsp;
+<p><br>
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<a NAME="ie"></a><img SRC="symb1.gif" > Combining with IE</h1>
+The fragment representation may be used for further optimization. When
+interested in extracting information about given particular instances of
+concepts (such as <tt>SIGMOD</tt> for concept
+<tt>Conference</tt>), why
+processing the whole underlying understructured cache? Only files that
+mention the given instances should be processed. Each instance of a concept
+is associated to the list of its fragments. It then easy to only process
+files whose name appear in the first component of these fragments. The
+second component (span) of fragments, may also be used by extractors which
+are based on a notion of locality. In this latter case, why should an extractor
+process the whole file when it is only necessary to process a zone around
+a given string of characters, and when this particular string is directly
+accessible in the document with the span? The use of fragments may improve
+the extraction capabilities of the system and thus optimize evaluation
+of queries.
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<p>
+<hr WIDTH=50%>
+<center><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

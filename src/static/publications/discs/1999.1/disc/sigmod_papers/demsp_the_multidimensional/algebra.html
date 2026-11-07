@@ -1,0 +1,121 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo A1</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+RasDaMan Algebra</h3>
+The RasDaMan server is also capable of performing arbitrary calculations
+on MDD objects and synthesising the result into a new, transient MDD object.
+The following examples are typical for OLAP; the first two are applied
+to the MDD object <tt>salestable</tt> which has the spatial domain [0:27,
+0:2] and contains the sales figures for 3 products (dimension 2) over a
+period of 4 weeks (dimension 1). The other two are applied to the collection
+<tt>rockies</tt>, which has already been used in the examples about
+<a href="dims1.html">dimensionality
+issues</a>.
+<ul>
+<li>
+<b>Example 1:</b> Calculating the total sales of each product for each
+weekday. In RasDaMan this can be done using the following query:</li>
+
+<pre>SELECT MARRAY x IN [0:6,0:2] VALUES
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONDENSE + OVER y IN [0:3] USING a[x[0]+y[0]*7,x[1]]
+FROM&nbsp;&nbsp; salestable AS a</pre>
+The first line selects a new, transient MDD object with the spatial domain
+[0:6,0:2] which will contain the result, and the index <tt>x</tt> which
+will iterate over all values in this domain. The second line defines what
+values this MDD object will contain. <tt>x</tt> and <tt>y</tt> are vectors
+in the domains specified by the <tt>IN</tt> command following their declaration,
+i.e. x[0] = 0, ... ,6 , x[1] = 0, ... ,2 and y[0] = 0, ... ,3.
+<tt>CONDENSE
++ OVER y in [0:3] USING <i>f(y)</i></tt> adds up the values
+<i><tt>f(y)</tt></i>
+and <tt>a[x[0] + 7*y[0], x[1]]</tt> are the sales for product number <tt>x[1]</tt>
+in week number <tt>y[0]</tt> and weekday number <tt>x[1]</tt>. Therefore
+the total sales over all 4 weeks are calculated for each product and weekday
+.
+<li>
+<b>Example 2:</b> In analogy calculating the total sales of each product
+for each week is achieved using the query</li>
+
+<pre>SELECT MARRAY x IN [0:3,0:2] VALUES
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONDENSE + OVER y IN [0:6] USING a[x[0]*7+y[0],x[1]]
+FROM&nbsp;&nbsp; salestable AS a</pre>
+which is identical to the one in Example 1 except that the intervals for
+<tt>x[0]</tt>
+and <tt>y[0]</tt> have been exchanged.
+<li>
+<b>Example 3:</b> Histograms can also be expressed in RasDaMan's Algebra.
+The following query calculates the histogram of one line of the MDD object
+<tt>rockies</tt>:</li>
+
+<pre>SELECT MARRAY n IN [0:5] VALUES
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONDENSE + OVER x IN [0:455] USING img[x[0],250]/50c = n[0]
+FROM&nbsp;&nbsp; rockies AS img</pre>
+The resulting histogram has 6 entries giving the number of pixels in the
+range [50*i, ... , 50*i+49], i=0, ... ,5. <tt>img[x[0],250]/50c = n[0]</tt>
+is a boolean expression which is interpreted as an integer result, i.e.
+1 for TRUE and 0 for FALSE; therefore <tt>MARRAY[<i>i</i>]</tt> is assigned
+the number of pixels where (<i>pixel</i> / 50) equals <i><tt>i</tt></i>.
+<li>
+<b>Example 4:</b> The RasDaMan algebra also allows scaling MDD objects.
+The following query scales down the MDD object contained in the <tt>rockies</tt>
+collection to 1/16th its size by using only every 4th pixel of the source
+MDD object in each dimension to build <tt>MARRAY</tt>.</li>
+
+<pre>SELECT MARRAY x IN [0:109,0:109] VALUES img[ x[0]*4, x[1]*4 ]
+FROM&nbsp;&nbsp; rockies AS img</pre>
+Here's a picture of the resulting image. Click <a href="rockies.gif">here</a>
+to view the original.
+<center>
+<p><img SRC="sc_rockies.gif" BORDER=0 ></center>
+</ul>
+<!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>17-Jul-98</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

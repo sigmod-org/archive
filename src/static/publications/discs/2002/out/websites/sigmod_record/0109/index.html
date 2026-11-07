@@ -1,0 +1,736 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.acm.org/sigmod/record/issues/0109/index.html -->
+<HTML><HEAD><TITLE>SIGMOD Record - web edition / September 2001</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=JavaScript><!-- hide from none JavaScript Browsers Image1= new Image(140,27)Image1.src = "https://www.sigmod.org/sigmod/images/nav_home2.gif"Image2= new Image(140,29)Image2.src = "https://www.sigmod.org/sigmod/images/nav_abou.gif"Image3= new Image(140,40)Image3.src = "https://www.sigmod.org/sigmod/images/nav_sigm.gif"Image4= new Image(140,30)Image4.src = "https://www.sigmod.org/sigmod/images/nav_reco.gif"Image5= new Image(140,31)Image5.src = "https://www.sigmod.org/sigmod/images/nav_dblpl.gif"Image6= new Image(140,58)Image6.src = "https://www.sigmod.org/sigmod/images/nav_digi.gif"Image7= new Image(140,30)Image7.src = "https://www.sigmod.org/sigmod/images/nav_anth.gif"Image9= new Image(140,29)Image9.src = "https://www.sigmod.org/sigmod/images/nav_indu.gif"Image10= new Image(140,35)Image10.src = "https://www.sigmod.org/sigmod/images/nav_pods.gif"Image11= new Image(140,56)Image11.src = "https://www.sigmod.org/sigmod/images/nav_post.gif"Image12= new Image(140,29)Image12.src = "https://www.sigmod.org/sigmod/images/nav_reso.gif"Image13= new Image(140,31)Image13.src = "https://www.sigmod.org/sigmod/images/nav_cale.gif"Image14= new Image(140,81)Image14.src = "https://www.sigmod.org/sigmod/images/sd_draw.gif"Image15= new Image(183,81)Image15.src = "https://www.sigmod.org/sigmod/images/log_sigm.gif"Image16= new Image(142,23)Image16.src = "https://www.sigmod.org/sigmod/images/nav_sear.gif"Image17= new Image(127,23)Image17.src = "https://www.sigmod.org/sigmod/images/nav_join.gif"Image18= new Image(110,23)Image18.src = "https://www.sigmod.org/sigmod/images/nav_feed.gif"Image19= new Image(123,23)Image19.src = "https://www.sigmod.org/sigmod/images/nav_what.gif"Image20= new Image(47,23)Image20.src = "https://www.sigmod.org/sigmod/images/nav_home.gif"Image21= new Image(150,26)Image21.src = "https://www.sigmod.org/sigmod/images/nav_serv.gif"Image22= new Image(54,54)Image22.src = "https://www.sigmod.org/sigmod/images/log_acm.gif"Image23= new Image(374,43)Image23.src = "https://www.sigmod.org/sigmod/images/tagline.gif"Image24= new Image(140,23)Image24.src = "https://www.sigmod.org/sigmod/images/nav_top.gif"Image25= new Image(140,30)Image25.src = "https://www.sigmod.org/sigmod/images/nav_lit.gif"Image26= new Image(140,40)Image26.src = "https://www.sigmod.org/sigmod/images/nav_dig_rev.gif"// End Hiding --></SCRIPT>
+
+<SCRIPT language=JavaScript><!-- Rollover JavaScript functions relies on image replacement feature --><!-- of JavaScript 1.1 --><!-- function nbsp() {document.write("&nbsp;");}function copy() {document.write("&copy;");}bName = navigator.appName;bVer = parseInt(navigator.appVersion);if ((bName == "Netscape" && 3 <= bVer) || (bName == "Microsoft Internet Explorer" && bVer == 4)) {             ver = "n3";        } else {             ver = "xx";}if (ver == "n3") {		hom2on = new Image();        hom2on.src = "https://www.sigmod.org/sigmod/images/nav_home2_ro.gif";                hom2off = new Image();        hom2off.src = "https://www.sigmod.org/sigmod/images/nav_home2.gif";              		aboon = new Image();        aboon.src = "https://www.sigmod.org/sigmod/images/nav_abou_ro.gif";                abooff = new Image();        abooff.src = "https://www.sigmod.org/sigmod/images/nav_abou.gif";                      conon = new Image();        conon.src = "https://www.sigmod.org/sigmod/images/nav_sigm_ro.gif";                conoff = new Image();        conoff.src = "https://www.sigmod.org/sigmod/images/nav_sigm.gif";            sigon = new Image();        sigon.src = "https://www.sigmod.org/sigmod/images/nav_reco_ro.gif";                sigoff = new Image();        sigoff.src = "https://www.sigmod.org/sigmod/images/nav_reco.gif";                                bibon = new Image();        bibon.src = "https://www.sigmod.org/sigmod/images/nav_dblp_ro.gif";                biboff = new Image();        biboff.src = "https://www.sigmod.org/sigmod/images/nav_dblp.gif";                        digon = new Image();        digon.src = "https://www.sigmod.org/sigmod/images/nav_digi_ro.gif";                digoff = new Image();        digoff.src = "https://www.sigmod.org/sigmod/images/nav_digi.gif";                       anton = new Image();        anton.src = "https://www.sigmod.org/sigmod/images/nav_anth_ro.gif";                antoff = new Image();        antoff.src = "https://www.sigmod.org/sigmod/images/nav_anth.gif";                            	indon = new Image();        indon.src = "https://www.sigmod.org/sigmod/images/nav_indu_ro.gif";                indoff = new Image();        indoff.src = "https://www.sigmod.org/sigmod/images/nav_indu.gif";                        podon = new Image();        podon.src = "https://www.sigmod.org/sigmod/images/nav_pods_ro.gif";                podoff = new Image();        podoff.src = "https://www.sigmod.org/sigmod/images/nav_pods.gif";                        meson = new Image();        meson.src = "https://www.sigmod.org/sigmod/images/nav_post_ro.gif";                mesoff = new Image();        mesoff.src = "https://www.sigmod.org/sigmod/images/nav_post.gif";                        recon = new Image();        recon.src = "https://www.sigmod.org/sigmod/images/nav_reso_ro.gif";               recoff = new Image();        recoff.src = "https://www.sigmod.org/sigmod/images/nav_reso.gif";                        calon = new Image();        calon.src = "https://www.sigmod.org/sigmod/images/nav_cale_ro.gif";                caloff = new Image();        caloff.src = "https://www.sigmod.org/sigmod/images/nav_cale.gif";                        seaon = new Image();        seaon.src = "https://www.sigmod.org/sigmod/images/nav_sear_ro.gif";               seaoff = new Image();        seaoff.src = "https://www.sigmod.org/sigmod/images/nav_sear.gif";                        joion = new Image();        joion.src = "https://www.sigmod.org/sigmod/images/nav_join_ro.gif";               joioff = new Image();        joioff.src = "https://www.sigmod.org/sigmod/images/nav_join.gif";                        feeon = new Image();        feeon.src = "https://www.sigmod.org/sigmod/images/nav_feed_ro.gif";               feeoff = new Image();        feeoff.src = "https://www.sigmod.org/sigmod/images/nav_feed.gif";                        whaon = new Image();        whaon.src = "https://www.sigmod.org/sigmod/images/nav_what_ro.gif";               whaoff = new Image();        whaoff.src = "https://www.sigmod.org/sigmod/images/nav_what.gif";                        homon = new Image();        homon.src = "https://www.sigmod.org/sigmod/images/nav_home_ro.gif";               homoff = new Image();        homoff.src = "https://www.sigmod.org/sigmod/images/nav_home.gif";                liton = new Image();        liton.src = "https://www.sigmod.org/sigmod/images/nav_lit_ro.gif";               litoff = new Image();        litoff.src = "https://www.sigmod.org/sigmod/images/nav_lit.gif";            digrevon = new Image();        digrevon.src = "https://www.sigmod.org/sigmod/images/nav_dig_rev_ro.gif";               digrevoff = new Image();        digrevoff.src = "https://www.sigmod.org/sigmod/images/nav_dig_rev.gif";                               }function rollon(imgName) {        if (ver == "n3") {        imgOn = eval(imgName + "on.src");        document[imgName].src = imgOn;        }}function rolloff(imgName) {        if (ver == "n3") {        document[imgName].src = eval(imgName + "off.src");        }}// --></SCRIPT>
+
+<META content="MSHTML 5.50.4916.2300" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#666666 aLink=#009900 link=#0000cc bgColor=#ffffff 
+leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"><!-- SURROUNDING TABLE -->
+<TABLE cellSpacing=0 cellPadding=0 width=775 border=0><!-- TOPBAR TABLE -->
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=775 border=0>
+        <TBODY>
+        <TR>
+          <TD width=760 bgColor=#666699><IMG height=1 
+            src="index_files/pix_none.gif" width=760 align=top border=0></TD>
+          <TD width=15><IMG height=11 src="index_files/t_corner.gif" width=15 
+            align=top border=0></TD></TR></TBODY></TABLE></TD></TR><!-- LOGOS/TAGLINE -->
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=775 border=0>
+        <TBODY>
+        <TR>
+          <TD width=140 bgColor=#666699 rowSpan=2><IMG height=81 
+            src="index_files/sd_draw.gif" width=140 align=top border=0></TD>
+          <TD align=left width=183>
+            <TABLE height=81 cellSpacing=0 cellPadding=0 align=left border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top bgColor=#666699 rowSpan=2><A 
+                  href="http://www.acm.org/sigmod/index.html"><IMG height=81 
+                  alt="ACM SIGMOD ONLINE" src="index_files/log_sigm.gif" 
+                  width=183 border=0></A></TD></TR></TBODY></TABLE></TD>
+          <TD align=left width=374>
+            <TABLE cellSpacing=0 cellPadding=0 align=left border=0 
+              VALIGN="TOP"><TBODY>
+              <TR>
+                <TD vAlign=top><IMG height=21 src="index_files/top_tag.gif" 
+                  width=374 align=top border=0></TD></TR>
+              <TR>
+                <TD vAlign=bottom height=60><IMG height=43 
+                  alt="ACM SIGMOD Online" src="index_files/tagline.gif" 
+                  width=374 align=top border=0></TD></TR></TBODY></TABLE></TD>
+          <TD align=left width=78>
+            <TABLE cellSpacing=0 cellPadding=0 align=left border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=21 src="index_files/top_dots.gif" width=78 
+                  align=top border=0></TD></TR>
+              <TR>
+                <TD align=left><A href="http://www.acm.org/"><IMG height=54 
+                  alt=ACM hspace=17 src="index_files/log_acm.gif" width=54 
+                  align=top border=0></A></TD></TR>
+              <TR>
+                <TD><IMG height=6 src="index_files/pix_none.gif" width=1 
+                  align=top 
+  border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><!-- TOP NAVIGATION TABLE -->
+  <TR>
+    <TD><A name=topnav></A>
+      <TABLE cellSpacing=0 cellPadding=0 width=775 border=0>
+        <TBODY>
+        <TR>
+          <TD width=140><IMG height=23 src="index_files/nav_top.gif" width=140 
+            align=top border=0></TD>
+          <TD width=142><A onmouseover="rollon('sea'); return false" 
+            onmouseout="rolloff('sea'); return false" 
+            href="http://www.cs.toronto.edu/sigmod/index.html"><IMG height=23 
+            alt="Search SIGMOD" src="index_files/nav_sear.gif" width=142 
+            align=top border=0 name=sea></A></TD>
+          <TD width=21><IMG height=23 src="index_files/nav_one.gif" width=21 
+            align=top border=0></TD>
+          <TD width=127><A onmouseover="rollon('joi'); return false" 
+            onmouseout="rolloff('joi'); return false" 
+            href="http://www.acm.org/catalog/sigs/sigmod.html"><IMG height=23 
+            alt="Join SIGMOD" src="index_files/nav_join.gif" width=127 align=top 
+            border=0 name=joi></A></TD>
+          <TD width=21><IMG height=23 src="index_files/nav_one.gif" width=21 
+            align=top border=0></TD>
+          <TD width=110><A onmouseover="rollon('fee'); return false" 
+            onmouseout="rolloff('fee'); return false" 
+            href="mailto:Online@sigmod.acm.org"><IMG height=23 alt=Feedback 
+            src="index_files/nav_feed.gif" width=110 align=top border=0 
+            name=fee></A></TD>
+          <TD width=22><IMG height=23 src="index_files/nav_one.gif" width=22 
+            align=top border=0></TD>
+          <TD width=123><A onmouseover="rollon('wha'); return false" 
+            onmouseout="rolloff('wha'); return false" 
+            href="http://www.acm.org/sigmod/index.html"><IMG height=23 
+            alt="What's New" src="index_files/nav_what.gif" width=123 align=top 
+            border=0 name=wha></A></TD>
+          <TD width=22><IMG height=23 src="index_files/nav_one.gif" width=22 
+            align=top border=0></TD>
+          <TD width=47><A onmouseover="rollon('hom'); return false" 
+            onmouseout="rolloff('hom'); return false" 
+            href="http://www.acm.org/sigmod/index.html"><IMG height=23 alt=Home 
+            src="index_files/nav_home.gif" width=47 align=top border=0 
+            name=hom></A></TD></TR></TBODY></TABLE></TD></TR><!-- SIDE NAVIATION TABLE -->
+  <TR>
+    <TD><A name=sidenav></A>
+      <TABLE cellSpacing=0 cellPadding=0 width=775 border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top bgColor=#666699>
+            <TABLE cellSpacing=0 cellPadding=0 width=140 align=left 
+            bgColor=#666699 border=0>
+              <TBODY>
+              <TR>
+                <TD><A onmouseover="rollon('hom2'); return false" 
+                  onmouseout="rolloff('hom2'); return false" 
+                  href="http://www.acm.org/sigmod/index.html"><IMG height=27 
+                  alt=Home src="index_files/nav_home2.gif" width=140 align=top 
+                  border=0 name=hom2></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('abo'); return false" 
+                  onmouseout="rolloff('abo'); return false" 
+                  href="http://www.acm.org/sigmod/sigmodinfo/index.html"><IMG 
+                  height=29 alt="About SIGMOD" src="index_files/nav_abou.gif" 
+                  width=140 align=top border=0 name=abo></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('con'); return false" 
+                  onmouseout="rolloff('con'); return false" 
+                  href="http://www.acm.org/sigmod/conferences/index.html"><IMG 
+                  height=40 alt="SIGMOD/PODS Conferences" 
+                  src="index_files/nav_sigm.gif" width=140 align=top border=0 
+                  name=con></A></TD></TR>
+              <TR>
+                <TD><A href="http://www.acm.org/sigmod/record/index.html"><IMG 
+                  height=30 alt="SIGMOD Record" 
+                  src="index_files/nav_reco_ro.gif" width=140 align=top border=0 
+                  name=sig></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('bib'); return false" 
+                  onmouseout="rolloff('bib'); return false" 
+                  href="http://www.acm.org/sigmod/dblp/db/index.html"><IMG 
+                  height=31 alt="DBLP Bibliography" 
+                  src="index_files/nav_dblp.gif" width=140 align=top border=0 
+                  name=bib></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('dig'); return false" 
+                  onmouseout="rolloff('dig'); return false" 
+                  href="http://www.cs.wpi.edu/~ifc/DISC/index.html"><IMG 
+                  height=58 alt="SIGMOD Digital Symposium Collection" 
+                  src="index_files/nav_digi.gif" width=140 align=top border=0 
+                  name=dig></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('ant'); return false" 
+                  onmouseout="rolloff('ant'); return false" 
+                  href="http://www.acm.org/sigmod/dblp/db/anthology.html"><IMG 
+                  height=30 alt="SIGMOD Anthology" 
+                  src="index_files/nav_anth.gif" width=140 align=top border=0 
+                  name=ant></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('digrev'); return false" 
+                  onmouseout="rolloff('digrev'); return false" 
+                  href="http://www.eecs.umich.edu/digital-review/"><IMG 
+                  height=40 alt="SIGMOD Digital Review" 
+                  src="index_files/nav_dig_rev.gif" width=140 align=top border=0 
+                  name=digrev></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('ind'); return false" 
+                  onmouseout="rolloff('ind'); return false" 
+                  href="http://www.acm.org/sigmod/industry/index.html"><IMG 
+                  height=29 alt="Industry Pages" src="index_files/nav_indu.gif" 
+                  width=140 align=top border=0 name=ind></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('pod'); return false" 
+                  onmouseout="rolloff('pod'); return false" 
+                  href="http://www.acm.org/sigmod/pods/index.html"><IMG 
+                  height=35 alt="The PODS Pages" src="index_files/nav_pods.gif" 
+                  width=140 align=top border=0 name=pod></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('mes'); return false" 
+                  onmouseout="rolloff('mes'); return false" 
+                  href="http://cs.wisc.edu/dbworld"><IMG height=56 
+                  alt="Post/Read DB World Messages" 
+                  src="index_files/nav_post.gif" width=140 align=top border=0 
+                  name=mes></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('lit'); return false" 
+                  onmouseout="rolloff('lit'); return false" 
+                  href="http://www.acm.org/sigmod/literature/index.html"><IMG 
+                  height=30 alt=Literature src="index_files/nav_lit.gif" 
+                  width=140 align=top border=0 name=lit></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('rec'); return false" 
+                  onmouseout="rolloff('rec'); return false" 
+                  href="http://www.acm.org/sigmod/resources/index.html"><IMG 
+                  height=29 alt=Resources src="index_files/nav_reso.gif" 
+                  width=140 align=top border=0 name=rec></A></TD></TR>
+              <TR>
+                <TD><A onmouseover="rollon('cal'); return false" 
+                  onmouseout="rolloff('cal'); return false" 
+                  href="http://www.acm.org/sigmod/dbevents/index.html"><IMG 
+                  height=31 alt=Calendar src="index_files/nav_cale.gif" 
+                  width=140 align=top border=0 name=cal></A></TD></TR>
+              <TR>
+                <TD><IMG height=25 src="index_files/pix_none.gif" width=1 
+                  align=top border=0></TD></TR></TBODY></TABLE></TD><!-- SPACER TABLE -->
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=0 width=18 border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=1 src="index_files/pix_none.gif" width=18 
+                  align=top border=0></TD></TR></TBODY></TABLE></TD><!-- INSIDE TABLE --><A 
+          name=CONTENT>
+          <TD vAlign=top>
+            <TABLE cellSpacing=0 cellPadding=0 width=617 border=0>
+              <TBODY>
+              <TR>
+                <TD colSpan=2><IMG height=25 src="index_files/pix_none.gif" 
+                  width=1 align=top border=0></TD></TR>
+              <TR></A>
+                <TD align=left width=617 colSpan=2>
+                  <TABLE cellSpacing=0 cellPadding=0 width=617 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=left width=15><IMG height=19 
+                        src="index_files/bar_sigm.gif" width=15 border=0></TD>
+                      <TD align=left width=602 bgColor=#cccccc><FONT 
+                        color=#000066><B>Volume 30 &nbsp;&nbsp; Number 3 
+                        &nbsp;&nbsp; September 2001</B></FONT></TD></TR>
+                    <TR>
+                      <TD width=617 colSpan=2><IMG height=25 
+                        src="index_files/pix_none.gif" width=1 align=right 
+                        border=0></TD></TR><!-- SIGMOD RECORD LINKS -->
+                    <TR>
+                      <TD colSpan=2>
+                        <TABLE cellSpacing=0 cellPadding=0 width=617 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD colSpan=5><IMG height=5 
+                              src="index_files/pix_none.gif" width=1 
+                          border=0></TD></TR>
+                          <TR>
+                            <TD align=left width=252><IMG height=112 
+                              alt="SIGMOD Record" src="index_files/sigmod.gif" 
+                              width=252 border=0></TD>
+                            <TD align=left width=22><IMG height=1 
+                              src="index_files/pix_none.gif" width=22 
+                            border=0></TD><!-- SIGMOND LINKS -->
+                            <TD vAlign=top align=right width=343>
+                              <TABLE cellSpacing=0 cellPadding=0 width=338 
+                              border=0>
+                                <TBODY>
+                                <TR>
+                                <TD width=338 colSpan=5><IMG height=5 
+                                src="index_files/pix_none.gif" width=1 
+                                border=0></TD></TR>
+                                <TR>
+                                <TD width=5><IMG height=1 
+                                src="index_files/pix_none.gif" width=5 
+                                border=0></TD>
+                                <TD align=left width=27><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left width=139><A 
+                                href="http://www.acm.org/sigmod/record/index.html"><IMG 
+                                alt="Current Issue" 
+                                src="index_files/rec_curr.gif" 
+border=0></A></TD>
+                                <TD align=left width=27><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left width=140><A 
+                                href="http://www.acm.org/sigmod/record/xml/"><IMG 
+                                height=9 alt="XML Edition" 
+                                src="index_files/rec_xml.gif" width=67 
+                                border=0></A></TD></TR>
+                                <TR>
+                                <TD colSpan=5><IMG height=1 
+                                src="index_files/pix_grey.gif" width=338 
+                                vspace=8 border=0></TD></TR>
+                                <TR>
+                                <TD width=5><IMG height=1 
+                                src="index_files/pix_none.gif" width=5 
+                                border=0></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/record/previous.html"><IMG 
+                                height=10 alt="Previous Issue" 
+                                src="index_files/rec_prev.gif" width=88 
+                                border=0></A></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/sigmodinfo/index.html"><IMG 
+                                height=9 alt="About SIGMOD" 
+                                src="index_files/rec_abou.gif" width=83 
+                                border=0></A></TD></TR>
+                                <TR>
+                                <TD colSpan=5><IMG height=1 
+                                src="index_files/pix_grey.gif" width=338 
+                                vspace=8 border=0></TD></TR>
+                                <TR>
+                                <TD><IMG height=1 src="index_files/pix_none.gif" 
+                                width=5 border=0></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/record/author.html"><IMG 
+                                height=12 alt="Info for Authors" 
+                                src="index_files/rec_info.gif" width=89 
+                                border=0></A></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/record/faq.html"><IMG 
+                                height=11 alt=FAQ src="index_files/rec_faq.gif" 
+                                width=22 border=0></A></TD></TR>
+                                <TR>
+                                <TD colSpan=5><IMG height=1 
+                                src="index_files/pix_grey.gif" width=338 
+                                vspace=8 border=0></TD></TR>
+                                <TR>
+                                <TD><IMG height=1 src="index_files/pix_none.gif" 
+                                width=5 border=0></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/record/editors.html"><IMG 
+                                height=10 alt="Record Editors" 
+                                src="index_files/rec_reco.gif" width=82 
+                                border=0></A></TD>
+                                <TD align=left><IMG height=11 hspace=8 
+                                src="index_files/arr_righ.gif" width=11 
+                                border=0></TD>
+                                <TD align=left><A 
+                                href="http://www.acm.org/sigmod/record/credits.html"><IMG 
+                                height=10 alt=Credits 
+                                src="index_files/rec_cred.gif" width=40 
+                                border=0></A></TD></TR>
+                                <TR>
+                                <TD colSpan=5><IMG height=1 
+                                src="index_files/pix_grey.gif" width=338 
+                                vspace=8 
+                          border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+                    <TR>
+                      <TD colSpan=2><IMG height=12 
+                        src="index_files/pix_none.gif" width=1 
+                    border=0></TD></TR></TBODY></TABLE>
+                  <P><BR><!-- INSIDE COPY TABLE --><A name=bodycopy></A>
+                  <TABLE cellSpacing=0 cellPadding=0 width=617 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD width=617><FONT size=2>
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#000066 height=3><IMG height=5 
+                              src="index_files/pix_none.gif" width=1></TD></TR>
+                          <TR>
+                            <TD bgColor=#ccffcc height=5><IMG height=5 
+                              src="index_files/pix_none.gif" width=1></TD></TR>
+                          <TR>
+                            <TD align=middle bgColor=#ccffcc><A 
+                              href="index.html#special">Special 
+                              Section on Advanced XML Data Processing</A> | <A 
+                              href="index.html#articles">Articles</A> 
+                              | <A 
+                              href="index.html#dbprofiles">Distinguished 
+                              Database Profiles</A> </TD></TR>
+                          <TR>
+                            <TD bgColor=#ccffcc height=2><IMG height=2 
+                              src="index_files/pix_none.gif" width=1></TD></TR>
+                          <TR>
+                            <TD align=middle bgColor=#ccffcc><A 
+                              href="index.html#reports">Reports</A> 
+                              | <A 
+                              href="index.html#influential">Influential 
+                              Papers</A> | <A 
+                              href="index.html#standards">Standards</A> 
+                              | <A 
+                              href="index.html#surveys">Surveys</A> 
+                              | <A 
+                              href="index.html#career">Career 
+                              Forum</A> | <A 
+                              href="index.html#bookreview">Call 
+                              for Book Reviews</A> </TD></TR>
+                          <TR>
+                            <TD bgColor=#ccffcc height=5><IMG height=5 
+                              src="index_files/pix_none.gif" 
+                          width=1></TD></TR></TBODY></TABLE>
+                        <P><FONT face=arial,verdana,times size=-1><CITE><A 
+                        href="http://www.acm.org/sigmod/sigmodinfo/index.html#officers">SIGMOD 
+                        Officers, Committees and Awards</A> </CITE></FONT><FONT 
+                        face=arial,verdana,times size=-1></FONT>
+                        <P><FONT face=arial,verdana,times size=-1><CITE>Editor's 
+                        Notes</CITE></FONT> <FONT face=arial,verdana,times 
+                        size=-1>(in: <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                        and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A>)</FONT> 
+
+                        <P><FONT face=arial,verdana,times size=-1><CITE>Chair's 
+                        Message</CITE></FONT> <FONT face=arial,verdana,times 
+                        size=-1>(in: gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                        and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A>)</FONT> 
+
+                        <P><FONT face=arial,verdana,times 
+                        size=-1><CITE>Treasurer's Message</CITE></FONT> <FONT 
+                        face=arial,verdana,times size=-1>(in: gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                        and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A>)</FONT> 
+
+                        <P><FONT face=arial,verdana,times 
+                        size=-1><CITE>Accessibility of the Database Literature 
+                        -- Richard Snodgrass</CITE></FONT> <FONT 
+                        face=arial,verdana,times size=-1>(in: gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                        and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A>)</FONT> 
+
+                        <P><A name=special></A><BR><FONT face="helvetica, arial" 
+                        color=#000066 size=+1><STRONG>Special Section on 
+                        Advanced XML Data Processing</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>Guest 
+                          Editor's Foreword</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Karl 
+                          Aberer</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Xquery Formal Semantics: State and 
+                          Challenges</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Peter 
+                          Fankhauser</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>A 
+                          General Techniques for Querying XML Documents using a 
+                          Relational Database System</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Jayavel 
+                          Shanmugasundaram, Eugene Shekita, Jerry Kiernan, 
+                          Rajasekar Krishnamurthy, Efstratios Viglas, Jeffrey 
+                          Naughton, Igor Tatarinov</FONT> <BR><FONT 
+                          face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>Why 
+                          And How To Benchmark XML Databases</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Albrecht 
+                          Schmidt, Florian Waas, Martin Kersten, Daniela 
+                          Florescu, Michael J. Carey, Ioana Manolescu, Ralph 
+                          Busse</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Wrapping Web Data into XML</CITE></FONT> 
+
+                          <DD><FONT face=arial,verdana,times size=-1>Wei Han, 
+                          David Buttler, Calton Pu</FONT> <BR><FONT 
+                          face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>On 
+                          Database Theory and XML</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Dan 
+                          Suciu</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>XML 
+                          Document Versioning</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Shu-Yao 
+                          Chien, Vassilis Tsotras, Carlo Zaniolo</FONT> 
+                          <BR><FONT face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Preservation of Digital Data with 
+                          Self-Validating, Self-Instantiating Knowledge- Based 
+                          Archives</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Bertram 
+                          Ludaescher, Richard Marciano, Reagan Moore</FONT> 
+                          <BR><FONT face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=articles></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Articles</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>The 
+                          Evolution of Effective B-tree: Page Organization and 
+                          Techniques: A Personal Account</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>David 
+                          Lomet</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>The 
+                          Ecobase Project: Database and Web Technologies for 
+                          Environmental Information Systems</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Asterio 
+                          Tanaka, Patrick Valduriez and the Ecobase Project 
+                          members</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>Data 
+                          Analysis and Mining in the Life Sciences</CITE></FONT> 
+
+                          <DD><FONT face=arial,verdana,times size=-1>Nam 
+                          Huyn</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=dbprofiles></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Distinguished Database 
+                        Profiles</STRONG></FONT> <BR><IMG height=1 alt="" 
+                        src="index_files/pix_grey.gif" width=617 border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE><A 
+                          href="ullman2.html">Jeffrey 
+                          D. Ullman Speaks Out on the Future of Higher 
+                          Education, Startups, Database Theory, and More</A> 
+                          </CITE></FONT>
+                          <DD><FONT face=arial,verdana,times size=-1>Marianne 
+                          Winslett</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=reports></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Reports</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Report on the 2001 SIGMOD and PODS 
+                          Awards</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Philip A. 
+                          Bernstein</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Semantic Web Workshop: Models, 
+                          Architectures and Management</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Panos 
+                          Constantopoulos, Vassilis Christophides, Dimitris 
+                          Plexousakis</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=influential></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Influential Papers</STRONG></FONT> 
+                        <BR><IMG height=1 alt="" src="index_files/pix_grey.gif" 
+                        width=617 border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Reminiscences on Influential Papers 
+                          </CITE>- Kenneth A. Ross ed.</FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>J. Han, N. 
+                          Koudas, R. Rastogi, D. Rosenkrantz, P. Scheuermann, D. 
+                          Suciu</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=standards></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Standards</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>SQL/XML and the SQLX Informal Group of 
+                          Companies</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Andrew 
+                          Eisenberg and Jim Melton</FONT> <BR><FONT 
+                          face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=surveys></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Surveys</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times 
+                          size=-1><CITE>Continuous Queries over Data 
+                          Streams</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Shivnath 
+                          Babu and Jennifer Widom</FONT> <BR><FONT 
+                          face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> gzipped <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><BR>
+                          <P></P></DD></DL><A name=career></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Career Forum</STRONG></FONT> <BR><IMG 
+                        height=1 alt="" src="index_files/pix_grey.gif" width=617 
+                        border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE><A 
+                          href="dbjobs-sep01.html">Career-Enhancing 
+                          Services at SIGMOD Online</A> </CITE></FONT>
+                          <DD><FONT face=arial,verdana,times size=-1>Alexandros 
+                          Labrinidis and Alberto O. Mendelzon</FONT> <BR><FONT 
+                          face=arial,verdana,times size=-1><FONT 
+                          color=green>Available in:</FONT> <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><FONT face=arial,verdana,times size=-1><FONT 
+                          color=green>URL:</FONT> <A target=main 
+                          href="http://www.dbjobs.org/">http://www.dbjobs.org/</A></FONT> 
+                          <BR>
+                          <P></P></DD></DL><A name=bookreview></A><BR><FONT 
+                        face="helvetica, arial" color=#000066 
+                        size=+1><STRONG>Call for Book Reviews</STRONG></FONT> 
+                        <BR><IMG height=1 alt="" src="index_files/pix_grey.gif" 
+                        width=617 border=0>
+                        <P>
+                        <DL>
+                          <DT><FONT face=arial,verdana,times size=-1><CITE>Call 
+                          for Book Reviews</CITE></FONT> 
+                          <DD><FONT face=arial,verdana,times size=-1>Karl 
+                          Aberer</FONT> <BR><FONT face=arial,verdana,times 
+                          size=-1><FONT color=green>Available in:</FONT> gzipped 
+                          <a href="../../../../out/contentRemovedForCopyright.htm" >Postscript</A> 
+                          and <a href="../../../../out/contentRemovedForCopyright.htm" >PDF</A></FONT> 
+                          <BR><FONT face=arial,verdana,times size=-1><FONT 
+                          color=green>URL:</FONT> <A target=main 
+                          href="http://www.acm.org/sigmod/record/bookreviews.html">http://www.acm.org/sigmod/record/bookreviews.html</A></FONT> 
+                          <BR>
+                          <P></P></DD></DL><BR>
+                        <P><BR>
+                        <P><BR>
+                        <TABLE cellSpacing=0 cellPadding=0 width=617 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD align=left width=15><IMG height=19 
+                              src="index_files/pix_none.gif" width=15 
+                            border=0></TD>
+                            <TD align=left colSpan=3><FONT size=-1>Last 
+                              update: November 7, 2001</FONT></TD></TR>
+                          <TR>
+                            <TD colSpan=4><IMG height=3 
+                              src="index_files/pix_none.gif" width=1 
+                          border=0></TD></TR>
+                          <TR bgColor=#cccccc>
+                            <TD align=left width=15><IMG height=19 
+                              src="index_files/bar_sigm.gif" width=15 
+                            border=0></TD>
+                            <TD align=left><FONT color=#000066 
+                              size=-1><B>Previous Issue:</B></FONT> <FONT 
+                              size=-1><A 
+                              href="http://www.acm.org/sigmod/record/issues/0106/index.html">June 
+                              2001</A></FONT> </TD>
+                            <TD align=right><FONT color=#000066 
+                              size=-1><B>Next Issue:</B></FONT> <FONT size=-1><A 
+                              href="http://www.acm.org/sigmod/record/issues/0112/index.html">December 
+                              2001</A></FONT></TD>
+                            <TD align=right width=10><IMG height=1 
+                              src="index_files/pix_none.gif" width=10 
+                            border=0></TD></TR>
+                          <TR>
+                            <TD colSpan=4><IMG height=3 
+                              src="index_files/pix_none.gif" width=1 
+                          border=0></TD></TR>
+                          <TR>
+                            <TD align=left width=15><IMG height=19 
+                              src="index_files/pix_none.gif" width=15 
+                            border=0></TD>
+                            <TD align=left colSpan=3><FONT size=-1>Send 
+                              comments or suggestions to <A 
+                              href="mailto:labrinid@cs.umd.edu?subject=SIGMOD Record - web edition">Alexandros 
+                              Labrinidis</A>, the webmaster.</FONT> 
+                          </TD></TR></TBODY></TABLE></P></FONT></TD></TR></TBODY></TABLE></P></TD></TR>
+              <TR>
+                <TD colSpan=2><IMG height=25 src="index_files/pix_none.gif" 
+                  width=1 align=top border=0></TD></TR>
+              <TR>
+                <TD align=left colSpan=3><IMG height=1 
+                  src="index_files/pix_blue.gif" width=617 vspace=5 
+              border=0></TD></TR>
+              <TR>
+                <TD align=left width=350><FONT size=1>© 2000 <A 
+                  href="mailto:info@acm.org">Association for Computing 
+                  Machinery</FONT></A><BR><IMG height=1 alt="" hspace=0 
+                  src="index_files/pix_none.gif" width=350 border=0></TD>
+                <TD align=right><A 
+                  href="http://www.acm.org/sigmod/acks.html"><FONT 
+                  size=1>Acknowledgements</FONT></A><BR></TD></TR>
+              <TR>
+                <TD colSpan=2><IMG height=25 src="index_files/pix_none.gif" 
+                  width=1 
+    border=0></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></A></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ICDM Steering Committee</TITLE>
+<STYLE>
+
+<!--
+
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+
+<H1><FONT color=#0055ff>ICDM Steering Committee</FONT></H1>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif" WIDTH=100%><br>
+
+<P class=body>
+
+The Steering Committee coordinates the conference series. It decides
+where and when the next conference will be held, and selects the
+Program Chair(s).
+
+<UL>
+
+<LI> <A href="http://www.cs.uvm.edu/~xwu/home.html" target=_top>Xindong Wu</A>,
+    Chair (University of Vermont, USA)<BR>
+
+<!--
+    <UL>
+    <LI> Executive Editor, <A href="http://www.cs.uvm.edu/~kais/" 
+        target=_top>Knowledge and Information Systems</A> by 
+        Springer-Verlag.<BR>
+    <LI> Chair, <A href="http://www.cs.uvm.edu/~xwu/pakdd/index.shtml" 
+        target=_top>Steering Committee of the Pacific-Asia Conference on 
+        Knowledge Discovery and Data Mining</A>.
+    </LI></UL>
+-->
+
+<LI> <A href="http://www.btinternet.com/~max.bramer/" target=_top>Max
+    Bramer</A>, University of Portsmouth, UK.<BR>
+<!--
+    <UL>
+    <LI> Chairman, British Computer Society's Specialist Group on 
+        Knowledge-Based Systems and Applied Artificial Intelligence.
+    </LI></UL>
+-->
+<LI> <A href="http://ai.uwaterloo.ca/~ncercone/"
+target=_top>Nick Cercone</A>, University of Waterloo, Canada.<BR>
+<!--
+    <UL>
+    <LI> Editor, <A
+href="http://www.blackwellpublishers.co.uk/asp/journal.asp?ref=0824-7935">Computational
+        Intelligence: An International Journal</A> (by Blackwell 
+        Publishers).<BR>
+    <LI> President (1982-84), Canadian Society for the Computational
+        Studies of Intelligence.
+    </LI></UL>
+-->
+<LI> <A href="http://www.cs.mu.oz.au/~rao/" target=_top>Ramamohanarao Kotagiri</A>, 
+    University of Melbourne, Australia. 
+<!--
+    <UL>
+    <LI> Fellow, Australian Academy of Technological Sciences and 
+        Engineering. 
+    <LI> Program Chair, <A href="http://www.cs.uvm.edu/~xwu/pakdd-98/" 
+        target=_top>PAKDD-98</A>.
+    </LI></UL>
+-->
+<LI> <A href="http://www-ai.informatik.uni-dortmund.de/PERSONAL/morik.eng.html"
+    target=_top>Katharina Morik</A>, University of Dortmund,
+    Germany. 
+<!--
+    <UL>
+    <LI> Chair, the 4th European Conference on Machine Learning.
+    <LI> Co-ordinator, <A
+href="http://www-ai.informatik.uni-dortmund.de/FORSCHUNG/PROJEKTE/MININGMART/index.eng.html">MiningMart:
+A European Project on Data Mining</a>
+    </LI></UL>
+-->
+
+<LI> <A href="http://www.kdnuggets.com/gps.html" target=_top>Gregory
+Piatetsky-Shapiro</A>, KDnuggets, USA.<BR>
+
+<LI> <A href="http://manip.crhc.uiuc.edu/" target=_top>Benjamin
+W. Wah</A>, University of Illinois, Urbana-Champaign, USA.<BR>
+
+<LI> <A href="http://www.research.ibm.com/people/p/psyu/"
+target=_top>Philip S. Yu</A>, IBM T.J. Watson Research Center,
+USA.<BR> <!--
+    <UL>
+    <LI> Fellow, ACM and IEEE.
+    </LI></UL>
+-->
+<LI> <A href="http://kis.maebashi-it.ac.jp/zhong/"
+target=_top>Ning Zhong</A>, Maebashi Institute of Technology,
+Japan.<BR>
+<!--
+    <UL>
+    <LI> Program Chair, <A 
+        href="http://ain2.ai.csse.yamaguchi-u.ac.jp/pakdd99/" 
+        target=_top>PAKDD-99</A>.
+    </LI></UL>
+-->
+
+<!--
+<LI> <A href="http://www.cs.uncc.edu/faculty/zytkow.html"
+target=_top>Jan M.  Zytkow</A>, University of North Carolina,
+Charlotte, USA.
+    <UL>
+    <LI> Conference Chair, <A href="http://eric.univ-lyon2.fr/~pkdd2000/" 
+        target=_top>PKDD-2000</A>.
+    </LI></UL>
+-->
+</LI></UL>
+
+
+<P class=body>
+Membership to the Steering Committee is by the Chair's invitation, and
+is limited to researchers who are active and energetic in data mining
+research with an outstanding international reputation.
+<p>
+
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-steering.dat"
+align=absmiddle> times since June 18, 2000.<br>
+Last modified:
+
+April 11, 2002.
+
+</BODY>
+</HTML>

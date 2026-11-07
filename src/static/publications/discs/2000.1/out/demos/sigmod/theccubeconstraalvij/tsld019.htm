@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Optimization</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Optimization</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld018.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld020.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr>Optimization</nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font size="5"><b>Optimization by Approximation-based Filtering and Indexing (cont.)</b></font></p>
+
+<p>The query then can be re-written query to speed up processing as follows, to implement
+the following method. First, using an R-tree, the query finds all candidate xy-segments,
+i.e., whose MBR intersects the MBR of the Fairfax area. Second, for each such candidate
+xy-segment, the query tests, using SAT, that it actually intersects the Fairfax area. If
+it does, the query retrieves, using the inversed grouping, all the corresponding
+trajectories (which must fly over Fairfax because they have a 4D piece whose xy-projection
+intersects Fairfax). </p>
+
+<p>The re-written CCUBE query is as follows. We do not explain all the technicalities of
+the exact C++ types in it, but merely give a feeling of how it looks - for more details
+the reader is referred to the full paper. </p>
+
+<pre>
+   <strong>SELECT traj  
+   INTO {Set&lt;DC_LIN*&gt;} result
+   //
+   FROM All_Traj_IG_IAG.MUT_SAT(min_box_of_Fairfax) 
+     AS {Set&lt;G_Pair&lt;C_LIN*,DC_LIN*&gt;*&gt;*} Candidate_Traj_IG
+   //
+   FROM  *Candidate_Traj_IG  AS {G_Pair&lt;C_LIN*,DC_LIN*&gt;*} IG_pair
+   DEFINE xy_segment  AS {C_LIN*} IG_pair-&gt;first
+   WHERE Mut_Sat( *xy_segment, Fairfax )          // Note: MUT_SAT 
+                                                  // on C_LIN
+   //
+   DEFINE trajectories_of_xy_segment AS {Set&lt;DC_LIN*&gt;*} IG_pair-&gt;second
+   FROM  *trajectories_of_xy_segment AS traj</strong></pre>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

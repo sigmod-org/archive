@@ -1,0 +1,548 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+        <title>Hypertext 2001</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="Author" content="n.o.bouvin@daimi.au.dk">
+    <meta name="Description" content="The ACM Conference on Hypertext and
+	  Hypermedia 2001 held August 14-18 2001 in Århus, Denmark">
+    <link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/Core/Ultramarine">
+    <link rel="stylesheet" type="text/css" href="http://www.daimi.au.dk/cgi-bouvin/css-redirect.pl">
+
+  </head>
+  <body>
+    
+    <h1>Tutorials</h1>
+
+    <p>HT'2001 tutorials are intended to appeal to the interests of conference attendees across a broad range of topics - providing opportunities to develop knowledge and practical in emerging areas. The tutorials are presented by experts in the their respective fields.</p>
+
+    <ul>
+      <li><a href="#t1">T1: WebDAV and DeltaV</a></li>
+      <li><a href="#t2">T2: SMIL 2.0</a></li>
+      <li><a href="#t3">T3: Metadata management through open hypermedia</a></li>
+      <li><a href="#t4">T4: Evaluating, Using, and Publishing eBooks</a></li>
+      <li><a href="#t5and6">T5: Introduction to XML</a> and <a href="#t5and6">T6: Introduction to XLink</a></li>
+    </ul>
+
+  
+    <h3><a name="t1">T1: WebDAV and DeltaV: The Writeable, Collaborative, Versionable Web</a></h3>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	<tr> 
+	  <td align="left" valign="top"> 
+	    <dl>
+	      <dt>Presenter</dt>
+	      <dd>Jim Whitehead</dd>
+	      <dt>Duration</dt><dd>Full day</dd>
+	      <dt>Date</dt><dd>To be announced</dd>
+
+
+	      <dt>Presenter Bio</dt>
+	      <dd>
+		<p>Jim Whitehead is the Chair and Founder of the Internet
+		Engineering Task Force (IETF) working group on Web
+		Distributed Authoring and Versioning (WebDAV), and is a
+		co-author on all major specifications produced by this
+		working group. Jim additionally spearheaded the formation of
+		the DeltaV working group for Web versioning and
+		configuration management, and is an author on the DeltaV
+		protocol specification. Jim has led several student teams
+		developing prototype WebDAV implementations, including the
+		WebDAV Explorer client.</p>
+
+		<p>Jim is also an Assistant Professor of Computer Science at
+		the University of California, Santa Cruz. His research
+		interests include hypertext versioning, collaborative
+		authoring, web protocols, open hypermedia (the Chimera
+		system), configuration management, and software
+		architecture. Jim has a Ph.D and MS in Information and
+		Computer Science from U.C. Irvine (Ph.D. dissertation: "An
+		Analysis of the Hypertext Versioning Domain"), and a BS in
+		Electrical Engineering from the Rensselaer Polytechnic
+		Institute.</p>
+	      </dd>
+	    </dl>
+	  </td>
+
+	  <td align="left" valign="top">
+	    <dl>
+	      <dt>Description</dt>
+	      <dd>
+		<p>At present, the Web is primarily a read-only medium,
+		  providing excellent support for browsing content, and
+		  limited support for authoring new content. WebDAV is a
+		  standard developed by the Internet Engineering Task Force
+		  (IETF) for extending the Web with collaborative authoring
+		  capability, and is supported by such industry-leading
+		  tools as Office 2000, Photoshop 6, GoLive 5, Internet
+		  Explorer 5, Mac OS X, Apache, Internet Information
+		  Services 5, Oracle iFS, and Jigsaw, along with Web storage
+		  sites such as Driveway, My Docs Online, and
+		  Sharemation. Building on this strong base of support, the
+		  DeltaV protocol adds versioning and configuration
+		  management capabilities to WebDAV servers. With DeltaV, it
+		  is possible to record the revision history of Web
+		  resources, work on collections of resources in isolation
+		  from other collaborators (workspaces), and create
+		  consistent configurations of these resources.</p>
+
+		<p>This tutorial gives an overview of the WebDAV Distributed
+		  Authoring protocol (RFC 2518), and the Web Versioning and
+		  Configuration Management protocol (DeltaV). This is a
+		  novice-to-intermediate level tutorial, which assumes some
+		  knowledge about the hypertext transfer protocol (HTTP),
+		  although a brief overview of this protocol will be given
+		  during the course.<p>
+
+		<p>The WebDAV Distributed Authoring protocol provides
+		  operations for:
+
+		<ul>
+		  <li>Overwrite Prevention: Locking facilities allow a
+		    document author to prevent modifications by other authors
+		    during an edit session, thus preventing the "lost update"
+		    problem.</li>
+
+		  <li>Properties: WebDAV properties are name, value pairs
+		    which can be used to record metadata about a web
+		    resource, such as it's author, creation date, length,
+		    etc. WebDAV properties are well-formed Extensible Markup
+		    Language (XML), and hence can support Resource
+		    Description Framework (RDF) values.</li>
+
+		  <li>Collections: The ability to create sets of related
+		    documents and to retrieve a hierarchical membership
+		    listing (like a directory listing in a file
+		    system).</li>
+
+		  <li>Namespace Operations: The ability to copy and move
+		    single web resources, and to copy, move and lock entire
+		    hierarchies of web resources.</li>
+	    </ul>
+
+		<p>The Web Versioning and Configuration Management protocol
+		  (DeltaV) adds capabilities for:</p>
+
+		<ul>
+		  <li>Versioning: Recording the revision history of a
+		    document over time. Versioning can be explicit, using
+		    checkin/checkout, or automatic, with WebDAV locks
+		    controlling creation of revisions.</li>
+
+		  <li>Workspaces: Working on a group of documents in
+		    isolation from all other active collaborators.</li>
+
+		  <li>Baselines: Recording a consistent configuration of
+		    resources at a particular instant in time.  This is
+		    useful for recording the released state of a collection
+		    of source code, or documents.</li>
+
+		  <li>Activities: Calling a group of revisions a logical
+		    change. For example, fixing an error in source code
+		    might involve making several revisions.</li>
+		</ul>
+
+		<p>By using these operations, both existing HTML authoring
+		  applications, as well as more traditional word processing,
+		  spreadsheet, and image manipulation applications can
+		  support remote collaborative authoring and
+		  versioning. Since a WebDAV-enabled application can save
+		  directly to the web, and makes use of the overwrite
+		  prevention capabilities, these applications provide a way
+		  to seamlessly move from individual to collaborative
+		  work. So, using a WebDAV-enabled word processor, you can
+		  begin work on a document, then later realize you need to
+		  add several co-authors. After saving your document to the
+		  web, and emailing the URL to your collaborators, you can
+		  all begin to collaboratively work on the document in-place
+		  on the web.</p>
+
+		<p>Building upon its current strong base of supporting
+		  tools, in the next 1-2 years WebDAV is expected to be
+		  broadly adopted by content authoring tools. This will
+		  bring the benefits of the writeable Web to millions of
+		  users, opening significant opportunities for Internet
+		  Service Providers, Web storage sites, document management,
+		  content authoring tools, protocol developers, and
+		  researchers.  Furthermore, Web write-enabling existing
+		  applications is just the first phase of WebDAV adoption.
+		  DeltaV will allow the Web to be used as the core
+		  infrastructure for remote software development, especially
+		  Open Source, replacing the remote CVS protocol. With its
+		  automatic versioning capabilities, DeltaV also allows
+		  existing WebDAV authoring tools to take advantage of
+		  versioning-capable servers.</p>
+
+		<p>WebDAV/DeltaV is one of the most substantial, yet
+		  under-hyped changes to the core architecture of the Web.
+		  By attending this tutorial, you will develop a deep
+		  understanding of the capabilities and potential of this
+		  increasingly important standard.</p>
+	      </dd>
+	    </dl>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+
+  
+    <h3><a name="t2">T2: SMIL 2.0: The Next Wave of Hypermedia on the Web</a></h3>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	<tr> 
+	  <td align="left" valign="top"> 
+	    <dl>
+	      <dt>Presenter</dt><dd>Lloyd Rutledge</dd>
+	      <dt>Duration</dt><dd>Full day</dd>
+	      <dt>Date</dt><dd>To be announced</dd>
+	    
+	      <dt>Presenter Bio</dt>
+	      <dd>
+		<p>Lloyd Rutledge is a researcher at CWI. His research
+		  involves adaptable hypermedia, and standards for it such
+		  as SMIL. He received his Sc.D. from the University of
+		  Massachusetts Lowell, where he worked with the Distributed
+		  Multimedia Systems Laboratory (DMSL) on developing the
+		  HyOctane HyTime-based hypermedia environment. Dr. Rutledge
+		  is a member of the W3C working group that developed
+		  SMIL. He has given this SMIL tutorial at many venues
+		  including WWW10, WWW9 and WWW8, ACM Multimedia 99,
+		  Multimedia Modeling 2000 and Hypertext 2000, 99 and 98.
+		  He is also co-author of "SMIL: Multimedia on the Web", to
+		  be published this year by Pearson Education.</p>
+	      </dd>
+	    </dl>
+	  </td>
+
+	  <td align="left" valign="top">
+	    <dl>
+	      <dt>Description</dt>
+	      <dd>
+		<p>SMIL 1.0 is a W3C recommendation, approved in June 1998
+		  and now a strong presence on the Web, which provides a
+		  vendor-independent, declarative language for hypermedia
+		  presentations on the Web. With at least three players
+		  currently available, and with more and more presentations
+		  being posted on the Web, SMIL promises to do for
+		  interactive multimedia what HTML did for hypertext: bring
+		  it into every living room with an easy-to-author, readily
+		  implementable format and easily accessible players for
+		  it.</p>
+
+		<p>SMIL 2.0 is nearing completion and is expected to be
+		  released by the W3C in the coming months -- just in time
+		  for Hypertext 2001. The specification document is 10 times
+		  the size of SMIL 1.0, offering many new, rich features and
+		  constructs. SMIL 2.0 also has the backing of major
+		  industrial players, such as Microsoft, RealNetworks and
+		  Macromedia.</p>
+
+		<p>Before describing the details of the SMIL language, the
+		  tutorial first presents an overview of the components
+		  required in a hypermedia document description
+		  language. The SMIL language includes features for
+		  specifying the media items included in a document,
+		  referred to with URL's, how these are temporally and
+		  spatially related to one another, and how links can be
+		  specified within the multimedia environment. Alternates
+		  for different data formats for the heterogeneous web
+		  environment are also provided.</p>
+
+		<p>The goal of the tutorial is to explain the concepts that
+		  form the basis of the SMIL language and to provide
+		  sufficient detail on the language itself so that
+		  participants can create their own simple
+		  presentations. Participants will also understand the
+		  underlying issues of temporal and spatial layout and the
+		  complexity of creating links within multimedia. The
+		  tutorial also describe the use of the major SMIL
+		  implementations: the RealPlayer, the GRiNS authoring
+		  environment, and HTML+SMIL on Internet Explorer.</p>
+
+		<p>The tutorial is intended for content developers who have
+		  created HTML documents or have used tools such as
+		  Macromedia Director or Authorware.  Multimedia designers,
+		  web-page creators, creators of interface prototypes such
+		  as user interface designers, human factors practitioners
+		  and industrial designers will also benefit from this
+		  course. It can also be followed usefully by participants
+		  unfamiliar with existing tools and environments. The level
+		  is introductory and expects knowledge of the Web at a
+		  user's level, not necessarily that of an HTML
+		  author. Familiarity with basic HTML constructs is
+		  desirable, though not necessary.</p>
+	      </dd>
+	    </dl>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+
+    
+    <h3><a name="t3">T3: Metadata management through open hypermedia</a></h3>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	<tr> 
+	  <td align="left" valign="top"> 
+	    <dl>
+	      <dt>Presenters</dt><dd>Peter J. Nürnberg and Uffe K. Wiil</dd>
+	      <dt>Duration</dt><dd>Half day</dd>
+	      <dt>Date</dt><dd>To be announced</dd>
+
+	      <dt>Presenter Bio</dt>
+	      <dd>
+		<p>Both Peter J. Nürnberg and Uffe K. Wiil are Associate
+		  Professors in the Department of Computer Science at
+		  Aalborg University Esbjerg in Denmark. Between the two are
+		  a collective 24 years of hypermedia and 12 years of
+		  digital libraries research, as well as over 10 conference
+		  committee positions at the last 3 ACM HT and ACM DL
+		  conferences. They have been engaged in the design and
+		  implementation of open hypermedia systems aimed
+		  specifically at metadata management in a digital libraries
+		  setting for several years, most recently within the
+		  Construct framework.</p>
+	      </dd>
+	    </dl>
+	  </td>
+
+	  <td align="left" valign="top">
+	    <dl>
+	      <dt>Description</dt>
+	      <dd>
+		<p>Metadata is "data about data", or information that allows
+		  more efficient, higher quality querying, management, and
+		  organization of data. High-quality metadata management is
+		  especially important when data sources are large,
+		  distributed, and heterogeneous. This course reviews basic
+		  metadata management principles, and focuses on how open
+		  hypermedia technologies can be leveraged to address
+		  metadata management problems.</p> <p>Course attendees will
+		  receive both theoretical background and "hands-on"
+		  experience using open hypermedia system components
+		  designed specifically for metadata management tasks within
+		  large, distributed, heterogeneous information
+		  environments. Attendees will learn how to use exisiting
+		  open hypermedia system components as well as how to design
+		  and implement custom-built components to apply to their
+		  metadata management tasks.</p> 
+
+		<p>The course will consist of 4 modules, each 30-60 minutes
+		  in length.</p>
+		<dl>
+		  <dt>Introduction and background</dt>
+		  <dd>Introduction to metadata management tasks and open
+		    hypermedia. Review of the relevant concepts, terminology,
+		    and research.</dd>
+
+		  <dt>Construct</dt>
+		  <dd>Introduction to the Construct component-based open
+		    hypermedia system. Brief explanation of installation
+		    procedures, including demonstration
+		    installation. Description of system architecture,
+		    including how the system can be extended.</dd>
+
+		  <dt>Case study</dt>
+		  <dd>Introduction to an actual metadata management problem
+		    from the botanical taxonomy area. Problem description and
+		    analysis. Step-by-step demonstration of components
+		    designed and implemented specifically for this problem
+		    area.</dd>
+
+		  <dt>Extensions</dt>
+		  <dd>The design and implementation of
+		    extensions to the Construct system will be discussed,
+		    drawing on actual problems of the course
+		    attendees. Research an implementation coalition building
+		    between attendees themselves and also with the
+		    instructors, with the goal of providing a concrete plan
+		    for how to deploy and customize Construct at attendee
+		    sites.</dd>
+
+		</dl>
+		
+		<p>The intended audience consists primarily people involved
+		  in large-scale data management tasks, whether as curators,
+		  collectors, web site administrators, data store managers,
+		  or programmers. Secondarily, the audience might contain
+		  members who have theoretical interests only in
+		  applications of metadata and open hypermedia
+		  research.</p>
+	      </dd>
+	    </dl>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+
+  
+    <h3><a name="t4">T4: Evaluating, Using, and Publishing eBooks</a></h3>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	<tr> 
+	  <td align="left" valign="top"> 
+	    <dl>
+	      <dt>Presenters</dt><dd>Elli Mylonas, Cathy Marshall and Gene Golovchinsky</dd>
+	      <dt>Duration</dt><dd>Full day</dd>
+	      <dt>Date</dt><dd>To be announced</dd>
+        
+	      <dt>Presenter Bio</dt>
+	      <dd>
+		<p>Gene Golovchinsky is a Senior Research Scientist at FX
+		  Palo Alto Laboratory (FXPAL), where he is a member of the
+		  Mobile computing group. His research interests include
+		  user interface design (with an emphasis on information
+		  exploration and information retrieval), hypertext, and
+		  pen-based computing. Gene completed his Ph.D. at the
+		  University of Toronto in 1996. Prior to joining FXPAL,
+		  Gene had worked at GMD-IPSI in Darmstadt, Germany, at IBM,
+		  and at Kaiser Electronics. See <a
+		  href="http://www.fxpal.xerox.com/people/gene"
+		  target="_top">http://www.fxpal.xerox.com/people/gene</a></p>
+		  
+		<p>Cathy Marshall is an Architect and Senior Researcher in
+		  the eBooks Group at Microsoft, and a long-time participant
+		  in the international Hypertext, Digital Library, and WWW
+		  research communities. She is on the Board of Directors of
+		  the Electronic Literature Organization. Her research lies
+		  in the disciplinary interstices of computer science,
+		  social science, and the arts. See <a
+		  href="http://www.csdl.tamu.edu/~marshall"
+		  target="_top">http://www.csdl.tamu.edu/~marshall</a>.</p>
+		  
+		<p>Elli Mylonas is Associate Director for Projects and
+		  Research at the Scholarly Technology Group, Brown
+		  University. Her current work includes a project to convert
+		  structured document formats to OEB. She was one of the
+		  founding members of the Perseus Project at Harvard
+		  University, an early hypertext for scholarly and
+		  pedagogical use. She has worked extensively with SGML and
+		  XML and OEB, and has spoken and published on markup,
+		  hypertext and academic computing projects.</p>
+	      </dd>
+	    </dl>
+	  </td>
+
+	  <td align="left" valign="top">
+	    <dl>
+	      <dt>Description</dt> 
+	      <dd>
+		<p>This tutorial introduces the audience to a range of
+		  issues related to eBooks: hand-held devices dedicated to
+		  reading books and other documents. The last two years have
+		  seen an unprecedented increase in the number and variety
+		  of devices and software designed to support
+		  reading. Individuals, small-volume publishers,
+		  distributors and resellers, and large corporations have
+		  contributed to this growth in various ways. Consumer
+		  awareness of-and interest in-eBooks has also
+		  increased.</p>
+
+		<p>But what exactly are these devices? How does one read on
+		  them? Where do the titles come from? How can they be
+		  created and sold? What are the legal issues surrounding
+		  these devices? How do they compare to paper? How will
+		  their use affect traditional book businesses and
+		  practices, including publishers, book stores, and public
+		  and personal libraries, among others? This tutorial will
+		  provide answers to these questions, and will give
+		  participants hands-on experience with a range of
+		  currently-available devices.</p>
+
+		<p>The first part of this tutorial will cover features of
+		  eBooks, including form factor, hardware and software
+		  interfaces, and how they compare with "reading on the
+		  web."  We will then demonstrate and critique existing
+		  devices. The second part of the tutorial will start with
+		  an introduction to the Open eBook Format Specification. We
+		  will also discuss and demonstrate the publishing process,
+		  give a brief overview of Digital Rights Management (DRM)
+		  issues, and conclude with a discussion of the future of
+		  eBook devices and online reading. We will devote a part of
+		  the day to a hands-on exploration and critique of some of
+		  the commonly-available eBook devices.</p>
+	      </dd>
+	    </dl>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+
+    
+    <h3><a name="t5and6">T5: Introduction to XML</a></h3>
+    <h3>T6: Introduction to XLink</h3>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+	<tr> 
+	  <td align="left" valign="top"> 
+	    <dl>
+	      <dt>Presenters</dt><dd>Steven DeRose and David Durand</dd>
+	      <dt>Duration</dt><dd>1/2 day each</dd>
+	      <dt>Date</dt><dd>To be announced</dd>
+        
+	      <dt>Presenter Bio</dt>
+	      <dd>
+		<p>Steven J. DeRose is Chief Scientist at Inso Corporation,
+		  and Visiting Chief Scientist at the Brown Univesity
+		  Scholarly Technology Group.  Dr.  DeRose is an Editor of
+		  the Xlink specification, and has taken part in the XML,
+		  TEI, and HyTime standards efforts.  He was a founder of
+		  Electronic Book Technologies and architect of the Dynatext
+		  product.  He was head of the TEI working group on
+		  Hypertext representation, and wrote the TEI hypertext
+		  specification with David.</p>
+
+		<p>David Durand is VP software architecture at ingenta plc.
+		  Dr.  Durand is a co-author, with Steve, of "Making
+		  Hypermedia Work: A User's Guide to HyTime."  He has taken
+		  part in the Text Encoding Initiative, XML, HyTime, and and
+		  WebDAV standards efforts, and has been working with and on
+		  structured document representations and hypertext for the
+		  last 20 years, in academic and industrial contexts.</p>
+	      </dd>
+	    </dl>
+	  </td>
+
+	  <td align="left" valign="top">
+	    <dl>
+	      <dt>Description (T5)</dt>
+	      <dd>
+		<p>XML is a core document technology, whose relations to
+		  hypertext are still being explored, and for which new
+		  applications are still being found.  This course provides
+		  an introduction to XML. This course will comprise a
+		  technical overview about the language itself, as well as
+		  information about its applications (especially as they
+		  relate to hypertext).  We will also discuss its goals and
+		  creation, and discuss its place in the group of related
+		  standards efforts, such as Xlink, RDF, XSL, and DOM. The
+		  course is targetted at anyone who thinks they need a
+		  technical and strategic overview of XML.</p>
+	      </dd>
+	      
+	      <dt>Description (T6)</dt>
+	      <dd>
+		<p>XML is starting to revolutionize the way data and
+		  documents are managed and produced, on the web and
+		  elsewhere, by bringing years of text-encoding experience
+		  to bear on the problem.  XLink promises to do the same
+		  thing for hypertext linking.  Xlink provides much more
+		  powerful link representation and addressing features than
+		  HTML. This tutorial will explain XLink and will then
+		  examine some techniques for using it in combination with
+		  XSLT. The course is targetted towards anyone who knows
+		  something about XML and wants to see how it can be used to
+		  support advanced hypertext functionality. It assumes a
+		  basic knowledge of XML (see Tutorial 5!), and some
+		  knowledge of hypertext linking.</p>
+	      </dd>
+	    </dl>
+	  </td>
+	</tr>
+      </tbody>
+    </table>
+
+    <div style="text-align: center; font-size: 0.8em;">Last modified: Sunday, 22-Apr-2001 14:13:27 MET DST</div>
+  </body>
+</html>
+

@@ -1,0 +1,174 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Ultimate Guide to Computer Games for Kids
+</title>
+</head>
+<body background="rubebg8.gif">
+&nbsp;
+<br>&nbsp;
+<table spacing="40" >
+<tr VALIGN=TOP>
+<td><img SRC="typloop0.gif" ALT="Computer" >
+<br><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ></td>
+
+<td>
+<h1>
+The<img SRC="ju_u02.gif" ALT="Ultimate" ><img SRC="ju_l02.gif" ><img SRC="ju_t02.gif" ><img SRC="ju_i02.gif" ><img SRC="ju_m02.gif" ><img SRC="ju_a02.gif" ><img SRC="ju_t02.gif" ><img SRC="ju_e02.gif" >
+Guide<br>
+to <i><font color="#FF0000">Computer Games</font></i> for<img SRC="ju_k01.gif" ALT="Kids" ><img SRC="ju_i01.gif" ><img SRC="ju_d01.gif" ><img SRC="ju_s01.gif" ></h1>
+
+<hr>
+<table>
+<tr VALIGN=TOP>
+<td>This page provides a uniform way of accessing over 2000 reviews of
+children's computer games, made available by more than a dozen different
+consumer-oriented organizations (as opposed to, say, software vendors).
+Information about on-line demos, on-line vendors, and publisher's home
+pages is also available.
+<p>Use the form below to ask a question. All fields are optional.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<hr><form method=get action="query3.html"><input type=hidden name=op value="search"><a NAME="q1"></a><font color="#FF0000">The
+first sample query:&nbsp;<it>Help me find the publisher of games designed
+for children six years old.</font></it>
+<br><img SRC="dunno.gif" ALT="Confused Guy" > Help me find<select name="whirl"><option value="from review as r|select r.name as Reviewed_Game|select r.href as Review_URL">reviews<option 
+ value="from demo as r|select r.name as Demo_Game|select r.href as Demo_URL">demos<option 
+ value="from price as r|select r.name as Priced_Game|select r.platform as Platform|select r.href as Pricelist_URL">vendors<option selected
+ value="from superkid as r|from publisher as p|where p.name sim r.pub|select r.name as Game|and r.pub as Game_Publisher|and p.name as Publisher_Name|and p.href as Publisher_URL">the
+publisher</select>of games named<input type=text name="r.name">that are
+<ul>
+<li>
+in the category&nbsp;<input type=text name="k.kw">(use any keywords, e.g.
+<i>music, science, art</i>)&nbsp;<input type=hidden name=rule 
+ value="k.kw-:from cat as k|where k.name sim r.name|select k.name as Categorized_Game|and k.kw as Keywords"></li>
+
+<li>
+published by&nbsp;<input type=text name="super.pub"><input type=hidden name=rule 
+ value="super.pub-:from superkid as super|where super.name sim r.name|select super.name as Published_Game|and super.pub as Publisher"></li>
+
+<li>
+<select name="whirl"><option selected value="">-select recommendation level-<option value="from rec as s|where s.name sim r.name|select s.name as Recommended_Game">recommended
+by someone<option value="from rec as s1|where s1.name sim r.name|select s1.name as Recommended_Game_1|from rec as s2|where s2.name sim r.name|where s1.site lt s2.site|select s2.name as Recommended_Game_2">recommended
+by two or more sites</select></li>
+
+<li>
+<select name="whirl"><option selected value="">-select popularity-<option value="from pop|where pop.name sim r.name|select pop.name as Popular_Game">very
+popular</select></li>
+
+<li>
+designed for children<select name="age.yearsold"><option value="">-of any
+age-<option value="1">one year old<option value="2">two years old<option value="3">three
+years old<option value="4">four years old<option value="5">five years old<option selected value="6">six
+years old<option value="7">seven years old<option value="8">eight years
+old<option value="9">nine years old<option value="10">ten years old<option value="11">eleven
+years old<option value="12">twelve years old<option value="13">thirteen
+years old<option value="14">fourteen years old<option value="15">fifteen
+years old</select><input type=hidden name=rule 
+ value="age.yearsold-:from age|where age.name sim r.name|select age.name as Age_Range_Game|and age.agerange as Age_Range"></li>
+</ul>
+<input type=submit value="Go"><input type=reset value="Reset"><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</form>
+<hr><form method=get action="query2.html"><input type=hidden name=op value="search"><a NAME="q2"></a>The
+second sample query:&nbsp;<it>Help me find the publisher of games named
+"Magic School Bus".</font></it>
+<br><img SRC="dunno.gif" ALT="Confused Guy" > Help me find<select name="whirl"><option value="from review as r|select r.name as Reviewed_Game|select r.href as Review_URL">reviews<option 
+ value="from demo as r|select r.name as Demo_Game|select r.href as Demo_URL">demos<option 
+ value="from price as r|select r.name as Priced_Game|select r.platform as Platform|select r.href as Pricelist_URL">vendors<option selected
+ value="from superkid as r|from publisher as p|where p.name sim r.pub|select r.name as Game|and r.pub as Game_Publisher|and p.name as Publisher_Name|and p.href as Publisher_URL">the
+publisher</select>of games named<input type=text name="r.name" value="magic school bus">that
+are
+<ul>
+<li>
+in the category&nbsp;<input type=text name="k.kw">(use any keywords, e.g.
+<i>music, science, art</i>)&nbsp;<input type=hidden name=rule 
+ value="k.kw-:from cat as k|where k.name sim r.name|select k.name as Categorized_Game|and k.kw as Keywords"></li>
+
+<li>
+published by&nbsp;<input type=text name="super.pub"><input type=hidden name=rule 
+ value="super.pub-:from superkid as super|where super.name sim r.name|select super.name as Published_Game|and super.pub as Publisher"></li>
+
+<li>
+<select name="whirl"><option selected value="">-select recommendation level-<option value="from rec as s|where s.name sim r.name|select s.name as Recommended_Game">recommended
+by someone<option value="from rec as s1|where s1.name sim r.name|select s1.name as Recommended_Game_1|from rec as s2|where s2.name sim r.name|where s1.site lt s2.site|select s2.name as Recommended_Game_2">recommended
+by two or more sites</select></li>
+
+<li>
+<select name="whirl"><option selected value="">-select popularity-<option value="from pop|where pop.name sim r.name|select pop.name as Popular_Game">very
+popular</select></li>
+
+<li>
+designed for children<select name="age.yearsold"><option selected value="">-of
+any age-<option value="1">one year old<option value="2">two years old<option value="3">three
+years old<option value="4">four years old<option value="5">five years old<option value="6">six
+years old<option value="7">seven years old<option value="8">eight years
+old<option value="9">nine years old<option value="10">ten years old<option value="11">eleven
+years old<option value="12">twelve years old<option value="13">thirteen
+years old<option value="14">fourteen years old<option value="15">fifteen
+years old</select><input type=hidden name=rule 
+ value="age.yearsold-:from age|where age.name sim r.name|select age.name as Age_Range_Game|and age.agerange as Age_Range"></li>
+</ul>
+<input type=submit value="Go"><input type=reset value="Reset"><font color="#FF0000">You
+can submit this form, but you cannot change any of the options.</font>
+<hr></form>
+<h4>
+Acknowledgements&nbsp;<img SRC="balloons.gif" ></h4>
+Sources for this demo include:
+<a href="http://www.superkids.com">Superkids</a>,
+<a href="http://www.TheReviewZone.com">The
+Review Zone</a>,
+<a href="http://www.cdromreview.com">www.cdromreview.com</a>,
+<a href="http://www.gamesdomain.com">The
+Games Domain</a>,
+<a href="http://www.kidsdomain.com">Kids Domain</a>,
+<a href="http://www.family.com">www.family.com</a>,
+<a href="http://www.edutainment.com.au">The
+Edutainment Page</a>,
+<a href="http://www.worldvillage.com">WorldVillage</a>,
+<a href="http://www.cyberix.com/people/dennis/index.htm">Educational
+Software Affiliates</a>,
+<a href="http://www.harbornet.com/mediamom/">Multimedia
+Mom Network</a>,
+<a href="http://www.schoolpc.acp.com.au">School PC</a>,
+<a href="http://www.zdnet.com/">ZDNet</a>,
+<a href="http://web.ukonline.co.uk/Members/kai.chandler/k000.htm">Kai
+Chandler's KidzSoft WebZone,
+</a><a href="http://www.scholastic.com/EL/home.htm">Scholastic.com's
+Electronic Learning</a><a href="http://www.scholastic.com/EL/software/index.htm">product
+reviews</a>,
+<a href="http://www.newsweekparentsguide.com/">Newsweek (unavailable
+for now)</a>, and others. Up-to-date listings of <a href="offtour.html">all
+sites</a> and <a href="offtour.html">all pages</a> are also available.
+<table>
+<tr>
+<td>This page is a demonstration of <a href="../index.html">WHIRL</a>,
+a new type of internet search engine. Compared to search engines like
+<a href="http://www.altavista.digital.com">Altavista</a>,
+<a href="../index.html">WHIRL</a> indexes a relatively small number of
+sites, but understands much more about what it indexes. This means that
+WHIRL can answer more complex questions.</td>
+
+<td><img SRC="teacher1.gif" ></td>
+</tr>
+</table>
+
+<p>If you maintain a page that you'd like to see added (or removed) from
+this list, please <a href="mailto:william.cohen@att.com">contact me</a>.
+<hr>
+<table>
+<tr>
+<td><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ><img SRC="cdrom1.gif" ></td>
+
+<td><i>Powered by <a href="offtour.html">WHIRL</a></i>
+<br><i>Comments to: <a href="mailto:william.cohen@att.com">william.cohen@att.com</a></i></td>
+</tr>
+</table>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

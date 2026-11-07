@@ -1,0 +1,252 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<title>Model-Based Mediator Demo</title>
+<meta name=Description content="30-Jan-01: The Problem">
+<link rel=next href=slide0215.htm>
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('slide0219.htm');   
+  else
+    parent.location.href = "../model-based-demo.html";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body background="master04_background.gif" bgcolor="#000066" alink="#000044"
+link="#00cc99" vlink=yellow text=white topmargin=0 leftmargin=0
+onload="Update()">
+
+<table border=0 valign=top width=767 height=575 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=8 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=49 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=45 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=153 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=242 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=251 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=3 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=10 height=0 nowrap><img src=space.gif border=0></td>
+ </tr>
+ <tr>
+  <td width=767 height=22 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=255 height=46 colspan=4></td>
+  <td width=242 height=46>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=242 height=46 align=center><font face=Helvetica color="#ffcc66"
+    size=6>The Problem</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=270 height=46 colspan=4></td>
+ </tr>
+ <tr>
+  <td width=767 height=32 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=57 height=385 colspan=2></td>
+  <td width=691 height=385 colspan=4>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=28 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=2 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=8 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=24 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=1 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=67 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=46 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=47 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=99 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=25 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=31 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=53 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=179 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=6 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=20 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=34 height=0 nowrap><img src=space.gif border=0></td>
+   </tr>
+   <tr>
+    <td width=28 height=31><font face=Helvetica color="#dddddd" size=5>•</font></td>
+    <td width=319 height=31 colspan=9><font face=Helvetica color="#dddddd"
+    size=5>Multiple Worlds Integration</font><br>
+    </td>
+    <td width=343 height=31 colspan=7></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=38 height=26 colspan=3></td>
+    <td width=24 height=26><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=369 height=26 colspan=8><font face=Helvetica color="#dddddd"
+    size=4>compatible terms </font><font face=Helvetica color="#ffcc66" size=4><i>not
+    directly joinable</i></font><br>
+    </td>
+    <td width=259 height=26 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=38 height=26 colspan=3></td>
+    <td width=24 height=26><font face=Helvetica color="#ffcc66" size=4>–</font></td>
+    <td width=554 height=26 colspan=10><font face=Helvetica color="#ffcc66"
+    size=4><i>complex, indirect associations</i></font><font face=Helvetica
+    color="#dddddd" size=4> among schema elements</font><br>
+    </td>
+    <td width=74 height=26 colspan=3></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=38 height=26 colspan=3></td>
+    <td width=24 height=26><font face=Helvetica color="#ffcc66" size=4>–</font></td>
+    <td width=285 height=26 colspan=6><font face=Helvetica color="#ffcc66"
+    size=4><i>unstated</i></font><font face=Helvetica color="#dddddd" size=4>
+    integrity constraints</font><br>
+    </td>
+    <td width=343 height=26 colspan=7></td>
+   </tr>
+   <tr>
+    <td width=690 height=3 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=28 height=31><font face=Helvetica color="#dddddd" size=5>•</font></td>
+    <td width=350 height=31 colspan=10><font face=Helvetica color="#dddddd"
+    size=5>Why not just use Ontologies?</font><br>
+    </td>
+    <td width=312 height=31 colspan=6></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=38 height=26 colspan=3></td>
+    <td width=24 height=26><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=574 height=26 colspan=11><font face=Helvetica color="#dddddd"
+    size=4>typical ontologies associate terms along limited number of</font><br>
+    </td>
+    <td width=54 height=26 colspan=2></td>
+   </tr>
+   <tr>
+    <td width=62 height=23 colspan=4></td>
+    <td width=114 height=23 colspan=3><font face=Helvetica color="#dddddd"
+    size=4>dimensions</font><br>
+    </td>
+    <td width=514 height=23 colspan=10></td>
+   </tr>
+   <tr>
+    <td width=690 height=3 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=28 height=31><font face=Helvetica color="#dddddd" size=5>•</font></td>
+    <td width=195 height=31 colspan=7><font face=Helvetica color="#dddddd"
+    size=5>What’s needed?</font><br>
+    </td>
+    <td width=467 height=31 colspan=9></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=38 height=26 colspan=3></td>
+    <td width=24 height=26><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=628 height=26 colspan=13><font face=Helvetica color="#dddddd"
+    size=4>a “theory” under which non-identical terms can be </font><font
+    face=Helvetica color="#ffcc66" size=4>“<i>semantically</i></font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=62 height=23 colspan=4></td>
+    <td width=68 height=23 colspan=2><font face=Helvetica color="#ffcc66"
+    size=4><i>joined”</i></font><br>
+    </td>
+    <td width=560 height=23 colspan=11></td>
+   </tr>
+   <tr>
+    <td width=690 height=3 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=670 height=31 colspan=16><font face=Helvetica color="#dddddd"
+    size=5>=&gt; lift mediation to the level of </font><font face=Helvetica
+    color=yellow size=5>conceptual models</font><font face=Helvetica
+    color="#dddddd" size=5> (CMs)</font><br>
+    </td>
+    <td width=20 height=31></td>
+   </tr>
+   <tr>
+    <td width=690 height=2 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=610 height=31 colspan=13><font face=Helvetica color="#dddddd"
+    size=5>=&gt; domain knowledge, ICs become </font><font face=Helvetica
+    color=yellow size=5>rules </font><font face=Helvetica color="#dddddd"
+    size=5>over CMs</font><br>
+    </td>
+    <td width=80 height=31 colspan=4></td>
+   </tr>
+   <tr>
+    <td width=690 height=3 colspan=17></td>
+   </tr>
+   <tr>
+    <td width=322 height=31 colspan=9><font face=Helvetica color="#dddddd"
+    size=5>=&gt; </font><font face=Helvetica color=yellow size=5>Model-Based
+    Mediation</font><br>
+    </td>
+    <td width=368 height=31 colspan=8></td>
+   </tr>
+  </table>
+  </td>
+  <td width=19 height=385 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=767 height=62 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=751 height=7 colspan=7></td>
+  <td width=10 height=18 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=10 height=18 align=right><font face=Helvetica color="#ffcc66"
+    size=2>8</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=6 height=7></td>
+ </tr>
+ <tr>
+  <td width=8 height=11></td>
+  <td width=94 height=13 colspan=2 rowspan=2><img src="master04_image015.gif"
+  border=0 width=94 height=13></td>
+  <td width=649 height=11 colspan=4></td>
+  <td width=6 height=11></td>
+ </tr>
+ <tr>
+  <td width=8 height=2></td>
+  <td width=665 height=2 colspan=6></td>
+ </tr>
+ <tr>
+  <td width=767 height=8 colspan=9></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

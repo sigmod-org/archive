@@ -1,0 +1,105 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_4.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Scalable Techniques for Mining Causal Structures</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_s.htm#Craig Silverstein">Craig Silverstein</a>, <a href="m_authors_b.htm#Sergey Brin">Sergey Brin</a>, <a href="m_authors_m.htm#Rajeev Motwani">Rajeev Motwani</a>, <a href="m_authors_u.htm#Jeffrey D. Ullman">Jeffrey D. Ullman</a></center></td></tr></table></center><a target="disc_pdf843" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Mining for association rules in market basket data has proved a fruitful area of research.
+Measures such as conditional probability (confidence) and correlation havebeen used to infer rules of the form "the existence of item <i>A</i> implies the existence of item <i>B</i>."
+However, such rules indicate only a statistical relationship between <i>A</i> and <i>B</i>.
+They do not specify the nature of the relationship: whether the presence of <i>A</i> causes the presence of <i>B</i>, or the converse, or some otherattribute or phenomenon causes both to appear together.
+In applications, knowing such causal relationships is extremely useful forenhancing understanding and effecting change.
+While distinguishing causality from correlation is a truly difficult problem, recent work in statistics and Bayesian learning provide some avenues of attack.
+In these fields, the goal has generally been to learn complete causal models, which are essentially impossible to learn in large-scale data mining applications with a large number of variables.
+<p>
+In this paper, we consider the problem of determining <i>casual</i> relationships, instead of mere associations, when mining market basket data.
+We identify some problems with the direct application of Bayesian learningideas to mining large databases, concerning both the scalability of algorithms and the appropriateness of the statistical techniques, and introduce some initial ideas for dealing with these problems.
+We present experimental results from applying our algorithms on several large, real-world data sets.
+The results indicate that the approach proposed here is both computationally feasible and successful in identifying interesting causal structures.
+An interesting outcome is that it is perhaps easier to infer the <i>lack of causality</i> than to infer causality, information that is useful in preventing erroneous decision making.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AIS93]<dd><a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Mining Association Rules between Sets of Items in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#AgrawalIS93">SIGMOD Conference 1993</a>: 207-216<dt>[Agr90]<dd>...
+<dt>[BP94]<dd>...
+<dt>[BMS97]<dd><a name="BrinMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">Sergey Brin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">Rajeev Motwani</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">Craig Silverstein</a>:
+Beyond Market Baskets: Generalizing Association Rules to Correlations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#BrinMS97">SIGMOD Conference 1997</a>: 265-276<dt>[C97]<dd><a name="Cooper97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cooper:Gregory_F=.html">Gregory F. Cooper</a>:
+A Simple Constraint-Based Algorithm for Efficiently Mining Observational Databases for Causal Relationships.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/datamine/datamine1.html#Cooper97">Data Mining and Knowledge Discovery 1(2)</a>: 0-(1997)<dt>[CH92]<dd>...
+<dt>[H95]<dd>...
+<dt>[H97]<dd><a name="Heckerman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heckerman:David.html">David Heckerman</a>:
+Bayesian Networks for Data Mining.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/datamine/datamine1.html#Heckerman97">Data Mining and Knowledge Discovery 1(1)</a>: 79-119(1997)<dt>[HGC94]<dd>...
+<dt>[HMC97]<dd>...
+<dt>[MSW86]<dd>...
+<dt>[P94]<dd>...
+<dt>[P95]<dd>...
+<dt>[PV91]<dd><a name="PearlV91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pearl:Judea.html">Judea Pearl</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Verma:T=_S=.html">T. S. Verma</a>:
+A Theory of Inferred Causation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kr/kr91.html#PearlV91">KR 1991</a>: 441-452<dt>[SGS93]<dd>...
+</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/SilversteinBMU98,<br>  author    = {Craig Silverstein and<br>               Sergey Brin and<br>               Rajeev Motwani and<br>               Jeffrey D. Ullman},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Scalable Techniques for Mining Causal Structures},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {594-605},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

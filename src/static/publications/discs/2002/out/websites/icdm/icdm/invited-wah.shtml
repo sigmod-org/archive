@@ -1,0 +1,38 @@
+<BODY bgcolor="#ffffee">
+
+<h2>Intelligent Mining for Time Series Predictions</h2>
+<h3>by Benjamin W. Wah</h3>
+
+Department of Electrical and Computer Engineering<br>
+and the Coordinated Science Laboratory<br>
+University of Illinois, Urbana-Champaign<br>
+Urbana, IL 61801, USA<br>
+http://manip.crhc.uiuc.edu<br>
+
+<p>
+
+In this presentation we discuss the role of data mining in time-series
+predictions, including those of market-trend data and stock quotes.
+These are characterized by stationary and non-stationary time series
+that may depend on non-quantifiable non-numeric measures, as well as
+recent information that may be significant in predicting near-term
+trends.  Such predictions should, therefore, consist of predictions of
+non-stationary and stationary time series, as well as the abstraction
+and integration of non-numeric information in predictions.  In this
+talk, we survey various techniques for trend predictions and data
+mining of market-trend data.  We then propose the use of intelligent
+agents for the abstraction of non-numeric information, the
+decomposition of non-stationary time series into multiple stationary
+time series, and the prediction of trends using artificial neural
+networks.  Finally, we illustrate our techniques for predicting
+stock-market data.
+
+<p>
+
+<hr>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=invited-wah.dat"
+align=absmiddle> times since September 17, 2001.
+
+</BODY>

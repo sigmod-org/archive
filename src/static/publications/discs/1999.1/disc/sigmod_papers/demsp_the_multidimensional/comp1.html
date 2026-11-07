@@ -1,0 +1,88 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo C1</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+Base Types</h3>
+The base type determines the format of each cell in an MDD object. Apart
+from atomic base types like bytes and integers RasDaMan also supports arbitrary
+user-defined base types similar to <tt>struct</tt>s in C. These composite
+base types can be defined dynamically without having to recompile the server.
+For instance the definitions for handling RGB images look like this:
+<pre>struct RGBPixel { char red, green, blue; };
+typedef marray &lt;RGBPixel,[*:*,*:*]> RGBImage;
+typedef set&lt;RGBImage> RGBSet;</pre>
+The first line defines the actual base type as a <tt>struct</tt> containing
+3 byte-sized components; these components can be addressed by their symbolic
+names or their number. The second line defines an <tt>RGBImage</tt> as
+a 2-dimensional object of any size over the base type <tt>RGBPixel</tt>.
+The last line defines a set (=collection) of RGB images.
+<p>The components of an MDD object over a composite base type can be addressed
+individually. You can request projections on one component (e.g. get the
+blue band only of an RGB image) or request operations on specific components
+(e.g. increment the green component of each cell by a certain value).
+<p>An example: to the left you can see an aerial shot in RGB format. If
+you're interested in the areas covered in vegetation you could request
+the server to blacken out all the pixels that don't qualify as "green"
+(meaning a green component large in proportion to the red and blue components,
+otherwise you'll get a lot of grey). You can see the result of the following
+query to the right. Click on either image to get the full-sized original.
+<pre>SELECT img * ((img.green > 130c) AND (img.red &lt; 110c) AND (img.blue &lt; 140c))
+FROM&nbsp;&nbsp; cnig AS img</pre>
+
+<center><table BORDER=0 WIDTH="0" 100% >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="50%"><a href="cnig.gif"><img SRC="sm_cnig.gif" BORDER=0 ></a></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="50%"><a href="cnig2.gif"><img SRC="sm_cnig2.gif" BORDER=0 ></a></td>
+</tr>
+</table></center>
+<!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>03-Mar-1998</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

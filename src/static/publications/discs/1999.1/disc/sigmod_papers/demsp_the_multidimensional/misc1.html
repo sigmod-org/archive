@@ -1,0 +1,86 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo M1</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="misc2.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+Update</h3>
+Apart from storing and retrieving MDD objects the RasDaMan server can also
+update existing objects with the contents of other objects using the <tt>UPDATE</tt>
+statement. The following medical image is from the collection <tt>mr1</tt>.
+<center>
+<p><img SRC="update1.gif" BORDER=0 ></center>
+
+<p>It might be desirable for a physician to annotate this image in some
+form, like marking areas of interest or adding text. In this example we're
+going to overlay the top right of this image with an arrow using the query
+<pre>UPDATE mr1 AS image
+SET&nbsp;&nbsp;&nbsp; image ASSIGN image[0:229, 0:69] + $1/2c</pre>
+The <tt>$1</tt> operator is a variable representing the first argument,
+conforming to UNIX syntax. In analogy $2 would represent the second argument
+and $7 the seventh. In this case the argument is itself an MDD object which
+has to be appended to the query, similar to an email-attachment. RasDaView
+provides an interface to select an image as $1 argument and attach it automatically
+to an update query; in this example the image is a white arrow on a black
+background:
+<center>
+<p><img SRC="arrow.gif" BORDER=0 ></center>
+
+<p>The second line of the query makes the server iterate over all the cells
+in the domain [0:229, 0:69] of the source object and add half the value
+of the corresponding $1 cells, thus superimposing the two images. The black
+background of the $1 object corresponds to a cell value of 0 so the updated
+image will be identical to the original one in those areas. Looking up
+the <tt>mr1</tt> collection after the execution of this query yields the
+following result:
+<center>
+<p><img SRC="update2.gif" BORDER=0 ></center>
+
+<p><!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="misc2.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>05-Mar-1998</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

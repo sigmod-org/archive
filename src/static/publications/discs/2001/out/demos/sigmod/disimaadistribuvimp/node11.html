@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Distribution and Interoperability</TITLE>
+<META NAME="description" CONTENT="Distribution and Interoperability">
+<META NAME="keywords" CONTENT="disima">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="disima.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="disima.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html141"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html139"
+ HREF="disima.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html133"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html142"
+ HREF="node12.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html140"
+ HREF="disima.html">DISIMA: A Distributed and</A>
+<B> Previous:</B> <A NAME="tex2html134"
+ HREF="node10.html">Querying Sub-Images</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Distribution and Interoperability</A>
+</H1>
+An interoperable architecture allows users to query multiple and
+possibly remote image sources. Due to the autonomy of 
+image repositories, each participating site needs to provide a wrapper; the
+wrapper is responsible for transforming MOQL (the common language)
+queries into local queries executable at the individual site. When the
+individual image source is using a database (relational or
+object-oriented) model, the transformation is simpler. However,
+translating content-based queries is not straightforward. When the
+image source is modeled as a file system or hyperlinks, the wrapper
+needs to provide search capabilities to support queries.
+
+<P>
+The interoperable architecture is designed on top of CORBA [<A
+ HREF="node14.html#OMG93">Gro93</A>].
+CORBA provides transparencies at the platform and the communication
+levels. At the image database level
+different data models (different schemas) can be found, necessitating 
+homogenization of the semantics of these schemas and any associated image 
+content descriptions. The distributed architecture
+involves both homogeneous and heterogeneous systems. The
+participating sites should provide wrappers to transform MOQL queries
+into queries executable at the target sources for the heterogeneous
+case. The first distributed prototype is built for DISIMA sites only.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html141"
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html139"
+ HREF="disima.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html133"
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html142"
+ HREF="node12.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html140"
+ HREF="disima.html">DISIMA: A Distributed and</A>
+<B> Previous:</B> <A NAME="tex2html134"
+ HREF="node10.html">Querying Sub-Images</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Vincent Oria</I>
+<BR><I>2001-01-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

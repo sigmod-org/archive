@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<base target="MAIN">
+<title>Untitled</title>
+<meta name="generator" content="Microsoft FrontPage 5.0">
+<style type="text/css">
+A:link{text-decoration:none;color:#00aaaa}
+A:visited{text-decoration:none;color:#000000}
+A:hover{cursor:hand;text-decoration:none;color:#000000}
+A:active{cursor:hand;text-decoration:none;color:#000000}
+</style>
+</head>
+
+<body bgcolor=#000066 text="white" link="white" vlink="#a0b8c8" alink="#a0b8c8">
+
+<tr ALIGN=right>
+<th>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="20%" bgcolor=#000066
+ bordercolor="white">
+
+    <tr ALIGN=right>
+        <th height="5%" ><p align="center"><font face="Georgia" size="5" color="white"><b>ACM GIS 2002</b></font></th>
+</tr>
+
+</table>
+</th>
+</tr>
+
+
+<tr ALIGN=right>
+<th>
+<table border="1" cellpadding="0" cellspacing="0" width="100%" height="50%" bgcolor=#000066
+ bordercolor="white">
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="intr01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Introduction</b></font></a></th>
+</tr>
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="comm01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Committee</b></font></a></th>
+</tr>
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="prog02.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Program</b></font></a></th>
+</tr>
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="call01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Call for Papers</b></font></a></th>
+</tr>
+<tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="date01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Important Dates</b></font></a></th>
+</tr>
+
+
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="regi01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Registration</b></font></a></th>
+</tr>
+
+    <tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="subm01.shtml"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Submit Papers</b></font></a></th>
+</tr>
+
+    <tr ALIGN=right>
+    <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+    onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><font
+   face="Arial" size="3" color="white"><b>&nbsp;</b></font><a href="../review/pass.php"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Review Papers</b></font></a></th>
+</tr>
+
+<tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="AcceptedPaper.htm"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Accepted Papers</b></font></a></th>
+</tr>
+
+<tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="http://www.cikm.org/2002/CIKM02_main.html#local"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Hotel Information</b></font></a></th>
+</tr>
+
+<tr ALIGN=right>
+        <th height="5%" onmouseout='this.style.backgroundColor=&quot;#000066&quot;'
+         onmouseover='this.style.backgroundColor=&quot;#0066ff&quot;'><p align="center"><a href="mailto: chens@cs.fiu.edu"
+             target="MAIN"><font face="Georgia" size="2" color="white"><b>Contact Us 
+            </b></font></a></th>
+</tr>
+
+</table>
+</th>
+</tr>
+</body>
+
+</html>

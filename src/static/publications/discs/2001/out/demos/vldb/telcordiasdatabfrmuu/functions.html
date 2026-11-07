@@ -1,0 +1,172 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Uma Ganapathy">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; U) [Netscape]">
+   <title>Functions</title>
+</head>
+<body background="backgnd.jpg">
+<img SRC="dqtool.jpg" height=85 width=300>
+<br>&nbsp;
+<table BORDER COLS=4 WIDTH="100%" >
+<tr>
+<td ALIGN=CENTER VALIGN=CENTER><a href="index.html">Home</a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER><a href="demo.html#Features">Features</a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER><a href="demo.html#Step by step use of the">Demo</a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER><a href="content.html">Contents</a></td>
+</tr>
+</table>
+
+<h2>
+Functions</h2>
+<a href="#Distance Calculation Functions">AddrDistance</a>
+<br><a href="#Distance Calculation Functions">DateDifference</a>
+<br><a href="#Distance Calculation Functions">EditDistance</a>
+<br><a href="#Distance Calculation Functions">WordDistance</a>
+<br><a href="#Matching Functions">HashMatch</a>
+<br><a href="#Matching Functions">SortMatch</a>
+<br><a href="#Classifier">Classifier</a>
+<br><a href="#Filter">Filter</a>
+<h4>
+Properties</h4>
+<b><i>Parameter 1</i></b>: One or more columns from Input 1. Drag and drop
+the columns from the list on the right, to this textfield. When more than
+one column is given as a parameter, the values of the specified columns
+get appended with each other, when being processed. To make any changes,
+delete and add columns again.
+<br><b><i>Parameter 2</i></b>: One or more columns from Input 2. When there
+is only one input to the block, this is also selected from Input 1.
+<br><b><i>Additional Parameters</i></b>: Some functions have additional
+parameters the names&nbsp; and current values of which appear in the bottom
+table in this window.
+<p><img SRC="funcprop.jpg" height=315 width=400>
+<h3>
+<a NAME="Matching Functions"></a>Matching Functions</h3>
+Each record of the output of a matching functions consists of two matching
+records one from each input.
+<h4>
+SortMatch</h4>
+Both inputs are sequential. The input columns that are to be matched are
+assumed to be in sorted order. Uses mergesort to find the records in which
+the specified (by parameters) columns match. Can also add custom functions
+to do more processing on the input columns.
+<h4>
+HashMatch</h4>
+First input is random access, where as the second input is sequential.
+Uses hashing to find matched records in which the specified (by paramters)
+columns match.
+<h3>
+<a NAME="Distance Calculation Functions"></a>Distance Calculation Functions</h3>
+These functions take one sequential input, computes the specified distance
+between the specified column values and adds that distance as an additional
+column in the output record.
+<p><b>EditDistance</b> Uses the standard edit distance algorithm for strings.
+Uses the parameter character weight in the computation.
+<br><b>WordDistance </b>This custom function adds the word weight (parameter)
+for every different or missing word in the string, to the word distance.
+<br><b>AddrDistance</b> This custom function is an extension of the WordDistance
+function. It adds another weight for those words which have the same beginning.
+<br><b>DateDifference </b>This custom function finds the difference in
+date fields of two Italian codice fiscales.
+<h3>
+<a NAME="Classifier"></a>Classifier</h3>
+The classifier takes in conditions and an input record that satisfies a
+condition gets transferred to the corresponding output. For example, an
+input records which satisfies condition 2 will be available in output 2.
+A record that satisfies conditions 1 &amp; 3 will be available in both
+outputs 1 &amp; 3.
+<h4>
+Properties</h4>
+Each row in the table at the top corresponds to a condition. Each condition
+has three fields.&nbsp; Example, AddrDistance &lt; 4
+<ol>
+<li>
+<b><i>name of the column</i></b>, for the condition. This can be dragged
+and dropped from the names of columns in the list below. (Addr Distance
+in example)</li>
+
+<li>
+<b><i>operator</i></b> to be used in the condition. Can be dragged and
+dropped from lis containing operators. (&lt; in example)</li>
+
+<li>
+<b><i>The value</i></b> against which the column should be compared. (4
+in example)</li>
+</ol>
+<img SRC="classifier.jpg" height=300 width=400>
+<h3>
+<a NAME="Filter"></a>Filter</h3>
+This allows the user to apply filtering/preprocessing functions in the
+input data to bring them to a consistent format. <i>Make sure its input
+is connected before setting its properties.</i>
+<h4>
+Properties</h4>
+
+<ul>
+<li>
+Select the column from the tabbedpane for which you want to add filters.</li>
+
+<li>
+Drag and drop the filter from the list on the right, to the list under
+the selected tab.</li>
+
+<li>
+Select each filter in the tabbedpane and enter parameter values, if any,
+in the bottom table.</li>
+
+<li>
+Click on <b><i>Set</i></b> for the properties to be applied to the current
+filter, before selecting another filter.</li>
+</ul>
+
+<li>
+<img SRC="filter.jpg" height=340 width=420></li>
+
+<h4>
+Types</h4>
+
+<ul>
+<li>
+<b>ToUpperCase</b>: changes any lower case character to uppercase</li>
+
+<li>
+<b>ToLowerCase</b>: changes any upper case character to lowercase</li>
+
+<li>
+<b>RemoveChar:</b> removes the occurences of the character given as a parameter</li>
+
+<li>
+<b>Date</b>: currently removes - from the date</li>
+
+<li>
+<b>TelephoneNumbers</b>: currently removes - from telephone numbers</li>
+
+<li>
+<b>TechExpansion</b>: does expansion of commonly used technical abbreviations.
+The parameter table displays the default values which can be edited and
+new values can be added. The expansions are applied in the order in which
+they are listed under parameters. Remember to click on <b><i>Set</i></b>
+for the changes to be effective.</li>
+
+<li>
+<b>FindReplace</b>: Parameter to this filter contains a list of find and
+replace strings pairs and they are applied to the value of the input column
+in the order in which they are specified.</li>
+
+<li>
+<b>NameExpansion</b>: similar to the above, the default values being expansions
+of proper names</li>
+
+<li>
+<b>ItalianAddresses:</b></li>
+
+<li>
+<b>USAddresses</b>: does expansions of commonly used abbrevations in addresses</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Concurrent DU Detection Issue</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Concurrent DU Detection Issue</H1> 
+ <P><UL>
+time:</UL></P>
+<P><UL>
+process:</UL></P>
+<P><UL>
+DU:</UL></P>
+<P><UL>
+DU1 from IS1</UL></P>
+<P><UL>
+DU2 from IS2</UL></P>
+<P><UL>
+QR from IS2</UL></P>
+<P><UL>
+DU2 is 
+</UL><UL>
+waiting
+</UL><UL>
+ in UMQ</UL></P>
+<P><UL>
+DU2 is in 
+</UL><UL>
+PPU set</UL></P>
+<P><UL>
+<LI>DU2 is concurrent DU, but:
+<UL>
+<LI>DU2 is handled quicker than the DU1 by middle layer;
+<LI>DU2 is removed from both PPU set and UMQ before VM gets the query result QR.
+</UL></UL><UL>
+<LI>VM can no longer detect concurrent DU2.</UL></P>
+<P><UL>
+DU1 from IS1</UL></P>
+<P><UL>
+DU2 from IS2</UL></P>
+<P><UL>
+QR from IS2</UL></P>
+<P><UL>
+DU2 is 
+</UL><UL>
+waiting
+</UL><UL>
+ in UMQ</UL></P>
+<P><UL>
+DU2 is in 
+</UL><UL>
+PPU set</UL></P>
+<P><UL>
+DU2 is 
+</UL><UL>
+in RPU</UL></P>
+<P><UL>
+<LI>Use RPU stores all related Processed Updates
+</UL><UL>
+<LI>Related concurrent DU: There exists at least one DU received earlier, which hasn’t been completely handled by the view maintenance module yet.</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld003.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld005.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld004.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

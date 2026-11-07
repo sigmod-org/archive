@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>Engineering Large-scale Hypermedia Systems:
+Lessons from 24 years of Hypertext R&D</h1>
+<h2>Robert M. Akscyn</h2>
+<h3>Description</h3>
+<p>
+The aim of this tutorial is to impart to researchers and practitioners
+in the field of hypertext lessons learned from experience with
+developing and maintaining hypertext systems (and technology) over
+a several decade period.
+</p>
+<p>
+Large scale systems often introduce design issues that do not arise at
+small scale.  Usually there are 'breakpoints' -- thresholds of scale
+where design principles that previously sufficed are no longer
+functional.  It can be difficult to surmount these breakpoints - not
+only
+because a 'paradigm shif't in architecture may be required - but the
+designers may have to forgo features they previously thought
+indispensable.  As a result the design tradeoffs become more
+agonizing.
+</p>
+<p>
+This tutorial describes the 'lessons learned' from research and
+development of software and hardware architectures, systems, and
+applications -- conducted at Knowledge Systems during the past 20
+years.
+</p>
+<p>
+The focus of the tutorial is on the problematics of building,
+maintaining, and operating large-scale hypertext systems to support a
+wide-variety of applications - and approaches to tackling these
+problematics.  Example application areas include database
+development, knowledge management, on-line/off-line document
+development, digital libraries, and software engineering.
+</P>
+<br>
+<h3>Tutorial outline</h3>
+Background<br>
+&nbsp;&nbsp;&nbsp; Personal<br>
+&nbsp;&nbsp;&nbsp; Corporate<br>
+&nbsp;&nbsp;&nbsp; Review of History of Field of Hypertext<br>
+</P>
+
+<P>
+Overview of course<br>
+&nbsp;&nbsp;&nbsp; Topics/Subtopics<br>
+&nbsp;&nbsp;&nbsp; Objectives for the tutorial<br>
+</P>
+
+<P>
+A framework for evaluating hypertext  system designs<br>
+&nbsp;&nbsp;&nbsp; Functionality<br>
+&nbsp;&nbsp;&nbsp; Usability/Productivity<br>
+&nbsp;&nbsp;&nbsp;  Scalability<br>
+&nbsp;&nbsp;&nbsp;  Sustainability<br>
+</P>
+
+<P>
+Types of scalability:<br>
+&nbsp;&nbsp;&nbsp; Capacity<br>
+&nbsp;&nbsp;&nbsp; Transaction Rates<br>
+&nbsp;&nbsp;&nbsp; Response Rate<br>
+&nbsp;&nbsp;&nbsp; Economic<br>
+</P>
+
+<P>
+Human factor issues in highly-scaled environments<br>
+&nbsp;&nbsp;&nbsp;  The "Need for Speed"!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rapid response (< 1/10 second)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Homogeneous layouts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Few contexts (i.e., less modes) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directness of user interface<br>
+&nbsp;&nbsp;&nbsp; Multiple, interconnected screens<br>
+&nbsp;&nbsp;&nbsp;  Integrated editing (text/graphic/images)<br>
+&nbsp;&nbsp;&nbsp;  Integration of browsing/editing<br>
+&nbsp;&nbsp;&nbsp; 'Uphill Representation'<br>
+&nbsp;&nbsp;&nbsp; Multi-level indexing<br>
+&nbsp;&nbsp;&nbsp;  Structure-based searching<br>
+&nbsp;&nbsp;&nbsp; Version management<br>
+</P>
+
+<P>
+Example Highly-scaled Application areas:<br>
+&nbsp;&nbsp;&nbsp;  Knowledge Management<br>
+&nbsp;&nbsp;&nbsp; Digital Libraries<br>
+&nbsp;&nbsp;&nbsp; Publishing<br>
+&nbsp;&nbsp;&nbsp; Software Engineering<br>
+&nbsp;&nbsp;&nbsp; Massive Intelligent Agent Systems<br>
+&nbsp;&nbsp;&nbsp; Computer-Support Collaborative Work<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artifact-Based Collaboration<br>
+</P>
+
+<P>
+Future of Hypertext: some possibilities: <br>
+&nbsp;&nbsp;&nbsp; 'Hypertext Machines'<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Example: PetaPlex Architecture<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Project history<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;National Security Agency<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Current  state/systems <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Virginia Tech PetaPlex<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Experience/Lessons learned<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Future work<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SuperPrograms" - immense-scale 'hypertext software'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digital Library 'Utilities'<br>
+</P>
+
+<P>
+Summary of "Lessons Learned"<br>
+</P>
+<br>
+<h3>Tutorial history</h3>
+<P>
+I have presented a number of tutorials on hypertext and digital
+libraries at the following conference series:
+<br>
+&nbsp;&nbsp;&nbsp;ACM Hypertext XX (including European side) (1991,1992)<br>
+&nbsp;&nbsp;&nbsp;ACM Multimedia series (1993/1995/1996)<br>
+&nbsp;&nbsp;&nbsp;ACM Digital Libraries (1998)<br>
+&nbsp;&nbsp;&nbsp;Hypermedia '94 (Johannesburg, South Africa)<br>
+as well as presented full-day, industry-oriented tutorial series on
+hypertext in Paris, London, and Milan (1990)<br>
+</P>
+<br>
+<h3>Presenter biography</h3>
+<P>
+I have been the President of Knowledge Systems for the past 20 years
+- since founding, along with my colleague Don McCracken, a 1981
+spin-off from the Computer Science Department at Carnegie Mellon
+University.  My focus during this period has been the development of
+software and hardware architectures and products - -to support the
+development and maintenance of large-scale hypertext systems.
+</P>
+
+<P>
+In recent years my emphasis has been on the evolution of
+massively-parallel 'hypertext machines' -- designed to support very
+rapid response for large numbers of concurrent users.  In the late 90's
+I develop the "PetaPlex" architecture for the National Security
+Agency for a system to store 20 petabytes of hypertext-structured
+material.  My company is now commercializing that work.
+</P>
+
+<P>
+A specific theme that permeates my work -- has been the issue of
+system response time - believing that the usability of hypertext
+systems is strongly related to the ability of users to navigate quickly
+(e.g., response times on the order of 1/10 second or less)
+</P>
+
+<P>
+Another highlight of my work during this twenty year period -- has
+been the exploration of hypertext as a representation medium for
+software -- in which large-scale, hypertext structures are directly
+executable (as well as browsable).  This has lead to the belief that
+there is significant potential for the development of 'superprograms'
+-- software systems with billions of executable components housed in
+massively-parallel clusters, as a means of truly augmenting human
+intelligence in the day-to-day performance of knowledge work (i.e.,
+what Doug Engelbart has been encouraging us to do all along).
+</P>
+<br>
+<h3>Relevant references</h3>
+
+<P>
+Fox, Ed., Akscyn, R., Leggett, J. and Furuta, R. (Editors), Digital
+Libraries (Special Issue of) Communications of the ACM, April,
+1995.
+</P>
+
+<P>
+Akscyn, R., "Constructing a World-Scale Digital Library" White
+paper for NIST ATP Focussed Program Development Workshop:
+"Networking, Telecommunications and Information Technology: The
+Requirements of U.S.  Industry", August 30-31, 1994
+</P>
+
+<P>
+Akscyn, R. , "Reengineering the Field: Hypertext in the 21st
+Century".  Proceedings of Hypermedia '94, Johannesburg, South
+Africa.  Mar 94
+</P>
+
+<P>
+Akscyn, R. and McCracken, D. Design of Hypermedia Script
+Languages: The KMS Experience, Proceedings of Hypertext '93,
+ACM NY 1993
+</P>
+
+<P>
+Akscyn, R., and D. McCracken, "PLEXUS: A Hypermedia
+Architecture for Large-scale Digital Libraries " Proceedings of
+SIGDOC '93, ACM SIGDOC, Oct 1993, Kitchener, Ontario
+</P>
+
+<P>
+Akscyn, R. (Ed.) "ACM Hypertext Compendium", [A hypertext
+database containing over 130 articles from the field of hypertext],
+ACM Press 1991
+</P>
+
+<P>
+Yoder, E., Akscyn, R., and D. McCracken.  "Collaboration in KMS,
+A Shared Hypermedia Environment." In Proceedings of CHI '89,
+ACM SIGCHI, May 1989, Austin, TX.
+</P>
+
+<P>
+Akscyn,R.  and Yoder, E. Editors.  "Hypertext on Hypertext," the
+KMS hypertext version of the Communications of the ACM July
+1988 special issue on hypertext.  Association for Computing
+Machinery, New York, NY.
+</P>
+
+<P>
+Akscyn, R., McCracken, D. and E. Yoder, "KMS: A Distributed
+Hypermedia System for Managing Knowledge in Organizations,"
+Communications of the ACM, July 1988.
+</P>
+
+<P>
+Akscyn, R., Yoder, E. and D. McCracken, "The Data Model is the
+Heart of Interface Design." In Proceedings of CHI '88, ACM
+SIGCHI, May 1988, Washington, D.C.
+</P>
+
+<P>
+Akscyn, R., McCracken, D. and E. Yoder, "KMS: A Distributed
+Hypermedia System for Sharing Knowledge in Organizations,"
+Proceedings of Hypertext '87, University of North Carolina, Chapel
+Hill, NC, November 13-15, 1987.
+</P>
+
+<P>
+Akscyn, R., "The Next Computer Revolution?", Pittsburgh High
+Technology, 2(6), November/December 1987.
+</P>
+
+<P>
+Akscyn, R., "The Hypertext Approach to Managing Knowledge in
+Organizations," Proceedings of the Fifth Corporate Electronic
+Publishing Seminar (CEPS), Chicago, IL, March 1987.
+</P>
+
+<P>
+Akscyn, R. and D. McCracken, "The ZOG Approach to Database
+Management," Proceedings of the Trends and Applications
+Conference: Making Database Work, Gaithersburg, Maryland, May
+1984.
+</P>
+
+<P>
+Akscyn, R. and D. McCracken, "ZOG and the USS CARL VINSON:
+Lessons in System Development," Proceedings of the First IFIP
+Conference on Human- Computer Interaction (Interact '84), London,
+U.K., September 1984.
+</P>
+
+<P>
+Yoder, E., McCracken, D., and R. Akscyn, "Instrumenting a
+Human-Computer Interface for Development and Evaluation,"
+Proceedings of the First IFIP Conference on Human-Computer
+Interaction (Interact '84), London, U.K., September 1984.
+</P>
+
+<P>
+Akscyn, R., and D. McCracken, "The ZOG/VINSON Project: An
+Experiment in Direct Technology Transfer," Proceedings of IEEE
+COMPCON'84 Fall Conference on the Small Computer Revolution,
+September, 1984.
+</P>
+
+<P>
+McCracken, D. and R. Akscyn, "Experience with the ZOG
+Human-Computer Interface System," International Journal of
+Man-Machine Studies, Vol.  21, 1984, pp.  293 -310.  21 pages.
+</P>
+
+<P>
+Robertson, C.K.  and R. Akscyn, "Experimental Evaluation of Tools
+for Teaching the ZOG Frame Editor," Proceedings of the
+International Conference on Man/ Machine Systems, Manchester,
+U.K., July 1982.  10 pages.
+</P>
+
+<P>
+Newell, A., McCracken, D., Robertson, G., and R. Akscyn, "ZOG and
+the USS CARL VINSON," Computer Science Research Review,
+Carnegie-Mellon University, 1981, pp.  95-118.
+</P>
+
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint">
+ <p:presentation omittitleplace="t">
+  <p:master id="3" type="main" href="master03.htm" xmlhref="master03.xml"
+   template="Default Design" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"/>
+    <p:colorscheme
+     colors="#0000FF,#FFFFFF,#000000,#FFFF00,#FF9900,#00FFFF,#FF0000,#969696"/>
+    <p:colorscheme
+     colors="#FFFFCC,#000000,#666633,#808000,#339933,#800000,#0033CC,#FFCC66"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#333333,#000000,#DDDDDD,#808080,#4D4D4D,#EAEAEA"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#FFCC66,#0000FF,#CC00CC,#C0C0C0"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#C0C0C0,#0066FF,#FF0000,#009900"/>
+    <p:colorscheme
+     colors="#FFFFFF,#000000,#808080,#000000,#3399FF,#99FFCC,#CC00CC,#B2B2B2"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="4" type="title" href="master04.htm" xmlhref="master04.xml"
+   layout="title_subtitle"
+   slots="centerTitle,subTitle,dateTime,footer,slideNumber"/>
+  <p:master id="1" type="notes" href="master01.htm" layout="notes"
+   slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:master id="2" type="handout" href="master02.htm" layout="handout"
+   slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="117" href="slide0117.htm" masterhref="master04.htm"
+   layout="title_subtitle" slots="centerTitle,subTitle" collapseoutline="t"/>
+  <p:slide id="97" href="slide0097.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="98" href="slide0098.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="110" href="slide0110.htm" layout="title_body" slots="title,body"/>
+  <p:slide id="111" href="slide0111.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="112" href="slide0112.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="113" href="slide0113.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="114" href="slide0114.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="100" href="slide0100.htm" layout="title_only" slots="title"/>
+  <p:slide id="101" href="slide0101.htm" layout="title_only" slots="title"/>
+  <p:slide id="102" href="slide0102.htm" layout="title_only" slots="title"/>
+  <p:slide id="115" href="slide0115.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="116" href="slide0116.htm" layout="title_body" slots="title,body"
+   collapseoutline="t"/>
+  <p:slide id="103" href="slide0103.htm" layout="title_only" slots="title"/>
+  <p:slide id="104" href="slide0104.htm" layout="title_only" slots="title"/>
+  <p:slide id="108" href="slide0108.htm" layout="title_only" slots="title"/>
+  <p:slide id="109" href="slide0109.htm" layout="title_only" slots="title"/>
+  <p:viewstate type="slideView" slidehref="slide0097.htm" scale="75"
+   nosnaptogrid="t" vertbarstate="0" horizbarstate="2"/>
+  <p:slideshowsettings pencolor="schemeText" restarttime="300000"
+   manualadvance="t"/>
+  <p:kinsoku language="Japanese" level="levelOne"/>
+  <p:font name="Times New Roman" charset="0" type="4"/>
+  <p:font name="Arial" charset="0" type="4" family="34"/>
+  <p:font name="Helvetica" charset="0" type="10" family="34"/>
+  <p:font name="Wingdings" charset="2" type="6" family="2"/>
+  <p:headersfooters slidenumber="t" noheader="t"/>
+  <p:headersfooters notes="t" slidenumber="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack"/>
+  <p:htmlpublishsettings browsersupport="dual"
+   href="C:\My Documents\Disc\Poster\demo.htm"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="230402">
+  <o:colormru v:ext="edit" colors="yellow,aqua,#393,red,#ffc,#f96,#6f9,#eaeaea"/>
+  <o:colormenu v:ext="edit" fillcolor="aqua" strokecolor="red" shadowcolor="none"
+   extrusioncolor="none"/>
+ </o:shapedefaults></xml>

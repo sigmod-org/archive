@@ -1,0 +1,411 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>EVE Demo: Step-by-Step Tutorial</title>
+</head>
+
+<body background="parchment.gif" bgcolor="#FFFFFF">
+
+<p align="center"><font color="#400040" size="7"
+face="Comic Sans MS">EVE Demo Step-by-Step Tutorial</font> </p>
+
+<p>This tutorial will illustrate the functionality of Evolvable
+View Environment by means of a walkthrough with 7 schema changes.
+Each stage of handling the 7 schema changes is accompanied by a
+screenshot. </p>
+
+<p>This tutorial reflects the status of the EVE system as of
+January 1999. We have since added support for a computation of
+Quality and Cost of View Rewritings (QC-Model), which we have
+demonstrated at SIGMOD '99. </p>
+
+<p><a name="toc"></a>Table of Content </p>
+
+<ul>
+    <li><a href="#case1">Case 1: Adding an Attribute</a></li>
+    <li><a href="#case2">Case 2: Deleting an attribute which is
+        dispensable in view definition</a></li>
+    <li><a href="#case3">Case 3: Deleting an attribute which is
+        indispensible view definition</a></li>
+    <li><a href="#case4">Case 4: Renaming an attribute</a></li>
+    <li><a href="#case5">Case 5: Adding a relation</a></li>
+    <li><a href="#case6">Case 6: Deleting a relation</a></li>
+    <li><a href="#case7">Case 7: Change a relation name</a></li>
+</ul>
+
+<table border="1">
+    <tr>
+        <td>This applet is used to initiate schema changes at the
+        information sources.&nbsp;</td>
+        <td><img src="ISMaster_class.gif" width="456"
+        height="340"></td>
+    </tr>
+    <tr>
+        <td>The second applet is used to browse the MKB (Meta
+        Knowledge Base) and VKB (View Knowledge Base) of the EVE
+        system. The MKB manages the meta knowledge (schema of
+        information sources and their relations to each other).
+        The VKB stores the view definitions currently maintained
+        in the data warehouse.</td>
+        <td><img src="mkbvkb_class.gif" width="455" height="404"></td>
+    </tr>
+    <tr>
+        <td>Please wait for both applets to appear. The
+        &quot;ISChange&quot; applet may take longer than the
+        &quot;MKBVKB&quot; applet.</td>
+    </tr>
+    <tr>
+        <td>Click on &quot;Browse the MKB&quot; button to browse
+        the MKB. There are two major panels on this applet. The
+        left panel displays a hierarchical structure of the
+        information sources (ISs) and the right panel displays
+        their relations. There are six information sources in
+        this demo with each IS having one relation. On the right
+        side, the meta knowledge of a selected relation is
+        displayed. At the top, type constraints show all the
+        attributes and types of the selected relation. In the
+        center, join constraints show all the meaningful joins
+        between this relation and other relations. At the bottom,
+        we display partial-complete containment constraints (PC
+        constraints). These constraints show all the containment
+        relationships between this relation and other relations,
+        e.g., subset, superset or equivalent between extents.</td>
+        <td><img src="MASSBRANCH_MKB.gif" width="656"
+        height="475"></td>
+    </tr>
+    <tr>
+        <td>We will now walk through seven test cases to trace
+        the effects of different schema changes. The information
+        space represents an US-wide travel agency with a branch
+        in Massachusetts.&nbsp; <h4><a name="case1"></a>Case 1:
+        Adding an Attribute</h4>
+        <p><tt>Add-Attribute: IS2.MassBranch.Occupation</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>The DBA of the Massachusetts branch of our travel
+        agency decides to add an attribute 'Occupation' to the
+        MassBranch relation by issuing the capability change <tt>add-attribute(IS2.MassBranch,Occupation)</tt>
+        with 'Occupation' being of type String.&nbsp; <p><!--Later on, our travel agency may use the newly
+        available information `Occupation' to study what
+        professional groups visit Toronto most frequently, and
+        have promotions specially designed for people in
+        particular groups. -->The
+        newly added attribute `Occupation' does not affect the
+        existing meta knowledge in the MKB, and does not affect
+        the current views. All the tuples in IS2.MassBranch have
+        null values for the Occupation attribute at this point,
+        until their values are explicitly set by the IS2
+        information provider.</p>
+        </td>
+        <td><img src="MASSBRANCH_ADD_OCC.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>This is the dialog box for adding one attribute
+        (obtained after clicking on the
+        &quot;add-attribute&quot;-button). You can use a drop
+        down list to select among the pre-defined types. Types
+        can be defined in our system for this purpose.</td>
+        <td><img src="ADD_ATTRIBUTE_OCC.gif" width="458"
+        height="170"></td>
+    </tr>
+    <tr>
+        <td>This is the state of the MKB after the schema change.
+        The new attribute &quot;OCCUPATION&quot; appears in the
+        type constraints field.</td>
+        <td><img src="STEP1_MKB.gif" width="656" height="475"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case2"></a>Case 2: Deleting an attribute
+        which is dispensable in view definition</h4>
+        <p><tt>Delete-Attribute: IS2.MassBranch.Phone</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>Looking at the view definition for
+        'PotentialCustomer' in the View Knowledge Browser Applet
+        reveals that, according to the view definition for
+        PotentialCustomer, our travel agent is willing to accept
+        query results with only the customers' names and
+        addresses, if the phone numbers are not available for
+        some reason. (The parameter AD - <i>attribute dispensable
+        </i>is set to <i>true</i>).&nbsp;</td>
+        <td><img src="PotentialCustomer_VKB.gif" width="583"
+        height="495"></td>
+    </tr>
+    <tr>
+        <td>If now the DBA of IS2 removes the Phone attribute
+        from the MassBranch relation by issuing <tt>delete-attribute(IS2.MassBranch.Phone)</tt>,
+        our view can still be evolved. <p>Since the Phone
+        attribute is dispensable and cannot be found in any other
+        information source, EVE simply drops it from the
+        PotentialCustomer view. <br>
+        The other view (TravelInBoston) is not affected by the
+        schema change and therefore remains unchanged.&nbsp;</p>
+        </td>
+        <td><img src="MASSBRANCH_DEL_PHONE.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>The attribute is going to be deleted, After clicking
+        on the &quot;Delete Attribute&quot; button and confirming
+        the dialog. The &quot;Results of the View Evolution
+        Process&quot; will be displayed after the evolution. In
+        this window, we can compare the two view definitions. We
+        can see that the new view definition omits the
+        &quot;IS2.MASSBRANCH.PHONE&quot; attribute from the
+        SELECT clause.&nbsp;<!-- <p>The new view
+        is:</p> <pre><font size="2"> CREATE VIEW POTENTIALCUSTOMER (VE
+        = SUPERSET) AS SELECT IS2.MASSBRANCH.CNAME (AR = TRUE)
+        IS2.MASSBRANCH.STREET (AR = TRUE) IS2.MASSBRANCH.CITY (AR =
+        TRUE) IS2.MASSBRANCH.STATE (AR = TRUE) FROM IS2.MASSBRANCH (RR
+        = TRUE) IS3.FLIGHTRES WHERE IS2.MASSBRANCH.CNAME =
+        IS3.FLIGHTRES.PNAME (CR = TRUE) AND IS3.FLIGHTRES.DEST =
+        'Toronto' (CD = TRUE) AND IS3.FLIGHTRES.DEPARTDATE &lt;=
+        970101 </font></pre> --></td>
+        <td><img src="STEP2_VIEW_DEF_DIF.gif" width="583"
+        height="612"></td>
+    </tr>
+    <tr>
+        <td>After clicking on the 'Display Extent Differences'
+        button, you can now compare the extent differences
+        between old and new view in a separate window. <br>
+        The new extent does not have the
+        &quot;MASSBRANCH_PHONE&quot; attribute.</td>
+        <td><img src="STEP2_VIEW_EXT_DIF.gif" width="583"
+        height="477"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case3"></a>Case 3: Deleting an attribute
+        which is indispensible in view definition</h4>
+        <p><tt>Delete-Attribute: IS2.MassBranch.State</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>Assume the DBA of IS2 decides to remove the State
+        attribute from the relation IS2.MassBranch (since IS2
+        lists only Massachussetts customers.)&nbsp;</td>
+        <td><img src="MASSBRANCH_DEL_STATE.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>Since the attribute can not be dropped but can be
+        replaced from a different information source, EVE evolves
+        the view to incorporate the Customer table into the view
+        and uses its &quot;State&quot; attribute in the
+        PotentialCustomer view. A new join is added accordingly
+        (using the first join constraint listed above). This
+        screenshot shows the state of the MKB after dropping the
+        &quot;STATE&quot; attribute.&nbsp;</td>
+        <td><img src="STEP3_MKB.gif" width="658" height="495"></td>
+    </tr>
+    <tr>
+        <td>Since the attribute &quot;STATE&quot; cannot be
+        dropped from the view, the view has to include a similar
+        attribute from a different relation. In this case, we
+        replace the attribute by &quot;CUSTOMER.STATE&quot; from
+        Information Source 1 and add WHERE-clauses accordingly to
+        join the CUSTOMER table with the existing view.&nbsp; <pre><font
+size="2">CREATE VIEW POTENTIALCUSTOMER (VE = SUPERSET) AS
+SELECT IS2.MASSBRANCH.CNAME&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.STREET (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.CITY&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS1.CUSTOMER.STATE</u>&nbsp;&nbsp;&nbsp; (AR = TRUE)
+FROM&nbsp;&nbsp; IS2.MASSBRANCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS3.FLIGHTRE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS1.CUSTOMER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RD = TRUE, RR = TRUE)
+</u>WHERE&nbsp; IS2.MASSBRANCH.CNAME&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = IS3.FLIGHTRES.PNAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEST = 'Toronto'&nbsp; (CD = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEPARTDATE &lt;= 970101
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND <u>IS2.MASSBRANCH.CNAME
+</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>= IS1.CUSTOMER.CNAME&nbsp;&nbsp; (CD = TRUE, CR = TRUE)</u></font>
+<!--       AND <u>IS2.MASSBRANCH.STREET</u>
+         <u>= IS1.CUSTOMER.STREET  (CD = TRUE, CR = TRUE)</u>
+       AND <u>IS2.MASSBRANCH.CITY</u>
+         <u>= IS1.CUSTOMER.CITY    (CD = TRUE, CR = TRUE)</u>
+--></pre>
+        </td>
+        <td><img src="STEP3_VIEW_DEF_DIF.gif" width="583"
+        height="630"></td>
+    </tr>
+    <tr>
+        <td>This shows the extent differences between the old and
+        new view definitions. The attribute &quot;STATE&quot; is
+        now being queried from a different information source,
+        but the extent remains the same since the new information
+        source provides the same information as the old
+        one.&nbsp;</td>
+        <td><img src="STEP3_VIEW_EXT_DIF.gif" width="583"
+        height="495"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case4"></a>Case 4: Renaming an attribute</h4>
+        <p><tt>Change-Attribute-Name: IS2.MassBranch.CName =&gt;
+        IS2.MassBranch.Name</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>We assume that the DBA of IS2 decides to change the
+        attribute CName of the MassBranch relation to Name by
+        issuing the following capability change: <tt>change-attribute-name(IS2.MassBranch,CName,Name)</tt>.
+        In the demo, this is accomplished by clicking on the
+        &quot;Rename Attribute&quot; button.&nbsp;</td>
+        <td><img src="MASSBRANCH_REN_CNAME.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>Type the new attribute name in the input box.</td>
+        <td><img src="REN_ATTRIBUTE_CNAME.gif" width="458"
+        height="170"></td>
+    </tr>
+    <tr>
+        <td>The evolved view is:&nbsp; <pre><font size="2">CREATE VIEW POTENTIALCUSTOMER (VE = SUPERSET) AS
+SELECT <u>IS2.MASSBRANCH.NAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.STREET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.CITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS1.CUSTOMER.STATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (AR = TRUE)
+FROM&nbsp;&nbsp; IS2.MASSBRANCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS3.FLIGHTRES
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS1.CUSTOMER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RR = TRUE)
+WHERE&nbsp; <u>IS2.MASSBRANCH.NAME</u>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = IS3.FLIGHTRES.PNAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEST = 'Toronto' (CD = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEPARTDATE &lt;= 970101
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS1.CUSTOMER.CNAME
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <u>IS2.MASSBRANCH.NAME</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CR = TRUE)</font></pre>
+        <p>i.e., all occurrences of IS2.MassBranch.CName have
+        been renamed to &quot;Name&quot; in the view.&nbsp;</p>
+        </td>
+        <td><img src="STEP4_VIEW_DEF_DIF.gif" width="583"
+        height="630"></td>
+    </tr>
+    <tr>
+        <td>The extent did not change under this schema change.</td>
+        <td><img src="STEP4_VIEW_EXT_DIF.gif" width="583"
+        height="495"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case5"></a>Case 5: Adding a relation</h4>
+        <p><tt>Add-Relation: IS3.MileagePlus</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>The DBA of IS3 decides to add a new relation
+        MileagePlus to its local schema by issuing a capability
+        change: <tt>add-relation(IS3,MileagePlus)</tt>.&nbsp;</td>
+        <td><img src="IS3_ADD_MILEAGEPLUS.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>The attribute is added by pressing the
+        &quot;add-relation&quot;-button and giving a name to the
+        relation. The schema of the new relation is fixed for
+        this demo and can be viewed in the drop-down list box in
+        the following dialog. <p>This capability change does not
+        affect the existing meta knowledge in the MKB, nor the
+        view definition PotentialCustomer. (The MKB itself is
+        extended.) A join constraint between IS2.MassBranch and
+        IS3.MileagePlus may be added at a later time to make the
+        new table useful in our system. This is the MKB after we
+        add the MileagePlus relation.</p>
+        </td>
+        <td><img src="STEP5_MKB.gif" width="656" height="492"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case6"></a>Case 6: Deleting a relation</h4>
+        <p><tt>Delete-Relation: IS5.HOTEL</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>Assume that for some reason the Hotel relation
+        becomes unavailable (this is equivalent to a capability
+        change <tt>delete-relation(IS5.Hotel)</tt>).&nbsp;</td>
+        <td><img src="IS5_DEL_HOTEL.gif" width="457" height="596"></td>
+    </tr>
+    <tr>
+        <td>The evolved view has the HOTEL relation replaced by
+        the BBHOTEL relation. Note that BBHOTEL contains only the
+        hotel information in the Boston Back Bay area.&nbsp; <p>The
+        new view definition is: </p>
+        <pre>
+<font size="2">CREATE VIEW TRAVELINBOSTON (VE = SUBSET) AS&nbsp;
+SELECT IS4.CARRENTAL.NAME&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS4.CARRENTAL.ADDRESS&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS4.CARRENTAL.PHONE&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS6.BBHOTEL.NAME</u> (AR = TRUE)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS6.BBHOTEL.ADDRESS</u> (AR = TRUE)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS6.BBHOTEL.PHONE</u> (AR = TRUE)
+FROM&nbsp;&nbsp; IS4.CARRENTAL&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS5.BBHOTEL</u> (RR = TRUE)
+WHERE&nbsp; IS4.CARRENTAL.CITY = 'Boston'&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS4.CARRENTAL.STATE = 'MA'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND <u>IS6.BBHOTEL.CITY = 'Boston'</u> (CR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND <u>IS6.BBHOTEL.STATE = 'MA'</u> (CR = TRUE)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></pre>
+        <p>The &quot;HOTEL&quot; relation changed to
+        &quot;BBHOTEL&quot; using a PC-constraint between
+        &quot;HOTEL&quot; and &quot;BBHOTEL&quot;.</p>
+        </td>
+        <td><img src="STEP6_VIEW_DEF_DIF.gif" width="583"
+        height="630"></td>
+    </tr>
+    <tr>
+        <td>Two tuples from the view are missing (since Hotel2
+        does not exist in the BBHotel table).</td>
+        <td><img src="STEP6_VIEW_EXT_DIF.gif" width="583"
+        height="495"></td>
+    </tr>
+    <tr>
+        <td><h4><a name="case7"></a>Case 7: Change a relation
+        name</h4>
+        <p><tt>Change-Relation-Name: IS1,CUSTOMER,ALLCUSTOMER</tt></p>
+        </td>
+        <td><a href="#toc">Back to TOC</a></td>
+    </tr>
+    <tr>
+        <td>Assume the DBA of IS1 decides to change the name of
+        the relation CUSTOMER to ALLCUSTOMER by issuing a
+        capability change: <tt>change-relation-name(IS1,CUSTOMER,ALLCUSTOMER)</tt>.&nbsp;</td>
+        <td><img src="IS1_REN_CUSTOMER.gif" width="458"
+        height="595"></td>
+    </tr>
+    <tr>
+        <td>Press the &quot;Rename Relation&quot; button and type
+        the new name.</td>
+        <td><img src="REN_CUSTOMER.gif" width="458" height="170"></td>
+    </tr>
+    <tr>
+        <td>The evolved view has CUSTOMER changed to ALLCUSTOMER
+        everywhere. The new view definition is: <pre><font
+size="2">CREATE VIEW POTENTIALCUSTOMER (VE = SUPERSET) AS
+SELECT IS2.MASSBRANCH.NAME&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.STREET (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS2.MASSBRANCH.CITY&nbsp;&nbsp; (AR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS1.ALLCUSTOMER.STATE</u> (AR = TRUE)
+FROM&nbsp;&nbsp; IS2.MASSBRANCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IS3.FLIGHTRES
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>IS1.ALLCUSTOMER</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (RR = TRUE)
+WHERE&nbsp; IS2.MASSBRANCH.NAME&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = IS3.FLIGHTRES.PNAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CR = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEST = 'Toronto' (CD = TRUE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND IS3.FLIGHTRES.DEPARTDATE &lt;= 970101&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND <u>IS1.ALLCUSTOMER.CNAME</u>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = IS2.MASSBRANCH.NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (CR = TRUE)</font></pre>
+        </td>
+        <td><img src="STEP7_VIEW_DEF_DIF.gif" width="583"
+        height="630"></td>
+    </tr>
+</table>
+</body>
+</html>

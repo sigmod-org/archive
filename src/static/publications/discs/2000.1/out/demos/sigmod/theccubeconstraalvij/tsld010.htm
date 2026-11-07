@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Hosting Iterative Lang.</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Hosting Iterative Lang.</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld009.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld011.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr>Hosting&nbsp;Iterative&nbsp;Lang.</nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font size="5"><strong>Hosting Iterative Language</strong></font></p>
+
+<p>The syntax of CCUBE iterative queries, such as the one in the example, reminds ODMG
+OQL. However, a query may contain any number of interleaved FROM, WHERE, DEFINE and
+PERFORM clauses, in any order, provided that every query variable is bound in a FROM
+clause before it is used. </p>
+
+<p>Intuitively, a query may be viewed as a nested loop program, in which each FROM clause
+corresponds to iteration over a corresponding &quot;collection&quot; object, and each
+WHERE clause corresponds to checking a Boolean condition. The PERFORM statement allows for
+execution of any enclosed C++ statements, including for performing actions, such as
+printing, which is useful for debugging. In the WHERE clause, any C++ expression, possibly
+using bound query variables, may be used, provided it returns TRUE or FALSE. Similarly,
+the SELECT clause may contain an arbitrary C++ expression whose type corresponds to the
+type of the result (indicated after the word INTO). Finally, a PERFORM clause may also be
+used instead of the SELECT clause, which is useful, in particular, when more then one
+resulting collection or aggregation is being computed in the query.&nbsp; </p>
+
+<p>Manipulation of and Boolean conditions on CST objects, being implemented as a library
+of interrelated C++ classes, can be used in hosting iterative queries. The data model for
+iterative queries is based on the notion of the so called collection and primitive
+monoids. Collection monoid is a conceptual data type capturing uniformly collections and
+other types over which one can ``iterate''. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

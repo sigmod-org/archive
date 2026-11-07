@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: Activity NewOrder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_workitem.htm"> Previous Step</a></td>
+<td><a href="demo_return.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>Activity NewOrder</b></font></p>
+<p>After clicking the "Accept" button on her worklist, Jenny gets the form of the activity NewOrder on her screen and can do her job ... </p>
+<table>
+	<tr><td align="center"><a href="neworder1.gif"><img src="neworder1_tn.gif"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>... which is filling the form.</p>
+<p>The activity NewOrder is implemented as a Dynamic HTML (DHTML) application. In general there are two approaches to handle XML on the client side using Microsoft IE 5.0. First, the XML data can be transformed by the stylesheet engine of the browser into DHTML after downloading XML and XSL. Alternatively, a client application can be implemented in DHTML directly. In the latter case so-called "XML data islands" [1] can be defined within a DHTML document, in order to separate the input data from the presentation. An XML data island can easily be bound ("Data Binding" [1]) to an HTML element as a dynamic source object (DSO) to be visualized within the DHTML document. The main advantage of using this Data Binding is that the HTML element will be updated automatically when the corresponding DSO has changed. Once initialized in the browser, the DHTML document for the NewOrder activity contains an empty XML data island. For convenience the user may simply input the customer id and click on the "Check This" button.</p>
+<p>Unlike customer data, items can be added to the "shopping cart" several times. To avoid repeatedly checking item ids by calling the XML mediator, we prefetch relevant parts of the product catalog into the browser by defining an XML data island. All manipulations on the DHTML page such as adding items are processed locally without involving any servers or the XML mediator.</p>
+<table>
+	<tr><td align="center"><a href="neworder2.gif"><img src="neworder2_tn.gif"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>Now, Jenny can submit the form and send the data to the XML mediator simply by clicking the <b><a href="demo_return.htm">"Submit Order"</a></b> button ...
+<p>&nbsp;</p>
+<p><b>References</b></p>
+<p>[1]	Microsoft Developer Network (MSDN): <i><a href="http://msdn.microsoft.com/xml/default.asp">XML Developer Center</a></i>.</p>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_workitem.htm"> Previous Step</a></td>
+<td><a href="demo_return.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+</dd>
+</dl>
+</body>
+</html>

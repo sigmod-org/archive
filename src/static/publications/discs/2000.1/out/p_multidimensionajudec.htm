@@ -1,0 +1,608 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Multi-dimensional Selectivity Estimation Using Compressed Histogram Information</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Multi-dimensional Selectivity Estimation Using Compressed Histogram Information
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_ju-hong_lee.htm">Ju-Hong Lee</a>, 
+<a href = "a_deok-hwan_kim.htm">Deok-Hwan Kim</a>, and 
+<a href = "a_chin-wan_chung.htm">Chin-Wan Chung</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/multidimensionajudec.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmohistogramsgrams.htm">Return to Histograms</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ The database query optimizer requires the estimation of the query selectivity to find the most efficient access plan. For queries referencing multiple attributes from the same relation, we need a multi-dimensional selectivity estimation technique when the attributes are dependent each other because the selectivity is determined by the joint data distribution of the attributes. Additionally, for multimedia databases, there are intrinsic requirements for the multi-dimensional selectivity estimation because feature vectors are stored in multi-dimensional indexing trees. In the 1-dimensional case, a histogram is practically the most preferable. In the multi-dimensional case, however, a histogram is not adequate because of high storage overhead and high error rates. In this paper, we propose a novel approach for the multi-dimensional selectivity estimation. Compressed information from a large number of small-sized histogram buckets is maintained using the discrete cosine transform. This enables low error rates and low storage overheads even in high dimensions. In addition, this approach has the advantage of supporting dynamic data updates by eliminating the overhead for periodical reconstructions of the compressed information. Extensive experimental results show advantages of the proposed approach.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AFS93]
+<dd>
+... 
+<dt>
+[BBK98]
+<dd>
+<a name="BerchtoldBK98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">
+Christian B&ouml;hm
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The Pyramid-Tree: Breaking the Curse of Dimensionality. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 142-153
+<dt>
+[BKK96]
+<dd>
+<a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">
+Stefan Berchtold
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">
+Daniel A. Keim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+: The X-tree : An Index Structure for High-Dimensional Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">
+VLDB 1996
+</a>
+: 28-39
+<dt>
+[BF95]
+<dd>
+<a name="BelussiF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Belussi:Alberto.html">
+Alberto Belussi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Estimating the Selectivity of Spatial Queries Using the `Correlation' Fractal Dimension. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#BelussiF95">
+VLDB 1995
+</a>
+: 299-310
+<dt>
+[CR94]
+<dd>
+<a name="ChenR94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Chungmin_Melvin.html">
+Chungmin Melvin Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roussopoulos:Nick.html">
+Nick Roussopoulos
+</a>
+: Adaptive Selectivity Estimation Using Query Feedback. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1994
+</a>
+: 161-172
+<dt>
+[CSZS97]
+<dd>
+... 
+<dt>
+[CG96]
+<dd>
+<a name="ChaudhuriG96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gravano:Luis.html">
+Luis Gravano
+</a>
+: Optimizing Queries over Multimedia Repositories. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 91-102
+<dt>
+[Chri83]
+<dd>
+<a name="Christodoulakis83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Christodoulakis:Stavros.html">
+Stavros Christodoulakis
+</a>
+: Estimating record selectivities. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is8.html#Christodoulakis83">
+IS 8(2)
+</a>
+: 105-115(1983)
+<dt>
+[EKSWX98]
+<dd>
+<a name="EsterKSWX98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmer:Michael.html">
+Michael Wimmer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: Incremental Clustering for Mining in a Data Warehousing Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#EsterKSWX98">
+VLDB 1998
+</a>
+: 323-333
+<dt>
+[EKSX96]
+<dd>
+<a name="EsterKSX96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ester:Martin.html">
+Martin Ester
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">
+Hans-Peter Kriegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sander:J=ouml=rg.html">
+J&ouml;rg Sander
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xu:Xiaowei.html">
+Xiaowei Xu
+</a>
+: A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd96.html#EsterKSX96">
+KDD 1996
+</a>
+: 226-231
+<dt>
+[Fa96]
+<dd>
+<a name="Fagin96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+: Combining Fuzzy Information from Multiple Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#Fagin96">
+PODS 1996
+</a>
+: 216-226
+<dt>
+[Fa98]
+<dd>
+<a name="Fagin98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+: Fuzzy Queries in Multimedia Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods98.html#Fagin98">
+PODS 1998
+</a>
+: 1-10
+<dt>
+[GRS98]
+<dd>
+<a name="GuhaRS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Guha:Sudipto.html">
+Sudipto Guha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: CURE: An Efficient Clustering Algorithm for Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 73-84
+<dt>
+[HNSS95]
+<dd>
+<a name="HaasNSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshadri:S=.html">
+S. Seshadri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stokes:Lynne.html">
+Lynne Stokes
+</a>
+: Sampling-Based Estimation of the Number of Distinct Values of an Attribute. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HaasNSS95">
+VLDB 1995
+</a>
+: 311-322
+<dt>
+[Io93]
+<dd>
+<a name="Ioannidis93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+: Universality of Serial Histograms. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb93.html#Ioannidis93">
+VLDB 1993
+</a>
+: 256-267
+<dt>
+[IP95]
+<dd>
+<a name="IoannidisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+: Balancing Histogram Optimality and Practicality for Query Result Size Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 233-244
+<dt>
+[JKMPSS98]
+<dd>
+<a name="JagadishKMPSS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koudas:Nick.html">
+Nick Koudas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Muthukrishnan:S=.html">
+S. Muthukrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sevcik:Kenneth_C=.html">
+Kenneth C. Sevcik
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suel:Torsten.html">
+Torsten Suel
+</a>
+: Optimal Histograms with Quality Guarantees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#JagadishKMPSS98">
+VLDB 1998
+</a>
+: 275-286
+<dt>
+[Lim90]
+<dd>
+... 
+<dt>
+[MCS98]
+<dd>
+<a name="ManninoCS88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannino:Michael_V=.html">
+Michael V. Mannino
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chu:Paicheng.html">
+Paicheng Chu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sager:Thomas.html">
+Thomas Sager
+</a>
+: Statistical Profile Estimation in Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur20.html#ManninoCS88">
+Computing Surveys 20(3)
+</a>
+: 191-221(1988)
+<dt>
+[Nh94]
+<dd>
+<a name="NgH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+: Efficient and Effective Clustering Methods for Spatial Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#NgH94">
+VLDB 1994
+</a>
+: 144-155
+<dt>
+[PSTW93]
+<dd>
+<a name="PagelSTW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pagel:Bernd=Uwe.html">
+Bernd-Uwe Pagel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Six:Hans=Werner.html">
+Hans-Werner Six
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toben:Heinrich.html">
+Heinrich Toben
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widmayer:Peter.html">
+Peter Widmayer
+</a>
+: Towards an Analysis of Range Query Performance in Spatial Data Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods93.html#PagelSTW93">
+PODS 1993
+</a>
+: 214-221
+<dt>
+[PIHS96]
+<dd>
+<a name="PoosalaIHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Peter_J=.html">
+Peter J. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Improved Histograms for Selectivity Estimation of Range Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 294-305
+<dt>
+[PI97]
+<dd>
+<a name="PoosalaI97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Poosala:Viswanath.html">
+Viswanath Poosala
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ioannidis:Yannis_E=.html">
+Yannis E. Ioannidis
+</a>
+: Selectivity Estimation Without the Attribute Value Independence Assumption. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#PoosalaI97">
+VLDB 1997
+</a>
+: 486-495
+<dt>
+[RY90]
+<dd>
+... 
+<dt>
+[SCZ98]
+<dd>
+... 
+<dt>
+[SLRD93]
+<dd>
+<a name="SuLRD93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sun:Wei.html">
+Wei Sun
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ling:Yibei.html">
+Yibei Ling
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rishe:Naphtali.html">
+Naphtali Rishe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Deng:Yi.html">
+Yi Deng
+</a>
+: An Instant and Accurate Estimation Method for Joins and Selection in a Retrieval-Intensive Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 79-88
+<dt>
+[WKW94]
+<dd>
+<a name="WhangKW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Whang:Kyu=Young.html">
+Kyu-Young Whang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Sang=Wook.html">
+Sang-Wook Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Dynamic Maintenance of Data Distribution for Selectivity Estimation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb3.html#WhangKW94">
+VLDB Journal 3(1)
+</a>
+: 29-51(1994)
+<dt>
+[ZRL96]
+<dd>
+<a name="ZhangRL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhang:Tian.html">
+Tian Zhang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+: BIRCH: An Efficient Data Clustering Method for Very Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 103-114
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/LeeKC99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Ju-Hong&nbsp;Lee&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deok-Hwan&nbsp;Kim&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chin-Wan&nbsp;Chung},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Multi-dimensional&nbsp;Selectivity&nbsp;Estimation&nbsp;Using&nbsp;Compressed&nbsp;Histogram<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{205-214},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

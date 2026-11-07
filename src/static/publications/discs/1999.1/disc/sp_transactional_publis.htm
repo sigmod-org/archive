@@ -1,0 +1,71 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - SIGMOD Paper Index</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_sigmod_papers.htm"><img src="sb_sigmod_papers.gif" BORDER=0></a><br>
+<a href="m_pods_papers.htm"><img src="b_pods_papers.gif" BORDER=0></a><br>
+<a href="m_sigmod_demos.htm"><img src="b_sigmod_demos.gif" BORDER=0></a><br>
+<a href="m_sigmod_slides.htm"><img src="b_sigmod_slides.gif" BORDER=0></a><br>
+<a href="m_videos.htm"><img src="b_videos.gif" BORDER=0></a><br>
+<a href="m_sigmod_website.htm"><img src="b_sigmod_website.gif" BORDER=0></a><br>
+<a href="m_sigmod_workshops.htm"><img src="b_sigmod_workshops.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_7.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Transactional Publish / Subscribe: The Proactive Multicast of Database Changes</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_c.htm#Arvola Chan">Arvola Chan</a></center></td></tr></table></center><a target="disc_pdf82b" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><a target="disc_slides.86" href="sigmod_papers/slisp_transactional_publis/index.htm"><b><center>Slides (HTML)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+For many years, TIBCO (the Information Bus Company) has pioneered the use of Publish / Subscribe - a form of push technology - to build flexible, real-time, loosely-coupled distributed applications. Today, Publish / Subscribe is used by 300 of the world's largest financial institutions, deployed in 6 of the top 10 semiconductor manufacturer' factory floors, utilized in the implementation large-scale Internet services like Yahoo, Intuit, and ETrade, and chosen by many of the world's leading corporations as the enterprise infrastructure for integrating disparate applications. In this paper, we will: <br><br>     Contrast the Publish / Subscribe event-driven interaction paradigm against the traditional<br>     demand-driven request-reply interaction paradigm; <br>     Explain the concepts of subject-based addressing and self-describing messages, the<br>     cornerstones of Publish / Subscribe; <br>     Describe the scalable implementation of Publish / Subscribe via multicast and broadcast,<br>     and the proposed Pragmatic General Multicast Internet standard; and <br>     Categorize the qualities of service needed by different kinds of event-driven applications. <br><br> Today, TIBCO products support: <br><br>     Reliable delivery for front-office applications which require update notifications only while<br>     they are online; <br>     Guaranteed delivery for back-office applications that cannot afford to lose messages<br>     despite network and application failures; and <br>     Transactionally guaranteed delivery for those applications that must update databases,<br>     consume messages on one set of subjects, and publish messages on another set of<br>     subjects, all within properly bracketed atomic transactions. <br> The exactly-once delivery semantics for transactionally guaranteed delivery simplifies the implementation of back-office workflow applications by automating the common recovery logic. Three different implementations of transactional Publish / Subscribe can be found in: <br><br>     A generic, database independent implementation embodied in TIBCO's Enterprise<br>     Transaction Express (ETX) product. ETX optmizes two-phase commit for those<br>     applications that span a single database and the messaging system by using the last<br>     resource manager optimization. It also supports more complicated transactions by playing<br>     the role of an XA-compliant resource manager, leaving the transaction coordination to<br>     standard-based transaction monitors.<br>     An Informix Universal Server specific extension package called the TIBCO Message Blade.<br>     This extends the SQL language with TIBCO-provided User Defined Routines (UDRs) for<br>     synchronous Publish / Subscribe operations. In general, UDRs can be used inside stored<br>     procedures and triggers to publish and consume (potentially complex) structured<br>     messages. The need for two-phase commit is finessed by storing messages in the same<br>     database that houses application tables. <br>     A bidirectional bridge between Oracle 8's Advanced Queueing (AQ) facility and TIBCO's<br>     TIB/Rendezvous guaranteed message delivery implementation. Oracle AQ supports<br>     enqueue and dequeue operations to queues (actually implemented as Oracle tables) that<br>     can be performed as part of database transactions. The bridge dequeues from Oracle<br>     queues and republishes on the Information Bus. Converesly, the bridge subscribes to<br>     TIB/Rendezvous messages and enqueues them to Oracle queues for consumption by<br>     Oracle applications. Multiple bridges can be used to route AQ messages from one Oracle<br>     database to another. <br> </font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/sigmod/Chan98,<br>  author    = {Arvola Chan},<br>  editor    = {Laura M. Haas and<br>               Ashutosh Tiwary},<br>  title     = {Transactional Publish / Subscribe: The Proactive Multicast of<br>               Database Changes},<br>  booktitle = {SIGMOD 1998, Proceedings ACM SIGMOD International Conference<br>               on Management of Data, June 2-4, 1998, Seattle, Washington, USA},<br>  publisher = {ACM Press},<br>  year      = {1998},<br>  isbn      = {0-89791-955-5},<br>  pages     = {521},<br>  crossref  = {DBLP:conf/sigmod/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

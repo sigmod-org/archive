@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>WebDAV and DeltaV: The Writeable, Collaborative, Versionable Web</h1>
+<h2>Jim Whitehead</h2>
+<br>
+<h3>Description</h3>
+<p>
+At present, the Web is primarily a read-only medium, providing excellent
+support for browsing content, and limited support for authoring new content.
+WebDAV is a standard developed by the Internet Engineering Task Force (IETF)
+for extending the Web with collaborative authoring capability, and is
+supported by such industry-leading tools as Office 2000/XP, Photoshop 6,
+Illustrator 10, GoLive 5/6, Internet Explorer 5, Mac OS X, Apache, Internet
+Information Services 5/6, Oracle iFS, and Jigsaw, along with Web storage
+sites such as My Docs Online, and Sharemation. Building on this strong base
+of support, the DeltaV protocol adds versioning and configuration management
+capabilities to WebDAV servers. With DeltaV, it is possible to record the
+revision history of Web resources, work on collections of resources in
+isolation from other collaborators (workspaces), and create consistent
+configurations of these resources.
+</p>
+<p>
+This tutorial gives an overview of the WebDAV Distributed Authoring protocol
+(RFC 2518), and the DeltaV protocol for Web Versioning and Configuration
+Management protocol (RFC 3253). This is a novice-to-intermediate level
+tutorial, which assumes some knowledge about the hypertext transfer protocol
+(HTTP), although a brief overview of this protocol will be given during the
+course.
+</p>
+<p>
+Using the WebDAV and DeltaV protocols, existing HTML authoring applications,
+as well as more traditional word processing, spreadsheet, and image
+manipulation applications can support remote collaborative authoring and
+versioning. WebDAV-enabled applications can save directly to the web, and
+allow seamless transitions from individual to collaborative work. So, using
+a WebDAV-enabled word processor, you can begin work on a document, then
+later realize you need to add several co-authors. After saving your document
+to the web, and emailing the URL to your collaborators, you can all begin to
+collaboratively work on the document in-place on the web.
+</p>
+<p>
+Building upon its current strong base of supporting tools, in the next 1-2
+years WebDAV is expected to be broadly adopted by content authoring tools.
+This will bring the benefits of the writeable Web to millions of users,
+opening significant opportunities for Internet Service Providers, Web
+storage sites, document management, content authoring tools, protocol
+developers, and researchers. Furthermore, Web write-enabling existing
+applications is just the first phase of WebDAV adoption. DeltaV will allow
+the Web to be used as the core infrastructure for remote software
+development, especially Open Source, replacing the remote CVS protocol. With
+its automatic versioning capabilities, DeltaV also allows existing WebDAV
+authoring tools to take advantage of versioning-capable servers.
+</p>
+<p>
+WebDAV/DeltaV is one of the most substantial, yet under-hyped changes to the
+core architecture of the Web. By attending this tutorial, you will develop a
+deep understanding of the capabilities and potential of this increasingly
+important standard.
+</p>
+<h3>Presenter biography</h3>
+<p>
+Jim Whitehead is the Chair and Founder of the Internet Engineering Task
+Force (IETF) working group on Web Distributed Authoring and Versioning
+(WebDAV), and is a co-author on all major specifications produced by this
+working group. Jim additionally spearheaded the formation of the DeltaV
+working group for Web versioning and configuration management, and is an
+author on the DeltaV protocol specification. Jim has led several student
+teams developing prototype WebDAV implementations, including the WebDAV
+Explorer client, and a database-backed repository for Apache mod_dav.
+</p>
+<p>
+Jim is also an Assistant Professor of Computer Science at the University of
+California, Santa Cruz. His research interests include hypertext versioning,
+collaborative authoring, web protocols, open hypermedia (the Chimera
+system), and configuration management.. Jim has a Ph.D and MS in Information
+and Computer Science from U.C. Irvine (Ph.D. dissertation: "An Analysis of
+the Hypertext Versioning Domain"), and a BS in Electrical Engineering from
+the Rensselaer Polytechnic Institute.
+</p>
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>
+

@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>Guidelines for ICDM Conference Organizers</TITLE>
+
+<STYLE>
+
+<!--
+
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+
+</STYLE>
+
+</HEAD>
+
+<BODY bgColor=#ffffee>
+
+<CENTER>
+<br>
+<H1><FONT color=#0055ff>IEEE International Conference on
+<NOBR>Data Mining</NOBR></FONT></H1>
+
+<H3>Home Page: <a
+href="icdm.html">http://www.cs.uvm.edu/~xwu/icdm.html</a></H3>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif" WIDTH=100%><br>
+
+<H2>Guidelines for ICDM Conference
+Organizers</H2>
+
+</CENTER>
+
+<P class=body>
+NB: unless specified otherwise, "ICDM organizers" in this document
+mean the Program Chairs and Conference Chair of each year's ICDM
+conference.
+
+<OL>
+
+<LI> <P class=body> ICDM is held every year, in different regions of
+   the world, generally in November.
+
+<LI> <P class=body> The conference program of each year consists of
+   high-quality contributed papers on all aspects of data mining.
+   Original (previously unpublished) manuscripts on <A
+   href="Topics.shtml">various data mining related topics</a> are
+   solicited.
+
+<LI> <P class=body> Location decisions are made by the <A
+   href="Steering.shtml">ICDM Steering Committee</A>.  The Steering
+   Committee selects the Program Chair(s).
+
+<OL TYPE=a>
+   <LI> <P class=body> The Steering Committee encourages proposals for
+        location by teams vying to hold the ICDM conference.
+        Proposals for future years' ICDM conference will be discussed
+        at each ICDM conference.
+</OL>
+
+<LI> <P class=body> The organizers of each ICDM conference agree with
+   the Steering Committee's terms on conference publications and ICDM
+   Funds (if any).
+
+<LI> <P class=body> ICDM Program Chairs of each year are advised not
+   to submit any papers to ICDM in that particular year.
+
+<LI> <P class=body> ICDM Calls for Papers.
+
+<OL TYPE=a>
+   <LI> <P class=body> ICDM best paper awards will be conferred on the
+        author(s) of the best paper at each ICDM conference.  The
+        awards will be announced in the calls for papers.
+
+   <LI> <P class=body> A selected number of ICDM accepted papers will
+   be expanded and revised for possible inclusion in the KAIS journal
+   (<A href="http://www.cs.uvm.edu/~xwu/kais.html">Knowledge and
+   Information Systems</a>, by Springer-Verlag) each year.  This will
+   be mentioned in all calls for papers of the ICDM conference.
+
+   <LI> <P class=body> The membership of the Steering Committee will
+        be published in the calls for papers of ICDM conferences.
+
+   <LI> <P class=body> The Steering Committee should be consulted
+        before the call for papers of a forthcoming ICDM conference is
+        announced.
+</OL>
+
+<LI> <P class=body> ICDM Established Researchers in Data Mining and
+   Program Committee Formation.
+
+<OL TYPE=a>
+   <LI> <P class=body> For the long-term benefits of the ICDM
+        conference organization, the <A href="Steering.shtml">ICDM
+        Steering Committee</A> compiles a database of "Established
+        Researchers in Data Mining" at a password-protected website.
+        This database is used by the ICDM organizers each year to
+        invite suitable Program Committee members.  The database is
+        accessible to ICDM Steering Committee members only, but is
+        also accessible to each year's ICDM organizers for that
+        particular year.  <LI> <P class=body> An "Established
+        Researcher in Data Mining" is a data mining researcher in at
+        least one of the following 3 categories.
+
+     <OL TYPE=i>
+        <LI> <P class=body> Serves/has served on reputed data mining
+          related journals, such as
+
+<UL TYPE=SQUARE>
+ <LI> IEEE Transactions on Knowledge and Data Engineering
+ <LI> IEEE Transactions on Pattern Analysis and Machine
+             Intelligence
+ <LI> Data Mining and Knowledge Discovery
+ <LI> Knowledge and Information Systems
+ <LI> Data and Knowledge Engineering
+ <LI> Artificial Intelligence
+ <LI> Machine Learning
+ <LI> Computational Intelligence
+ <LI> Journal of Artificial Intelligence Research
+
+</UL>
+
+
+        <LI> <P class=body> Has served more than once on relevant
+          conference program committees, such as
+
+<UL TYPE=SQUARE>
+
+<LI> KDD/SIGKDD
+<LI> SIGMOD
+<LI> ICDE
+<LI> VLDB
+<LI> PODS
+<LI> IJCAI
+<LI> AAAI
+<LI> ICML
+
+</UL>
+
+
+         <LI> <P class=body> Has published more than once in the above
+           journals and conferences as a principal author.
+
+        </OL>
+
+   <LI> <P class=body> The database also contains (1) information
+        about who served on which year(s)' ICDM Program Committee, and
+        (2) comments from each year's Program Committee Chairs for
+        some of these established researchers if they
+
+<OL TYPE=i>
+        <li> were extremely helpful in paper reviews, or<BR>
+        <li> did not turn in any review reports
+</OL>
+
+   <LI> <P class=body> The Program Committee of each year must replace
+        at least one third of the previous year's Program Committee
+        members.
+
+   <LI> <P class=body> While PhD students and postdoctoral research
+        associates are encouraged to help with ICDM paper reviews
+        (generally with their advisors/supervisors), they are not
+        included in our database of established researchers, and
+        therefore are not good candidates for ICDM Program Committees.
+
+   <LI> <P class=body> Each year, the ICDM organizers are invited to
+        forward their nominations for additions to the database, but
+        before these nominations are approved (normally within 3 days)
+        by the Steering Committee, they are not eligible for
+        membership of the Program Committee.
+<OL TYPE=A>
+        <LI> <P class=body> Each nomination should include
+          <OL TYPE=i>
+               <LI> <P class=body> The candidate's name
+               <LI> <P class=body> The candidate's e-mail address
+
+               <LI> <P class=body> The candidate's home page on the
+               Web if applicable
+
+               <LI> <P class=body> Reasons the candidate is nominated
+          </OL>
+</OL>
+</OL>
+
+<LI> <P class=body> ICDM Paper Reviews and Selection.
+
+<OL TYPE=a>
+   <LI> <P class=body> ICDM encourages electronic submissions each
+        year. The paper list (preferably with abstracts) will be put
+        at a password-protected website after the submission deadline,
+        so that each Program Committee member has a chance to choose
+        their own preferences to review.
+
+   <LI> <P class=body> In the review form, the Program Committee
+        members/reviewers are asked to answer
+
+     <OL TYPE=i>
+        <LI><P class=body> whether the paper is recommended for the
+            best paper award, and 
+
+         <LI><P class=body> whether an extended version of the paper
+            is recommended for publication in the KAIS journal.
+     </OL>
+
+   <LI> <P class=body> ICDM encourages both applied and theoretical
+        research in data mining, and promotes high quality, novel and
+        daring research findings in every data mining area.  When
+        selecting ICDM papers, each year's ICDM organizers should
+        consider the balance of different research styles, such as
+        theory, methodology, algorithms, systems, integration, and
+        applications.
+
+      <OL TYPE=A>
+        <LI> <P class=body> Paper acceptance decisions (such as
+               acceptance rate, and the ratio between Regular Papers
+               and Posters/Short Papers) should be discussed with the
+               Steering Committee.
+      </OL>
+
+   <LI> <P class=body> Papers exploring new directions will receive a
+        careful and supportive review at ICDM conferences.
+</OL>
+
+<LI> <P class=body> Decisions on invited speakers should be discussed
+   with the Steering Committee.
+
+<LI> <P class=body> There are parallel sessions at ICDM conferences,
+    at least 2, but no more than 3.
+
+<LI> <P class=body> In addition to presentations of accepted papers
+    and invited talks, the organizers of each ICDM conference are also
+    encouraged to organize workshops, tutorials, and data mining
+    software/product demonstrations.
+
+<OL TYPE=a>
+
+<LI> <P class=body> Each year's ICDM organizers are encouraged to call
+    for or invite papers from distinguished researchers for a special
+    session on Emerging Data Mining Technology.
+</OL>
+
+</OL>
+
+<HR>
+
+Copyright &copy 2000-01 by ICDM Steering Committee (<a
+href="mailto:icdm@emba.uvm.edu">icdm@emba.uvm.edu</a>).<BR>
+
+Last modified:
+November 30, 2001.<br>
+
+</BODY>
+</HTML>

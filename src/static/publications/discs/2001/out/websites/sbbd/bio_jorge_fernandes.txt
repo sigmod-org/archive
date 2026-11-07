@@ -1,0 +1,8 @@
+Biografia - Jorge Henrique Cabral Fernandes
+
+Professor Assistente do Departamento de Informática e Matemática
+Aplicada da UFRN. Mestre em Engenharia de Software pelo Departamento de
+Informática da UFPE. Doutorando em Engenharia de Software pelo Centro de
+Informática da UFPE. Instrutor, desenvolvedor e consultor de sistemas em
+Java e na Web, desde 1995. Smalltalk Tester/Developer pela IBM Atlanta/USA.
+Várias aplicações de pequeno, médio e grande porte desenvolvidas em Java.

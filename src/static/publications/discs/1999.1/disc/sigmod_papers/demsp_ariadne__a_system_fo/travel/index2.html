@@ -1,0 +1,1008 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>ARIADNE DEMO</title>
+</head>
+<body text="#FFFFFF" bgcolor="#AACCFF">
+&nbsp;
+<center>
+<p><img SRC="logo.jpg" ><form 
+NAME=PREDICTOR
+METHOD=POST ENCTYPE="application/www-url-form-encoded"
+ACTION="https://www.sigmod.org/cl-http/tw/response.html"><!--
+ACTION="http://www.isi.edu/cgi-bin/modi/test.pl">
+--></center>
+
+<center><table BORDER=0 CELLSPACING=5 >
+<tr>
+<td VALIGN=TOP>
+<br>AIRLINE:
+<br><select NAME="AIRLINE"><!--
+<OPTION VALUE="ALASKA">ALASKA
+--><option VALUE="AMERICAN" selected>AMERICAN<option VALUE="AMERICA WEST">AMERICA
+WEST<option VALUE="CONTINENTAL">CONTINENTAL<option VALUE="DELTA">DELTA<option VALUE="NORTHWEST">NORTHWEST<option VALUE="SOUTHWEST">SOUTHWEST<option VALUE="TWA">TWA<option VALUE="UNITED">UNITED<option VALUE="USAIR">USAIR</select></td>
+
+<td>
+<center><input NAME="SEASON" TYPE="HIDDEN" VALUE="3"></center>
+</td>
+
+<td VALIGN=TOP>
+<br>TRAVELING DAY:
+<br><select NAME="TRAVEL_DAY"><option VALUE="Mon">MONDAY<option VALUE="Tue">TUESDAY<option VALUE="Wed">WEDNESDAY<option VALUE="Thu">THURSDAY<option VALUE="Fri">FRIDAY<option VALUE="Sat">SATURDAY<option VALUE="Sun">SUNDAY</select></td>
+
+<td>
+<center><!--
+<TD VALIGN="TOP">
+<BR>
+SEASON:
+<BR>
+<SELECT NAME="SEASON">
+<OPTION VALUE="1">WINTER
+<OPTION VALUE="2">SPRING
+<OPTION VALUE="3">SUMMER
+<OPTION VALUE="4">FALL
+</SELECT>
+</TD>
+<hr>
+--></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<br>DEPARTING AIRPORT:
+<br><select NAME="DEPART_CITY" SIZE=5><!--
+<OPTION VALUE="ABE-Allentown">ABE - Allentown, PA
+<OPTION VALUE="ABI-Abilene">ABI - Abilene, TX
+<OPTION VALUE="ABQ-Albuquerque">ABQ - Albuquerque, NM
+<OPTION VALUE="ABR-Aberdeen">ABR - Aberdeen, SD
+<OPTION VALUE="ABY-Albany">ABY - Albany, GA
+<OPTION VALUE="ACK-Nantucket">ACK - Nantucket, MA
+<OPTION VALUE="ACT-Waco">ACT - Waco, TX
+<OPTION VALUE="ACV-Eureka">ACV - Eureka/Arcata, CA
+<OPTION VALUE="ACY-Atlantic+City">ACY - Atlantic City, NJ
+<OPTION VALUE="ADQ-Kodiak">ADQ - Kodiak, AK
+<OPTION VALUE="AGS-Augusta">AGS - Augusta, GA
+<OPTION VALUE="AHN-Athens">AHN - Athens, GA
+<OPTION VALUE="AKN-King+Saloman">AKN - King Salomon, AK
+<OPTION VALUE="ALB-Albany">ALB - Albany/Schenectady/Troy, NY
+<OPTION VALUE="ALO-Waterloo">ALO - Waterloo, IA
+<OPTION VALUE="ALW-Walla+Walla">ALW - Walla Walla, WA
+<OPTION VALUE="AMA-Amarillo">AMA - Amarillo, TX
+<OPTION VALUE="ANB-Anniston">ANB - Anniston, AL
+<OPTION VALUE="ANC-Anchorage">ANC - Anchorage, AK
+<OPTION VALUE="AOO-Altoona">AOO - Altoona, PA
+<OPTION VALUE="APF-Naples">APF - Naples, FL
+<OPTION VALUE="ASE-Aspen">ASE - Aspen/Snowmass, CO
+<OPTION VALUE="ATL-Atlanta">ATL - Atlanta, GA
+<OPTION VALUE="ATW-Appelton">ATW - Appelton/Neenah/Menasha, WI
+<OPTION VALUE="ATY-Watertown">ATY - Watertown, SD
+<OPTION VALUE="AUG-Augusta">AUG - Augusta, ME
+<OPTION VALUE="AUS-Austin">AUS - Austin, TX
+<OPTION VALUE="AVL-Asheville">AVL - Asheville, NC
+<OPTION VALUE="AVP-Wilkes+Barre">AVP - Wilkes Barre/Scranton, PA
+<OPTION VALUE="AZO-Battle+Creek">AZO - Kalamazoo/Battle Creek, MI
+<OPTION VALUE="BCT-Boca+Raton">BCT - Boca Raton
+<OPTION VALUE="BDL-Harford">BDL - Hartford, CT/Springfield, MA
+<OPTION VALUE="BDR-Bridgeport">BDR - Bridgeport, CT
+<OPTION VALUE="BEH-Benton+Harbour">BEH - Benton Harbour, MI
+<OPTION VALUE="BET-Bethel">BET - Bethel, AK
+<OPTION VALUE="BFD-Bradford">BFD - Bradford/Warren, PA/Olean, NY
+<OPTION VALUE="BFL-Bakersfield">BFL - Bakersfield, CA
+<OPTION VALUE="BGM-Binghampton">BGM - Binghampton/Endicott/Johnson City, NY
+<OPTION VALUE="BGR-Bangor">BGR - Bangor, ME
+<OPTION VALUE="BHC-Bullhead+city">BHC - Bullhead City, AZ/Laughlin, NV
+<OPTION VALUE="BHM-Birmingham">BHM - Birmingham, AL
+<OPTION VALUE="BIL-Billings">BIL - Billings, MT
+<OPTION VALUE="BIS-Bismark">BIS - Bismarck/Mandan, ND
+<OPTION VALUE="BJI-Bemidji">BJI - Bemidji, MN
+<OPTION VALUE="BKL-Cleveland">BKL - Cleveland - Burke Lakefront, OH
+<OPTION VALUE="BKW-Beckley">BKW - Beckley, WV
+<OPTION VALUE="BKX-Brookings">BKX - Brookings, SD
+<OPTION VALUE="BLF-Bluefield">BLF - Bluefield, WV
+<OPTION VALUE="BLI-Bellingham">BLI - Bellingham, WA
+<OPTION VALUE="BMG">BMG - Bloomington, IN
+<OPTION VALUE="BMI">BMI - Bloomington, IL
+<OPTION VALUE="BNA">BNA - Nashville, TN
+<OPTION VALUE="BOI">BOI - Boise, ID
+<OPTION VALUE="BOS">BOS - Boston, MA
+<OPTION VALUE="BPT">BPT - Beaumont/Pt. Arthur, TX
+<OPTION VALUE="BQK">BQK - Brunswick/Sea Iceland, GA
+<OPTION VALUE="BRD">BRD - Brainerd, MN
+<OPTION VALUE="BRL">BRL - Burlington, IA
+<OPTION VALUE="BTM">BTM - Butte, MT
+<OPTION VALUE="BTR">BTR - Baton Rouge, LA
+<OPTION VALUE="BTV">BTV - Burlington, VT
+<OPTION VALUE="BUF">BUF - Buffalo/Niagara Falls, NY
+<OPTION VALUE="BUR">BUR - Burbank, CA
+<OPTION VALUE="BWI">BWI - Baltimore, MD
+<OPTION VALUE="BXS">BXS - Borrego Springs, CA
+<OPTION VALUE="BZN">BZN - Bozeman  MT
+<OPTION VALUE="CAE">CAE - Columbia, SC
+<OPTION VALUE="CAK">CAK - Akron/Canton, OH
+<OPTION VALUE="CCR">CCR - Concord, CA
+<OPTION VALUE="CDC">CDC - Cedar City, UT
+<OPTION VALUE="CDV">CDV - Cordova, AK
+<OPTION VALUE="CEC">CEC - Crescent City, CA
+<OPTION VALUE="CGA">CGA - Craig, AK
+<OPTION VALUE="CHA-Chattanooga">CHA - Chattanooga, TN
+<OPTION VALUE="CHO-Charlottesville">CHO - Charlottesville, VA
+<OPTION VALUE="CHS-Charleston">CHS - Charleston, SC
+<OPTION VALUE="CIC-Chico">CIC - Chico, CA
+<OPTION VALUE="CID-Cedar+Rapids">CID - Cedar Rapids, IA
+<OPTION VALUE="CKB">CKB - Clarksburg, WV
+<OPTION VALUE="CLD">CLD - Carlsbad, CA
+<OPTION VALUE="CLE">CLE - Cleveland - Hopkins International, OH
+<OPTION VALUE="CLL">CLL - College Station/Bryan, TX
+<OPTION VALUE="CLM">CLM - Port Angeles, WA
+<OPTION VALUE="CLT">CLT - Charlotte, NC
+<OPTION VALUE="CMH">CMH - Columbus, OH
+<OPTION VALUE="CMI">CMI - Champaign, IL
+<OPTION VALUE="CMX">CMX - Hancock  MI
+<OPTION VALUE="COD">COD - Cody/Powell/Yellowstone, WY
+<OPTION VALUE="COS">COS - Colorado Springs, CO
+<OPTION VALUE="CPR">CPR - Casper, WY
+<OPTION VALUE="CRP">CRP - Corpus Christi, TX
+<OPTION VALUE="CRW">CRW - Charleston, WV
+<OPTION VALUE="CSG">CSG - Columbus, GA
+<OPTION VALUE="CVG">CVG - Cincinnati, OH
+<OPTION VALUE="CWA">CWA - Wausau/Stevens Point, WI
+<OPTION VALUE="DAB">DAB - Daytona Beach, FL
+<OPTION VALUE="DAL">DAL - Dallas - Love Field, TX
+<OPTION VALUE="DAN">DAN - Danville, VA
+<OPTION VALUE="DAY">DAY - Dayton, OH
+<OPTION VALUE="DBQ">DBQ - Dubuque, IA
+<OPTION VALUE="DCA">DCA - Washington - National, DC
+<OPTION VALUE="DEC">DEC - Decatur, IL
+<OPTION VALUE="DEN">DEN - Denver, CO
+<OPTION VALUE="DET">DET - Detroit - City Airport, MI
+<OPTION VALUE="DFW">DFW - Dallas/Ft. Worth, TX
+<OPTION VALUE="DHN">DHN - Dothan, AL
+<OPTION VALUE="DLG">DLG - Dillingham, AK
+<OPTION VALUE="DLH">DLH - Duluth, MN/Superior, WI
+<OPTION VALUE="DRO">DRO - Durango/Purgatory, CO
+<OPTION VALUE="DSM">DSM - Des Moines, IA
+<OPTION VALUE="DTT">DTT - Detroit, MI
+<OPTION VALUE="DTW">DTW - Detroit - Metropolitan (Metro), MI
+<OPTION VALUE="DUJ">DUJ - Dubois, PA
+<OPTION VALUE="DUT">DUT - Dutch Harbor, AK
+<OPTION VALUE="DVL">DVL - Devils Lake, ND
+<OPTION VALUE="EAT">EAT - Wenatchee, WA
+<OPTION VALUE="EAU">EAU - Eau Clarie, WI
+<OPTION VALUE="EGE">EGE - Vail, CO
+<OPTION VALUE="EKI">EKI - Elkhart, IN
+<OPTION VALUE="EKO">EKO - Elko, NV
+<OPTION VALUE="ELM">ELM - Elmira/Corning, NY
+<OPTION VALUE="ELP">ELP - El Paso, TX
+<OPTION VALUE="ELY">ELY - Ely, NV
+<OPTION VALUE="ENA">ENA - Kenai, AK
+<OPTION VALUE="ERI">ERI - Erie, PA
+<OPTION VALUE="ESC">ESC - Escabana, MI
+<OPTION VALUE="ESF">ESF - Alexandria, LA
+<OPTION VALUE="EUG">EUG - Eugene, OR
+<OPTION VALUE="EVV">EVV - Evansville, IN
+<OPTION VALUE="EWN">EWN - New Bern, NC
+<OPTION VALUE="EWR">EWR - New York - Newark, NJ
+<OPTION VALUE="EYW">EYW - Key West, FL
+<OPTION VALUE="FAI">FAI - Fairbanks, AK
+<OPTION VALUE="FAR">FAR - Fargo, ND/Moorhead, MN
+<OPTION VALUE="FAT">FAT - Fresno, CA
+<OPTION VALUE="FAY">FAY - Fayetteville/Ft. Bragg, NC
+<OPTION VALUE="FCA">FCA - Kalispell, MT
+<OPTION VALUE="FHU">FHU - Fort Huachuca/Sierra Vista, AZ
+<OPTION VALUE="FKL">FKL - Franklin/Oil City, PA
+<OPTION VALUE="FLG">FLG - Flagstaff, AZ
+<OPTION VALUE="FLL">FLL - Fort Lauderdale/Hollywood, FL
+<OPTION VALUE="FLO">FLO - Florence, SC
+<OPTION VALUE="FMN">FMN - Farmington, NM
+<OPTION VALUE="FMY">FMY - Fort Myers, FL
+<OPTION VALUE="FNT">FNT - Flint, MI
+<OPTION VALUE="FOD">FOD - Fort Dodge, IA
+<OPTION VALUE="FSD">FSD - Sioux Falls, SD
+<OPTION VALUE="FSM">FSM - Fort Smith, AR
+<OPTION VALUE="FWA">FWA - Fort Wayne, IN
+<OPTION VALUE="FYV">FYV - Fayetteville, AR
+<OPTION VALUE="GAD">GAD - Gadsden, AL
+<OPTION VALUE="GCC">GCC - Gilette, WY
+<OPTION VALUE="GCN">GCN - Grand Canyon, AZ
+<OPTION VALUE="GDV">GDV - Glendive, MT
+<OPTION VALUE="GEG">GEG - Spokane, WA
+<OPTION VALUE="GFK">GFK - Grand Forks, ND
+<OPTION VALUE="GGG">GGG - Longview/Kilgore, TX
+<OPTION VALUE="GGW">GGW - Glasgow, MT
+<OPTION VALUE="GJT">GJT - Grand Junction, CO
+<OPTION VALUE="GLH">GLH - Greenville, MS
+<OPTION VALUE="GNV">GNV - Gainesville, FL
+<OPTION VALUE="GON">GON - Groton/New London, CT
+<OPTION VALUE="GPT">GPT - Gulfport/Biloxi, MS
+<OPTION VALUE="GPZ">GPZ - Grand Rapids, MN
+<OPTION VALUE="GRB">GRB - Green Bay, WI
+<OPTION VALUE="GRR">GRR - Grand Rapids, MI
+<OPTION VALUE="GSO">GSO - Greensboro/High Point/Winston Salem, NC
+<OPTION VALUE="GSP">GSP - Greenville/Spartanburg, SC
+<OPTION VALUE="GTF">GTF - Great Falls, MT
+<OPTION VALUE="GTR">GTR - Columbus/Starkville/West Point, MS
+<OPTION VALUE="GUC">GUC - Gunnison/Crested Butte, CO
+<OPTION VALUE="HAR">HAR - Harrisburg, PA
+<OPTION VALUE="HDN">HDN - Steamboat Springs, CO
+<OPTION VALUE="HGR">HGR - Hagerstown, MD/Martinsburg, WV
+<OPTION VALUE="HHH">HHH - Hilton Head Island, SC
+<OPTION VALUE="HIB">HIB - Hibbing, MN
+<OPTION VALUE="HKY">HKY - Hickory, NC
+<OPTION VALUE="HLN">HLN - Helena, MT
+<OPTION VALUE="HNH">HNH - Hoonah, AK
+<OPTION VALUE="HNL">HNL - Honolulu, HI
+<OPTION VALUE="HNS">HNS - Haines, AK
+<OPTION VALUE="HOM">HOM - Homer, AK
+<OPTION VALUE="HON">HON - Huron, SD
+<OPTION VALUE="HOU">HOU - Houston - Hobby, TX
+<OPTION VALUE="HPN">HPN - White Plains, NY
+<OPTION VALUE="HRL">HRL - Harlington/South Padre Island, TX
+<OPTION VALUE="HSV">HSV - Huntsville/Decatur, AL
+<OPTION VALUE="HTS">HTS - Huntington, WV/Ashland, KY/Ironton, OH
+<OPTION VALUE="HUF">HUF - Terre Haute, IN
+<OPTION VALUE="HVN">HVN - New Haven, CT
+<OPTION VALUE="HVR">HVR - Havre, MT
+<OPTION VALUE="HYA">HYA - Hyannis, MA
+<OPTION VALUE="HYG">HYG - Hydaburg, AK
+<OPTION VALUE="IAD">IAD - Washington - Dulles International, DC
+<OPTION VALUE="IAH">IAH - Houston - Intercontinental, TX
+<OPTION VALUE="ICT">ICT - Wichita, KS
+<OPTION VALUE="IDA">IDA - Idaho Falls, ID
+<OPTION VALUE="ILE">ILE - Killeem, TX
+<OPTION VALUE="ILI">ILI - Iliamna, AK
+<OPTION VALUE="ILM">ILM - Wilmington, NC
+<OPTION VALUE="IND">IND - Indianapolis, IN
+<OPTION VALUE="INL">INL - International Falls, MN
+<OPTION VALUE="INT">INT - Greensboro/High Point/Winston Salem, NC
+<OPTION VALUE="IPL">IPL - Imperial, CA
+<OPTION VALUE="IPT">IPT - Williamsport, PA
+<OPTION VALUE="ISL">ISL - Williston, ND
+<OPTION VALUE="ISO">ISO - Kingston, NC
+<OPTION VALUE="ISP">ISP - Long Island/Mac Arthur/Islip, NY
+<OPTION VALUE="ITH">ITH - Ithaca/Cortland, NY
+<OPTION VALUE="ITO">ITO - Hilo, HI
+<OPTION VALUE="IYK">IYK - Inykern, CA
+<OPTION VALUE="JAC">JAC - Jackson Hole, WY
+<OPTION VALUE="JAN">JAN - Jackson, MS
+<OPTION VALUE="JAX">JAX - Jacksonville, FL
+<OPTION VALUE="JFK">JFK - New York - John F. Kennedy, NY
+<OPTION VALUE="JHM">JHM - Kapalua West, HI
+<OPTION VALUE="JHW">JHW - Jamestown, NY
+<OPTION VALUE="JLN">JLN - Joplin, MO
+<OPTION VALUE="JMS">JMS - Jamestown, ND
+<OPTION VALUE="JNU">JNU - Juneau, AK
+<OPTION VALUE="JST">JST - Johnstown, PA
+<OPTION VALUE="JXN">JXN - Jackson, MI
+<OPTION VALUE="KCC">KCC - Coffmann Cove, AK
+<OPTION VALUE="KLW">KLW - Klawock, AK
+<OPTION VALUE="KOA">KOA - Kona, HI
+<OPTION VALUE="KTB">KTB - Thorne Bay, AK
+<OPTION VALUE="KTN">KTN - Ketchikan, AK
+<OPTION VALUE="LAF">LAF - Lafayette, IN
+<OPTION VALUE="LAN">LAN - Lansing, MI
+<OPTION VALUE="LAR">LAR - Laramie, WY
+<OPTION VALUE="LAS">LAS - Las Vegas, NV
+<OPTION VALUE="LAW">LAW - Lawton, OK
+--><option VALUE="LAX-los+angeles">LAX
+- Los Angeles, CA<!--
+<OPTION VALUE="LBB">LBB - Lubbock, TX
+<OPTION VALUE="LBE">LBE - Latrobe, PA
+<OPTION VALUE="LCH">LCH - Lake Charles, LA
+<OPTION VALUE="LEB">LEB - Lebanon, NH
+<OPTION VALUE="LEX">LEX - Lexington, KY
+<OPTION VALUE="LFT">LFT - Lafayette, LA
+<OPTION VALUE="LGA">LGA - New York - La Guardia, NY
+<OPTION VALUE="LGB">LGB - Long Beach, CA
+<OPTION VALUE="LHU">LHU - Lake Havasu City, AZ
+<OPTION VALUE="LIH">LIH - Lihue, HI
+<OPTION VALUE="LIJ">LIJ - Long Island, AK
+<OPTION VALUE="LIT">LIT - Little Rock, AR
+<OPTION VALUE="LMT">LMT - Klamath Fall, OR
+<OPTION VALUE="LNK">LNK - Lincoln, NE
+<OPTION VALUE="LNS">LNS - Lancaster, PA
+<OPTION VALUE="LNY">LNY - Lanai City, HI
+<OPTION VALUE="LRD">LRD - Laredo, TX
+<OPTION VALUE="LSE">LSE - La Crosse, WI
+<OPTION VALUE="LWB">LWB - Greenbrier/Lewisburg, WV
+<OPTION VALUE="LWS">LWS - Lewiston, ID
+<OPTION VALUE="LWT">LWT - Lewistown, MT
+<OPTION VALUE="LYH">LYH - Lynchburg, VA
+<OPTION VALUE="MAF">MAF - Midland/Odessa, TX
+<OPTION VALUE="MBS">MBS - Saginaw/Bay City/Midland, MI
+<OPTION VALUE="MCE">MCE - Merced, CA
+<OPTION VALUE="MCI">MCI - Kansas City, MO
+<OPTION VALUE="MCL">MCL - Mt. McKinley, AK
+<OPTION VALUE="MCN">MCN - Macon, GA
+<OPTION VALUE="MCO">MCO - Orlando, FL
+<OPTION VALUE="MCW">MCW - Mason City, IA
+<OPTION VALUE="MDT">MDT - Harrisburg, PA
+<OPTION VALUE="MDW">MDW - Chicago - Midway, IL
+<OPTION VALUE="MEI">MEI - Meridian, MS
+<OPTION VALUE="MEM">MEM - Memphis, TN
+<OPTION VALUE="MFE">MFE - McAllen, TX
+<OPTION VALUE="MFR">MFR - Medford, OR
+<OPTION VALUE="MGM">MGM - Montgomery, AL
+<OPTION VALUE="MGW">MGW - Morgantown, WV
+<OPTION VALUE="MHE">MHE - Mitchell, SD
+<OPTION VALUE="MHT">MHT - Manchester, NH
+<OPTION VALUE="MIA">MIA - Miami, FL
+<OPTION VALUE="MKE">MKE - Milwaukee, WI
+<OPTION VALUE="MKG">MKG - Muskegon, MI
+<OPTION VALUE="MKK">MKK - Kaunakakai, HI
+<OPTION VALUE="MKL">MKL - Jackson, TN
+<OPTION VALUE="MLB">MLB - Melbourne, FL
+<OPTION VALUE="MLI">MLI - Moline/Quad Cities, IL
+<OPTION VALUE="MLS">MLS - Miles City, MT
+<OPTION VALUE="MLU">MLU - Monroe, LA
+<OPTION VALUE="MOB">MOB - Mobile, AL/Pascagoula, MS
+<OPTION VALUE="MOD">MOD - Modesto, CA
+<OPTION VALUE="MOT">MOT - Minot, ND
+<OPTION VALUE="MQT">MQT - Marquette, MI
+<OPTION VALUE="MRY">MRY - Monterey, CA
+<OPTION VALUE="MSL">MSL - Muscle Shoals, AL
+--><option VALUE="MSN-Madison">MSN
+- Madison, WI&nbsp;<!--
+<OPTION VALUE="MSO">MSO - Missula, MT
+<OPTION VALUE="MSP">MSP - Minneapolis/St. Paul, MN
+<OPTION VALUE="MSY">MSY - New Orelans, LA
+<OPTION VALUE="MTH">MTH - Marathon, FL
+<OPTION VALUE="MTJ">MTJ - Montrose/Tellruide, CO
+<OPTION VALUE="MTM">MTM - Metlakatla, AK
+<OPTION VALUE="MTO">MTO - Mattoon, IL
+<OPTION VALUE="MVY">MVY - Martha's Vineyard, MA
+<OPTION VALUE="MWH">MWH - Moses Lake, WA
+<OPTION VALUE="MYR">MYR - Myrtle Beach, SC
+
+<OPTION VALUE="NYC-New+york">NYC - New York, NY
+
+<OPTION VALUE="OAJ">OAJ - Jacksonville, NC
+<OPTION VALUE="OAK">OAK - Oakland, CA
+<OPTION VALUE="OGG">OGG - Kahului, HI
+<OPTION VALUE="OKC">OKC - Oklahoma City, OK
+<OPTION VALUE="OLF">OLF - Wolf Point, MT
+<OPTION VALUE="OMA">OMA - Omaha, NE
+<OPTION VALUE="OME">OME - Nome, AK
+<OPTION VALUE="ONT">ONT - Ontario, CA
+--><option VALUE="ORD-Chicago">ORD
+- Chicago - O'Hare, IL<!--
+<OPTION VALUE="ORF">ORF - Norfolk/Virginia Beach/Williamsburg, VA
+<OPTION VALUE="ORH">ORH - Worcester, MA
+--><option VALUE="ORL-orlando">ORL
+- Orlando, FL&nbsp;<!--
+<OPTION VALUE="OSH">OSH - Oshkosh, WI
+<OPTION VALUE="OTH">OTH - North Bend, OR
+<OPTION VALUE="OTZ">OTZ - Kotzbue, AK
+<OPTION VALUE="OWB">OWB - Owensboro, KY
+<OPTION VALUE="OXR">OXR - Oxnard, CA
+<OPTION VALUE="PAH">PAH - Paducah, KY
+<OPTION VALUE="PBI">PBI - West Palm Beach, FL
+<OPTION VALUE="PDT">PDT - Pendelton, OR
+<OPTION VALUE="PDX">PDX - Portland, OR
+<OPTION VALUE="PFN">PFN - Panama City, FL
+<OPTION VALUE="PGA">PGA - Page/Lake Powell, AZ
+<OPTION VALUE="PGV">PGV - Greenville, NC
+<OPTION VALUE="PHF">PHF - Newport News/Williamsburg, VA
+--><option VALUE="PHL-Philadelphia">PHL
+- Philadelphia, PA&nbsp;<!--
+<OPTION VALUE="PHX">PHX - Phoenix, AZ
+<OPTION VALUE="PIA">PIA - Peoria/Bloomington, IL
+<OPTION VALUE="PIB">PIB - Laurel/Hattisburg, MS
+<OPTION VALUE="PIH">PIH - Pocatello, ID
+<OPTION VALUE="PIR">PIR - Pierre, SD
+--><option VALUE="PIT-pittsburgh" selected>PIT
+- Pittsburgh, PA&nbsp;<!--
+<OPTION VALUE="PKB">PKB - Pakersburg. WV/Marietta, OH
+<OPTION VALUE="PLB">PLB - Plattsburgh, NY
+<OPTION VALUE="PLN">PLN - Pellston, MI
+<OPTION VALUE="PMD">PMD - Palmdale/Lancaster, CA
+<OPTION VALUE="PNS">PNS - Pensacola, FL
+<OPTION VALUE="POU">POU - Poughkeepsie, NY
+<OPTION VALUE="PQI">PQI - Presque Island, ME
+<OPTION VALUE="PSC">PSC - Pasco, WA
+<OPTION VALUE="PSG">PSG - Petersburg, AK
+<OPTION VALUE="PSP">PSP - Palm Springs, CA
+<OPTION VALUE="PUB">PUB - Pueblo, CO
+<OPTION VALUE="PUW">PUW - Pullman, WA
+<OPTION VALUE="PVD">PVD - Providence, RI
+<OPTION VALUE="PWM">PWM - Portland, ME
+<OPTION VALUE="RAP">RAP - Rapid City, SD
+<OPTION VALUE="RDD">RDD - Redding, CA
+<OPTION VALUE="RDG">RDG - Reading, PA
+<OPTION VALUE="RDM">RDM - Redmond, OR
+<OPTION VALUE="RDU">RDU - Raleigh/Durham, NC
+<OPTION VALUE="RFD">RFD - Rockford, IL
+<OPTION VALUE="RHI">RHI - Rhinelander, WI
+<OPTION VALUE="RIC">RIC - Richmond, VA
+<OPTION VALUE="RKD">RKD - Rockland, ME
+<OPTION VALUE="RKS">RKS - Rock Springs, WY
+<OPTION VALUE="RNO">RNO - Reno, NV
+<OPTION VALUE="ROA">ROA - Roanoke, VA
+<OPTION VALUE="ROC">ROC - Rochester, NY
+<OPTION VALUE="RST">RST - Rochester, MN
+<OPTION VALUE="RSW">RSW - Fort Myers, FL
+<OPTION VALUE="RWI">RWI - Rocky Mount/Wilson, NC
+<OPTION VALUE="SAN">SAN - San Diego, CA
+<OPTION VALUE="SAT">SAT - San Antonio, TX
+<OPTION VALUE="SAV">SAV - Savannah, GA
+<OPTION VALUE="SBA">SBA - Santa Barbara, CA
+<OPTION VALUE="SBN">SBN - South Bend, IN
+<OPTION VALUE="SBP">SBP - San Luis Obisco, CA
+<OPTION VALUE="SBY">SBY - Salisbury, MD
+<OPTION VALUE="SCC">SCC - Prudhoe Bay, AK
+<OPTION VALUE="SCE">SCE - State College/Belefonte, PA
+<OPTION VALUE="SCF">SCF - Scottsdale, AZ
+<OPTION VALUE="SCK">SCK - Stockton, CA
+<OPTION VALUE="SDF">SDF - Louisville, KY
+<OPTION VALUE="SDY">SDY - Sidney, MT
+<OPTION VALUE="SEA">SEA - Seattle/Tacoma, WA
+--><option VALUE="SFO-San+Francisco">SFO
+- San Francisco, SA&nbsp;<!--
+<OPTION VALUE="SGF">SGF - Springfield, MO
+<OPTION VALUE="SGU">SGU - St. George, UT
+<OPTION VALUE="SGY">SGY - Skagway, AK
+<OPTION VALUE="SHD">SHD - Shenandoah Valley/Stauton, VA
+<OPTION VALUE="SHR">SHR - Sheridan, WY
+<OPTION VALUE="SHV">SHV - Shreveport, LA
+<OPTION VALUE="SIT">SIT - Sitka, AK
+<OPTION VALUE="SJC">SJC - San Jose, CA
+<OPTION VALUE="SJT">SJT - San Angelo, TX
+<OPTION VALUE="SLC">SLC - Salt Lake City, UT
+<OPTION VALUE="SLE">SLE - Salem, OR
+<OPTION VALUE="SMF">SMF - Sacramento, CA
+<OPTION VALUE="SMX">SMX - Santa Maria, CA
+<OPTION VALUE="SNA">SNA - Orange County (Santa Ana), CA
+<OPTION VALUE="SPI">SPI - Springfield, IL
+<OPTION VALUE="SPS">SPS - Wichita Falls, TX
+<OPTION VALUE="SRQ">SRQ - Sarasota/Bradenton, FL
+<OPTION VALUE="STL">STL - St. Louis, MO
+<OPTION VALUE="STS">STS - Santa Rosa, CA
+<OPTION VALUE="SUN">SUN - Sun Valley, ID
+<OPTION VALUE="SUX">SUX - Sioux City, IA
+<OPTION VALUE="SWF">SWF - Newburgh, NY
+<OPTION VALUE="SYR">SYR - Syracuse, NY
+<OPTION VALUE="TCL">TCL - Tuscaloosa, AL
+<OPTION VALUE="TEX">TEX - Telluride, CO
+<OPTION VALUE="TKA">TKA - Talkeetna, AK
+<OPTION VALUE="TLH">TLH - Tallahassee, FL
+<OPTION VALUE="TOL">TOL - Toledo, OH
+<OPTION VALUE="TPA">TPA - Tampa/St. Petersburg/Clearwater, FL
+<OPTION VALUE="TRI">TRI - Tri City Airport, TN
+<OPTION VALUE="TTN">TTN - Trenton/Princeton, NJ
+<OPTION VALUE="TUL">TUL - Tulsa, OK
+<OPTION VALUE="TUP">TUP - Tulepo, MS
+<OPTION VALUE="TUS">TUS - Tuscon, AZ
+<OPTION VALUE="TVC">TVC - Traverse City, MI
+<OPTION VALUE="TVF">TVF - Thief River Falls, MN
+<OPTION VALUE="TVL">TVL - Lake Tahoe, CA
+<OPTION VALUE="TWF">TWF - Twin Falls, ID
+<OPTION VALUE="TXK">TXK - Texarkana, AR
+<OPTION VALUE="TYR">TYR - Tyler, TX
+<OPTION VALUE="TYS">TYS - Knoxville, TN
+<OPTION VALUE="UCA">UCA - Utica, NY
+<OPTION VALUE="UIN">UIN - Quincy, IL
+<OPTION VALUE="VDZ">VDZ - Valdez, AK
+<OPTION VALUE="VEL">VEL - Vernal, UT
+<OPTION VALUE="VIS">VIS - Visalia, CA
+<OPTION VALUE="VLD">VLD - Valdosta, GA
+<OPTION VALUE="VPS">VPS - Fort Walton Beach, FL
+<OPTION VALUE="VRB">VRB - Vero Beach/Ft. Pierce, FL
+<OPTION VALUE="WAS">WAS - Washington, DC
+<OPTION VALUE="WLB">WLB - Labouchere Bay, AK
+<OPTION VALUE="WRG">WRG - Wrangell, AK
+<OPTION VALUE="WRL">WRL - Worland, WY
+<OPTION VALUE="WYS">WYS - West Yellowstone, MT
+<OPTION VALUE="YAK">YAK - Yakutat, AK
+<OPTION VALUE="YKM">YKM - Yakima, WA
+<OPTION VALUE="YNG">YNG - Youngstown/Warren, OH/Sharon, PA
+<OPTION VALUE="YUM">YUM - Yuma, AZ
+--></select></td>
+
+<td VALIGN=TOP>
+<br>DEPARTING TIME:
+<br><select NAME="DEPART_HOUR"><option VALUE=6>6:00 AM<option VALUE=7>7:00
+AM<option VALUE=8>8:00 AM<option VALUE=9 selected>9:00 AM<option VALUE=10>10:00
+AM<option VALUE=11>11:00 AM<option VALUE=12>12:00 PM<option VALUE=13>1:00
+PM<option VALUE=14>2:00 PM<option VALUE=15>3:00 PM<option VALUE=16>4:00
+PM<option VALUE=17>5:00 PM<option VALUE=18>6:00 PM<option VALUE=19>7:00
+PM<option VALUE=20>8:00 PM<option VALUE=21>9:00 PM<option VALUE=22>10:00
+PM<option VALUE=23>11:00 PM<option VALUE=0>12:00 AM<option VALUE=1>1:00
+AM<option VALUE=2>2:00 AM<option VALUE=3>3:00 AM<option VALUE=4>4:00 AM<option VALUE=5>5:00
+AM</select></td>
+</tr>
+
+<tr>
+<td>
+<br>ARRIVING AIRPORT:
+<br><select NAME="ARRIVE_CITY" SIZE=5><!--
+<OPTION VALUE="ABE-Allentown">ABE - Allentown, PA
+<OPTION VALUE="ABI-Abilene">ABI - Abilene, TX
+<OPTION VALUE="ABQ-Albuquerque">ABQ - Albuquerque, NM
+<OPTION VALUE="ABR-Aberdeen">ABR - Aberdeen, SD
+<OPTION VALUE="ABY-Albany">ABY - Albany, GA
+<OPTION VALUE="ACK-Nantucket">ACK - Nantucket, MA
+<OPTION VALUE="ACT-Waco">ACT - Waco, TX
+<OPTION VALUE="ACV-Eureka">ACV - Eureka/Arcata, CA
+<OPTION VALUE="ACY-Atlantic+City">ACY - Atlantic City, NJ
+<OPTION VALUE="ADQ-Kodiak">ADQ - Kodiak, AK
+<OPTION VALUE="AGS-Augusta">AGS - Augusta, GA
+<OPTION VALUE="AHN-Athens">AHN - Athens, GA
+<OPTION VALUE="AKN-King+Saloman">AKN - King Salomon, AK
+<OPTION VALUE="ALB-Albany">ALB - Albany/Schenectady/Troy, NY
+<OPTION VALUE="ALO-Waterloo">ALO - Waterloo, IA
+<OPTION VALUE="ALW-Walla+Walla">ALW - Walla Walla, WA
+<OPTION VALUE="AMA-Amarillo">AMA - Amarillo, TX
+<OPTION VALUE="ANB-Anniston">ANB - Anniston, AL
+<OPTION VALUE="ANC-Anchorage">ANC - Anchorage, AK
+<OPTION VALUE="AOO-Altoona">AOO - Altoona, PA
+<OPTION VALUE="APF-Naples">APF - Naples, FL
+<OPTION VALUE="ASE-Aspen">ASE - Aspen/Snowmass, CO
+<OPTION VALUE="ATL-Atlanta">ATL - Atlanta, GA
+<OPTION VALUE="ATW-Appelton">ATW - Appelton/Neenah/Menasha, WI
+<OPTION VALUE="ATY-Watertown">ATY - Watertown, SD
+<OPTION VALUE="AUG-Augusta">AUG - Augusta, ME
+<OPTION VALUE="AUS-Austin">AUS - Austin, TX
+<OPTION VALUE="AVL-Asheville">AVL - Asheville, NC
+<OPTION VALUE="AVP-Wilkes+Barre">AVP - Wilkes Barre/Scranton, PA
+<OPTION VALUE="AZO-Battle+Creek">AZO - Kalamazoo/Battle Creek, MI
+<OPTION VALUE="BCT-Boca+Raton">BCT - Boca Raton
+<OPTION VALUE="BDL-Harford">BDL - Hartford, CT/Springfield, MA
+<OPTION VALUE="BDR-Bridgeport">BDR - Bridgeport, CT
+<OPTION VALUE="BEH-Benton+Harbour">BEH - Benton Harbour, MI
+<OPTION VALUE="BET-Bethel">BET - Bethel, AK
+<OPTION VALUE="BFD-Bradford">BFD - Bradford/Warren, PA/Olean, NY
+<OPTION VALUE="BFL-Bakersfield">BFL - Bakersfield, CA
+<OPTION VALUE="BGM-Binghampton">BGM - Binghampton/Endicott/Johnson City, NY
+<OPTION VALUE="BGR-Bangor">BGR - Bangor, ME
+<OPTION VALUE="BHC-Bullhead+city">BHC - Bullhead City, AZ/Laughlin, NV
+<OPTION VALUE="BHM-Birmingham">BHM - Birmingham, AL
+<OPTION VALUE="BIL-Billings">BIL - Billings, MT
+<OPTION VALUE="BIS-Bismark">BIS - Bismarck/Mandan, ND
+<OPTION VALUE="BJI-Bemidji">BJI - Bemidji, MN
+<OPTION VALUE="BKL-Cleveland">BKL - Cleveland - Burke Lakefront, OH
+<OPTION VALUE="BKW-Beckley">BKW - Beckley, WV
+<OPTION VALUE="BKX-Brookings">BKX - Brookings, SD
+<OPTION VALUE="BLF-Bluefield">BLF - Bluefield, WV
+<OPTION VALUE="BLI-Bellingham">BLI - Bellingham, WA
+<OPTION VALUE="BMG">BMG - Bloomington, IN
+<OPTION VALUE="BMI">BMI - Bloomington, IL
+<OPTION VALUE="BNA">BNA - Nashville, TN
+<OPTION VALUE="BOI">BOI - Boise, ID
+<OPTION VALUE="BOS">BOS - Boston, MA
+<OPTION VALUE="BPT">BPT - Beaumont/Pt. Arthur, TX
+<OPTION VALUE="BQK">BQK - Brunswick/Sea Iceland, GA
+<OPTION VALUE="BRD">BRD - Brainerd, MN
+<OPTION VALUE="BRL">BRL - Burlington, IA
+<OPTION VALUE="BTM">BTM - Butte, MT
+<OPTION VALUE="BTR">BTR - Baton Rouge, LA
+<OPTION VALUE="BTV">BTV - Burlington, VT
+<OPTION VALUE="BUF">BUF - Buffalo/Niagara Falls, NY
+<OPTION VALUE="BUR">BUR - Burbank, CA
+<OPTION VALUE="BWI">BWI - Baltimore, MD
+<OPTION VALUE="BXS">BXS - Borrego Springs, CA
+<OPTION VALUE="BZN">BZN - Bozeman  MT
+<OPTION VALUE="CAE">CAE - Columbia, SC
+<OPTION VALUE="CAK">CAK - Akron/Canton, OH
+<OPTION VALUE="CCR">CCR - Concord, CA
+<OPTION VALUE="CDC">CDC - Cedar City, UT
+<OPTION VALUE="CDV">CDV - Cordova, AK
+<OPTION VALUE="CEC">CEC - Crescent City, CA
+<OPTION VALUE="CGA">CGA - Craig, AK
+<OPTION VALUE="CHA-Chattanooga">CHA - Chattanooga, TN
+<OPTION VALUE="CHO-Charlottesville">CHO - Charlottesville, VA
+<OPTION VALUE="CHS-Charleston">CHS - Charleston, SC
+<OPTION VALUE="CIC-Chico">CIC - Chico, CA
+<OPTION VALUE="CID-Cedar+Rapids">CID - Cedar Rapids, IA
+<OPTION VALUE="CKB">CKB - Clarksburg, WV
+<OPTION VALUE="CLD">CLD - Carlsbad, CA
+<OPTION VALUE="CLE">CLE - Cleveland - Hopkins International, OH
+<OPTION VALUE="CLL">CLL - College Station/Bryan, TX
+<OPTION VALUE="CLM">CLM - Port Angeles, WA
+<OPTION VALUE="CLT">CLT - Charlotte, NC
+<OPTION VALUE="CMH">CMH - Columbus, OH
+<OPTION VALUE="CMI">CMI - Champaign, IL
+<OPTION VALUE="CMX">CMX - Hancock  MI
+<OPTION VALUE="COD">COD - Cody/Powell/Yellowstone, WY
+<OPTION VALUE="COS">COS - Colorado Springs, CO
+<OPTION VALUE="CPR">CPR - Casper, WY
+<OPTION VALUE="CRP">CRP - Corpus Christi, TX
+<OPTION VALUE="CRW">CRW - Charleston, WV
+<OPTION VALUE="CSG">CSG - Columbus, GA
+<OPTION VALUE="CVG">CVG - Cincinnati, OH
+<OPTION VALUE="CWA">CWA - Wausau/Stevens Point, WI
+<OPTION VALUE="DAB">DAB - Daytona Beach, FL
+<OPTION VALUE="DAL">DAL - Dallas - Love Field, TX
+<OPTION VALUE="DAN">DAN - Danville, VA
+<OPTION VALUE="DAY">DAY - Dayton, OH
+<OPTION VALUE="DBQ">DBQ - Dubuque, IA
+<OPTION VALUE="DCA">DCA - Washington - National, DC
+<OPTION VALUE="DEC">DEC - Decatur, IL
+<OPTION VALUE="DEN">DEN - Denver, CO
+<OPTION VALUE="DET">DET - Detroit - City Airport, MI
+<OPTION VALUE="DFW">DFW - Dallas/Ft. Worth, TX
+<OPTION VALUE="DHN">DHN - Dothan, AL
+<OPTION VALUE="DLG">DLG - Dillingham, AK
+<OPTION VALUE="DLH">DLH - Duluth, MN/Superior, WI
+<OPTION VALUE="DRO">DRO - Durango/Purgatory, CO
+<OPTION VALUE="DSM">DSM - Des Moines, IA
+<OPTION VALUE="DTT">DTT - Detroit, MI
+<OPTION VALUE="DTW">DTW - Detroit - Metropolitan (Metro), MI
+<OPTION VALUE="DUJ">DUJ - Dubois, PA
+<OPTION VALUE="DUT">DUT - Dutch Harbor, AK
+<OPTION VALUE="DVL">DVL - Devils Lake, ND
+<OPTION VALUE="EAT">EAT - Wenatchee, WA
+<OPTION VALUE="EAU">EAU - Eau Clarie, WI
+<OPTION VALUE="EGE">EGE - Vail, CO
+<OPTION VALUE="EKI">EKI - Elkhart, IN
+<OPTION VALUE="EKO">EKO - Elko, NV
+<OPTION VALUE="ELM">ELM - Elmira/Corning, NY
+<OPTION VALUE="ELP">ELP - El Paso, TX
+<OPTION VALUE="ELY">ELY - Ely, NV
+<OPTION VALUE="ENA">ENA - Kenai, AK
+<OPTION VALUE="ERI">ERI - Erie, PA
+<OPTION VALUE="ESC">ESC - Escabana, MI
+<OPTION VALUE="ESF">ESF - Alexandria, LA
+<OPTION VALUE="EUG">EUG - Eugene, OR
+<OPTION VALUE="EVV">EVV - Evansville, IN
+<OPTION VALUE="EWN">EWN - New Bern, NC
+<OPTION VALUE="EWR">EWR - New York - Newark, NJ
+<OPTION VALUE="EYW">EYW - Key West, FL
+<OPTION VALUE="FAI">FAI - Fairbanks, AK
+<OPTION VALUE="FAR">FAR - Fargo, ND/Moorhead, MN
+<OPTION VALUE="FAT">FAT - Fresno, CA
+<OPTION VALUE="FAY">FAY - Fayetteville/Ft. Bragg, NC
+<OPTION VALUE="FCA">FCA - Kalispell, MT
+<OPTION VALUE="FHU">FHU - Fort Huachuca/Sierra Vista, AZ
+<OPTION VALUE="FKL">FKL - Franklin/Oil City, PA
+<OPTION VALUE="FLG">FLG - Flagstaff, AZ
+<OPTION VALUE="FLL">FLL - Fort Lauderdale/Hollywood, FL
+<OPTION VALUE="FLO">FLO - Florence, SC
+<OPTION VALUE="FMN">FMN - Farmington, NM
+<OPTION VALUE="FMY">FMY - Fort Myers, FL
+<OPTION VALUE="FNT">FNT - Flint, MI
+<OPTION VALUE="FOD">FOD - Fort Dodge, IA
+<OPTION VALUE="FSD">FSD - Sioux Falls, SD
+<OPTION VALUE="FSM">FSM - Fort Smith, AR
+<OPTION VALUE="FWA">FWA - Fort Wayne, IN
+<OPTION VALUE="FYV">FYV - Fayetteville, AR
+<OPTION VALUE="GAD">GAD - Gadsden, AL
+<OPTION VALUE="GCC">GCC - Gilette, WY
+<OPTION VALUE="GCN">GCN - Grand Canyon, AZ
+<OPTION VALUE="GDV">GDV - Glendive, MT
+<OPTION VALUE="GEG">GEG - Spokane, WA
+<OPTION VALUE="GFK">GFK - Grand Forks, ND
+<OPTION VALUE="GGG">GGG - Longview/Kilgore, TX
+<OPTION VALUE="GGW">GGW - Glasgow, MT
+<OPTION VALUE="GJT">GJT - Grand Junction, CO
+<OPTION VALUE="GLH">GLH - Greenville, MS
+<OPTION VALUE="GNV">GNV - Gainesville, FL
+<OPTION VALUE="GON">GON - Groton/New London, CT
+<OPTION VALUE="GPT">GPT - Gulfport/Biloxi, MS
+<OPTION VALUE="GPZ">GPZ - Grand Rapids, MN
+<OPTION VALUE="GRB">GRB - Green Bay, WI
+<OPTION VALUE="GRR">GRR - Grand Rapids, MI
+<OPTION VALUE="GSO">GSO - Greensboro/High Point/Winston Salem, NC
+<OPTION VALUE="GSP">GSP - Greenville/Spartanburg, SC
+<OPTION VALUE="GTF">GTF - Great Falls, MT
+<OPTION VALUE="GTR">GTR - Columbus/Starkville/West Point, MS
+<OPTION VALUE="GUC">GUC - Gunnison/Crested Butte, CO
+<OPTION VALUE="HAR">HAR - Harrisburg, PA
+<OPTION VALUE="HDN">HDN - Steamboat Springs, CO
+<OPTION VALUE="HGR">HGR - Hagerstown, MD/Martinsburg, WV
+<OPTION VALUE="HHH">HHH - Hilton Head Island, SC
+<OPTION VALUE="HIB">HIB - Hibbing, MN
+<OPTION VALUE="HKY">HKY - Hickory, NC
+<OPTION VALUE="HLN">HLN - Helena, MT
+<OPTION VALUE="HNH">HNH - Hoonah, AK
+<OPTION VALUE="HNL">HNL - Honolulu, HI
+<OPTION VALUE="HNS">HNS - Haines, AK
+<OPTION VALUE="HOM">HOM - Homer, AK
+<OPTION VALUE="HON">HON - Huron, SD
+<OPTION VALUE="HOU">HOU - Houston - Hobby, TX
+<OPTION VALUE="HPN">HPN - White Plains, NY
+<OPTION VALUE="HRL">HRL - Harlington/South Padre Island, TX
+<OPTION VALUE="HSV">HSV - Huntsville/Decatur, AL
+<OPTION VALUE="HTS">HTS - Huntington, WV/Ashland, KY/Ironton, OH
+<OPTION VALUE="HUF">HUF - Terre Haute, IN
+<OPTION VALUE="HVN">HVN - New Haven, CT
+<OPTION VALUE="HVR">HVR - Havre, MT
+<OPTION VALUE="HYA">HYA - Hyannis, MA
+<OPTION VALUE="HYG">HYG - Hydaburg, AK
+<OPTION VALUE="IAD">IAD - Washington - Dulles International, DC
+<OPTION VALUE="IAH">IAH - Houston - Intercontinental, TX
+<OPTION VALUE="ICT">ICT - Wichita, KS
+<OPTION VALUE="IDA">IDA - Idaho Falls, ID
+<OPTION VALUE="ILE">ILE - Killeem, TX
+<OPTION VALUE="ILI">ILI - Iliamna, AK
+<OPTION VALUE="ILM">ILM - Wilmington, NC
+<OPTION VALUE="IND">IND - Indianapolis, IN
+<OPTION VALUE="INL">INL - International Falls, MN
+<OPTION VALUE="INT">INT - Greensboro/High Point/Winston Salem, NC
+<OPTION VALUE="IPL">IPL - Imperial, CA
+<OPTION VALUE="IPT">IPT - Williamsport, PA
+<OPTION VALUE="ISL">ISL - Williston, ND
+<OPTION VALUE="ISO">ISO - Kingston, NC
+<OPTION VALUE="ISP">ISP - Long Island/Mac Arthur/Islip, NY
+<OPTION VALUE="ITH">ITH - Ithaca/Cortland, NY
+<OPTION VALUE="ITO">ITO - Hilo, HI
+<OPTION VALUE="IYK">IYK - Inykern, CA
+<OPTION VALUE="JAC">JAC - Jackson Hole, WY
+<OPTION VALUE="JAN">JAN - Jackson, MS
+<OPTION VALUE="JAX">JAX - Jacksonville, FL
+<OPTION VALUE="JFK">JFK - New York - John F. Kennedy, NY
+<OPTION VALUE="JHM">JHM - Kapalua West, HI
+<OPTION VALUE="JHW">JHW - Jamestown, NY
+<OPTION VALUE="JLN">JLN - Joplin, MO
+<OPTION VALUE="JMS">JMS - Jamestown, ND
+<OPTION VALUE="JNU">JNU - Juneau, AK
+<OPTION VALUE="JST">JST - Johnstown, PA
+<OPTION VALUE="JXN">JXN - Jackson, MI
+<OPTION VALUE="KCC">KCC - Coffmann Cove, AK
+<OPTION VALUE="KLW">KLW - Klawock, AK
+<OPTION VALUE="KOA">KOA - Kona, HI
+<OPTION VALUE="KTB">KTB - Thorne Bay, AK
+<OPTION VALUE="KTN">KTN - Ketchikan, AK
+<OPTION VALUE="LAF">LAF - Lafayette, IN
+<OPTION VALUE="LAN">LAN - Lansing, MI
+<OPTION VALUE="LAR">LAR - Laramie, WY
+<OPTION VALUE="LAS">LAS - Las Vegas, NV
+<OPTION VALUE="LAW">LAW - Lawton, OK
+--><option VALUE="LAX-los+angeles">LAX
+- Los Angeles, CA<!--
+<OPTION VALUE="LBB">LBB - Lubbock, TX
+<OPTION VALUE="LBE">LBE - Latrobe, PA
+<OPTION VALUE="LCH">LCH - Lake Charles, LA
+<OPTION VALUE="LEB">LEB - Lebanon, NH
+<OPTION VALUE="LEX">LEX - Lexington, KY
+<OPTION VALUE="LFT">LFT - Lafayette, LA
+<OPTION VALUE="LGA">LGA - New York - La Guardia, NY
+<OPTION VALUE="LGB">LGB - Long Beach, CA
+<OPTION VALUE="LHU">LHU - Lake Havasu City, AZ
+<OPTION VALUE="LIH">LIH - Lihue, HI
+<OPTION VALUE="LIJ">LIJ - Long Island, AK
+<OPTION VALUE="LIT">LIT - Little Rock, AR
+<OPTION VALUE="LMT">LMT - Klamath Fall, OR
+<OPTION VALUE="LNK">LNK - Lincoln, NE
+<OPTION VALUE="LNS">LNS - Lancaster, PA
+<OPTION VALUE="LNY">LNY - Lanai City, HI
+<OPTION VALUE="LRD">LRD - Laredo, TX
+<OPTION VALUE="LSE">LSE - La Crosse, WI
+<OPTION VALUE="LWB">LWB - Greenbrier/Lewisburg, WV
+<OPTION VALUE="LWS">LWS - Lewiston, ID
+<OPTION VALUE="LWT">LWT - Lewistown, MT
+<OPTION VALUE="LYH">LYH - Lynchburg, VA
+<OPTION VALUE="MAF">MAF - Midland/Odessa, TX
+<OPTION VALUE="MBS">MBS - Saginaw/Bay City/Midland, MI
+<OPTION VALUE="MCE">MCE - Merced, CA
+<OPTION VALUE="MCI">MCI - Kansas City, MO
+<OPTION VALUE="MCL">MCL - Mt. McKinley, AK
+<OPTION VALUE="MCN">MCN - Macon, GA
+<OPTION VALUE="MCO">MCO - Orlando, FL
+<OPTION VALUE="MCW">MCW - Mason City, IA
+<OPTION VALUE="MDT">MDT - Harrisburg, PA
+<OPTION VALUE="MDW">MDW - Chicago - Midway, IL
+<OPTION VALUE="MEI">MEI - Meridian, MS
+<OPTION VALUE="MEM">MEM - Memphis, TN
+<OPTION VALUE="MFE">MFE - McAllen, TX
+<OPTION VALUE="MFR">MFR - Medford, OR
+<OPTION VALUE="MGM">MGM - Montgomery, AL
+<OPTION VALUE="MGW">MGW - Morgantown, WV
+<OPTION VALUE="MHE">MHE - Mitchell, SD
+<OPTION VALUE="MHT">MHT - Manchester, NH
+<OPTION VALUE="MIA">MIA - Miami, FL
+<OPTION VALUE="MKE">MKE - Milwaukee, WI
+<OPTION VALUE="MKG">MKG - Muskegon, MI
+<OPTION VALUE="MKK">MKK - Kaunakakai, HI
+<OPTION VALUE="MKL">MKL - Jackson, TN
+<OPTION VALUE="MLB">MLB - Melbourne, FL
+<OPTION VALUE="MLI">MLI - Moline/Quad Cities, IL
+<OPTION VALUE="MLS">MLS - Miles City, MT
+<OPTION VALUE="MLU">MLU - Monroe, LA
+<OPTION VALUE="MOB">MOB - Mobile, AL/Pascagoula, MS
+<OPTION VALUE="MOD">MOD - Modesto, CA
+<OPTION VALUE="MOT">MOT - Minot, ND
+<OPTION VALUE="MQT">MQT - Marquette, MI
+<OPTION VALUE="MRY">MRY - Monterey, CA
+<OPTION VALUE="MSL">MSL - Muscle Shoals, AL
+--><option VALUE="MSN-Madison">MSN
+- Madison, WI&nbsp;<!--
+<OPTION VALUE="MSO">MSO - Missula, MT
+<OPTION VALUE="MSP">MSP - Minneapolis/St. Paul, MN
+<OPTION VALUE="MSY">MSY - New Orelans, LA
+<OPTION VALUE="MTH">MTH - Marathon, FL
+<OPTION VALUE="MTJ">MTJ - Montrose/Tellruide, CO
+<OPTION VALUE="MTM">MTM - Metlakatla, AK
+<OPTION VALUE="MTO">MTO - Mattoon, IL
+<OPTION VALUE="MVY">MVY - Martha's Vineyard, MA
+<OPTION VALUE="MWH">MWH - Moses Lake, WA
+<OPTION VALUE="MYR">MYR - Myrtle Beach, SC
+
+<OPTION VALUE="NYC-New+york">NYC - New York, NY
+
+<OPTION VALUE="OAJ">OAJ - Jacksonville, NC
+<OPTION VALUE="OAK">OAK - Oakland, CA
+<OPTION VALUE="OGG">OGG - Kahului, HI
+<OPTION VALUE="OKC">OKC - Oklahoma City, OK
+<OPTION VALUE="OLF">OLF - Wolf Point, MT
+<OPTION VALUE="OMA">OMA - Omaha, NE
+<OPTION VALUE="OME">OME - Nome, AK
+<OPTION VALUE="ONT">ONT - Ontario, CA
+--><option VALUE="ORD-Chicago">ORD
+- Chicago - O'Hare, IL<!--
+<OPTION VALUE="ORF">ORF - Norfolk/Virginia Beach/Williamsburg, VA
+<OPTION VALUE="ORH">ORH - Worcester, MA
+--><option VALUE="ORL-orlando">ORL
+- Orlando, FL&nbsp;<!--
+<OPTION VALUE="OSH">OSH - Oshkosh, WI
+<OPTION VALUE="OTH">OTH - North Bend, OR
+<OPTION VALUE="OTZ">OTZ - Kotzbue, AK
+<OPTION VALUE="OWB">OWB - Owensboro, KY
+<OPTION VALUE="OXR">OXR - Oxnard, CA
+<OPTION VALUE="PAH">PAH - Paducah, KY
+<OPTION VALUE="PBI">PBI - West Palm Beach, FL
+<OPTION VALUE="PDT">PDT - Pendelton, OR
+<OPTION VALUE="PDX">PDX - Portland, OR
+<OPTION VALUE="PFN">PFN - Panama City, FL
+<OPTION VALUE="PGA">PGA - Page/Lake Powell, AZ
+<OPTION VALUE="PGV">PGV - Greenville, NC
+<OPTION VALUE="PHF">PHF - Newport News/Williamsburg, VA
+--><option VALUE="PHL-Philadelphia" selected>PHL
+- Philadelphia, PA&nbsp;<!--
+<OPTION VALUE="PHX">PHX - Phoenix, AZ
+<OPTION VALUE="PIA">PIA - Peoria/Bloomington, IL
+<OPTION VALUE="PIB">PIB - Laurel/Hattisburg, MS
+<OPTION VALUE="PIH">PIH - Pocatello, ID
+<OPTION VALUE="PIR">PIR - Pierre, SD
+--><option VALUE="PIT-pittsburgh">PIT
+- Pittsburgh, PA&nbsp;<!--
+<OPTION VALUE="PKB">PKB - Pakersburg. WV/Marietta, OH
+<OPTION VALUE="PLB">PLB - Plattsburgh, NY
+<OPTION VALUE="PLN">PLN - Pellston, MI
+<OPTION VALUE="PMD">PMD - Palmdale/Lancaster, CA
+<OPTION VALUE="PNS">PNS - Pensacola, FL
+<OPTION VALUE="POU">POU - Poughkeepsie, NY
+<OPTION VALUE="PQI">PQI - Presque Island, ME
+<OPTION VALUE="PSC">PSC - Pasco, WA
+<OPTION VALUE="PSG">PSG - Petersburg, AK
+<OPTION VALUE="PSP">PSP - Palm Springs, CA
+<OPTION VALUE="PUB">PUB - Pueblo, CO
+<OPTION VALUE="PUW">PUW - Pullman, WA
+<OPTION VALUE="PVD">PVD - Providence, RI
+<OPTION VALUE="PWM">PWM - Portland, ME
+<OPTION VALUE="RAP">RAP - Rapid City, SD
+<OPTION VALUE="RDD">RDD - Redding, CA
+<OPTION VALUE="RDG">RDG - Reading, PA
+<OPTION VALUE="RDM">RDM - Redmond, OR
+<OPTION VALUE="RDU">RDU - Raleigh/Durham, NC
+<OPTION VALUE="RFD">RFD - Rockford, IL
+<OPTION VALUE="RHI">RHI - Rhinelander, WI
+<OPTION VALUE="RIC">RIC - Richmond, VA
+<OPTION VALUE="RKD">RKD - Rockland, ME
+<OPTION VALUE="RKS">RKS - Rock Springs, WY
+<OPTION VALUE="RNO">RNO - Reno, NV
+<OPTION VALUE="ROA">ROA - Roanoke, VA
+<OPTION VALUE="ROC">ROC - Rochester, NY
+<OPTION VALUE="RST">RST - Rochester, MN
+<OPTION VALUE="RSW">RSW - Fort Myers, FL
+<OPTION VALUE="RWI">RWI - Rocky Mount/Wilson, NC
+<OPTION VALUE="SAN">SAN - San Diego, CA
+<OPTION VALUE="SAT">SAT - San Antonio, TX
+<OPTION VALUE="SAV">SAV - Savannah, GA
+<OPTION VALUE="SBA">SBA - Santa Barbara, CA
+<OPTION VALUE="SBN">SBN - South Bend, IN
+<OPTION VALUE="SBP">SBP - San Luis Obisco, CA
+<OPTION VALUE="SBY">SBY - Salisbury, MD
+<OPTION VALUE="SCC">SCC - Prudhoe Bay, AK
+<OPTION VALUE="SCE">SCE - State College/Belefonte, PA
+<OPTION VALUE="SCF">SCF - Scottsdale, AZ
+<OPTION VALUE="SCK">SCK - Stockton, CA
+<OPTION VALUE="SDF">SDF - Louisville, KY
+<OPTION VALUE="SDY">SDY - Sidney, MT
+<OPTION VALUE="SEA">SEA - Seattle/Tacoma, WA
+--><option VALUE="SFO-San+Francisco">SFO
+- San Francisco, SA&nbsp;<!--
+<OPTION VALUE="SGF">SGF - Springfield, MO
+<OPTION VALUE="SGU">SGU - St. George, UT
+<OPTION VALUE="SGY">SGY - Skagway, AK
+<OPTION VALUE="SHD">SHD - Shenandoah Valley/Stauton, VA
+<OPTION VALUE="SHR">SHR - Sheridan, WY
+<OPTION VALUE="SHV">SHV - Shreveport, LA
+<OPTION VALUE="SIT">SIT - Sitka, AK
+<OPTION VALUE="SJC">SJC - San Jose, CA
+<OPTION VALUE="SJT">SJT - San Angelo, TX
+<OPTION VALUE="SLC">SLC - Salt Lake City, UT
+<OPTION VALUE="SLE">SLE - Salem, OR
+<OPTION VALUE="SMF">SMF - Sacramento, CA
+<OPTION VALUE="SMX">SMX - Santa Maria, CA
+<OPTION VALUE="SNA">SNA - Orange County (Santa Ana), CA
+<OPTION VALUE="SPI">SPI - Springfield, IL
+<OPTION VALUE="SPS">SPS - Wichita Falls, TX
+<OPTION VALUE="SRQ">SRQ - Sarasota/Bradenton, FL
+<OPTION VALUE="STL">STL - St. Louis, MO
+<OPTION VALUE="STS">STS - Santa Rosa, CA
+<OPTION VALUE="SUN">SUN - Sun Valley, ID
+<OPTION VALUE="SUX">SUX - Sioux City, IA
+<OPTION VALUE="SWF">SWF - Newburgh, NY
+<OPTION VALUE="SYR">SYR - Syracuse, NY
+<OPTION VALUE="TCL">TCL - Tuscaloosa, AL
+<OPTION VALUE="TEX">TEX - Telluride, CO
+<OPTION VALUE="TKA">TKA - Talkeetna, AK
+<OPTION VALUE="TLH">TLH - Tallahassee, FL
+<OPTION VALUE="TOL">TOL - Toledo, OH
+<OPTION VALUE="TPA">TPA - Tampa/St. Petersburg/Clearwater, FL
+<OPTION VALUE="TRI">TRI - Tri City Airport, TN
+<OPTION VALUE="TTN">TTN - Trenton/Princeton, NJ
+<OPTION VALUE="TUL">TUL - Tulsa, OK
+<OPTION VALUE="TUP">TUP - Tulepo, MS
+<OPTION VALUE="TUS">TUS - Tuscon, AZ
+<OPTION VALUE="TVC">TVC - Traverse City, MI
+<OPTION VALUE="TVF">TVF - Thief River Falls, MN
+<OPTION VALUE="TVL">TVL - Lake Tahoe, CA
+<OPTION VALUE="TWF">TWF - Twin Falls, ID
+<OPTION VALUE="TXK">TXK - Texarkana, AR
+<OPTION VALUE="TYR">TYR - Tyler, TX
+<OPTION VALUE="TYS">TYS - Knoxville, TN
+<OPTION VALUE="UCA">UCA - Utica, NY
+<OPTION VALUE="UIN">UIN - Quincy, IL
+<OPTION VALUE="VDZ">VDZ - Valdez, AK
+<OPTION VALUE="VEL">VEL - Vernal, UT
+<OPTION VALUE="VIS">VIS - Visalia, CA
+<OPTION VALUE="VLD">VLD - Valdosta, GA
+<OPTION VALUE="VPS">VPS - Fort Walton Beach, FL
+<OPTION VALUE="VRB">VRB - Vero Beach/Ft. Pierce, FL
+<OPTION VALUE="WAS">WAS - Washington, DC
+<OPTION VALUE="WLB">WLB - Labouchere Bay, AK
+<OPTION VALUE="WRG">WRG - Wrangell, AK
+<OPTION VALUE="WRL">WRL - Worland, WY
+<OPTION VALUE="WYS">WYS - West Yellowstone, MT
+<OPTION VALUE="YAK">YAK - Yakutat, AK
+<OPTION VALUE="YKM">YKM - Yakima, WA
+<OPTION VALUE="YNG">YNG - Youngstown/Warren, OH/Sharon, PA
+<OPTION VALUE="YUM">YUM - Yuma, AZ
+--></select></td>
+
+<td VALIGN=TOP>
+<br>ARRIVING TIME:
+<br><select NAME="ARRIVE_HOUR"><option VALUE=6>6:00 AM<option VALUE=7>7:00
+AM<option VALUE=8>8:00 AM<option VALUE=9>9:00 AM<option VALUE=10>10:00
+AM<option VALUE=11>11:00 AM<option VALUE=12>12:00 PM<option VALUE=13>1:00
+PM<option VALUE=14>2:00 PM<option VALUE=15>3:00 PM<option VALUE=16>4:00
+PM<option VALUE=17 selected>5:00 PM<option VALUE=18>6:00 PM<option VALUE=19>7:00
+PM<option VALUE=20>8:00 PM<option VALUE=21>9:00 PM<option VALUE=22>10:00
+PM<option VALUE=23>11:00 PM<option VALUE=0>12:00 AM<option VALUE=1>1:00
+AM<option VALUE=2>2:00 AM<option VALUE=3>3:00 AM<option VALUE=4>4:00 AM<option VALUE=5>5:00
+AM</select></td>
+
+<td>
+<center><!--
+<TD VALIGN="TOP">
+<BR>
+ARRIVING DAY:
+<BR>
+<SELECT NAME="ARRIVE_DAY">
+<OPTION VALUE="Mon">MONDAY
+<OPTION VALUE="Tue">TUESDAY
+<OPTION VALUE="Wed">WEDNESDAY
+<OPTION VALUE="Thu">THURSDAY
+<OPTION VALUE="Fri">FRIDAY
+<OPTION VALUE="Sat">SATURDAY
+<OPTION VALUE="Sun">SUNDAY
+</SELECT>
+</TD>
+
+--></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<p><a href="response2.html">SUBMIT</a><input TYPE="RESET" VALUE="Reset"></td>
+</tr>
+</table></center>
+
+<center></form><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer></center>
+
+</body>
+</html>

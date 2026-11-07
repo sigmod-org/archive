@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>PPT Slide</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Query by Example</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld005.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld007.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr>Query&nbsp;by&nbsp;Example</nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><strong><font size="5">Query by Example (cont.)</font></strong></p>
+
+<p>Constraints are also used in CCUBE queries to manipulate, as well as express Boolean
+conditions on, CST objects. To illustrate, assume that the database stores all_desks of
+type set(DESK*), i.e., a set of references to object of the class DESK. Consider the
+following CCUBE query which retrieves all desks that would intersect the room area (3
+&lt;= u &lt;= 4 &amp;&amp; 8 &lt;= v &lt;= 10), if centered at (6,4) and rotated 30
+degrees counter-clockwise relatively to to the room's axes. For each retrieved desk, the
+query also gives the resulting desk's extent in the room's coordinates.&nbsp; </p>
+
+<p><strong><big>&nbsp; </big>&nbsp;&nbsp;&nbsp;&nbsp; SELECT pair(dsk, ((u,v) | dsk_glob)
+) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INTO {Bag&lt;CST*&gt;} result<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FROM all_desks AS {DESK*} dsk <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEFINE dsk_glob AS {CST} dsk-&gt;extent &amp;&amp; x
+== 6 &amp;&amp; y == 4 &amp;&amp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+u == x + cos(30) * w + 0.5 * z &amp;&amp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+v == y + cos(30) * z + 0.5 * w <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHERE SAT(3 &lt;= u &lt;= 4 &amp;&amp; 8 &lt;= v
+&lt;= 10 &amp;&amp; dsk_glob )<big><br>
+</strong><big><br>
+</big></big>In the FROM clause, the query variable dsk iterates over all_desks. Thus, in
+the DEFINE, WHERE and SELECT clauses the query variable dsk is bound to (a reference to)
+an object of the class DESK. In the DEFINE statement, dsk-&gt;extent is the extent
+attribute, which is a CST object in free variables w,z. The DEFINE clause in the example
+defines a CST object dsk_glob as a symbolic constraint expression (in free variables
+u,v,x,y,w,z), which is then used in the WHERE and the SELECT clauses.&nbsp; </p>
+
+<p>In the WHERE clause, SAT is a satisfiability test of the area constraint 3 &lt;= u
+&lt;= 4 &amp;&amp; 8 &lt;= v &lt;= 10 conjuncted with dsk_glob, which finds whether dsk in
+the room's coordinates intersects the area defined by the constraint (3 &lt;= u &lt;= 4
+&amp;&amp; 8 &lt;= v &lt;= 10). In the SELECT clause, (u,v) | dsk_glob is the projection
+of dsk_glob on the room's axes u,v. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

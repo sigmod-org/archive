@@ -1,0 +1,173 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_0.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Active Storage for Large-Scale Data Mining and Multimedia</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_r.htm#Erik Riedel">Erik Riedel</a>, <a href="m_authors_g.htm#Garth A. Gibson">Garth A. Gibson</a>, <a href="m_authors_f.htm#Christos Faloutsos">Christos Faloutsos</a></center></td></tr></table></center><a target="disc_pdf81" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+The increasing performance and decreasing cost of processors and memory are causing system intelligence to move into peripherals from the CPU.
+Storage system designers are using this trend toward "excess" compute power to perform more complex processing and optimizations inside storage devices.
+To date, such optimizations have been at relatively low levels of the storage protocol.
+At the same time, trends in storage density, mechanics, and electronics are eliminating the bottleneck in moving data off the media and putting pressure on interconnects and host processors to move data more efficiently.
+We propose a system called <i>Active Disks</i> that takes advantage of processing power on individual disk drives to run application-level code.
+Moving portions of an application's processing to execute directly at diskdrives can dramatically reduce data traffic and take advantage of the storage parallelism already present in large systems today.
+We discuss several types of applications that would benefit from this capability with a focus on the areas of database, data mining, and multimedia.
+We develop an analytical model of the speed- ups possible for scan-intensive applications in an Active Disk system.
+We also experiment with a prototype Active Disk system using relatively low-powered processors in comparison to a database server system with a single, fast processor.
+Our experiments validate the intuition in our model and demonstrate speedups of 2x on 10 disks across four scan-based applications.
+The model promises linear speedups in disk arrays of hundreds of disks, provided the application data is large enough.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Acharya98]<dd>...
+<dt>[Agrawal95]<dd><a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>:
+Fast Algorithms for Mining Association Rules in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#AgrawalS94">VLDB 1994</a>: 487-499<dt>[Agrawal96]<dd><a name="AgrawalS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shafer:John_C=.html">John C. Shafer</a>:
+Parallel Mining of Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde8.html#AgrawalS96">TKDE 8(6)</a>: 962-969(1996)<dt>[Almaden97]<dd>...
+<dt>[Arpaci Dusseau97]<dd><a name="Arpaci-DusseauACHP97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpaci=Dusseau:Andrea_C=.html">Andrea C. Arpaci-Dusseau</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arpaci=Dusseau:Remzi.html">Remzi Arpaci-Dusseau</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Culler:David_E=.html">David E. Culler</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">David A. Patterson</a>:
+High-Performance Sorting on Networks of Workstations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#Arpaci-DusseauACHP97">SIGMOD Conference 1997</a>: 243-254<dt>[Arya94]<dd><a name="AryaCFRT94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arya:Manish.html">Manish Arya</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cody:William_F=.html">William F. Cody</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Richardson:Joel.html">Joel Richardson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toya:Arthur.html">Arthur Toya</a>:
+QBISM: Extending a DBMS to Support 3D Medical Images.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#AryaCFRT94">ICDE 1994</a>: 314-325<dt>[Barclay97]<dd>...
+<dt>[Berchtold96]<dd><a name="BerchtoldKK96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+The X-tree : An Index Structure for High-Dimensional Data.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#BerchtoldKK96">VLDB 1996</a>: 28-39<dt>[Berchtold97]<dd><a name="BerchtoldBKK97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berchtold:Stefan.html">Stefan Berchtold</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hm:Christian.html">Christian B&ouml;hm</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keim:Daniel_A=.html">Daniel A. Keim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kriegel:Hans=Peter.html">Hans-Peter Kriegel</a>:
+A Cost Model For Nearest Neighbor Search in High-Dimensional Data Space.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#BerchtoldBKK97">PODS 1997</a>: 78-86<dt>[Bershad95]<dd><a name="BershadSPSFBCE95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bershad:Brian_N=.html">Brian N. Bershad</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Savage:Stefan.html">Stefan Savage</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pardyak:Przemyslaw.html">Przemyslaw Pardyak</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sirer:Emin_G=uuml=n.html">Emin G&uuml;n Sirer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fiuczynski:Marc_E=.html">Marc E. Fiuczynski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Becker:David.html">David Becker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chambers:Craig.html">Craig Chambers</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eggers:Susan_J=.html">Susan J. Eggers</a>:
+Extensibility, Safety and Performance in the SPIN Operating System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp95.html#BershadSPSFBCE95">SOSP 1995</a>: 267-284<dt>[Bitton88]<dd><a name="BittonG88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bitton:Dina.html">Dina Bitton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>:
+Disk Shadowing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb88.html#BittonG88">VLDB 1988</a>: 331-338<dt>[Blelloch98]<dd>...
+<dt>[Boral83]<dd><a name="BoralD83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Boral:Haran.html">Haran Boral</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Database Machines: An Idea Whose Time Passed? A Critique of the Future of Database Machines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/iwdm/iwdm83.html#BoralD83">IWDM 1983</a>: 166-187<dt>[Cao94]<dd><a name="CaoLVW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cao:Pei.html">Pei Cao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lim:Swee_Boon.html">Swee Boon Lim</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Venkataraman:Shivakumar.html">Shivakumar Venkataraman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilkes:John.html">John Wilkes</a>:
+The TickerTAIP Parallel RAID Architecture.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tocs/tocs12.html#CaoLVW94">TOCS 12(3)</a>: 236-269(1994)<dt>[DeWitt81]<dd><a name="DeWittH81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hawthorn:Paula_B=.html">Paula B. Hawthorn</a>:
+A Performance Evaluation of Data Base Machine Architectures (Invited Paper).
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb81.html#DeWittH81">VLDB 1981</a>: 199-214<dt>[DeWitt85]<dd><a name="DeWittG85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerber:Robert_H=.html">Robert H. Gerber</a>:
+Multiprocessor Hash-Based Join Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb85.html#DeWittG85">VLDB 1985</a>: 151-164<dt>[DeWitt91]<dd><a name="DeWittNS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>:
+Parallel Sorting on a Shared-Nothing Architecture using Probabilistic Splitting.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis91.html#DeWittNS91">PDIS 1991</a>: 280-291<dt>[DeWitt92]<dd><a name="DeWittG92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>:
+Parallel Database Systems: The Future of High Performance Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm35.html#DeWittG92">CACM 35(6)</a>: 85-98(1992)<dt>[Drapeau94]<dd><a name="DrapeauSHMSKLPLCG94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Drapeau:Ann_L=.html">Ann L. Drapeau</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shirriff:Ken.html">Ken Shirriff</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hartman:John_H=.html">John H. Hartman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miller:Ethan_L=.html">Ethan L. Miller</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seshan:Srinivasan.html">Srinivasan Seshan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">Randy H. Katz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lutz:Ken.html">Ken Lutz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">David A. Patterson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Edward_K=.html">Edward K. Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Peter_M=.html">Peter M. Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibson:Garth_A=.html">Garth A. Gibson</a>:
+RAID-II: A High-Bandwidth Network File Server.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/isca/isca94.html#DrapeauSHMSKLPLCG94">ISCA 1994</a>: 234-244<dt>[Faloutsos94]<dd><a name="FaloutsosBFHNPE94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">Christos Faloutsos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">Ron Barber</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">Jim Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">Wayne Niblack</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">William Equitz</a>:
+Efficient and Effective Querying by Image Content.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis3.html#FaloutsosBFHNPE94">JIIS 3(3/4)</a>: 231-262(1994)<dt>[Faloutsos96]<dd>...
+<dt>[Flickner95]<dd><a name="FlicknerSAHDGHLPSY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">Myron Flickner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sawhney:Harpreet_S=.html">Harpreet S. Sawhney</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Ashley:Jonathan.html">Jonathan Ashley</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Huang:Qian.html">Qian Huang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dom:Byron.html">Byron Dom</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gorkani:Monika.html">Monika Gorkani</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hafner:Jim.html">Jim Hafner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Denis.html">Denis Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">Dragutin Petkovic</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Steele:David.html">David Steele</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yanker:Peter.html">Peter Yanker</a>:
+Query by Image and Video Content: The QBIC System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer28.html#FlicknerSAHDGHLPSY95">IEEE Computer 28(9)</a>: 23-32(1995)<dt>[Gibson97]<dd><a name="GibsonNACFGLORRZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibson:Garth_A=.html">Garth A. Gibson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nagle:David.html">David Nagle</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Amiri:Khalil.html">Khalil Amiri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Fay_W=.html">Fay W. Chang</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Feinberg:Eugene_M=.html">Eugene M. Feinberg</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gobioff:Howard.html">Howard Gobioff</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Chen.html">Chen Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ozceri:Berend.html">Berend Ozceri</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Riedel:Erik.html">Erik Riedel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rochberg:David.html">David Rochberg</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zelenka:Jim.html">Jim Zelenka</a>:
+File Server Scaling with Network-Attached Secure Disks.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmetrics/sigmetrics97.html#GibsonNACFGLORRZ97">SIGMETRICS 1997</a>: 272-284<dt>[Gibson98]<dd>...
+<dt>[Gosling96]<dd><a name="GoslingJS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gosling:James.html">James Gosling</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Joy:William_N=.html">William N. Joy</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Steele_Jr=:Guy_L=.html">Guy L. Steele Jr.</a>:
+The Java&#153; Language Specification.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/aw.html">Addison-Wesley</a> 1996, ISBN 0-201-63451-1<br>
+<dt>[Gray97]<dd>...
+<dt>[Grochowski96]<dd>...
+<dt>[Hsiao79]<dd>...
+<dt>[Keeton98]<dd>...
+<dt>[Kitsuregawa83]<dd><a name="KitsuregawaTM83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tanaka:Hidehiko.html">Hidehiko Tanaka</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moto=Oka:Tohru.html">Tohru Moto-Oka</a>:
+Application of Hash to Data Base Machine and Its Architecture.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ngc/ngc1.html#KitsuregawaTM83">New Generation Computing 1(1)</a>: 63-74(1983)<dt>[Kotz94]<dd><a name="Kotz94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kotz:David.html">David Kotz</a>:
+Disk-directed I/O for MIMD Multiprocessors.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/osdi/osdi94.html#Kotz94">OSDI 1994</a>: 61-74<dt>[Lee96]<dd><a name="LeeT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Edward_K=.html">Edward K. Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thekkath:Chandramohan_A=.html">Chandramohan A. Thekkath</a>:
+Petal: Distributed Virtual Disks.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/asplos/asplos96.html#LeeT96">ASPLOS 1996</a>: 84-92<dt>[Livny87]<dd><a name="LivnyKB87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">Miron Livny</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Khoshafian:Setrag.html">Setrag Khoshafian</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Boral:Haran.html">Haran Boral</a>:
+Multi-Disk Management Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmetrics/sigmetrics87.html#LivnyKB87">SIGMETRICS 1987</a>: 69-77<dt>[Necula96]<dd><a name="NeculaL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Necula:George_C=.html">George C. Necula</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Peter.html">Peter Lee</a>:
+Safe Kernel Extensions Without Run-Time Checking.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/osdi/osdi96.html#NeculaL96">OSDI 1996</a>: 229-243<dt>[Ozharahan75]<dd>...
+<dt>[Patterson88]<dd><a name="PattersonGK88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:David_A=.html">David A. Patterson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibson:Garth_A=.html">Garth A. Gibson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">Randy H. Katz</a>:
+A Case for Redundant Arrays of Inexpensive Disks (RAID).
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod88.html#PattersonGK88">SIGMOD Conference 1988</a>: 109-116<dt>[Patterson95]<dd><a name="PattersonGGSZ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patterson:R=_Hugo.html">R. Hugo Patterson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gibson:Garth_A=.html">Garth A. Gibson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ginting:Eka.html">Eka Ginting</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stodolsky:Daniel.html">Daniel Stodolsky</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zelenka:Jim.html">Jim Zelenka</a>:
+Informed Prefetching and Caching.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp95.html#PattersonGGSZ95">SOSP 1995</a>: 79-95<dt>[Quest97]<dd>...
+<dt>[Riedel97]<dd>...
+<dt>[Romer96]<dd><a name="RomerLVWWBBL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Romer:Theodore_H=.html">Theodore H. Romer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Dennis.html">Dennis Lee</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Voelker:Geoff.html">Geoff Voelker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wolman:Alec.html">Alec Wolman</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:Wayne_A=.html">Wayne A. Wong</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baer:Jean=Loup.html">Jean-Loup Baer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bershad:Brian_N=.html">Brian N. Bershad</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Henry_M=.html">Henry M. Levy</a>:
+The Structure and Performance of Interpreters.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/asplos/asplos96.html#RomerLVWWBBL96">ASPLOS 1996</a>: 150-159<dt>[Ruemmler91]<dd>...
+<dt>[Seagate97]<dd>...
+<dt>[Small95]<dd>...
+<dt>[Smith79]<dd>...
+<dt>[Smith95]<dd>...
+<dt>[StorageTek94]<dd>...
+<dt>[Su75]<dd><a name="SuL75" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Su:Stanley_Y=_W=.html">Stanley Y. W. Su</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lipovski:G=_Jack.html">G. Jack Lipovski</a>:
+CASSM: A Cellular System for Very Large Data Bases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb75.html#SuL75">VLDB 1975</a>: 456-472<dt>[TPC98]<dd>...
+<dt>[TriCore97]<dd>...
+<dt>[Turley96]<dd>...
+<dt>[VanMeter96]<dd>...
+<dt>[Virage98]<dd>...
+<dt>[Wactlar96]<dd><a name="WactlarKSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wactlar:Howard_D=.html">Howard D. Wactlar</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kanade:Takeo.html">Takeo Kanade</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smith:Michael_A=.html">Michael A. Smith</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stevens:Scott_M=.html">Scott M. Stevens</a>:
+Intelligent Access to Digital Video: Informedia Project.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/computer/computer29.html#WactlarKSS96">IEEE Computer 29(5)</a>: 46-52(1996)<dt>[Wahbe93]<dd><a name="WahbeLAG93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wahbe:Robert.html">Robert Wahbe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lucco:Steven.html">Steven Lucco</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Anderson:Thomas_E=.html">Thomas E. Anderson</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graham:Susan_L=.html">Susan L. Graham</a>:
+Efficient Software-Based Fault Isolation.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp93.html#WahbeLAG93">SOSP 1993</a>: 203-216<dt>[Welling98]<dd>...
+<dt>[Wilkes95]<dd><a name="WilkesGSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilkes:John.html">John Wilkes</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Golding:Richard_A=.html">Richard A. Golding</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Staelin:Carl.html">Carl Staelin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sullivan:Tim.html">Tim Sullivan</a>:
+The HP AutoRAID Hierarchical Storage System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp95.html#WilkesGSS95">SOSP 1995</a>: 96-108<dt>[Yao85]<dd><a name="YaoY85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yao:Andrew_Chi=Chih.html">Andrew Chi-Chih Yao</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yao:F=_Frances.html">F. Frances Yao</a>:
+A General Approach to d-Dimensional Geometric Queries (Extended Abstract).
+<a href="http://theory.lcs.mit.edu/~dmjones/STOC/stoc85.html">STOC 1985</a>: 163-168</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/RiedelGF98,<br>  author    = {Erik Riedel and<br>               Garth A. Gibson and<br>               Christos Faloutsos},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Active Storage for Large-Scale Data Mining and Multimedia},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {62-73},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

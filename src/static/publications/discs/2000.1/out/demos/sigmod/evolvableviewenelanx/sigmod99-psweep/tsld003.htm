@@ -1,0 +1,137 @@
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Modules of PSWEEP Algorithm</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Modules of PSWEEP Algorithm</H1> 
+ <P><UL>
+?R</UL></P>
+<P><UL>
+Data Warehouse</UL></P>
+<P><UL>
+?V</UL></P>
+<P><UL>
+V</UL></P>
+<P><UL>
+?R, i, t</UL></P>
+<P><UL>
+Update View</UL></P>
+<P><UL>
+AssignTimeStamp</UL></P>
+<P><UL>
+UMQ</UL></P>
+<P><UL>
+?R, i, t</UL></P>
+<P><UL>
+?R, i, t</UL></P>
+<P><UL>
+PPU</UL></P>
+<P><UL>
+RPU</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+Q</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+QR</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+?V</UL></P>
+<P><UL>
+Information Source</UL></P>
+<P><UL>
+R</UL></P>
+<P><UL>
+ProcessQuery</UL></P>
+<P><UL>
+SendUpdate</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+QR’</UL></P>
+<P><UL>
+Q’</UL></P>
+<P><UL>
+DU</UL></P>
+<P><UL>
+Query</UL></P>
+<P><UL>
+QueryResult</UL></P>
+<P><UL>
+DataUpdate</UL></P>
+<P><UL>
+FIFO</UL></P>
+<P><UL>
+QR</UL></P>
+<P><UL>
+Q</UL></P>
+<P><UL>
+QR</UL></P>
+<P><UL>
+Legend</UL></P>
+<P><UL>
+Data
+</UL><UL>
+Storage
+</UL><UL>
+(Queue/Set)</UL></P>
+<P><UL>
+Database</UL></P>
+<P><UL>
+Process</UL></P>
+<P><UL>
+Data Flow</UL></P>
+<P><UL>
+Multi-
+</UL><UL>
+Threaded</UL></P>
+<P><UL>
+Data</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld002.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld004.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld003.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+ <FONT size=4><STRONG> Notes: </FONT></STRONG>
+  <HR SIZE=3> <P> <UL>
+Here, the QueryResult and DataUpdate are two timestamped Elements. 
+</UL><UL>
+
+</UL><UL>
+In this way, we can already solve the FIFO network assumption. By reducing the assumption to make the wrapper at the IS can assign the timestamp on  it. And the message with later stamp will include the effect of the message with earlier stamp.
+</UL><UL>
+
+</UL><UL>
+So, I don’t need the network to be FIFO. I can simplify the implementation of the FIFO channel
+</UL><UL>
+
+</UL><UL>
+
+</UL><UL>
+Need  to mention the Local Compensation in the View change Module..</UL> </P> 
+
+</Body>
+</HTML>

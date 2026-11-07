@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Querying Interface</TITLE>
+<META NAME="description" CONTENT="The Querying Interface">
+<META NAME="keywords" CONTENT="disima">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="disima.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html61"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html59"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html62"
+ HREF="node4.html">Working Canvas</A>
+<B> Up:</B> <A NAME="tex2html60"
+ HREF="node2.html">Modeling and Querying Images</A>
+<B> Previous:</B> <A NAME="tex2html54"
+ HREF="node2.html">Modeling and Querying Images</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00021000000000000000">
+The Querying Interface</A>
+</H2>
+Text-based querying is provided by the Multimedia 
+Object Query Language (MOQL), which is an extension 
+of the standard OQL language. We also defined an equivalent visual query
+language (VisualMOQL [<A
+ HREF="node14.html#oria99b">O&#214;X99</A>]) and a translator to translate a visual 
+query into an MOQL query.
+
+<P>
+VisualMOQL has these particular features:
+
+<UL>
+<LI>It is a declarative visual query language with a step-by-step 
+construction of queries, close to the way people think in natural languages.
+<BR></LI>
+<LI>It has a clearly defined semantics based on object calculus. 
+This feature can be used to conduct a theoretical study of the
+language, involving concepts such as expressive power and complexity.
+<BR></LI>
+<LI>It combines several querying approaches: semantic-based (query 
+image semantics using salient objects), attribute-based (specify and
+compare attribute values), and similarity-based (query by example). A
+user can start a query using the semantic and/or attribute-based
+approach and then choose an image for a similarity-based query.</LI>
+</UL>
+
+<P>
+Using the VisualMOQL startup window (Figure&nbsp;<A HREF="gif/LongQuery.gif"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="gif/cross_ref_motif.gif"></A>) the user
+specifies a query by choosing the image class s/he wants to query and
+the salient objects s/he wants to see in the images. Several levels of
+refinement are offered depending on the type of query and also on the
+level of precision the user wants the query result. The
+startup window consists of the following components:
+
+<UL>
+<LI>A chooser to select the image classes. Images
+stored in the database are categorized into user-defined
+classes. </LI>
+<LI>A salient object class browser which allows the user to choose
+the objects that he/she wants. </LI>
+<LI>A
+horizontal slider to specify the maximum number of images that
+will be returned as the result of the query. This is a quality of
+service parameter used by the query result presentation interface.</LI>
+<LI>A horizontal
+slider to specify the similarity threshold between the query image and
+the target images stored in the database. It is also used for color
+comparison. This is also a quality of service parameter for the
+presentation interface.</LI>
+<LI>A working canvas where the user constructs queries step by step.</LI>
+<LI>A query canvas where the
+user can construct compound queries based on simple queries
+(sub-queries) defined in the working canvas using AND, OR, and NOT
+operators.</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html61"
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html59"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html53"
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html62"
+ HREF="node4.html">Working Canvas</A>
+<B> Up:</B> <A NAME="tex2html60"
+ HREF="node2.html">Modeling and Querying Images</A>
+<B> Previous:</B> <A NAME="tex2html54"
+ HREF="node2.html">Modeling and Querying Images</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Vincent Oria</I>
+<BR><I>2001-01-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

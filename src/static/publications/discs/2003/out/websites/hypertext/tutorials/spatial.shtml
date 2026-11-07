@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>Spatial Hypertext and Information Analysis</h1>
+<h2>Frank Shipman</h2>
+<br>
+<h3>Description</h3>
+<p>
+Over the last decade, spatial hypertext has emerged as a vibrant
+area of research with an emphasis on how people collect, organize,
+annotate, and interpret information.  This tutorial will describe:
+<ul>
+  <li>  the emergence of spatial hypertext from navigational hypertext,
+
+  <li>  design trade-offs in creating spatial hypertext systems, 
+
+  <li>  a variety of spatial hypertext systems and applications, and
+
+  <li>  research issues in spatial hypertext.
+</ul>
+</p>
+<p>
+Information analysis, as the driving application of early spatial
+hypertext systems, will be discussed in detail.  Example tasks will
+include collecting information from a variety of sources, evaluating
+the veracity and significance of information, expressing multiple
+interrelationships between information chunks, and organizing a
+presentation of this information for others.
+</p>
+<p>
+This tutorial is aimed at hypertext researchers and writers who want
+to know more about spatial hypertext and its use, analysts looking
+for tools to aid in the collection and organization of information,
+and designers of systems that include visual/spatial expression.
+</p>
+<p>
+Participants will receive a copy (CD-ROM) of the Visual Knowledge
+Builder (VKB), a spatial hypertext system you can use for information
+analysis and many other tasks.
+</p>
+<br>
+<h3>Presenter biography</h3>
+<p>
+Frank Shipman is an Associate Professor in the Department of Computer
+Science and Center for the Study of Digital Libraries at Texas A&M
+University.  He has been pursuing research in the areas of hypermedia,
+computer-supported cooperative work, and intelligent user interfaces
+since 1987.  Frank was one of the original authors on the VIKI project
+and is currently the principal investigator on the Visual Knowledge
+Builder (VKB) project.  He is the author or co-author of numerous
+important papers in spatial hypertext, one of which received the
+Engelbart best paper award at Hypertext 99.  He manages on-going
+research projects in the areas of spatial hypertext, information
+visualization, requirements gathering, and computers and education.
+</p>
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>

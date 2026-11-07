@@ -1,0 +1,80 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo D1</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="dims2.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+Arbitrary dimensions</h3>
+RasDaMan can handle data with any kind of dimensionality. It is not limited
+to two, although most of the examples on these pages are two-dimensional
+images. Due to this freedom in dimensionality RasDaMan can be used for
+storing data from a wide range of applications, e.g. audio samples (1D),
+images (2D), movies and tomograms (3D) as well as high-dimensional, abstract
+data as used in OLAP data cubes.
+<p>For an example of 1D data we'll have a look at a projection to y=250
+of the following Digital Elevation Map of the Grand Canyon. The horizontal
+line signifies which part of the image is affected by the projection.
+<center>
+<p><a href="rockies.gif"><img SRC="sm_rockies.gif" BORDER=0 ></a></center>
+
+<p>The following query makes the server perform the projection to a 1D
+object which will then be sent to the client:
+<pre>SELECT img[*,*, 250]
+FROM&nbsp;&nbsp; rockies AS img</pre>
+For more about the trimming operator "<tt>[ ... ]</tt>" click
+<a href="basic2.html">here</a>.
+Alternatively you could download the entire image and make RasDaView do
+the projection; in this case, however, RasDaView was only used to display
+the data as a bar chart. Note how light areas in the image correspond to
+peaks and dark areas to valleys in the bar chart.
+<center>
+<p><a href="rockies2.gif"><img SRC="sm_rockies2.gif" BORDER=0 ></a></center>
+
+<p><!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="dims2.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>04-Mar-1998</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

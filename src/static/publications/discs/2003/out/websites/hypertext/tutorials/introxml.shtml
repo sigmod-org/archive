@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Hypertext 2002 Blank Space</title>
+<link rel     = STYLESHEET 
+      href    = "../style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<h1>Introduction to XML</h1>
+<h2>Steven J. DeRose, David Durand</h2>
+<br>
+<h3>Description</h3>
+<p>
+XML is a core document technology, whose relations to hypertext are 
+still being explored, and for which new applications are still being 
+found. This course provides an introduction to XML, and is a 
+re-vamped version of the well-attended XML tutorial that has been 
+presented at past Hypertext conferences.. This course will comprise a 
+technical overview of the language itself, as well as information 
+about its applications (especially as they relate to hypertext). We 
+will discuss document analysis, and the place of XML in the larger 
+group of related standards efforts, such as Xlink, RDF, XSL, and DOM. 
+The course is targeted at anyone who thinks they need a technical and 
+strategic overview of XML.
+</p>
+<br>
+<h3>Presenter biographies</h3>
+<p>
+Steven J. DeRose is Chair, Bible Technologies Group. He has served as 
+Chief Scientist at Inso Corporation, and Visiting Chief Scientist at 
+the Brown Univesity Scholarly Technology Group. Dr. DeRose is an 
+Editor of the Xlink specification, and has taken part in the XML, 
+TEI, and HyTime standards efforts. He was a founder of Electronic 
+Book Technologies and architect of the Dynatext product. He was head 
+of the TEI working group on Hypertext representation, and wrote the 
+TEI hypertext specification with David.
+</p>
+<p>
+David Durand is VP software architecture at Ingenta plc,  Chief 
+Scientist at the Scholarly Technology Group, and Adjunct Associate 
+Professor at Brown's Department of Computer Science. Dr. Durand is a 
+co-author, with Steve, of "Making Hypermedia Work: A User's Guide to 
+HyTime." He has taken part in the Text Encoding Initiative, XML, 
+HyTime, XLink and WebDAV standards efforts, and has been working with 
+and on structured document representations and hypertext for the last 
+20 years, in academic and industrial contexts.
+</p>
+<br>
+<center>
+<a href=../tutorials.shtml>Back to Main Tutorials Page</a>
+</center>
+<br><br>
+</body>
+</html>
+

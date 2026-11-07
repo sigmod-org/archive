@@ -1,0 +1,185 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>AKIRA: the prototype</title>
+</head>
+<body text="#000000" bgcolor="#FFE4B5" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+&nbsp;
+<br><a NAME="top"></a>
+<center><table BORDER >
+<tr VALIGN=CENTER>
+<td><img SRC="A_.gif" ALT="" ></td>
+
+<td><img SRC="K_.gif" ALT="" ></td>
+
+<td><img SRC="I_.gif" ALT="" ></td>
+
+<td><img SRC="R_.gif" ALT="" ></td>
+
+<td><img SRC="A_.gif" ALT="" ></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></td>
+
+<td ALIGN=CENTER COLSPAN="3"><font size=+3>The prototype</font></td>
+
+<td ALIGN=CENTER><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></td>
+</tr>
+</table></center>
+
+<center>
+<p><a href="akira_home.html">[HOME]</a></center>
+
+<p>We are sorry not to provide the presentation with the demonstration
+given at SIGMOD'98 but only a simulation. Nevertheless, the following scenario
+illustrates the different steps of the process.
+<br>&nbsp;
+<h1>
+<a NAME="story"></a><img SRC="frog.gif" > The Scenario</h1>
+Before any query is asked, the cache is empty: there is no predefined schema
+in the database, and thus no data either. You are the user and you are
+using AKIRA to get information about upcoming conferences. You will ask
+three queries:
+<ul>
+<li>
+<a href="#query1">Query 1:</a><i>"What are the upcoming conferences (with
+their submission deadline and location)?"</i></li>
+
+<li>
+<a href="#query2">Query 2:</a><i>"From the retrieved ones, what are the
+ones that are organized in 1998?"</i></li>
+
+<li>
+<a href="#query3">Query 3:</a><i>"What are the conferences (with their
+dates and location) where Abiteboul is a PC member?"</i></li>
+</ul>
+
+<p><br><form NAME="ButtonForm">
+<h1>
+<a NAME="query1"></a>Query 1</h1>
+You want to know <i>what are the conferences (with their submission deadline
+and location)</i>. First, you fill the&nbsp;<input TYPE="button" 
+		NAME="form" 
+		VALUE= "form"
+		onClick="window.open('./demo1.html','form','resizable')">and&nbsp;<input TYPE="button" 
+		NAME="send" 
+		VALUE= "send"
+		onClick="window.open('./demo2.html','send','resizable')">your
+query. (Follow <a href="akira_step_by_step.html">step by step</a> the evaluation
+of a query.)
+<p>The retrieved objects that populate class <tt>Conference</tt> are named
+with their key attribute which corresponds to their canonical representation.
+To have more information about <tt>SIGMOD'98</tt>, you&nbsp;<input TYPE="button" 
+		NAME="send" 
+		VALUE= "click on SIGMOD'98"
+		onClick="window.open('./demo3.html','send','resizable')">.
+<p>You can have access to the fragments to whom the object <tt>SIGMOD'98</tt>
+refers, by clicking on the value of an attribute. To access the fragments
+of the object <tt>Nov 17 1997</tt> of class <tt>Date</tt> extracted from
+SIGMOD'98 call for papers,&nbsp;<input TYPE="button" 
+		NAME="send" 
+		VALUE= "click on submissionDate"
+		onClick="window.open('./demo4.html','send','resizable')">
+<p>Two fragments corresponding to the submission date for
+<tt>SIGMOD'98</tt>
+have been extracted. You can directly access the call for paper and the
+extracted string of characters to verify the relevance of the extraction
+by&nbsp;<input TYPE="button" 
+		NAME="cache" 
+		VALUE= "clicking on the fragment"
+		onClick="window.open('./demo5.html','cache','resizable')">.
+<p><a NAME="query2"></a>
+<h1>
+Query 2</h1>
+Now, you want to refine your query and only select the <i>conferences organized
+in 1998</i> from the retrieved conferences. You refill the&nbsp;<input TYPE="button" 
+		NAME="form" 
+		VALUE= "form"
+		onClick="window.open('./demo6.html','form','resizable')">and&nbsp;<input TYPE="button" 
+		NAME="send" 
+		VALUE= "send"
+		onClick="window.open('./demo7.html','send','resizable')">your
+second query.
+<p>The cache contains all retrieved objects (including the ones corresponding
+to conferences organized in 1997 or 1999). Each evaluation of a query may
+add more information to the cache. At any time, you can access the&nbsp;<input TYPE="button" 
+		NAME="cache" 
+		VALUE= "content of the cache"
+		onClick="window.open('./demo8.html','cache','resizable','scroll(0,0)')">.
+<br>&nbsp;
+<h1>
+<a NAME="query3"></a>Query 3</h1>
+Now, you want to clear the cache and start again with a new query. You
+refill the&nbsp;<input TYPE="button" 
+		NAME="form" 
+		VALUE= "form"
+		onClick="window.open('./demo9.html','form','resizable')">and&nbsp;<input TYPE="button" 
+		NAME="send" 
+		VALUE= "send"
+		onClick="window.open('./demo10.html','send','resizable')">your
+third query.
+<br></form>
+<center>
+<p><font size=-2><a href="#top">[TOP]</a></font></center>
+
+<h1>
+<img SRC="frog.gif" > Core Ingredients</h1>
+
+<ul>
+<li>
+Java JDK-1.1.x, from <a href="http://www.javasoft.com">JavaSoft</a></li>
+
+<li>
+<a href="http://www.sun.com/suntest/JavaCC">JavaCC</a>, from Sun Microsystems</li>
+
+<li>
+<a href="http://www.perl.com">Perl 5.004</a></li>
+
+<li>
+PSE from <a href="http://www.odi.com" Alt="">ObjectStore</a></li>
+
+<li>
+Java Generic Library (JGL), from <a href="http://www.objectspace.com" Alt="">ObjectSpace</a></li>
+
+<li>
+PAT (regular expressions in Java), from <a href="http://www.win.net/~stevesoft/pat" Alt="">stevesoft</a></li>
+
+<li>
+Acme Web server, from <a href="http://www.acme.com">Acme</a></li>
+
+<li>
+Apache Web server, from <a href="http://www.apache.org">Apache.org</a></li>
+
+<li>
+Microsoft Internet Explorer 4.x</li>
+
+<li>
+Microsoft Agent</li>
+
+<li>
+Java in a Nutshell, by David Flanagan</li>
+
+<li>
+The Java Language Specification, by Gosling et al.</li>
+
+<li>
+Design Patterns, by Gamma et al.</li>
+
+<li>
+Programming Perl, by Larry Wall et al.</li>
+</ul>
+
+<center><font size=-2><a href="#top">[TOP]</a></font>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a>
+<p><br>
+<p><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

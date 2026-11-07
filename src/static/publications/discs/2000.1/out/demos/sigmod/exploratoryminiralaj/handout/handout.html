@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<TITLE>Demonstration: An Interface for the Exploratory Mining of Constrained Association Rules</TITLE>
+</HEAD>
+<BODY>
+
+<B><CENTER>Demonstration: A Prototype for the Exploratory Mining of Constrained Association Rules</CENTER>
+</B><I><CENTER>Raymond T. Ng, Laks V.S. Lakshmanan, Jaiwei Han, Teresa Mah</CENTER>
+</I><CENTER>SIGMOD 99, June 2, 1999</CENTER>
+<FONT SIZE=3>
+<P>&nbsp;</P>
+</FONT><B><P>1&#9;A Two-Phase Architecture</P>
+</B><FONT SIZE=3><P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">For years now, the classical model of association mining has resembled a black box. First, the user specifies the part of the database to be mined.  Next, the user specifies minimum thresholds for measures such as support and confidence.  The system then executes one of several fast mining algorithms.  At the end of a highly data intensive process, it returns a very large number of associations, some of which are hopefully what the user was looking for.  </P>
+<P ALIGN="JUSTIFY">We believe that there are three main drawbacks of the classical model:</P>
+<P ALIGN="JUSTIFY"></P>
+
+<UL>
+<LI>lack of user exploration and control</LI>
+<LI>lack of focus, and  </LI>
+<LI>rigid notion of relationships</LI></UL>
+
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">In the SIGMOD ‘98 paper, <I>Exploratory Mining and Pruning Optimizations of Constrained Association Rules</I>, we suggested changes to the classical architecture, giving the user the ability to explore the data before performing any crucial operations.  This new architecture is the first attempt at making the mining process exploratory on behalf of the user.  This is accomplished by splitting up the operation into two re-iterable phases, as shown in Figure 1.  In Phase I, the user can:</P>
+
+
+<UL>
+<LI>express focus by creating class, frequency, domain, aggregate, and two-variable <I>constraints</I> on the data to be mined</LI>
+<LI>delete, modify or reorder constraints, and</LI>
+<LI>run Apriori<SUP>+</SUP> or the optimized CAP algorithm to find pairs of candidates</LI></UL>
+
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">In Phase II, users can:
+<P ALIGN="JUSTIFY"></P>
+
+<UL>
+<LI>express focus by selecting only interesting candidate pairs to find relationships on, and</LI>
+<LI>express different notions of relationship by selecting from a variety of metrics</LI></UL>
+
+
+<P><CENTER><IMG SRC="twophase.jpg"></CENTER></P>
+<P ALIGN="CENTER">Figure 1: Two-Phase Architecture </P>
+<U>
+</U></FONT><B><P>2&#9;The CAP Prototype</P>
+</B><FONT SIZE=3>
+<P ALIGN="JUSTIFY">The prototype being demonstrated is the first fully functional association mining program capable of two-phase exploratory mining and constraint handling.  Some of its features include:</P>
+
+
+<UL>
+<LI>Exploratory mining using the two-phase architecture</LI>
+<LI>Handling of many different kinds of constrained frequent set queries</LI>
+<LI>Constrained frequent set mining with the optimized CAP algorithm</LI>
+<LI>Different relationship metrics including confidence, correlation or dependence</LI> 
+<LI>Sorting of candidate pairs based on frequency or &quot;distance&quot; to a constraint</LI>
+<LI>Selection helper to assist in the selection of interesting candidate sets</LI>
+<LI>Graphing of candidates</LI>
+<LI>Easy editing, deleting, copying and ordering of constraints</LI>
+<LI>File operations</LI>
+</UL>
+
+
+</FONT><B><P>3&#9;Our Demonstration</P>
+</B><FONT SIZE=3>
+<P ALIGN="JUSTIFY">A simple supermarket database is used in the prototype.  Each item in the database has an </FONT><TT>ItemID</TT><FONT SIZE=3>, an </FONT><TT>ItemName</TT><FONT SIZE=3>, a </FONT><TT>Type</TT><FONT SIZE=3> and a </FONT><TT>Price</TT><FONT SIZE=3>.  The supermarket has recently been carrying out a &quot;junk food&quot; promotion.  Customers who come in to buy a snack item can purchase a soda item for an additional penny.  Since the promotion, the manager has realized that sales overall have improved.  He wants to know what kinds of other items are being bought most frequently with the promotional combo.  Specifically, he is interested in only those sets of items whose average price is greater than or equal to $6, since his potential revenues are greater with higher priced products.       </P>
+<P ALIGN="JUSTIFY">The variable </FONT><TT>S</TT><FONT SIZE=3> will represent the antecedent set, and </FONT><TT>T</TT><FONT SIZE=3> will represent the consequent.  The following steps will be taken to find the associations:</P>
+
+<OL>
+
+<LI>Create the class constraints:</LI>
+
+
+<UL>
+</FONT><TT><LI>S <IMG SRC="subset.gif">
+ Type, T <IMG SRC="subset.gif">
+ ItemID</LI></TT></UL>
+
+</FONT><FONT SIZE=3><LI>Supply support values:</LI>
+
+
+<UL>
+</FONT><TT><LI>freq(S) <IMG SRC="geq.gif">
+ 15%, freq(T) <IMG SRC="geq.gif">
+ 10%</LI></TT></UL>
+
+</FONT><FONT SIZE=3><LI>Create the antecedent domain constraint:</LI>
+<UL>
+</FONT><TT><LI>S <IMG SRC="superset.gif">
+ {snacks, soda}</LI></TT></UL>
+</FONT><FONT SIZE=3><LI>Create the consequent aggregate constraint:</LI>
+
+
+<UL>
+</FONT><TT><LI>avg(T.Price) <IMG SRC="geq.gif"> 6</LI></TT></UL>
+
+</FONT><FONT SIZE=3><LI>Create a two-variable constraint to restrict overlapping of types between the
+antecedent and the consequent</LI>
+
+
+<UL>
+</FONT><TT><LI>S <IMG SRC="intersect.gif">
+ T.Type = &#216;
+</LI></TT></UL>
+
+</FONT><FONT SIZE=3><LI>Sort candidate sets </LI>
+
+
+<UL>
+<LI>Sort T first by </FONT><TT>avg(T.ItemID)</TT><FONT SIZE=3>, then by </FONT><TT>freq(T)</TT></LI></UL>
+
+</FONT><FONT SIZE=3><LI>Graph sorted candidate sets</LI>
+<LI>Assisted selection of candidate sets</LI>
+
+
+<UL>
+<LI>T has to be maximal</LI></UL>
+
+<LI><IMG SRC="chi.gif"><SUP>2</SUP> calculation of related sets</LI>
+</OL>
+</BODY>
+</HTML>

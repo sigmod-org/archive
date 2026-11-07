@@ -1,0 +1,20 @@
+We next demonstrate another operator called the "Relax" operator. This
+presents another example of automating the existing manual discovery
+process.  The Relax operator is a symmetric counterpart of the DIFF
+operator.  The DIFF operator enables us to dig deeper into a problem
+case by focussing the drill-down effort to the detailed problem
+cases. The Relax operator on the other hand, starts from a problem
+case at the detailed level and rolls up to generalize the problem case
+as far as possible.  Consider an example next.
+
+<p>
+Suppose an analyst observes the big drop in revenue from 1993 to 1994
+for Product = ``HRM/Payroll'', Geography = ``United States'' and
+Platform = ``Single-User Other''.  He might be able to diagnose the
+reason better if he found the most general scope of the problem. Was
+this problem specific to "United States" or other regions had similar
+drops?  Was there something wrong with the Platform? He searches for
+all these answers by doing a sequence of roll ups, selections, pivots
+etc around the problem case. We automate these operations using the
+"Relax" operator.
+

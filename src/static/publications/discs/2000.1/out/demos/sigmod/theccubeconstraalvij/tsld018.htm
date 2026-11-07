@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>PPT Slide</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Optimization</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld017.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld019.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr>Optimization</nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font size="5"><b>Optimization by Approximation-based Filtering and Indexing (cont.)</b></font></p>
+
+<p>To explain the query and the underlying structures, consider all 4D segments that
+appear in any trajectory. Further, consider the set of all xy-segments, i.e., 2D
+projections of the 4D segments on the xy-plane. Also, consider a 2D minimum bounded
+rectangle (MBR) for each such xy-segment. The indexed approximation grouping in our
+example maintains a spatial index on all such MBR's, using, say an R-tree index. For each
+MBR, the indexed approximation grouping stores all xy-segments corresponding to it (in
+this example it is typically just one xy-segment). This is graphically depicted in the
+right hand part of Figure&nbsp;. In general, the indexed approximation grouping is a
+structure that is comprised of a ``regular'' index structure, possibly based on
+appriximation (in our example - MBR), and the inverse structure pointing the objects being
+approximated (in our example - xy-segments). </p>
+
+<p>Now, for each xy-segment S, the CCUBE inverse grouping stores all trajectories that
+have at least one 4D segment whose xy-projection is S. This is graphically depicted in the
+left hand part of the following figure:</p>
+
+<p><img src="ind-2.gif" alt="ind-2.gif (7139 bytes)" WIDTH="468" HEIGHT="354"></p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

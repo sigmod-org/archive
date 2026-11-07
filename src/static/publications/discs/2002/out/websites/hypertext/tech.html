@@ -1,0 +1,444 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+        <title>Hypertext 2001</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="Author" content="n.o.bouvin@daimi.au.dk">
+    <meta name="Description" content="The ACM Conference on Hypertext and
+	  Hypermedia 2001 held August 14-18 2001 in Århus, Denmark">
+    <link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/Core/Ultramarine">
+    <link rel="stylesheet" type="text/css" href="http://www.daimi.au.dk/cgi-bouvin/css-redirect.pl">
+
+  </head>
+  <body>
+    
+    <h1>Technical Briefings</h1>
+    
+    <h2><a name="ted">DEEPER COSMOLOGY, DEEPER DOCUMENTS</a></h2>
+    <h3>Theodor Holm Nelson, Keio University, Southampton University and Project Xanadu</h3>
+    
+    <p>The rock-bottom paradigms of the computer world are simply
+      traditions.  Computer basics, as we teach them, are concerned with
+      convention, not deep reality.  Computers today basically simulate two
+      things: hierarchy and paper.  Hierarchy has been carefully put into
+      the structure of computer files because those who did so considered it
+      right and natural and the only way.  Paper has been simulated in the
+      structure of computers because it seemed right and natural and the
+      only way.  I believe both of these are forms of imprisonment that
+      constrict and warp our work and our thinking.  Adobe Acrobat and the
+      World Wide Web simulate <em>both</em> hierarchy and paper- hierarchy
+      on the left, paper on the right.  Acrobat does this in a single
+      package; the Web does it via the URL (which follows the domain name
+      with a hierarchical directory path, then ends in a simulation of paper
+      such as an HTML file).  And both these formats glorify appearance over
+      the management of content flow, representing, as it were, the triumph
+      of typesetters over authors.</p>
+    
+    <p>I would like to propose principled alternatives to both hierarchy and
+      paper.  First, a generalized non-hierarchical structure.  If we are
+      going to find an alternative cosmology to replace hierarchical 
+      directories, it had better be-- </p>
+    
+    <ul>
+      <li>just as simple,</li>
+      <li>just as extensible,</li>
+      <li>just as scalable,</li>
+      <li>and very beneficial.</li>
+    </ul>
+    
+    <p>I think that I have found such a structure.  It is both humorous and
+      powerful.</p>
+    
+    <p>In this cosmology, we build everything out of free-floating cells in
+      n-dimensional space, and view them locally from the cursor outward--
+      spreadsheets let loose and unsprung.  These cross-viewable
+      multidimensional lists (trademarked as "ZigZag" in some places)
+      provide an enjoyable new paradigm for all computer structures, with
+      interesting new designs and models for input, viewing, interaction,
+      data structures and programming.  These include--</p>
+
+    <ul>
+      <li>a paradoxical space with surprising new geometrical
+	properties;</li>
+      <li>a default visualization method that works even in tiny windows;</li>
+      <li>a default
+	interface that works even on phone keypads and game handles;</li>
+      <li>a generalization of lists and tables to N dimensions, providing new
+	forms of database, inheritance, file management, simplified graphical
+	programming, and other useful computer concepts;</li>
+      <li>high and easy extensibility with unusually few collisions; and</li>
+      <li>an enactment engine-- a spatial interpreter-- for new kinds of
+	programming.</li>
+    </ul>
+    
+    <p>Most importantly, multiple dimensions yield surprising
+      simplifications. These structures appear to streamline many aspects of
+      data and programming, for several reasons--</p>
+
+    <ul>
+      <li>everything may be visualized and manipulated uniformly at the lowest
+	level;</li>
+      <li>special cases may always be mapped to the same primitives;</li>
+      <li>the built-in connection primitives provide pathways that render many
+	customary constructs unnecessary;</li>
+      <li>elements may be referenced in many contexts with no need to spawn or
+	maintain redundant copies or structures.</li>
+    </ul>
+    
+    <p>Naturally, this has a number of applications for hypertext and
+      hypermedia.  I will demonstrate-- </p>
+
+    <ul>
+      <li>Genealogy where all parties are allowed to have a full set of
+	ancestors; unlike the conventional representation of genealogy by
+	"family trees", where women are spontaneously generated;</li>
+      <li>Personal organizers whose elements (like names and addresses) may be directly
+	connected whatever else they need to (like appointments);</li>
+      <li>Taking note of a birthday as a fluid item, simultaneously hooking up to name and
+	address, calendar and other birthdays-- rather than requiring the
+	opening of three different "applications".</li>
+      <li>Operating-system mechanisms easily explorable at all levels.  This
+	system also offers its own new and engrossing set of problems.  It is
+	easy to connect things in many ways.  It is also easy to get in trouble
+	with the selection of ranks and dimensions which do not scale.</li>
+    </ul>
+
+    <p>Projects based on this model are underway in Japan, Australia,
+      Finland and the U.K.  I hope to make it a whole operating system that
+      does away with "applications" altogether.</p>
+
+    <p>Now as to documents.  Project Xanadu, widely misunderstood, has
+      always been about electronic documents with-- </p>
+
+    <ul>
+      <li>2-way links</li>
+      <li>visible flow of content among documents and versions, especially
+	showing the differences among versions and the origins of quotations and
+	excerpts;</li>
+      <li>frictionless re-use of content;</li>
+      <li>a clean copyright solution.</li>
+    </ul>
+
+    <p>The specifics of the Xanadu model are extremely simple. First we
+      establish a Content Layer-- a level of</p>
+
+    <ul>
+      <li>cleanly quotable content (no internal markup-- keep it on the
+	side),</li>
+      <li>stable addressability (divorced from absolute locations),</li>
+      <li>long-term availability-- a serious and credible promise backed up with 
+	appropriate mechanisms.</li>
+    </ul>
+
+    <p>All new content goes into this content layer, not into the virtual
+      documents or versions themselves.</p>
+
+    <p>The rest is very straightforward.</p>
+    <ul>
+      <li>DOCUMENTS (more properly, Virtual Versions) are distributed in
+	virtual form, as lists of acquistion pointers to this content.</li>
+
+      <li>LINKS are between elements in this content layer.  Thus a link may
+	be traced (by its addresses) from any instance of content on one
+	side of the link to content on the other side; and in principle to
+	any instance of that content on the other side.</li>
+
+      <li>TRANSCLUSIONS (recognizable identities between contents of
+	documents and versions, showing origins) are recognized at the
+	system level by identities of content addresses.</li>
+
+      <li>VERSIONING is in principle easily managed: since a version is a
+	list of content, any two versions may be compared by the addresses
+	of their contents to find their hereditary differences (not misled
+	by retyping).  Version-intensive occupations, like law, government
+	and movies, constantly need to find differences and origins among
+	versions. Many endeavors require the maintenance of conjoined
+	parallel versions for different audiences.  Existing tools are
+	totally irrelevant.</li>
+
+      <li>GROUPWARE is clarified by the exact identifiability of each person's 
+	contributions, and the easy simultaneous maintenance of alternative 
+	conjoined versions for comparison and emphasis.</li>
+
+      <li>COPYRIGHT: knowing that copyright would not go away, we proposed
+	to make content re-usable and mixable.  Our clean copyright model is
+	based on the sale of fragments and the right to use them virtually
+	in new contexts.  Micropayments are proportional to downloaded
+	contents (royalty x quantity). This checksums and is manifestly
+	fair.</li>
+    </ul>
+    
+    <p>That is the Xanadu model as we have worked on it for decades. 
+      Because it is so different from the conventional approaches, no
+      implementations have been successful to date, though the 1988-92
+      designs (especially by Roger Gregory, Mark Miller and Eric Drexler)
+      were brilliant.  For nearly the last decade I have worked to adapt this
+      model to the Internet.  Recently, David Durand and I have come up with
+      a new proposed format on this model that will be intercompatible with
+      one-way HTML links, though in principle creating new islands of
+      bidirectional connection (both links and transclusions).  This format
+      (tentatively called VLIT, Virtual Literary Format) will be presented
+      here.  It uses less intrusive forms of XML and XLINK to specify
+      contents to be brought in and marked up.  It requires both server
+      scripting and on-board browser scripting within the file, since it must
+      outwit the mechanisms that were designed from an opposite
+      mentality.</p>
+    
+    <p>It also needs special editors and will benefit from browser plug-ins
+      and a deep caching mechanism for purchased content.  This endeavor is
+      considerably helped by the assumption that the issue of cleanly
+      re-usable stabilized content-- content which is markup-free,
+      delocalized and promised-- may be separated and handled by a number of
+      alternative parallel means.  These ideas may be disconcerting to those
+      who have steeped themselves in today's special effects.  I believe it
+      will be very good news for authors, editors, and those concerned with
+      the integrity, continuity and flow of content, and with the usability
+      of copyrighted material.</p>
+
+    <h2><a name="jim" href="presentations/whitehead6.ppt" target="_blank">WebDAV and DeltaV: Collaborative Authoring, Versioning, and
+      Configuration Management for the Web</a></h2>
+    
+    <h3>E. James Whitehead, Jr., University of California, Santa Cruz
+      E-mail: <a href="mailto:ejw@soe.ucsc.edu">ejw@soe.ucsc.edu</a></h3>
+
+    <h3>Abstract</h3>
+    
+    
+    <p>WebDAV and DeltaV are application-layer network protocols that
+      provide capabilities for remote collaborative authoring, metadata
+      management, version control, and configuration management. Both
+      protocols extend the core protocol of the Web, the Hypertext
+      Transfer Protocol (HTTP 1.1). WebDAV adds operations for overwrite
+      prevention, properties, and namespace management, while DeltaV
+      builds upon WebDAV to offer versioning (checkout and checkin),
+      autoversioning, workspaces, activities, and configuration
+      management.</p>
+    
+    <p><b>KEYWORDS:</b> remote collaborative authoring, version control,
+      configuration management</p>
+
+    <div style="text-align: center;">
+      <table width="80%">
+	<tbody>
+	  <tr style="text-align: center;">
+	    <td style="text-align: center;">
+	      <a name="fig1"><img width="414" height="292" src="pic/image002.gif"></a>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td style="text-align: center;"> <p style="text-align: center;"><b>Figure 1</b> - Three
+		collaborators, located at three different sites, are jointly
+		authoring a document using the WebDAV capabilities of Microsoft
+		Word 2000. The shared document is stored on a DeltaV server,
+		with auto-versioning enabled, and hence the document is
+		automatically versioned as the collaborators work.</p>
+	    </td>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+
+    <h3>Collaboration scenarios</h3>
+
+    <p>Consider the following Web site authoring, document
+      collaboration, and software development scenarios:</p>
+
+    <p>A task force of people from geographically dispersed business
+      units need to develop a report together. Throughout the
+      report-writing process, this group needs to solicit feedback, and
+      would like to keep a permanent copy of the exact report version
+      they are having other people review (see <a href="#fig1">Figure 1</a>).</p>
+
+    <p>A home computer user wants to develop a Web site, but has no
+      Unix shell or programming experience. Their Internet service
+      provider (ISP) must host their Web site, since they do not have a
+      server computer in their home, and the ISP limits up channel
+      traffic. Furthermore, the ISP would prefer not to give out shell
+      accounts, for security reasons.</p>
+
+    <p>A geographically diverse project team maintains their
+      project&rsquo;s Web site, allowing all project members to make Web
+      site updates (see <a href="#fig2">Figure 2</a>).</p>
+
+    <p>A large corporate Web site needs to accept content contributions
+      from any of the company&rsquo;s geographically separate business
+      units.</p>
+
+    <p>An open source project, comprised of team members from around
+      the globe, is collaboratively developing a software application.
+      They need to record all source code changes, as well as create
+      stable baselines of their source code corresponding to public
+      releases of the software. Furthermore, developers need to edit and
+      compile source code on their local machine.</p>
+
+    <p>All of these scenarios have in common the need to <i>remotely
+	author and version Web pages, documents, and source code.</i>
+      Together, WebDAV and DeltaV provide an open, standards-based
+      infrastructure that supports these scenarios.</p>
+
+
+    <div style="text-align: center;">
+      <table width="80%">
+	<tbody>
+	  <tr>
+	    <td align="center" style="text-align: center;">
+	      <a name="fig2"><img width="449" height="367" src="pic/image004.gif" align="center"></a>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td><p style="text-align: center;"><b>Figure 2</b> - WebDAV Web Site
+		Collaboration. A team with members in New York, Hong Kong, and
+		Milan collaboratively maintain their project&rsquo;s Web site
+		using a combination of WebDAV-enabled Web site authoring, and
+		image authoring tools, in this case Go Live 5, and Photoshop
+		6.
+	      </p>
+	    </td>
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+
+    <h3>WebDAV Features</h3>
+
+    <p>The WebDAV protocol supports the following capabilities:</p>
+
+    <p><i>Overwrite prevention:</i>keeping more than one person from
+      working on a document at the same time. This prevents the "lost
+      update problem" in which modifications are lost as first one
+      author, then another writes their changes without merging the other
+      author's work.</p>
+
+    <p>WebDAV provides an exclusive write lock, which guarantees that
+      only the lock owner can overwrite a locked resource, and a shared
+      write lock, which allows a group of collaborators to work together
+      on a resource. Locks automatically time out, easing administration
+      of a WebDAV server.</p>
+
+    <p>Since WebDAV locks exist independent of a TCP connection, it is
+      possible to take out a lock, work disconnected from the network,
+      and then reconnect to submit editing updates. This type of work
+      pattern is very useful for wireless networking, where network
+      connections can frequently get dropped.</p>
+
+    <p><i>Properties:</i> <b></b>creation, removal, and querying of
+      information about Web pages, such as its author, last modified
+      date, etc. Also included is the ability to link pages of any media
+      type to related pages.</p>
+
+    <p>WebDAV properties are (name, value) pairs where the value is a
+      well-formed Extensible Markup Language (XML) document, thus
+      permitting storage of a wide range of XML-tagged data.&nbsp; XML
+      values provide typing via structured markup, extensibility from
+      addition of new tags, and plug and play support for XML Linking
+      (XLink) and Resource Description Framework (RDF) values.</p>
+
+    <p><i>Namespace management:</i> <b></b>The ability to copy and move
+      Web pages within a server&rsquo;s namespace, and the ability to
+      create and list the contents of collections. Namespace management
+      permits the creation of &ldquo;Save As&hellip;&rdquo; style dialog
+      boxes found in most application software.</p>
+
+    <h3>DeltaV features</h3>
+
+    <p>The DeltaV protocol builds upon WebDAV&rsquo;s features and data
+      model to provide the following capabilities:</p>
+
+    <p><i>Versioning:</i> The ability to record important states in the
+      evolution of a resource. DeltaV supports the basic
+      checkout-edit-checkin style of version control. Additionally,
+      autoversioning allows a server to automatically record revisions
+      made by versioning unaware tools, such as those that only
+      understand the WebDAV protocol. Comments may be recorded about a
+      revision, and a listing of the predecessor and successor
+      relationships can be retrieved.</p>
+
+    <p><i>Workspaces:</i> A workspace is a location where a person can
+      work in isolation from the ongoing changes made by all other
+      collaborators working on the same set of resources. There are two
+      broad classes of workspace, server-side and client-side.
+      Server-side workspaces provide a portion of the server&rsquo;s URL
+      namespace for each collaborator. For example, an author named Uffe
+      might have a workspace named /ws/ht01paper/uffe/. Client-side
+      workspaces expect all collaborators to work in the same portion of
+      the URL space. In both cases, clients are expected to replicate
+      significant portions of the version history to a local
+      store/filesystem for increased efficiency of file intensive
+      operations, like compiles.</p>
+
+    <p><i>Activities:</i> An activity represents a single logical
+      change, tracking all the resources that were modified in the course
+      of making the change. One use of activities is track several
+      different logical changes made in a single workspace, and then
+      selectively merge a subset of those logical changes to other
+      workspaces. Activities are restricted to tracking only changes made
+      on a single line of descent, and hence can be used to enforce
+      versioning policies where each change must be on only one line of
+      descent. Such a policy makes it easier to merge logical
+      changes.</p>
+
+    <p><i>Configuration Management</i>: The ability to record a
+      snapshot of the current revisions of multiple resources. DeltaV
+      provides operations to record the specific resource versions that
+      comprise a workspace or a collection hierarchy, and automatically
+      creates a by-reference copy of the snapshot in a portion of the
+      server&rsquo;s URL namespace. This makes each snapshot always
+      available, even to versioning unaware clients.</p>
+
+    <h3>Supporting Applications</h3>
+
+    <p>Several insights guided the WebDAV and DeltaV work. It was
+      assumed that people would not switch tools to gain the advantages
+      of remote authoring. Furthermore, the best way to enable widespread
+      support for remote collaborative authoring and versioning in
+      everyday tools was to create a network protocol, rather than an
+      application program interface (API). This approach has paid off:
+      today there are many industrial strength clients and server
+      supporting WebDAV. Supporting clients include Office 2000, Acrobat,
+      Photoshop, Go Live 5, and Dreamweaver 4. WebDAV servers include
+      Apache mod_dav, Microsoft IIS 5, Exchange 2000, and Sharepoint,
+      Oracle Internet File System, Adobe In Scope, Xythos WebFile Server,
+      and the W3C Jigsaw server.</p>
+
+    <h3>Additional Information</h3>
+
+    <dl>
+
+      <dt>WebDAV Resources &ndash; <a href="http://www.webdav.org/" target="_top">http://www.webdav.org/</a></dt>
+      <dd>A web site containing a central collection of pages and links to
+	all things WebDAV.</dd>
+
+      <dt>WebDAV Working Group &ndash; <a
+					  href="http://www.ics.uci.edu/pub/ietf/webdav/" target="_top">http://www.ics.uci.edu/pub/ietf/webdav/</a></dt>
+      <dd>Contains links to active documents, and a complete list of
+	WebDAV-supporting applications.</dd>
+
+      <dt>HTTP Extensions for Distributed
+	Authoring &ndash; Y. Y. Goland, E. J. Whitehead, Jr., A. Faizi,
+	S. R. Carter, D. C. Jensen, RFC 2518, February, 1999. <a
+								 href="http://www.ics.uci.edu/pub/ietf/webdav/protocol/rfc2518.pdf" target="_top">http://www.ics.uci.edu/pub/ietf/webdav/protocol/rfc2518.pdf</a></dt>
+      <dd>This is the WebDAV Distributed Authoring Protocol
+	specification.</dd>
+
+      <dt>DeltaV Working Group &ndash; <a href="http://www.webdav.org/deltav/" target="_top">http://www.webdav.org/deltav/</a></dt>
+      <dd>The home page for the IETF Delta-V Working Group, with links off to
+	the most recent specifications.</dd>
+
+      <dt>Versioning Extensions to WebDAV &ndash; G. Clemm, J. Amsden,
+	C. Kaler, J. Whitehead, Internet-Draft, work-in-progress,
+	draft-ietf-deltav-versioning-15, April 14, 2001. <a
+							    href="http://www.webdav.org/deltav/protocol/draft-ietf-deltav-versioning-15.htm"
+							    target="_top">http://www.webdav.org/deltav/protocol/draft-ietf-deltav-versioning-15.htm</a></dt>
+      
+      <dd>The most recent revision of the versioning and configuration
+	management protocol specification.</dd>
+    </dl>
+
+
+
+
+
+    <div style="text-align: center; font-size: 0.8em;">Last modified: Wednesday, 29-Aug-2001 20:43:35 MET DST</div>
+  </body>
+</html>
+

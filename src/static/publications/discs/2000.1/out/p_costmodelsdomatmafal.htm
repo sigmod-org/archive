@@ -1,0 +1,743 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Cost Models DO Matter: Providing Cost Information for Diverse Data Sources in a Federated System</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_8.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Cost Models DO Matter: Providing Cost Information for Diverse Data Sources in a Federated System
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_mary_tork_roth.htm">Mary Tork Roth</a>, 
+<a href = "a_fatma_ozcan.htm">Fatma Ozcan</a>, and 
+<a href = "a_laura_m_haas.htm">Laura M. Haas</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/costmodelsdomatmafal.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbhighperforpport.htm">Return to High-performance Application Support</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  An important issue for federated systems of diverse data sources is optimizing cross-source queries, without building knowledge of individual sources into the optimizer. This paper describes a framework through which a federated system can obtain the necessary cost and cardinality information for optimization. Our framework makes it easy to provide cost information for diverse data sources, requires few changes to a conventional optimizer and is easily extensible to a broad range of sources. We believe our framework for costing is the first to allow accurate cost estimates for diverse sources within the context of a traditional cost-based optimizer.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[ACPS96]
+<dd>
+<a name="AdaliCPS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Adali:Sibel.html">
+Sibel Adali
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Candan:K=_Sel=ccedil=uk.html">
+K. Sel&ccedil;uk Candan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">
+V. S. Subrahmanian
+</a>
+: Query Caching and Optimization in Distributed Mediator Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#AdaliCPS96">
+SIGMOD Conf. 1996
+</a>
+: 137-148
+<dt>
+[Bla96]
+<dd>
+<a name="Blakeley96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blakeley:Jos=eacute=_A=.html">
+Jos&eacute; A. Blakeley
+</a>
+: Data Access for the Masses through OLE DB. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#Blakeley96">
+SIGMOD Conf. 1996
+</a>
+: 161-172
+<dt>
+[C+97]
+<dd>
+<a name="CareyDNAGS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Asgarian:Mohammad.html">
+Mohammad Asgarian
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brown:Paul.html">
+Paul Brown
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shah:Dhaval.html">
+Dhaval Shah
+</a>
+: The BUCKY Object-Relational Benchmark (Experience Paper). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod97.html#CareyDNAGS97">
+SIGMOD Conference 1997
+</a>
+: 135-146
+<dt>
+[Cor97]
+<dd>
+... 
+<dt>
+[CS93]
+<dd>
+<a name="ChaudhuriS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: Query Optimization in the Presence of Foreign Functions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1993
+</a>
+: 529-542
+<dt>
+[Day85]
+<dd>
+<a name="Dayal85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: Query Processing in a Multidatabase System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/kim85.html#Dayal85">
+Query Processing in Database Systems 1985
+</a>
+: 81-108
+<dt>
+[DKS92]
+<dd>
+<a name="DuKS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Weimin.html">
+Weimin Du
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">
+Ravi Krishnamurthy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">
+Ming-Chien Shan
+</a>
+: Query Optimization in a Heterogeneous DBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1992
+</a>
+: 277-291
+<dt>
+[DSD95]
+<dd>
+<a name="DuSD95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Du:Weimin.html">
+Weimin Du
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shan:Ming=Chien.html">
+Ming-Chien Shan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: Reducing Multidatabase Query Response Time by Tree Balancing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#DuSD95">
+SIGMOD Conference 1995
+</a>
+: 293-303
+<dt>
+[EDNO97]
+<dd>
+<a name="EvrendilekDNO97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Evrendilek:Cem.html">
+Cem Evrendilek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dogac:Asuman.html">
+Asuman Dogac
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nural:Sena.html">
+Sena Nural
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ozcan:Fatma.html">
+Fatma Ozcan
+</a>
+: Multidatabase Query Optimization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd5.html#EvrendilekDNO97">
+Distributed and Parallel Databases 5(1)
+</a>
+: 77-114(1997)
+<dt>
+[GST96]
+<dd>
+<a name="GardarinST96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">
+Georges Gardarin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sha:Fei.html">
+Fei Sha
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tang:Zhao=Hui.html">
+Zhao-Hui Tang
+</a>
+: Calibrating the Query Optimizer Cost Model of IRO-DB, an Object-Oriented Federated Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 378-389
+<dt>
+[HFLP89]
+<dd>
+<a name="HaasFLP89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freytag:Johann_Christoph.html">
+Johann Christoph Freytag
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lohman:Guy_M=.html">
+Guy M. Lohman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+: Extensible Query Processing in Starburst. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#HaasFLP89">
+SIGMOD Conference 1989
+</a>
+: 377-388
+<dt>
+[HKWY97]
+<dd>
+<a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">
+Jun Yang
+</a>
+: Optimizing Queries Across Diverse Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 276-285
+<dt>
+[HS93]
+<dd>
+<a name="HellersteinS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+: Predicate Migration: Optimizing Queries with Expensive Predicates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#HellersteinS93">
+SIGMOD Conference 1993
+</a>
+: 267-276
+<dt>
+[LOG93]
+<dd>
+<a name="LuOG93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lu:Hongjun.html">
+Hongjun Lu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ooi:Beng_Chin.html">
+Beng Chin Ooi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goh:Cheng_Hian.html">
+Cheng Hian Goh
+</a>
+: Multidatabase Query Optimization: Issues and Solutions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride93.html#LuOG93">
+RIDE-IMS 1993
+</a>
+: 137-143
+<dt>
+[LRO96]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Querying Heterogeneous Information Sources Using Source Descriptions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 251-262
+<dt>
+[N+93]
+<dd>
+<a name="NiblackBEFGPYFT93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Niblack:Wayne.html">
+Wayne Niblack
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barber:Ron.html">
+Ron Barber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Equitz:William.html">
+William Equitz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Flickner:Myron.html">
+Myron Flickner
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Glasman:Eduardo_H=.html">
+Eduardo H. Glasman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petkovic:Dragutin.html">
+Dragutin Petkovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yanker:Peter.html">
+Peter Yanker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Taubin:Gabriel.html">
+Gabriel Taubin
+</a>
+: The QBIC Project: Querying Images by Content, Using Color, Texture, and Shape. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/spieSR/spieSR93.html#NiblackBEFGPYFT93">
+Storage and Retrieval for Image and Video Databases (SPIE) 1993
+</a>
+: 173-187
+<dt>
+[NGT98]
+<dd>
+<a name="NaackeGT98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naacke:Hubert.html">
+Hubert Naacke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">
+Georges Gardarin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tomasic:Anthony.html">
+Anthony Tomasic
+</a>
+: Leveraging Mediator Cost Models with Heterogeneous Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#NaackeGT98">
+ICDE 1998
+</a>
+: 351-360
+<dt>
+[ONK+96]
+<dd>
+<a name="OzcanNKED96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ozcan:Fatma.html">
+Fatma Ozcan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nural:Sena.html">
+Sena Nural
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Koksal:Pinar.html">
+Pinar Koksal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Evrendilek:Cem.html">
+Cem Evrendilek
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dogac:Asuman.html">
+Asuman Dogac
+</a>
+: Dynamic Query Optimization on a Distributed Object Management Platform. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm96.html#OzcanNKED96">
+CIKM 1996
+</a>
+: 117-124
+<dt>
+[PGH96]
+<dd>
+<a name="PapakonstantinouGH96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+: Capabilities-Based Query Rewriting in Mediator Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#PapakonstantinouGH96">
+PDIS 1996
+</a>
+: 170-181
+<dt>
+[PGMW95]
+<dd>
+<a name="PapakonstantinouGW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Object Exchange Across Heterogeneous Information Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#PapakonstantinouGW95">
+ICDE 1995
+</a>
+: 251-260
+<dt>
+[ROH99]
+<dd>
+... 
+<dt>
+[RS97]
+<dd>
+<a name="RothS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roth:Mary_Tork.html">
+Mary Tork Roth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schwarz:Peter_M=.html">
+Peter M. Schwarz
+</a>
+: Don't Scrap It, Wrap It! A Wrapper Architecture for Legacy Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 266-275
+<dt>
+[SAC+79]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">
+SIGMOD Conference 1979
+</a>
+: 23-34
+<dt>
+[SBM95]
+<dd>
+<a name="SalzaBM95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Salza:Silvio.html">
+Silvio Salza
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barone:Giovanni.html">
+Giovanni Barone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morzy:Tadeusz.html">
+Tadeusz Morzy
+</a>
+: Distributed Query Optimization in Loosly Coupled Multidatabase Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt95.html#SalzaBM95">
+ICDT 1995
+</a>
+: 40-53
+<dt>
+[SC94]
+<dd>
+<a name="ScheuermannC94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scheuermann:Peter.html">
+Peter Scheuermann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chong:Eugene_Inseok.html">
+Eugene Inseok Chong
+</a>
+: Role-based Query Processing in Multidatabase Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt94.html#ScheuermannC94">
+EDBT 1994
+</a>
+: 95-108
+<dt>
+[TRV96]
+<dd>
+<a name="TomasicRV96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tomasic:Anthony.html">
+Anthony Tomasic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Raschid:Louiqa.html">
+Louiqa Raschid
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">
+Patrick Valduriez
+</a>
+: Scaling Heterogeneous Databases and the Design of Disco. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs96.html#TomasicRV96">
+ICDCS 1996
+</a>
+: 449-457
+<dt>
+[UFA98]
+<dd>
+<a name="UrhanFA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Urhan:Tolga.html">
+Tolga Urhan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Amsaleg:Laurent.html">
+Laurent Amsaleg
+</a>
+: Cost Based Query Scrambling for Initial Delays. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod98.html#UrhanFA98">
+SIGMOD Conference 1998
+</a>
+: 130-141
+<dt>
+[ZL98]
+<dd>
+<a name="ZhuL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhu:Qiang.html">
+Qiang Zhu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">
+Per-&Aring;ke Larson
+</a>
+: Solving Local Cost Estimation Problem for Global Query Optimization in Multidatabase Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd6.html#ZhuL98">
+Distributed and Parallel Databases 6(4)
+</a>
+: 373-421(1998)
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="HaasKU99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ursu:Ioana.html">
+Ioana Ursu
+</a>
+: Loading a Cache with Query Results. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1999
+</a>
+: 351-362
+<li>
+ 
+<a name="Zadorozhny99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zadorozhny:Vladimir.html">
+Vladimir Zadorozhny
+</a>
+: Cost-based Magic for Web Queries (Extended Abstract). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/adbis/adbis99s.html#Zadorozhny99">
+ADBIS (Short Papers) 1999
+</a>
+: 185-192
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/RothOH99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Mary&nbsp;Tork&nbsp;Roth&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fatma&nbsp;Ozcan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laura&nbsp;M.&nbsp;Haas},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cost&nbsp;Models&nbsp;DO&nbsp;Matter:&nbsp;Providing&nbsp;Cost&nbsp;Information&nbsp;for&nbsp;Diverse<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data&nbsp;Sources&nbsp;in&nbsp;a&nbsp;Federated&nbsp;System},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{599-610},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

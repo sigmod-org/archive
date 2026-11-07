@@ -1,0 +1,657 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Capturing and Querying Multiple Aspects of Semistructured Data</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Capturing and Querying Multiple Aspects of Semistructured Data
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_curtis_e_dyreson.htm">Curtis E. Dyreson</a>, 
+<a href = "a_michael_h_boumlhle.htm">Michael H. B&ouml;hlen</a>, and 
+<a href = "a_christian_s_jensen.htm">Christian S. Jensen</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/capturingandquecumic.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbsemistructeries.htm">Return to Semistructured Data &amp; XML Queries</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Motivated to a large extent by the substantial and growing prominence of the World-Wide Web and the potential benefits that may be obtained by applying database concepts and techniques to web data management, new data models and query languages have emerged that contend with web data. These models organize data in graphs where nodes denote objects or values and edges are labeled with single words or phrases. Nodes are described by the labels of the paths that lead to them, and these descriptions serve as the basis for querying. 
+<p>
+ This paper proposes an extensible framework for capturing and querying meta-data 
+<i>
+properties
+</i>
+ in a semistructured data model. Properties such as temporal aspects of data, prices associated with data access, quality ratings associated with the data, and access restrictions on the data are considered. Specifically, the paper defines an extensible data model and an accompanying query language that provides new facilities for matching, slicing, collapsing, and coalescing properties. It also briefly introduces an implemented, SQL-like query language for the extended data model that includes additional constructs for the effective querying of graphs with properties.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AggarwalKM94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aggarwal:Suhir.html">
+Suhir Aggarwal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Inje.html">
+Inje Kim
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Meng:Weiyi.html">
+Weiyi Meng
+</a>
+: Database Exploration with Dynamic Abstractions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dexa/dexa94.html#AggarwalKM94">
+DEXA 1994
+</a>
+: 621-630
+<dt>
+[2]
+<dd>
+<a name="ArocenaM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arocena:Gustavo_O=.html">
+Gustavo O. Arocena
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: WebOQL: Restructuring Documents, Databases, and Webs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#ArocenaM98">
+ICDE 1998
+</a>
+: 24-33
+<dt>
+[3]
+<dd>
+<a name="AbiteboulQMWW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">
+Jason McHugh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiener:Janet_L=.html">
+Janet L. Wiener
+</a>
+: The Lorel Query Language for Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jodl/jodl1.html#AbiteboulQMWW97">
+Int. J. on Digital Libraries 1(1)
+</a>
+: 68-88(1997)
+<dt>
+[4]
+<dd>
+... 
+<dt>
+[5]
+<dd>
+<a name="BohlenSS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hlen:Michael_H=.html">
+Michael H. B&ouml;hlen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">
+Richard T. Snodgrass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soo:Michael_D=.html">
+Michael D. Soo
+</a>
+: Coalescing in Temporal Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1996
+</a>
+: 180-191
+<dt>
+[6]
+<dd>
+<a name="BunemanDS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Programming Constructs for Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl95.html#BunemanDS95">
+DBPL 1995
+</a>
+: 12
+<dt>
+[7]
+<dd>
+<a name="BunemanDHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hillebrand:Gerd_G=.html">
+Gerd G. Hillebrand
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language and Optimization Techniques for Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#BunemanDHS96">
+SIGMOD Conf. 1996
+</a>
+: 505-516
+<dt>
+[8]
+<dd>
+<a name="Buneman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+: Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#Buneman97">
+PODS 1997
+</a>
+: 117-121
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="ChawatheAW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chawathe:Sudarshan_S=.html">
+Sudarshan S. Chawathe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Representing and Querying Changes in Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#ChawatheAW98">
+ICDE 1998
+</a>
+: 4-13
+<dt>
+[11]
+<dd>
+<a name="CastanoFMS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Castano:Silvana.html">
+Silvana Castano
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fugini:Mariagrazia.html">
+Mariagrazia Fugini
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Martella:Giancarlo.html">
+Giancarlo Martella
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Samarati:Pierangela.html">
+Pierangela Samarati
+</a>
+: Database Security.  Addison-Wesley &amp; ACM Press 1995, ISBN 0-201-59375-0
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/castano95.html">
+Contents
+</a>
+<dt>
+[12]
+<dd>
+... 
+<dt>
+[13]
+<dd>
+<a name="FernandezFLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language for a Web-Site Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#FernandezFLS97">
+SIGMOD Record 26(3)
+</a>
+: 4-11(1997)
+<dt>
+[14]
+<dd>
+<a name="FlorescuLM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: Database Techniques for the World-Wide Web: A Survey. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod27.html#FlorescuLM98">
+SIGMOD Record 27(3)
+</a>
+: 59-74(1998)
+<dt>
+[15]
+<dd>
+<a name="GoldmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: DataGuides: Enabling Query Formulation and Optimization in Semistructured Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 436-445
+<dt>
+[16]
+<dd>
+<a name="GoldmanW98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Interactive Query and Search in Semistructured Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/webdb/webdb1998.html#GoldmanW98">
+WebDB 1998
+</a>
+: 52-62
+<dt>
+[17]
+<dd>
+... 
+<dt>
+[18]
+<dd>
+<a name="JensenDBCEGGHJKKLMMNPPRSSSSSTTW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jensen:Christian_S=.html">
+Christian S. Jensen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dyreson:Curtis_E=.html">
+Curtis E. Dyreson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/B=ouml=hlen:Michael_H=.html">
+Michael H. B&ouml;hlen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clifford:James.html">
+James Clifford
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Elmasri:Ramez.html">
+Ramez Elmasri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gadia:Shashi_K=.html">
+Shashi K. Gadia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grandi:Fabio.html">
+Fabio Grandi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hayes:Patrick_J=.html">
+Patrick J. Hayes
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jajodia:Sushil.html">
+Sushil Jajodia
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/K=auml=fer:Wolfgang.html">
+Wolfgang K&auml;fer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kline:Nick.html">
+Nick Kline
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorentzos:Nikos_A=.html">
+Nikos A. Lorentzos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitsopoulos:Yannis_G=.html">
+Yannis G. Mitsopoulos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Montanari:Angelo.html">
+Angelo Montanari
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nonen:Daniel_A=.html">
+Daniel A. Nonen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Peressi:Elisa.html">
+Elisa Peressi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pernici:Barbara.html">
+Barbara Pernici
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Roddick:John_F=.html">
+John F. Roddick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarda:Nandlal_L=.html">
+Nandlal L. Sarda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scalas:Maria_Rita.html">
+Maria Rita Scalas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Segev:Arie.html">
+Arie Segev
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Snodgrass:Richard_T=.html">
+Richard T. Snodgrass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soo:Michael_D=.html">
+Michael D. Soo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tansel:Abdullah_Uz.html">
+Abdullah Uz Tansel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tiberio:Paolo.html">
+Paolo Tiberio
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: The Consensus Glossary of Temporal Database Concepts - February 1998 Version. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dagstuhl/dagstuhl-tdb97.html#JensenDBCEGGHJKKLMMNPPRSSSSSTTW97">
+Temporal Databases, Dagstuhl 1997
+</a>
+: 367-405
+<dt>
+[19]
+<dd>
+<a name="LudascherHLMS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lud=auml=scher:Bertram.html">
+Bertram Lud&auml;scher
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Himmer=ouml=der:Rainer.html">
+Rainer Himmer&ouml;der
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lausen:Georg.html">
+Georg Lausen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/May:Wolfgang.html">
+Wolfgang May
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schlepphorst:Christian.html">
+Christian Schlepphorst
+</a>
+: Managing Semistructured Data with FLORID: A Deductive Object-Oriented Perspective. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is23.html#LudascherHLMS98">
+Information Systems 23(8)
+</a>
+: 589-613(1998)
+<dt>
+[20]
+<dd>
+... 
+<dt>
+[21]
+<dd>
+<a name="McHughAGQW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">
+Jason McHugh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Lore: A Database Management System for Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#McHughAGQW97">
+SIGMOD Record 26(3)
+</a>
+: 54-66(1997)
+<dt>
+[22]
+<dd>
+<a name="MiloS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Index Structures for Path Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt99.html#MiloS99">
+ICDT 1999
+</a>
+: 277-295
+<dt>
+[23]
+<dd>
+<a name="NestorovAM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nestorov:Svetlozar.html">
+Svetlozar Nestorov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+: Infering Structure in Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#NestorovAM97">
+SIGMOD Record 26(4)
+</a>
+: 39-43(1997)
+<dt>
+[24]
+<dd>
+... 
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/DyresonBJ99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Curtis&nbsp;E.&nbsp;Dyreson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;H.&nbsp;B{\"o}hlen&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christian&nbsp;S.&nbsp;Jensen},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Capturing&nbsp;and&nbsp;Querying&nbsp;Multiple&nbsp;Aspects&nbsp;of&nbsp;Semistructured&nbsp;Data},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{290-301},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

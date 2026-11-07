@@ -1,0 +1,116 @@
+	          XV Simposio Brasileiro de Banco de Dados
+                          02 a 04 de outubro de 2000
+   
+                XIV Simposio Brasileiro de Engenharia de Software
+                          04 a 06 de outubro de 2000
+  
+                        Joao Pessoa - Paraiba - Brasil
+
+                              FICHA DE INSCRICAO
+                              ==================
+
+NOME COMPLETO:__________________________________________________CPF:_________
+
+              __________________________________________________
+
+NOME CRACHA:____________________________________________________
+
+INSTUICAO:______________________________________________________RG:__________
+
+ENDERECO:____________________________________________________________________
+
+         ____________________________________BAIRRO:_________________________
+
+CIDADE:__________________________________UF:_____CEP:__________PAIS:_________
+
+FONE:_______________ CELULAR:_____________ FAX:_______________SEXO:__________
+
+E-MAIL:______________________
+
+INSCRICAO:  ( ) SBBD'2000        ( ) SBES'2000       ( ) SBBD'2000+SBES'2000
+
+WORKSHOPS:
+
+  ( ) WMF'2000 - WORKSHOP DE METODOS FORMAIS 
+  ( ) WQS'2000 - WORKSHOP DE QUALIDADE DE SOFTWARE
+  ( ) WTES'2000 - WORKSHOP DE TESES EM ENGENHARIA DE SOFTWARE
+
+TUTORIAIS SBBD:
+
+  ( ) Querying the WEB
+  ( ) Web Mining: Concepts, Practices and Research
+  ( ) Semistructured Data
+  ( ) Genome Databases 
+
+MINICURSOS SBBD:
+
+  ( ) Integrando Banco de Dados e Web
+  ( ) Data Warehouse: Estratégias, Arquitetura e Ferramentas
+  ( ) Banco de Dados Orientado a Objetos
+  ( ) Integrando Java e Banco de Dados
+
+MINICURSOS SBES:
+
+  ( ) Desenvolvimento Baseado em Componentes 
+  ( ) Desenvolvimento de Software para Web
+  ( ) Estruturando Aplicações Distribuídas em Java 
+  ( ) Padrões de Arquitetura de Software para Sistemas Distribuídos 
+  ( ) Introdução ao Comércio Eletrônico 
+  ( ) Introdução ao Teste de Software 
+  ( ) Software Engineering for Real-Time Systems 
+
+
+CATEGORIA: ( ) ESTUDANTE                  ( ) PROFISSIONAL
+
+EXTRA:     [ ] AUTOR/APRESENTADOR         [ ] MEMBRO DE COMITE 
+               DE TRABALHO                    DE SIMPOSIO/WORKSHOP
+
+SBC: ( ) SOU SOCIO!   No.:_______________
+
+
+TOTAL A PAGAR:_________________ (Consulte tabela abaixo para calculos)
+
+
+COMO SOUBE DO EVENTO?___________________________________________
+
+
+
+                                         TABELA DE PRECOS
+                                         ================
+
+                                                 Cada Minicurso 
+Categoria            SBES ou SBBD   SBES + SBBD   ou Tutorial      WMF      WQS     WTES
+=========================================================================================
+Profissional não membro da SBC
+-----------------------------------------------------------------------------------------
+Até 27-Set-2000        175,00          262,00        61,00       135,00    61,00    61,00
+Após 27-Set-2000       200,00          300,00        70,00       150,00    70,00    70,00
+-----------------------------------------------------------------------------------------
+Profissional membro da SBC
+-----------------------------------------------------------------------------------------
+Até 27-Set-2000        113,00          170,00        39,00        90,00    39,00    39,00
+Após 27-Set-2000       130,00          195,00        45,00       100,00    45,00    45,00
+-----------------------------------------------------------------------------------------
+Estudante não membro da SBC
+-----------------------------------------------------------------------------------------
+Até 27-Set-2000         78,00          118,00        27,00        68,00    27,00    27,00
+Após 27-Set-2000        90,00          135,00        31,00        75,00    31,00    31,00
+-----------------------------------------------------------------------------------------
+Estudante membro da SBC
+-----------------------------------------------------------------------------------------
+Até 27-Set-2000         52,00           78,00        18,00        45,00    18,00    18,00
+Após 27-Set-2000        60,00           90,00        21,00        50,00    21,00    21,00
+-----------------------------------------------------------------------------------------
+
+INSTRUCOES:
+
+ * Depositar o valor total na seguinte conta bancaria:
+   Favorecido: Sociedade Brasileira de Computacao
+   Caixa Economica Federal - Agencia 1010 - Operacao 03 - C/C 538-1
+ * Deseja recibo? Se sim, informe como: ( ) CGC________   ( ) CPF_________
+ * Documentos a serem enviados:
+   - Comprovante de deposito com autenticacao bancaria.
+   - Comprovante de pagamento da anuidade da SBC, se socio.
+   - Declaracao de estudante regularmente matriculado (caso seja estudante)
+   - Ficha de inscricao preenchida
+ * Fax para envio: (83) 247-4424

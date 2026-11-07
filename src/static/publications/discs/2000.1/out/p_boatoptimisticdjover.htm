@@ -1,0 +1,511 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - BOAT-Optimistic Decision Tree Construction</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_12.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+BOAT-Optimistic Decision Tree Construction
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_johannes_gehrke.htm">Johannes Gehrke</a>, 
+<a href = "a_venkatesh_ganti.htm">Venkatesh Ganti</a>, 
+<a href = "a_raghu_ramakrishnan.htm">Raghu Ramakrishnan</a>, and 
+<a href = "a_wei-yin_loh.htm">Wei-Yin Loh</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/boatoptimisticdjover.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmodataminingtrees.htm">Return to Data Mining - Association Rules and Decision Trees</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Classification is an important data mining problem. Given a training database of records, each tagged with a class label, the goal of classification is to build a concise model that can be used to predict the class label of future, unlabeled records. A very popular class of classifiers are decision trees. All current algorithms to construct decision trees, including all main-memory algorithms, make one scan over the training database per level of the tree. We introduce a new algorithm (BOAT) for decision tree construction that improves upon earlier algorithms in both performance and functionality. BOAT constructs several levels of the tree in only two scans over the training database, resulting in an average performance gain of 300% over previous work. The key to this performance improvement is a novel optimistic approach to tree construction in which we construct an initial tree using a small subset of the data and refine it to arrive at the final tree. We guarantee that any difference with respect to the “real” tree (i.e., the tree that would be constructed by examining all the data in a traditional way) is detected and corrected. The correction step occasionally requires us to make additional scans over subsets of the data; typically, this situation rarely arises, and can be addressed with little added cost. Beyond offering faster tree construction, BOAT is the first scalable algorithm with the ability to incrementally update the tree with respect to both insertions and deletions over the dataset. This property is valuable in dynamic environments such as data warehouses, in which the training dataset changes over time. The BOAT update operation is much cheaper than completely re-building the tree, and the resulting tree is guaranteed to be identical to the tree that would be produced by a complete re-build.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AD97]
+<dd>
+... 
+<dt>
+[AGI+92]
+<dd>
+<a name="AgrawalGIIS92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ghosh:Sakti_P=.html">
+Sakti P. Ghosh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Iyer:Balakrishna_R=.html">
+Balakrishna R. Iyer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: An Interval Classifier for Database Mining Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#AgrawalGIIS92">
+VLDB 1992
+</a>
+: 560-573
+<dt>
+[AIS93]
+<dd>
+<a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Database Mining: A Performance Perspective. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde5.html#AgrawalIS93">
+TKDE 5(6)
+</a>
+: 914-925(1993)
+<dt>
+[BFOS84]
+<dd>
+... 
+<dt>
+[ET93]
+<dd>
+... 
+<dt>
+[FMM96]
+<dd>
+<a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">
+Takeshi Fukuda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">
+Yasuhiko Morimoto
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">
+Shinichi Morishita
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">
+Takeshi Tokuyama
+</a>
+: Constructing Efficient Decision Trees by Using Optimized Numeric Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#FukudaMMT96">
+VLDB 1996
+</a>
+: 146-155
+<dt>
+[FMMT96a]
+<dd>
+<a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">
+Takeshi Fukuda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">
+Yasuhiko Morimoto
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">
+Shinichi Morishita
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">
+Takeshi Tokuyama
+</a>
+: Data Mining Using Two-Dimensional Optimized Accociation Rules: Scheme, Algorithms, and Visualization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 13-23
+<dt>
+[FMMT96b]
+<dd>
+<a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">
+Takeshi Fukuda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">
+Yasuhiko Morimoto
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">
+Shinichi Morishita
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">
+Takeshi Tokuyama
+</a>
+: Mining Optimized Association Rules for Numeric Attributes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#FukudaMMT96">
+PODS 1996
+</a>
+: 182-191
+<dt>
+[FPSSU96]
+<dd>
+<a name="FayyadPSU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fayyad:Usama_M=.html">
+Usama M. Fayyad
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">
+Gregory Piatetsky-Shapiro
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smyth:Padhraic.html">
+Padhraic Smyth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Uthurusamy:Ramasamy.html">
+Ramasamy Uthurusamy
+</a>
+ (Eds.): Advances in Knowledge Discovery and Data Mining.  AAAI/MIT Press 1996, ISBN 0-262-56097-6
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/fayyad96.html">
+Contents
+</a>
+<dt>
+[GRG98]
+<dd>
+<a name="GehrkeRG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">
+Johannes Gehrke
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">
+Raghu Ramakrishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">
+Venkatesh Ganti
+</a>
+: RainForest - A Framework for Fast Decision Tree Construction of Large Datasets. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#GehrkeRG98">
+VLDB 1998
+</a>
+: 416-427
+<dt>
+[Han97]
+<dd>
+... 
+<dt>
+[LLS97]
+<dd>
+... 
+<dt>
+[LS97]
+<dd>
+... 
+<dt>
+[LS97]
+<dd>
+... 
+<dt>
+[Man94]
+<dd>
+... 
+<dt>
+[MAR96]
+<dd>
+<a name="MehtaAR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">
+Manish Mehta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rissanen:Jorma.html">
+Jorma Rissanen
+</a>
+: SLIQ: A Fast Scalable Classifier for Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt96.html#MehtaAR96">
+EDBT 1996
+</a>
+: 18-32
+<dt>
+[MFM+98]
+<dd>
+<a name="MorimotoFMTY98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">
+Yasuhiko Morimoto
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">
+Takeshi Fukuda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Matsuzawa:Hirofumi.html">
+Hirofumi Matsuzawa
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">
+Takeshi Tokuyama
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yoda:Kunikazu.html">
+Kunikazu Yoda
+</a>
+: Algorithms for Mining Association Rules for Binary Segmentations of Huge Categorical Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#MorimotoFMTY98">
+VLDB 1998
+</a>
+: 380-391
+<dt>
+[MS98]
+<dd>
+<a name="MegiddoS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Megiddo:Nimrod.html">
+Nimrod Megiddo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+: Discovering Predictive Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd98.html#MegiddoS98">
+KDD 1998
+</a>
+: 274-278
+<dt>
+[MST94]
+<dd>
+<a name="MichieST94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Michie:Donald.html">
+Donald Michie
+</a>
+, D. J. Spiegelhalter, C. C. Taylor: Machine Learning, Neural and Statistical Classification.  Ellis Horwood 1994, ISBN 0-13-106360-X
+<br>
+ 
+<dt>
+[Mur95]
+<dd>
+... 
+<dt>
+[Olk93]
+<dd>
+... 
+<dt>
+[Qui86]
+<dd>
+<a name="Quinlan86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">
+J. Ross Quinlan
+</a>
+: Induction of Decision Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml1.html#Quinlan86">
+Machine Learning 1(1)
+</a>
+: 81-106(1986)
+<dt>
+[RS98]
+<dd>
+<a name="RastogiS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shim:Kyuseok.html">
+Kyuseok Shim
+</a>
+: PUBLIC: A Decision Tree Classifier that Integrates Building and Pruning. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#RastogiS98">
+VLDB 1998
+</a>
+: 404-415
+<dt>
+[SAM96]
+<dd>
+<a name="ShaferAM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shafer:John_C=.html">
+John C. Shafer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">
+Manish Mehta
+</a>
+: SPRINT: A Scalable Parallel Classifier for Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#ShaferAM96">
+VLDB 1996
+</a>
+: 544-555
+<dt>
+[UBC97]
+<dd>
+<a name="UtgoffBC97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Utgoff:Paul_E=.html">
+Paul E. Utgoff
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Berkman:Neil_C=.html">
+Neil C. Berkman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clouse:Jeffery_A=.html">
+Jeffery A. Clouse
+</a>
+: Decision Tree Induction Based on Efficient Tree Restructuring. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml29.html#UtgoffBC97">
+Machine Learning 29(1)
+</a>
+: 5-44(1997)
+<dt>
+[Utg89]
+<dd>
+<a name="Utgoff89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Utgoff:Paul_E=.html">
+Paul E. Utgoff
+</a>
+: Incremental Induction of Decision Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml4.html#Utgoff89">
+Machine Learning 4
+</a>
+: 161-186(1989)
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/GehrkeGRL99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Johannes&nbsp;Gehrke&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Venkatesh&nbsp;Ganti&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raghu&nbsp;Ramakrishnan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wei-Yin&nbsp;Loh},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{BOAT-Optimistic&nbsp;Decision&nbsp;Tree&nbsp;Construction},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{169-180},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

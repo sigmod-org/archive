@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0090)http://www.congress-online.com/RIDE2001/guest/IDa349005dc80ddb/head.html?cur_accesslevel=0 -->
+<HTML><HEAD><TITLE>Untitled</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=JavaScript>
+<!--
+  var placeholder1 = new Object();
+  var placeholder2 = new Object();
+  var placeholder3 = new Object();
+  var placeholder4 = new Object();
+  var placeholder5 = new Object();
+  var placeholder6 = new Object();
+  var placeholderHotel = new Object();
+  var startflag="";
+var pers_sum1=0;
+var pers_sum2=0;
+for (i=1;i<21;i++)
+{
+  placeholder1[i]="0";
+  placeholder2[i]="0";
+  placeholder3[i]="0";
+  placeholder4[i]="0";
+  placeholder5[i]="0";
+  placeholderHotel[i]="0";
+}
+ 
+function Go(x)
+{
+parent.location.href='index.html?cur_accesslevel='+x;
+}
+    //-->
+function buildtable(){
+  var paraCount=buildtable.arguments.length;
+  if (paraCount<2) 
+    alert("ParameterAnzahl zum Aufbau der Tabelle falsch");
+  var row=buildtable.arguments[0];
+  var col=buildtable.arguments[1];
+  
+  document.write("<table "+">");
+  
+  for (i=0;i<row;i++){
+    document.write("<tr "+">");
+    for (j=0;j<col;j++){
+      document.write("<td "+">");
+      text.document.write(buildtable.arguments[i*col+j+2]);
+    }
+  }
+
+  document.write("</table>");
+}
+
+var ht_element, ht_value;
+
+function hashtable_init(){
+  ht_element=null;
+  ht_value=null;
+  ht_element=new Array();
+  ht_value=new Array();
+}
+
+function hashtable(add_ele, add_val){
+  if ((add_ele.type=="radio") || (add_ele.type=="checkbox")){
+    if (add_ele.checked){
+      //alert("Ausgewähltges Feld: "+add_ele.name);
+      ht_element[ht_element.length]=add_ele.name;
+      ht_value[ht_value.length]=add_val;
+    } //else alert("nicht ausgewähltes Feld: "+add_ele.name);
+  }
+  else {
+    ht_element[ht_element.length]=add_ele.name;
+    ht_value[ht_value.length]=add_val;
+  }
+}
+
+function ret_hashtable(){
+  return(ht_element, ht_value);
+}
+  
+function DreiFrames(moben, mlinks, main){
+   parent.menu.location.href="welcomemenu?selectMenu="+escape(moben);
+   parent.title.location.href="welcometitle?selectMenu="+escape(mlinks)+"&parentMenu="+escape(moben);
+   parent.text.location.href=main;
+}
+
+function ZweiFrames(moben, mlinks){
+   parent.menu.location.href="welcomemenu?selectMenu="+escape(moben);
+   parent.title.location.href="welcometitle?selectMenu="+escape(mlinks)+"&parentMenu="+escape(moben);
+   //parent.text.location.href=main;
+}
+Browser = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 ))) || 
+  (((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 )));
+
+NSBrowser = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )));
+
+
+  function jump(name,What)
+ {
+  var adress="http://"+window.location.host+"/RIDE2001/guest/"+What;     front=window.open(adress,name,'width=650,height=400,toolbar=0,directories=0,menubar=0,status=0,resizable=1,location=0,scrollbars=1,copyhistory=0');
+  if (NSBrowser) front.focus();
+ }
+
+
+</SCRIPT>
+
+<META content="MSHTML 5.50.4916.2300" name=GENERATOR></HEAD>
+<BODY text=white bgColor=#666600>
+<TABLE height=40 cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=left><FONT face="Helvetica, Arial" 
+      size=6><B><I>RIDE-DM'2001</I></B></FONT> </TD>
+    <TD align=right><FONT face="Helvetica, Arial" size=4>April 1-2, 2001, 
+      Heidelberg, Germany</FONT> </TD></TR></TBODY></TABLE></BODY></HTML>

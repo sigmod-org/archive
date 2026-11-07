@@ -1,0 +1,9 @@
+Biografia Shari Pfleeger
+
+His career in computing has been spent at the interface between research
+and application. He has crossed the industry/academic fence several times
+with 15 years in IBM, another 15 at Manchester University, almost 3 years
+at Harlequin. Since August 1999, He is a Professor of Computing Science at
+the University of Newcastle. His Researches Areas are Dependability of
+Computer-Based Systems, Concurrency, Logics (for Partial Functions),
+(Formal Methods) Support Systems and Other (including VDM).

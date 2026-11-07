@@ -1,0 +1,11 @@
+Biografia - Cliff Jones
+
+  Cliff Jones has split his career between industry and academia. He is
+currently Professor of Computing Science at Newcastle University in theUK.
+  His main research has been in formal methods for developing computer
+systems and he  played a major part in the development and dissemination
+of the "Vienna Development Method" (VDM) both while at IBM Vienna and after
+when Professor at Manchester University. Cliff's recent interests have
+turned to broader issues of dependability such as how to design systems
+which tolerate errors (including those of users). He has published ten
+books and many papers, is a Fellow of the ACM.

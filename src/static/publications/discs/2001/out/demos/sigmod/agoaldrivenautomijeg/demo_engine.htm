@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>The Mentor-lite Demo: Workflow Engine and Orbix Daemon</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#E7EDF8" text="#000000" link="#000099" vlink="#003366" alink="#990000">
+<dl>
+<dd>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_return.htm"> Previous Step</a></td>
+<td><a href="demo_worklist2.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial, Helvetica, sans-serif" size="3"><b>Workflow Engine and Orbix Daemon</b></font></p>
+<p>The execution of the workflow continues following the workflow specification and depending on the submitted flow control data.</p>
+<table>
+	<tr><td align="center"><a href="engine.gif"><img src="engine_tn.gif"></a></td></tr>
+<tr><td align="center">(click on figure to enlarge)</td></tr>
+</table>
+<p>The workflow specifications are interpreted at runtime, which is a crucial prerequisite for flexible exception handling and dynamic modifications during runtime. The interpreter performs a stepwise execution of the workflow specification according to its formal semantics [1]. For each step, the activities to be performed by the step are determined. Automatic activities, i.e. activities that do not require any user interaction, are immediatly started via CORBA. Intellectual activities are added to a user's worklist after a <a href="demo_worklist2.htm">role resolution</a>.</p>
+<p>Mentor-lite supports a protocol for distributed execution of workflows. A communication manager is responsible for sending and receiving synchronization messages between the engines. These messages contain information about locally raised events, updates of state chart variables and state information of the local engine [2]. When a synchronization message is received, the corresponding updates at the receiving site are performed. In order to guarantee a consistent global state even in the presence of site or network failures, we have built reliable message queues using the CORBA Object Transaction Services.</p>
+
+<p>After a while the next user finds the next activity as a work item in her <b><a href="demo_worklist2.htm">worklist</a></b> and the workflow goes on ...
+<p>&nbsp;</p>
+<p><b>References</b></p>
+<p>[1]	D. Wodtke, G.Weikum: <i><a href="http://www-dbs.cs.uni-sb.de/papers/icdt97.ps">A Formal Foundation for Distributed Workflow Execution Based on State Charts</a></i>, in Proceedings of International Confonference on Database Theory (ICDT), Delphi, Greece, 1997.</p>
+<p>[2]	P. Muth, D. Wodtke, J. Weissenfels, A. Kotz Dittrich, G. Weikum: <i><a href="http://www-dbs.cs.uni-sb.de/papers/JIIS97.ps">From Centralized Workflow Specification to Distributed Workflow Execution</a></i>, in Journal of Intelligent Information Systems, 10:2, 1998</p>
+<table cellpadding="10">
+<tr>
+<td><img src="barrow.gif" width="30" height="10"><a href="demo_return.htm"> Previous Step</a></td>
+<td><a href="demo_worklist2.htm">Next Step </a><img src="farrow.gif" width="30" height="10"></td>
+</tr>
+</table>
+</dd>
+</dl>
+</body>
+</html>

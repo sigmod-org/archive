@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>More Examples</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>More Examples</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld006.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld008.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr>More&nbsp;Examples</nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld013.htm">Polynomial&nbsp;Complexity</a></nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font size="5"><strong>More Examples</strong></font></p>
+
+<p>FO + Linear constraints are fairly expressive. In particular, FO + Linear expresses any
+linear transformations such as rotation, translation and stretch; check discreteness and
+boundness, emptiness, containment, disjointness; compute convex hulls (of a bounded number
+of points), augment and join objects, change coordinate systems, etc. For example, the
+CCUBE CST-algebra expression </p>
+
+<pre>
+<strong>     (x,y,z) | (x = a_1 * t_1 + ... + a_{10} * t_{10} &amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      y = b_1 * t_1 + ... + b_{10} * t_{10} &amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      z = c_1 * t_1 + ... + c_{10} * t_{10} &amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      t_1 &gt;= 0 + ... + t_{10} &gt;= 0 &amp;&amp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      t_1 + ... + t_{10} = 1)</strong>
+</pre>
+
+<p>gives the convex hull of 10 3D-points <strong><tt>(a_1,b_1,c_1),...,(a_10,b_10,c_10)</tt></strong>.
+</p>
+
+<p>As another example, suppose we have two 2D CST objects, <tt>o1</tt> in variables <tt>u,v</tt>
+and <tt>o2</tt> in variables <tt>x,y</tt>. Joining the two objects, based on <strong><tt>v
+== x</tt></strong>, can be expressed in CCUBE as <strong><tt>(u,v,y) | (o1 &amp;&amp; o2
+&amp;&amp; y == v)</tt></strong> or as<strong> <tt>(u,v,y) | (o1 &amp;&amp;
+o2.rename(x/v))</tt> </strong></p>
+
+<p>Still, many important notions cannot be expressed with linear constraints. In
+particular, the Euclidean distance which can be expressed using (convex) quadratic
+function, is not linearly expressible. As an example, if we have a collection <tt>Desks_in_room</tt>,
+where <tt>extent</tt> of each room is given in the room's coordinates <tt>x,y</tt>, the
+following query (which uses quadratic constraints, and thus would not currently run on
+CCUBE) would find all pairs of (references to) desks that are within 10 cm of each other: </p>
+
+<pre>
+      <strong> SELECT pair(dsk1,dsk2)
+       INTO   {Set&lt;pair&lt;DESK*&gt;&gt;} result
+       FROM   Desks_in_room AS {DESK*} dsk1
+              Desks_in_room AS {DESK*} dsk2
+       WHERE  SAT(dsk1-&gt;extent.rename(x/x1,y/y2) &amp;&amp; 
+                  dsk2-&gt;extent.rename(x/x2,y/y2) &amp;&amp;
+                  (x1 - x2)^2 + (y1 - y2)^2 &lt;= 10))</strong>
+</pre>
+
+<p>However, if, for example, we were to find all pairs of desks that touch (or intersect)
+each other, we would just replace the content of the <strong><tt>WHERE</tt></strong>
+clause with <strong><tt>SAT(dsk1.extent &amp;&amp; dsk2.extent)</tt></strong> which runs
+in CCUBE. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

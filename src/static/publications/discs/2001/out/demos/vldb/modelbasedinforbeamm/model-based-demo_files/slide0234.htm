@@ -1,0 +1,262 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<title>Model-Based Mediator Demo</title>
+<meta name=Description content="30-Jan-01: Example Query Evaluation (I)  ">
+<link rel=next href=slide0227.htm>
+<![if !ppt]>
+<script>
+<!--
+function Update()
+{
+  if( window.name == "PPTSld" )
+    parent.SlideUpdated('slide0234.htm');   
+  else
+    parent.location.href = "../model-based-demo.html";
+}
+
+function NoHref() {}
+//-->
+</script>
+<![endif]>
+</head>
+
+<body background="master04_background.gif" bgcolor="#000066" alink="#000044"
+link="#00cc99" vlink=yellow text=white topmargin=0 leftmargin=0
+onload="Update()">
+
+<table border=0 valign=top width=767 height=575 cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=8 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=25 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=69 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=59 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=430 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=144 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=7 height=0 nowrap><img src=space.gif border=0></td>
+  <td width=18 height=0 nowrap><img src=space.gif border=0></td>
+ </tr>
+ <tr>
+  <td width=767 height=20 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=161 height=41 colspan=4></td>
+  <td width=430 height=41>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=430 height=41 align=center><font face=Helvetica color="#ffcc66"
+    size=5>Example Query Evaluation (I)</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=176 height=41 colspan=4></td>
+ </tr>
+ <tr>
+  <td width=767 height=42 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=33 height=312 colspan=2></td>
+  <td width=702 height=312 colspan=4>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=29 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=1 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=9 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=24 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=1 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=13 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=19 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=1 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=57 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=41 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=33 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=24 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=43 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=45 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=67 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=65 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=27 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=111 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=46 height=0 nowrap><img src=space.gif border=0></td>
+    <td width=3 height=0 nowrap><img src=space.gif border=0></td>
+   </tr>
+   <tr>
+    <td width=29 height=26><font face=Helvetica color="#dddddd" size=4>•</font></td>
+    <td width=311 height=26 colspan=13><font face=Helvetica color="#dddddd"
+    size=4>Example: </font><font face=Helvetica color="#ffcc66" size=4><b>protein_distribution</b></font><br>
+    </td>
+    <td width=362 height=26 colspan=7></td>
+   </tr>
+   <tr>
+    <td width=702 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=39 height=23 colspan=3></td>
+    <td width=24 height=23><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=344 height=23 colspan=11><font face=Helvetica color="#dddddd"
+    size=4><b>given:</b> </font><font face=Helvetica color=yellow size=4><i>organism</i></font><font
+    face=Helvetica color="#dddddd" size=4>, </font><font face=Helvetica
+    color=yellow size=4><i>protein</i></font><font face=Helvetica
+    color="#dddddd" size=4>, </font><font face=Helvetica color=yellow size=4><i>brain_region</i></font><br>
+    </td>
+    <td width=295 height=23 colspan=6></td>
+   </tr>
+   <tr>
+    <td width=702 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=39 height=23 colspan=3></td>
+    <td width=24 height=23><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=132 height=23 colspan=6><font face=Helvetica color="#dddddd"
+    size=4><b>ANATOM DM</b>:</font><br>
+    </td>
+    <td width=507 height=23 colspan=11></td>
+   </tr>
+   <tr>
+    <td width=702 height=3 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=77 height=23 colspan=6></td>
+    <td width=19 height=23><font face=Helvetica color="#ffcc66" size=4>•</font></td>
+    <td width=606 height=23 colspan=14><font face=Helvetica color="#ffcc66"
+    size=4>recursively traverse</font><font face=Helvetica color="#dddddd"
+    size=4> the </font><font face=Helvetica color=yellow size=4><i>has_a_star</i></font><font
+    face=Helvetica color="#dddddd" size=4> paths under </font><font
+    face=Helvetica color=yellow size=4><i>brain_region </i></font><font
+    face=Helvetica color="#dddddd" size=4>collect</font><br>
+    </td>
+   </tr>
+   <tr>
+    <td width=96 height=20 colspan=7></td>
+    <td width=199 height=20 colspan=6><font face=Helvetica color="#dddddd"
+    size=4>all </font><font face=Helvetica color=yellow size=4><i>anatomical_entities</i></font><br>
+    </td>
+    <td width=407 height=20 colspan=8></td>
+   </tr>
+   <tr>
+    <td width=702 height=3 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=39 height=23 colspan=3></td>
+    <td width=24 height=23><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=165 height=23 colspan=7><font face=Helvetica color="#dddddd"
+    size=4><b>Source PROLAB</b>:</font><br>
+    </td>
+    <td width=474 height=23 colspan=10></td>
+   </tr>
+   <tr>
+    <td width=702 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=77 height=23 colspan=6></td>
+    <td width=19 height=23><font face=Helvetica color="#ffcc66" size=4>•</font></td>
+    <td width=560 height=23 colspan=12><font face=Helvetica color="#ffcc66"
+    size=4>join</font><font face=Helvetica color="#dddddd" size=4> with
+    anatomical structures and </font><font face=Helvetica color="#ffcc66"
+    size=4>collect</font><font face=Helvetica color="#dddddd" size=4> the value
+    of attribute</font><br>
+    </td>
+    <td width=46 height=23 colspan=2></td>
+   </tr>
+   <tr>
+    <td width=96 height=21 colspan=7></td>
+    <td width=514 height=21 colspan=11><font face=Helvetica color="#dddddd"
+    size=4>“image.segments.features.feature.protein_amount” </font><font
+    face=Helvetica color="#ffcc66" size=4>where</font><br>
+    </td>
+    <td width=92 height=21 colspan=3></td>
+   </tr>
+   <tr>
+    <td width=96 height=21 colspan=7></td>
+    <td width=563 height=21 colspan=13><font face=Helvetica color="#dddddd"
+    size=4>“image.segments.features.feature.protein_name” = </font><font
+    face=Helvetica color=yellow size=4><i>protein</i></font><font
+    face=Helvetica color="#dddddd" size=4><i> </i><b>and</b></font><br>
+    </td>
+    <td width=43 height=21></td>
+   </tr>
+   <tr>
+    <td width=96 height=21 colspan=7></td>
+    <td width=376 height=21 colspan=9><font face=Helvetica color="#dddddd"
+    size=4>“study_db.study.animal.name” = </font><font face=Helvetica
+    color=yellow size=4><i>organism</i></font><br>
+    </td>
+    <td width=230 height=21 colspan=5></td>
+   </tr>
+   <tr>
+    <td width=702 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=39 height=23 colspan=3></td>
+    <td width=24 height=23><font face=Helvetica color="#dddddd" size=4>–</font></td>
+    <td width=91 height=23 colspan=5><font face=Helvetica color="#dddddd"
+    size=4><b>Mediator:</b></font><br>
+    </td>
+    <td width=548 height=23 colspan=12></td>
+   </tr>
+   <tr>
+    <td width=702 height=2 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=77 height=23 colspan=6></td>
+    <td width=19 height=23><font face=Helvetica color="#ffcc66" size=4>•</font></td>
+    <td width=403 height=23 colspan=10><font face=Helvetica color="#ffcc66"
+    size=4>aggregate</font><font face=Helvetica color="#dddddd" size=4> over
+    all parents up to </font><font face=Helvetica color=yellow size=4><i>brain_region</i></font><br>
+    </td>
+    <td width=203 height=23 colspan=4></td>
+   </tr>
+   <tr>
+    <td width=702 height=3 colspan=21></td>
+   </tr>
+   <tr>
+    <td width=77 height=23 colspan=6></td>
+    <td width=19 height=23><font face=Helvetica color="#dddddd" size=4>•</font></td>
+    <td width=156 height=23 colspan=5><font face=Helvetica color="#dddddd"
+    size=4>report </font><font face=Helvetica color="#66ccff" size=4>distribution</font><br>
+    </td>
+    <td width=450 height=23 colspan=9></td>
+   </tr>
+  </table>
+  </td>
+  <td width=32 height=312 colspan=3></td>
+ </tr>
+ <tr>
+  <td width=767 height=132 colspan=9></td>
+ </tr>
+ <tr>
+  <td width=742 height=7 colspan=7></td>
+  <td width=18 height=18 rowspan=2>
+  <table border=0 valign=top cellpadding=0 cellspacing=0>
+   <tr>
+    <td width=18 height=18 align=right><font face=Helvetica color="#ffcc66"
+    size=2>18</font><br>
+    </td>
+   </tr>
+  </table>
+  </td>
+  <td width=7 height=7></td>
+ </tr>
+ <tr>
+  <td width=8 height=11></td>
+  <td width=94 height=13 colspan=2 rowspan=2><img src="master04_image042.gif"
+  border=0 width=94 height=13></td>
+  <td width=640 height=11 colspan=4></td>
+  <td width=7 height=11></td>
+ </tr>
+ <tr>
+  <td width=8 height=2></td>
+  <td width=665 height=2 colspan=6></td>
+ </tr>
+ <tr>
+  <td width=767 height=8 colspan=9></td>
+ </tr>
+</table>
+
+</body>
+
+</html>

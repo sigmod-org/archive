@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>CAP Demo - Screen 14</TITLE>
+</HEAD>
+<BODY BGCOLOR=#ffffff>
+<A HREF="../demo.html"><IMG SRC="up.gif"></A>&nbsp;&nbsp;&nbsp;
+<A HREF="screen13.html"><IMG SRC="previous.gif"></A>&nbsp;&nbsp;&nbsp;
+<A HREF="screen15.html"><IMG SRC="next.gif"></A>
+<HR>
+<TABLE CELLPADDING=5><TR ALIGN="TOP">
+<TD VALIGN="TOP"><IMG SRC="demo12.jpg"></TD>
+<TD VALIGN="TOP" WIDTH=200>
+<H2>Two-Variable Constraints</H2>
+<P>
+After we have created constraints for the antecedent and the consequent, we
+can proceed to create constraints <I>between</I> the antecedent and the consequent.  
+The <TT>"Insert Two-Variable Constraints"</TT> window can be opened by clicking on
+the <TT>Two-Variable Constraints</TT> button in the main window.  Here we are creating
+the two-variable relational constraint that the <TT>TYPES</TT> in the antecedent are disjoint
+from the types of items in the consequent.  This constraint is created to reduce redundancy
+in candidate set output, since we are not interested in candidate pairs such as <TT>{snacks, soda}->{1, 2, 5}</TT>
+where items 1 and 2 are snacks, and item 5 is a soda.    
+<P>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>
+

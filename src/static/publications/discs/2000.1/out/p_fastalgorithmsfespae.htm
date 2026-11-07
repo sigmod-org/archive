@@ -1,0 +1,619 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Fast Algorithms for Maintaining Replica Consistency in Lazy Master Replicated Databases</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_5.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Fast Algorithms for Maintaining Replica Consistency in Lazy Master Replicated Databases
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_esther_pacitti.htm">Esther Pacitti</a>, 
+<a href = "a_pascale_minet.htm">Pascale Minet</a>, and 
+<a href = "a_eric_simon.htm">Eric Simon</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/fastalgorithmsfespae.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbdistributebases.htm">Return to Distributed Databases</a><br>
+<br><i><font size=-1>Note: The quality of the PDF contained herein reflects that of the material supplied to the DiSC'00 Production Team.</font></i><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  In a lazy master replicated database, a transaction can commit after updating one replica copy at some master node. After the transaction commits, the updates are propagated towards the other replicas, which are updated in separate refresh transactions. A central problem is the design of algorithms that maintain replica's consistency while minimizing the performance degeneration due to the synchronization of refresh transactions. We propose a simple and general refreshment algorithm that solves this problem and we prove its correctness. We then present two main optimizations. One is based on specific properties of replicas' topology. The other uses an immediate update propagation strategy. Our performace evaluation demonstrates the effectiveness of the optimization.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AlonsoA95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abbadi:Amr_El.html">
+Amr El Abbadi
+</a>
+: Partitioned Data Objects in Distributed Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd3.html#AlonsoA95">
+Distributed and Parallel Databases 3(1)
+</a>
+: 5-35(1995)
+<dt>
+[2]
+<dd>
+<a name="AgrawalAAS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">
+Divyakant Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abbadi:Amr_El.html">
+Amr El Abbadi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stanoi:Ioana.html">
+Ioana Stanoi
+</a>
+: Exploiting Atomic Broadcast in Replicated Databases (Extended Abstract). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/europar/europar97.html#AgrawalAAS97">
+Euro-Par 1997
+</a>
+: 496-503
+<dt>
+[3]
+<dd>
+<a name="AlonsoBG90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Rafael.html">
+Rafael Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barbar=aacute=:Daniel.html">
+Daniel Barbar&aacute;
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Data Caching Issues in an Information Retrieval System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods15.html#AlonsoBG90">
+TODS 15(3)
+</a>
+: 359-384(1990)
+<dt>
+[4]
+<dd>
+<a name="BernsteinN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, Eric Newcomer: Principles of Transaction Processing for Systems Professionals.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1996, ISBN 1-55860-415-4
+<br>
+ 
+<dt>
+[5]
+<dd>
+<a name="ChaudhuriD97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: An Overview of Data Warehousing and OLAP Technology. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#ChaudhuriD97">
+SIGMOD Record 26(1)
+</a>
+: 65-74(1997)
+<dt>
+[6]
+<dd>
+<a name="ChundiRR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chundi:Parvathi.html">
+Parvathi Chundi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenkrantz:Daniel_J=.html">
+Daniel J. Rosenkrantz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ravi:S=_S=.html">
+S. S. Ravi
+</a>
+: Deferred Updates and Data Placement in Distributed Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#ChundiRR96">
+ICDE 1996
+</a>
+: 469-476
+<dt>
+[7]
+<dd>
+<a name="CeriW93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Managing Semantic Heterogeneity with Production Rules and Persistent Queues. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1993
+</a>
+: 108-119
+<dt>
+[8]
+<dd>
+<a name="DoD95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Do:Lyman.html">
+Lyman Do
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Drew:Pamela.html">
+Pamela Drew
+</a>
+: The Management of Interdependent Asynchronous Transactions in Heterogeneous Database Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dasfaa/dasfaa95.html#DoD95">
+DASFAA 1995
+</a>
+: 16-25
+<dt>
+[9]
+<dd>
+<a name="DowningGP90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Downing:Alan_R=.html">
+Alan R. Downing
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Greenberg:Ira_B=.html">
+Ira B. Greenberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Peha:Jon_M=.html">
+Jon M. Peha
+</a>
+: OSCAR: A System for Weak-Consistency Replication. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/wmrd/wmrd1990.html#DowningGP90">
+Workshop on the Management of Replicated Data 1990
+</a>
+: 26-30
+<dt>
+[10]
+<dd>
+<a name="GrayHOS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Helland:Pat.html">
+Pat Helland
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/O=Neil:Patrick_E=.html">
+Patrick E. O'Neil
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shasha:Dennis.html">
+Dennis Shasha
+</a>
+: The Dangers of Replication and a Solution. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#GrayHOS96">
+SIGMOD Conf. 1996
+</a>
+: 173-182
+<dt>
+[11]
+<dd>
+<a name="GeorgeM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/George:Laurent.html">
+Laurent George
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Minet:Pascale.html">
+Pascale Minet
+</a>
+: A FIFO Worst Case Analysis for a Hard Real-Time Distributed Problem with Consistency Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs97.html#GeorgeM97">
+ICDCS 1997
+</a>
+: 0-
+<dt>
+[12]
+<dd>
+... 
+<dt>
+[13]
+<dd>
+<a name="GuptaMS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gupta:Ashish.html">
+Ashish Gupta
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mumick:Inderpal_Singh.html">
+Inderpal Singh Mumick
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Subrahmanian:V=_S=.html">
+V. S. Subrahmanian
+</a>
+: Maintaining Views Incrementally. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#GuptaMS93">
+SIGMOD Conference 1993
+</a>
+: 157-166
+<dt>
+[14]
+<dd>
+<a name="GallersdorferN95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gallersd=ouml=rfer:Rainer.html">
+Rainer Gallersd&ouml;rfer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nicola:Matthias.html">
+Matthias Nicola
+</a>
+: Improving Performance in Replicated Databases through Relaxed Coherency. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1995
+</a>
+: 445-456
+<dt>
+[15]
+<dd>
+... 
+<dt>
+[16]
+<dd>
+<a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Transaction Processing: Concepts and Techniques.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-190-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">
+Contents
+</a>
+<dt>
+[17]
+<dd>
+<a name="GrefenW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grefen:Paul_W=_P=_J=.html">
+Paul W. P. J. Grefen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Protocols for Integrity Constraint Checking in Federated Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dpd/dpd5.html#GrefenW97">
+Distributed and Parallel Databases 5(4)
+</a>
+: 327-355(1997)
+<dt>
+[18]
+<dd>
+... 
+<dt>
+[19]
+<dd>
+<a name="KemmeA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemme:Bettina.html">
+Bettina Kemme
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Gustavo.html">
+Gustavo Alonso
+</a>
+: A Suite of Database Replication Protocols based on Group Communication Primitives. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs98.html#KemmeA98">
+ICDCS 1998
+</a>
+: 156-163
+<dt>
+[20]
+<dd>
+<a name="KahlerR87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/K=auml=hler:Bo.html">
+Bo K&auml;hler
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Risnes:Oddvar.html">
+Oddvar Risnes
+</a>
+: Extending Logging for Database Snapshot Refresh. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1987
+</a>
+: 389-398
+<dt>
+[21]
+<dd>
+<a name="OzsuV99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/=/=Ouml=zsu:M=_Tamer.html">
+M. Tamer &Ouml;zsu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">
+Patrick Valduriez
+</a>
+: Principles of Distributed Database Systems, Second Edition.  Prentice-Hall 1999
+<br>
+ 
+<dt>
+[22]
+<dd>
+... 
+<dt>
+[23]
+<dd>
+<a name="PacittiSM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pacitti:Esther.html">
+Esther Pacitti
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Simon:Eric.html">
+Eric Simon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Melo:Rubens_N=.html">
+Rubens N. Melo
+</a>
+: Improving Data Freshness in Lazy Master Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs98.html#PacittiSM98">
+ICDCS 1998
+</a>
+: 164-171
+<dt>
+[24]
+<dd>
+<a name="StanoiAA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stanoi:Ioana.html">
+Ioana Stanoi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">
+Divyakant Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abbadi:Amr_El.html">
+Amr El Abbadi
+</a>
+: Using Broadcast Primitives in Replicated Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdcs/icdcs98.html#StanoiAA98">
+ICDCS 1998
+</a>
+: 148-155
+<dt>
+[25]
+<dd>
+<a name="SarinKS86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarin:Sunil_K=.html">
+Sunil K. Sarin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kaufman:Charles_W=.html">
+Charles W. Kaufman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Somers:Janet_E=.html">
+Janet E. Somers
+</a>
+: Using History Information to Process Delayed Database Updates. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1986
+</a>
+: 71-78
+<dt>
+[26]
+<dd>
+<a name="ShethR90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sheth:Amit_P=.html">
+Amit P. Sheth
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rusinkiewicz:Marek.html">
+Marek Rusinkiewicz
+</a>
+: Management of Interdependent Data: Specifying Dependency and Consistency Requirements. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/wmrd/wmrd1990.html#ShethR90">
+Workshop on the Management of Replicated Data 1990
+</a>
+: 133-136
+<dt>
+[27]
+<dd>
+... 
+<dt>
+[28]
+<dd>
+<a name="TerryTPDSH95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Terry:Douglas_B=.html">
+Douglas B. Terry
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Theimer:Marvin.html">
+Marvin Theimer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Petersen:Karin.html">
+Karin Petersen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Demers:Alan_J=.html">
+Alan J. Demers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Spreitzer:Mike.html">
+Mike Spreitzer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hauser:Carl.html">
+Carl Hauser
+</a>
+: Managing Update Conflicts in Bayou, a Weakly Connected Replicated Storage System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp95.html#TerryTPDSH95">
+SOSP 1995
+</a>
+: 172-183
+<dt>
+[29]
+<dd>
+<a name="ZhugeGHW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhuge:Yue.html">
+Yue Zhuge
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hammer:Joachim.html">
+Joachim Hammer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: View Maintenance in a Warehousing Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#ZhugeGHW95">
+SIGMOD Conference 1995
+</a>
+: 316-327
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/PacittMS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Esther&nbsp;Pacitti&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pascale&nbsp;Minet&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eric&nbsp;Simon},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Fast&nbsp;Algorithms&nbsp;for&nbsp;Maintaining&nbsp;Replica&nbsp;Consistency&nbsp;in&nbsp;Lazy&nbsp;Master<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replicated&nbsp;Databases},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{126-137},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

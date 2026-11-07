@@ -1,0 +1,55 @@
+
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Diapositive PPT</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Diapositive PPT</H1> 
+ <P><UL>
+HTML cache </UL></P>
+<P><UL>
+Cache HTML { 
+</UL><UL>
+ {/* container definition */ 
+</UL><UL>
+   define container  htmlcont as
+</UL><UL>
+          select Customer, Part($PK)where $PK&#0601000;
+</UL><UL>
+ /* Container constraints */
+</UL><UL>
+    frequency&#0620.3 and size&#060100KB;
+</UL><UL>
+ /* ECA rules */
+</UL><UL>
+     on Init compute all;
+</UL><UL>
+     on Timer(5mn) remove Part($PK) where $PK &#06010;
+</UL><UL>
+     on Timer(2h) reinit;
+</UL><UL>
+     on Full(50MB) apply LRU;
+</UL><UL>
+ }
+</UL><UL>
+}</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld017.htm">Diapositive précédente</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld019.htm">Diapositive suivante</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Revenir à la première diapositive</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld018.htm">Afficher la version graphique</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>

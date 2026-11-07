@@ -1,0 +1,559 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Context-Based Prefetch for Implementing Objects on Relations</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Context-Based Prefetch for Implementing Objects on Relations
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_philip_a_bernstein.htm">Philip A. Bernstein</a>, 
+<a href = "a_shankar_pal.htm">Shankar Pal</a>, and 
+<a href = "a_david_shutt.htm">David Shutt</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/contextbasedprephshd.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbcachingteciques.htm">Return to Caching Techniques</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  When implementing persistent objects on a relational database, a major performance issue is prefetching data to minimize the number of round-trips to the database. This is especially hard with navigational applications, since future accesses are unpredictable. We propose using the context in which an object is loaded as a predictor of future accesses, where context can be a stored collection of relationships, a query result, or a complex object. When an object O's state is loaded, similar state for other objects in O's context is prefetched. We present a design for maintaining context and using it to guide prefetch. We give performance measurements of its implementation in Microsoft Repository, showing up to a 70% reduction in run-ning time. We describe variations that selectively apply the technique, exploit asynchronous access, and use application-supplied performance hints.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="BernsteinHSSZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harry:Brian.html">
+Brian Harry
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sanders:Paul.html">
+Paul Sanders
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shutt:David.html">
+David Shutt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zander:Jason.html">
+Jason Zander
+</a>
+: The Microsoft Repository. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1997
+</a>
+: 3-12
+<dt>
+[2]
+<dd>
+<a name="BernsteinBCPSS99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bergstraesser:Thomas.html">
+Thomas Bergstraesser
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carlson:Jason.html">
+Jason Carlson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pal:Shankar.html">
+Shankar Pal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sanders:Paul.html">
+Paul Sanders
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shutt:David.html">
+David Shutt
+</a>
+: Microsoft Repository Version 2 and the Open Information Model. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is24.html#BernsteinBCPSS99">
+Information Systems 24(2)
+</a>
+: 71-98(1999)
+<dt>
+[3]
+<dd>
+... 
+<dt>
+[4]
+<dd>
+<a name="CareyDN93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: The 007 Benchmark. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CareyDN93">
+SIGMOD Conference 1993
+</a>
+: 12-21
+<dt>
+[5]
+<dd>
+<a name="CareyDKN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kant:Chander.html">
+Chander Kant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: A Status Report on the 007 OODBMS Benchmarking Effort. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla94.html#CareyDKN94">
+OOPSLA 1994
+</a>
+: 414-426
+<dt>
+[6]
+<dd>
+... 
+<dt>
+[7]
+<dd>
+... 
+<dt>
+[8]
+<dd>
+<a name="ChangK89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chang:Ellis_E=.html">
+Ellis E. Chang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">
+Randy H. Katz
+</a>
+: Exploiting Inheritance and Structure Semantics for Effective Clustering and Buffering in an Object-Oriented DBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#ChangK89">
+SIGMOD Conference 1989
+</a>
+: 348-357
+<dt>
+[9]
+<dd>
+... 
+<dt>
+[10]
+<dd>
+<a name="Cluet98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cluet:Sophie.html">
+Sophie Cluet
+</a>
+: Designing OQL: Allowing Objects to be Queried. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is23.html#Cluet98">
+Information Systems 23(5)
+</a>
+: 279-305(1998)
+<dt>
+[11]
+<dd>
+<a name="CopelandM84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Copeland:George_P=.html">
+George P. Copeland
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+: Making Smalltalk a Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#CopelandM84">
+SIGMOD Conference 1984
+</a>
+: 316-325
+<dt>
+[12]
+<dd>
+<a name="CurewitzKV93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Curewitz:Kenneth_M=.html">
+Kenneth M. Curewitz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnan:P=.html">
+P. Krishnan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vitter:Jeffrey_Scott.html">
+Jeffrey Scott Vitter
+</a>
+: Practical Prefetching via Data Compression. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#CurewitzKV93">
+SIGMOD Conference 1993
+</a>
+: 257-266
+<dt>
+[13]
+<dd>
+<a name="KellerB96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Basu:Julie.html">
+Julie Basu
+</a>
+: A Predicate-based Caching Scheme for Client-Server Database Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#KellerB96">
+VLDB Journal 5(1)
+</a>
+: 35-47(1996)
+<dt>
+[14]
+<dd>
+<a name="KellerJA93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jensen:Richard.html">
+Richard Jensen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Shailesh.html">
+Shailesh Agrawal
+</a>
+: Persistence Software: Bridging Object-Oriented Programming and Relational Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#KellerJA93">
+SIGMOD Conference 1993
+</a>
+: 523-528
+<dt>
+[15]
+<dd>
+<a name="LambLOW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lamb:Charles.html">
+Charles Lamb
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Landis:Gordon.html">
+Gordon Landis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinreb:Danel.html">
+Danel Weinreb
+</a>
+: The ObjectStore Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#LambLOW91">
+CACM 34(10)
+</a>
+: 50-63(1991)
+<dt>
+[16]
+<dd>
+<a name="LeeW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Byung_Suk.html">
+Byung Suk Lee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Outer Joins and Filters for Instantiating Objects from Relational Databases Through Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde6.html#LeeW94">
+TKDE 6(1)
+</a>
+: 108-119(1994)
+<dt>
+[17]
+<dd>
+<a name="LeeW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Byung_Suk.html">
+Byung Suk Lee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Efficiently Instantiating View-Objects From Remote Relational Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb3.html#LeeW94">
+VLDB Journal 3(3)
+</a>
+: 289-323(1994)
+<dt>
+[18]
+<dd>
+<a name="MitschangPPLS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">
+Bernhard Mitschang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pistor:Peter.html">
+Peter Pistor
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/S=uuml=dkamp:Norbert.html">
+Norbert S&uuml;dkamp
+</a>
+: SQL/XNF - Processing Composite Objects as Abstractions over Relational Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde93.html#MitschangPPLS93">
+ICDE 1993
+</a>
+: 272-282
+<dt>
+[19]
+<dd>
+Ontos. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+http://www.ontos.com/
+</a>
+<dt>
+[20]
+<dd>
+<a name="OrensteinK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">
+Jack A. Orenstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamber:D=_N=.html">
+D. N. Kamber
+</a>
+: Accessing a Relational Database through an Object-Oriented Database Interface. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1995
+</a>
+: 702-705
+<dt>
+[21]
+<dd>
+<a name="PalmerZ91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Palmer:Mark.html">
+Mark Palmer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Fido: A Cache That Learns to Fetch. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1991
+</a>
+: 255-264
+<dt>
+[22]
+<dd>
+Persistence Software. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+http://www.persistence.com/
+</a>
+<dt>
+[23]
+<dd>
+<a name="PiraheshMSL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mitschang:Bernhard.html">
+Bernhard Mitschang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/S=uuml=dkamp:Norbert.html">
+Norbert S&uuml;dkamp
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">
+Bruce G. Lindsay
+</a>
+: Composite-object views in relational DBMS: an implementation perspective. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is19.html#PiraheshMSL94">
+IS 19(1)
+</a>
+: 69-88(1994)
+<dt>
+[24]
+<dd>
+... 
+<dt>
+[25]
+<dd>
+... 
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+... 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Carey00" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Review - Context-Based Prefetch for Implementing Objects on Relations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/dr/dr2.html#Carey00">
+ACM SIGMOD Digital Review 2
+</a>
+: (2000)
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/BernsteinPS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Philip&nbsp;A.&nbsp;Bernstein&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shankar&nbsp;Pal&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David&nbsp;Shutt},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Context-Based&nbsp;Prefetch&nbsp;for&nbsp;Implementing&nbsp;Objects&nbsp;on&nbsp;Relations},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{327-338},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

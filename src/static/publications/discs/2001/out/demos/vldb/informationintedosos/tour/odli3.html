@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<head>
+
+<title>MOMIS Tour</title>
+
+<meta http-equiv="Content-Type" content="text/html">
+</head>
+
+<body bgcolor="#FFFFFF">
+<hr>
+
+<h1> ODL<SUB>I<SUP>3</SUP></SUB> Language </h1>
+
+<hr>
+ODL<SUB>I<SUP>3</SUP></SUB>  extends ODL-ODMG with:
+
+<UL TYPE="DISC">
+    <LI> <BIG><B>Intensional/terminological relationships</B></BIG> between 
+    terms <I>t</I>(class and attribute names)
+    
+    <UL TYPE="CIRCLE">
+	<LI> &lt;t1 SYN t2 &gt;   (<I>Synonymy</I>)
+	<LI>   &lt;t1 BT t2 &gt;     (<I>Broader Terms</I> - <I>BT</I>)
+	<LI>  &lt;t1 NT t2 &gt;     (<I>Narrower Terms</I> - <I>NT</I>)
+	<LI>  &lt;t1 RT t2 &gt;     (<I>Related Terms</I> - <I>RT</I>)
+    </UL>
+    
+    
+    <LI><BIG><B>Extensional Relationships</B></BIG> between class names
+
+      <UL TYPE="CIRCLE">
+	<LI> &lt;t1 SYN<SUB>ext</SUB> t2 &gt;   the instance of C1 is the same of C2
+	<LI>   &lt;t1 BT<SUB>ext</SUB> t2 &gt;     the instance of C1 contains the instance of C2
+	<LI>  &lt;t1 NT<SUB>ext</SUB> t2 &gt;     the instance of C1 is contained into C2 
+    </UL>
+  <LI>
+   <BIG><B>Mapping rules</B></BIG>   (to represent relationships between the
+  integrated schema and the schema of 
+  a source)
+  <LI>
+   <BIG><B>Union</B></BIG>   (to represent alternative data structures)
+  <LI>
+   <BIG><B>optional (*) </B></BIG>   (to represent optional attributes)
+  <LI>
+   <BIG><B>If then rules</B></BIG>   (to represent integrity coinstraints inter
+  intra sources)
+</UL>
+
+
+ 
+  <h2><a href="three.html">Back</a></h2>
+
+</font></a></td>
+</body>
+
+</html>

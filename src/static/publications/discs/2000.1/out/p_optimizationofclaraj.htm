@@ -1,0 +1,621 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Optimization of Constrained Frequent Set Queries with 2-variable Constraints</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_9.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Optimization of Constrained Frequent Set Queries with 2-variable Constraints
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_laks_v_s_lakshmana.htm">Laks V. S. Lakshmanan</a>, 
+<a href = "a_raymond_t_ng.htm">Raymond T. Ng</a>, 
+<a href = "a_jiawei_han.htm">Jiawei Han</a>, and 
+<a href = "a_alex_pang.htm">Alex Pang</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/optimizationofclaraj.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmodataminingtrees.htm">Return to Data Mining - Association Rules and Decision Trees</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Currently, there is tremendous interest in providing ad-hoc mining capabilities in database management systems. As a first step towards this goal, in [15] we proposed an architecture for supporting constraint-based, human-centered, exploratory mining of various kinds of rules including associations, introduced the notion of constrained frequent set queries (CFQs), and developed effective pruning optimizations for CFQs with 1-variable (1-var) constraints. While 1-var constraints are useful for constraining the antecedent and consequent separately, many natural examples of CFQs illustrate the need for constraining the antecedent and consequent jointly, for which 2-variable (2-var) constraints are indispensable. Developing pruning optimizations for CFQs with 2-var constraints is the subject of this paper. But this is a difficult problem because: (i) in 2-var constraints, both variables keep changing and, unlike 1-var constraints, there is no fixed target for pruning; (ii) as we show, "conventional" monotonicity-based optimization techniques do not apply effectively to 2-var constraints. The contributions are as follows. (1) We introduce a notion of quasi-succinctness, which allows a quasi-succinct 2-var constraint to be reduced to two succinct 1-var constraints for pruning. (2) We characterize the class of 2-var constraints that are quasi-succinct. (3) We develop heuristic techniques for non-quasi-succinct constraints. Experimental results show the effectiveness of all our techniques. (4) We propose a query optimizer for CFQs and show that for a large class of constraints, the computation strategy generated by the optimizer is ccc-optimal, i.e., minimizing the effort incurred w.r.t. constraint checking and support counting.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">
+Arun N. Swami
+</a>
+: Mining Association Rules between Sets of Items in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1993
+</a>
+: 207-216
+<dt>
+[2]
+<dd>
+<a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+: Fast Algorithms for Mining Association Rules in Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#AgrawalS94">
+VLDB 1994
+</a>
+: 487-499
+<dt>
+[3]
+<dd>
+<a name="Bayardo98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bayardo_Jr=:Roberto_J=.html">
+Roberto J. Bayardo Jr.
+</a>
+: Efficiently Mining Long Patterns from Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 85-93
+<dt>
+[4]
+<dd>
+<a name="BrinMS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">
+Craig Silverstein
+</a>
+: Beyond Market Baskets: Generalizing Association Rules to Correlations. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 265-276
+<dt>
+[5]
+<dd>
+<a name="Chaudhuri98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chaudhuri:Surajit.html">
+Surajit Chaudhuri
+</a>
+: Data Mining and Database Systems: Where is the Intersection? 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/debu/debu21.html#Chaudhuri98">
+Data Engineering Bulletin 21(1)
+</a>
+: 4-8(1998)
+<dt>
+[6]
+<dd>
+<a name="CheungHNW96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheung:David_Wai=Lok.html">
+David Wai-Lok Cheung
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Vincent.html">
+Vincent Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wong:C=_Y=.html">
+C. Y. Wong
+</a>
+: Maintenance of Discovered Association Rules in Large Databases: An Incremental Updating Technique. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#CheungHNW96">
+ICDE 1996
+</a>
+: 106-114
+<dt>
+[7]
+<dd>
+<a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">
+Takeshi Fukuda
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">
+Yasuhiko Morimoto
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">
+Shinichi Morishita
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">
+Takeshi Tokuyama
+</a>
+: Data Mining Using Two-Dimensional Optimized Accociation Rules: Scheme, Algorithms, and Visualization. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 13-23
+<dt>
+[8]
+<dd>
+<a name="HanF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Yongjian.html">
+Yongjian Fu
+</a>
+: Discovery of Multiple-Level Association Rules from Large Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HanF95">
+VLDB 1995
+</a>
+: 420-431
+<dt>
+[9]
+<dd>
+<a name="ImielinskiM96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+: A Database Perspective on Knowledge Discovery. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm39.html#ImielinskiM96">
+CACM 39(11)
+</a>
+: 58-64(1996)
+<dt>
+[10]
+<dd>
+<a name="KamberHC97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kamber:Micheline.html">
+Micheline Kamber
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chiang:Jenny.html">
+Jenny Chiang
+</a>
+: Metarule-Guided Mining of Multi-Dimensional Association Rules Using Data Cubes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd97.html#KamberHC97">
+KDD 1997
+</a>
+: 207-210
+<dt>
+[11]
+<dd>
+<a name="KlemettinenMRTV94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Klemettinen:Mika.html">
+Mika Klemettinen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mannila:Heikki.html">
+Heikki Mannila
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ronkainen:Pirjo.html">
+Pirjo Ronkainen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Verkamo:A=_Inkeri.html">
+A. Inkeri Verkamo
+</a>
+: Finding Interesting Rules from Large Sets of Discovered Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm94.html#KlemettinenMRTV94">
+CIKM 1994
+</a>
+: 401-407
+<dt>
+[12]
+<dd>
+<a name="KornLKF98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Korn:Flip.html">
+Flip Korn
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Labrinidis:Alexandros.html">
+Alexandros Labrinidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kotidis:Yannis.html">
+Yannis Kotidis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Faloutsos:Christos.html">
+Christos Faloutsos
+</a>
+: Ratio Rules: A New Paradigm for Fast, Quantifiable Data Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#KornLKF98">
+VLDB 1998
+</a>
+: 582-593
+<dt>
+[13]
+<dd>
+... 
+<dt>
+[14]
+<dd>
+<a name="YangM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Miller:Ren=eacute=e_J=.html">
+Ren&eacute;e J. Miller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Yuping.html">
+Yuping Yang
+</a>
+: Association Rules over Interval Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1997
+</a>
+: 452-461
+<dt>
+[15]
+<dd>
+<a name="NgLHP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Ng:Raymond_T=.html">
+Raymond T. Ng
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lakshmanan:Laks_V=_S=.html">
+Laks V. S. Lakshmanan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">
+Jiawei Han
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pang:Alex.html">
+Alex Pang
+</a>
+: Exploratory Mining and Pruning Optimizations of Constrained Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 13-24
+<dt>
+[16]
+<dd>
+<a name="ParkCY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Park:Jong_Soo.html">
+Jong Soo Park
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">
+Ming-Syan Chen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">
+Philip S. Yu
+</a>
+: An Effective Hash Based Algorithm for Mining Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 175-186
+<dt>
+[17]
+<dd>
+<a name="RamaswamyMS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramaswamy:Sridhar.html">
+Sridhar Ramaswamy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mahajan:Sameer.html">
+Sameer Mahajan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+: On the Discovery of Interesting Patterns in Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#RamaswamyMS98">
+VLDB 1998
+</a>
+: 368-379
+<dt>
+[18]
+<dd>
+<a name="SarawagiTA98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sarawagi:Sunita.html">
+Sunita Sarawagi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Thomas:Shiby.html">
+Shiby Thomas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+: Integrating Mining with Relational Database Systems: Alternatives and Implications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 343-354
+<dt>
+[19]
+<dd>
+<a name="SilberschatzZ97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Database Systems - Breaking Out of the Box. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#SilberschatzZ97">
+SIGMOD Record 26(3)
+</a>
+: 36-50(1997)
+<dt>
+[20]
+<dd>
+<a name="SilversteinBMU98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silverstein:Craig.html">
+Craig Silverstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brin:Sergey.html">
+Sergey Brin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Scalable Techniques for Mining Causal Structures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#SilversteinBMU98">
+VLDB 1998
+</a>
+: 594-605
+<dt>
+[21]
+<dd>
+<a name="SrikantA95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+: Mining Generalized Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#SrikantA95">
+VLDB 1995
+</a>
+: 407-419
+<dt>
+[22]
+<dd>
+<a name="SrikantA96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+: Mining Quantitative Association Rules in Large Relational Tables. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 1-12
+<dt>
+[23]
+<dd>
+<a name="SrikantVA97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">
+Ramakrishnan Srikant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vu:Quoc.html">
+Quoc Vu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">
+Rakesh Agrawal
+</a>
+: Mining Association Rules with Item Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/kdd/kdd97.html#SrikantVA97">
+KDD 1997
+</a>
+: 67-73
+<dt>
+[24]
+<dd>
+<a name="Toivonen96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Toivonen:Hannu.html">
+Hannu Toivonen
+</a>
+: Sampling Large Databases for Association Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#Toivonen96">
+VLDB 1996
+</a>
+: 134-145
+<dt>
+[25]
+<dd>
+<a name="TsurUACMNR98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsur:Shalom.html">
+Shalom Tsur
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Clifton:Chris.html">
+Chris Clifton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Motwani:Rajeev.html">
+Rajeev Motwani
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nestorov:Svetlozar.html">
+Svetlozar Nestorov
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rosenthal:Arnon.html">
+Arnon Rosenthal
+</a>
+: Query Flocks: A Generalization of Association-Rule Mining. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 1-12
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/LakshmananNHP99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Laks&nbsp;V.&nbsp;S.&nbsp;Lakshmanan&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raymond&nbsp;T.&nbsp;Ng&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jiawei&nbsp;Han&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alex&nbsp;Pang},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Optimization&nbsp;of&nbsp;Constrained&nbsp;Frequent&nbsp;Set&nbsp;Queries&nbsp;with&nbsp;2-variable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constraints},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{157-168},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

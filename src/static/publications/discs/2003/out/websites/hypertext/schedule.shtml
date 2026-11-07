@@ -1,0 +1,695 @@
+<html>
+<head>
+<title>Hypertext 2002 Schedule</title>
+<link rel     = STYLESHEET 
+      href    = "style2.css" 
+      type    = "text/css"    
+>
+
+</head>
+
+<body bgcolor=black text=white>
+<center>
+<h1>
+Hypertext 2002<br>
+Conference Events<br>
+</h1>
+</center>
+
+<table width=98%><tr><td>
+
+
+<br>
+<H2>June 11 2002</H2>
+
+<center>
+<table border="1" width="80%">
+<tr>
+<th>Registration</th>
+</tr>
+<tr><td align=center>
+0800-1000 and 1300-1400<br>
+	<a 
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         target=_new>Hornbake</a> South Wing Lobby 
+</td></tr>
+</table>
+</center>
+<br>
+<table border="1" width="100%">
+<tr>
+<th>Workshops</th>
+</tr>
+<tr> <td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 4113<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=workshops/hacm.shtml>Facilitating Hypertext Augmented 
+                       Collaborative Modeling</a></b> (Part 1) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   <a href=mailto:jeff@cognexus.org>Jeff Conklin</a>, 
+              Albert Selvin & Simon Buckingham Shum
+</td> </tr>
+</table>
+<br>
+<table border="1" width="100%">
+<tr>
+<th>Tutorials</th>
+</tr>
+<tr><td>
+<center>
+<table width=80% border=1>
+<tr><th>=== Full Day ===</th></tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0108<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/smil.shtml>SMIL 2.0: Interactive Multimedia on 
+the Web</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Lloyd Rutledge, CWI
+</td></tr>
+</table>
+<br>
+<table width=80% border=1>
+<tr><th>=== Half Day - Morning ===</th></tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 4115<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/introxml.shtml>Introduction to XML</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Steven J. DeRose, David Durand
+</td></tr>
+</table>
+<br>
+<table width=80% border=1>
+<tr><th>=== Half Day - Afternoon ===</th><tr>
+<tr><td>
+1300 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 4115<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/spatial.shtml>Spatial Hypertext and Information 
+Analysis</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Frank Shipman, Texas A&M University
+</td></tr>
+<tr><td>
+1300 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0103<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/webdav.shtml>WebDAV and DeltaV: The Writeable, 
+Collaborative, Versionable Web</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Jim Whitehead, UC Santa Cruz<br>
+</td></tr>
+</table>
+
+</center>
+</td></tr>
+</table>
+
+<br>
+<br>
+<H2>June 12 2002</H2>
+
+<center>
+<table border="1" width="80%">
+<tr>
+<th>Registration</th>
+</tr>
+<tr><td align=center>
+0800-1000 and 1300-1400<br>
+        <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         target=_new>Hornbake</a> South Wing Lobby
+</td></tr>
+</table>
+</center>
+<br>
+
+
+<table border="1" width="100%">
+<tr>
+<th>Workshops</th>
+</tr>
+<tr> <td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 4115<br>
+1300 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0115<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=workshops/hacm.shtml>Facilitating Hypertext Augmented 
+                       Collaborative Modeling</a></b> (Part 2) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href=mailto:jeff@cognexus.org>Jeff Conklin</a>, 
+              Albert Selvin & Simon Buckingham Shum
+</td> </tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0108<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=workshops/openhypermedia.shtml>Open Hypermedia</a></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Joerg Haake, Siegfried Reich & 
+     <a href=mailto:dem@ecs.soton.ac.uk>Dave Millard</a>
+</td> </tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0109<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=workshops/spatial.shtml>Spatial Hypertext</a></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href=mailto:jr@amanue.com>Jim Rosenberg</a> & 
+		Frank Shipman
+</td> </tr>
+<tr><td>
+0900 - Room: 
+	<a href=http://www.mith.umd.edu target="_new">MITH</a> -
+        <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/MCK
+         target=_new>McKeldin Library</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><a href=workshops/litwork.shtml>The Media Explores the Message</a></b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href=mailto:textra@chisp.net>Deena Larsen</a> & 
+    <a href=mailto:higgason2@comcast.net>Richard Higgason</a>
+</td></tr>
+</table>
+<br>
+<table border="1" width="100%">
+<tr>
+<th>Tutorials</th>
+</tr>
+<tr><td>
+<center>
+<table width=80% border=1>
+<tr><th>=== Full Day ===</th></tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0103<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/xlink.shtml>XLink and XSLT</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Steven J. DeRose, David Durand<br>
+</td></tr>
+<tr><td>
+0900 - Room: <a 
+		href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+         	target=_new>HBK</a> 0105<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href=tutorials/largescale.shtml>Engineering Large-scale Hypermedia
+Systems</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Robert M. Akscyn, Knowledge Systems<br>
+</td></tr>
+</table>
+
+
+</center>
+</td></tr>
+</table>
+
+
+<br>
+<br>
+<H2>June 13 2002</H2>
+
+<center>
+<table border="1" width="80%">
+<tr>
+<th>Registration</th>
+</tr>
+<tr><td align=center>
+0800-1000 and 1300-1400<br>
+        <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY
+         target=_new>Art-Sociology</a> Atrium
+</td></tr>
+</table>
+</center>
+<br>
+
+
+<TABLE BORDER="1" WIDTH="100%">
+    <TR>
+        <TH WIDTH="20%">Time</TH>
+        <TH WIDTH="40%">Track 1</TH>
+        <TH WIDTH="40%">Track 2</TH>
+    </TR>
+        <TH ALIGN="center" VALIGN="top">0900 - 1030</TH>
+        <TD COLSPAN="2" ALIGN="left" VALIGN="top">
+	<center>
+	Room:
+	<a 
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+	<hr width=50%>
+	Welcome <br>
+	<i>Robert B. Allen</i><br>
+	<br>
+	Opening Keynote<br>
+	<a href=keynotes.shtml#open> 
+		Ed Ayers and William G. Thomas,
+		University of Virgina -
+		"Hypertext as Argument: An Experiment in Form and Function"</a>
+	<br>
+	<br>
+	Session Chair: <i>Stuart Moulthrop (University of Baltimore, MD, USA)</i>
+	</center>
+	</TD>
+    <TR>
+<tr>
+<th align=center valign=top>1030 - 1100</th>
+<td align=center valign=top colspan=2>
+Coffee Break and Poster Session
+</td>
+</tr>
+    </TR>
+        <TH ALIGN="center" VALIGN="top">1100 - 1230</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Adaptive Hypermedia</B><BR>
+	    Session Chair: <i>Leslie Carr (University of Southampton)</i><br>
+            <BR>
+             Map-Based Horizontal Navigation in Educational Hypertext<BR>
+             <I>Peter Brusilovsky, Riccardo Rizzo</I><BR>
+             <BR>
+             HyperContext: A Framework for Adaptive Hypertext<BR>
+             <I>Christopher Staff</I><BR>
+             <BR>
+             AHA! The Next Generation<BR>
+             <I>Paul De Bra, Ad Aerts, David Smits, Natasha Stash</I><BR>
+             <BR>
+             Applying Programmable Browsing Semantics Within the Context of The World-Wide Web<BR>
+             <I>Richard Furuta, Jin-Cheon Na</I>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Spatial Hypertext</B><BR>
+	    Session Chair: <i>Cathy Marshall (Microsoft, USA)</i><br>
+            <BR>
+            Semantics Happen: Knowledge Building in Spatial Hypertext<BR>
+            <I>Frank Shipman, J. Michael Moore, Preetam Maloor, Haowei Hsieh, Raghu Akkapeddi</I><BR>
+            <BR>
+            Spatial Hypertext for Linear-Information Authoring: Interaction Design and System Development Based on the ART Design Principle<BR>
+            <I>Yasuhiro Yamamoto, Kumiyo Nakakoji, Atsushi Aoki</I>
+        </TD>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1230 - 1400</TH>
+        <TD ALIGN="center" VALIGN="top" colspan=2>
+		Lunch Break and Demo Session
+	</TD>
+    </tr>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1400 - 1530</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+	 <hr width=50%>
+         </center>
+
+            Paper Session: <B>Narratives and Literary Hypertext</B><BR>
+	    Session Chair: <i>Jim Rosenberg (Grindstone, PA, USA)</i><br>
+            <BR>
+             Authoring Fluid Narrative Hypertexts Using Treetable Visualizations<BR>
+             <I>Polle T. Zellweger, Anne Mangen, Paula Newman</I><BR>
+             <BR>
+             Graphical Notations, Narratives and Persuasion: a Pliant Systems Approach to Hypertext Tool Design<BR>
+             <I>Luke Emmet, George Cleland</I><BR>
+             <BR>
+             On Writing Sculptural Hypertext<BR>
+             <I>Mark Bernstein, David E. Millard, Mark J. Weal</I><BR>
+             <BR>
+             How do Interactive Texts Reflect Interactive Functions?<BR>
+             <I>P&auml;iv&ouml; Laine</I>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+            Panel: <B>Peer-to-Peer Hypertext</B><BR>
+            Moderator: <I>David C. De Roure (University of Southampton, UK)</I>
+		<BR>
+            Panelists: <I>
+            Niels Olof Bouvin (Aarhus University, Denmark),
+            Deena Larsen (Lakewood, Colorado, USA),
+            Mark K. Thompson (University of Southampton, UK)</I>
+        </TD>
+    </TR>
+<tr>
+<th align=center valign=top>1530 - 1600</th>
+<td align=center valign=top colspan=2>Coffee Break and Poster Session</td>
+</tr>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1600 - 1730</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Links</B><BR>
+	    Session Chair: <i>Elli Mylonas (Brown University, USA)</i><br>
+            <BR>
+             Links and Power: The Practical Politics of Linking on the Web<BR>
+             <I>Jill Walker</I><BR>
+             <BR>
+             Evidence of Hypertext in the Scholarly Archive<BR>
+             <I>Tim Brody, Leslie Carr, Stevan Harnad</I><BR>
+             <BR>
+             Looking for Linking: Associative Links on the Web<BR>
+             <I>Tim Miles-Board, Leslie Carr, Wendy Hall</I><BR>
+             <BR>
+             On the Characteristics of Scholarly Annotations<BR>
+             <I>Richard Furuta, Eduardo Urbina</I><BR>
+             <BR>
+             Microsoft Smart Tags: Support, Ignore or Condemn Them?<BR>
+             <I>Gareth Hughes, Leslie Carr</I><BR>
+             <BR>
+             Going Back in Hypertext<BR>
+             <I>Gene Golovchinsky</I>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+            Paper Session: <B>MultiMedia</B><BR>
+	    Session Chair: <I>Kaj Gr&oslash;nb&aelig;k (Aarhus University, Denmark)</I><br>
+            <BR>
+            Context Perception in Video-based Hypermedia Spaces<BR>
+            <I>Teresa Chambel, Nuno Guimar&atilde;es</I><BR>
+            <BR>
+            On Hyperstructure and Musical Structure<BR>
+            <I>David C. De Roure, Don G. Cruickshank, Danius T. Michaelides, Kevin R. Page, Mark J. Weal</I><BR>
+            <BR>
+            Semi-Automated Hyperlink Markup for Archived Video<BR>
+            <I>David Stotts, Jason McC. Smith</I>
+        </TD>
+    </TR>
+<tr>
+<th align=center valign=top>1900 - 2030</th>
+<td align=center valign=top colspan=2>
+	<b>Conference Reception</b>
+	<br>
+	<a href=http://www.dining.umd.edu/locations/student_union/adeles/
+         target=_new>Adele's Restaurant</a> in the 
+	<a href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/SSU/
+         target=_new>Student Union</a>
+					</td>
+</tr>
+</TABLE>
+
+<br>
+<br>
+<H2>June 14 2002</H2>
+
+<center>
+<table border="1" width="80%">
+<tr>
+<th>Registration</th>
+</tr>
+<tr><td align=center>
+0800-1100<br>
+        <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY
+         target=_new>Art-Sociology</a> Atrium
+</td></tr>
+</table>
+</center>
+<br>
+
+
+<TABLE BORDER="1" WIDTH="100%">
+    <TR>
+        <TH WIDTH="20%">Time</TH>
+        <TH WIDTH="40%">Track 1</TH>
+        <TH WIDTH="40%">Track 2</TH>
+    </TR>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">0900 - 1030</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Next-Gen Open Hypermedia, Part One</B><BR>
+ 	    Session Chiar: <i>Niels Olof Bouvin (Aarhus University, Denmark)</i><br>
+            <BR>
+             An Infrastructure for Open Latent Semantic Linking<BR>
+             <I>Alessandra Alaniz Macedo, Maria da Gra&ccedil;a Campos Pimentel, Jos&eacute; Ant&ocirc;nio Camacho Guerreiro</I><BR>
+             <BR>
+             Towards Geo-Spatial Hypermedia: Concepts and Prototype Implementation<BR>
+             <I>Kaj Gr&oslash;nb&aelig;k, Peter Posselt Vestergaard, Peter &Oslash;rb&aelig;k</I><BR>
+             <BR>
+             Links in the Palm of your Hand: Tangible Hypermedia using Augmented Reality<BR>
+             <I>Patrick A. S. Sinclair, Kirk Martinez, David E. Millard, Mark J. Weal</I><BR>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+            Panel: <B>Self-Assembling Hypertexts, Weblogs, and Wikis</B><BR>
+            Moderator: <I>Stuart Moulthrop (University of Baltimore, MD, USA)</I><BR>
+            Panelists: <I>
+            Mark Bernstein (Eastgate Systems, MA, USA),
+            Sean Carton (Carton-Donofrio Partners)
+        </I>
+        </TD>
+    </TR>
+<tr>
+<th align=center valign=top>1030 - 1100</th>
+<td align=center valign=top colspan=2>
+Coffee Break and Poster Session
+</td>
+</tr>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1100 - 1230</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Next-Gen Open Hypermedia, Part Two</B><BR>
+	    Session Chair: <i>monica mc schraefel (University of Toronto, Canada)</i><br>
+            <BR>
+             Pervasive Hypermedia: Open Hypermedia in a Peer-To-Peer Context<BR>
+             <I>Niels Olof Bouvin</I><BR>
+             <BR>
+             Policies for Cooperative Hypermedia Systems<BR>
+             <I>Samir Tata, Claude Godart, Uffe K. Wiil</I><BR>
+             <BR>
+             GOATE: XLink and Beyond<BR>
+             <I>Duncan Martin, Helen Ashman</I><BR>
+             <BR>
+             Two Implementations of XPointer<BR>
+             <I>Fabio Vitali, Federico Folli, Claudio Tasso</I><BR>
+             <BR>
+             Supporting Distributed Meetings using Cooperative, Visual, 
+		Process-Enabled Hypermedia<BR>
+             <i>Weigang Wang, J&ouml;rg M. Haake</I>
+        </TD>
+
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+            Panel: <B>Chain Saws for Sculptural Hypertext</B><BR>
+                Moderator: <I>Jim Rosenberg (Grindstone, PA, USA)</I><BR>
+                Panelists: <I>
+                   Mark Bernstein (Eastgate Systems, MA, USA),
+                   Cathy Marshall (Microsoft, USA),
+                   Paul deBra (Eindhoven University of Technology, Netherlands),
+                   David Millard (University of Southampton, UK),
+                   Frank Shipman (Texas A&M University, USA)
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1230 - 1400</TH>
+        <TD ALIGN="center" VALIGN="top" colspan=2>
+ 		Lunch Break 
+		<br>
+		<a href=http://www.acm.org/sigweb
+		 target=_new>SIGWEB</a> Business Meeting -
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+	</TD>
+    </tr>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1400 - 1530</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+            Paper Session: <B>World Wide Web</B><BR>
+	    Session Chair: <i>Fabio Vitali (University of Bologna)</i><br>
+            <BR>
+            Contextualized Preview of Image Map Links<BR>
+            <I>Wallace Chigona, Thomas Strothotte</I><BR>
+            <BR>
+            Predicting Web Actions from HTML Content<BR>
+            <I>Brian D. Davison</I><BR>
+            <BR>
+            Using Markov Models for Web Site Link Prediction<BR>
+            <I>Jianhan Zhu, Jun Hong, John G. Hughes</I>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+            Panel: <B>Seven Issues Revisited</B><BR>
+            Moderator: <I>Jim Whitehead (University of California, Santa Cruz, USA)</I><BR>
+            Panelists: <I>
+            Paul De Bra (Eindhoven University of Technology, Netherlands),
+            Kaj Gr&oslash;nb&aelig;k (Aarhus University, Denmark),
+            Deena Larsen (Lakewood, Colorado, USA),
+            John Leggett (Texas A&M University, USA),
+            monica mc schraefel (University of Toronto, Canada),
+	    Frank Shipman (Texas A&M University, USA),
+	    Kenneth M. Anderson (University of Colorado, Boulder, USA)
+</I>
+
+        </TD>
+    </TR>
+<tr>
+<th align=center valign=top>1530 - 1600</th>
+<td align=center valign=top colspan=2>Coffee Break and Poster Session</td>
+</tr>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1600 - 1730</TH>
+        <TD ALIGN="center" VALIGN="top" COLSPAN="2">
+		Hypertext Readings<br>
+	Session Chair: <i>Jim Rosenberg (Grindstone, PA, USA)</i><br>
+	<center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+	</center>
+        </TD>
+    </TR>
+</TABLE>
+
+<br>
+<br>
+<H2>June 15 2002</H2>
+
+<TABLE BORDER="1">
+    <TR>
+        <TH WIDTH="20%">Time</TH>
+        <TH WIDTH="40%">Track 1</TH>
+        <TH WIDTH="40%">Track 2</TH>
+    </TR>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">0900 - 1030</TH>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+         <hr width=50%>
+         </center>
+
+            Paper Session: <B>Hypermedia Systems and Data Models</B><BR>
+	    Session Chair: <i>J&ouml;rg M. Haake (FernUniversitaet Hagen)</i><br>
+            <BR>
+              Storyspace I<BR>
+              <I>Mark Bernstein</I><BR>
+             <BR>
+              Uniform Comparison of Data Models Using Containment Modeling<BR>
+              <I>E. James Whitehead, Jr.</I><BR>
+             <BR>
+             Versioned Hypermedia can Improve Software Document Management<BR>
+             <I>Tien Nguyen, Satish Chandra Gupta, Ethan V. Munson</I><BR>
+             <BR>
+             FreeNet-Like Guids for Implementing Xanalogical Hypertext
+             <I>Tuomas J. Lukka, Benja Fallenstein</I>
+        </TD>
+        <TD ALIGN="left" VALIGN="top">
+         <center>
+         Room: <a
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 3219
+         <hr width=50%>
+         </center>
+Panel: <b>Hypermedia and Multimedia</b><br>
+Moderator: <i>Stuart Moulthrop (University of Baltimore, MD, USA)</i><br>
+
+Panelists:  <i>Diana Slattery,
+            Jim Rosenberg (PA, USA),
+            Nick Montfort</i>
+        </TD>
+    </TR>
+    <TR>
+        <TH ALIGN="center" VALIGN="top">1100 - 1300</TH>
+        <TD COLSPAN="2" ALIGN="left" VALIGN="top">
+	<center>
+	Closing Keynote<br>
+		<a href=keynotes.shtml#close>
+		     Polle Zellweger - 
+	 	     "Using Technology to Support Narrative"</a><BR>
+		Conference Hand-Off
+	<br>
+	Session Chair: <i>Kenneth M. Anderson (University of Colorado, Boulder, USA)</i><br>
+
+	Room:
+	<a 
+         href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/ASY/
+         target=_new>ASY</a> 2203
+	</center>
+	</td>
+    </TR>
+    <tr>
+	<th align=center valign=top>1400 - 1730</th>
+	<td colspan=2 align=left valign=top>
+		<center>
+		<b><a href=doc.cons.shtml>Doctoral Consortium</a></b>
+	Room:
+	<a 
+	 href=http://www.inform.umd.edu/CampusInfo/Facilities/Buildings/HBK
+	target=_new>HBK</a> 4115
+		</center>
+	</td>
+    </tr>
+</table>
+
+</td></tr></table>
+
+<table border=0 width=100%>
+<tr> <td align=right>
+<font size=-1> <i> <br> <br>
+This page last modified on Monday, 10-Jun-2002 21:44:40 EDT.  </i> </font>
+</table>
+
+
+</BODY>
+</HTML>
+

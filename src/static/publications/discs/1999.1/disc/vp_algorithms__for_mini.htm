@@ -1,0 +1,123 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_6.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Algorithms: For Mining Association Rules for Binary Segmentations of Huge Categorical Databases</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_m.htm#Yasuhiko Morimoto">Yasuhiko Morimoto</a>, <a href="m_authors_f.htm#Takeshi Fukuda">Takeshi Fukuda</a>, <a href="m_authors_m.htm#Hirofumi Matsuzawa">Hirofumi Matsuzawa</a>, <a href="m_authors_t.htm#Takeshi Tokuyama">Takeshi Tokuyama</a>, <a href="m_authors_y.htm#Kunikazu Yoda">Kunikazu Yoda</a></center></td></tr></table></center><a target="disc_pdf8731" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+We consider the problem of finding association rules that make nearly optimal binary segmentations of huge categorical databases.
+The optimality of segmentation is defined by an objective function suitable for the user's objective.
+An objective function is usually defined in terms of the distribution of agiven target attribute.
+Our goal is to find association rules that split databases into two subsets, optimizing the value of an objective function.
+<p>
+The problem is intractable for general objective functions, because letting <i>N</i> be the number of records of a given database, there are 2<i><sup>N</i></sup> possible binary segmentations, and we may have to exhaustively examine all of them.
+However, when the objective function is convex, there are feasible algorithms for finding nearly optimal binary segmentations, and we prove that typical criteria, such as "entropy (mutual information)," "<i>x</i><sup>2</sup> (correlation)," and "gini index (mean squared error)," are actually convex.
+<p>
+We propose practical algorithms that use computational geometry techniquesto handle cases where a target attribute is not binary, in which conventional approaches cannot be used directly.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[AIS93]<dd><a name="AgrawalIS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">Tomasz Imielinski</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Swami:Arun_N=.html">Arun N. Swami</a>:
+Mining Association Rules between Sets of Items in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod93.html#AgrawalIS93">SIGMOD Conference 1993</a>: 207-216<dt>[AS94]<dd><a name="AgrawalS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Rakesh.html">Rakesh Agrawal</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srikant:Ramakrishnan.html">Ramakrishnan Srikant</a>:
+Fast Algorithms for Mining Association Rules in Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#AgrawalS94">VLDB 1994</a>: 487-499<dt>[AT94]<dd>...
+<dt>[BEHW89]<dd><a name="BlumerEHW89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Blumer:Anselm.html">Anselm Blumer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Ehrenfeucht:Andrzej.html">Andrzej Ehrenfeucht</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haussler:David.html">David Haussler</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Warmuth:Manfred_K=.html">Manfred K. Warmuth</a>:
+Learnability and the Vapnik-Chervonenkis Dimension.
+<a href="http://theory.lcs.mit.edu/~jacm/jacm89.html">JACM 36(4)</a>: 929-965(1989)<dt>[BFOS84]<dd>Leo Breiman, J. H. Friedman, R. A. Olshen, C. J. Stone:
+Classification and Regression Trees.
+ Wadsworth 1984, ISBN 0-534-98053-8<br>
+<dt>[Cen92]<dd>...
+<dt>[DEY86]<dd><a name="DobkinEY86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dobkin:David_P=.html">David P. Dobkin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Edelsbrunner:Herbert.html">Herbert Edelsbrunner</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yap:Chee_K=.html">Chee K. Yap</a>:
+Probing Convex Polytopes.
+<a href="http://theory.lcs.mit.edu/~dmjones/STOC/stoc86.html">STOC 1986</a>: 424-432<dt>[FMMT96a]<dd><a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">Takeshi Fukuda</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">Yasuhiko Morimoto</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">Shinichi Morishita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">Takeshi Tokuyama</a>:
+Constructing Efficient Decision Trees by Using Optimized Numeric Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#FukudaMMT96">VLDB 1996</a>: 146-155<dt>[FMMT96b]<dd><a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">Takeshi Fukuda</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">Yasuhiko Morimoto</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">Shinichi Morishita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">Takeshi Tokuyama</a>:
+Data Mining Using Two-Dimensional Optimized Accociation Rules: Scheme, Algorithms, and Visualization.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#FukudaMMT96">SIGMOD Conf. 1996</a>: 13-23<dt>[FMMT96c]<dd><a name="FukudaMMT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fukuda:Takeshi.html">Takeshi Fukuda</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morimoto:Yasuhiko.html">Yasuhiko Morimoto</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Morishita:Shinichi.html">Shinichi Morishita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tokuyama:Takeshi.html">Takeshi Tokuyama</a>:
+Mining Optimized Association Rules for Numeric Attributes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#FukudaMMT96">PODS 1996</a>: 182-191<dt>[HF95]<dd><a name="HanF95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fu:Yongjian.html">Yongjian Fu</a>:
+Discovery of Multiple-Level Association Rules from Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#HanF95">VLDB 1995</a>: 420-431<dt>[HII95]<dd><a name="HasegawaII95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hasegawa:Susumu.html">Susumu Hasegawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imai:Hiroshi.html">Hiroshi Imai</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Ishiguro:Masaki.html">Masaki Ishiguro</a>:
+epsilon-Approximations of k-Label Spaces.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tcs/tcs137.html#HasegawaII95">TCS 137(1)</a>: 145-157(1995)<dt>[HW87]<dd>...
+<dt>[MFMT97]<dd>...
+<dt>[MP91]<dd>...
+<dt>[PCY95]<dd><a name="ParkCY95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Park:Jong_Soo.html">Jong Soo Park</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chen:Ming=Syan.html">Ming-Syan Chen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yu:Philip_S=.html">Philip S. Yu</a>:
+An Effective Hash Based Algorithm for Mining Association Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#ParkCY95">SIGMOD Conference 1995</a>: 175-186<dt>[PS85]<dd><a name="PreparataS85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Preparata:Franco_P=.html">Franco P. Preparata</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shamos:Michael_Ian.html">Michael Ian Shamos</a>:
+Computational Geometry - An Introduction.
+ Springer 1985, ISBN 3-540-96131-3<br>
+<dt>[PS91]<dd><a name="Piatetsky91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Piatetsky=Shapiro:Gregory.html">Gregory Piatetsky-Shapiro</a>:
+Discovery, Analysis, and Presentation of Strong Rules.
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/collections/PiatetskyF91.html">Knowledge Discovery in Databases. 1991</a>: 229-248<dt>[Qui86]<dd><a name="Quinlan86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">J. Ross Quinlan</a>:
+Induction of Decision Trees.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ml/ml1.html#Quinlan86">Machine Learning 1</a>: 81-106(1986)<dt>[Qui93]<dd><a name="Quinlan93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quinlan:J=_Ross.html">J. Ross Quinlan</a>:
+C4.5: Programs for Machine Learning.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1993, ISBN 1-55860-238-0<br>
+</dl>
+Referenced By:
+<ol>
+<li> <a name="GehrkeRG98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gehrke:Johannes.html">Johannes Gehrke</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramakrishnan:Raghu.html">Raghu Ramakrishnan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Ganti:Venkatesh.html">Venkatesh Ganti</a>:
+RainForest - A Framework for Fast Decision Tree Construction of Large Datasets.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb98.html#GehrkeRG98">VLDB 1998</a>: 416-427</ol>
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/MorimotoFMTY98,<br>  author    = {Yasuhiko Morimoto and<br>               Takeshi Fukuda and<br>               Hirofumi Matsuzawa and<br>               Takeshi Tokuyama and<br>               Kunikazu Yoda},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Algorithms for Mining Association Rules for Binary Segmentations<br>               of Huge Categorical Databases},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {380-391},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

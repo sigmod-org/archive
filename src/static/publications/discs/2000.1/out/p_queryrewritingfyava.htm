@@ -1,0 +1,814 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Query Rewriting for Semistructured Data</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Query Rewriting for Semistructured Data
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_yannis_papakonstan.htm">Yannis Papakonstantinou</a> and 
+<a href = "a_vasilis_vassalos.htm">Vasilis Vassalos</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/queryrewritingfyava.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmosemistructators.htm">Return to Semistructured Data and Mediators</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We address the problem of query rewriting for TSL, a language for querying semistructured data. We develop and present an algorithm that, given a semistructured query q and a set of semistructured views V, finds rewriting queries, i.e., queries that access the views and produce the same result as q. Our algorithm is based on appropriately generalizing containment mappings, the chase, and query composition - techniques that were developed for structured, relational data. We also develop an algorithm for equivalence checking of TSL queries. We show that the algorithm is sound and complete for TLS. i.e., it always finds every non-trivial TLS rewriting query of q, and we discuss its complexity. We extend the rewriting algorithm to use some forms of structural constraints (such as DTDs) and find more opportunities for query rewriting.   
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AbiteboulV97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Queries and Computation on the Web. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#AbiteboulV97">
+ICDT 1997
+</a>
+: 262-275
+<dt>
+[2]
+<dd>
+... 
+<dt>
+[3]
+<dd>
+<a name="BunemanDFS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Adding Structure to Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#BunemanDFS97">
+ICDT 1997
+</a>
+: 336-350
+<dt>
+[4]
+<dd>
+<a name="BunemanDHS96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Buneman:Peter.html">
+Peter Buneman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Davidson:Susan_B=.html">
+Susan B. Davidson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hillebrand:Gerd_G=.html">
+Gerd G. Hillebrand
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language and Optimization Techniques for Unstructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conf. 1996
+</a>
+: 505-516
+<dt>
+[5]
+<dd>
+<a name="CalvaneseGLV99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Calvanese:Diego.html">
+Diego Calvanese
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Giacomo:Giuseppe_De.html">
+Giuseppe De Giacomo
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lenzerini:Maurizio.html">
+Maurizio Lenzerini
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Rewriting of Regular Expressions and Regular Path Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#CalvaneseGLV99">
+PODS 1999
+</a>
+: 194-204
+<dt>
+[6]
+<dd>
+<a name="Chan92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chan:Edward_P=_F=.html">
+Edward P. F. Chan
+</a>
+: Containment and Minimization of Positive Conjunctive Queries in OODB's. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods92.html#Chan92">
+PODS 1992
+</a>
+: 202-211
+<dt>
+[7]
+<dd>
+<a name="ChandraM77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chandra:Ashok_K=.html">
+Ashok K. Chandra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merlin:Philip_M=.html">
+Philip M. Merlin
+</a>
+: Optimal Implementation of Conjunctive Queries in Relational Data Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+STOC 1977
+</a>
+: 77-90
+<dt>
+[8]
+<dd>
+... 
+<dt>
+[9]
+<dd>
+<a name="DuschkaG97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Duschka:Oliver_M=.html">
+Oliver M. Duschka
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Genesereth:Michael_R=.html">
+Michael R. Genesereth
+</a>
+: Answering Recursive Queries Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#DuschkaG97">
+PODS 1997
+</a>
+: 109-116
+<dt>
+[10]
+<dd>
+<a name="DuschkaL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Duschka:Olivier_M=.html">
+Olivier M. Duschka
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+: Recursive Plans for Information Gathering. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ijcai/ijcai97.html#DuschkaL97">
+IJCAI (1) 1997
+</a>
+: 778-784
+<dt>
+[11]
+<dd>
+<a name="FernandezFLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: A Query Language for a Web-Site Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#FernandezFLS97">
+SIGMOD Record 26(3)
+</a>
+: 4-11(1997)
+<dt>
+[12]
+<dd>
+<a name="FernandezS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fernandez:Mary_F=.html">
+Mary F. Fernandez
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Optimizing Regular Path Expressions Using Graph Schemas. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde98.html#FernandezS98">
+ICDE 1998
+</a>
+: 14-23
+<dt>
+[13]
+<dd>
+<a name="FlorescuLM98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+: Database Techniques for the World-Wide Web: A Survey. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod27.html#FlorescuLM98">
+SIGMOD Record 27(3)
+</a>
+: 59-74(1998)
+<dt>
+[14]
+<dd>
+<a name="FlorescuLS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Florescu:Daniela.html">
+Daniela Florescu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Query Containment for Conjunctive Queries with Regular Expressions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods98.html#FlorescuLS98">
+PODS 1998
+</a>
+: 139-148
+<dt>
+[15]
+<dd>
+<a name="Garcia-MolinaPQRSUVW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vassalos:Vasilis.html">
+Vasilis Vassalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: The TSIMMIS Approach to Mediation: Data Models and Languages. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jiis/jiis8.html#Garcia-MolinaPQRSUVW97">
+JIIS 8(2)
+</a>
+: 117-132(1997)
+<dt>
+[16]
+<dd>
+<a name="GoldmanW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: DataGuides: Enabling Query Formulation and Optimization in Semistructured Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#GoldmanW97">
+VLDB 1997
+</a>
+: 436-445
+<dt>
+[17]
+<dd>
+<a name="HaasKWY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">
+Laura M. Haas
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">
+Donald Kossmann
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wimmers:Edward_L=.html">
+Edward L. Wimmers
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:Jun.html">
+Jun Yang
+</a>
+: Optimizing Queries Across Diverse Data Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#HaasKWY97">
+VLDB 1997
+</a>
+: 276-285
+<dt>
+[18]
+<dd>
+<a name="HullY91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">
+Richard Hull
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yoshikawa:Masatoshi.html">
+Masatoshi Yoshikawa
+</a>
+: On the Equivalence of Database Restructurings Involving Object Identifiers. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods91.html#HullY91">
+PODS 1991
+</a>
+: 328-340
+<dt>
+[19]
+<dd>
+<a name="KellerB96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Keller:Arthur_M=.html">
+Arthur M. Keller
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Basu:Julie.html">
+Julie Basu
+</a>
+: A Predicate-based Caching Scheme for Client-Server Database Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#KellerB96">
+VLDB Journal 5(1)
+</a>
+: 35-47(1996)
+<dt>
+[20]
+<dd>
+<a name="LevyMSS95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Srivastava:Divesh.html">
+Divesh Srivastava
+</a>
+: Answering Queries Using Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods95.html#LevyMSS95">
+PODS 1995
+</a>
+: 95-104
+<dt>
+[21]
+<dd>
+<a name="LevyRO96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Ordille:Joann_J=.html">
+Joann J. Ordille
+</a>
+: Querying Heterogeneous Information Sources Using Source Descriptions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#LevyRO96">
+VLDB 1996
+</a>
+: 251-262
+<dt>
+[22]
+<dd>
+<a name="LevyRU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Answering Queries Using Limited External Processors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods96.html#LevyRU96">
+PODS 1996
+</a>
+: 227-237
+<dt>
+[23]
+<dd>
+... 
+<dt>
+[24]
+<dd>
+<a name="LevyS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Levy:Alon_Y=.html">
+Alon Y. Levy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Suciu:Dan.html">
+Dan Suciu
+</a>
+: Deciding Containment for Queries with Complex Objects. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#LevyS97">
+PODS 1997
+</a>
+: 20-31
+<dt>
+[25]
+<dd>
+<a name="LiYVGPUV98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Chen.html">
+Chen Li
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yerneni:Ramana.html">
+Ramana Yerneni
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vassalos:Vasilis.html">
+Vasilis Vassalos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valiveti:Murty.html">
+Murty Valiveti
+</a>
+: Capability Based Mediation in TSIMMIS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1998
+</a>
+: 564-566
+<dt>
+[26]
+<dd>
+<a name="McHughAGQW97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McHugh:Jason.html">
+Jason McHugh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goldman:Roy.html">
+Roy Goldman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Quass:Dallan.html">
+Dallan Quass
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Lore: A Database Management System for Semistructured Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod26.html#McHughAGQW97">
+SIGMOD Record 26(3)
+</a>
+: 54-66(1997)
+<dt>
+[27]
+<dd>
+<a name="MendelzonM97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Milo:Tova.html">
+Tova Milo
+</a>
+: Formal Models of Web Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods97.html#MendelzonM97">
+PODS 1997
+</a>
+: 134-143
+<dt>
+[28]
+<dd>
+... 
+<dt>
+[29]
+<dd>
+<a name="PapakonstantinouGU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: MedMaker: A Mediation System Based on Declarative Specifications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#PapakonstantinouGU96">
+ICDE 1996
+</a>
+: 132-141
+<dt>
+[30]
+<dd>
+<a name="PapakonstantinouGW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Object Exchange Across Heterogeneous Information Sources. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#PapakonstantinouGW95">
+ICDE 1995
+</a>
+: 251-260
+<dt>
+[31]
+<dd>
+... 
+<dt>
+[32]
+<dd>
+<a name="PapakonstantinouV99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papakonstantinou:Yannis.html">
+Yannis Papakonstantinou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Velikhov:Pavel.html">
+Pavel Velikhov
+</a>
+: Enhancing Semistructured Data Mediators with Document Type Definitions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde99.html#PapakonstantinouV99">
+ICDE 1999
+</a>
+: 136-145
+<dt>
+[33]
+<dd>
+<a name="SagivY80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sagiv:Yehoshua.html">
+Yehoshua Sagiv
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: Equivalences Among Relational Expressions with the Union and Difference Operators. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 27(4)
+</a>
+: 633-655(1980)
+<dt>
+[34]
+<dd>
+... 
+<dt>
+[35]
+<dd>
+... 
+<dt>
+[36-1]
+<dd>
+<a name="Ullman88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Principles of Database  and Knowledge-Base Systems, Volume I.  Computer Science Press 1988, ISBN 0-7167-8158-1
+<br>
+ 
+<dt>
+[36-2]
+<dd>
+<a name="Ullman89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Principles of Database  and Knowledge-Base Systems, Volume II.  Computer Science Press 1989, ISBN 0-7167-8162-X
+<br>
+ 
+<dt>
+[37]
+<dd>
+... 
+<dt>
+[38]
+<dd>
+<a name="YangL87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yang:H=_Z=.html">
+H. Z. Yang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Larson:Per==Aring=ke.html">
+Per-&Aring;ke Larson
+</a>
+: Query Transformation for PSJ-Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb87.html#YangL87">
+VLDB 1987
+</a>
+: 245-254
+<dt>
+[39]
+<dd>
+<a name="ZhugeGHW95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zhuge:Yue.html">
+Yue Zhuge
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hammer:Joachim.html">
+Joachim Hammer
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: View Maintenance in a Warehousing Environment. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 316-327
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="Abiteboul99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+: On Views and XML. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pods/pods99.html#Abiteboul99">
+PODS 1999
+</a>
+: 1-9
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/PapakonstantinouV99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Yannis&nbsp;Papakonstantinou&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vasilis&nbsp;Vassalos},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Query&nbsp;Rewriting&nbsp;for&nbsp;Semistructured&nbsp;Data},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{455-466},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

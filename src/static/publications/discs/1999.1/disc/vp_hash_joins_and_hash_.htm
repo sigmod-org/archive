@@ -1,0 +1,109 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_8.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Hash Joins and Hash Teams in Microsoft SQL Server</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_g.htm#Goetz Graefe">Goetz Graefe</a>, <a href="m_authors_b.htm#Ross Bunker">Ross Bunker</a>, <a href="m_authors_c.htm#Shaun Cooper">Shaun Cooper</a></center></td></tr></table></center><a target="disc_pdfK83" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+The query execution engine in Microsoft SQL Server employs hash-based algorithms for inner and outer joins, semi-joins, set operations (such as intersection), grouping, and duplicate removal.
+The implementation combines many techniques proposed individually in the research literature but never combined in a single implementation, neither in a product nor in a research prototype.
+One of the paper's contributions is a design that cleanly integrates most existing techniques.
+One technique, however, which we call hash teams and which has previously been described only in vague terms, has not been implemented in prior research or product work.
+It realizes in hash-based query processing many of the benefits of <i>interesting orderings</i> in sort-based query processing.
+Moreover, we describe how memory is managed in complex and bushy query evaluation plans with multiple sort and hash operations.
+Finally, we report on the effectiveness of hashing using two very typical database queries, including the performance effects of hash teams.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[Bratbergsengen 1984]<dd><a name="Bratbergsengen84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bratbergsengen:Kjell.html">Kjell Bratbergsengen</a>:
+Hashing Methods and Relational Algebra Operations.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb84.html#Bratbergsengen84">VLDB 1984</a>: 323-333<dt>[DeWitt 1984]<dd><a name="DeWittKOSSW84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Katz:Randy_H=.html">Randy H. Katz</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Olken:Frank.html">Frank Olken</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shapiro:Leonard_D=.html">Leonard D. Shapiro</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wood:David_A=.html">David A. Wood</a>:
+Implementation Techniques for Main Memory Database Systems.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod84.html#DeWittKOSSW84">SIGMOD Conference 1984</a>: 1-8<dt>[DeWitt 1985]<dd><a name="DeWittG85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerber:Robert_H=.html">Robert H. Gerber</a>:
+Multiprocessor Hash-Based Join Algorithms.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb85.html#DeWittG85">VLDB 1985</a>: 151-164<dt>[DeWitt 1993]<dd><a name="DeWittNB93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Burger:J=.html">J. Burger</a>:
+Nested Loops Revisited.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis93.html#DeWittNB93">PDIS 1993</a>: 230-242<dt>[Fushimi 1986]<dd><a name="FushimiKT86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fushimi:Shinya.html">Shinya Fushimi</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tanaka:Hidehiko.html">Hidehiko Tanaka</a>:
+An Overview of The System Software of A Parallel Relational Database Machine GRACE.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb86.html#FushimiKT86">VLDB 1986</a>: 209-219<dt>[Graefe 1993]<dd><a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Query Evaluation Techniques for Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">Computing Surveys 25(2)</a>: 73-170(1993)<dt>[Graefe 1994]<dd><a name="Graefe94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Sort-Merge-Join: An Idea whose time has(h) passed?
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde94.html#Graefe94">ICDE 1994</a>: 406-417<dt>[Gray 1987]<dd><a name="GrayP87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Putzolu:Gianfranco_R=.html">Gianfranco R. Putzolu</a>:
+The 5 Minute Rule for Trading Memory for Disk Accesses and The 10 Byte Rule for Trading Memory for CPU Time.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#GrayP87">SIGMOD Conference 1987</a>: 395-398<dt>[Hellerstein 1996]<dd><a name="HellersteinN96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">Joseph M. Hellerstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>:
+Query Execution Techniques for Caching Expensive Methods.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod96.html#HellersteinN96">SIGMOD Conf. 1996</a>: 423-434<dt>[Kitsuregawa 1989]<dd><a name="KitsuregawaNT89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kitsuregawa:Masaru.html">Masaru Kitsuregawa</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nakayama:Masaya.html">Masaya Nakayama</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Takagi:Mikio.html">Mikio Takagi</a>:
+The Effect of Bucket Size Tuning in the Dynamic Hybrid GRACE Hash Join Method.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb89.html#KitsuregawaNT89">VLDB 1989</a>: 257-266<dt>[Red Brick 1996]<dd>...
+<dt>[Sacco 1986]<dd><a name="Sacco86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sacco:Giovanni_Maria.html">Giovanni Maria Sacco</a>:
+Fragmentation: A Technique for Efficient Query Processing.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods11.html#Sacco86">TODS 11(2)</a>: 113-133(1986)<dt>[Schneider 1990]<dd><a name="SchneiderD90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schneider:Donovan_A=.html">Donovan A. Schneider</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>:
+Tradeoffs in Processing Complex Join Queries via Hashing in Multiprocessor Database Machines.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#SchneiderD90">VLDB 1990</a>: 469-480<dt>[Sedgewick 1984]<dd>...
+<dt>[Selinger 1979]<dd><a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">Patricia G. Selinger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">Morton M. Astrahan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">Donald D. Chamberlin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">Raymond A. Lorie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">Thomas G. Price</a>:
+Access Path Selection in a Relational Database Management System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">SIGMOD Conference 1979</a>: 23-34<dt>[Zeller 1990]<dd><a name="ZellerG90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zeller:Hansj=ouml=rg.html">Hansj&ouml;rg Zeller</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">Jim Gray</a>:
+An Adaptive Hash Join Algorithm for Multiuser Environments.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#ZellerG90">VLDB 1990</a>: 186-197</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/GraefeBC98,<br>  author    = {Goetz Graefe and<br>               Ross Bunker and<br>               Shaun Cooper},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Hash Joins and Hash Teams in Microsoft SQL Server},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {86-97},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

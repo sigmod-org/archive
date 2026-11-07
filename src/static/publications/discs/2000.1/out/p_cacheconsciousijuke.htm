@@ -1,0 +1,649 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Cache Conscious Indexing for Decision-Support in Main Memory</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_10.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Cache Conscious Indexing for Decision-Support in Main Memory
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_jun_rao.htm">Jun Rao</a> and 
+<a href = "a_kenneth_a_ross.htm">Kenneth A. Ross</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/cacheconsciousijuke.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbmainmemoryching.htm">Return to Main-Memory Caching</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  We study indexing techniques for main memory, including hash indexes, binary search trees, T-trees, B+-trees, interpolation search, and binary search on arrays. In a decision-support context, our primary concerns are the lookup time, and the space occupied by the index structure. 
+<p>
+ Our goal is to provide faster lookup times than binary search by paying attention to reference locality and cache behavior, without using substantial extra space. We propose a new indexing technique called ``Cache-Sensitive Search Trees'' (CSS-trees). Our technique stores a directory structure on top of a sorted array. Nodes in this directory have size matching the cache-line size of the machine. We store the directory in an array and do not store internal-node pointers; child nodes can be found by performing arithmetic on array o sets. 
+<p>
+ We compare the algorithms based on their time and space requirements. We have implemented all of the techniques, and present a performance study on two popular modern machines. We demonstrate that with a small space overhead, we can reduce the cost of binary search on the array by more than a factor of two. We also show that our technique dominates B+-trees, T-trees, and binary search trees in terms of both space and time. A cache simulation verifies that the gap is due largely to cache misses.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[AHK85]
+<dd>
+... 
+<dt>
+[BBC+98]
+<dd>
+<a name="BernsteinBCDFGGHHJLMNPSU98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Brodie:Michael_L=.html">
+Michael L. Brodie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">
+David J. DeWitt
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Held:Gerald.html">
+Gerald Held
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lesk:Michael.html">
+Michael Lesk
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pirahesh:Hamid.html">
+Hamid Pirahesh
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: The Asilomar Report on Database Research. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/sigmod/sigmod27.html#BernsteinBCDFGGHHJLMNPSU98">
+SIGMOD Record 27(4)
+</a>
+: 74-80(1998)
+<dt>
+[CLH98]
+<dd>
+... 
+<dt>
+[Com79]
+<dd>
+<a name="Comer79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Comer:Douglas.html">
+Douglas Comer
+</a>
+: The Ubiquitous B-Tree. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur11.html#Comer79">
+Computing Surveys 11(2)
+</a>
+: 121-137(1979)
+<dt>
+[CS83]
+<dd>
+<a name="CesariniS83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cesarini:Francesca.html">
+Francesca Cesarini
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Soda:Giovanni.html">
+Giovanni Soda
+</a>
+: An Algorithm to Construct a Compact B-Tree in Case of Ordered Keys. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ipl/ipl17.html#CesariniS83">
+IPL 17(1)
+</a>
+: 13-16(1983)
+<dt>
+[Eng98]
+<dd>
+... 
+<dt>
+[Fre95]
+<dd>
+<a name="French95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/French:Clark_D=.html">
+Clark D. French
+</a>
+: ``One Size Fits All'' Database Architectures Do Not Work for DDS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod95.html#French95">
+SIGMOD Conference 1995
+</a>
+: 449-450
+<dt>
+[Fre97]
+<dd>
+<a name="French97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/French:Clark_D=.html">
+Clark D. French
+</a>
+: Teaching an OLTP Database Kernel Advanced Data Warehousing Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde97.html#French97">
+ICDE 1997
+</a>
+: 194-198
+<dt>
+[GBC98]
+<dd>
+<a name="GraefeBC98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">
+Goetz Graefe
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bunker:Ross.html">
+Ross Bunker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cooper:Shaun.html">
+Shaun Cooper
+</a>
+: Hash Joins and Hash Teams in Microsoft SQL Server. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1998
+</a>
+: 86-97
+<dt>
+[GMS86]
+<dd>
+... 
+<dt>
+[GR93]
+<dd>
+<a name="GrayR93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Reuter:Andreas.html">
+Andreas Reuter
+</a>
+: Transaction Processing: Concepts and Techniques.  
+<a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">
+Morgan Kaufmann
+</a>
+ 1993, ISBN 1-55860-190-2
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Gray93.html">
+Contents
+</a>
+<dt>
+[Hag86]
+<dd>
+<a name="Hagmann86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hagmann:Robert_B=.html">
+Robert B. Hagmann
+</a>
+: Crash Recovery Scheme for a Memory-Resident Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tc/tc35.html#Hagmann86">
+IEEE Transactions on Computers 35(9)
+</a>
+: 839-843(1986)
+<dt>
+[Inc99]
+<dd>
+... 
+<dt>
+[JLRS94]
+<dd>
+<a name="JagadishLRSS94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jagadish:H=_V=.html">
+H. V. Jagadish
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lieuwen:Daniel_F=.html">
+Daniel F. Lieuwen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rastogi:Rajeev.html">
+Rajeev Rastogi
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Silberschatz:Abraham.html">
+Abraham Silberschatz
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudarshan:S=.html">
+S. Sudarshan
+</a>
+: Dal&iacute;: A High Performance Main Memory Storage Manager. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 48-59
+<dt>
+[JTR87]
+<dd>
+<a name="JongeTR87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jonge:Wiebren_de.html">
+Wiebren de Jonge
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tanenbaum:Andrew_S=.html">
+Andrew S. Tanenbaum
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Riet:Reind_P=_van_de.html">
+Reind P. van de Riet
+</a>
+: Two Access Methods Using Compact Binary Trees. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse13.html#JongeTR87">
+TSE 13(7)
+</a>
+: 799-810(1987)
+<dt>
+[Knu73]
+<dd>
+<a name="Knuth73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Knuth:Donald_E=.html">
+Donald E. Knuth
+</a>
+: The Art of Computer Programming, Volume III: Sorting and Searching.  Addison-Wesley 1973, ISBN 0-201-03803-X
+<br>
+ 
+<dt>
+[LC86a]
+<dd>
+<a name="LehmanC86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lehman:Tobin_J=.html">
+Tobin J. Lehman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Query Processing in Main Memory Database Management Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod86.html#LehmanC86">
+SIGMOD Conference 1986
+</a>
+: 239-250
+<dt>
+[LC86b]
+<dd>
+<a name="LehmanC86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lehman:Tobin_J=.html">
+Tobin J. Lehman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: A Study of Index Structures for Main Memory Database Management Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1986
+</a>
+: 294-303
+<dt>
+[LC87]
+<dd>
+<a name="LehmanC87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lehman:Tobin_J=.html">
+Tobin J. Lehman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: A Recovery Algorithm for A High-Performance Memory-Resident Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod87.html#LehmanC87">
+SIGMOD Conference 1987
+</a>
+: 104-117
+<dt>
+[LL96]
+<dd>
+<a name="LaMarcaL96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/LaMarca:Anthony.html">
+Anthony LaMarca
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ladner:Richard_E=.html">
+Richard E. Ladner
+</a>
+: The Influence of Caches on the Performance of Heaps. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jea/jea1.html#LaMarcaL96">
+ACM Journal of Experimental Algorithms 1
+</a>
+: 4(1996)
+<dt>
+[LL97]
+<dd>
+<a name="LaMarcaL97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/LaMarca:Anthony.html">
+Anthony LaMarca
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ladner:Richard_E=.html">
+Richard E. Ladner
+</a>
+: The Influence of Caches on the Performance of Sorting. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/soda/soda97.html#LaMarcaL97">
+SODA 1997
+</a>
+: 370-379
+<dt>
+[LN88]
+<dd>
+<a name="LiN88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Li:Kai.html">
+Kai Li
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Multiprocessor Main Memory Transaction Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dpds/dpds88.html#LiN88">
+DPDS 1988
+</a>
+: 177-187
+<dt>
+[LSC92]
+<dd>
+<a name="LehmanSC92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lehman:Tobin_J=.html">
+Tobin J. Lehman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cabrera:Luis=Felipe.html">
+Luis-Felipe Cabrera
+</a>
+: An Evaluation of Starburst's Memory Resident Storage Component. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde4.html#LehmanSC92">
+TKDE 4(6)
+</a>
+: 555-566(1992)
+<dt>
+[NBC+94]
+<dd>
+<a name="NybergBCGL94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Nyberg:Chris.html">
+Chris Nyberg
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barclay:Tom.html">
+Tom Barclay
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cvetanovic:Zarka.html">
+Zarka Cvetanovic
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Jim.html">
+Jim Gray
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lomet:David_B=.html">
+David B. Lomet
+</a>
+: AlphaSort: A RISC Machine Sort. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#NybergBCGL94">
+SIGMOD Conference 1994
+</a>
+: 233-242
+<dt>
+[Pet57]
+<dd>
+... 
+<dt>
+[SAC+79]
+<dd>
+<a name="SelingerACLP79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Selinger:Patricia_G=.html">
+Patricia G. Selinger
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Astrahan:Morton_M=.html">
+Morton M. Astrahan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chamberlin:Donald_D=.html">
+Donald D. Chamberlin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lorie:Raymond_A=.html">
+Raymond A. Lorie
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Price:Thomas_G=.html">
+Thomas G. Price
+</a>
+: Access Path Selection in a Relational Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod79.html#SelingerACLP79">
+SIGMOD Conference 1979
+</a>
+: 23-34
+<dt>
+[SKN94]
+<dd>
+<a name="ShatdalKN94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shatdal:Ambuj.html">
+Ambuj Shatdal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kant:Chander.html">
+Chander Kant
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">
+Jeffrey F. Naughton
+</a>
+: Cache Conscious Algorithms for Relational Query Processing. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 510-521
+<dt>
+[Smi82]
+<dd>
+<a name="Smith82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Smith:Alan_Jay.html">
+Alan Jay Smith
+</a>
+: Cache Memories. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur14.html#Smith82">
+Computing Surveys 14(3)
+</a>
+: 473-530(1982)
+<dt>
+[Sof97]
+<dd>
+... 
+<dt>
+[Syb97]
+<dd>
+... 
+<dt>
+[WK90]
+<dd>
+<a name="WhangK90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Whang:Kyu=Young.html">
+Kyu-Young Whang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Krishnamurthy:Ravi.html">
+Ravi Krishnamurthy
+</a>
+: Query Optimization in a Memory-Resident Domain Relational Calculus Database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods15.html#WhangK90">
+TODS 15(1)
+</a>
+: 67-95(1990)
+<dt>
+[WL91]
+<dd>
+<a name="WolfL91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wolf:Michael_E=.html">
+Michael E. Wolf
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lam:Monica_S=.html">
+Monica S. Lam
+</a>
+: A Data Locality Optimizing Algorithm. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pldi/pldi91.html#WolfL91">
+PLDI 1991
+</a>
+: 30-44
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/RaoR99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Jun&nbsp;Rao&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kenneth&nbsp;A.&nbsp;Ross},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cache&nbsp;Conscious&nbsp;Indexing&nbsp;for&nbsp;Decision-Support&nbsp;in&nbsp;Main&nbsp;Memory},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{78-89},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

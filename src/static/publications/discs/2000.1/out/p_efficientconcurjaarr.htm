@@ -1,0 +1,516 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Efficient Concurrency Control for Broadcast Environments</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_sigmod.htm"><img border=0 src="b_sigmod.gif"></a><br>
+<a href="m_sigmod_papers.htm"><img border=0 src="bn_sigmod_papers.gif"></a><br>
+<a href="s_sigmodemonstrattions.htm"><img border=0 src="b_sigmod_demos.gif"></a><br>
+<a href="m_sigmod_industrial.htm"><img border=0 src="b_sigmod_industri.gif"></a><br>
+<a href="s_sigmopanelsanels.htm"><img border=0 src="b_sigmod_panels.gif"></a><br>
+<a href="s_sigmotutorialsrials.htm"><img border=0 src="b_sigmod_tutorial.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_1.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Efficient Concurrency Control for Broadcast Environments
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_jayavel_shanmugasu.htm">Jayavel Shanmugasundaram</a>, 
+<a href = "a_arvind_nithrakashy.htm">Arvind Nithrakashyap</a>, 
+<a href = "a_rajendran_m_sivasa.htm">Rajendran M. Sivasankaran</a>, and 
+<a href = "a_krithi_ramamritham.htm">Krithi Ramamritham</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/sigmod/efficientconcurjaarr.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_sigmorecoveryanrency.htm">Return to Recovery and Concurrency</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ A crucial consideration in environments where data is broadcast to clients is the low bandwidth available for clients to communicate with servers. Advanced applications in such environments do need to read data that is mutually consistent as well as current. However, given the asymmetric communication capabilities and the needs of clients in mobile environments, traditional serializability-based approaches are too restrictive, unnecessary, and impractical. We thus propose the use of a weaker correctness criterion called update consistency and outline mechanisms based on this criterion that ensure (1) the mutual consistency of data maintained by the server and read by clients, and (2) the currency of data read by clients. Using these mechanisms, clients can obtain data that is current and mutually consistent "off the air", i.e., without contacting the server to, say, obtain locks. Experimental results show a substantial reduction in response times as compared to existing (serializability-based) approaches. A further attractive feature of the approach is that if caching is possible at a client, weaker forms of currency can be obtained while still satisfying the mutual consistency of data.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[Ach95]
+<dd>
+<a name="AcharyaAFZ95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Rafael.html">
+Rafael Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Broadcast Disks: Data Management for Asymmetric Communications Environments. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1995
+</a>
+: 199-210
+<dt>
+[Ach96]
+<dd>
+<a name="AcharyaFZ96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Acharya:Swarup.html">
+Swarup Acharya
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zdonik:Stanley_B=.html">
+Stanley B. Zdonik
+</a>
+: Disseminating Updates on Broadcast Disks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#AcharyaFZ96">
+VLDB 1996
+</a>
+: 354-365
+<dt>
+[Alo90]
+<dd>
+<a name="AlonsoBG90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Alonso:Rafael.html">
+Rafael Alonso
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Barbar=aacute=:Daniel.html">
+Daniel Barbar&aacute;
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+: Data Caching Issues in an Information Retrieval System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods15.html#AlonsoBG90">
+TODS 15(3)
+</a>
+: 359-384(1990)
+<dt>
+[Ber87]
+<dd>
+<a name="BernsteinHG87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hadzilacos:Vassos.html">
+Vassos Hadzilacos
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Concurrency Control and Recovery in Database Systems.  Addison-Wesley 1987, ISBN 0-201-10715-5
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/bernstein87.html">
+Contents
+</a>
+<dt>
+[Bob92]
+<dd>
+<a name="BoberC92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bober:Paul_M=.html">
+Paul M. Bober
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+: Multiversion Query Locking. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb92.html#BoberC92">
+VLDB 1992
+</a>
+: 497-510
+<dt>
+[Bob93]
+<dd>
+... 
+<dt>
+[Car91]
+<dd>
+<a name="CareyFLS91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">
+Michael J. Carey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">
+Miron Livny
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">
+Eugene J. Shekita
+</a>
+: Data Caching Tradeoffs in Client-Server DBMS Architectures. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1991
+</a>
+: 357-366
+<dt>
+[Fra93]
+<dd>
+<a name="Franklin93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">
+Michael J. Franklin
+</a>
+: Caching and Memory Management in Client-Server Database Systems. Ph.D. thesis,  Univ. of Wisconsin-Madison 1993
+<br>
+ 
+<dt>
+[Guk96]
+<dd>
+<a name="GukalOR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gukal:Sreenivas.html">
+Sreenivas Gukal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Omiecinski:Edward.html">
+Edward Omiecinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramachandran:Umakishore.html">
+Umakishore Ramachandran
+</a>
+: Transient Versioning for Consistency and Concurrency in Client-Server Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis96.html#GukalOR96">
+PDIS 1996
+</a>
+: 274-285
+<dt>
+[Her97]
+<dd>
+<a name="HermanGLW87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Herman:Gary_E=.html">
+Gary E. Herman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gopal:Gita.html">
+Gita Gopal
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:K=_C=.html">
+K. C. Lee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinrib:Abel.html">
+Abel Weinrib
+</a>
+: The Datacycle Architecture for Very High Throughput Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1987
+</a>
+: 97-103
+<dt>
+[Imi94]
+<dd>
+<a name="ImielinskiB94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/i/Imielinski:Tomasz.html">
+Tomasz Imielinski
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Badrinath:B=_R=.html">
+B. R. Badrinath
+</a>
+: Mobile Wireless Computing: Challenges in Data Management. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm37.html#ImielinskiB94">
+CACM 37(10)
+</a>
+: 18-28(1994)
+<dt>
+[Kum97]
+<dd>
+<a name="KumarKA97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kumar:Suresh.html">
+Suresh Kumar
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kwang:Eng=Kee.html">
+Eng-Kee Kwang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Agrawal:Divyakant.html">
+Divyakant Agrawal
+</a>
+: Caprera: An Activity Framework for Transaction Processing on Wide-Area Networks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb97.html#KumarKA97">
+VLDB 1997
+</a>
+: 585-589
+<dt>
+[Mol82]
+<dd>
+<a name="Garcia-MolinaW82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garcia=Molina:Hector.html">
+Hector Garcia-Molina
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wiederhold:Gio.html">
+Gio Wiederhold
+</a>
+: Read-Only Transactions in a Distributed Database. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#Garcia-MolinaW82">
+TODS 7(2)
+</a>
+: 209-234(1982)
+<dt>
+[Oki93]
+<dd>
+<a name="OkiPSS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Oki:Brian_M=.html">
+Brian M. Oki
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pfl=uuml=gl:Manfred.html">
+Manfred Pfl&uuml;gl
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Siegel:Alex.html">
+Alex Siegel
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Skeen:Dale.html">
+Dale Skeen
+</a>
+: The Information Bus - An Architecture for Extensible Distributed Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sosp/sosp93.html#OkiPSS93">
+SOSP 1993
+</a>
+: 58-68
+<dt>
+[Pap88]
+<dd>
+... 
+<dt>
+[Pit99]
+<dd>
+... 
+<dt>
+[Ram96]
+<dd>
+<a name="RamamrithamC96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamritham:Krithi.html">
+Krithi Ramamritham
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chrysanthis:Panos_K=.html">
+Panos K. Chrysanthis
+</a>
+: A Taxonomy of Correctness Criteria in Database Applications. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#RamamrithamC96">
+VLDB Journal 5(1)
+</a>
+: 85-97(1996)
+<dt>
+[Sha99]
+<dd>
+... 
+<dt>
+[She94]
+<dd>
+... 
+<dt>
+[Vit]
+<dd>
+... 
+<dt>
+[Wan91]
+<dd>
+<a name="WangR91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wang:Yongdong.html">
+Yongdong Wang
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rowe:Lawrence_A=.html">
+Lawrence A. Rowe
+</a>
+: Cache Consistency and Concurrency Control in a Client/Server DBMS Architecture. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+SIGMOD Conference 1991
+</a>
+: 367-376
+<dt>
+[Wei87]
+<dd>
+<a name="Weihl87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weihl:William_E=.html">
+William E. Weihl
+</a>
+: Distributed Version Management for Read-Only Actions. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tse/tse13.html#Weihl87">
+TSE 13(1)
+</a>
+: 55-64(1987)
+<dt>
+[Wil90]
+<dd>
+<a name="WilkinsonN90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Wilkinson:W=_Kevin.html">
+W. Kevin Wilkinson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Neimat:Marie=Anne.html">
+Marie-Anne Neimat
+</a>
+: Maintaining Consistency of Client-Cached Data. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#WilkinsonN90">
+VLDB 1990
+</a>
+: 122-133
+<dt>
+[Xua97]
+<dd>
+... 
+</dl>
+ 
+<h2>
+Referenced by
+</h2>
+ 
+<ol>
+ 
+<li>
+ 
+<a name="PitouraC99" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pitoura:Evaggelia.html">
+Evaggelia Pitoura
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chrysanthis:Panos_K=.html">
+Panos K. Chrysanthis
+</a>
+: Exploiting Versions for Handling Updates in Broadcast Disks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb99.html#PitouraC99">
+VLDB 1999
+</a>
+: 114-125
+</ol>
+  
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/sigmod/ShanmugasundaramNSR99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Jayavel&nbsp;Shanmugasundaram&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arvind&nbsp;Nithrakashyap&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rajendran&nbsp;M.&nbsp;Sivasankaran&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Krithi&nbsp;Ramamritham},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Alex&nbsp;Delis&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christos&nbsp;Faloutsos&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahram&nbsp;Ghandeharizadeh},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Efficient&nbsp;Concurrency&nbsp;Control&nbsp;for&nbsp;Broadcast&nbsp;Environments},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{SIGMOD&nbsp;1999,&nbsp;Proceedings&nbsp;ACM&nbsp;SIGMOD&nbsp;International&nbsp;Conference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Management&nbsp;of&nbsp;Data,&nbsp;June&nbsp;1-3,&nbsp;1999,&nbsp;Philadephia,&nbsp;Pennsylvania,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USA},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-084-8},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{85-96},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/sigmod/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

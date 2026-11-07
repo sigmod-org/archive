@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<title>SIGMOD 99 Demo: Database Patchwork on the Internet</title>
+<meta name="author" content="Reinhard Braumandl">
+<meta name="description" content="Demo Description: Database Patchwork on the Internet">
+<meta name="keywords" content="Research, Database, Internet, Distributed">
+<meta name="date" content="1999-08-12T14:12:07+02:00">
+<meta name="robots" content="noindex">
+<meta name="robots" content="nofollow">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+</HEAD>
+
+<BODY bgcolor="white">
+<h1>Sample Session</h1>
+
+The queries for the mentioned applications are predefined in 
+an XML-based format (<a type="text/plain" href="planexample.xmm" >example 
+(do not be afraid of the XML-code ;-)</a>). 
+This plan description is parsed by a servlet, 
+which extracts information about the parameters, which has to be
+provided by the user and shows an appropriately generated 
+<a href="query.gif">html-form</a> in the browser of the user.
+<p>
+After the user has provided the necessary information and the
+"start query" button has been hit, the servlet passes the description
+of the query together with the user-specified parameters to a 
+query server (this means, the query is passed to a cycle provider). 
+After its computation, the result of the query is sent to the servlet, 
+which constructs the according <a href="answer.gif">html page</a>.
+
+</BODY>
+</HTML>

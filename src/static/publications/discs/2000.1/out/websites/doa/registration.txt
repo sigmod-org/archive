@@ -1,0 +1,72 @@
+[OMG Logo]               International Symposium on               [DOA Logo]
+[IONA Logo]    Distributed Objects and Applications (DOA'99)
+                            September 5-6, 1999
+                            Edinburgh, Scotland
+
+                 URL: http://www.cs.rmit.edu.au/conf/doa99
+              Co-located with VLDB'99 International Conference
+
+     Personal Details
+
+                Regular
+                Author
+                Grad Student
+                Supported Referral (subject to agreement: fill in referral
+                code)
+                Other
+       Surname   Referral Code:
+      First Name
+     Affiliation
+       Address
+         City
+     Postal Code
+       Country
+      Telephone
+         Fax
+        Email
+
+
+     Amount to be paid
+
+     Payments are done either in USD (US Dollars) or in EURO (EU Currency).
+     All participants must pay the registration fee in advance as specified
+     below. Late (after Aug 13) and on-site registrations at the conference
+     will carry a surcharge of 100 USD or 95 EURO.
+
+     Presenting author's discount: The author actually presenting his/her
+     DOA paper may deduct a 150 USD or 140 EURO discount from the conference
+     fee (one discount per paper, and only when prepaid).
+
+     Graduate student discount: Submit a statement of interest, an
+     endorsement by your advisor and, subject to approval by the PC you may
+     qualify for a rate of 300 EURO. Enquiries: Robert.Meersman@vub.ac.be.
+
+                                                                USDEURO
+      Conference Fee until Aug. 13(575 USD or 550 EURO)
+      Additional Proceedings      (52 USD or 50 EURO)
+      Author's excess pages       (per page 100 USD or 95 EURO)
+                                                          Total
+
+     The DOA'99 conference fee includes one copy of the proceedings of the
+     symposium, lunches, welcome reception, and coffee breaks for both days.
+     All payments must be made to the following bank, preferably by SWIFT
+     electronic transfer, and a copy of the payment joined with the
+     registration form, or faxed to the registration secretariat below.
+     (Authors with excess pages: please add the total extra page charge in
+     the appropriate box)
+
+      Bank                   Bank J. Van Breda & Co.
+      Address                Plantin & Moretuslei
+                             B-2018 Antwerp
+                             Belgium
+      Bank's SWIFT identifierJVBA BE 22
+      Account name           DOA'99
+      Account numbers        in EURO: 645-1087228-87
+                             in USD: 645-2320128-20
+
+     Please submit, email or fax this form, and fax a copy of the bank
+     payment to the DOA'99 registration secretariat at:
+     Fax: +32 3 327 9422 (Belgium)
+     Email: doa99@dinf.vub.ac.be
+
+

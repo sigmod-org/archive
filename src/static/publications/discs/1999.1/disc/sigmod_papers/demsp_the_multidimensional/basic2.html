@@ -1,0 +1,114 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Part of a demonstration of RasDaMan functionality">
+   <meta name="robots" content="noindex">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>RasDaMan Demo B2</title>
+<!-- start header -->
+</head>
+<body background="forwissBg.gif">
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/~rasdaman/"><img SRC="rmanlogo-s.gif" BORDER=0 ></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><a href="http://www.forwiss.tu-muenchen.de/"><img SRC="logo.gif" BORDER=0 ></a></td>
+</tr>
+</table>
+
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="basic1.html">Prev</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="basic3.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><!-- end header -->
+<h3>
+Trimming the results</h3>
+The resulting collection can be filtered by the server in various ways.
+For example the domain (a rectangular area described by two diagonal vertices)
+can be trimmed to arbitrary size and dimensionality using the trimming
+operator
+<tt>[<i>dim1</i>, ... ,<i>dimN</i>]</tt>. The <i>dim_i</i> may
+be either pairs of <i>l_i</i>:<i>h_i</i> for specifying a range of coordinates
+in dimension
+<i>i</i> or a single <i>proj_i</i> for projecting the result
+in dimension <i>i</i> to coordinate <i>proj_i</i>, thus reducing the result's
+number of dimensions by 1. The <i>l_i</i> and <i>h_i</i> can in turn be
+a number for a fixed boundary or an asterisk for a free one.
+<br>&nbsp;
+<br>&nbsp;
+<h4>
+Examples:</h4>
+When applied to the images from the last page over the domain <tt>[0:799,0:799]</tt>
+the following trimming operators yield these results:
+<ul>
+<li>
+<tt>[400:799,0:399]</tt>: the upper right quarter of the image, 2D.</li>
+
+<li>
+<tt>[300:499,300:499]</tt>: a 200 * 200 area in the center of the image,
+2D.</li>
+
+<li>
+<tt>[400:400,0:799]</tt>: despite the identical values for <i>l_1</i> and
+<i>h_1</i>
+this is a 2D object, but the only one legal value for the first coordinate
+is 400.</li>
+
+<li>
+<tt>[400,0:799]</tt> or <tt>[400,*:*]</tt>: a projection to x=400. The
+result is a 1D object with the domain <tt>[0:799]</tt>.</li>
+
+<li>
+<tt>[400,400]</tt>: the point at 400,400 encoded as 0-dimensional object
+(not a scalar).</li>
+</ul>
+The trimming operator can be applied to any MDD object. It usually results
+in more efficient query processing because
+<ol>
+<li>
+due to tiling the server can discard those tiles of the MDD objects that
+aren't contained in the trimmed area, thus speeding up the server and</li>
+
+<li>
+since the data volume is decreased transfer times are going down. This
+also requires less memory in the client which makes it possible for thin
+clients to work on huge data cubes as long as the actual area of interest
+is small enough.</li>
+</ol>
+Now for an example query:
+<pre>SELECT img[300:499,300:499]
+FROM&nbsp;&nbsp; earth AS img</pre>
+returns the following result:
+<center>
+<p><img SRC="earth2.gif" BORDER=0 ></center>
+
+<p><!-- start footer -->
+<p>
+<hr NOSHADE>
+<center><table BORDER=0 WIDTH="80%" >
+<tr>
+<td ALIGN=LEFT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="basic1.html">Prev</a>]</font></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="index.html">Up</a>]</font></td>
+
+<td ALIGN=RIGHT VALIGN=CENTER WIDTH="33%"><font size=+1>[<a href="basic3.html">Next</a>]</font></td>
+</tr>
+</table></center>
+
+<hr NOSHADE>
+<p><i>02-Mar-1998</i><!-- end footer --><layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer>
+</body>
+</html>

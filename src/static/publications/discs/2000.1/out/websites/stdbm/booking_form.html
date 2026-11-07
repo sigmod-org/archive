@@ -1,0 +1,244 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Booking form</title>
+</head>
+
+<body bgcolor="#FFF1C4">
+
+<table border="0" height="45" width="693">
+  <tr>
+    <td width="689" height="30" colspan="2"><font COLOR="#ff0000" size="5"><h1 align="center"></font><font face="Times New Roman" COLOR="#ff0000" size="5">Workshop on Spatio-Temporal Database
+    Management</font></h1>
+    </td>
+  </tr>
+  <tr>
+    <td width="689" height="68" colspan="2"><p align="center"><small><font face="Times New Roman"><img SRC="Image8.gif" tppabs="http://timelab.co.umist.ac.uk/events/stdbm99/Image8.gif" WIDTH="300" HEIGHT="73"></font></small></td>
+  </tr>
+  <tr align="center">
+    <td width="689" height="16" valign="middle" colspan="2"><p align="center"><b><font face="Times New Roman" color="#000080">Edinburgh, Scotland, 10-11 September 1999</font></b></td>
+  </tr>
+  <tr align="center">
+    <td width="689" height="13" colspan="2"><p align="center"><b><font face="Times New Roman" color="#000080">co-located with </font><font face="Times New Roman"><a HREF="http://www.dcs.napier.ac.uk/%7Evldb99/">VLDB'99</a><font COLOR="#000080"> and
+    supported by the </font><a HREF="http://www.dbnet.ece.ntua.gr/%7Echoros/">Chorochronos</a><font COLOR="#000080"> network</font></font></b></td>
+  </tr>
+  <tr align="center">
+    <td width="464" height="1"><p align="center"><font color="#000080" size="5" face="Times New Roman"><strong>Workshop registration</strong></font></td>
+    <td width="225" height="1"><font color="#000080" size="5"><strong><p align="left"></strong></font><font face="Times New Roman"><a target="_self" href="program.html" tppabs="http://timelab.co.umist.ac.uk/events/stdbm99/program.html">Workshop Program</a></font></td>
+  </tr>
+</table>
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Contact_Surname.value == "")
+  {
+    alert("Please enter a value for the \"Contact_Surname\" field.");
+    theForm.Contact_Surname.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Surname.value.length > 15)
+  {
+    alert("Please enter at most 15 characters in the \"Contact_Surname\" field.");
+    theForm.Contact_Surname.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Title.value == "")
+  {
+    alert("Please enter a value for the \"Contact_Title\" field.");
+    theForm.Contact_Title.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Title.value.length > 15)
+  {
+    alert("Please enter at most 15 characters in the \"Contact_Title\" field.");
+    theForm.Contact_Title.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Organisation.value == "")
+  {
+    alert("Please enter a value for the \"Contact_Organisation\" field.");
+    theForm.Contact_Organisation.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Organisation.value.length > 15)
+  {
+    alert("Please enter at most 15 characters in the \"Contact_Organisation\" field.");
+    theForm.Contact_Organisation.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_Address2.value == "")
+  {
+    alert("Please enter a value for the \"Contact_Address2\" field.");
+    theForm.Contact_Address2.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_City.value == "")
+  {
+    alert("Please enter a value for the \"Contact_City\" field.");
+    theForm.Contact_City.focus();
+    return (false);
+  }
+
+  if (theForm.Contact_State.value == "")
+  {
+    alert("Please enter a value for the \"Contact_State\" field.");
+    theForm.Contact_State.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form METHOD="POST" ACTION="http://hillman.sna.co.umist.ac.uk/booking_result.asp" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+  <p><font face="Times New Roman"><strong><big><big>Personal Details</big></big></strong></font></p>
+  <blockquote>
+    <table height="343">
+      <tr>
+        <td ALIGN="right" height="20"><font face="Times New Roman"><em>Name</em></font></td>
+        <td height="20"><font face="Times New Roman"><input NAME="Contact_Name" SIZE="25"> <font color="#FF0000">* required</font></font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Surname</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" S-Data-Type="String" B-Value-Required="TRUE" I-Maximum-Length="15" --><input NAME="Contact_Surname" SIZE="25" maxlength="15"> <font color="#FF0000">* required</font></font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Title</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" S-Data-Type="String" B-Value-Required="TRUE" I-Maximum-Length="15" --><input NAME="Contact_Title" SIZE="35" maxlength="15"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Organisation</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" S-Data-Type="String" B-Value-Required="TRUE" I-Maximum-Length="15" --><input NAME="Contact_Organisation" SIZE="35" maxlength="15"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Address line 1</em></font></td>
+        <td height="25"><font face="Times New Roman"><input NAME="Contact_Address1" SIZE="35"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Address line 2</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" B-Value-Required="TRUE" --><input NAME="Contact_Address2" SIZE="35"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>City</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" B-Value-Required="TRUE" --><input NAME="Contact_City" SIZE="23"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Province</em></font></td>
+        <td height="25"><font face="Times New Roman"><!--webbot bot="Validation" B-Value-Required="TRUE" --><input NAME="Contact_State" SIZE="23"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Postal code</em></font></td>
+        <td height="25"><font face="Times New Roman"><input NAME="Contact_Zip" SIZE="12" MAXLENGTH="12"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Country</em></font></td>
+        <td height="25"><font face="Times New Roman"><input TYPE="TEXT" NAME="Contact_Country" SIZE="25"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Phone</em></font></td>
+        <td height="25"><font face="Times New Roman"><input NAME="Contact_Tel" SIZE="25" MAXLENGTH="25"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>Fax</em></font></td>
+        <td height="25"><font face="Times New Roman"><input NAME="Contact_FAX" SIZE="25" MAXLENGTH="25"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right" height="25"><font face="Times New Roman"><em>E-mail</em></font></td>
+        <td height="25"><font face="Times New Roman"><input NAME="Contact_email" SIZE="25"> <font color="#FF0000">* required</font></font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman"><strong><big><big>Badge Details</big></big></strong></font></p>
+  <blockquote>
+    <table>
+      <tr>
+        <td ALIGN="right"><font face="Times New Roman"><em>Name on badge</em></font></td>
+        <td><font face="Times New Roman"><input NAME="Contact_Badge_1" SIZE="35"> </font></td>
+      </tr>
+      <tr>
+        <td ALIGN="right"><font face="Times New Roman"><em>Title on badge</em></font></td>
+        <td><font face="Times New Roman"><input NAME="Contact_Badge_2" SIZE="35"> </font></td>
+      </tr>
+    </table>
+  </blockquote>
+  <p><font face="Times New Roman"><font size="4"><strong>Workshop Registration</strong></font>
+  </font><ul>
+    <li><strong><font face="Times New Roman" size="3">Registration includes: Attendance at all
+      sessions, copy of the proceedings, teas/coffees and lunch. </font></strong></li>
+    <li><font face="Times New Roman" size="3">Please submit one registration form for each
+      delegate. </font></li>
+    <li><font face="Times New Roman"><font size="3">Fees will be refunded if a written request
+      is received at least 30 days prior to the event. <br>
+      Such cancellations will attract a £30 administration charge. <br>
+      No refund will be made for cancellations received less than 30 days prior to the event.
+      Substitutions may be made at any time.</font><big> </big></font></li>
+    <li><font face="Times New Roman" size="3">Cancellations will be processed after the
+      conference. </font></li>
+  </ul>
+  <p><font size="4" face="Times New Roman">Registration Fee: £120 <br>
+  </font></p>
+  <table border="0" width="100%">
+    <tr>
+      <td width="14%"><div align="right"><p><font face="Times New Roman">Payment by: </font></td>
+      <td width="86%"><font face="Times New Roman"><input type="radio" name="payment" value="Cheque" checked> Cheque by post&nbsp; <input type="radio" name="payment" value="Bank"> Bank Transfer</font></td>
+    </tr>
+    <tr>
+      <td width="14%"></td>
+      <td width="86%"><font face="Times New Roman"><input type="radio" name="payment" value="Registration"> Paying by cheque, traveller's cheque or cash during registration</font></td>
+    </tr>
+  </table>
+  <p><font size="2" face="Times New Roman"><strong>CHEQUE</strong></font></p>
+  <blockquote>
+    <p><font face="Times New Roman"><font size="2">Payment can be made using Eurocheque or a
+    cheque drawn on any U.K. bank in Sterling. </font><br>
+    <font size="2">Cheques should be made payable to STDBM99 and posted to: </font><br>
+    <font size="2">Joann Slater</font>,<font size="2"> STDBM'99, Dept. of Computation, UMIST,
+    PO Box 88, Manchester M60 1QD, United Kingdom</font></font></p>
+  </blockquote>
+  <p><font size="2" face="Times New Roman"><b>BANK TRANSFER</b></font></p>
+  <blockquote>
+    <p><font face="Times New Roman"><font size="2">Payment to:<br>
+    Barclays Bank plc, PO Box 357, 51 Mosley Street., Manchester M60 2AU</font>, <font size="2">United Kingdom</font><br>
+    <font size="2">Account No: 000 43885</font><br>
+    <font size="2">Sort Code: 20-55-34</font></font></p>
+    <p><font face="Times New Roman"><font size="2">There is a supplement of £20.00 payable
+    for this method of payment to cover bank charges.</font><small><br>
+    Please include your name and reference to &quot;STDBM99&quot;. </small></font></p>
+  </blockquote>
+  <p><font size="4" face="Times New Roman"><strong>Social Programme Preference</strong></font></p>
+  <p><font size="3" face="Times New Roman">For the evening of Friday 10th, we have made a
+  provisional booking for the following event. </font></p>
+  <p><font face="Times New Roman" size="3" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Scottish Whisky Heritage Centre - Edinburgh (approximate cost £45 per person)</font><ul>
+    <p><font size="3" face="Times New Roman">This includes tour of the exhibition, whisky
+    tasting and dinner. It is situated in Edinburgh City Centre.</font></p>
+    <p><font face="Times New Roman">My preference: <input type="radio" name="whisky" value="Yes" checked> Yes <input type="radio" name="whisky" value="No" style="BACKGROUND-COLOR: rgb(255,241,196); BORDER-LEFT: rgb(255,241,196); BORDER-RIGHT: rgb(255,241,196); COLOR: rgb(255,241,196)">
+    No</font></p>
+  </ul>
+  <p><font size="3" face="Times New Roman">Please DO NOT send any money now. This will be
+  settled at the workshop.</font><br>
+  </p>
+  <p><font face="Times New Roman"><strong><font color="#000080">Questions, Requirements:<br>
+  </font></strong><textarea rows="3" name="Other" cols="56"></textarea> </font></p>
+  <p><font face="Times New Roman"><input TYPE="submit" VALUE="Submit Form"> <input TYPE="RESET" VALUE="Reset Form"> </font></p>
+</form>
+
+<hr>
+
+<h5><font face="Times New Roman">For any enquiries: Tel: +44 161 200 3309, +44 07713013959
+(mobile)<br>
+Fax +44 161 200 3324 (for the attention of Joann Slater email:<a href="mailto:alvak@co.umist.ac.uk"> alvak@co.umist.ac.uk</a><br>
+Please either submit online form or print it and fax it or send it by mail to&nbsp;&nbsp; </font></h5>
+
+<h5><font face="Times New Roman" size="3" color="#000000">Joann Slater, <br>
+STDBM'99, Dept. of Computation, UMIST, PO Box 88, Manchester M60 1QD, United Kingdom</font></h5>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Pool of schema components</title>
+</head>
+<body bgcolor="#FFE4B5" link="#000080">
+&nbsp;
+<br><font size=+1>Pool of schema components</font>
+<br>
+<hr>
+<ul>
+<li>
+<font color="#FF0000"><font size=+1>Conceptualization of extraction capabilities</font></font></li>
+
+<br>When querying a database, a user is restricted to a given and frozen
+organization of information, enforced by the creator when designing the
+schema. Should the user send a request beyond the schema, he will be denied
+access to the expected information. The creator has imposed his view to
+the user. This is the limitation of the <i>source-driven</i> approach.
+<br>Our <i>user-oriented</i> paradigm grants more flexibility by allowing
+the user to design his own view on demand. There is no magic: the limits
+are transfered to the extraction capabilities of the system. AKIRA's administrator
+is in charge of representing these capabilities at a conceptual level in
+terms of <i>schema components</i>, in a modular way. He provides the user
+with a pool of <b><a href="thepool.html">schema components</a></b> that
+can be combined to specify the user's view.
+<br>&nbsp;
+<li>
+<font color="#FF0000"><font size=+1>Concepts, meta-concepts and attributes</font></font></li>
+
+<br>We consider three extraction capabilities: extracting <i>concepts</i>,
+<i>meta-concepts</i> and <i>attributes</i> which we represent in an abstract
+way in a <i>pool of schema components</i>. Extracting a <i>concept</i>
+goes beyond the usual retrieval of keywords, even though the extracting
+technique may use a list of keywords. We suppose that a <i>concept</i>
+is extracted when the following steps are accomplished: (1) recognition,
+and (2) identification (canonical representation). The <i>recognition phase</i>
+consists in selecting fragments of documents which satisfy a certain criteria.
+The retrieved fragments are identified in a second step. An IE tool capable
+of recognizing and identifying conference names is represented by a <i>concept
+class</i> <font color="#008000">Conference</font> with attribute <font color="#008000">name</font>.
+Similarly, a date extraction tool corresponds to a class <font color="#008000">Date</font>
+with attributes <font color="#008000">month</font>, <font color="#008000">day</font>
+and
+<font color="#008000">year</font>. Each of these classes is a schema
+component by itself. A concept class can be specialized according to other
+extraction capabilities. For example, attribute <font color="#008000">topic</font>,
+listing topics of interest, can specialize class <font color="#008000">Conference</font>.
+Two concept classes can be also combined through a
+<i>meta-concept</i>
+such as <font color="#008000">submission_deadline</font> to assemble a
+new conceptual schema.
+<center>
+<p><a href="akira_home.html"><img SRC="MAIN.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_overview.html"><img SRC="symb1.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_prototype.html"><img SRC="frog.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_publication.html"><img SRC="symb5.gif" ALT="" height=75 width=50 align=CENTER></a><a href="akira_people.html"><img SRC="people.gif" ALT="" height=75 width=50 align=CENTER></a></center>
+<!-- ---------- Copyright Notice ---------- -->
+<center>
+<p><font size=-2>Copyright AKIRA Project, <a href="http://www.upenn.edu">University
+of Pennsylvania</a></font>
+<br><font size=-2><a href="http://www.cis.upenn.edu">Department of <i>Computer
+and Information Science</i></a>, <a href="http://www.cis.upenn.edu/~ircs">Institute
+for Research in Cognitive Science</a></font></center>
+<layer src="http://www.spidersoft.com/ads/bwz468_60.htm" visibility=hidden id=a1 width=600 onload="moveToAbsolute(ad1.pageX,ad1.pageY); a1.clip.height=60;visibility='show';"></layer></ul>
+
+</body>
+</html>

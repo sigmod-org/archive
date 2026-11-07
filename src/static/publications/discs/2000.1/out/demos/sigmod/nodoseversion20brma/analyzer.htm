@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Analyzer</H2>
+<P>Nodose includes a component whose purpose is to ensure the accuracy of the data automatically extracted by the
+mining components.  It works by measuring a set of statistical properties of the input documents and looking for
+statistical outliers.  For instance, if 50 instances of a given type are 10 characters long and a new instance
+is found with 200 characters, the extractor has probably made a mistake.  In order for the system to find statistical
+outliers, the following statistics are incrementally maintained per type: 
+
+<UL>
+	<LI>average node range - The length of the node.
+	<LI>percentage of a node covered by its children (record and collection types only) - Average percent of node range
+	that is covered by its children.
+	<LI>percentage of records with field (record types only) - The percentage of nodes of a given record type in which
+	a certain field is present.  For example, 90% of the employee records have a salary field.
+	<LI>average number of unused fields (record types only) - The average number of fields used in a record type subtracted
+	from the number of fields defined for the record.  If records always contain every field, this number will be 0.
+	<LI>percentage of time field A precedes field B (record types only) - The percentage of records of a given type
+	in which field A directly precedes field B.  For example, name might precede birthdate in 80% of all employee records.
+	<LI>average number of children (collection types only) - The average number of elements in a collection.
+	<LI>list of acceptable characters (atomic types only) - For atomic nodes, Nodose stores a list of all of the permissible
+	characters. 
+</UL>
+
+<P><BR>
+Whenever new nodes are parsed, the analyzer checks the newly created nodes to see if any is a statistical outlier.
+If any of the node's attributes lie outside of the threshold, one or more warning messages are generated for that
+node and the node is marked in red in the GUI.  If the flagged node is indeed an error, the user should edit the
+node manually, and mine the node again so that the miner may learn the new variant on the structure.  If the flagged
+node is not an error, it is a false positive; a node that is not an error, but still a statistical outlier.  To
+correct this problem, the user should explicitly accept the node by clicking on a correct checkbox in the toolbar.
+ If the node is accepted, the analyzer thresholds will be expanded to accommodate the node.  For example, consider
+a node of type A that has a range that lies 1.5 standard deviations away from the mean.  If the node is accepted
+and the current threshold for the range of that type is 1.0 standard deviations, then the threshold is expanded
+to 1.5 standard deviations.</P>
+
+<P>To learn why the analyzer believes a node is questionable, select the node.  A list of the checks that the node
+failed will appear in the Analyer tab of the bottom pane.  In the file from the <A HREF="getting_started.htm">tutorial</A>,
+the analyzer is concerned about the third element in the list as shown below.</P>
+
+<P><BR>
+<IMG SRC="Images/analyzer1.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+The text of the analyzer warning indicate that two properties of the element were of concern.  First, it is substantially
+shorter than the average record of this type.  Second, there is a missing field which causes &quot;name&quot; and
+&quot;height_feet&quot; to be adjacent fields which is not typical.  The underlying causes of both complaints is
+that this record does not contain a &quot;real_name&quot; field whereas most records do.  In this case, the extractor
+is correct - there really is no field.  We should click on the correct checkbox in the toolbar to inform the analyzer
+that the record is correct.  If we select the &quot;Analyze&quot; menu item from the &quot;Mine&quot; menu, the
+node will change from red to green.  If there had been an error, the node would have had to be corrected and remined.
+
+</BODY>
+
+</HTML>

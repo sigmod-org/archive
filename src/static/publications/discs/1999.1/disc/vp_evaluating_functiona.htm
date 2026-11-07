@@ -1,0 +1,125 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<script TYPE="text/javascript" LANGUAGE="JavaScript">
+</script>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="DiSC">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>DiSC - VLDB'98 Papers</title>
+</head>
+<body text="#000000" bgcolor="#CCCCCC" link="#444444" vlink="#333333" alink="#000000" background="sidebak5.gif">
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BACKGROUND="btitle.gif" >
+<tr>
+<td>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td VALIGN=CENTER><a href="../index.htm"><img SRC="tb_disc_logo.gif" BORDER=0 height=23 width=146></a></td>
+<td VALIGN=CENTER>
+<div align=right>
+<a href="m_search.htm"><img SRC="tb_search.gif" BORDER=0 height=23 width=146></a>
+<a href="m_sitemap.htm"><img SRC="tb_sitemap.gif" BORDER=0 height=23 width=146></a>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+<tr>
+<td VALIGN=TOP BACKGROUND="sidebak5.gif"><img SRC="sidebar5.gif"></td>
+<td VALIGN=TOP BACKGROUND="buttond.gif">
+<img src = "small_square.gif" border=0><br>
+<a href="m_welcome.htm"><img src="b_welcome.gif" BORDER=0></a><br>
+<a href="m_editorial_board.htm"><img src="b_editorial_board.gif" BORDER=0></a><br>
+<a href="m_sigmod.htm"><img src="b_sigmod.gif" BORDER=0></a><br>
+<a href="m_vldb.htm"><img src="b_vldb.gif" BORDER=0></a><br>
+<a href="m_vldb_papers.htm"><img src="sb_vldb_papers.gif" BORDER=0></a><br>
+<a href="m_nsf.htm"><img src="b_nsf.gif" BORDER=0></a><br>
+<a href="m_sigmod_record.htm"><img src="b_sigmod_record.gif" BORDER=0></a><br>
+<a href="m_software.htm"><img src="b_software.gif" BORDER=0></a><br>
+<a href="m_about_disc.htm"><img src="b_about_disc.gif" BORDER=0></a><br>
+<a href="m_author_index.htm"><img src="b_author_index.gif" BORDER=0></a><br>
+<a href="m_feedback.htm"><img src="b_feedback.gif" BORDER=0></a><br>
+<br>
+<td VALIGN=TOP BACKGROUND="rightback_0.jpg">
+<table CELLSPACING=0 CELLPADDING=10 COLS=1 WIDTH="100%">
+<tr>
+<td            >
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF" size=+2>
+Evaluating Functional Joins Along Nested Reference Sets in Object-Relational and Object-Oriented Databases</font></center></td></tr></table></center><center><table CELLPADDING=10 COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><center><a href="m_authors_b.htm#Reinhard Braumandl">Reinhard Braumandl</a>, <a href="m_authors_c.htm#Jens Clauben">Jens Clauben</a>, <a href="m_authors_k.htm#Alfons Kemper">Alfons Kemper</a></center></td></tr></table></center><a target="disc_pdf#86G" href="../DISC/contentRemovedForCopyright.htm" ><b><center>Full Paper (PDF)</center></b></a><br><center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">Abstract</font></center></td></tr></table></center><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+
+Previous work on functional joins was constrained in two ways: (1) all approaches we know assume references being implemented as physical object identifiers (OIDs) and (2) most approaches are, in addition, limited to single-valued reference attributes.
+Both are severe limitations since most object-relational and all object-oriented database systems do support nested reference sets and many object systems do implement references as location-independent (logical) OIDs.
+In this work, we develop a new functional join algorithm that can be used for any realization form for OIDs (physical or logical) and is particularly geared towards supporting functional joins along nested reference sets.
+The algorithm can be applied to evaluate joins along arbitrarily long pathexpressions which may include one or more reference sets.
+The new algorithm generalizes previously proposed partition-based pointer joins by repeatedly applying partitioning with interleaved re-merging before evaluating the next functional join.
+Consequently, the algorithm is termed <i>P(PM)*M</i> where <i>P</i> standsfor partitioning and <i>M</i> denotes merging.
+Our prototype implementation as well as an analytical assessment based on a cost model prove that this new algorithm performs superior in almost alldatabase configurations.
+
+</font></td></tr></table></center><br>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">References</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" background="table1.gif"><tr><td>
+<font size=-1>References, where available, link to the DBLP on the World Wide Web.<br><br><dt>[BK89]<dd><a name="BertinoK89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bertino:Elisa.html">Elisa Bertino</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kim:Won.html">Won Kim</a>:
+Indexing Techniques for Queries on Nested Objects.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde1.html#BertinoK89">TKDE 1(2)</a>: 196-214(1989)<dt>[BP95]<dd><a name="BilirisP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Biliris:Alexandros.html">Alexandros Biliris</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Panagos:Euthimios.html">Euthimios Panagos</a>:
+A High Performance Configurable Storage Manager.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde95.html#BilirisP95">ICDE 1995</a>: 35-43<dt>[CBB+97]<dd>...
+<dt>[CDF+94]<dd><a name="CareyDFHMNSSTTWZ94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Franklin:Michael_J=.html">Michael J. Franklin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hall:Nancy_E=.html">Nancy E. Hall</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McAuliffe:Mark_L=.html">Mark L. McAuliffe</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/n/Naughton:Jeffrey_F=.html">Jeffrey F. Naughton</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schuh:Daniel_T=.html">Daniel T. Schuh</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Solomon:Marvin_H=.html">Marvin H. Solomon</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tan:C=_K=.html">C. K. Tan</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsatalos:Odysseas_G=.html">Odysseas G. Tsatalos</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/White:Seth_J=.html">Seth J. White</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/z/Zwilling:Michael_J=.html">Michael J. Zwilling</a>:
+Shoring Up Persistent Applications.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod94.html#CareyDFHMNSSTTWZ94">SIGMOD Conference 1994</a>: 383-394<dt>[CSL+90]<dd><a name="CareySLLM90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lapis:George.html">George Lapis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lindsay:Bruce_G=.html">Bruce G. Lindsay</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McPherson:John.html">John McPherson</a>:
+An Incremental Join Attachment for Starburst.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb90.html#CareySLLM90">VLDB 1990</a>: 662-673<dt>[DLM93]<dd><a name="DeWittLM93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/DeWitt:David_J=.html">David J. DeWitt</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lieuwen:Daniel_F=.html">Daniel F. Lieuwen</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mehta:Manish.html">Manish Mehta</a>:
+Pointer-Based Join Techniques for Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/pdis/pdis93.html#DeWittLM93">PDIS 1993</a>: 172-181<dt>[EGK95]<dd><a name="EicklerGK95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/e/Eickler:Andr=eacute=.html">Andr&eacute; Eickler</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gerlhof:Carsten_Andreas.html">Carsten Andreas Gerlhof</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kossmann:Donald.html">Donald Kossmann</a>:
+A Performance Evaluation of OID Mapping Techniques.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb95.html#EicklerGK95">VLDB 1995</a>: 18-29<dt>[GGT96]<dd><a name="GardarinGT96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gardarin:Georges.html">Georges Gardarin</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gruser:Jean=Robert.html">Jean-Robert Gruser</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tang:Zhao=Hui.html">Zhao-Hui Tang</a>:
+Cost-based Selection of Path Expression Processing Algorithms in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb96.html#GardarinGT96">VLDB 1996</a>: 390-401<dt>[GKG+97]<dd><a name="GrustKGHS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Grust:Torsten.html">Torsten Grust</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kr=ouml=ger:Joachim.html">Joachim Kr&ouml;ger</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gluche:Dieter.html">Dieter Gluche</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heuer:Andreas.html">Andreas Heuer</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Marc_H=.html">Marc H. Scholl</a>:
+Query Evaluation in CROQUE - Calculus and Algebra Coincide.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/bncod/bncod97.html#GrustKGHS97">BNCOD 1997</a>: 84-100<dt>[Gra93]<dd><a name="Graefe93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Graefe:Goetz.html">Goetz Graefe</a>:
+Query Evaluation Techniques for Large Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/csur/csur25.html#Graefe93">Computing Surveys 25(2)</a>: 73-170(1993)<dt>[HCLS97]<dd><a name="HaasCLS97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Haas:Laura_M=.html">Laura M. Haas</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Livny:Miron.html">Miron Livny</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Skukla:Amit.html">Amit Skukla</a>:
+Seeking the Truth About ad hoc Join Costs.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb6.html#HaasCLS97">VLDB Journal 6(3)</a>: 241-256(1997)<dt>[HR96]<dd><a name="HarrisR96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Harris:Evan_P=.html">Evan P. Harris</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ramamohanarao:Kotagiri.html">Kotagiri Ramamohanarao</a>:
+Join Algorithm Costs Revisited.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/vldb/vldb5.html#HarrisR96">VLDB Journal 5(1)</a>: 64-84(1996)<dt>[Ita93]<dd>...
+<dt>[KC86]<dd><a name="KhoshafianC86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Khoshafian:Setrag.html">Setrag Khoshafian</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Copeland:George_P=.html">George P. Copeland</a>:
+Object Identity.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/oopsla/oopsla86.html#KhoshafianC86">OOPSLA 1986</a>: 406-416<dt>[KM90]<dd><a name="KemperM90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemper:Alfons.html">Alfons Kemper</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moerkotte:Guido.html">Guido Moerkotte</a>:
+Access Support in Object Bases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#KemperM90">SIGMOD Conference 1990</a>: 364-374<dt>[LLOW91]<dd><a name="LambLOW91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lamb:Charles.html">Charles Lamb</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Landis:Gordon.html">Gordon Landis</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/o/Orenstein:Jack_A=.html">Jack A. Orenstein</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weinreb:Danel.html">Danel Weinreb</a>:
+The ObjectStore System.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#LambLOW91">CACM 34(10)</a>: 50-63(1991)<dt>[LMB97]<dd>...
+<dt>[O2T94]<dd>...
+<dt>[PCV94]<dd><a name="PatelCV94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Patel:Jignesh_M=.html">Jignesh M. Patel</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vernon:Mary_K=.html">Mary K. Vernon</a>:
+Accurate Modeling of the Hybrid Hash Join Algorithm.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmetrics/sigmetrics94.html#PatelCV94">SIGMETRICS 1994</a>: 56-66<dt>[SC90]<dd><a name="ShekitaC90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shekita:Eugene_J=.html">Eugene J. Shekita</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Carey:Michael_J=.html">Michael J. Carey</a>:
+A Performance Evaluation of Pointer-Based Joins.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod90.html#ShekitaC90">SIGMOD Conference 1990</a>: 300-311<dt>[SS86]<dd><a name="SchekS86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Schek:Hans=J=ouml=rg.html">Hans-J&ouml;rg Schek</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scholl:Marc_H=.html">Marc H. Scholl</a>:
+The relational model with relation-valued attributes.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/is/is11.html#SchekS86">IS 11(2)</a>: 137-147(1986)<dt>[Sto96]<dd><a name="Stonebraker96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">Michael Stonebraker</a>, Dorothy Moore:
+Object-Relational DBMSs: The Next Great Wave.
+ <a href="http://www.informatik.uni-trier.de/~ley/db/publishers/mkp.html">Morgan Kaufmann</a> 1996, ISBN 1-55860-397-2<br>
+<dt>[Val87]<dd><a name="Valduriez87" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valduriez:Patrick.html">Patrick Valduriez</a>:
+Join Indices.
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods12.html#Valduriez87">TODS 12(2)</a>: 218-246(1987)<dt>[Ver90]<dd>...
+<dt>[XH94]<dd><a name="XieH94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/x/Xie:Zhaohui.html">Zhaohui Xie</a>, <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Han:Jiawei.html">Jiawei Han</a>:
+Join Index Hierarchies for Supporting Efficient Navigations in Object-Oriented Databases.
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb94.html#XieH94">VLDB 1994</a>: 522-533</dl>
+
+
+</font></td></tr></table></center>
+<center><table CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif"><tr><td><center><font color="#FFFFFF">B</font><font color="#FFFFFF" size=-1>IB</font><font color="#FFFFFF">TEX</font></center></td></tr></table></center><br><center><table COLS=1 WIDTH="90%" BACKGROUND="table1.gif"><tr><td><font size=-1>
+@inproceedings{DBLP:conf/vldb/BraumandlCK98,<br>  author    = {Reinhard Braumandl and<br>               Jens Clau{\ss}en and<br>               Alfons Kemper},<br>  editor    = {Ashish Gupta and<br>               Oded Shmueli and<br>               Jennifer Widom},<br>  title     = {Evaluating Functional Joins Along Nested Reference Sets in Object-Relational<br>               and Object-Oriented Databases},<br>  booktitle = {VLDB'98, Proceedings of 24rd International Conference on Very<br>               Large Data Bases, August 24-27, 1998, New York City, New York,<br>               USA},<br>  publisher = {Morgan Kaufmann},<br>  year      = {1998},<br>  isbn      = {1-55860-566-5},<br>  pages     = {110-122},<br>  crossref  = {DBLP:conf/vldb/98},<br>  bibsource = {DBLP, http://dblp.uni-trier.de}<br>}<br></font></td></tr></table></center><br>
+<br><font size=-1>DBLP: Copyright &copy;1999 by Michael Ley (<a href="mailto:ley@uni-trier.de">ley@uni-trier.de</a>).</font><br>
+</td>
+</tr>
+</table>
+&nbsp;</td>
+</tr>
+</table>
+<br>
+<center><a href="m_copyrite.htm"><img SRC="copyrite.gif" border=0></a></center>
+</body>
+</html>

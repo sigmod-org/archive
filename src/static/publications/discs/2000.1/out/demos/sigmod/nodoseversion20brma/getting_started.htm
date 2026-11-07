@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<META NAME="VPSiteProject" CONTENT="file:///D|/My%20Java/development/Nodose/HelpPages/Project.vpp">
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>untitled</TITLE>
+</HEAD>
+
+<BODY>
+
+<H2>Getting started</H2>
+<P>This section will walk you through teaching Nodose to extract data from a simple file.  First, open the file
+&quot;xman.txt&quot; that came with the distribution.  Do so by clicking on the <IMG SRC="Images/DocumentIn.gif"
+WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button and selecting the file using the standard dialog.  After
+maximizing the window, your screen should look like:</P>
+
+<P><BR>
+<IMG SRC="Images/example1.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+The file now appears in the upper right pane.  The upper left pane shows the structure of the file as described
+to Nodose.  Since the file has just been opened, Nodose knows nothing about its structure and guesses that it is
+a record at the top level, indicated by the <IMG SRC="Images/record.gif" WIDTH="16" HEIGHT="16" ALIGN="BOTTOM"
+BORDER="0"> symbol.  This particular file is better represented as a list (of records about xmen).  Use the combo
+box on the toolbar to select list instead of record.  The symbol in the structure pane should indicate a list <IMG
+SRC="Images/list.gif" WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0">.</P>
+
+<P>We must now teach Nodose how to identify elements in the top level list.  Using the mouse, select the text of
+the first list element.  Be careful not to select the final carriage return of the record.  Your screen should
+look like:</P>
+
+<P><IMG SRC="Images/example2.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+To indicate that the selected text is an element of the list, click on the <IMG SRC="Images/object.gif" WIDTH="20"
+HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button in the toolbar.  The highlighted element will now be shown with a
+box around it.  Ass the next two elements in the list the same way, being careful not to select the final carriage
+return of each element.  Expand the structure view (by clicking on the dot to the left of the Document entry).
+ Nodose now knows that the file contains a list of three elements.  At this point, it guess that each element is
+an atomic type (a string) which is indicated by the atom symbol <IMG SRC="Images/atomic.gif" WIDTH="16" HEIGHT="16"
+ALIGN="BOTTOM" BORDER="0">.  Your screen should now look like:</P>
+
+<P><BR>
+<IMG SRC="Images/example3.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+<BR>
+You could continue adding each element of the list by following the same steps but its time to let Nodose do the
+work for you.  Click on the <IMG SRC="Images/Plus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button
+on the toolbar to ask Nodose to try to learn how to identify list elements.  If successful, any newly found elements
+will be added.  In this case, Nodose does indeed find the remaining two elements, boxes them and adds them to the
+file structure view.  We have now taught Nodose to successfully decompose the first level of the file.  The next
+step is to teach it to extract data from the records that comprise the list.  Click on the first element in the
+list in the structure view (upper left pane).  The upper right pane will now only show the text of the selected
+node.  The combo box on the toolbar indicates that Nodose considers the list element to be a string.  Use the combo
+box to select Record which is a more accurate description of the selected text.  Your screen should now look like:</P>
+
+<P><BR>
+<IMG SRC="Images/example4.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+We must now identify each of the fields of this record just as we identified each of the elements of the top level
+list.  Using the mouse, select &quot;The Beast&quot; in the upper right pane.  Click on the <IMG SRC="Images/object.gif"
+WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button as before to teach Nodose about this structure.  A dialog
+box will pop up requesting a name for the field.  Type in &quot;name&quot; and click on &quot;new field name&quot;.
+ Expand structure view of the first record node (by clicking on the dot to its left).  Your screen should now look
+like:</P>
+
+<P><IMG SRC="Images/example5.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+Add each of the remaining fields in the record exactly as shown below.  Be especially careful about whether you
+include punctuation in the defined fields.</P>
+
+<P><BR>
+<IMG SRC="Images/example6.gif" WIDTH="995" HEIGHT="744" ALIGN="BOTTOM" BORDER="0"></P>
+
+<P><BR>
+As you've probably noticed, when you add a new structure to a file Nodose always guesses that it is a string. 
+For some of the added fields (i.e. name), this is correct.  Three of the fields, though, are integers: height_feet,
+height_inches, and weight_lbs.  To indicate this, select the field by clicking on it in the structure view.  Then
+use the combo box on the toolbar to select &quot;Integer&quot; instead of &quot;String&quot;.  Also, while we could
+treat the powers field as a string, it may be more accurate to treat it as a list since it can contain more than
+one power.  To do so, click on this field and select list in the combo box.  For the moment, ignore the fact  that
+some of the symbols are green and others are red (see the <A HREF="analyzer.htm">Analyzer</A> section for more
+details).</P>
+
+<P><BR>
+Eventually we'd like Nodose to learn to extract the fields of xman records just as it learned to extract the elements
+of the list.  One example will not suffice, however, so select the second element of the list.  Just as before,
+select the text for each field and click on the <IMG SRC="Images/object.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM"
+BORDER="0"> button.  When the dialog window pops up, use the combo box to select the proper field name from the
+list.  You can always retype it but if you make a mistake, Nodose will think the highlighted text is an entirely
+new field rather than another instance of a previously known field.  Be careful to consistently select text.  For
+example, the powers field should end just <B>before</B> the period just as it did in the first record.  Notice
+that you don't have to change the types of the integer or list fields as you did with the first record.  Now select
+the third record in the list and define its fields as well.  The third record does not contain a real_name field
+which is fine.</P>
+
+<P><BR>
+Three example may be enough for Nodose to learn how to extract data from the xman records.  To find out, select
+any one of the nodes and then click on the <IMG SRC="Images/Plus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0">
+button as before.  To find out if Nodose was successful, click on each of the previously unparsed records and look
+at the boxes.  The fourth record was decomposed correctly but the fifth was not - the name field is correct but
+the real_name field goes on too long and things go down hill from there.  We must now manually correct the record
+by deleting the incorrect fields and then adding in the correct location.  We can delete real_name and height_feet
+individually by selecting each and clicking on the <IMG SRC="Images/Delete.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM"
+BORDER="0"> button.  We can also delete both at once by selecting the name field and clicking on the <IMG SRC="Images/Down.gif"
+WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button which deletes all fields following the selected one. 
+Now we must add each missing field as before.  When we're done correcting all of Nodose's mistakes, we should select
+a record node and click on the <IMG SRC="Images/Plus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button
+again to make sure Nodose corrects its internal rules for extracting fields from xman records.  If multiple records
+were parsed incorrectly we would not have to fix each manually before continuing.  We could choose to fix just
+one or two and then let Nodose try again.  It's important, however, that we remove any mistakes before trying again
+which means deleting all of the fields of the incorrect records.  To do so, select the incorrect record and click
+on the <IMG SRC="Images/RotCWDown.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button which deletes all
+of its children.</P>
+
+<P><BR>
+To finish decomposing the file, we need to teach Nodose to parse the powers list.  Select any of the powers fields
+from the records and add the elements as before.  Some of the lists have only one element in which case you should
+select all of the text and add it as an element.  After describing a few lists, and ideally at least one with multiple
+elements, click on the <IMG SRC="Images/Plus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button to teach
+Nodose to decompose it and fix any mistakes as necessary.</P>
+
+<P><BR>
+At this point, you've completely specified all of the interesting structure and data in the file.  If you have
+additional files of the same type, you can add them using the <IMG SRC="Images/DocumentIn.gif" WIDTH="20" HEIGHT="20"
+ALIGN="BOTTOM" BORDER="0"> button.  Once loaded, use the <IMG SRC="Images/Plus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM"
+BORDER="0"> button to ask Nodose to decompose each level of the new file using the old file as an example.  Clicking
+on the <IMG SRC="Images/PlusPlus.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button will ask Nodose
+to decompose the entire file at once which is handy once Nodose is decomposing the file type without errors.</P>
+
+<P><BR>
+To export the data that Nodose has extracted from the files, pick an exported from the Report menu - XML Export
+is a good choice.  An option dialog will pop up that allows some control over the XML generation.  See the section
+on <A HREF="generating_reports.htm">reporting</A> for more details on these options.</P>
+
+<P><BR>
+If you're likely to see files of the same type you just taught Nodose to decompose, you can save all of the hard
+work of retraining by saving the document class.  Choose &quot;Save class as...&quot; from the file menu and follow
+the dialog to save the document class.  To handle a similar file in the future, start Nodose and click on the <IMG
+SRC="Images/Open.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button to reopen the document class.  Then
+add the new file using the <IMG SRC="Images/DocumentIn.gif" WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button.
+ All of the previously learned information will still be present so click the <IMG SRC="Images/PlusPlus.gif" WIDTH="20"
+HEIGHT="20" ALIGN="BOTTOM" BORDER="0"> button to automatically decompose the new file.
+
+</BODY>
+
+</HTML>

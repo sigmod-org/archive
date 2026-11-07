@@ -1,0 +1,174 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Metadata Repository ConceptBase</title>
+</head>
+
+<body bgcolor="#FFFFFF"*>
+
+<table border="1" width="100%" cellpadding="2" bordercolor="#808080" bgcolor="#E0FFFF">
+  <tr>
+    <td width="16%"><font color="#FFFFFF"><a href="index.htm">Overview</a></font></td>
+    <td width="16%"><font color="#FFFFFF"><a href="metadata.htm">The Metadata Repository<br>
+      ConceptBase</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="icom.htm">Source Integration
+      and&nbsp;<br>
+      Conceptual Modelling</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="dare.htm">Data Reconciliation</a></font></td>
+    <td width="17%"><font color="#FFFFFF"><a href="references.htm">References</a></font></td>
+  </tr>
+</table>
+<h1>The Metadata Repository ConceptBase</h1>
+<h2>The DWQ Framework for Quality Management in Data Warehouses</h2>
+<p>
+In
+the DWQ project we have advocated the need for enriched metadata facilities for
+the exploitation of the knowledge collected in a data warehouse. In [JJQV99], it
+is shown that the data warehouse metadata should track both architecture
+components and quality factors.</p>
+<p>
+During
+the analysis of existing data warehouse frameworks we made the observation that
+these frameworks cover only logical schemata and their physical implementation;
+hence, interpretation of these representations is far from being natural for
+data warehouse users. Furthermore,
+since data warehouses may be built on a huge number of heterogeneous data
+sources, it is difficult to have an overall picture of what kind of data is
+available in each source and to keep track of the interdependencies between
+these data sources. Finally, any data warehouse design should satisfy some
+quality requirements without which the derived decision data become useless.</p>
+<p>
+Therefore,
+we have extended the traditional data warehouse architecture in three ways:</p>
+<ol>
+  <li>
+	We
+    have added a conceptual <i style="mso-bidi-font-style:normal">perspective</i>
+    which provides a clear understanding of the three data warehouse <i style="mso-bidi-font-style:normal">levels</i>,
+    namely the source level, the<br>
+    data warehouse level and the client level. We use the term <i style="mso-bidi-font-style:normal">perspective
+    </i>to denote the classical categorization of database models to <i style="mso-bidi-font-style:
+normal">conceptual, logical</i> and <i style="mso-bidi-font-style:normal">physical</i>.</li>
+  <li>
+    We
+    considered both source schemata and client schemata as views defined over a
+    global enterprise model which describes the data warehouse level. The
+    enterprise model is the central component in our framework; it gives a
+    global understanding of the data warehouse subjects as well as the
+    interrelationships between its components.</li>
+  <li>
+    We
+    have associated each data warehouse component with a set of quality factors
+    which characterize its usage and evolution. A quality model is then added as
+    a corner stone to our design framework. The overall picture of the DWQ
+    framework is depicted in the following figure.</li>
+</ol>
+<p>&nbsp;</p>
+<p><img border="0" src="images/dwq-posters-may2000-3.gif" width="498" height="709"></p>
+<p>In the following, we will show some screenshots of the implementation of the
+framework in the metadata repository system <a href="http://www-i5.informatik.rwth-aachen.de/CBdoc/">ConceptBase</a>.</p>
+<p>The first screenshots shows the conceptual perspective and partially the
+logical perspective. These models represent the formalisms described in [CDG+97,
+CDG+98, CDG+99].</p>
+<p><a href="images/allpers1.gif"><img border="0" src="images/allpers1.gif" width="402" height="323"></a></p>
+<p>The next screenshot shows the logical and physical perspective. The physical
+perspective represents data warehouse components such as databases,
+transformation agents, etc. All perspectives are linked. A data warehouse
+component has a logical schema, and a schema represents a conceptual
+object.&nbsp;</p>
+<p><a href="images/allpers2.gif"><img border="0" src="images/allpers2.gif" width="406" height="325"></a></p>
+<h2>Quality Management and Quality-Driven Evolution in Data Warehouses</h2>
+<p>
+Each
+object in any level and perspective of the architectural framework can be
+subject to quality measurement. Since quality management plays an important role
+in data warehouses, we have incorporated it in our metamodeling approach. Thus,
+the quality model is part of the metadata repository, and quality information is
+explicitly linked with architectural objects. This way, stakeholders can
+represent their quality goals explicitly in the metadata repository, while, at
+the same time, the relationship between the measurable architecture objects and
+the quality values is retained.</p>
+The
+DWQ quality metamodel [JJQV99] is based on the Goal-Question-Metric approach
+(GQM) of [OiBa92] originally developed for software quality management. In GQM,
+the high-level user requirements are modeled as goals. Quality metrics are
+values which express some measured property of the object. The relationship
+between goals and metrics is established through quality questions.</p>
+<p>
+The
+main difference in our approach resides in the following points: (i) we make a
+clear distinction between subjective quality goals requested by the stakeholders
+and objective quality factors attached to data warehouse objects, (ii) quality
+goal resolution is based on the evaluation of the composing quality factors,
+each corresponding to a given quality question, (iii) quality questions are
+implemented and executed as quality queries on the semantically rich metadata
+repository.</p>
+<p>
+The
+figure and the screenshot below shows the DWQ Quality Model. A <i style="mso-bidi-font-style:normal">quality
+goal</i> is an abstract requirement, defined on data warehouse object types, and
+documented by a purpose and the stakeholder interested in. This roughly
+expresses natural language requirements like ‘improve the availability of
+source s1 until the end of the month in the viewpoint of the data warehouse
+administrator’. <i style="mso-bidi-font-style:normal">Quality dimensions</i>
+(e.g. ‘availability’) are used to classify quality goals and factors into
+different categories. Furthermore, quality dimensions are used as a vocabulary
+to define quality factors and goals; yet each stakeholder might have a different
+vocabulary and different preferences in the quality dimensions. A quality factor
+represents an actual measurement of a quality value, i.e. it relates quality
+values to measurable objects. A quality factor is a special property or
+characteristic of the related object with respect to the quality dimension of
+the quality factor. It also represents the expected range of the quality value,
+which may be any subset of a domain. Dependencies between quality factors are
+also stored in the repository. Finally, a quality goal is <i style="mso-bidi-font-style:normal">operationally
+</i>defined by a set of <i style="mso-bidi-font-style:normal">questions</i> to
+which <i style="mso-bidi-font-style:
+normal">quality factor</i> <i style="mso-bidi-font-style:normal">values</i> are
+provided as possible answers. As a result of the goal evaluation process, a set
+of improvements (e.g. design decisions) can be proposed, in order to achieve the
+expected quality.</p>
+<p>&nbsp;</p>
+<p><img border="0" src="images/dwq-posters-may2000-4.gif" width="498" height="709"></p>
+
+<p>&nbsp;</p>
+<p><a href="images/qmm.gif"><img border="0" src="images/qmm.gif" width="624" height="565"></a></p>
+<p>&nbsp;</p>
+<h2>Example Scenario</h2>
+<p>The following figures give an overview of the example scenario. It is based
+on a case study with Telecom Italia, one of our industrial partners in the DWQ
+project [TrLN99].</p>
+<p><img border="0" src="images/scenario21.gif" width="622" height="499"></p>
+<p><img border="0" src="images/scenario22.gif" width="622" height="497"></p>
+<p>Suppose that the Telecom company wants to build a data warehouse which
+collects information about customers, services, and promotions (indicated by the
+conceptual enterprise model &quot;TelecomModel&quot;). The data for the
+warehouse can be integrated from three different sources: the billing
+department, the statistics department, and the marketing department. Each of the
+sources only has a part of the information which is necessary for the data
+warehouse. For example, the billing department has only information about
+customers and services.</p>
+<p>The users of the warehouse have established the following quality goal to
+achieve more current data in the warehouse.</p>
+<p><img border="0" src="images/goal2.gif" width="625" height="503"></p>
+<p>The quality goal can be evaluated by a quality query which searches for all
+data stores which have a measured volatility which is not in the expected range.
+The query can be implemented in ConceptBase in the following way:</p>
+<p><img border="0" src="images/qualqu.gif" width="598" height="528"></p>
+<p>It evaluates all quality factors of the type &quot;DataStoreVolatility0&quot;
+and checks whether the achieved value is in the expected range or not. Thus, we
+can use the quality and architecture information of the data warehouse to find
+weaknesses in the design. Furthermore, quality factors are linked by a
+&quot;depends on&quot; relationship. This relationship gives us the possibility
+to trace quality problems back to their sources.</p>
+<p>In the next section will show how the metadata repository is populated with
+the conceptual models. We will present a graphical user interface which supports
+the design of conceptual models.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

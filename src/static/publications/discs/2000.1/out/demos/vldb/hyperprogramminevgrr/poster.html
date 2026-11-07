@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Demonstration of Hyper-Programming in Java</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Demonstration of Hyper-Programming in Java</H1>
+
+<H2>Poster</H2>
+
+<P><A HREF="http://www-ppg.dcs.st-and.ac.uk/People/Vangelis/">Evangelos Zirintsis</A>,
+<A HREF="http://www-ppg.dcs.st-and.ac.uk/People/Graham/">Graham Kirby</A> &amp;
+<A HREF="http://www-ppg.dcs.st-and.ac.uk/People/Ron/">Ron Morrison</A><BR>
+
+<I><A HREF="http://www.dcs.st-and.ac.uk/">School of Computer Science</A>,
+<A HREF="http://www.st-and.ac.uk/">University of St Andrews</A>, Scotland</I></P>
+
+<H2>Hyper-Programming</H2>
+
+<P>Traditionally, programs are represented as linear sequences of text. 
+Where a program accesses another object during its execution, such as
+another program or some data, the program contains a textual description
+of that object, describing how to locate the object.  At some stage
+during the application building process that description is resolved to
+establish a link to the object itself.  Usually this occurs after the
+program is written. There is no guarantee that a textual description of
+an object will remain valid until the time the object is used, even if
+the description is valid at the time that the program is written. In
+such systems programs are constructed and stored in some long-term
+storage facility, such as a file system, separate from the run-time
+environment which disappears at the end of each program execution.</P>
+
+<P>In an orthogonally persistent system however, programs may be
+constructed and stored in the persistent store, the same environment as
+that in which they are executed. This means that the objects accessed by
+a program may already be available at the time that the program is
+composed. In this case direct links to the objects can be included in
+the program instead of textual descriptions.  A program containing both
+text and links to objects, by analogy with <I>hyper-text</I>, is a
+<I><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/">
+hyper-program</A></I>.</P>
+
+<P>The diagram below shows an example hyper-program, comprising a class
+definition containing two links. The first is to a class, <I>Person</I>,
+while the second is to an object that is an instance of that class.</P>
+
+<CENTER>
+<IMG SRC="poster/poster01.JPG" WIDTH="361" HEIGHT="229" ALT="Hyper-Program Example">
+</CENTER>
+
+<P>The use of hyper-programs has a number of potential advantages:</P>
+
+<UL>
+<LI>Program succinctness: textual descriptions of the locations and
+	types of persistent components used by the program may be replaced
+	by simple embedded references.
+
+<LI>Increased execution efficiency: checking of the validity of
+	specified access paths to other components is factored out when they
+	are embedded directly in the source program. Checking of type
+	consistency may be performed at compilation time rather than
+	execution time.
+
+<LI>Reliable access to components: where a textual description of a
+	component is replaced by a direct reference, the underlying
+	referential integrity of the persistent object store ensures that
+	the component will always be accessible by the program. By contrast,
+	where a textual description is used it may become invalid by the
+	time the program executes, even if it was valid at the time the
+	program was constructed.
+
+<LI>Complete closure representations: it is possible to fully represent
+	code fragments that refer to existing values within their closure.
+	This is not possible with purely textual representations, since the
+	identities of those values may be significant.
+</UL>
+
+<H2>Demonstration Overview</H2>
+
+<P>The demonstration shows a <A
+HREF="http://www-ppg.dcs.st-and.ac.uk/Languages/Java/HPS/">prototype
+hyper-programming system</A> based on the <A
+HREF="http://www.dcs.gla.ac.uk/pjama/">PJama</A> persistent version of
+Java. An example of the user interface is shown below. It provides two
+main tools: an editor in which hyper-programs are composed, and an
+object/class browser that is used to locate persistent objects for
+linking. The browser is also used in conjunction with the editor for
+viewing hyper-programs: when the programmer clicks on a link in the
+editor, a representation of the corresponding linked entity is displayed
+in the browser. The top window shows a hyper-program under construction
+in the editor. The body of the <I>main</I> method contains links to a
+static method, <I>Person.marry</I>, and to two instances of class
+<I>Person</I>. The lower window shows the object browser, currently
+displaying details of one of the object instances in the left pane, and
+the object's class in the right pane.</P>
+
+<P>By default, the editor displays hyper-links as textual labels. It is
+also possible to customise the display style on a per-object or
+per-class basis. The object/class browser can be similarly customised.
+Here is an example in which both editor and browser have been customised
+to display instances of classes <I>Person </I>and
+<I>javax.swing.ImageIcon </I>using appropriate bitmaps.</P>
+
+<B>Non-customised</B>: <IMG SRC="poster/poster02.GIF"
+ALT="Non-customised Example" ALIGN="top" HEIGHT="369" WIDTH="443"><BR>
+<BR>
+<B>Customised</B>: <IMG SRC="poster/poster03.GIF" ALT="Customised
+Example" ALIGN="top" HEIGHT="436" WIDTH="433"><BR>
+
+<P>The following activities are illustrated during the 
+demonstration:</P>
+
+<UL>
+<LI>locating persistent objects using the object/class browser;
+
+<LI>composing a hyper-program, including inserting hyper-links;
+
+<LI>viewing the hyper-linked entities in a hyper-program using the
+	object/class browser;
+
+<LI>compiling and executing a hyper-program;
+
+<LI>dynamic invocation of object methods using the object/class browser;
+
+<LI>customisation of the editor and object/class browser displays
+</UL>
+
+<P>
+
+<HR>
+
+<H2>Hyper-Code</H2>
+
+<P>Current research is directed at refining the concept of hyper-program
+to remove all distinctions between multiple program forms. The goal is
+to maximise simplicity for the programmer. A single, uniform, program
+representation is presented at all stages of the software process. Since
+this representation must be suitable for programs with closure, by
+implication it must be a form of hyper-program that can represent links
+to persistent values directly. To distinguish it from previous
+prototypes we refer to this representation as <I><A
+HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/">hyper-code</A></I>.</P>
+
+<P>The PJama hyper-program system falls short of this goal in several
+respects. Different representations are used for creating new values and
+browsing existing values: new values are created by writing
+hyper-program source definitions, while existing values are displayed
+graphically in the object/class browser. Secondly, full representations
+are not provided for all existing values, in particular it is not
+possible to view method source code.</P>
+
+<P>The hyper-code system addresses these deficiencies by retaining all
+source code in the persistent store, and by providing the same single
+representation of values at all stages of the software process. As a
+consequence the distinction between editor and object browser
+disappears: all programmer interaction with the system takes place via a
+single unified hyper-code editor. This supports a small set of simple
+operations that can be composed orthogonally to achieve all programming
+activities:</P>
+
+<UL>
+<LI><B>evaluate</B>: this executes a selected fragment of hyper-code. If
+	any result is produced this is returned as a further fragment of
+	hyper-code.
+
+<LI><B>explode</B>: this expands a selected fragment of hyper-code to
+	show more detail, while retaining the identities of any values
+	referred to.
+
+<LI><B>edit</B>: this encompasses conventional editing facilities.
+</UL>
+
+<P>Implementation of this scheme in any particular language involves
+mapping the operations to the syntax of the language, and designing an
+appropriate hyper-code representation that can be used both to define
+new programs and represent existing values, in all possible cases. The
+example below shows a fragment of Java hyper-code containing
+several exploded links.</P>
+
+<CENTER>
+<IMG SRC="poster/poster04.GIF" ALT="Hyper-Code Example" HEIGHT="286" WIDTH="797">
+</CENTER>
+
+<P>
+
+<HR>
+
+<H2>Further Information</H2>
+
+<P>The hyper-programming and hyper-code prototypes are freely available via the links below.<P>
+
+<TABLE BORDER="0" CELLSPACING="2" CELLPADDING="1">
+	<TR>
+		<TD><B>St Andrews Group</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/">
+			http://www-ppg.dcs.st-and.ac.uk/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>Hyper-Programming</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD ALIGN="right"><B>(Java system)</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/Java/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperProgramming/Java/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>Hyper-Code</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD ALIGN="right"><B>(Java system)</B>:</TD>
+		<TD><TT><A HREF="http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/Java/">
+			http://www-ppg.dcs.st-and.ac.uk/Research/HyperCode/Java/</A></TT></TD>
+	</TR>
+	<TR>
+		<TD><B>PJama</B>:</TD>
+		<TD><TT><A HREF="http://www.dcs.gla.ac.uk/pjama/">
+			http://www.dcs.gla.ac.uk/pjama/</A></TT></TD>
+	</TR>
+</TABLE>
+
+<P><B>Email</B>: <TT>{<A HREF="mailto:vangelis@dcs.st-and.ac.uk">vangelis</A>,
+                      <A HREF="mailto:graham@dcs.st-and.ac.uk">graham</A>,
+                      <A HREF="mailto:ron@dcs.st-and.ac.uk">ron</A>}@dcs.st-and.ac.uk</TT></P>
+
+<HR>
+        
+<ADDRESS><FONT SIZE=2>
+Last Updated: 3-Dec-1999 by 
+<A HREF="mailto:graham@dcs.st-and.ac.uk">Graham Kirby</A>
+</FONT></ADDRESS>
+
+</BODY>
+</HTML>

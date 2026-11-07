@@ -1,0 +1,141 @@
+         ACM CIKM 2000 Conference/Workshops/Tutorials Registration Form
+==============================================================================
+Information about the conference (technical program, local arrangements,
+tutorials and workshops) can be found at: 
+http://www.cikm.org/2000/
+==============================================================================
+
+Please complete this form (TYPE or PRINT), and mail or fax it with your 
+payment to:
+	Dr. Kostas Kalpakis
+	CSEE
+	1000 Hilltop Circle
+	University of Maryland, Baltimore County
+	Baltimore, MD 21250	
+	Fax: 410-455-3969
+	Email:  kalpakis@cs.umbc.edu
+
+Your paper number if any:_____________________________________________________
+
+Your paper title if any:______________________________________________________
+
+______________________________________________________________________________
+
+
+Your paper authors if any:____________________________________________________
+
+Your
+First Name:_________________________ Last Name:_______________________________
+
+Title (Dr/Mr/Ms/Prof.):_____ Position:________________________________________
+
+Company/Univ.:___________________________________ Dept.:______________________
+
+Address:______________________________________________________________________
+
+City:_______________________________ State:_____ Zip/Postal Code:_____________
+
+Country:______________________ Phone:_________________________________________
+
+Fax:__________________________________E-mail:_________________________________
+
+==============================================================================
+Conference Registration:  November 7 - 9, 2000
+==============================================================================
+
+CIKM 2000 Early Registration Fee (on or before Oct. 13, 2000):
+          ACM
+      ____Member($350.00)   ____Non-Member($400.00)   ____Student($250)
+
+CIKM 2000 Late Registration Fee (after Oct. 14, 2000):
+          ACM
+      ____Member($400.00)   ____Non-Member($450.00)   ____Student($250)
+
+==============================================================================
+Tutorial Registration:  November 6, 2000
+==============================================================================
+
+Indicate the tutorials you wish to attend below:
+
+Morning Tutorials
+        ___  T1 Mobile Information Access
+        ___  T2 Content Based Image Retrieval
+
+Afternoon Tutorials
+        ___  T3 Software Agents
+        ___  T4 Machine Learning and Information Retrieval
+
+Cost per tutorial:
+           ACM
+      ____ Member($200.00)    ____Non-Member($300.00) ___Student($150.00)
+
+==============================================================================
+Workshop Registration:  November 10 - 11, 2000
+==============================================================================
+
+DOLAP 2000 (November 10)
+		  ACM
+              ____Member($200.00) ____Non-Member($250.00) ____Student($150.00)
+
+ACM GIS 2000 (November 10 & 11)
+		    ACM
+		____Member($325.00) ____Non-Member($375.00) ___Student($250.00)
+
+NPIVM 2000 (November 10)
+		    ACM
+		____Member($200.00) ____Non-Member($250.00) ___Student($150.00)
+
+==============================================================================
+
+Conference Reg. Fee ...........................$_______________
+Tutorial Reg. Fee .............................$_______________
+Workshop Reg. Fee .............................$_______________
+Author Extra Page Charge:(US$150.00 per page)..$_______________
+Extra Conf. Reception Tickets: ($30/each)......$_______________
+Extra Conf. Banquet Tickets: ($50/each)........$_______________
+Extra copy of Conf. proceedings: ($50/each)....$_______________
+Extra Workshop Reception Tickets:($30/each)....$_______________
+Extra Workshop proceedings(specify which: $50).$_______________ 
+
+                        Total Fees Enclosed: US$_______________________ 
+
+Check method of payment: ___Check/money order (Payable to ACM-CIKM 2000)
+
+      ___VISA  ___Mastercard  ___American Express
+
+      Credit Card #:___________________________________________________________
+
+      Expiration date:_________________________________________________________
+                    
+      Card holder's
+      name        :____________________________________________________________
+
+
+Signature:________________________________________ Date:_______________________
+
+
+ACM membership number (required for member rate):______________________________
+
+Please let us know of your plans for the following events: 
+      ________________________________________________________________________
+     |                                        | WILL ATTEND | WILL NOT ATTEND |
+     |________________________________________|_____________|_________________|
+     |Nov. 7   CIKM Reception                 |             |                 |
+     |----------------------------------------|-------------|-----------------|
+     |Nov. 8   CIKM Banquet                   |             |                 |
+     |----------------------------------------|-------------|-----------------|
+     |Nov. 10  Workshop Reception (Workshop   |             |                 |
+     |         attendees only)                |             |                 |
+     |________________________________________|_____________|_________________|
+
+
+Any Special Dietary needs?  ___________________________________________________
+
+Refund Policy: Paid registrants who cannot attend, and do not send a
+  substitute, are entitled to a refund of paid fees (less a US$100.00
+  processing fee) if a request is received in writing on or before
+  October 14, 2000. Registrants are liable for their full fees after
+  that date (i.e., NO Refund will be made !!). All no-show
+  registrations will be billed in full.
+
+

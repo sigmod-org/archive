@@ -1,0 +1,672 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Hypertree Decompositions and Tractable Queries</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_pods.htm"><img border=0 src="b_pods.gif"></a><br>
+<a href="m_pods_papers.htm"><img border=0 src="bn_pods_papers.gif"></a><br>
+<a href="m_best_pods_paper.htm"><img border=0 src="b_best_pods_paper.gif"></a><br>
+<a href="s_podsinvitedtaldtalk.htm"><img border=0 src="b_pods_invited.gif"></a><br>
+<a href="s_podsinvitedtutorial.htm"><img border=0 src="b_pods_tutorials.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_6.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Hypertree Decompositions and Tractable Queries
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_georg_gottlob.htm">Georg Gottlob</a>, 
+<a href = "a_nicola_leone.htm">Nicola Leone</a>, and 
+<a href = "a_francesco_scarcell.htm">Francesco Scarcello</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/pods/hypertreedecompgenif.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_podsqueryoptimation.htm">Return to Query Optimization</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+ Several important decision problems on conjunctive queries (CQs) are NP-complete in general but become tractable, and actually highly parallelizable, if restricted to acyclic or nearly acyclic queries. Examples are the evaluation of Boolean CQs and query containment. These problems were shown tractable for conjunctive queries of bounded treewidth [9], and of bounded degree of cyclicity [24, 231. The so far most general concept of nearly acyclic queries was the notion of queries of bounded query-width introduced by Chekuri and Rajaraman [9]. While CQs of bounded query-width are tractable, it remained unclear whether such queries are erficiently recognizable. Chekuri and Rajaraman [9] stated as an open problem whether for each constant k it can be determined in polynomial time if a query has query width 
+<= k. We give a negative answer by proving this problem NP- complete (specifically, for k = 4). In order to circumvent this difficulty, we introduce the new concept of hypertree decomposition of a query and the corresponding notion of hypertree width. We prove: (a) for each k, the class of queries with query width bounded by Ic is properly contained in the class of queries whose hypertree width is bounded by k; (b) unlike query width, constant hypertree-width is efficiently recognizable; (c) Boolean queries of constant hypertrce-width can be efficiently evaluated. <p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AbiteboulHV95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Abiteboul:Serge.html">
+Serge Abiteboul
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hull:Richard.html">
+Richard Hull
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vianu:Victor.html">
+Victor Vianu
+</a>
+: Foundations of Databases.  Addison-Wesley 1995, ISBN 0-201-53771-0
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/abiteboul95.html">
+Contents
+</a>
+<dt>
+[2]
+<dd>
+<a name="Arnborg85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Arnborg:Stefan.html">
+Stefan Arnborg
+</a>
+: Efficient Algorithms for Combinatorial Problems with Bounded Decomposability - A Survey. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/bit/bit25.html#Arnborg85">
+BIT 25(1)
+</a>
+: 2-23(1985)
+<dt>
+[3]
+<dd>
+<a name="BeeriFMY83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Beeri:Catriel.html">
+Catriel Beeri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: On the Desirability of Acyclic Database Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 30(3)
+</a>
+: 479-513(1983)
+<dt>
+[4]
+<dd>
+<a name="BernsteinG81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bernstein:Philip_A=.html">
+Philip A. Bernstein
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+: Power of Natural Semijoins. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp10.html#BernsteinG81">
+SIAM J. Comput. 10(4)
+</a>
+: 751-771(1981)
+<dt>
+[5]
+<dd>
+<a name="Bibel88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bibel:Wolfgang.html">
+Wolfgang Bibel
+</a>
+: Constraint Satisfaction from a Deductive Viewpoint. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ai/ai35.html#Bibel88">
+Artificial Intelligence 35(3)
+</a>
+: 401-413(1988)
+<dt>
+[6]
+<dd>
+<a name="Bodlaender96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Bodlaender:Hans_L=.html">
+Hans L. Bodlaender
+</a>
+: A Linear-Time Algorithm for Finding Tree-Decompositions of Small Treewidth. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp25.html#Bodlaender96">
+SIAM J. Comput. 25(6)
+</a>
+: 1305-1317(1996)
+<dt>
+[7]
+<dd>
+<a name="ChandraKS81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chandra:Ashok_K=.html">
+Ashok K. Chandra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kozen:Dexter.html">
+Dexter Kozen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stockmeyer:Larry_J=.html">
+Larry J. Stockmeyer
+</a>
+: Alternation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 28(1)
+</a>
+: 114-133(1981)
+<dt>
+[8]
+<dd>
+<a name="ChandraM77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chandra:Ashok_K=.html">
+Ashok K. Chandra
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Merlin:Philip_M=.html">
+Philip M. Merlin
+</a>
+: Optimal Implementation of Conjunctive Queries in Relational Data Bases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+STOC 1977
+</a>
+: 77-90
+<dt>
+[9]
+<dd>
+<a name="ChekuriR97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Chekuri:Chandra.html">
+Chandra Chekuri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Rajaraman:Anand.html">
+Anand Rajaraman
+</a>
+: Conjunctive Query Containment Revisited. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#ChekuriR97">
+ICDT 1997
+</a>
+: 56-70
+<dt>
+[10]
+<dd>
+<a name="DAtriM86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/D=Atri:Alessandro.html">
+Alessandro D'Atri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Moscarini:Marina.html">
+Marina Moscarini
+</a>
+: Recognition Algorithms and Design Methodologies for Acyclic Database Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/acr/acr3.html#DAtriM86">
+Advances in Computing Research 3
+</a>
+: 43-67(1986)
+<dt>
+[11]
+<dd>
+... 
+<dt>
+[12]
+<dd>
+<a name="DechterP89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dechter:Rina.html">
+Rina Dechter
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Pearl:Judea.html">
+Judea Pearl
+</a>
+: Tree Clustering for Constraint Networks. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ai/ai38.html#DechterP89">
+Artificial Intelligence 38(3)
+</a>
+: 353-366(1989)
+<dt>
+[13]
+<dd>
+<a name="Fagin83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+: Degrees of Acyclicity for Hypergraphs and Relational Database Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+JACM 30(3)
+</a>
+: 514-550(1983)
+<dt>
+[14]
+<dd>
+<a name="FaginMU82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Fagin:Ronald.html">
+Ronald Fagin
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Mendelzon:Alberto_O=.html">
+Alberto O. Mendelzon
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: A Simplified Universal Relation Assumption and Its Properties. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#FaginMU82">
+TODS 7(3)
+</a>
+: 343-360(1982)
+<dt>
+[15]
+<dd>
+<a name="Freuder85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/f/Freuder:Eugene_C=.html">
+Eugene C. Freuder
+</a>
+: A Sufficient Condition for Backtrack-Bounded Search. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm32.html#Freuder85">
+JACM 32(4)
+</a>
+: 755-761(1985)
+<dt>
+[16]
+<dd>
+<a name="GareyJ79" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Garey:M=_R=.html">
+M. R. Garey
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Johnson:David_S=.html">
+David S. Johnson
+</a>
+: Computer and Intractability: A Guide to NP-Completeness.  W. H. Freeman 1979, ISBN 0-7167-1044-7
+<br>
+ 
+<dt>
+[17]
+<dd>
+<a name="GoodmanS82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Goodman:Nathan.html">
+Nathan Goodman
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Shmueli:Oded.html">
+Oded Shmueli
+</a>
+: Tree Queries: A Simple Class of Relational Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tods/tods7.html#GoodmanS82">
+TODS 7(4)
+</a>
+: 653-677(1982)
+<dt>
+[18]
+<dd>
+<a name="GottlobLS98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gottlob:Georg.html">
+Georg Gottlob
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Leone:Nicola.html">
+Nicola Leone
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Scarcello:Francesco.html">
+Francesco Scarcello
+</a>
+: The Complexity of Acyclic Conjunctive Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/focs/focs98.html#GottlobLS98">
+FOCS 1998
+</a>
+: 706-715
+<dt>
+[19]
+<dd>
+... 
+<dt>
+[20]
+<dd>
+... 
+<dt>
+[21]
+<dd>
+... 
+<dt>
+[22]
+<dd>
+<a name="Greibach73" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Greibach:Sheila_A=.html">
+Sheila A. Greibach
+</a>
+: The Hardest Context-Free Language. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp2.html#Greibach73">
+SIAM J. Comput. 2(4)
+</a>
+: 304-310(1973)
+<dt>
+[23]
+<dd>
+<a name="GyssensJC94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">
+Marc Gyssens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jeavons:Peter.html">
+Peter Jeavons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cohen:David_A=.html">
+David A. Cohen
+</a>
+: Decomposing Constraint Satisfaction Problems Using Database Techniques. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ai/ai66.html#GyssensJC94">
+Artificial Intelligence 66(1)
+</a>
+: 57-89(1994)
+<dt>
+[24]
+<dd>
+<a name="GyssensP82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">
+Marc Gyssens
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paredaens:Jan.html">
+Jan Paredaens
+</a>
+: A Decomposition Methodology for Cyclic Databases. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/adbt/adbt82.html#GyssensP82">
+Advances in Data Base Theory 1982
+</a>
+: 85-122
+<dt>
+[25]
+<dd>
+<a name="JeavonsCG97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/j/Jeavons:Peter.html">
+Peter Jeavons
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cohen:David.html">
+David Cohen
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gyssens:Marc.html">
+Marc Gyssens
+</a>
+: Closure Properties of Constraints. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm44.html#JeavonsCG97">
+JACM 44(4)
+</a>
+: 527-548(1997)
+<dt>
+[26]
+<dd>
+... 
+<dt>
+[27]
+<dd>
+<a name="KolaitisV98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kolaitis:Phokion_G=.html">
+Phokion G. Kolaitis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: Conjunctive-Query Containment and Constraint Satisfaction. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1998
+</a>
+: 205-213
+<dt>
+[28]
+<dd>
+<a name="Maier83" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Maier:David.html">
+David Maier
+</a>
+: The Theory of Relational Databases.  Computer Science Press 1983, ISBN 0-914894-42-0
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/Maier83.html">
+Contents
+</a>
+<dt>
+[29]
+<dd>
+<a name="PapadimitriouY97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Papadimitriou:Christos_H=.html">
+Christos H. Papadimitriou
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: On the Complexity of Database Queries. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+PODS 1997
+</a>
+: 12-19
+<dt>
+[30]
+<dd>
+<a name="Qian96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/q/Qian:Xiaolei.html">
+Xiaolei Qian
+</a>
+: Query Folding. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#Qian96">
+ICDE 1996
+</a>
+: 48-55
+<dt>
+[31]
+<dd>
+<a name="RobertsonS86" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Robertson:Neil.html">
+Neil Robertson
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Seymour:P=_D=.html">
+P. D. Seymour
+</a>
+: Graph Minors. II. Algorithmic Aspects of Tree-Width. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jal/jal7.html#RobertsonS86">
+J. Algorithms 7(3)
+</a>
+: 309-322(1986)
+<dt>
+[32]
+<dd>
+<a name="Ruzzo80" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/r/Ruzzo:Walter_L=.html">
+Walter L. Ruzzo
+</a>
+: Tree-Size Bounded Alternation. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jcss/jcss21.html#Ruzzo80">
+JCSS 21(2)
+</a>
+: 218-235(1980)
+<dt>
+[33]
+<dd>
+<a name="SkyumV85" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Skyum:Sven.html">
+Sven Skyum
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Valiant:Leslie_G=.html">
+Leslie G. Valiant
+</a>
+: A Complexity Theory Based on Boolean Algebra. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/jacm/jacm32.html#SkyumV85">
+JACM 32(2)
+</a>
+: 484-502(1985)
+<dt>
+[34]
+<dd>
+<a name="Sudborough77" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sudborough:Ivan_Hal.html">
+Ivan Hal Sudborough
+</a>
+: Time and Tape Bounded Auxiliary Pushdown Automata. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/mfcs/mfcs77.html#Sudborough77">
+MFCS 1977
+</a>
+: 493-503
+<dt>
+[35]
+<dd>
+<a name="TarjanY84" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tarjan:Robert_Endre.html">
+Robert Endre Tarjan
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: Simple Linear-Time Algorithms to Test Chordality of Graphs, Test Acyclicity of Hypergraphs, and Selectively Reduce Acyclic Hypergraphs. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/siamcomp/siamcomp13.html#TarjanY84">
+SIAM J. Comput. 13(3)
+</a>
+: 566-579(1984)
+<dt>
+[36]
+<dd>
+<a name="Ullman89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Principles of Database  and Knowledge-Base Systems, Volume II.  Computer Science Press 1989, ISBN 0-7167-8162-X
+<br>
+ 
+<a href="http://www.informatik.uni-trier.de/~ley/db/books/dbtext/ullman89.html">
+Contents
+</a>
+<dt>
+[37]
+<dd>
+<a name="Ullman97" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Ullman:Jeffrey_D=.html">
+Jeffrey D. Ullman
+</a>
+: Information Integration Using Logical Views. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icdt/icdt97.html#Ullman97">
+ICDT 1997
+</a>
+: 19-40
+<dt>
+[38]
+<dd>
+<a name="Vardi82" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Vardi:Moshe_Y=.html">
+Moshe Y. Vardi
+</a>
+: The Complexity of Relational Query Languages (Extended Abstract). 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+STOC 1982
+</a>
+: 137-146
+<dt>
+[39]
+<dd>
+<a name="Yannakakis81" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/y/Yannakakis:Mihalis.html">
+Mihalis Yannakakis
+</a>
+: Algorithms for Acyclic Database Schemes. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/vldb81.html#Yannakakis81">
+VLDB 1981
+</a>
+: 82-94
+<dt>
+[40]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/pods/GottlobLS99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Georg&nbsp;Gottlob&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nicola&nbsp;Leone&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Francesco&nbsp;Scarcello},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Hypertree&nbsp;Decompositions&nbsp;and&nbsp;Tractable&nbsp;Queries},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;the&nbsp;Eighteenth&nbsp;ACM&nbsp;SIGACT-SIGMOD-SIGART&nbsp;Symposium<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;on&nbsp;Principles&nbsp;of&nbsp;Database&nbsp;Systems,&nbsp;May&nbsp;31&nbsp;-&nbsp;June&nbsp;2,&nbsp;1999,&nbsp;Philadelphia,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pennsylvania},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{ACM&nbsp;Press},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-58113-062-7},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{21-32},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/pods/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

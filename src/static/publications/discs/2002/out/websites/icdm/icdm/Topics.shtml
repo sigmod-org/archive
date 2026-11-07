@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ICDM Topics</TITLE>
+<STYLE>
+
+<!--
+
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+
+<H1><FONT color=#0055ff>ICDM Topics of Interest</FONT></H1>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif" WIDTH=100%><br>
+
+<P class=body>
+
+Topics related to the design, analysis and implementation of data
+mining theory, systems and applications are of interest. These
+include, but are not limited to the following areas:
+
+<UL>
+
+<LI> <P class=body> Foundations and principles of data mining
+
+<LI><P class=body>Data mining algorithms and methods in traditional
+    areas (such as classification, clustering, probabilistic modeling,
+    and association analysis), and in new areas
+
+<LI> <P class=body> Data and knowledge representation for data mining
+
+<LI> <P class=body> Modeling of structured, textual, temporal,
+spatial, multimedia and Web data to support data mining
+
+<LI> <P class=body> Complexity, efficiency, and scalability issues in
+data mining
+
+<LI> <P class=body> Data pre-processing, data reduction, feature
+selection and feature transformation
+
+<LI> <P class=body> Statistics and probability in large-scale data
+mining
+
+<LI> <P class=body> Soft computing (including neural networks, fuzzy
+logic, evolutionary computation, and rough sets) and uncertainty
+management for data mining
+
+<LI> <P class=body> Integration of data warehousing, OLAP and data
+mining
+
+<LI> <P class=body> Man-machine interaction in data mining and visual
+data mining
+
+<LI> <P class=body> Artificial intelligence contributions to data
+mining
+
+<LI> <P class=body> High performance and distributed data mining
+
+<LI> <P class=body> Machine learning, pattern recognition and
+automated scientific discovery
+
+<LI> <P class=body> Quality assessment and interestingness metrics of
+data mining results
+
+<LI> <P class=body> Process centric data mining and models of data
+mining process
+
+<LI> <P class=body> Security and social impact of data mining
+
+<LI><P class=body>Emerging data mining applications, such as
+electronic commerce, bioinformatics, Web intelligence, and intelligent
+learning database systems
+
+
+</UL>
+
+
+</UL>
+
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=topics.dat"
+align=absmiddle> times since June 18, 2000.<br>
+Last modified: July 26, 2000.
+<!--
+
+February 03, 2002.
+-->
+</BODY>
+</HTML>

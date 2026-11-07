@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Polynomial Complexity</title>
+
+<meta name="Microsoft Border" content="tlb, default"></head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><font size="2"><strong>Polynomial Complexity</strong></font><small><br>
+</small><nobr>[&nbsp;<a href="tsld012.htm">Back</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="index.htm">Home</a>&nbsp;]</nobr> <nobr>[&nbsp;<a href="tsld014.htm">Next</a>&nbsp;]</nobr></p>
+
+<p align="center">&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><span style="border-left: 11px"><font size="1"><nobr><a href="tsld002.htm">Constraints&nbsp;as&nbsp;Data</a></nobr><br><nobr><a href="tsld003.htm">Potential&nbsp;Apps</a></nobr><br><nobr><a href="tsld004.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld005.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld006.htm">Query&nbsp;by&nbsp;Example</a></nobr><br><nobr><a href="tsld007.htm">More&nbsp;Examples</a></nobr><br><nobr><a href="tsld008.htm">Model&nbsp;and&nbsp;Language</a></nobr><br><nobr><a href="tsld009.htm">Main&nbsp;Features</a></nobr><br><nobr><a href="tsld010.htm">Hosting&nbsp;Iterative&nbsp;Lang.</a></nobr><br><nobr><a href="tsld011.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr><a href="tsld012.htm">Constraint&nbsp;Calculus</a></nobr><br><nobr>Polynomial&nbsp;Complexity</nobr><br><nobr><a href="tsld014.htm">Query&nbsp;Evaluation</a></nobr><br><nobr><a href="tsld015.htm">Functionality</a></nobr><br><nobr><a href="tsld016.htm">Optimization</a></nobr><br><nobr><a href="tsld017.htm">Optimization</a></nobr><br><nobr><a href="tsld018.htm">Optimization</a></nobr><br><nobr><a href="tsld019.htm">Optimization</a></nobr><br><nobr><a href="tsld020.htm">Implemented&nbsp;Apps</a></nobr><br><nobr><a href="tsld021.htm">Implemented&nbsp;Apps</a></nobr></font></span> </p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<h1><font size="5">Constraint Calculus and Multi-typed Algebra - </font><small><strong>Polynomial
+Complexity</strong></small></h1>
+
+<p>The statement on complexity requires further clarification. In the CST constraint
+algebra, as is common in mathematical programming, computing a linear program, i.e.,
+minimize/maximize a linear function subject to a conjunction of linear inequalities, is a
+basic building block. Because of that, often complexity of mathematical programming
+algorithms is analyzed in terms of a number of linear programs used, and the size of the
+input to those linear programs. Since there are polynomial algorithms to solve a linear
+program (e.g., Khachiyan's or Karmarkar's), if an algorithm A requires a polynomial number
+of linear programs, each linear program has input of polynomial size, then the algorithm A
+is polynomial, provided that a polynomial (sub)algorithm is used for linear programs. In
+that sense, the described CST constraint algebra (but not its implementation in CCUBE!) is
+polynomial, i.e., provided that a polynomial algorithm is used for linear programs. </p>
+
+<p>Unfortunately, the known polynomial algorithms for linear programming perform poorly in
+practice, typically, much worse than the exponential (in the worst case) simplex method.
+For that reason, the simplex method (or its variants) are very widely used, including
+CCUBE. Interestingly, it has been experimentally observed that the number of iterations in
+simplex is about linear (!) in the problem size (more specifically, linear in the number
+of constraints, and cubic in the number of variables). Furthermore, in theory, the average
+number of steps can be shown to be O(n<sup>3</sup> m<sup>1/(n-1)</sup>), where n is the
+number of variables and m is the number of constraints, under a certain natural
+probabilistic model. For that reason, algorithms having the complexity of a polynomial
+number of simplex-implemented linear programs, with polynomial input to each, can be
+informally called &quot;practically&quot; polynomial. In that sense, the CCUBE <em>implementation</em>
+of the CST algebra is &quot;practically&quot; polynomial. </p>
+
+<p><br>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="right"><small><small><small><small>presentation created by <a href="mailto:vsegal@gmu.edu">Victor E. Segal</a></small></small></small></small></p>
+</td></tr><!--msnavigation--></table></body>
+</html>

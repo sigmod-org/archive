@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ICDM Sponsors</TITLE>
+<STYLE>
+
+<!--
+
+P.body {margin-right: 2%; margin-left: 2%;
+text-align: justify}
+
+-->
+
+</STYLE>
+
+</HEAD>
+<BODY bgColor=#ffffee>
+
+<H1><FONT color=#0055ff>ICDM Sponsors</FONT></H1>
+
+<img src="http://www.cs.uvm.edu/~xwu/pictures/bomb_rule.gif"
+WIDTH=100%><br>
+
+<P class=body>
+The IEEE International Conference on Data Mining (ICDM) is sponsored
+by:
+
+<UL>
+
+<LI> IEEE Computer Society Technical
+Committee on Pattern Analysis and Machine Intelligence (TC-PAMI)
+
+<LI> IEEE Computer Society 
+Task Force on
+Virtual Intelligence (TFVI)
+
+</LI></UL>
+
+<P class=body>
+Also, ICDM seeks corporate sponsors each year.  The conference offers
+a list of <a href="benefits.shtml">possible benefits for our corporate
+sponsors</a>.<p>
+
+<h4>ICDM '01 Corporate Sponsors:</h4>
+
+<ul>
+
+<!--
+<li> <a href="http://www.bluemartini.com/" TARGET="_top">Blue Martini
+Software</a>, San Mateo, California
+-->
+
+<li> <a href="http://www.insightful.com/" TARGET="_top">Insightful
+Corporation</a>, Seattle, Washington
+
+<li> <a href="http://research.microsoft.com/" TARGET="_top">Microsoft
+Research</a>, San Francisco, California
+
+<li> <a href="http://narex.com/" TARGET="_top">NARAX Inc.</a>, Golden,
+Colorado
+
+<li> <a href="http://www.springer-ny.com/compsci/" TARGET="_top">Springer-Verlag</a>,
+New York, New York
+
+<li> <a href="http://statsoft.com/" TARGET="_top">StatSoft Inc.</a>,
+Tulsa, Oklahoma
+
+</ul>
+
+<p>
+
+<HR>
+
+This page has been accessed <img
+src="https://www.sigmod.org/cgi-bin/Count.cgi?ft=0&md=5&dd=C&df=icdm-sponsor.dat"
+align=absmiddle> times since June 18, 2000.
+
+</BODY>
+</HTML>

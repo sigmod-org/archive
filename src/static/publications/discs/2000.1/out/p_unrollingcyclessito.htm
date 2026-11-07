@@ -1,0 +1,437 @@
+
+	<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	<html>
+	<head>
+	   <title>DiSC - Unrolling Cycles to Decide Trigger Termination</title>
+	<script TYPE="text/javascript" LANGUAGE="JavaScript">
+ 
+
+	</script>
+	</head>
+	<body text="#000000" bgcolor="#000000" link="#333333" vlink="#333333" alink="#000000" background="background.gif" marginheight="0" marginwidth="0">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="title_background.gif"><a href="../index.htm"><img border=0 SRC="title.gif" height=74 width=390></a></td>
+
+	<td BACKGROUND="title_background.gif"><font color="#FFFFFF"><font size=+2>Digital Symposium Collection 2000&nbsp;&nbsp;</font></font></td>
+	</tr>
+	</table>
+
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" BGCOLOR="#FFFFFF" >
+	<tr>
+	<td VALIGN=TOP WIDTH="28" BACKGROUND="menu_logo_background.gif"><img SRC="menu_logo2.gif">
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<br>&nbsp;
+	<p>&nbsp;</td>
+
+	<td VALIGN=TOP WIDTH="130" BACKGROUND="menu_background2.gif">
+	
+<a href="m_welcome.htm"><img border=0 src="b_welcome.gif"></a><br>
+<a href="m_sigmod_pods.htm"><img border=0 src="b_sigmod_pods.gif"></a><br>
+<a href="m_vldb.htm"><img border=0 src="b_vldb.gif"></a><br>
+<a href="m_vldb_website.htm"><img border=0 src="b_vldb_website.gif"></a><br>
+<a href="m_vldb_papers.htm"><img border=0 src="bn_vldb_papers.gif"></a><br>
+<a href="s_vldbdemonstrattions.htm"><img border=0 src="b_vldb_demos.gif"></a><br>
+<a href="m_vldb_invited.htm"><img border=0 src="b_vldb_invited.gif"></a><br>
+<a href="m_vldb_industrial.htm"><img border=0 src="b_vldb_industrial.gif"></a><br>
+<a href="m_vldb_workshops.htm"><img border=0 src="b_vldb_workshops.gif"></a><br>
+<a href="s_kddpapersapers.htm"><img border=0 src="b_kdd_papers.gif"></a><br>
+<a href="m_icde_papers.htm"><img border=0 src="b_icde_papers.gif"></a><br>
+<a href="m_coopis.htm"><img border=0 src="b_coopis.gif"></a><br>
+<a href="m_doa.htm"><img border=0 src="b_doa.gif"></a><br>
+<a href="m_dasfaa_papers.htm"><img border=0 src="b_dasfaa_papers.gif"></a><br>
+<a href="m_ssdbm_papers.htm"><img border=0 src="b_ssdbm_papers.gif"></a><br>
+<a href="m_nsf_idm.htm"><img border=0 src="b_nsf_idm.gif"></a><br>
+<a href="m_edbt.htm"><img border=0 src="b_edbt.gif"></a><br>
+<a href="m_about_disc.htm"><img border=0 src="b_about_disc.gif"></a><br>
+<a href="m_sitemap.htm"><img border=0 src="b_sitemap.gif"></a><br>
+<a href="m_search.htm"><img border=0 src="b_search.gif"></a><br>
+
+	<!img SRC="button2.gif">
+	</td>
+	<td VALIGN=TOP> <!BACKGROUND="rightback.jpg">
+	<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+	<tr>
+	<td BACKGROUND="rightback_top_left.gif"></td>
+
+	<td HEIGHT="2" BACKGROUND="rightback_top.gif"><img SRC="rightback_top.gif" height=2 width=40></td>
+
+	<td></td>
+	</tr>
+
+	<tr>
+	<td WIDTH="2" BACKGROUND="rightback_left.gif"><img SRC="rightback_left.gif" height=40 width=2></td>
+
+	<td BACKGROUND="rightback_3.jpg">
+	<table BORDER=0 CELLSPACING=20 CELLPADDING=0 COLS=1 WIDTH="100%" HEIGHT="100%" >
+	<tr>
+	<td>
+	
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+2>
+Unrolling Cycles to Decide Trigger Termination
+</font></font></center></td></tr></table></center>
+<br><center>
+<a href = "a_sin_yeung_lee.htm">Sin Yeung Lee</a> and 
+<a href = "a_tok_wang_ling.htm">Tok Wang Ling</a>
+</center>
+<br><center>
+&nbsp;&nbsp;<a href="../OUT/contentRemovedForCopyright.htm" target="papers/vldb/unrollingcyclessito.pdf" >View Paper (PDF)</a>&nbsp;&nbsp;
+<br><br><a href="s_vldbimplementiodels.htm">Return to Implementing Advanced Data Models</a><br>
+</center>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+Abstract
+</font></font></center></td></tr></table></center>
+</h2>
+  Active databases have gained a substantial interest in recent years in enforcing database integrity, however, its current implementations suffer many problems such as running into an infinite loop. While deciding termination is an undecidable task, several works have been proposed to prove termination under certain situations. However, most of these algorithms cannot conclude termination if a cyclic execution actually presents during run-time. This is rather limited. The trigger system can still terminate if these cycles can only be executed a finite number of times. Adopting the trigger graph approach, we propose a method to detect if some cycles can only be executed finitely. We then present a cycle-unrolling algorithm to remove those cycles that can only be executed finitely from a trigger graph. Similarly, we present the concept of finitely-updatable predicate to further improve most existing detection methods. Finally, we conclude with an algorithm to detect if a given trigger system will terminate.  
+<p>
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+References
+</font></font></center></td></tr></table></center>
+<br>Note: References link to DBLP on the Web.<br>
+<br>
+</h2>
+<dl>
+ 
+<dt>
+[1]
+<dd>
+<a name="AikenWH92" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Aiken:Alexander.html">
+Alexander Aiken
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Hellerstein:Joseph_M=.html">
+Joseph M. Hellerstein
+</a>
+: Behavior of Database Production Rules: Termination, Confluence, and Observable Determinism. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod92.html#AikenWH92">
+SIGMOD Conference 1992
+</a>
+: 59-68
+<dt>
+[2]
+<dd>
+<a name="BaralisCP95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">
+Elena Baralis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paraboschi:Stefano.html">
+Stefano Paraboschi
+</a>
+: Run-time Detection of Non-Terminating Active Rule Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dood/dood95.html#BaralisCP95">
+DOOD 1995
+</a>
+: 38-54
+<dt>
+[3]
+<dd>
+<a name="BaralisCP98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">
+Elena Baralis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paraboschi:Stefano.html">
+Stefano Paraboschi
+</a>
+: Compile-Time and Runtime Analysis of Active Behaviors. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/tkde/tkde10.html#BaralisCP98">
+TKDE 10(3)
+</a>
+: 353-370(1998)
+<dt>
+[4]
+<dd>
+<a name="BaralisW94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/b/Baralis:Elena.html">
+Elena Baralis
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: An Algebraic Approach to Rule Analysis in Expert Database Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1994
+</a>
+: 475-486
+<dt>
+[5]
+<dd>
+<a name="CeriW90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Ceri:Stefano.html">
+Stefano Ceri
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Widom:Jennifer.html">
+Jennifer Widom
+</a>
+: Deriving Production Rules for Constraint Maintainance. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1990
+</a>
+: 566-577
+<dt>
+[6]
+<dd>
+<a name="Dayal88" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: Active Database Management Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/jcdkb/jcdkb88.html#Dayal88">
+JCDKB 1988
+</a>
+: 150-169
+<dt>
+[7]
+<dd>
+<a name="McCarthyD89" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/McCarthy:Dennis_R=.html">
+Dennis R. McCarthy
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dayal:Umeshwar.html">
+Umeshwar Dayal
+</a>
+: The Architecture Of An Active Data Base Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/sigmod89.html#McCarthyD89">
+SIGMOD Conference 1989
+</a>
+: 215-224
+<dt>
+[8]
+<dd>
+<a name="DiazPG91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/D=iacute=az:Oscar.html">
+Oscar D&iacute;az
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/p/Paton:Norman_W=.html">
+Norman W. Paton
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gray:Peter_M=_D=.html">
+Peter M. D. Gray
+</a>
+: Rule Management in Object Oriented Databases: A Uniform Approach. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/indexa.html">
+VLDB 1991
+</a>
+: 317-326
+<dt>
+[9]
+<dd>
+<a name="GatziuGD91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gatziu:Stella.html">
+Stella Gatziu
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Geppert:Andreas.html">
+Andreas Geppert
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/d/Dittrich:Klaus_R=.html">
+Klaus R. Dittrich
+</a>
+: Integrating Active Concepts into an Object-Oriented database System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/dbpl/dbpl91.html#GatziuGD91">
+DBPL 1991
+</a>
+: 399-415
+<dt>
+[10]
+<dd>
+<a name="KaradimceU94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Karadimce:Anton_P=.html">
+Anton P. Karadimce
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Urban:Susan_Darling.html">
+Susan Darling Urban
+</a>
+: Conditional Term Rewriting as a Formal Basis for Active Database Rules. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/ride/ride94.html#KaradimceU94">
+RIDE-ADS 1994
+</a>
+: 156-162
+<dt>
+[11]
+<dd>
+<a name="KaradimceU96" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Karadimce:Anton_P=.html">
+Anton P. Karadimce
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/u/Urban:Susan_Darling.html">
+Susan Darling Urban
+</a>
+: Refined Triggering Graphs: A Logic-Based Approach to Termination Analysis in an Active Object-Oriented Database. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/icde/icde96.html#KaradimceU96">
+ICDE 1996
+</a>
+: 384-391
+<dt>
+[12]
+<dd>
+<a name="Ling90" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ling:Tok_Wang.html">
+Tok Wang Ling
+</a>
+: The Prolog Not-Predicate and Negation as Failure Rule. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/ngc/ngc8.html#Ling90">
+New Generation Computing 8(1)
+</a>
+: 5-31(1990)
+<dt>
+[13]
+<dd>
+<a name="LeeL98" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Lee:Sin_Yeung.html">
+Sin Yeung Lee
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/l/Ling:Tok_Wang.html">
+Tok Wang Ling
+</a>
+: A Path Removing Technique for Detecting Trigger Termination. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/edbt/edbt98.html#LeeL98">
+EDBT 1998
+</a>
+: 341-355
+<dt>
+[14]
+<dd>
+<a name="StonebrakerK91" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Stonebraker:Michael.html">
+Michael Stonebraker
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/k/Kemnitz:Greg.html">
+Greg Kemnitz
+</a>
+: The Postgres Next Generation Database Management System. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/journals/cacm/cacm34.html#StonebrakerK91">
+CACM 34(10)
+</a>
+: 78-92(1991)
+<dt>
+[15]
+<dd>
+<a name="TsaiC94" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/t/Tsai:Hsiu=yen.html">
+Hsiu-yen Tsai
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cheng:Albert_Mo_Kim.html">
+Albert Mo Kim Cheng
+</a>
+: Termination Analysis of OPS5 Expert Systems. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/aaai/aaai94-1.html#TsaiC94">
+AAAI, Vol. 1 1994
+</a>
+: 193-198
+<dt>
+[16]
+<dd>
+<a name="WeikH95" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/w/Weik:Thomas.html">
+Thomas Weik
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/h/Heuer:Andreas.html">
+Andreas Heuer
+</a>
+: An Algorithm for the Analysis of Termination of Large Trigger Sets in an OODBMS. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/artdb/artdb95.html#WeikH95">
+ARTDB 1995
+</a>
+: 170-189
+<dt>
+[17]
+<dd>
+<a name="VoortS93" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/v/Voort:Leonie_van_der.html">
+Leonie van der Voort
+</a>
+, 
+<a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Siebes:Arno.html">
+Arno Siebes
+</a>
+: Termination and Confluence of Rule Execution. 
+<a href="http://www.informatik.uni-trier.de/~ley/db/conf/cikm/cikm93.html#VoortS93">
+CIKM 1993
+</a>
+: 245-255
+<dt>
+[18]
+<dd>
+... 
+</dl>
+   
+<br>
+<center><table BORDER=0 CELLSPACING=2 CELLPADDING=5 COLS=1 WIDTH="95%" BACKGROUND="sidebak5.gif" >
+<tr><td BACKGROUND="temp_banner_background.gif"><center><font color="#FFFFFF"><font size=+1>
+B<font size=+0>IB<font size=+1>TEX
+</font></font></center></td></tr></table></center>
+<br>
+@inproceedings{<a&nbsp;href="../../about/bibtex.html">DBLP</a>:conf/vldb/LeeL99,<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Sin&nbsp;Yeung&nbsp;Lee&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tok&nbsp;Wang&nbsp;Ling},<br>
+
+&nbsp;&nbsp;&nbsp;editor&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Malcolm&nbsp;P.&nbsp;Atkinson&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maria&nbsp;E.&nbsp;Orlowska&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patrick&nbsp;Valduriez&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stanley&nbsp;B.&nbsp;Zdonik&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Michael&nbsp;L.&nbsp;Brodie},<br>
+
+&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Unrolling&nbsp;Cycles&nbsp;to&nbsp;Decide&nbsp;Trigger&nbsp;Termination},<br>
+
+&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{VLDB'99,&nbsp;Proceedings&nbsp;of&nbsp;25th&nbsp;International&nbsp;Conference&nbsp;on&nbsp;Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Large&nbsp;Data&nbsp;Bases,&nbsp;September&nbsp;7-10,&nbsp;1999,&nbsp;Edinburgh,&nbsp;Scotland,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UK},<br>
+
+&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Morgan&nbsp;Kaufmann},<br>
+
+&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1999},<br>
+
+&nbsp;&nbsp;&nbsp;isbn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{1-55860-615-5},<br>
+
+&nbsp;&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{483-493},<br>
+
+&nbsp;&nbsp;&nbsp;crossref&nbsp;&nbsp;=&nbsp;{DBLP:conf/vldb/99},<br>
+
+&nbsp;&nbsp;&nbsp;bibsource&nbsp;=&nbsp;{DBLP,&nbsp;http://dblp.uni-trier.de}&nbsp;}&nbsp;},<br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><font size=+1><a href="m_copyright.htm">Copyright(C) 2000 ACM</a></font></center>
+<p></td>
+</tr>
+</table>
+</td>
+
+<td WIDTH="2"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td HEIGHT="2"></td>
+
+<td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+

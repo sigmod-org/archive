@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.1 release (March 30, 1999)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Working Canvas</TITLE>
+<META NAME="description" CONTENT="Working Canvas">
+<META NAME="keywords" CONTENT="disima">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.1 release">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="disima.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html71"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html69"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html72"
+ HREF="node5.html">Query Canvas</A>
+<B> Up:</B> <A NAME="tex2html70"
+ HREF="node2.html">Modeling and Querying Images</A>
+<B> Previous:</B> <A NAME="tex2html64"
+ HREF="node3.html">The Querying Interface</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00022000000000000000">
+Working Canvas</A>
+</H2>
+The working canvas is where the user constructs or modifies query
+blocks. The user first selects an image class and then selects a
+salient object class in the class browser. The user inserts the
+selected salient object in the canvas by pressing the ``Insert''
+button. The object appears as a rectangle in the working canvas. This
+rectangle is also used for determining the spatial relationships
+between objects. It could later be resized and moved. The user can
+also define the color, shape, texture, and other attribute values of
+any objects on the canvas by using a dialog box shown in
+Figure&nbsp;<A HREF="gif/edit.gif"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="gif/cross_ref_motif.gif"></A>. VisualMOQL allows the user to compare textual
+attributes. The default comparison predicate is `=' but can be changed
+to 
+<!-- MATH: $\{<, >, \leq, \geq, <>\}$ -->
+<IMG
+ WIDTH="156" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="gif/img5.gif"
+ ALT="$\{<, >, \leq, \geq, <>\}$">.
+Since the variables used to refer to
+objects in the MOQL translation are shown on the object icons, they
+can be used to express join operators. For example, ``find images with
+2 persons of the same name'' can be expressed by inserting two salient
+objects of type person in the working canvas. Assume VisualMOQL refers
+to them as P01 and P02 respectively. Then the user can edit one of the
+salient objects (let us say P01) and type ``P02.name'' as the value
+for the attribute name. The query can involve image global properties
+like name of the photographer or the time the image was taken. A
+dialog box similar to Figure&nbsp;<A HREF="gif/edit.gif"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="gif/cross_ref_motif.gif"></A>, without the shape similarity
+part, can be accessed by clicking on the button ``Image Property'' to
+let the user enter such information.
+
+<P>
+Topological relationships will be added automatically for any intersected objects. Directional relationships have to be defined explicitly
+through a dialog box in which the user specifies
+which axes matter. 
+
+<P>
+We will use the term sub-query to refer to query blocks obtained from
+the working canvas.  By clicking on the ``Validate'' button, the user
+ends the sub-query specification. The sub-query is then moved into the
+query canvas where it can be combined with other sub-queries to form
+the final query.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html71"
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="gif/next_motif.gif"></A> 
+<A NAME="tex2html69"
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="gif/up_motif.gif"></A> 
+<A NAME="tex2html63"
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html72"
+ HREF="node5.html">Query Canvas</A>
+<B> Up:</B> <A NAME="tex2html70"
+ HREF="node2.html">Modeling and Querying Images</A>
+<B> Previous:</B> <A NAME="tex2html64"
+ HREF="node3.html">The Querying Interface</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Vincent Oria</I>
+<BR><I>2001-01-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

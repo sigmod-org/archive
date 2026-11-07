@@ -1,0 +1,88 @@
+---
+title: "Distinguished Profiles in Databases"
+permalink: "/publications/interview/"
+updated: "2026-11-07"
+---
+{%- set withPdf = interviews | selectattr("pdf") | length -%}
+<style>
+  .page-grid.no-side:has(.iv-grid) { grid-template-columns: minmax(0, 1fr); }
+  .prose:has(.iv-grid) { max-width: none; }
+  .iv-intro { max-width: 760px; margin: 0 0 22px; color: var(--body); }
+  .iv-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 18px; padding: 12px; background: var(--tint); border: 1px solid var(--line); border-radius: 12px; }
+  .iv-bar input, .iv-bar select { font: 15px var(--sans); color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; }
+  .iv-bar input { flex: 1 1 220px; min-width: 0; }
+  .iv-bar input:focus, .iv-bar select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .iv-count { margin-left: auto; font-size: 14px; color: var(--muted); white-space: nowrap; }
+  .iv-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .iv-card { display: grid; grid-template-columns: 64px 1fr; gap: 4px 14px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; transition: border-color .15s, box-shadow .15s; }
+  .iv-card[hidden] { display: none; }
+  .iv-card:hover { border-color: #c7d3ea; box-shadow: 0 8px 24px -14px rgba(17,24,39,.35); }
+  .iv-photo { grid-row: span 2; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: var(--tint); }
+  .prose .iv-name { margin: 2px 0 0; font: 600 16.5px/1.3 var(--sans); align-self: end; }
+  .iv-name a { color: var(--ink); text-decoration: none; }
+  .iv-name a:hover { color: var(--accent); text-decoration: underline; }
+  .prose .iv-meta { margin: 0; align-self: start; font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .iv-acts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .iv-acts a { display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; font-weight: 500; text-decoration: none; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 3px 9px; }
+  .iv-acts a:hover { background: var(--accent); color: #fff; }
+  .iv-acts svg { width: 13px; height: 13px; fill: currentColor; }
+  .iv-empty { display: none; padding: 24px; text-align: center; color: var(--muted); }
+  .prose .iv-grid img { margin: 0; }
+  @media (max-width: 520px) { .iv-count { margin-left: 0; width: 100%; } .iv-bar select { flex: 1; } }
+</style>
+
+<p class="iv-intro">Conversations with leading database researchers, recorded {{ (interviews | sort(false, false, "year") | first).year }}–{{ (interviews | sort(true, false, "year") | first).year }}. Each interview has a video and an audio version, and {{ withPdf }} of the {{ interviews | length }} also have the transcript published in <em>SIGMOD Record</em>.</p>
+
+<div class="iv-bar" role="search">
+  <input id="iv-q" type="search" placeholder="Search by name" aria-label="Search interviews by name" autocomplete="off">
+  <select id="iv-sort" aria-label="Sort interviews">
+    <option value="name">Sort: Name (A–Z)</option>
+    <option value="new">Sort: Newest first</option>
+    <option value="old">Sort: Oldest first</option>
+  </select>
+  <span class="iv-count" id="iv-count" aria-live="polite">{{ interviews | length }} interviews</span>
+</div>
+
+<ul class="iv-grid" id="iv-grid">
+{%- for iv in interviews %}
+  <li class="iv-card" data-name="{{ iv.name | lower }}" data-sortname="{{ iv.name.split(' ') | last | lower }}" data-year="{{ iv.year }}">
+    <img class="iv-photo" src="{{ iv.photo }}" alt="" width="64" height="64" loading="lazy">
+    <h2 class="iv-name"><a href="{{ iv.url }}">{{ iv.name }}</a></h2>
+    <p class="iv-meta">{{ iv.year }} · {{ iv.duration }}</p>
+    <div class="iv-acts">
+      <a href="{{ iv.url }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>Watch</a>
+      {%- if iv.mp3 %}<a href="{{ iv.mp3 }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a6 6 0 0 0-6 6v4a2 2 0 0 0 2 2h1V8H3.5V7a4.5 4.5 0 0 1 9 0v1H11v5h1a2 2 0 0 0 2-2V7a6 6 0 0 0-6-6z"/></svg>Listen</a>{% endif %}
+      {%- if iv.pdf %}<a href="{{ iv.pdf }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3zm6 1v3h3M5 8h6v1H5zm0 2h6v1H5zm0 2h4v1H5z"/></svg>Transcript</a>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+<p class="iv-empty" id="iv-empty">No interviews match your search.</p>
+
+<script>
+(() => {
+  const grid = document.getElementById("iv-grid"), q = document.getElementById("iv-q"),
+        sort = document.getElementById("iv-sort"), count = document.getElementById("iv-count"),
+        empty = document.getElementById("iv-empty"), cards = [...grid.children];
+  const order = {
+    name: (a, b) => a.dataset.sortname.localeCompare(b.dataset.sortname),
+    new: (a, b) => b.dataset.year - a.dataset.year || order.name(a, b),
+    old: (a, b) => a.dataset.year - b.dataset.year || order.name(a, b),
+  };
+  const plain = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(); // "garcia" finds "García"
+  cards.forEach((c) => { c.dataset.key = plain(c.dataset.name); });
+  function update() {
+    const term = plain(q.value.trim());
+    let shown = 0;
+    cards.sort(order[sort.value]).forEach((c) => {
+      const hit = !term || c.dataset.key.includes(term);
+      c.hidden = !hit; shown += hit;
+      grid.appendChild(c);
+    });
+    count.textContent = shown + (shown === 1 ? " interview" : " interviews");
+    empty.style.display = shown ? "none" : "block";
+  }
+  q.addEventListener("input", update);
+  sort.addEventListener("change", update);
+})();
+</script>

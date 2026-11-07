@@ -1,0 +1,34 @@
+---
+layout: page.njk
+---
+{#- One interview page, built from src/_data/interviews.json (matched by URL).
+    Media locations come from src/_data/interviewMedia.json; the MP4/MP3 files are not stored in this repo. -#}
+{%- for iv in interviews %}{% if iv.url == page.url -%}
+{%- set mp4 = interviewMedia.video ~ (iv.video | replace(".flv", ".mp4")) -%}
+{%- set mp3 = interviewMedia.audio ~ (iv.mp3.split("/") | last) -%}
+{%- set dur = iv.duration.split(":") -%}
+<style>
+  .iv-player { margin: 0 0 20px; }
+  .iv-player video { display: block; width: 100%; max-width: 820px; aspect-ratio: 720 / 406; height: auto; background: #000; border-radius: 12px; }
+  .iv-facts { margin: 0 0 22px; color: var(--muted); font-size: 14.5px; }
+  .iv-more { display: grid; gap: 12px; max-width: 820px; }
+  .iv-more > div { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; }
+  .iv-more strong { min-width: 90px; color: var(--ink); }
+  .iv-more audio { flex: 1 1 260px; min-width: 0; height: 40px; }
+</style>
+
+<figure class="iv-player">
+  <video controls preload="metadata" poster="{{ iv.photo }}" width="720" height="406">
+    <source src="{{ mp4 }}" type="video/mp4">
+    <a href="{{ mp4 }}">Download the video (MP4)</a>
+  </video>
+</figure>
+
+<p class="iv-facts">Recorded {{ iv.year }} · {{ dur[0] | int }} min {{ dur[1] | int }} s</p>
+
+<div class="iv-more">
+  <div id="audio"><strong>Audio</strong><audio controls preload="none" src="{{ mp3 }}"></audio><a href="{{ mp3 }}" download>Download MP3</a></div>
+  <div id="transcript"><strong>Transcript</strong>{% if iv.pdf %}<a href="{{ iv.pdf }}">Read the interview in <em>SIGMOD Record</em> (PDF)</a>{% else %}<span>Not published in <em>SIGMOD Record</em>.</span>{% endif %}</div>
+</div>
+{%- endif %}{% endfor %}
+{{ content | safe }}

@@ -1,3 +1,4 @@
 {
-  "crumb": { "label": "Distinguished Profiles in Databases", "url": "/publications/interview/" }
+  "crumb": { "label": "Distinguished Profiles in Databases", "url": "/publications/interview/" },
+  "layout": "interview.njk"
 }

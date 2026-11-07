@@ -1,6 +1,7 @@
 ---
 title: "Distinguished Profiles in Databases"
 permalink: "/publications/interview/"
+layout: page.njk
 updated: "2026-11-07"
 ---
 {%- set withPdf = interviews | selectattr("pdf") | length -%}
@@ -51,7 +52,7 @@ updated: "2026-11-07"
     <p class="iv-meta">{{ iv.year }} · {{ iv.duration }}</p>
     <div class="iv-acts">
       <a href="{{ iv.url }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>Watch</a>
-      {%- if iv.mp3 %}<a href="{{ iv.mp3 }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a6 6 0 0 0-6 6v4a2 2 0 0 0 2 2h1V8H3.5V7a4.5 4.5 0 0 1 9 0v1H11v5h1a2 2 0 0 0 2-2V7a6 6 0 0 0-6-6z"/></svg>Listen</a>{% endif %}
+      {%- if iv.mp3 %}<a href="{{ iv.url }}#audio"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a6 6 0 0 0-6 6v4a2 2 0 0 0 2 2h1V8H3.5V7a4.5 4.5 0 0 1 9 0v1H11v5h1a2 2 0 0 0 2-2V7a6 6 0 0 0-6-6z"/></svg>Listen</a>{% endif %}
       {%- if iv.pdf %}<a href="{{ iv.pdf }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3zm6 1v3h3M5 8h6v1H5zm0 2h6v1H5zm0 2h4v1H5z"/></svg>Transcript</a>{% endif %}
     </div>
   </li>

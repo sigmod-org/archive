@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <div class="page-head">
   <div class="wrap">
-    {%- if page.url != "/" %}<p class="crumbs"><a href="/">Archive</a><span>/</span>{{ title }}</p>{% endif %}
+    {%- if page.url != "/" %}<p class="crumbs"><a href="/">Archive</a>{% if crumb and crumb.url != page.url %}<span>/</span><a href="{{ crumb.url }}">{{ crumb.label }}</a>{% endif %}<span>/</span>{{ title }}</p>{% endif %}
     <h1>{{ title }}</h1>
   </div>
 </div>

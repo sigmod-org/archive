@@ -12,6 +12,8 @@ For current SIGMOD publications, see [www.sigmod.org](https://www.sigmod.org/pub
 <p>Yearly DVD collections of proceedings, with some multimedia content, from DiSC 1999 to DiSC 2011.</p></li>
 <li><a href="/publications/anthology/">The ACM SIGMOD Anthology</a>
 <p>A digital library of database research on CD and DVD, volumes 1 (1999) to 6 (2007), with the contents of each disc.</p></li>
+<li><a href="/publications/interview/">Distinguished Profiles in Databases</a>
+<p>Interviews with leading database researchers by Marianne Winslett, 2001–2014, with the transcripts published in SIGMOD Record.</p></li>
 <li><a href="/publications/dblp/db/index.html">DBLP mirror (1999 snapshot)</a>
 <p>The DBLP pages that came on the Anthology discs, with links to the current <a href="https://dblp.org/">dblp.org</a>.</p></li>
 </ul>

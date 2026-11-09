@@ -11,3 +11,11 @@
   .archive-name { font-size: 18px; padding-left: 10px; }
   .nav-sigmod { padding: 6px 12px; font-size: 13.5px; }
 }
+
+/* Video Series: thumbnail cards linking to YouTube */
+.prose ul.videos { list-style: none; padding: 0; margin: 1.25em 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.prose ul.videos li { margin: 0; }
+.prose ul.videos a { display: block; text-decoration: none; }
+.prose ul.videos img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; margin: 0 0 8px; }
+.prose ul.videos a:hover span { text-decoration: underline; }
+.prose ul.videos small { color: var(--muted, #666); }

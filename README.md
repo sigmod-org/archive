@@ -1,14 +1,16 @@
 # SIGMOD Archive
 
 Copies of ACM SIGMOD's historical publications, served at
-**https://sigmod-org.github.io/archive/** (GitHub Pages, built by `.github/workflows/pages.yml`).
+**https://archive.sigmod.org/**, deployed over SSH by `.github/workflows/deploy-archive-sigmod.yml` on every push to `main`.
+The interview video and audio live on the server in `/media/distinguished_profiles/` (not in this repo); the deploy never touches `/media/`.
+The old GitHub Pages workflow (`pages.yml`) is kept but disabled.
 
 | Path | What |
 |---|---|
 | `/publications/discs/` | SIGMOD Digital Symposium Collection (DiSC), 1999–2011: all 13 volumes |
 | `/publications/anthology/` | The ACM SIGMOD Anthology: contents of volumes 1–6, images and the volume 6 pages |
 | `/publications/dblp/` | The DBLP pages from the Anthology discs (1999 snapshot) |
-| `/publications/interview/`, `/publications/interviews/` | Distinguished Profiles in Databases: 66 interview pages, photos and transcript PDFs. The video (`.flv`) and audio (`.mp3`) files, about 8.4 GB, are not online; their links are kept as they were |
+| `/publications/interview/`, `/publications/interviews/` | Distinguished Profiles in Databases: 66 interview pages, photos and transcript PDFs. Video (MP4) and audio (MP3) play from `https://archive.sigmod.org/media/distinguished_profiles/` |
 
 The site uses the [www.sigmod.org](https://github.com/sigmod-org/www.sigmod.org) look (Eleventy, same CSS,
 same footer) with a simpler header. The overview pages are Markdown in `src/`; the copied pages are in

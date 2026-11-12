@@ -1,8 +1,8 @@
 export default {
   title: "SIGMOD Archive",
   www: "https://www.sigmod.org",
-  // Canonical address; SITE_URL is set by the deploy that builds for archive.sigmod.org
-  url: process.env.SITE_URL || "https://sigmod-org.github.io/archive",
+  // Canonical address (SITE_URL can override it)
+  url: process.env.SITE_URL || "https://archive.sigmod.org",
   longTitle: "ACM Special Interest Group on Management of Data",
   description: "Copies of ACM SIGMOD's historical publications: the SIGMOD Anthology, the Digital Symposium Collection (DiSC) and the DBLP DVD mirror.",
   repo: "https://github.com/sigmod-org/archive",

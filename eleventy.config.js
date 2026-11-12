@@ -1,7 +1,7 @@
 import { HtmlBasePlugin } from "@11ty/eleventy";
 
-// The site is served from https://sigmod-org.github.io/archive/ until it has its own domain.
-// PATH_PREFIX=/archive/ (set in the workflow) prefixes the links in the templates below.
+// The site is served from https://archive.sigmod.org/ (domain root, so no prefix is needed).
+// PATH_PREFIX, if set (e.g. /archive/ for a project-site copy), prefixes the links in the templates below.
 // The copied pages in src/static use relative links only, so they work under any prefix.
 const pathPrefix = process.env.PATH_PREFIX || "/";
 

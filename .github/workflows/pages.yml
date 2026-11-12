@@ -1,5 +1,5 @@
-# Builds the archive and publishes it on GitHub Pages at https://sigmod-org.github.io/archive/.
-# PATH_PREFIX is the repository name while the site has no custom domain; set it to "/" once it has one.
+# DISABLED (Actions tab): the archive is now served from https://archive.sigmod.org/ by deploy-archive-sigmod.yml.
+# Kept for reference. It built the archive for GitHub Pages at https://sigmod-org.github.io/archive/.
 name: Publish on GitHub Pages
 
 on:

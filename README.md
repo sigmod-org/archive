@@ -11,6 +11,7 @@ The old GitHub Pages workflow (`pages.yml`) is kept but disabled.
 | `/publications/anthology/` | The ACM SIGMOD Anthology: contents of volumes 1–6, images and the volume 6 pages |
 | `/publications/dblp/` | The DBLP pages from the Anthology discs (1999 snapshot) |
 | `/publications/interview/`, `/publications/interviews/` | Distinguished Profiles in Databases: 66 interview pages, photos and transcript PDFs. Video (MP4) and audio (MP3) play from `https://archive.sigmod.org/media/distinguished_profiles/` |
+| `/publications/digital-review/` | The SIGMOD Digital Review (H. V. Jagadish, editor): 1999–2000 pages and the 2006 reviews, copied from the Wayback Machine (newest capture of each page, up to September 2014). PHP pages were saved under static names; the query form and logins do not work |
 
 The site uses the [www.sigmod.org](https://github.com/sigmod-org/www.sigmod.org) look (Eleventy, same CSS,
 same footer) with a simpler header. The overview pages are Markdown in `src/`; the copied pages are in

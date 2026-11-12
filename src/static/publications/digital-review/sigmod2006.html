@@ -1,0 +1,213 @@
+
+<HTML>
+<HEAD>
+<title>Digital Review - SIGMOD 2006</title>
+</HEAD>
+<BODY>
+<p align=left><A href="index.html"><IMG alt="ACM Digital Review" border=0 
+height=130 src="images/digital_review.gif" vspace=10 width=379></A></p>
+
+
+<h2>Reviews</h2><TABLE BORDER=0 WIDTH=95%><TR><TD><I>MauveDB: Supporting
+Model-based User Views in Database Systems</I></TD></TD><TD></TD><TD
+ALIGN=RIGHT>Positive rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Amol Deshpande and Sam Madden</TD><TD
+ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.06.MauveDB">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.06.MauveDB_jag.html">Review</a>:</B><br><P>
+Much of the manipulation of large data sets today involves significant
+computations, often performed in certain stylized ways.  However, traditional
+database query languages do not provide support for such computations,
+requiring them frst to fetch data from the database and then manipulate it
+outside.  Where such manipulations are data intensive, it has been shown in
+many contexts that performing the manipulation within the database itself is
+more efficient.  It can also relieve the application programmer of the burden
+of specifying the algorithms for these manipulations.  
+<P>
+The MauveDB paper studies two frequently used computational operations --
+regression and interpolation.  It provides a mechansim to specify each within
+the database, with the result being a "view" that the application programmer
+can use.  The expected performance improvements are demonstrated
+experimentally.  There is much still to be done, in terms of better access
+mathods for such selected new operators, better integration with the standard
+query optimization techniques, identification of additional such operations,
+and so on.  What this paper does is open the gates to a new area of research,
+into which I hope others will follow.  For doing so, this paper merits both
+attention and credit.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Ordering the Attributes of Query
+Results</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by
+jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Das, Hristidis, Kapoor, Sudarshan</TD><TD
+ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.AttributeSelection">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.AttributeSelection_jag.html">Review</a>:</B><br><P>
+We, in the database community, tend to have boolean logic deeply ingrained in
+the way we think.  A consequence is that once a result set has been computed,
+we do not give it much further thought, at best ordering tuples in the
+result.  Yet, from a user perspective, result presentation is crucial, and
+not just in terms of "eye-candy".  This paper does a very nice job of
+identifying one specific problem in this broad space, and addressing it
+well. 
+<P>
+The problem studied is one of attribute selection -- when screen real estate
+is insufficient to show all attributes at the same time, which ones should be
+shown?  This is a well-posed question, and the paper suggests some reasonable
+choices that a system could automatically make.
+<P>
+The problem specification is narrow, and the solution may not be optimum.
+Nevertheless, this paper deserves attention because it establishes a
+beachhead in an important but poorly studied area -- that of results
+presentation.  It shows how one can do quality work in this context.
+Hopefully many others will follow this lead.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Declarative Networking: Language,
+Execution and Optimization</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb
+rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Boon Thau Loo, Tyson Condie, Minos
+Garofalakis, David E. Gay, Joseph M. Hellerstein, Petros Maniatis, Raghu
+Ramakrishnan, Timothy Roscoe, Ion Stoica</TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.Decl.Networking">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.Decl.Networking_jag.html">Review</a>:</B><br>More
+than a decade after it was declared dead, recursive query processing is back
+again. Modern network protocols are complex, and recursive.  Their properties
+are often not well-understood.  Protocol definitions, in almost every case,
+are procedural.  Declarative protocol specification can raise the level of
+discourse, simplify analysis, and permit more efficient implementations:
+doing for networks what declarative query specification has done for
+databases.  This paper describes a declarative specification of network
+protocols using recursion.  It is the paper, in a sequence of papers studying
+different aspects of this problem, that is most accessible to a database
+audience.  I don't know whether the proposed declarative specifications
+suffice to capture enough of the behavior of real prot!
+ocols to be of value to systems builders.  But the ideas are compelling, and
+the impact, if the idea pans out, is huge. </TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Flexible and Efficient XML Search
+with Complex Full-Text Predicates</I></TD></TD><TD></TD><TD
+ALIGN=RIGHT>Positive rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>S. Amer-Yahia, E. Curtmola, A. Deutsch
+</TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.XFT">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.XFT_jag.html">Review</a>:</B><br><P>
+There are many systems proposed for XML query evaluation, and even more for
+text queries, that have quite ad hoc definitions and empiricially specified
+behaviors.  In contrast, the bedrock for relational database systems has been
+a very well-specified algebra that has provided a valuable intellectual basis
+and a useful framework for query optimization.  This paper represents a
+strong attempt at establishing an algebraic basis for querying text in XML.
+<P>
+Whether the proposed algebra will suffice, it is too early to tell.  I myself
+(along with my co-authors) had proposed the TIX algebra [citation 1 in the
+bibliography of this paper] some years ago to address precisely this need.
+The current paper significantly extends that proposal, and is thus more
+likely to capture enough of the nuances of queries over text data.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Relaxed Currency Serializability for
+Middle-Tier Caching and Replication </I></TD></TD><TD></TD><TD
+ALIGN=RIGHT>Superb  rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>P. Bernstein, A. Fakete, H. Guo,
+R. Ramakrishnan, P. Tamma </TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.RC">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.RC_jag.html">Review</a>:</B><br><P>
+It has been a while since anyone had anything really fresh to say about
+concurrency control -- a fundamental piece of database technology was widely
+believed to be "solved".  Yet, serious issues remain.  Most distributed
+systems do not operate in transactional mode because the overheads are too
+high to maintain serializability.  With mobile systems that could operate in
+disconnected mode, it is not even possible.
+<P>
+This refreshing paper introduces the notion of "freshness", and a
+corresponding notion of relaxed currency for a system in which the user is
+aware of multiple versions, establishing a firm analytic foundation for a
+very real practical problem.  I expect to see real systems using these ideas
+in the near future.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>DADA: A Data Cube for Dominant
+Relationship Analysis</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating
+by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Cuiping Li, Beng Chin Ooi, Anthony
+K.H. Tung, Shan Wang</TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.DADA">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.DADA_jag.html">Review</a>:</B><br><P>
+Relative customer preferences for feature combinations have long been
+represented in multi-dimensional space.  In fact, the whole area of
+multi-dimensional scaling arose from this application.  
+<P>
+Skyline queries over multi-dimensional data sets have, justifiably, become a
+topic of intense study in recent years.  The set of skyline points present a
+scale-free choice of data points worthy of further consideration in many
+contexts.
+<P>
+This paper, in a very clever way, ties these two ideas together.  Three new
+classes of skyline queries are defined, to help firms delineate market
+opportunities based on customer preferences and competitive products.
+Efficient computation for such queries is achieved through a novel data
+structure.</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Recovery from Bad User
+Transactions</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by
+jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>D. Lomet, Z. Vagena, R. Barga</TD><TD
+ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.BadXact">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.BadXact_jag.html">Review</a>:</B><br><P>
+Sometimes users issue "bad" transactions, and these have to be rolled back
+after they have been committed.  This creates a problem of cascading
+roll-backs.  This paper suggests an efficient way to roll-back as little as
+possible while removing the effects of bad transactions.
+<P>
+The paper is written in the context of a traditional transaction-oriented
+(database) system.  But I think the ideas in the paper are applicable more
+broadly.  For example, consider a system that is gather information from new
+sources on the internet and performing some analyses.  What happens when one
+of these news sources retracts a story?  Can we efficiently edintify the
+dependent analyses and redo them?  The same applies to biomedical science,
+and the retraction of a data set because of discovery of scientific fraud.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>To Search or to Crawl? Towards a
+Query Optimizer for Text-Centric Tasks</I></TD></TD><TD></TD><TD
+ALIGN=RIGHT>Positive rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Agichtein, Ipeirotis, Jain, Gravano</TD><TD
+ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=SIGMOD.2006.TextQOpt">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/SIGMOD.2006.TextQOpt_jag.html">Review</a>:</B><br><P>
+Cost-based query optimization is central to database systems, but is rarely
+used outside of this context.  In this paper, the authors consider
+tex-centric data retrieval and integration tasks, and propose a cost model
+for such tasks.   Using this cost model, it is possible to estimate the cost
+of alternative query plans, and thereby make an informed decision between
+them.
+<P>
+Even if it turns out that the cost models are inadequate, this paper still
+has made a significant contribution in bringing classic query optimization
+ideas to bear on a new and important problem domain.  To the extent that the
+cost models turn out to be good approximations of reality, this paper is even
+more impactful.
+ </TD></TR>
+<TR></TABLE>
+<hr><p><A href="index.html">Return to Digital Review Home</A></p></hr>
+
+</BODY>
+</HTML>

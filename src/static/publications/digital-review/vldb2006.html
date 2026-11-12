@@ -1,0 +1,109 @@
+
+<HTML>
+<HEAD>
+<title>Digital Review - SIGMOD 2006</title>
+</HEAD>
+<BODY>
+<p align=left><A href="index.html"><IMG alt="ACM Digital Review" border=0 
+height=130 src="images/digital_review.gif" vspace=10 width=379></A></p>
+
+
+<h2>Reviews</h2><TABLE BORDER=0 WIDTH=95%>
+<TR><TD><I>Trustworthy Keyword Search for Regulatory-Compliant Record
+Retention</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by
+jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Soumyadeb Mitra, Windsor W. Hsu, Marianne
+Winslett</TD><TD ALIGN=RIGHT
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=VLDB.06.RetentionIndex">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A
+HREF="reviews/VLDB.06.RetentionIndex_jag.html">Review</a>:</B><br>This
+charming paper shows how to create a usable inverted index in a world
+where no deletions (or modifications) are allowed, to the indexed data and to
+the index.  The application is that of records retention -- the authors argue
+convincingly that merely retaining information, such as an email, does not
+mean that it can be found easily later: what is additionally required is that
+an indexed search path to it also be guaranteed to exist.
+<P>
+The problem studied in this paper is certainly not in the core of a database
+engine, but it is an elegant study of a compelling problem.
+
+</TD></TR>
+<TR></TABLE>
+<TABLE BORDER=0 WIDTH=95%><TR><TD><I>Adaptive Execution of Variable-Accuracy
+Functions</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by
+jag.</TD></TR>
+<hr><TR><TD COLSPAN=2><B>Authors:</B>Matthew Denny and Michael Franklin</TD><TD
+ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=VLDB.06.VAO">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/VLDB.06.VAO_jag.html">Review</a>:</B><br>Accuracy
+of result is often traded for computation time in real-time systems,
+and in applications such as video streaming.  In the database context, we
+have seen a similar trade off when using samples to estimate aggregate values
+over large data warehouses.  This paper studies the application of this
+trade off to user-defined functions (UDFs).  While this idea is simple, UDFs
+are not easily integrated into a query optimizer, or any other part of the
+query processing pipe, for that matter, so that the implementation of the
+idea requires some clever engineering.  While the specifics of the
+engineering required for a different system may differ in the details, I
+think the major lessons do carry over.  That the authors were able to pull it
+off at all is worth our respect.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>ULDBs: Databases with Uncertainty
+and Lineage</I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by
+jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Omar Benjelloun, Anish Das Sarma, Alon
+Halevy, Jennifer Widom </TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=VLDB.06.ULDB">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/VLDB.06.ULDB_jag.html">Review</a>:</B><br>There
+has been considerable activity around uncertainty in databases
+recently, and also on the maintenance of lineage (or provenance) for data.
+The set of applications in which we are likely to care about the former has a
+vary large overlap with the set of applications in which we care about the
+latter.  So thinking about the two concepts jointly makes a great deal of
+sense, and this paper develops some elegant results in this direction.
+<P>
+I would contend, though, that the types of applications that beg for
+uncertainty and provenance management are also likely to involve data that is
+not very well structured.  As such, I would expect work in this direction to
+have much greater practical value if done in the context of XML, rather than
+in the context of the relational data model as in this paper, and in much of
+the body of literature on similar topics.  The simplicity of the relational
+data model does make it easier to establish theoretical results, and one does
+have to start somewhere.  Kudos to this paper for taking an important first
+step.
+
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I>Efficiently Linking Text Documents
+with Relevant Structured Information</I></TD></TD><TD></TD><TD
+ALIGN=RIGHT>Positive rating by jag.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B>Venkatesan T. Chakaravarthy, Himanshu Gupta,
+Prasan Roy, Mukesh Mohania</TD><TD ALIGN=RIGHT 
+VALIGN=TOP><B><A
+HREF="https://web.archive.org/web/2014/http://www.eecs.umich.edu/digital-review/submit.php?PaperID=VLDB.06.EROCS">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A 
+HREF="reviews/VLDB.06.EROCS_jag.html">Review</a>:</B><br>There
+has recently been a flurry of activity surrounding keyword search in
+structured databases, beginning with the BANKS project, and leading up to my
+own work on Schema-Free XQuery.  The idea in this line of work has been to
+find a small "local" part of the database that can match all the specified
+query terms.
+<P>
+This paper addresses the complement of this problem.  Given a document, and a
+set of structured entities in a database, how does one match up entities
+against sets of co-located words in the document.  The issues and challenges
+are similar to those in the stream of work mentioned above, but the problem
+setting is new and interesting.
+</TD></TR>
+<TR></TABLE>
+
+<hr><p><A href="index.html">Return to Digital Review Home</A></p></hr>
+
+</BODY>
+</HTML>

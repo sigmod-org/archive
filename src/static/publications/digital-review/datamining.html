@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>Digital Review - Query for Paper Reviews</title>
+</HEAD>
+<body text="#000000" bgcolor="#FFFFC0" link="#0000FF" vlink="#800080" alink="#FF00FF">
+
+<h2>Data Mining Reviews</h2><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/AcharyaGPR99a.html">Join Synopses for Approximate Query Answering</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by Dennis Shasha.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Swarup Acharya, Phillip B. Gibbons, Viswanath Poosala, Sridhar Ramaswamy</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/sigmod/AcharyaGPR99a">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/sigmod/AcharyaGPR99a__shasha">Review</a>:</B><br><p>The authors show how to estimate
+aggregate results in data warehouses.
+The cool thing is that their techniques give error bounds.
+In their experiments, these bounds were conservative but still useful.</p>
+
+<p>Basic problem: if you sample all tables and then do aggregates,
+that doesn't work in general.
+For example, if you have R and S and you join the key of R
+with a key of S, then taking a 1/10 sample of each will give
+a size that is 1/100 of the size of the real join.
+So, one must be more clever.</p>
+
+<p>Their basic idea:<br>
+Suppose you have tables R, S, T, ...
+linked by foreign key joins and there is a root R (i.e. R
+has a field which is a subset of the key of S, ...).<br>
+Take a sample of R and then perform all these foreign key joins
+based on the sample,
+giving R', S', T', ...<br>
+Now, if a query involves R, S, T and includes the foreign key
+links among these, then the query can be done with great
+accuracy on R', S', T'.<br>
+The error can be estimated by considering the result
+obtained by several partitions of R' and looking at their variance.
+Please see the paper for other technical details.</p>
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/AgrawalIS93.html">Mining Association Rules between Sets of Items in Large Databases</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by Sophie Cluet.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Rakesh Agrawal, Tomasz Imielinski, Arun N. Swami</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/sigmod/AgrawalIS93">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/sigmod/AgrawalIS93__cluet">Review</a>:</B><br><p>Data mining is fashionable nowaydays (or is it already "was"?).
+Yet I did not know much about it. I felt left out from most
+of these fascinating coffee break conversations. This had to stop. 
+This often cited article seemed like a good start. I was not disappointed.
+Thus, today's recommendation: if you want to understand something
+about association rules, read it!</p>
+
+<p>The paper takes a good start by motivating the need for association
+rules through examples involving sausages, mustard and bagels. 
+For instance, an association rule may tell me that 40% of the customers
+who bought sausages and bagels also bought mustard. 
+Then, it presents a formal model for representing these rules
+and explains how to discover them from a given database.
+There are two parts to the discovery process. The first and most difficult
+consists in extracting  so-called "large itemsets", i.e., (roughly) 
+collections of facts that, often enough, are found together in one 
+transaction. The second part splits these sets  so as to obtain rules with 
+one or more antecedent facts (e.g., sausages and bagels) and 
+one consequent fact (e.g., mustard), as well as their support in the
+database (e.g., 40%). Now, the most difficult part being the
+generation of large itemsets, the remainder of the paper is
+devoted to finding appropriate solutions to this problem. 
+But I am afraid this is the end of my review and that you
+will have to read the paper to know more. I recommend that you do
+so, you'll find non trivial answers very neatly explained.  
+But I have to rush now, need to read something about "portals".</p>
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/AgrawalIS93.html">Mining Association Rules between Sets of Items in Large Databases</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by Philip Yu.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Rakesh Agrawal, Tomasz Imielinski, Arun N. Swami</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/sigmod/AgrawalIS93">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/sigmod/AgrawalIS93__pyu">Review</a>:</B><br>This paper provides a mathematical formulation of the association rule
+mining problem, where the association rule problem tries to identify the
+set of items often appeared together in a transaction. It decomposes the
+problem into two subproblems. The first one is on  the generation of large
+item sets based on support and the second one is on deriving the
+association rules from the large item sets based on confidence.  This
+pioneer work has provided an elegant problem formulation  that transforms
+an abstract problem into an algorithmic problem. It opens up a new area for
+future research. In additional to potential research opportunities for
+faster mining algorithms and model extensions, I was most intrigued by the
+issues on the statistical significance of the rules by considering
+alternative measures other than support and confidence such as collective
+strength which is a correlation type measure, and also on the on-line
+interactive generation of the rules to give users more control on what
+rules to generate and how to specify the parameters.</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/SarawagiTA98.html">Integrating Mining with Relational Database Systems: Alternatives and Implications</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by Surajit Chaudhuri.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Sunita Sarawagi, Shiby Thomas, Rakesh Agrawal</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/sigmod/SarawagiTA98">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/sigmod/SarawagiTA98__surajitc">Review</a>:</B><br>Researchers in machine learning and statistical analysis had developed
+many data analysis techniques well before the data mining fever caught on. 
+In the second phase of data mining research, the focus was to ensure 
+that data mining algorithms are scalable, i.e., can deal with large volumes
+of data. These algorithms assume that the data reside in files. 
+However, for data mining to be widely applicable, tools and techniques for 
+data mining must be well integrated with the data-warehousing infrastructure. 
+Therefore, it is important that implementation of data mining tools be studied
+in the context of relational backends. This paper by Sarawagi, Thomas and
+Agrawal is one of the first papers that exemplify such a study. The paper 
+compares several alternative implementations of association rules on traditional as well as Object-Relational SQL engines. The paper considers a fairly comprehensive suite of implementation alternatives that exploit SQL queries, 
+stored procedures/user-defined functions, and "extract and mine" strategies.
+The paper 
+studies the performance and ease of implementation of the alternatives. 
+The experiments were performed on DB2 UDB Server 5.0 and quantify 
+relative trade-offs of the alternative implementations. 
+However, the paper considers association rule mining as the only knowledge discovery technique. 
+Similar studies of other data mining techniques will help us gain a broader
+understanding of systems issues in integration of data mining with relational 
+database management systems.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/GibsonKR98.html">Clustering Categorical Data: An Approach Based on Dynamical Systems</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by Raymond Ng.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> David Gibson, Jon M. Kleinberg, Prabhakar Raghavan</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/vldb/GibsonKR98">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/vldb/GibsonKR98__rng">Review</a>:</B><br>With its wide applications, concept clustering has been studied in
+statistics for decades. In the past few years, with the growing
+popularity of data mining, there has been a renewed interest to develop
+clustering algorithms suitable for large, often disk-resident, data
+sets. This has led to numerous papers on this topic. In fact, too many,
+critics may even argue. Admittedly, there may be some delta papers. But there
+are also studies that represent real, significant progress. This paper is a very
+good example.  To the old problem of clustering categorical data, it
+proposes a very novel solution. Tuples, consisting of only categorical
+data, are considered similar if the sets of items with which they
+co-occur have much overlap, in spite of the fact that the tuples
+themselves never co-occur together. The proposed approach is based on
+propogation in the style of a dynamical system.  The key to such a
+method is the convergence properties of the propagation. And this is
+precisely the area in which the paper excels. For a certain way of
+propagation, called the linear S1 rule, there is a theorem giving a
+sufficient condition for it to converge. For another way of
+propagation, called the product rule, there are two theorems showing
+that there is completeness in the sense that large clustering
+structures could be detected with high probabilities. As for issues
+that are hard to be addressed by analysis, such as the speed of
+convergence, the speed with respect to data set sizes, etc., the paper
+gives good experimental results.  While the experimental results can be
+further improved, the presented results have clearly shown that the
+proposed solution is feasible, interesting and promising.  As far as
+clustering papers are concerned, this is exceptional for its clean
+mathematical foundation and strong analytic results.
+</TD></TR>
+<TR></TABLE>
+<br>&nbsp;
+<br>
+<p><a href="index.html">Return to Digital Review Home</a>
+<hr>
+
+</BODY>
+</HTML>

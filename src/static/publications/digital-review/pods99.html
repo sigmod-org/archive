@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>Digital Review - Query for Paper Reviews</title>
+</HEAD>
+<body text="#000000" bgcolor="#FFFFC0" link="#0000FF" vlink="#800080" alink="#FF00FF">
+
+<h2>PODS99 Reviews</h2><TABLE BORDER=0 WIDTH=100%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/pods/CalvaneseGLV99.html">Rewriting of Regular Expressions and Regular Path Queries</A></I></TD></TD><TD ALIGN=RIGHT>Positive review by Alberto Mendelzon.</TD></TR>
+<TR><TD COLSPAN=3><B>Authors:</B> Diego Calvanese, Giuseppe De Giacomo, Maurizio Lenzerini, Moshe Y. Vardi</TD></TR>
+<TR><TD COLSPAN=3><B>Review:</B><BR><p>Suppose you have a graph-like database, such as a semistructured database,
+and you have materialized the answer to several queries Qi of the form
+"find nodes reachable from the root by a path that satisfies regular
+expression Ri."</p>
+
+<p>Now you have a query Q on the original database and you would like to
+take advantage of the materialized answers (or views) in answering Q
+efficiently. This paper gives a simple and elegant automata-theoretic
+method for rewriting Q in terms of the Ri's whenever it is possible to
+do so.</p>
+
+<p>This is an extension of the well-studied and widely applicable
+problem of rewriting queries using views to a new kind of views
+and queries. By restricting the analysis to regular expressions,
+as opposed to more general recursive queries, the undecidability
+cases (e.g. Datalog) are avoided.</p>
+
+<p>The problem of finding the most efficient such rewriting remains
+open, however. For example, if the two materialized queries are
+R1 = a*, R2 = (a+aa)*, and the query is Q = a*, the method in the
+paper will produce the rewriting (R1+R2)*, when R1 would suffice
+and would (intuitively) be cheaper to evaluate.</p>
+</TD></TR>
+<TR></TABLE>
+<br>&nbsp;
+<br>
+<p><a href="index.html">Return to Digital Review Home</a>
+<hr>
+</BODY>
+</HTML>

@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>Digital Review - Query for Paper Reviews</title>
+</HEAD>
+<body text="#000000" bgcolor="#FFFFC0" link="#0000FF" vlink="#800080" alink="#FF00FF">
+
+<h2>XML Reviews</h2>
+<TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.w3.org/TR/NOTE-xml-ql/">XML-QL: A Query Language for XML</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by Jennifer Widom.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Alin Deutsch, Mary F. Fernandez, Daniela Florescu, Alon Y. Levy, Dan Suciu</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:www/org/w3/TR/NOTE-xml-ql">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:www/org/w3/TR/NOTE-xml-ql__widom">Review</a>:</B><br><p>This paper is a must-read for anyone interested in the emerging area
+of data management for XML.  At the time of this review (October 1999)
+there's a small handful of query languages designed for XML-encoded
+data.  The language Lorel emerged from my own Lore project on managing
+semistructured data and recently was modified for an XML-based data
+model.  XML-QL was designed more specifically for XML, although it too
+evolved from a language for querying semistructured data (StruQL, by
+many of the same authors); more on this point later.  Finally, the
+language XQL has been proposed by Microsoft and others from industry.
+(Other languages such as XSL and YATL can be used to query XML data
+but were not designed specifically for that purpose.  XML-GL is a
+graphical query language that can be translated to the textual
+languages mentioned here.)</p>
+
+<p>The XML-QL paper describes both a data model and a query language.
+The work is done primarily by researchers at AT&T.  Unlike other
+research-driven languages, the authors have gone so far as to submit
+their specification to the World-Wide Web Consortium (W3C) as a
+technical note.  As a result, XML-QL has gained a fair bit of
+attention from industry.  While the alternative submitted language,
+XQL, still remains the more "popular" proposed standard (no doubt due
+to its backing from Microsoft and others), everyone agrees that XML-QL
+is much more expressive while still retaining a reasonably
+user-friendly flavor.  The authors of XML-QL remain admirably active
+in the XML query language standardization effort.  Regardless of the
+final outcome, XML-QL and its authors will have some real impact -- at
+the very least in educating people about important features that XQL
+lacks (e.g., joins).</p>
+
+<p>The XML-QL paper reads fairly well and, as I said, is an important
+basic contribution in the area of XML data management.  I have a few
+criticisms of the work.  One is that although XML-QL has an XML flavor
+and "appearance", because XML-QL evolved from a language designed for
+graph-based semistructured data it does not handle some XML features
+as elegantly as it might.  (Lorel suffers from some of the same
+history, but Lorel has not been pushed as an XML query language to the
+extent that XML-QL has.)  Also the semantics of XML-QL are not crystal
+clear, for example with respect to variable bindings, implicit
+quantification, grouping, and ordering.  In some cases it's been
+necessary to check with the authors about what a particular query is
+actually intended to do.  On the other hand, some features of XML-QL
+are quite nice, particularly its powerful restructuring facilities and
+clean separation of locating data and constructing results.  To the
+best of my knowledge, currently there is only a small main-memory
+prototype query processor for XML-QL, so implementation and
+optimization issues remain open.</p>
+
+<p>Note that with the current intense interest in XML and rapid progress
+in the area of XML data management, this 10/99 review is likely to
+become obsolete in a short period of time.  Nevertheless, the XML-QL
+paper will remain an important initial work.</p>
+</TD></TR>
+<tr></table>
+
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/ShanmugasundaramGTZDN99.html">Relational Databases for Querying XML Documents: Limitations and Opportunities</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Superb  rating by Michael Carey.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Jayavel Shanmugasundaram, Kristin Tufte, Chun Zhang, Gang He, David J. DeWitt, Jeffrey F. Naughton</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/vldb/ShanmugasundaramGTZDN99">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/vldb/ShanmugasundaramGTZDN99__mjcarey">Review</a>:</B><br>This paper is the first paper that I have read that presents and evaluates
+techniques for mapping XML documents with DTDs to relational databases for
+storage. It also presents and evaluates corresponding XML-to-SQL query
+translations. The paper closes with recommendations for relational DBMS
+improvements to make them better-suited for solving the XML problem. My
+reaction on reading this paper was that it is a well-motivated and clearly
+explained piece of work on a timely and important problem -- namely, how to
+go about exploiting commercial DBMS technology to manage XML data (and
+improving commercial DBMS systems to support this better in the future).
+The paper has a nice discussion of the problem landscape as well as of the
+most relevant related work. The authors do a nice job of presenting and
+evaluating various algorithms for schema and query mapping, though the
+evaluation metrics are a bit simplistic. Overall, this was the best
+(and most exciting) paper that ended up in my to-review batch for the
+1999 VLDB Conference. I hereby nominate this paper for the VLDB-2009
+'ten-year paper' award. :-)  [FULL DISCLOSURE: I was a faculty member at the
+University of Wisconsin, where this work was done, for a number of years.
+However, this work was done after my time there, and I do not feel biased by
+that relationship with the Wisconsin authors.]
+</TD></TR>
+<TR></TABLE>
+
+
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/ShanmugasundaramGTZDN99.html">Relational Databases for Querying XML Documents: Limitations and Opportunities</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by H. V. Jagadish.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> Jayavel Shanmugasundaram, Kristin Tufte, Chun Zhang, Gang He, David J. DeWitt, Jeffrey F. Naughton</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/vldb/ShanmugasundaramGTZDN99">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/vldb/ShanmugasundaramGTZDN99__jag">Review</a>:</B><br>XML is important, and one should expect to find significant efforts towards
+implementing XML by mapping it to relational databases.  This paper is
+definitely not the last word on this topic, but it is a significant start.
+In fact, this paper appears to me even to be a bit hurried, and I am sure the
+authors have more definitive work to follow.  Yet, there is virtue to being
+"first-to-market with a good product", and this paper is a must-read for any
+one thinking about implementing XML on top of a relational database.  
+<p>
+In particular, I would pay close attention to the list of difficulties 
+listed by the authors -- few other research groups have the expertise and
+the credibility to catalog these limitations (and have readers accept that
+these are true system limitations rather than limitations in the ability of
+less competent researchers to perform the required mappings).
+The authors do not quite say this, but to me, this long list of limitations
+clearly indicates that we will not see effective XML implementations in
+relational databases until commercial vendors
+make serious enhancements to provide effective XML support.
+</TD></TR>
+<TR></TABLE>
+
+
+<hr><TABLE BORDER=0 WIDTH=95%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/vldb/Tygar98.html">Atomicity versus Anonymity: Distributed Transactions for Electronic Commerce</A></I></TD></TD><TD></TD><TD ALIGN=RIGHT>Positive rating by Gerhard Weikum.</TD></TR>
+<TR><TD COLSPAN=2><B>Authors:</B> J. D. Tygar</TD><TD ALIGN=RIGHT VALIGN=TOP><B><A HREF="http://141.213.18.238/paper_entry/submit.asp?PaperID=DBLP:conf/vldb/Tygar98">[Review&nbsp;Same]</a></B></TD></TR>
+<TR><TD COLSPAN=3><B><A HREF="http://141.213.18.238/review.asp?ReviewID=DBLP:conf/vldb/Tygar98__weikum">Review</a>:</B><br><p>Payment protocols for electronic commerce have traditionally been studied
+mostly by the cryptography, security, and distributed computing communities.
+However, as pointed out by this invited paper, the database-style notion
+of atomicity is of crucial importance for such protocols as well and has
+been neglected so far. In fact, one could argue that keeping distributed data
+consistent in the presence of server failures is an absolutely critical concern in electronic
+commerce, whereas perfect protection against tampering, albeit highly desirable,
+is not the most pressing issue given that a decent suite of security measures is already in place.
+In fact, being billed for some goods that one has never received or
+accidentally receiving some ordered goods twice may turn out to be as troublesome
+as a stolen credit card number.</p>
+
+<p>Using atomic transactions for the distributed processing across multiple servers
+on behalf of the merchant, the bank, and the customer is, of course, state of the
+art in the database community. Regardless of the fact that many deployed e-commerce
+solutions may exhibit severe engineering deficiencies in this regard, 
+adding distributed transactions does by itself not pose any research challenges. 
+Rather, it is the combination of payment protocols and transactional
+protocols that needs to be studied carefully. For example, to what extent do
+protocols for anonymous payment and atomic commit influence each other?</p>
+
+<p>This paper provides an excellent overview of the issues in this contemporary area where payment
+and transactional protocols need to be reconciled. It points out a variety of open problems
+and research opportunities in the intersection of these two avenues (beyond merely emphasizing the
+need for atomic transactions in electronic commerce). I highly recommend reading this paper
+and particularly its Section 7 on open problems to everybody doing research on electronic commerce.</p>
+</TD></TR>
+<TR></TABLE>
+<br>&nbsp;
+<br>
+<p><a href="index.html">Return to Digital Review Home</a>
+<hr>
+</BODY>
+</HTML>

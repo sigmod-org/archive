@@ -1,0 +1,311 @@
+
+<HTML>
+<HEAD>
+<title>Digital Review - Query for Paper Reviews</title>
+</HEAD>
+<BODY>
+<form method="post" action="queryresults.php">
+<p align=left><A href="index.html"><IMG alt="ACM Digital Review" border=0 
+height=130 src="images/digital_review.gif" vspace=10 width=379></A></p>
+
+
+
+
+
+<h2>
+
+Query for Paper 
+Reviews</h2>
+
+<P>Fill out zero or more of the following constraints on 
+the query: 
+</P>
+
+<P>Reviewer:<select name="Reviewer">
+<option value=_>(Anyone)</option>
+<option value=_anyed>(Any Editor)</option>
+<option value=testinguser>Testing User</option>
+<option value=_anyother>(Any Other)</option>
+<option value=aberer>Karl Aberer</option>
+<option value=abiteboul>Serge Abiteboul</option>
+<option value=charu>Charu C. Aggarwal</option>
+<option value=agrawal>Divyakant Agrawal</option>
+<option value=shurug>Shurug Al-Khalifa</option>
+<option value=calang>Calvin Ang</option>
+<option value=anyasotiro>Sotiropoulou Anya</option>
+<option value=pmaoki>Paul M. Aoki</option>
+<option value=schnarf>Jason Atkins</option>
+<option value=atzeni>Paulo Atzeni</option>
+<option value=cbeeri>Catriel Beeri</option>
+<option value=philbe>Phil Bernstein</option>
+<option value=bertino>Elisa Bertino</option>
+<option value=bettini>Claudio Bettini</option>
+<option value=arifb>Moch Arif Bijaksana</option>
+<option value=mjcarey>Michael Carey</option>
+<option value=catarci>Tiziana Catarci</option>
+<option value=ncercone>Nick J. Cercone</option>
+<option value=ceri>Stefano Ceri</option>
+<option value=surajitc>Surajit Chaudhuri</option>
+<option value=hongminc>Hongmin Chen</option>
+<option value=cluet>Sophie Cluet</option>
+<option value=Asuman>Asuman Dogac</option>
+<option value=justwait>Du Wen Yue</option>
+<option value=amr>Amr El Abbadi</option>
+<option value=hector>Hector Garcia-Molina</option>
+<option value=georgan>Nektarios Georgalas</option>
+<option value=shahram>Shahram Ghandeharizadeh</option>
+<option value=grahne>Gosta Grahne</option>
+<option value=jgray>Jim Gray</option>
+<option value=laura>Laura M. Haas</option>
+<option value=han>Jiawei Han</option>
+<option value=timielinski>Tomasz Imielinski</option>
+<option value=yannisi>Yannis Ioannidis</option>
+<option value=jag>H. V. Jagadish</option>
+<option value=jajodia>Sushil Jajodia</option>
+<option value=Jamil>Hasan M Jamil</option>
+<option value=csj>Christian S. Jensen</option>
+<option value=anant>Anant Jhingran</option>
+<option value=johnsont>Theodore Johnson</option>
+<option value=kemper>Alfons Kemper</option>
+<option value=labrinid>Alexandros Labrinidis</option>
+<option value=palarson>Per-Ake Larson</option>
+<option value=jameslee>James Lee</option>
+<option value=lesk>Michael Lesk</option>
+<option value=alon>Alon Levy</option>
+<option value=ley>Michael Ley</option>
+<option value=chrisl>Chris Lin</option>
+<option value=jbload>Justin Loadholtz</option>
+<option value=lohman>Guy M. Lohman</option>
+<option value=lomet>David Lomet</option>
+<option value=maier>David Maier</option>
+<option value=mannila>Heikki Mannila</option>
+<option value=cik_ping>Marinda Masdar</option>
+<option value=Dacio>Dacio Medina</option>
+<option value=mendel>Alberto Mendelzon</option>
+<option value=sham>Sham Navathe</option>
+<option value=neuhold>Erich J. Neuhold</option>
+<option value=rng>Raymond Ng</option>
+<option value=pptuyen>Xuan Tuyen Nguyen</option>
+<option value=izugeli>Izuchukwu Onyia</option>
+<option value=tekin>Gultekin Ozsoyoglu</option>
+<option value=meral>Meral Ozsoyoglu</option>
+<option value=ozsu>M. Tamer Ozsu</option>
+<option value=yannis>Yannis Papakonstantinou</option>
+<option value=bluetarget>Jun Hyun Park</option>
+<option value=peijian>Jian Pei</option>
+<option value=vjperez>Victor J. Perez-Nunez</option>
+<option value=gpezda>Greg Pezda</option>
+<option value=raghu>Raghu Ramakrishnan</option>
+<option value=krithi>Krithi Ramamritham</option>
+<option value=nregal>Nicolas Regal</option>
+<option value=reuter>Andreas Reuter</option>
+<option value=kar>Kenneth Ross</option>
+<option value=roussopoulos>Nick Roussopolous</option>
+<option value=kanda>Kanda Runapongsa</option>
+<option value=adnansafeer>Adnan Safeer</option>
+<option value=salzberg>Betty Salzberg</option>
+<option value=wsrev>Wolfgang Scheufele</option>
+<option value=timos>Timos Sellis</option>
+<option value=shasha>Dennis Shasha</option>
+<option value=esimon>Eric Simon</option>
+<option value=rts>Richard Snodgrass</option>
+<option value=divesh>Divesh Srivastava</option>
+<option value=streilei>Kristin Streilein</option>
+<option value=teorey>Toby J. Teorey</option>
+<option value=tesslerm>Micah Tessler</option>
+<option value=rsthapa>Rajendra Thapa</option>
+<option value=kdthomps>Keith Thompson</option>
+<option value=rtorrijo>Roberto Torrijo</option>
+<option value=vdbuss>Jan Van den Bussche</option>
+<option value=vardi>Moshe Vardi</option>
+<option value=yamini>Yamini Vasanth</option>
+<option value=vianu>Victor Vianu</option>
+<option value=g_lwang>Lei Wang</option>
+<option value=wangqk>Qinke Wang</option>
+<option value=weikum>Gerhard Weikum</option>
+<option value=widom>Jennifer Widom</option>
+<option value=wolfson>Ouri Wolfson</option>
+<option value=yuwu>Yuqing Melanie Wu</option>
+<option value=yosikawa>Masatoshi Yoshikawa</option>
+<option value=pyu>Philip Yu</option>
+<option value=zdonik>Stan Zdonik</option>
+<option value=ceiba>Ceiba Zhang</option>
+<option value=zhouw>Weiming Zhou</option>
+<option value=zicari>Roberto Zicari</option>
+<option value=test>(Test User)</option>
+<option value=jinumich> Hui Jin</option>
+<option value=pszhang>Pusheng Zhang</option>
+<option value=xiechuan>Xie Chuan</option>
+<option value=deepak>Rajasekaran Deepak</option>
+<option value=huangyan>Yan Huang</option>
+<option value=kavitha></option>
+<option value=arnab>Arnab Nandi</option>
+<option value=margoneem>Margo</option>
+<option value=pirot>Panos</option>
+<option value=akhtung>Anthony K. H.</option>
+<option value=ccaldeira>Carlos Pampulim Caldeira</option>
+<option value=testing>Test Reviewer Checking Email</option>
+<option value=udaigkp>Udai Shanker</option>
+<option value=chi>Hongmei</option>
+<option value=sans>Virginie Sans</option>
+<option value=ggonsalves>GILROY N. GONSALVES</option>
+<option value=prasanna>Prasanna S. Haddela</option>
+<option value=shanneethi>shanmughaneethi</option>
+<option value=redtiger>Tim Zhu</option>
+<option value=symbol89>Wenbo</option>
+<option value=IndUX>Creeky</option>
+<option value=LOKESKUM>LOKESH KUMAR</option>
+<option value=prairie89>Michael</option>
+<option value=munivel>Munivel E</option>
+</select>
+</P>
+
+<P> 
+Reviewer Rating:
+<select name="Rating">
+<option value="0" selected>Any</option>
+<option value="4">Superb</option>
+<option value="3">Positive</option>
+<option value="2">Neutral</option>
+<option value="1">Negative</option>
+</select>
+</P>
+<P>
+<hr>
+
+<P></P>
+<P>Title*:
+<input name="Title" maxlength="100" width="70">
+
+</P>
+<P>
+<TABLE border=0 cellPadding=1 cellSpacing=1 style="WIDTH: 100%" width="100%">
+    
+    <TR>
+        <TD>Authors*:</TD>
+        <TD>
+		<input name="Author" maxlength="80" width="30" />
+		<input name="Author2" maxlength="80" width="30" />
+</TD></TR>
+    <TR>
+        <TD></TD>
+        <TD>
+		<input name="Author3" maxlength="80" width="30" />
+		<input name="Author4" maxlength="80" width="30" />
+</TD></TR></TABLE>
+</P>
+<P>Subject:
+<select name="Subject" size='1' id=Subject>
+  <option selected value="">(any)</option>
+
+  <option value='Logical Design'>LOGICAL DESIGN</option>
+  <option value='Data Models'>- Data Models</option>
+  <option value='Logical Foundations'>- Logical Foundations</option>
+  <option value='Normal Forms'>- Normal Forms</option>
+  <option value='Constraints'>- Constraints</option>
+  <option value='Views'>- Views</option>
+  <option value='Semi-structure/Hierarchies'>- Semi-structure/hierarchies</option>
+
+  <option value='Physical Design'>PHYSICAL DESIGN</option>
+  <option value='Access methods'>- Access Methods</option>
+  <option value='Fault Tolerance'>- Fault Tolerance</option>
+  <option value='Storage Management'>- Storage Management</option>
+  <option value='Replication'>- Replication</option>
+  <option value='Indexing'>- Indexing</option>
+
+  <option value='Languages'>LANGUAGES</option>
+  <option value='Data Description/Manipulation Languages'>- Data Description/Manipulation Languages</option>
+  <option value='Query Languages'>- Query Languages</option>
+  <option value='User Interfaces/Visualization'>- User Interfaces/Visualization</option>
+  <option value='Markup Languages'>- Markup Languages</option>
+  <option value='Application Programming'>- Application Programing</option>
+
+  <option value='Systems Issues'>SYSTEMS ISSUES</option>
+  <option value='Query Processing/Optimization'>- Query Processing/Optimization</option>
+  <option value='Transaction Processing'>- Transaction Processing</option>
+  <option value='Failure Resilience/Recovery'>- Failure Resilience/Recovery</option>
+  <option value='Parallel/Distributed Databases'>- Parallel/Distributed Databases</option>
+  <option value='View Management'>- View Management</option>
+  <option value='Performance Tuning/Evaluation'>- Performance Tuning/Evaluation</option>
+  <option value='Benchmarks'>- Benchmarks</option>
+  <option value='OS Interaction'>- Operating System Interaction</option>
+
+  <option value='Database Types'>DATABASE TYPES</option>
+  <option value='Relational Data Systems'>- Relational Data Systems</option>
+  <option value='Object-Orientation'>- Object-Orientation</option>
+  <option value='Semi-Structured Databases'>- Semi-Structured Databases</option>
+  <option value='Rule-Based/Active Databases'>- Rule-Based/Active Databases</option>
+  <option value='Warehousing/Multidimensional Data'>- Warehousing/Multidimensional Data</option>
+  <option value='Multimedia/Spatial/Textual Data'>- Multimedia/Spatial/Textual Data</option>
+  <option value='Inter-/Intranet-based Data'>- Inter-/Intranet-based Data</option>
+  <option value='Real-Time/Temporal Databases'>- Real-Time/Temporal Databases</option>
+
+  <option value='Interoperability'>INTEROPERABILITY</option>
+  <option value='Data Integration/Mediators'>- Data Integration/Mediators</option>
+  <option value='Wrappers'>- Wrappers</option>
+  <option value='Data Cleaning'>- Data Cleaning</option>
+  <option value='Legacy Systems/Evolution'>- Legacy Systems/Evolution</option>
+  <option value='Imprecision/Uncertainty'>- Imprecision/Uncertainty</option>
+
+  <option value='Database Administration'>DATABASE ADMINISTRATION</option>
+  <option value='Data Dictionary/Directory'>- Data Dictionary/Directory</option>
+  <option value='Metadata Management'>- Metadata Management</option>
+  <option value='Security/Integrity/Protection'>- Security/Integrity/Protection</option>
+
+  <option value='Database Applications'>DATABASE APPLICATIONS</option>
+  <option value='Data Mining/Knowledge Discovery'>- Data Mining/Knowledge Discovery</option>
+  <option value='Scientific/Engineering Databases'>- Scientific/Engineering Databases</option>
+  <option value='Statistical/Financial Databases'>- Statistical/Financial Databases</option>
+  <option value='E-Commerce/Workflow Systems'>- E-Commerce/Workflow Systems</option>
+  <option value='Online Analytical Processing'>- Online Analytical Processing</option>
+  <option value='Information Retrieval'>- Information Retrieval</option>
+  <option value='Digital Libraries'>- Digital Libraries</option>
+  <option value='System/Application Experiences'>- System/Application Experiences</option>
+
+  <option value='New Directions'>NEW DIRECTIONS</option>
+  <option value='Mobility'>- Mobility</option>
+  <option value='Embedded Systems'>- Embedded Systems</option>
+  <option value='Constraint Databases'>- Constraint Databases</option>
+
+  <option value='General'>GENERAL</option>
+  <option value='Computer Science'>- Computer Science</option>
+ </select>
+
+</P>
+<P>Conference*:
+<input name="Conference" maxlength="20" width="20">
+
+&nbsp; Journal*:
+<input name="Journal" maxlength="20" width="20">
+
+</P>
+<P>Year:
+<input type="text" name="Yr" maxlength="4">
+
+&nbsp; Volume:
+<input name="Vol" maxlength="4" width="4">
+
+&nbsp;&nbsp; Number:
+<input name="Num" maxlength="4" width="4">
+
+&nbsp; PaperID:
+<input name="PaperID" maxlength="20" width="20">
+
+</P>
+<P>
+<input type="hidden" name="Search" value="Search">
+
+<input type="submit" />
+<INPUT type="reset"> 
+</P>
+
+<P>
+* = Will perform a substring match 
+</P>
+<p><A href="index.html">Return to 
+Digital Review Home</A></p>
+</FORM>
+
+
+</BODY>
+</HTML>

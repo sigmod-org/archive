@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>Digital Review - Query for Paper Reviews</title>
+</HEAD>
+
+<body text="#000000" bgcolor="#FFFFC0" link="#0000FF" vlink="#800080" alink="#FF00FF">
+
+<h2>SIGMOD99 Reviews</h2><TABLE BORDER=0 WIDTH=100%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/ChaudhuriMN99.html">On Random Sampling over Joins</A></I></TD></TD><TD ALIGN=RIGHT>Positive review by Dennis Shasha.</TD></TR>
+<TR><TD COLSPAN=3><B>Authors:</B> Surajit Chaudhuri, Rajeev Motwani, Vivek R. Narasayya</TD></TR>
+<TR><TD COLSPAN=3><B>Review:</B><BR>The authors give thought-provoking negative results 
+concerning the problem of estimating results from samples.
+They also give some algorithms of interest.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=100%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/NatsevRS99.html">WALRUS: A Similarity Retrieval Algorithm for Image Databases</A></I></TD></TD><TD ALIGN=RIGHT>Positive review by Dennis Shasha.</TD></TR>
+<TR><TD COLSPAN=3><B>Authors:</B> Apostol Natsev, Rajeev Rastogi, Kyuseok Shim</TD></TR>
+<TR><TD COLSPAN=3><B>Review:</B><BR>Rajeev Rastogi and Kyoesek Shim of Bell Labs present a very nice
+approach to image search based on wavelets over part of an image.
+The basic idea was to model each image by several wavelets and then
+to declare two images to be similar if they have several overlapping
+areas with similar wavelets. The experiments are promising and the
+technique admits of many variants that should be explored.
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=100%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/AcharyaGPR99a.html">Join Synopses for Approximate Query Answering</A></I></TD></TD><TD ALIGN=RIGHT>Positive review by Dennis Shasha.</TD></TR>
+<TR><TD COLSPAN=3><B>Authors:</B> Swarup Acharya, Phillip B. Gibbons, Viswanath Poosala, Sridhar Ramaswamy</TD></TR>
+<TR><TD COLSPAN=3><B>Review:</B><BR><p>The authors show how to estimate
+aggregate results in data warehouses.
+The cool thing is that their techniques give error bounds.
+In their experiments, these bounds were conservative but still useful.</p>
+
+<p>Basic problem: if you sample all tables and then do aggregates,
+that doesn't work in general.
+For example, if you have R and S and you join the key of R
+with a key of S, then taking a 1/10 sample of each will give
+a size that is 1/100 of the size of the real join.
+So, one must be more clever.</p>
+
+<p>Their basic idea:<br>
+Suppose you have tables R, S, T, ...
+linked by foreign key joins and there is a root R (i.e. R
+has a field which is a subset of the key of S, ...).<br>
+Take a sample of R and then perform all these foreign key joins
+based on the sample,
+giving R', S', T', ...<br>
+Now, if a query involves R, S, T and includes the foreign key
+links among these, then the query can be done with great
+accuracy on R', S', T'.<br>
+The error can be estimated by considering the result
+obtained by several partitions of R' and looking at their variance.
+Please see the paper for other technical details.</p>
+</TD></TR>
+<TR></TABLE>
+<hr><TABLE BORDER=0 WIDTH=100%><TR><TD><I><A HREF="http://www.informatik.uni-trier.de/~ley/db/conf/sigmod/HaasH99.html">Ripple Joins for Online Aggregation</A></I></TD></TD><TD ALIGN=RIGHT>Positive review by Dennis Shasha.</TD></TR>
+<TR><TD COLSPAN=3><B>Authors:</B> Peter J. Haas, Joseph M. Hellerstein</TD></TR>
+<TR><TD COLSPAN=3><B>Review:</B><BR><p>The authors present an algorithm
+called ripple joins that give increasingly accurate predictions
+of the aggregate result as the join progresses.
+In a data visualization setting this means that the
+result appears to the user as an answer with a confidence
+interval.</p>
+<p>My conclusion: ripple joins will start appearing in systems.
+The Aqua approach from Lucent can be used right now.</p>
+</TD></TR>
+<TR></TABLE>
+<br>&nbsp;
+<br>
+<p><a href="index.html">Return to Digital Review Home</a>
+<hr>
+
+
+</BODY>
+</HTML>
+

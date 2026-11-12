@@ -12,10 +12,13 @@
 #   variable ACM_SERVER_PATH         web root folder on the server (relative to the login folder, or absolute)
 #   variable ACM_SERVER_HOST         optional, defaults to archive.sigmod.org
 #
-# Run it from the Actions tab. "Dry run" (the default) only lists what would be uploaded and deleted.
+# Runs on every push to main (a real deploy). It can also be run from the Actions tab, where
+# "Dry run" (the default there) only lists what would be uploaded and deleted.
 name: Deploy to archive.sigmod.org
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -65,6 +68,7 @@ jobs:
           HOST: ${{ vars.ACM_SERVER_HOST || 'archive.sigmod.org' }}
           USER_NAME: ${{ vars.ACM_SERVER_USER }}
           DEST: ${{ vars.ACM_SERVER_PATH }}
+          # Empty on push, so a push always deploys for real
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           ssh_cmd="ssh -i $RUNNER_TEMP/ssh/key -o UserKnownHostsFile=$RUNNER_TEMP/ssh/known_hosts -o StrictHostKeyChecking=yes -o BatchMode=yes"

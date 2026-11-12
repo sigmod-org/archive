@@ -1,0 +1,91 @@
+# Builds the archive for https://archive.sigmod.org/ and uploads it over SFTP with rclone.
+#
+# Only changed files are uploaded: scripts/stamp_mtimes.py gives every file a modification time
+# derived from its contents, and rclone compares size and time (the server cannot do checksums).
+# Files on the server that are no longer in the build are deleted, EXCEPT anything matched by an
+# --exclude rule below: the interview media in /media/ is never touched.
+#
+# Settings (repository Settings -> Secrets and variables -> Actions):
+#   secret   ACM_SERVER_SSH_KEY      private deploy key (its public half is in the server's authorized_keys)
+#   secret   ACM_SERVER_KNOWN_HOSTS  output of `ssh-keyscan archive.sigmod.org`
+#   variable ACM_SERVER_USER         SFTP user name
+#   variable ACM_SERVER_PATH         web root folder on the server (relative to the login folder, or absolute)
+#   variable ACM_SERVER_HOST         optional, defaults to archive.sigmod.org
+#
+# Run it from the Actions tab. "Dry run" (the default) only lists what would be uploaded and deleted.
+name: Deploy to archive.sigmod.org
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: list changes without uploading or deleting anything"
+        type: boolean
+        default: true
+
+concurrency:
+  group: deploy-archive-sigmod
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Build for the domain root
+        run: npm run build
+        env:
+          PATH_PREFIX: /
+          SITE_URL: https://archive.sigmod.org
+
+      - name: Stamp modification times from contents
+        run: python3 scripts/stamp_mtimes.py _site
+
+      - name: Install rclone
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone && rclone version | head -1
+
+      - name: Set up SSH key and known hosts
+        env:
+          KEY: ${{ secrets.ACM_SERVER_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.ACM_SERVER_KNOWN_HOSTS }}
+        run: |
+          test -n "$KEY" || { echo "::error::Secret ACM_SERVER_SSH_KEY is not set"; exit 1; }
+          test -n "$KNOWN_HOSTS" || { echo "::error::Secret ACM_SERVER_KNOWN_HOSTS is not set"; exit 1; }
+          test -n "${{ vars.ACM_SERVER_USER }}" || { echo "::error::Variable ACM_SERVER_USER is not set"; exit 1; }
+          test -n "${{ vars.ACM_SERVER_PATH }}" || { echo "::error::Variable ACM_SERVER_PATH is not set"; exit 1; }
+          install -d -m 700 "$RUNNER_TEMP/ssh"
+          printf '%s\n' "$KEY" > "$RUNNER_TEMP/ssh/key" && chmod 600 "$RUNNER_TEMP/ssh/key"
+          printf '%s\n' "$KNOWN_HOSTS" > "$RUNNER_TEMP/ssh/known_hosts"
+
+      - name: Sync to the server
+        env:
+          RCLONE_CONFIG_ACM_TYPE: sftp
+          RCLONE_CONFIG_ACM_HOST: ${{ vars.ACM_SERVER_HOST || 'archive.sigmod.org' }}
+          RCLONE_CONFIG_ACM_USER: ${{ vars.ACM_SERVER_USER }}
+          RCLONE_CONFIG_ACM_KEY_FILE: ${{ runner.temp }}/ssh/key
+          RCLONE_CONFIG_ACM_KNOWN_HOSTS_FILE: ${{ runner.temp }}/ssh/known_hosts
+          RCLONE_CONFIG_ACM_DISABLE_HASHCHECK: "true"
+          RCLONE_CONFIG_ACM_SHELL_TYPE: none
+          DEST: ${{ vars.ACM_SERVER_PATH }}
+        run: |
+          rclone sync _site "acm:$DEST" \
+            --exclude "/media/**" \
+            --exclude "/.well-known/**" \
+            --exclude "/.htaccess" \
+            --exclude "._*" \
+            --transfers 8 --checkers 16 \
+            --stats 30s --stats-one-line -v \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Remove key
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/ssh"

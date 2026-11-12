@@ -1,14 +1,14 @@
-# Builds the archive for https://archive.sigmod.org/ and uploads it over SFTP with rclone.
+# Builds the archive for https://archive.sigmod.org/ and uploads it over SSH with rsync.
 #
-# Only changed files are uploaded: scripts/stamp_mtimes.py gives every file a modification time
-# derived from its contents, and rclone compares size and time (the server cannot do checksums).
+# rsync --checksum compares file contents on both sides, so only changed files are uploaded.
 # Files on the server that are no longer in the build are deleted, EXCEPT anything matched by an
 # --exclude rule below: the interview media in /media/ is never touched.
+# The server needs rsync installed (check with: ssh USER@archive.sigmod.org rsync --version).
 #
 # Settings (repository Settings -> Secrets and variables -> Actions):
 #   secret   ACM_SERVER_SSH_KEY      private deploy key (its public half is in the server's authorized_keys)
 #   secret   ACM_SERVER_KNOWN_HOSTS  output of `ssh-keyscan archive.sigmod.org`
-#   variable ACM_SERVER_USER         SFTP user name
+#   variable ACM_SERVER_USER         SSH user name
 #   variable ACM_SERVER_PATH         web root folder on the server (relative to the login folder, or absolute)
 #   variable ACM_SERVER_HOST         optional, defaults to archive.sigmod.org
 #
@@ -47,12 +47,6 @@ jobs:
           PATH_PREFIX: /
           SITE_URL: https://archive.sigmod.org
 
-      - name: Stamp modification times from contents
-        run: python3 scripts/stamp_mtimes.py _site
-
-      - name: Install rclone
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq rclone && rclone version | head -1
-
       - name: Set up SSH key and known hosts
         env:
           KEY: ${{ secrets.ACM_SERVER_SSH_KEY }}
@@ -68,23 +62,17 @@ jobs:
 
       - name: Sync to the server
         env:
-          RCLONE_CONFIG_ACM_TYPE: sftp
-          RCLONE_CONFIG_ACM_HOST: ${{ vars.ACM_SERVER_HOST || 'archive.sigmod.org' }}
-          RCLONE_CONFIG_ACM_USER: ${{ vars.ACM_SERVER_USER }}
-          RCLONE_CONFIG_ACM_KEY_FILE: ${{ runner.temp }}/ssh/key
-          RCLONE_CONFIG_ACM_KNOWN_HOSTS_FILE: ${{ runner.temp }}/ssh/known_hosts
-          RCLONE_CONFIG_ACM_DISABLE_HASHCHECK: "true"
-          RCLONE_CONFIG_ACM_SHELL_TYPE: none
+          HOST: ${{ vars.ACM_SERVER_HOST || 'archive.sigmod.org' }}
+          USER_NAME: ${{ vars.ACM_SERVER_USER }}
           DEST: ${{ vars.ACM_SERVER_PATH }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
-          rclone sync _site "acm:$DEST" \
-            --exclude "/media/**" \
-            --exclude "/.well-known/**" \
-            --exclude "/.htaccess" \
-            --exclude "._*" \
-            --transfers 8 --checkers 16 \
-            --stats 30s --stats-one-line -v \
-            ${{ inputs.dry_run && '--dry-run' || '' }}
+          ssh_cmd="ssh -i $RUNNER_TEMP/ssh/key -o UserKnownHostsFile=$RUNNER_TEMP/ssh/known_hosts -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          flags=(--recursive --links --checksum --delete --omit-dir-times --chmod=D755,F644 --compress
+                 --exclude=/media/ --exclude=/.well-known/ --exclude=/.htaccess --exclude='._*'
+                 --itemize-changes --stats)
+          [ "$DRY_RUN" = "true" ] && flags+=(--dry-run)
+          rsync "${flags[@]}" -e "$ssh_cmd" _site/ "$USER_NAME@$HOST:${DEST%/}/"
 
       - name: Remove key
         if: always()

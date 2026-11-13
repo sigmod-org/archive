@@ -11,6 +11,11 @@
   .archive-name { font-size: 18px; padding-left: 10px; }
   .nav-sigmod { padding: 6px 12px; font-size: 13.5px; }
 }
+/* Narrow phones: the small SIG/MOD mark replaces the full logo (base.njk), so the logo, "Archive" and the pill fit */
+.brand { display: block; flex: none; }
+.archive-name { white-space: nowrap; }
+@media (max-width: 399px) { .hdr-in { gap: 12px; } .logo { gap: 10px; } }
+@media (max-width: 319px) { .nav-sigmod { padding: 6px 10px; } .nav-sigmod .ext { display: none; } }
 
 /* Video Series: thumbnail cards linking to YouTube */
 .prose ul.videos { list-style: none; padding: 0; margin: 1.25em 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
